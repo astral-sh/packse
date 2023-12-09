@@ -1,0 +1,12 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+sources = ["src"]
+
+[project]
+name = "{{ package-name }}"
+version = "{{ version }}"
+dependencies = {{ dependencies }}
+requires-python = "{{ requires-python }}"

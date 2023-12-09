@@ -1,0 +1,97 @@
+"""
+View package tree for the given scenarios.
+"""
+import logging
+from pathlib import Path
+
+from packaging.requirements import Requirement
+
+from packse.error import InvalidScenario, ScenarioNotFound
+from packse.scenario import Scenario, load_scenario, scenario_prefix
+
+logger = logging.getLogger(__name__)
+
+
+def view(targets: list[Path]):
+    # Validate all targets first
+    for target in targets:
+        if not target.exists():
+            raise ScenarioNotFound(target)
+
+        try:
+            load_scenario(target)
+        except Exception as exc:
+            raise InvalidScenario(target) from exc
+
+    # Then view each one
+    for target in targets:
+        view_scenario(target)
+
+
+def view_scenario(target: Path):
+    logging.debug("Viewing %s", target)
+
+    scenario = load_scenario(target)
+    prefix = scenario_prefix(scenario)
+
+    print(prefix)
+    print(dependency_tree(scenario))
+
+
+def dependency_tree(scenario: Scenario):
+    """
+    Generate a dependency tree for a scenario
+    """
+
+    space = "    "
+    branch = "│   "
+    tee = "├── "
+    last = "└── "
+    buffer = ""
+
+    def render_package_versions(
+        package: str,
+        prefix: str = "",
+        for_requirement: Requirement | None = None,
+    ):
+        versions = scenario.packages[package].versions
+
+        pointers = [tee] * (len(versions) - 1) + [last]
+        for pointer, version in zip(pointers, versions):
+            if for_requirement and not for_requirement.specifier.contains(version):
+                continue
+
+            message = "satisfied by " if for_requirement else ""
+            yield prefix + pointer + message + f"{package}-{version}"
+
+            extension = branch if pointer == tee else space
+            yield from render_requirements_for(
+                package, version, prefix=prefix + extension
+            )
+
+    def render_requirements_for(package: str, version: str, prefix: str = ""):
+        requirements = list(scenario.packages[package].versions[version].requires)
+
+        pointers = [tee] * (len(requirements) - 1) + [last]
+        for pointer, requirement in zip(pointers, sorted(requirements)):
+            yield prefix + pointer + "requires " + requirement
+
+            parsed_requirement = Requirement(requirement)
+            if parsed_requirement.name in scenario.packages:
+                extension = branch if pointer == tee else space
+                yield from render_package_versions(
+                    parsed_requirement.name,
+                    prefix=prefix + extension,
+                    for_requirement=parsed_requirement,
+                )
+
+    for line in render_package_versions(scenario.root):
+        buffer += line + "\n"
+
+    for package in sorted(scenario.packages):
+        if package == scenario.root:
+            continue
+        for line in render_package_versions(package):
+            buffer += line + "\n"
+
+    return buffer

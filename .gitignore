@@ -1,0 +1,6 @@
+__pycache__
+.cache
+*.pyc
+.envrc
+build/**/*
+dist/**/*

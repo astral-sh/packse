@@ -1,0 +1,34 @@
+# serializer version: 1
+# name: test_root_shows_help
+  dict({
+    'exit_code': 2,
+    'stderr': '''
+      usage: packse [-h] [-v] [-q] {build,view} ...
+      packse: error: argument {build,view}: invalid choice: 'root' (choose from 'build', 'view')
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_root_verbose[--verbose]
+  dict({
+    'exit_code': 2,
+    'stderr': '''
+      usage: packse [-h] [-v] [-q] {build,view} ...
+      packse: error: argument {build,view}: invalid choice: 'root' (choose from 'build', 'view')
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_root_verbose[-v]
+  dict({
+    'exit_code': 2,
+    'stderr': '''
+      usage: packse [-h] [-v] [-q] {build,view} ...
+      packse: error: argument {build,view}: invalid choice: 'root' (choose from 'build', 'view')
+  
+    ''',
+    'stdout': '',
+  })
+# ---

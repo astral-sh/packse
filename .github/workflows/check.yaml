@@ -1,0 +1,56 @@
+name: Check
+
+env:
+  POETRY_VERSION: "1.6.1"
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  run-checks:
+    name: python-${{ matrix.python-version }}, ${{ matrix.os }}
+    timeout-minutes: 5
+
+    strategy:
+      matrix:
+        os:
+          - "ubuntu-latest"
+        python-version:
+          - "3.12"
+
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: "${{ matrix.python-version }}"
+
+      - name: Set up Poetry
+        run: |
+          pip install poetry==${{ env.POETRY_VERSION }}
+
+      - name: Install packages
+        run: |
+          poetry install
+
+      - name: Check Python lint
+        run: |
+          poetry run -- ruff check . --config pyproject.toml
+
+      - name: Check Python formatting
+        run: |
+          poetry run -- ruff format --check .  --config pyproject.toml
+
+      - name: Check packaging
+        run: |
+          poetry check
+          poetry lock --check
