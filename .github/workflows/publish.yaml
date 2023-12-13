@@ -56,12 +56,16 @@ jobs:
       - name: Collect scenarios
         run: |
           scenarios=(scenarios/**/*.json)
+
+          # Display for debug
           for scenario in $scenarios
           do
             echo "$scenario"
           done
-
           echo "SCENARIOS=$scenarios" >> "$GITHUB_ENV"
+
+          # Assigning a glob to a variable in `bash` is such a pain I don't want to talk about it
+          # instead we just use zsh
         shell: zsh {0}
 
       - name: View scenarios
