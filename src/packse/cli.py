@@ -5,6 +5,7 @@ from pathlib import Path
 
 from packse.build import build
 from packse.error import BuildError, DestinationAlreadyExists, UserError
+from packse.publish import publish
 from packse.view import view
 
 
@@ -46,6 +47,10 @@ def _call_view(args):
     view(args.targets)
 
 
+def _call_publish(args):
+    publish(args.targets, dry_run=args.dry_run, skip_existing=args.skip_existing)
+
+
 def _root_parser():
     parser = argparse.ArgumentParser(
         description="Utilities for working example packaging scenarios",
@@ -67,6 +72,28 @@ def _add_build_parser(subparsers):
         "--rm",
         action="store_true",
         help="Allow removal of existing build directory",
+    )
+    _add_shared_arguments(parser)
+
+
+def _add_publish_parser(subparsers):
+    parser = subparsers.add_parser("publish", help="Publish packages for a scenario")
+    parser.set_defaults(call=_call_publish)
+    parser.add_argument(
+        "targets",
+        type=Path,
+        nargs="+",
+        help="The scenario distribution directory to publish",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Do not actually publish, just show twine commands that would be used.",
+    )
+    parser.add_argument(
+        "--skip-existing",
+        action="store_true",
+        help="Skip existing distributions instead of failing.",
     )
     _add_shared_arguments(parser)
 
@@ -105,5 +132,6 @@ def get_parser() -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(title="commands")
     _add_build_parser(subparsers)
     _add_view_parser(subparsers)
+    _add_publish_parser(subparsers)
 
     return parser

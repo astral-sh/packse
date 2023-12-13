@@ -1,0 +1,63 @@
+name: Publish
+
+env:
+  # Enable colored output
+  # https://github.com/actions/runner/issues/241
+  PY_COLORS: 1
+  POETRY_VERSION: "1.6.1"
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  publish-packages:
+    name: python-${{ matrix.python-version }}, ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+        python-version:
+          - "3.12"
+
+      fail-fast: false
+
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Set up Poetry
+        run: |
+          pip install poetry==${{ env.POETRY_VERSION }}
+
+      - name: Install packages
+        run: |
+          poetry install
+
+      - name: View scenarios
+        run: |
+          packse view scenarios/**/*.json
+
+      - name: Build scenarios
+        run: |
+          packse build scenarios/**/*.json
+
+      - name: Publish scenarios
+        env:
+          TWINE_NON_INTERACTIVE: 1
+          TWINE_USERNAME: "__token__"
+          TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
+        run: |
+          packse publish --skip-existing dist/*

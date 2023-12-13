@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 import pytest
@@ -23,6 +24,16 @@ def test_build_invalid_target(snapshot, tmpcwd):
 @pytest.mark.usefixtures("tmpcwd")
 def test_build_example(snapshot):
     target = __development_base_path__ / "scenarios" / "example.json"
+    assert (
+        snapshot_command(["build", str(target)], snapshot_filesystem=True) == snapshot
+    )
+
+
+@pytest.mark.usefixtures("tmpcwd")
+@pytest.mark.usefixtures("tmpenviron")
+def test_build_example_with_seed(snapshot):
+    target = __development_base_path__ / "scenarios" / "example.json"
+    os.environ["PACKSE_VERSION_SEED"] = "foo"
     assert (
         snapshot_command(["build", str(target)], snapshot_filesystem=True) == snapshot
     )

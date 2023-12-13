@@ -1,4 +1,5 @@
 import hashlib
+import os
 from pathlib import Path
 
 import msgspec
@@ -86,9 +87,11 @@ def scenario_version(scenario: Scenario) -> str:
     Generate a unique version for a scenario based on its contents.
     """
     template_version = get_template_version(scenario.template)
-    return hashlib.md5(
-        f"{template_version}-{scenario.hash()}".encode(), usedforsecurity=False
-    ).hexdigest()[:8]
+    hasher = hashlib.new("md5", usedforsecurity=False)
+    hasher.update(template_version.encode())
+    hasher.update(scenario.hash().encode())
+    hasher.update(os.environ.get("PACKSE_VERSION_SEED", "").encode())
+    return hasher.hexdigest()[:8]
 
 
 def scenario_prefix(scenario: Scenario) -> str:

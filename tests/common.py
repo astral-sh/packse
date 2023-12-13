@@ -71,6 +71,16 @@ def tmpcwd(tmp_path):
         yield tmp_path
 
 
+@pytest.fixture
+def tmpenviron():
+    old_environ = dict(os.environ)
+
+    yield
+
+    os.environ.clear()
+    os.environ.update(old_environ)
+
+
 def snapshot_filesystem_tree(working_directory: Path | None = None) -> dict:
     working_directory = working_directory or Path.cwd()
     snapshot = {}

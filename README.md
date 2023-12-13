@@ -36,6 +36,9 @@ The `dist/` directory will contain built distributions for all of the packages i
 When a scenario is built, it is given a unique identifier based on a hash of the scenario contents and the project
 templates used to generate the packages. Each package in the scenario will include the unique identifier.
 
+The `PACKSE_VERSION_SEED` environment variable can be used to override the seed used to generate the unique
+identifier, allowing versions to differ based on information outside of packse.
+
 ### Viewing scenarios
 
 **Not yet implemented**

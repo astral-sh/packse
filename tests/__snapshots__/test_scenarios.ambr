@@ -3,7 +3,7 @@
   dict({
     'exit_code': 0,
     'filesystem': dict({
-      'build/requires-does-not-exist-1888d2a8/requires-does-not-exist-1888d2a8-a-1.0.0/pyproject.toml': '''
+      'build/requires-does-not-exist-6ea3a390/requires-does-not-exist-6ea3a390-a-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
@@ -12,50 +12,50 @@
         sources = ["src"]
         
         [project]
-        name = "requires-does-not-exist-1888d2a8-a"
+        name = "requires-does-not-exist-6ea3a390-a"
         version = "1.0.0"
-        dependencies = ["requires-does-not-exist-1888d2a8-b"]
+        dependencies = ["requires-does-not-exist-6ea3a390-b"]
         requires-python = ">=3.7"
   
       ''',
-      'build/requires-does-not-exist-1888d2a8/requires-does-not-exist-1888d2a8-a-1.0.0/src/requires_does_not_exist_1888d2a8_a/__init__.py': '''
+      'build/requires-does-not-exist-6ea3a390/requires-does-not-exist-6ea3a390-a-1.0.0/src/requires_does_not_exist_6ea3a390_a/__init__.py': '''
         __version__ = "1.0.0"
   
       ''',
-      'dist/requires-does-not-exist-1888d2a8/requires_does_not_exist_1888d2a8_a-1.0.0-py3-none-any.whl': 'md5:0ede0ef9fce35b3b22369a4091b6d73d',
-      'dist/requires-does-not-exist-1888d2a8/requires_does_not_exist_1888d2a8_a-1.0.0.tar.gz': 'md5:77825e5070d89109cb92e004c7adf79b',
+      'dist/requires-does-not-exist-6ea3a390/requires_does_not_exist_6ea3a390_a-1.0.0-py3-none-any.whl': 'md5:8d4ae497791990d1f9e0116fca7107eb',
+      'dist/requires-does-not-exist-6ea3a390/requires_does_not_exist_6ea3a390_a-1.0.0.tar.gz': 'md5:e63ecf25fcdb6df22691c6339d5bf7ab',
       'tree': '''
         test_build_all_scenarios_requi0
         ├── build
-        │   └── requires-does-not-exist-1888d2a8
-        │       └── requires-does-not-exist-1888d2a8-a-1.0.0
+        │   └── requires-does-not-exist-6ea3a390
+        │       └── requires-does-not-exist-6ea3a390-a-1.0.0
         │           ├── pyproject.toml
         │           └── src
-        │               └── requires_does_not_exist_1888d2a8_a
+        │               └── requires_does_not_exist_6ea3a390_a
         │                   └── __init__.py
         └── dist
-            └── requires-does-not-exist-1888d2a8
-                ├── requires_does_not_exist_1888d2a8_a-1.0.0-py3-none-any.whl
-                └── requires_does_not_exist_1888d2a8_a-1.0.0.tar.gz
+            └── requires-does-not-exist-6ea3a390
+                ├── requires_does_not_exist_6ea3a390_a-1.0.0-py3-none-any.whl
+                └── requires_does_not_exist_6ea3a390_a-1.0.0.tar.gz
         
         7 directories, 4 files
   
       ''',
     }),
     'stderr': '''
-      INFO:root:Building 'requires-does-not-exist-1888d2a8' in directory 'build/requires-does-not-exist-1888d2a8'
-      INFO:packse.template:Creating requires-does-not-exist-1888d2a8-a-1.0.0
-      INFO:packse.template:Creating requires-does-not-exist-1888d2a8-a-1.0.0/pyproject.toml
-      INFO:packse.template:Creating requires-does-not-exist-1888d2a8-a-1.0.0/src
-      INFO:packse.template:Creating requires-does-not-exist-1888d2a8-a-1.0.0/src/requires_does_not_exist_1888d2a8_a
-      INFO:packse.template:Creating requires-does-not-exist-1888d2a8-a-1.0.0/src/requires_does_not_exist_1888d2a8_a/__init__.py
-      INFO:packse.build:Building build/requires-does-not-exist-1888d2a8/requires-does-not-exist-1888d2a8-a-1.0.0 with hatch
-      INFO:packse.build:Linked distribution to dist/requires-does-not-exist-1888d2a8/requires_does_not_exist_1888d2a8_a-1.0.0-py3-none-any.whl
-      INFO:packse.build:Linked distribution to dist/requires-does-not-exist-1888d2a8/requires_does_not_exist_1888d2a8_a-1.0.0.tar.gz
+      INFO:root:Building 'requires-does-not-exist-6ea3a390' in directory 'build/requires-does-not-exist-6ea3a390'
+      INFO:packse.template:Creating requires-does-not-exist-6ea3a390-a-1.0.0
+      INFO:packse.template:Creating requires-does-not-exist-6ea3a390-a-1.0.0/pyproject.toml
+      INFO:packse.template:Creating requires-does-not-exist-6ea3a390-a-1.0.0/src
+      INFO:packse.template:Creating requires-does-not-exist-6ea3a390-a-1.0.0/src/requires_does_not_exist_6ea3a390_a
+      INFO:packse.template:Creating requires-does-not-exist-6ea3a390-a-1.0.0/src/requires_does_not_exist_6ea3a390_a/__init__.py
+      INFO:packse.build:Building build/requires-does-not-exist-6ea3a390/requires-does-not-exist-6ea3a390-a-1.0.0 with hatch
+      INFO:packse.build:Linked distribution to dist/requires-does-not-exist-6ea3a390/requires_does_not_exist_6ea3a390_a-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/requires-does-not-exist-6ea3a390/requires_does_not_exist_6ea3a390_a-1.0.0.tar.gz
   
     ''',
     'stdout': '''
-      requires-does-not-exist-1888d2a8-a
+      requires-does-not-exist-6ea3a390-a
   
     ''',
   })
@@ -73,7 +73,7 @@
     }),
     'stderr': '',
     'stdout': '''
-      requires-does-not-exist-1888d2a8
+      requires-does-not-exist-6ea3a390
       └── a-1.0.0
           └── requires b
       
