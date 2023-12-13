@@ -7,6 +7,8 @@ env:
   POETRY_VERSION: "1.6.1"
 
 on:
+  pull_request:
+    types: [opened, reopened, synchronize]
   push:
     branches:
       - main
@@ -74,7 +76,13 @@ jobs:
         run: |
           poetry run packse build $SCENARIOS
 
+      - name: Publish scenarios [dry-run]
+        if: github.ref != 'refs/heads/master'
+        run: |
+          poetry run packse publish --dry-run dist/*
+
       - name: Publish scenarios
+        if: github.ref == 'refs/heads/master'
         env:
           TWINE_NON_INTERACTIVE: 1
           TWINE_USERNAME: "__token__"
