@@ -1,34 +1,70 @@
 # serializer version: 1
 # name: test_root_shows_help
   dict({
-    'exit_code': 2,
-    'stderr': '''
-      usage: packse [-h] [-v] [-q] {build,view} ...
-      packse: error: argument {build,view}: invalid choice: 'root' (choose from 'build', 'view')
+    'exit_code': 0,
+    'stderr': '',
+    'stdout': '''
+      usage: packse [-h] [-v] [-q] {build,view,publish} ...
+      
+      Utilities for working example packaging scenarios
+      
+      options:
+        -h, --help            show this help message and exit
+        -v, --verbose         Enable debug logging
+        -q, --quiet           Disable logging
+      
+      commands:
+        {build,view,publish}
+          build               Build packages for a scenario
+          view                View a scenario
+          publish             Publish packages for a scenario
   
     ''',
-    'stdout': '',
   })
 # ---
 # name: test_root_verbose[--verbose]
   dict({
-    'exit_code': 2,
-    'stderr': '''
-      usage: packse [-h] [-v] [-q] {build,view} ...
-      packse: error: argument {build,view}: invalid choice: 'root' (choose from 'build', 'view')
+    'exit_code': 0,
+    'stderr': '',
+    'stdout': '''
+      usage: packse [-h] [-v] [-q] {build,view,publish} ...
+      
+      Utilities for working example packaging scenarios
+      
+      options:
+        -h, --help            show this help message and exit
+        -v, --verbose         Enable debug logging
+        -q, --quiet           Disable logging
+      
+      commands:
+        {build,view,publish}
+          build               Build packages for a scenario
+          view                View a scenario
+          publish             Publish packages for a scenario
   
     ''',
-    'stdout': '',
   })
 # ---
 # name: test_root_verbose[-v]
   dict({
-    'exit_code': 2,
-    'stderr': '''
-      usage: packse [-h] [-v] [-q] {build,view} ...
-      packse: error: argument {build,view}: invalid choice: 'root' (choose from 'build', 'view')
+    'exit_code': 0,
+    'stderr': '',
+    'stdout': '''
+      usage: packse [-h] [-v] [-q] {build,view,publish} ...
+      
+      Utilities for working example packaging scenarios
+      
+      options:
+        -h, --help            show this help message and exit
+        -v, --verbose         Enable debug logging
+        -q, --quiet           Disable logging
+      
+      commands:
+        {build,view,publish}
+          build               Build packages for a scenario
+          view                View a scenario
+          publish             Publish packages for a scenario
   
     ''',
-    'stdout': '',
   })
 # ---

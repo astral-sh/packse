@@ -5,6 +5,7 @@ from pathlib import Path
 
 from packse.build import build
 from packse.error import BuildError, DestinationAlreadyExists, UserError
+from packse.publish import publish
 from packse.view import view
 
 
@@ -46,6 +47,10 @@ def _call_view(args):
     view(args.targets)
 
 
+def _call_publish(args):
+    publish(args.targets)
+
+
 def _root_parser():
     parser = argparse.ArgumentParser(
         description="Utilities for working example packaging scenarios",
@@ -67,6 +72,18 @@ def _add_build_parser(subparsers):
         "--rm",
         action="store_true",
         help="Allow removal of existing build directory",
+    )
+    _add_shared_arguments(parser)
+
+
+def _add_publish_parser(subparsers):
+    parser = subparsers.add_parser("publish", help="Publish packages for a scenario")
+    parser.set_defaults(call=_call_publish)
+    parser.add_argument(
+        "targets",
+        type=Path,
+        nargs="+",
+        help="The scenario distribution directory to publish",
     )
     _add_shared_arguments(parser)
 
@@ -105,5 +122,6 @@ def get_parser() -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(title="commands")
     _add_build_parser(subparsers)
     _add_view_parser(subparsers)
+    _add_publish_parser(subparsers)
 
     return parser
