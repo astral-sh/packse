@@ -1,0 +1,57 @@
+# serializer version: 1
+# name: test_view_example
+  dict({
+    'exit_code': 0,
+    'stderr': '',
+    'stdout': '''
+      example-9e723676
+      └── a-1.0.0
+          └── requires b>=1.0.0
+              └── satisfied by b-1.0.0
+      └── b-1.0.0
+      
+  
+    ''',
+  })
+# ---
+# name: test_view_invalid_target
+  dict({
+    'exit_code': 1,
+    'stderr': '''
+      File at '$PWD/test.json' is not a valid scenario.
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_view_no_target
+  dict({
+    'exit_code': 2,
+    'stderr': '''
+      usage: packse view [-h] [-v] [-q] targets [targets ...]
+      packse view: error: the following arguments are required: targets
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_view_one_target_does_not_exist
+  dict({
+    'exit_code': 1,
+    'stderr': '''
+      Scenario 'foo' not found.
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_view_target_does_not_exist
+  dict({
+    'exit_code': 1,
+    'stderr': '''
+      Scenario 'foo' not found.
+  
+    ''',
+    'stdout': '',
+  })
+# ---

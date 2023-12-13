@@ -1,0 +1,43 @@
+[project]
+name = "packse"
+version = "0.0.0"
+dependencies = []
+authors = [
+    { name = "Zanie", email = "contact@zanie.dev" },
+]
+description = ''
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+keywords = []
+
+[tool.poetry]
+name = "packse"
+version = "0.0.0"
+description = ""
+authors = ["Zanie <contact@zanie.dev>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.scripts]
+packse = "packse.cli:entrypoint"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+msgspec = "^0.18.4"
+hatch = "^1.7.0"
+twine = "^4.0.2"
+
+[tool.poetry.group.dev.dependencies]
+syrupy = "^4.6.0"
+pytest = "^7.4.3"
+ruff = "^0.1.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.lint]
+extend-select = ["I", "W292"]
+preview = true
+exclude = ["src/packse/templates/**/*", "build/**/*", "dist/**/*"]
