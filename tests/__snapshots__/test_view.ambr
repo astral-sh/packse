@@ -18,7 +18,7 @@
   dict({
     'exit_code': 1,
     'stderr': '''
-      File at '$PWD/test.json' is not a valid scenario.
+      File at '$PWD/test.json' is not a valid scenario: Input data was truncated.
   
     ''',
     'stdout': '',

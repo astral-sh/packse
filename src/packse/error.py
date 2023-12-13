@@ -17,8 +17,8 @@ class DestinationAlreadyExists(UserError):
 
 
 class InvalidScenario(UserError):
-    def __init__(self, path: Path) -> None:
-        message = f"File at '{path}' is not a valid scenario"
+    def __init__(self, path: Path, reason: str) -> None:
+        message = f"File at '{path}' is not a valid scenario: {reason}"
         super().__init__(message)
 
 

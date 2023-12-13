@@ -21,7 +21,7 @@ def view(targets: list[Path]):
         try:
             load_scenario(target)
         except Exception as exc:
-            raise InvalidScenario(target) from exc
+            raise InvalidScenario(target, reason=str(exc)) from exc
 
     # Then view each one
     for target in targets:

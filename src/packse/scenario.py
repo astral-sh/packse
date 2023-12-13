@@ -56,6 +56,11 @@ class Scenario(msgspec.Struct):
     The template to use for scenario packages.
     """
 
+    description: str | None = None
+    """
+    The description of the scenario
+    """
+
     def hash(self) -> str:
         """
         Return a hash of the scenario contents
