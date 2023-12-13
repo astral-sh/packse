@@ -48,7 +48,7 @@ def _call_view(args):
 
 
 def _call_publish(args):
-    publish(args.targets)
+    publish(args.targets, dry_run=args.dry_run, skip_existing=args.skip_existing)
 
 
 def _root_parser():
@@ -84,6 +84,16 @@ def _add_publish_parser(subparsers):
         type=Path,
         nargs="+",
         help="The scenario distribution directory to publish",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Do not actually publish, just show twine commands that would be used.",
+    )
+    parser.add_argument(
+        "--skip-existing",
+        action="store_true",
+        help="Skip existing distributions instead of failing.",
     )
     _add_shared_arguments(parser)
 

@@ -15,7 +15,7 @@ from packse.error import (
 logger = logging.getLogger(__name__)
 
 
-def publish(targets: list[Path], skip_existing: bool = True):
+def publish(targets: list[Path], skip_existing: bool, dry_run: bool):
     for target in targets:
         if not target.is_dir():
             raise InvalidPublishTarget(target, reason="Not a directory.")
@@ -25,7 +25,7 @@ def publish(targets: list[Path], skip_existing: bool = True):
         logger.info("Publishing '%s'...", target.name)
         for distfile in target.iterdir():
             try:
-                publish_package_distribution(distfile)
+                publish_package_distribution(distfile, dry_run)
             except PublishAlreadyExists:
                 if not skip_existing:
                     raise
@@ -34,15 +34,17 @@ def publish(targets: list[Path], skip_existing: bool = True):
                 logger.info("Published '%s'", distfile.name)
 
 
-def publish_package_distribution(target: Path) -> None:
+def publish_package_distribution(target: Path, dry_run: bool) -> None:
     """
     Publish package distribution.
     """
+    command = ["twine", "upload", "-r", "testpypi", str(target.resolve())]
+    if dry_run:
+        print("Would execute: " + " ".join(command))
+        return
+
     try:
-        output = subprocess.check_output(
-            ["twine", "upload", "-r", "testpypi", str(target.resolve())],
-            stderr=subprocess.STDOUT,
-        )
+        output = subprocess.check_output(command, stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as exc:
         output = exc.output.decode()
         if "File already exists" in output:
