@@ -24,7 +24,7 @@ def publish(targets: list[Path], skip_existing: bool, dry_run: bool):
     logger.info("Publishing %s target%s...", len(targets), s)
     for target in targets:
         logger.info("Publishing '%s'...", target.name)
-        for distfile in target.iterdir():
+        for distfile in sorted(target.iterdir()):
             try:
                 publish_package_distribution(distfile, dry_run)
             except PublishAlreadyExists:
