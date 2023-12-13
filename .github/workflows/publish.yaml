@@ -50,11 +50,11 @@ jobs:
 
       - name: View scenarios
         run: |
-          packse view scenarios/**/*.json
+          poetry run -- packse view scenarios/**/*.json
 
       - name: Build scenarios
         run: |
-          packse build scenarios/**/*.json
+          poetry run -- packse build scenarios/**/*.json
 
       - name: Publish scenarios
         env:
@@ -62,4 +62,4 @@ jobs:
           TWINE_USERNAME: "__token__"
           TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
         run: |
-          packse publish --skip-existing dist/*
+          poetry run -- packse publish --skip-existing dist/*
