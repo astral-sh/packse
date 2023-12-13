@@ -41,7 +41,7 @@
         __version__ = "1.0.0"
   
       ''',
-      'build/requires-greater-version-does-not-exist-e978a90b/requires-greater-version-does-not-exist-e978a90b-a-1.0.0/pyproject.toml': '''
+      'build/requires-greater-version-does-not-exist-f72fdef3/requires-greater-version-does-not-exist-f72fdef3-a-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
@@ -50,17 +50,17 @@
         sources = ["src"]
         
         [project]
-        name = "requires-greater-version-does-not-exist-e978a90b-a"
+        name = "requires-greater-version-does-not-exist-f72fdef3-a"
         version = "1.0.0"
-        dependencies = ["requires-greater-version-does-not-exist-e978a90b-b>1.0.0"]
+        dependencies = ["requires-greater-version-does-not-exist-f72fdef3-b>1.0.0"]
         requires-python = ">=3.7"
   
       ''',
-      'build/requires-greater-version-does-not-exist-e978a90b/requires-greater-version-does-not-exist-e978a90b-a-1.0.0/src/requires_greater_version_does_not_exist_e978a90b_a/__init__.py': '''
+      'build/requires-greater-version-does-not-exist-f72fdef3/requires-greater-version-does-not-exist-f72fdef3-a-1.0.0/src/requires_greater_version_does_not_exist_f72fdef3_a/__init__.py': '''
         __version__ = "1.0.0"
   
       ''',
-      'build/requires-greater-version-does-not-exist-e978a90b/requires-greater-version-does-not-exist-e978a90b-b-1.0.0/pyproject.toml': '''
+      'build/requires-greater-version-does-not-exist-f72fdef3/requires-greater-version-does-not-exist-f72fdef3-b-0.1.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
@@ -69,13 +69,32 @@
         sources = ["src"]
         
         [project]
-        name = "requires-greater-version-does-not-exist-e978a90b-b"
+        name = "requires-greater-version-does-not-exist-f72fdef3-b"
+        version = "0.1.0"
+        dependencies = []
+        requires-python = ">=3.7"
+  
+      ''',
+      'build/requires-greater-version-does-not-exist-f72fdef3/requires-greater-version-does-not-exist-f72fdef3-b-0.1.0/src/requires_greater_version_does_not_exist_f72fdef3_b/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/requires-greater-version-does-not-exist-f72fdef3/requires-greater-version-does-not-exist-f72fdef3-b-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build]
+        sources = ["src"]
+        
+        [project]
+        name = "requires-greater-version-does-not-exist-f72fdef3-b"
         version = "1.0.0"
         dependencies = []
         requires-python = ">=3.7"
   
       ''',
-      'build/requires-greater-version-does-not-exist-e978a90b/requires-greater-version-does-not-exist-e978a90b-b-1.0.0/src/requires_greater_version_does_not_exist_e978a90b_b/__init__.py': '''
+      'build/requires-greater-version-does-not-exist-f72fdef3/requires-greater-version-does-not-exist-f72fdef3-b-1.0.0/src/requires_greater_version_does_not_exist_f72fdef3_b/__init__.py': '''
         __version__ = "1.0.0"
   
       ''',
@@ -178,10 +197,12 @@
       'dist/requires-exact-version-does-not-exist-9b7b4d86/requires_exact_version_does_not_exist_9b7b4d86_a-1.0.0.tar.gz': 'md5:dab8d28d3221a5c2af2ad84e8a20eba1',
       'dist/requires-exact-version-does-not-exist-9b7b4d86/requires_exact_version_does_not_exist_9b7b4d86_b-1.0.0-py3-none-any.whl': 'md5:50bfe76fc3300646970264ae7496de27',
       'dist/requires-exact-version-does-not-exist-9b7b4d86/requires_exact_version_does_not_exist_9b7b4d86_b-1.0.0.tar.gz': 'md5:c3a8a1726ca37711d31254ef37ce6e33',
-      'dist/requires-greater-version-does-not-exist-e978a90b/requires_greater_version_does_not_exist_e978a90b_a-1.0.0-py3-none-any.whl': 'md5:3b52448cbe3966bd17da394c2cadbe65',
-      'dist/requires-greater-version-does-not-exist-e978a90b/requires_greater_version_does_not_exist_e978a90b_a-1.0.0.tar.gz': 'md5:10639e4df5cc8ce2bb50b72301377753',
-      'dist/requires-greater-version-does-not-exist-e978a90b/requires_greater_version_does_not_exist_e978a90b_b-1.0.0-py3-none-any.whl': 'md5:10e1742696dfb4b29ac20d318c6e6183',
-      'dist/requires-greater-version-does-not-exist-e978a90b/requires_greater_version_does_not_exist_e978a90b_b-1.0.0.tar.gz': 'md5:e8cdcd2617ad896ad615930611aced85',
+      'dist/requires-greater-version-does-not-exist-f72fdef3/requires_greater_version_does_not_exist_f72fdef3_a-1.0.0-py3-none-any.whl': 'md5:1cb4876d9fb6cb42c25c6e365474d6e8',
+      'dist/requires-greater-version-does-not-exist-f72fdef3/requires_greater_version_does_not_exist_f72fdef3_a-1.0.0.tar.gz': 'md5:dc00d8a8cd1d9ee5c4a6d1384fc3a845',
+      'dist/requires-greater-version-does-not-exist-f72fdef3/requires_greater_version_does_not_exist_f72fdef3_b-0.1.0-py3-none-any.whl': 'md5:59442db2db19827f878e6241eb0e0a07',
+      'dist/requires-greater-version-does-not-exist-f72fdef3/requires_greater_version_does_not_exist_f72fdef3_b-0.1.0.tar.gz': 'md5:e6e1fed5ebe7920f012981f3347bb3cb',
+      'dist/requires-greater-version-does-not-exist-f72fdef3/requires_greater_version_does_not_exist_f72fdef3_b-1.0.0-py3-none-any.whl': 'md5:adfb1bf4ac574c2fe39f89689d20a5a5',
+      'dist/requires-greater-version-does-not-exist-f72fdef3/requires_greater_version_does_not_exist_f72fdef3_b-1.0.0.tar.gz': 'md5:7915f9f5beed58f71a2f30b37a8ec014',
       'dist/requires-less-version-does-not-exist-0a3a7000/requires_less_version_does_not_exist_0a3a7000_a-1.0.0-py3-none-any.whl': 'md5:0d63f7990df918f94425c0282fb69dd0',
       'dist/requires-less-version-does-not-exist-0a3a7000/requires_less_version_does_not_exist_0a3a7000_a-1.0.0.tar.gz': 'md5:288fef7e2535bfc18a991b9f31edf10a',
       'dist/requires-less-version-does-not-exist-0a3a7000/requires_less_version_does_not_exist_0a3a7000_b-2.0.0-py3-none-any.whl': 'md5:41b5fe9189689e63bf68469d70883fef',
@@ -206,16 +227,21 @@
         │   │       └── src
         │   │           └── requires_exact_version_does_not_exist_9b7b4d86_b
         │   │               └── __init__.py
-        │   ├── requires-greater-version-does-not-exist-e978a90b
-        │   │   ├── requires-greater-version-does-not-exist-e978a90b-a-1.0.0
+        │   ├── requires-greater-version-does-not-exist-f72fdef3
+        │   │   ├── requires-greater-version-does-not-exist-f72fdef3-a-1.0.0
         │   │   │   ├── pyproject.toml
         │   │   │   └── src
-        │   │   │       └── requires_greater_version_does_not_exist_e978a90b_a
+        │   │   │       └── requires_greater_version_does_not_exist_f72fdef3_a
         │   │   │           └── __init__.py
-        │   │   └── requires-greater-version-does-not-exist-e978a90b-b-1.0.0
+        │   │   ├── requires-greater-version-does-not-exist-f72fdef3-b-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_greater_version_does_not_exist_f72fdef3_b
+        │   │   │           └── __init__.py
+        │   │   └── requires-greater-version-does-not-exist-f72fdef3-b-1.0.0
         │   │       ├── pyproject.toml
         │   │       └── src
-        │   │           └── requires_greater_version_does_not_exist_e978a90b_b
+        │   │           └── requires_greater_version_does_not_exist_f72fdef3_b
         │   │               └── __init__.py
         │   ├── requires-less-version-does-not-exist-0a3a7000
         │   │   ├── requires-less-version-does-not-exist-0a3a7000-a-1.0.0
@@ -250,11 +276,13 @@
             │   ├── requires_exact_version_does_not_exist_9b7b4d86_a-1.0.0.tar.gz
             │   ├── requires_exact_version_does_not_exist_9b7b4d86_b-1.0.0-py3-none-any.whl
             │   └── requires_exact_version_does_not_exist_9b7b4d86_b-1.0.0.tar.gz
-            ├── requires-greater-version-does-not-exist-e978a90b
-            │   ├── requires_greater_version_does_not_exist_e978a90b_a-1.0.0-py3-none-any.whl
-            │   ├── requires_greater_version_does_not_exist_e978a90b_a-1.0.0.tar.gz
-            │   ├── requires_greater_version_does_not_exist_e978a90b_b-1.0.0-py3-none-any.whl
-            │   └── requires_greater_version_does_not_exist_e978a90b_b-1.0.0.tar.gz
+            ├── requires-greater-version-does-not-exist-f72fdef3
+            │   ├── requires_greater_version_does_not_exist_f72fdef3_a-1.0.0-py3-none-any.whl
+            │   ├── requires_greater_version_does_not_exist_f72fdef3_a-1.0.0.tar.gz
+            │   ├── requires_greater_version_does_not_exist_f72fdef3_b-0.1.0-py3-none-any.whl
+            │   ├── requires_greater_version_does_not_exist_f72fdef3_b-0.1.0.tar.gz
+            │   ├── requires_greater_version_does_not_exist_f72fdef3_b-1.0.0-py3-none-any.whl
+            │   └── requires_greater_version_does_not_exist_f72fdef3_b-1.0.0.tar.gz
             ├── requires-less-version-does-not-exist-0a3a7000
             │   ├── requires_less_version_does_not_exist_0a3a7000_a-1.0.0-py3-none-any.whl
             │   ├── requires_less_version_does_not_exist_0a3a7000_a-1.0.0.tar.gz
@@ -268,7 +296,7 @@
                 ├── requires_package_does_not_exist_291e5374_a-1.0.0-py3-none-any.whl
                 └── requires_package_does_not_exist_291e5374_a-1.0.0.tar.gz
         
-        37 directories, 36 files
+        40 directories, 40 files
   
       ''',
     }),
@@ -299,23 +327,31 @@
       INFO:packse.build:Building build/requires-exact-version-does-not-exist-9b7b4d86/requires-exact-version-does-not-exist-9b7b4d86-b-1.0.0 with hatch
       INFO:packse.build:Linked distribution to dist/requires-exact-version-does-not-exist-9b7b4d86/requires_exact_version_does_not_exist_9b7b4d86_b-1.0.0-py3-none-any.whl
       INFO:packse.build:Linked distribution to dist/requires-exact-version-does-not-exist-9b7b4d86/requires_exact_version_does_not_exist_9b7b4d86_b-1.0.0.tar.gz
-      INFO:root:Building 'requires-greater-version-does-not-exist-e978a90b' in directory 'build/requires-greater-version-does-not-exist-e978a90b'
-      INFO:packse.template:Creating requires-greater-version-does-not-exist-e978a90b-a-1.0.0
-      INFO:packse.template:Creating requires-greater-version-does-not-exist-e978a90b-a-1.0.0/pyproject.toml
-      INFO:packse.template:Creating requires-greater-version-does-not-exist-e978a90b-a-1.0.0/src
-      INFO:packse.template:Creating requires-greater-version-does-not-exist-e978a90b-a-1.0.0/src/requires_greater_version_does_not_exist_e978a90b_a
-      INFO:packse.template:Creating requires-greater-version-does-not-exist-e978a90b-a-1.0.0/src/requires_greater_version_does_not_exist_e978a90b_a/__init__.py
-      INFO:packse.build:Building build/requires-greater-version-does-not-exist-e978a90b/requires-greater-version-does-not-exist-e978a90b-a-1.0.0 with hatch
-      INFO:packse.build:Linked distribution to dist/requires-greater-version-does-not-exist-e978a90b/requires_greater_version_does_not_exist_e978a90b_a-1.0.0-py3-none-any.whl
-      INFO:packse.build:Linked distribution to dist/requires-greater-version-does-not-exist-e978a90b/requires_greater_version_does_not_exist_e978a90b_a-1.0.0.tar.gz
-      INFO:packse.template:Creating requires-greater-version-does-not-exist-e978a90b-b-1.0.0
-      INFO:packse.template:Creating requires-greater-version-does-not-exist-e978a90b-b-1.0.0/pyproject.toml
-      INFO:packse.template:Creating requires-greater-version-does-not-exist-e978a90b-b-1.0.0/src
-      INFO:packse.template:Creating requires-greater-version-does-not-exist-e978a90b-b-1.0.0/src/requires_greater_version_does_not_exist_e978a90b_b
-      INFO:packse.template:Creating requires-greater-version-does-not-exist-e978a90b-b-1.0.0/src/requires_greater_version_does_not_exist_e978a90b_b/__init__.py
-      INFO:packse.build:Building build/requires-greater-version-does-not-exist-e978a90b/requires-greater-version-does-not-exist-e978a90b-b-1.0.0 with hatch
-      INFO:packse.build:Linked distribution to dist/requires-greater-version-does-not-exist-e978a90b/requires_greater_version_does_not_exist_e978a90b_b-1.0.0-py3-none-any.whl
-      INFO:packse.build:Linked distribution to dist/requires-greater-version-does-not-exist-e978a90b/requires_greater_version_does_not_exist_e978a90b_b-1.0.0.tar.gz
+      INFO:root:Building 'requires-greater-version-does-not-exist-f72fdef3' in directory 'build/requires-greater-version-does-not-exist-f72fdef3'
+      INFO:packse.template:Creating requires-greater-version-does-not-exist-f72fdef3-a-1.0.0
+      INFO:packse.template:Creating requires-greater-version-does-not-exist-f72fdef3-a-1.0.0/pyproject.toml
+      INFO:packse.template:Creating requires-greater-version-does-not-exist-f72fdef3-a-1.0.0/src
+      INFO:packse.template:Creating requires-greater-version-does-not-exist-f72fdef3-a-1.0.0/src/requires_greater_version_does_not_exist_f72fdef3_a
+      INFO:packse.template:Creating requires-greater-version-does-not-exist-f72fdef3-a-1.0.0/src/requires_greater_version_does_not_exist_f72fdef3_a/__init__.py
+      INFO:packse.build:Building build/requires-greater-version-does-not-exist-f72fdef3/requires-greater-version-does-not-exist-f72fdef3-a-1.0.0 with hatch
+      INFO:packse.build:Linked distribution to dist/requires-greater-version-does-not-exist-f72fdef3/requires_greater_version_does_not_exist_f72fdef3_a-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/requires-greater-version-does-not-exist-f72fdef3/requires_greater_version_does_not_exist_f72fdef3_a-1.0.0.tar.gz
+      INFO:packse.template:Creating requires-greater-version-does-not-exist-f72fdef3-b-0.1.0
+      INFO:packse.template:Creating requires-greater-version-does-not-exist-f72fdef3-b-0.1.0/pyproject.toml
+      INFO:packse.template:Creating requires-greater-version-does-not-exist-f72fdef3-b-0.1.0/src
+      INFO:packse.template:Creating requires-greater-version-does-not-exist-f72fdef3-b-0.1.0/src/requires_greater_version_does_not_exist_f72fdef3_b
+      INFO:packse.template:Creating requires-greater-version-does-not-exist-f72fdef3-b-0.1.0/src/requires_greater_version_does_not_exist_f72fdef3_b/__init__.py
+      INFO:packse.build:Building build/requires-greater-version-does-not-exist-f72fdef3/requires-greater-version-does-not-exist-f72fdef3-b-0.1.0 with hatch
+      INFO:packse.build:Linked distribution to dist/requires-greater-version-does-not-exist-f72fdef3/requires_greater_version_does_not_exist_f72fdef3_b-0.1.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/requires-greater-version-does-not-exist-f72fdef3/requires_greater_version_does_not_exist_f72fdef3_b-0.1.0.tar.gz
+      INFO:packse.template:Creating requires-greater-version-does-not-exist-f72fdef3-b-1.0.0
+      INFO:packse.template:Creating requires-greater-version-does-not-exist-f72fdef3-b-1.0.0/pyproject.toml
+      INFO:packse.template:Creating requires-greater-version-does-not-exist-f72fdef3-b-1.0.0/src
+      INFO:packse.template:Creating requires-greater-version-does-not-exist-f72fdef3-b-1.0.0/src/requires_greater_version_does_not_exist_f72fdef3_b
+      INFO:packse.template:Creating requires-greater-version-does-not-exist-f72fdef3-b-1.0.0/src/requires_greater_version_does_not_exist_f72fdef3_b/__init__.py
+      INFO:packse.build:Building build/requires-greater-version-does-not-exist-f72fdef3/requires-greater-version-does-not-exist-f72fdef3-b-1.0.0 with hatch
+      INFO:packse.build:Linked distribution to dist/requires-greater-version-does-not-exist-f72fdef3/requires_greater_version_does_not_exist_f72fdef3_b-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/requires-greater-version-does-not-exist-f72fdef3/requires_greater_version_does_not_exist_f72fdef3_b-1.0.0.tar.gz
       INFO:root:Building 'requires-less-version-does-not-exist-0a3a7000' in directory 'build/requires-less-version-does-not-exist-0a3a7000'
       INFO:packse.template:Creating requires-less-version-does-not-exist-0a3a7000-a-1.0.0
       INFO:packse.template:Creating requires-less-version-does-not-exist-0a3a7000-a-1.0.0/pyproject.toml
@@ -354,7 +390,7 @@
     'stdout': '''
       requires-package-does-not-exist-291e5374-a
       requires-exact-version-does-not-exist-9b7b4d86-a
-      requires-greater-version-does-not-exist-e978a90b-a
+      requires-greater-version-does-not-exist-f72fdef3-a
       requires-less-version-does-not-exist-0a3a7000-a
   
     ''',
@@ -384,10 +420,11 @@
               └── unsatisfied
       └── b-1.0.0
       
-      requires-greater-version-does-not-exist-e978a90b
+      requires-greater-version-does-not-exist-f72fdef3
       └── a-1.0.0
           └── requires b>1.0.0
               └── unsatisfied
+      ├── b-0.1.0
       └── b-1.0.0
       
       requires-less-version-does-not-exist-0a3a7000

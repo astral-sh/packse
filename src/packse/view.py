@@ -55,7 +55,7 @@ def dependency_tree(scenario: Scenario):
         prefix: str = "",
         for_requirement: Requirement | None = None,
     ):
-        versions = scenario.packages[package].get_versions()
+        versions = scenario.packages[package].versions
 
         pointers = [tee] * (len(versions) - 1) + [last]
         satisfied = False
@@ -76,7 +76,7 @@ def dependency_tree(scenario: Scenario):
             yield prefix + last + "unsatisfied"
 
     def render_requirements_for(package: str, version: str, prefix: str = ""):
-        requirements = list(scenario.packages[package].get_versions()[version].requires)
+        requirements = list(scenario.packages[package].versions[version].requires)
 
         pointers = [tee] * (len(requirements) - 1) + [last]
         for pointer, requirement in zip(pointers, sorted(requirements)):

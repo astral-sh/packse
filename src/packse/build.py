@@ -102,7 +102,7 @@ def build_scenario_package(
     # Generate a Python module name
     module_name = package_name.replace("-", "_")
 
-    for version, specification in package.get_versions().items():
+    for version, specification in package.versions.items():
         package_destination = create_from_template(
             build_destination,
             template_name=scenario.template,

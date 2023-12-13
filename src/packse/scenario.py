@@ -23,25 +23,17 @@ class PackageVersion(msgspec.Struct):
 
 
 class Package(msgspec.Struct):
-    versions: dict[str, PackageVersion] | list[str]
+    versions: dict[str, PackageVersion]
 
     def hash(self) -> str:
         """
         Return a hash of the contents
         """
         hasher = hashlib.new("md5", usedforsecurity=False)
-        for name, version in self.get_versions().items():
+        for name, version in self.versions.items():
             hasher.update(name.encode())
             hasher.update(version.hash().encode())
         return hasher.hexdigest()
-
-    def get_versions(self) -> dict[str, PackageVersion]:
-        if isinstance(self.versions, dict):
-            return self.versions
-
-        # TODO(zanieb): Improve this with caching (challenging due to immutability)
-        #               or better design
-        return {version: PackageVersion() for version in self.versions}
 
 
 class Scenario(msgspec.Struct):
