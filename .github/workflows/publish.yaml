@@ -48,13 +48,20 @@ jobs:
         run: |
           poetry install
 
+      - name: Collect scenarios
+        run: |
+          shopt -s globstar
+
+          scenarios=scenarios/**/*.json
+          echo "SCENARIOS=$scenarios" >> "$GITHUB_ENV"
+
       - name: View scenarios
         run: |
-          poetry run packse view scenarios/**/*.json
+          poetry run packse view $SCENARIOS
 
       - name: Build scenarios
         run: |
-          poetry run packse build scenarios/**/*.json
+          poetry run packse build $SCENARIOS
 
       - name: Publish scenarios
         env:
