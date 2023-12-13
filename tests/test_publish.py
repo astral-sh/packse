@@ -1,9 +1,9 @@
-import pytest
 import subprocess
+from pathlib import Path
 
 from packse import __development_base_path__
+
 from .common import snapshot_command
-from pathlib import Path
 
 
 def test_publish_example(snapshot, tmpcwd: Path):

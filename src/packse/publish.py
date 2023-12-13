@@ -20,7 +20,8 @@ def publish(targets: list[Path], skip_existing: bool, dry_run: bool):
         if not target.is_dir():
             raise InvalidPublishTarget(target, reason="Not a directory.")
 
-    logger.info("Publishing %s targets...", len(targets))
+    s = "" if len(targets) == 1 else "s"
+    logger.info("Publishing %s target%s...", len(targets), s)
     for target in targets:
         logger.info("Publishing '%s'...", target.name)
         for distfile in target.iterdir():
