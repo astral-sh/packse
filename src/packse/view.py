@@ -7,31 +7,32 @@ from pathlib import Path
 from packaging.requirements import Requirement
 
 from packse.error import InvalidScenario, ScenarioNotFound
-from packse.scenario import Scenario, load_scenario, scenario_prefix
+from packse.scenario import Scenario, load_scenarios, scenario_prefix
 
 logger = logging.getLogger(__name__)
 
 
 def view(targets: list[Path]):
-    # Validate all targets first
+    scenarios = []
+
+    # Validate and collect all targets first
     for target in targets:
         if not target.exists():
             raise ScenarioNotFound(target)
 
         try:
-            load_scenario(target)
+            logger.debug("Loading %s", target)
+            scenarios.extend(load_scenarios(target))
         except Exception as exc:
             raise InvalidScenario(target, reason=str(exc)) from exc
 
     # Then view each one
-    for target in targets:
-        view_scenario(target)
+    for scenario in scenarios:
+        logging.debug("Viewing %s", scenario.name)
+        view_scenario(scenario)
 
 
-def view_scenario(target: Path):
-    logging.debug("Viewing %s", target)
-
-    scenario = load_scenario(target)
+def view_scenario(scenario: Scenario):
     prefix = scenario_prefix(scenario)
 
     print(prefix)

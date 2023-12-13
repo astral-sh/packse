@@ -76,4 +76,6 @@ pip install -i https://test.pypi.org/simple/ <scenario>-<package>==1.0.0
 
 ### Writing new scenarios
 
-**Not yet written**
+Scenario files may contain one or more scenarios written in JSON.
+
+**Documentation not yet written**
