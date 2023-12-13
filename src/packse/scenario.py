@@ -8,8 +8,8 @@ from packse.template import get_template_version
 
 
 class PackageVersion(msgspec.Struct):
-    requires_python: str | None
-    requires: list[str]
+    requires_python: str | None = ">=3.7"
+    requires: list[str] = []
 
     def hash(self) -> str:
         """
@@ -23,17 +23,25 @@ class PackageVersion(msgspec.Struct):
 
 
 class Package(msgspec.Struct):
-    versions: dict[str, PackageVersion]
+    versions: dict[str, PackageVersion] | list[str]
 
     def hash(self) -> str:
         """
         Return a hash of the contents
         """
         hasher = hashlib.new("md5", usedforsecurity=False)
-        for name, version in self.versions.items():
+        for name, version in self.get_versions().items():
             hasher.update(name.encode())
             hasher.update(version.hash().encode())
         return hasher.hexdigest()
+
+    def get_versions(self) -> dict[str, PackageVersion]:
+        if isinstance(self.versions, dict):
+            return self.versions
+
+        # TODO(zanieb): Improve this with caching (challenging due to immutability)
+        #               or better design
+        return {version: PackageVersion() for version in self.versions}
 
 
 class Scenario(msgspec.Struct):
@@ -77,9 +85,26 @@ class Scenario(msgspec.Struct):
 
 def load_scenario(target: Path) -> Scenario:
     """
-    Loads a scenario, including a hash of its contents
+    Loads a scenario
     """
     return msgspec.json.decode(target.read_text(), type=Scenario)
+
+
+def load_many_scenarios(target: Path) -> list[Scenario]:
+    """
+    Loads a file with many scenarios
+    """
+    return msgspec.json.decode(target.read_text(), type=list[Scenario])
+
+
+def load_scenarios(target: Path) -> list[Scenario]:
+    # Guess if the file contains one or many scenario
+    with target.open() as buffer:
+        many = buffer.readline().lstrip().startswith("[")
+    if many:
+        return load_many_scenarios(target)
+    else:
+        return [load_scenario(target)]
 
 
 def scenario_version(scenario: Scenario) -> str:

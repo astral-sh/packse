@@ -14,36 +14,38 @@ from packse.error import (
     InvalidScenario,
     ScenarioNotFound,
 )
-from packse.scenario import Package, Scenario, load_scenario, scenario_prefix
+from packse.scenario import Package, Scenario, load_scenarios, scenario_prefix
 from packse.template import create_from_template
 
 logger = logging.getLogger(__name__)
 
 
 def build(targets: list[Path], rm_destination: bool):
-    # Validate all targets first
+    # Validate and collect all targets first
+    scenarios = []
+
     for target in targets:
         if not target.exists():
             raise ScenarioNotFound(target)
 
         try:
-            load_scenario(target)
+            logger.debug("Loading %s", target)
+            scenarios.extend(load_scenarios(target))
         except Exception as exc:
             raise InvalidScenario(target, reason=str(exc)) from exc
 
     # Then build each one
-    for target in targets:
-        result = build_scenario(target, rm_destination)
+    for scenario in scenarios:
+        result = build_scenario(scenario, rm_destination)
         print(result)
 
 
-def build_scenario(target: Path, rm_destination: bool) -> str:
+def build_scenario(scenario: Scenario, rm_destination: bool) -> str:
     """
     Build the scenario defined at the given path.
 
     Returns the scenario's root package name.
     """
-    scenario = load_scenario(target)
     prefix = scenario_prefix(scenario)
 
     work_dir = Path.cwd()
@@ -100,7 +102,7 @@ def build_scenario_package(
     # Generate a Python module name
     module_name = package_name.replace("-", "_")
 
-    for version, specification in package.versions.items():
+    for version, specification in package.get_versions().items():
         package_destination = create_from_template(
             build_destination,
             template_name=scenario.template,
