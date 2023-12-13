@@ -1,0 +1,99 @@
+[
+    {
+        "name": "requires-direct-incompatible-versionst",
+        "description": "Package `a` requires two incompatible versions of package `b`",
+        "root": "a",
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires_python": ">=3.7",
+                        "requires": [
+                            "b==1.0.0",
+                            "b==2.0.0"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {},
+                    "2.0.0": {}
+                }
+            }
+        }
+    },
+    {
+        "name": "requires-transitive-incompatible-with-root-version",
+        "description": "Package `a` requires package `b` and both `a` and `b` require different versions of `c`",
+        "root": "a",
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "b",
+                            "c==1.0.0"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "c==2.0.0"
+                        ]
+                    }
+                }
+            },
+            "c": {
+                "versions": {
+                    "1.0.0": {},
+                    "2.0.0": {}
+                }
+            }
+        }
+    },
+    {
+        "name": "requires-transitive-incompatible-with-transitive",
+        "description": "Package `a` requires package `b` and `c`; `b` and `c` require different versions of `d`",
+        "root": "a",
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "b",
+                            "c"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "d==1.0.0"
+                        ]
+                    }
+                }
+            },
+            "c": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "d==2.0.0"
+                        ]
+                    }
+                }
+            },
+            "d": {
+                "versions": {
+                    "1.0.0": {},
+                    "2.0.0": {}
+                }
+            }
+        }
+    }
+]
