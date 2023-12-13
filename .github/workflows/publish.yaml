@@ -52,7 +52,12 @@ jobs:
         run: |
           shopt -s globstar
 
-          scenarios=scenarios/**/*.json
+          scenarios=(scenarios/**/*.json)
+          for scenario in $scenarios
+          do
+            echo "$scenario"
+          done
+
           echo "SCENARIOS=$scenarios" >> "$GITHUB_ENV"
 
       - name: View scenarios
