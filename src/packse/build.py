@@ -5,6 +5,7 @@ import logging
 import shutil
 import subprocess
 from pathlib import Path
+from typing import Generator
 
 from packse.error import (
     BuildError,
@@ -27,7 +28,7 @@ def build(targets: list[Path], rm_destination: bool):
         try:
             load_scenario(target)
         except Exception as exc:
-            raise InvalidScenario(target) from exc
+            raise InvalidScenario(target, reason=str(exc)) from exc
 
     # Then build each one
     for target in targets:
@@ -118,23 +119,27 @@ def build_scenario_package(
         )
 
         try:
-            dists = build_package_distributions(package_destination)
+            for dist in build_package_distributions(package_destination):
+                shared_path = dist_destination / dist.name
+                logger.info(
+                    "Linked distribution to %s", shared_path.relative_to(work_dir)
+                )
+                shared_path.hardlink_to(dist)
         except subprocess.CalledProcessError as exc:
             raise BuildError(
                 f"Building {package_destination.relative_to(work_dir)} with hatch failed",
                 exc.output.decode(),
             )
 
-        for dist in dists:
-            shared_path = dist_destination / dist.name
-            logger.info("Linked distribution to %s", shared_path.relative_to(work_dir))
-            shared_path.hardlink_to(dist)
 
-
-def build_package_distributions(target: Path) -> tuple[Path]:
+def build_package_distributions(target: Path) -> Generator[Path, None, None]:
+    """
+    Build package distributions, yield each built distribution path, then delete the distribution folder.
+    """
     subprocess.check_output(
         ["hatch", "build"],
         cwd=target,
         stderr=subprocess.STDOUT,
     )
-    return tuple((target / "dist").iterdir())
+    yield from sorted((target / "dist").iterdir())
+    shutil.rmtree(target / "dist")

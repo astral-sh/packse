@@ -3,8 +3,6 @@
   dict({
     'exit_code': 0,
     'filesystem': dict({
-      'build/example-9e723676/example-9e723676-a-1.0.0/dist/example_9e723676_a-1.0.0-py3-none-any.whl': 'md5:38bdcf701bb74c615cda5cd8dd4d4ce3',
-      'build/example-9e723676/example-9e723676-a-1.0.0/dist/example_9e723676_a-1.0.0.tar.gz': 'md5:cf5d79fbc9777d41a69801f79edff4de',
       'build/example-9e723676/example-9e723676-a-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
@@ -24,8 +22,6 @@
         __version__ = "1.0.0"
   
       ''',
-      'build/example-9e723676/example-9e723676-b-1.0.0/dist/example_9e723676_b-1.0.0-py3-none-any.whl': 'md5:8af703510c999651652071adbf469c20',
-      'build/example-9e723676/example-9e723676-b-1.0.0/dist/example_9e723676_b-1.0.0.tar.gz': 'md5:9bcf4c09b49d56fc6cf3ecdfeeac4ba0',
       'build/example-9e723676/example-9e723676-b-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
@@ -54,17 +50,11 @@
         ├── build
         │   └── example-9e723676
         │       ├── example-9e723676-a-1.0.0
-        │       │   ├── dist
-        │       │   │   ├── example_9e723676_a-1.0.0-py3-none-any.whl
-        │       │   │   └── example_9e723676_a-1.0.0.tar.gz
         │       │   ├── pyproject.toml
         │       │   └── src
         │       │       └── example_9e723676_a
         │       │           └── __init__.py
         │       └── example-9e723676-b-1.0.0
-        │           ├── dist
-        │           │   ├── example_9e723676_b-1.0.0-py3-none-any.whl
-        │           │   └── example_9e723676_b-1.0.0.tar.gz
         │           ├── pyproject.toml
         │           └── src
         │               └── example_9e723676_b
@@ -76,7 +66,7 @@
                 ├── example_9e723676_b-1.0.0-py3-none-any.whl
                 └── example_9e723676_b-1.0.0.tar.gz
         
-        12 directories, 12 files
+        10 directories, 8 files
   
       ''',
     }),
@@ -96,8 +86,8 @@
       INFO:packse.template:Creating example-9e723676-b-1.0.0/src/example_9e723676_b
       INFO:packse.template:Creating example-9e723676-b-1.0.0/src/example_9e723676_b/__init__.py
       INFO:packse.build:Building build/example-9e723676/example-9e723676-b-1.0.0 with hatch
-      INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0.tar.gz
       INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0.tar.gz
   
     ''',
     'stdout': '''
@@ -110,8 +100,6 @@
   dict({
     'exit_code': 0,
     'filesystem': dict({
-      'build/example-9e723676/example-9e723676-a-1.0.0/dist/example_9e723676_a-1.0.0-py3-none-any.whl': 'md5:38bdcf701bb74c615cda5cd8dd4d4ce3',
-      'build/example-9e723676/example-9e723676-a-1.0.0/dist/example_9e723676_a-1.0.0.tar.gz': 'md5:cf5d79fbc9777d41a69801f79edff4de',
       'build/example-9e723676/example-9e723676-a-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
@@ -131,8 +119,6 @@
         __version__ = "1.0.0"
   
       ''',
-      'build/example-9e723676/example-9e723676-b-1.0.0/dist/example_9e723676_b-1.0.0-py3-none-any.whl': 'md5:8af703510c999651652071adbf469c20',
-      'build/example-9e723676/example-9e723676-b-1.0.0/dist/example_9e723676_b-1.0.0.tar.gz': 'md5:9bcf4c09b49d56fc6cf3ecdfeeac4ba0',
       'build/example-9e723676/example-9e723676-b-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
@@ -161,17 +147,11 @@
         ├── build
         │   └── example-9e723676
         │       ├── example-9e723676-a-1.0.0
-        │       │   ├── dist
-        │       │   │   ├── example_9e723676_a-1.0.0-py3-none-any.whl
-        │       │   │   └── example_9e723676_a-1.0.0.tar.gz
         │       │   ├── pyproject.toml
         │       │   └── src
         │       │       └── example_9e723676_a
         │       │           └── __init__.py
         │       └── example-9e723676-b-1.0.0
-        │           ├── dist
-        │           │   ├── example_9e723676_b-1.0.0-py3-none-any.whl
-        │           │   └── example_9e723676_b-1.0.0.tar.gz
         │           ├── pyproject.toml
         │           └── src
         │               └── example_9e723676_b
@@ -183,7 +163,7 @@
                 ├── example_9e723676_b-1.0.0-py3-none-any.whl
                 └── example_9e723676_b-1.0.0.tar.gz
         
-        12 directories, 12 files
+        10 directories, 8 files
   
       ''',
     }),
@@ -203,8 +183,8 @@
       INFO:packse.template:Creating example-9e723676-b-1.0.0/src/example_9e723676_b
       INFO:packse.template:Creating example-9e723676-b-1.0.0/src/example_9e723676_b/__init__.py
       INFO:packse.build:Building build/example-9e723676/example-9e723676-b-1.0.0 with hatch
-      INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0.tar.gz
       INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0.tar.gz
   
     ''',
     'stdout': '''
@@ -232,8 +212,8 @@
       INFO:packse.template:Creating example-9e723676-b-1.0.0/src/example_9e723676_b
       INFO:packse.template:Creating example-9e723676-b-1.0.0/src/example_9e723676_b/__init__.py
       INFO:packse.build:Building build/example-9e723676/example-9e723676-b-1.0.0 with hatch
-      INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0.tar.gz
       INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0.tar.gz
   
     ''',
     'stdout': '''
@@ -246,7 +226,7 @@
   dict({
     'exit_code': 1,
     'stderr': '''
-      File at '$PWD/test.json' is not a valid scenario.
+      File at '$PWD/test.json' is not a valid scenario: Input data was truncated.
   
     ''',
     'stdout': '',
