@@ -76,6 +76,7 @@
       requires-does-not-exist-6ea3a390
       └── a-1.0.0
           └── requires b
+              └── unsatisfied
       
   
     ''',
