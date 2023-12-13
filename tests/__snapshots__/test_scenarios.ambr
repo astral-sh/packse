@@ -50,8 +50,8 @@
       INFO:packse.template:Creating requires-does-not-exist-1888d2a8-a-1.0.0/src/requires_does_not_exist_1888d2a8_a
       INFO:packse.template:Creating requires-does-not-exist-1888d2a8-a-1.0.0/src/requires_does_not_exist_1888d2a8_a/__init__.py
       INFO:packse.build:Building build/requires-does-not-exist-1888d2a8/requires-does-not-exist-1888d2a8-a-1.0.0 with hatch
-      INFO:packse.build:Linked distribution to dist/requires-does-not-exist-1888d2a8/requires_does_not_exist_1888d2a8_a-1.0.0.tar.gz
       INFO:packse.build:Linked distribution to dist/requires-does-not-exist-1888d2a8/requires_does_not_exist_1888d2a8_a-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/requires-does-not-exist-1888d2a8/requires_does_not_exist_1888d2a8_a-1.0.0.tar.gz
   
     ''',
     'stdout': '''

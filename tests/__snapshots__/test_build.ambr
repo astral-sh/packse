@@ -86,8 +86,8 @@
       INFO:packse.template:Creating example-9e723676-b-1.0.0/src/example_9e723676_b
       INFO:packse.template:Creating example-9e723676-b-1.0.0/src/example_9e723676_b/__init__.py
       INFO:packse.build:Building build/example-9e723676/example-9e723676-b-1.0.0 with hatch
-      INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0.tar.gz
       INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0.tar.gz
   
     ''',
     'stdout': '''
@@ -183,8 +183,8 @@
       INFO:packse.template:Creating example-9e723676-b-1.0.0/src/example_9e723676_b
       INFO:packse.template:Creating example-9e723676-b-1.0.0/src/example_9e723676_b/__init__.py
       INFO:packse.build:Building build/example-9e723676/example-9e723676-b-1.0.0 with hatch
-      INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0.tar.gz
       INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0.tar.gz
   
     ''',
     'stdout': '''
@@ -212,8 +212,8 @@
       INFO:packse.template:Creating example-9e723676-b-1.0.0/src/example_9e723676_b
       INFO:packse.template:Creating example-9e723676-b-1.0.0/src/example_9e723676_b/__init__.py
       INFO:packse.build:Building build/example-9e723676/example-9e723676-b-1.0.0 with hatch
-      INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0.tar.gz
       INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/example-9e723676/example_9e723676_b-1.0.0.tar.gz
   
     ''',
     'stdout': '''

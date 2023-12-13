@@ -141,5 +141,5 @@ def build_package_distributions(target: Path) -> Generator[Path, None, None]:
         cwd=target,
         stderr=subprocess.STDOUT,
     )
-    yield from (target / "dist").iterdir()
+    yield from sorted((target / "dist").iterdir())
     shutil.rmtree(target / "dist")
