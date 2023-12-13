@@ -87,5 +87,30 @@
                 }
             }
         }
+    },
+    {
+        "name": "transitive-requires-package-does-not-exist",
+        "description": "Package `b`, a dependency of `a`, requires any version of package `c` which does not exist",
+        "root": "a",
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "b"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "c"
+                        ]
+                    }
+                }
+            }
+        }
     }
 ]

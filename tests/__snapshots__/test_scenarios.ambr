@@ -193,6 +193,44 @@
         __version__ = "1.0.0"
   
       ''',
+      'build/transitive-requires-package-does-not-exist-c953495f/transitive-requires-package-does-not-exist-c953495f-a-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build]
+        sources = ["src"]
+        
+        [project]
+        name = "transitive-requires-package-does-not-exist-c953495f-a"
+        version = "1.0.0"
+        dependencies = ["transitive-requires-package-does-not-exist-c953495f-b"]
+        requires-python = ">=3.7"
+  
+      ''',
+      'build/transitive-requires-package-does-not-exist-c953495f/transitive-requires-package-does-not-exist-c953495f-a-1.0.0/src/transitive_requires_package_does_not_exist_c953495f_a/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/transitive-requires-package-does-not-exist-c953495f/transitive-requires-package-does-not-exist-c953495f-b-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build]
+        sources = ["src"]
+        
+        [project]
+        name = "transitive-requires-package-does-not-exist-c953495f-b"
+        version = "1.0.0"
+        dependencies = ["transitive-requires-package-does-not-exist-c953495f-c"]
+        requires-python = ">=3.7"
+  
+      ''',
+      'build/transitive-requires-package-does-not-exist-c953495f/transitive-requires-package-does-not-exist-c953495f-b-1.0.0/src/transitive_requires_package_does_not_exist_c953495f_b/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
       'dist/requires-exact-version-does-not-exist-9b7b4d86/requires_exact_version_does_not_exist_9b7b4d86_a-1.0.0-py3-none-any.whl': 'md5:e006513ccc765f5e2cb0deb95b6789a8',
       'dist/requires-exact-version-does-not-exist-9b7b4d86/requires_exact_version_does_not_exist_9b7b4d86_a-1.0.0.tar.gz': 'md5:dab8d28d3221a5c2af2ad84e8a20eba1',
       'dist/requires-exact-version-does-not-exist-9b7b4d86/requires_exact_version_does_not_exist_9b7b4d86_b-1.0.0-py3-none-any.whl': 'md5:50bfe76fc3300646970264ae7496de27',
@@ -213,6 +251,10 @@
       'dist/requires-less-version-does-not-exist-0a3a7000/requires_less_version_does_not_exist_0a3a7000_b-4.0.0.tar.gz': 'md5:be8251b164a43ec91c27b4f2ff20c318',
       'dist/requires-package-does-not-exist-291e5374/requires_package_does_not_exist_291e5374_a-1.0.0-py3-none-any.whl': 'md5:01c9847f9dc74f8f89252096b36d454a',
       'dist/requires-package-does-not-exist-291e5374/requires_package_does_not_exist_291e5374_a-1.0.0.tar.gz': 'md5:c8b6d25d222bc8d45ae294071f1e3d74',
+      'dist/transitive-requires-package-does-not-exist-c953495f/transitive_requires_package_does_not_exist_c953495f_a-1.0.0-py3-none-any.whl': 'md5:d02300c0117835739eab9bd27a11f0ab',
+      'dist/transitive-requires-package-does-not-exist-c953495f/transitive_requires_package_does_not_exist_c953495f_a-1.0.0.tar.gz': 'md5:cd114c3d88cd7183fefb774fb918a6e3',
+      'dist/transitive-requires-package-does-not-exist-c953495f/transitive_requires_package_does_not_exist_c953495f_b-1.0.0-py3-none-any.whl': 'md5:59116ff97f644bb4f7505293509b609d',
+      'dist/transitive-requires-package-does-not-exist-c953495f/transitive_requires_package_does_not_exist_c953495f_b-1.0.0.tar.gz': 'md5:3391cda93a9683a9e143a10d75eb28be',
       'tree': '''
         test_build_all_scenarios_requi0
         ├── build
@@ -264,11 +306,22 @@
         │   │       └── src
         │   │           └── requires_less_version_does_not_exist_0a3a7000_b
         │   │               └── __init__.py
-        │   └── requires-package-does-not-exist-291e5374
-        │       └── requires-package-does-not-exist-291e5374-a-1.0.0
+        │   ├── requires-package-does-not-exist-291e5374
+        │   │   └── requires-package-does-not-exist-291e5374-a-1.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_package_does_not_exist_291e5374_a
+        │   │               └── __init__.py
+        │   └── transitive-requires-package-does-not-exist-c953495f
+        │       ├── transitive-requires-package-does-not-exist-c953495f-a-1.0.0
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── transitive_requires_package_does_not_exist_c953495f_a
+        │       │           └── __init__.py
+        │       └── transitive-requires-package-does-not-exist-c953495f-b-1.0.0
         │           ├── pyproject.toml
         │           └── src
-        │               └── requires_package_does_not_exist_291e5374_a
+        │               └── transitive_requires_package_does_not_exist_c953495f_b
         │                   └── __init__.py
         └── dist
             ├── requires-exact-version-does-not-exist-9b7b4d86
@@ -292,11 +345,16 @@
             │   ├── requires_less_version_does_not_exist_0a3a7000_b-3.0.0.tar.gz
             │   ├── requires_less_version_does_not_exist_0a3a7000_b-4.0.0-py3-none-any.whl
             │   └── requires_less_version_does_not_exist_0a3a7000_b-4.0.0.tar.gz
-            └── requires-package-does-not-exist-291e5374
-                ├── requires_package_does_not_exist_291e5374_a-1.0.0-py3-none-any.whl
-                └── requires_package_does_not_exist_291e5374_a-1.0.0.tar.gz
+            ├── requires-package-does-not-exist-291e5374
+            │   ├── requires_package_does_not_exist_291e5374_a-1.0.0-py3-none-any.whl
+            │   └── requires_package_does_not_exist_291e5374_a-1.0.0.tar.gz
+            └── transitive-requires-package-does-not-exist-c953495f
+                ├── transitive_requires_package_does_not_exist_c953495f_a-1.0.0-py3-none-any.whl
+                ├── transitive_requires_package_does_not_exist_c953495f_a-1.0.0.tar.gz
+                ├── transitive_requires_package_does_not_exist_c953495f_b-1.0.0-py3-none-any.whl
+                └── transitive_requires_package_does_not_exist_c953495f_b-1.0.0.tar.gz
         
-        40 directories, 40 files
+        48 directories, 48 files
   
       ''',
     }),
@@ -385,6 +443,23 @@
       INFO:packse.build:Building build/requires-less-version-does-not-exist-0a3a7000/requires-less-version-does-not-exist-0a3a7000-b-4.0.0 with hatch
       INFO:packse.build:Linked distribution to dist/requires-less-version-does-not-exist-0a3a7000/requires_less_version_does_not_exist_0a3a7000_b-4.0.0-py3-none-any.whl
       INFO:packse.build:Linked distribution to dist/requires-less-version-does-not-exist-0a3a7000/requires_less_version_does_not_exist_0a3a7000_b-4.0.0.tar.gz
+      INFO:root:Building 'transitive-requires-package-does-not-exist-c953495f' in directory 'build/transitive-requires-package-does-not-exist-c953495f'
+      INFO:packse.template:Creating transitive-requires-package-does-not-exist-c953495f-a-1.0.0
+      INFO:packse.template:Creating transitive-requires-package-does-not-exist-c953495f-a-1.0.0/pyproject.toml
+      INFO:packse.template:Creating transitive-requires-package-does-not-exist-c953495f-a-1.0.0/src
+      INFO:packse.template:Creating transitive-requires-package-does-not-exist-c953495f-a-1.0.0/src/transitive_requires_package_does_not_exist_c953495f_a
+      INFO:packse.template:Creating transitive-requires-package-does-not-exist-c953495f-a-1.0.0/src/transitive_requires_package_does_not_exist_c953495f_a/__init__.py
+      INFO:packse.build:Building build/transitive-requires-package-does-not-exist-c953495f/transitive-requires-package-does-not-exist-c953495f-a-1.0.0 with hatch
+      INFO:packse.build:Linked distribution to dist/transitive-requires-package-does-not-exist-c953495f/transitive_requires_package_does_not_exist_c953495f_a-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/transitive-requires-package-does-not-exist-c953495f/transitive_requires_package_does_not_exist_c953495f_a-1.0.0.tar.gz
+      INFO:packse.template:Creating transitive-requires-package-does-not-exist-c953495f-b-1.0.0
+      INFO:packse.template:Creating transitive-requires-package-does-not-exist-c953495f-b-1.0.0/pyproject.toml
+      INFO:packse.template:Creating transitive-requires-package-does-not-exist-c953495f-b-1.0.0/src
+      INFO:packse.template:Creating transitive-requires-package-does-not-exist-c953495f-b-1.0.0/src/transitive_requires_package_does_not_exist_c953495f_b
+      INFO:packse.template:Creating transitive-requires-package-does-not-exist-c953495f-b-1.0.0/src/transitive_requires_package_does_not_exist_c953495f_b/__init__.py
+      INFO:packse.build:Building build/transitive-requires-package-does-not-exist-c953495f/transitive-requires-package-does-not-exist-c953495f-b-1.0.0 with hatch
+      INFO:packse.build:Linked distribution to dist/transitive-requires-package-does-not-exist-c953495f/transitive_requires_package_does_not_exist_c953495f_b-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/transitive-requires-package-does-not-exist-c953495f/transitive_requires_package_does_not_exist_c953495f_b-1.0.0.tar.gz
   
     ''',
     'stdout': '''
@@ -392,6 +467,7 @@
       requires-exact-version-does-not-exist-9b7b4d86-a
       requires-greater-version-does-not-exist-f72fdef3-a
       requires-less-version-does-not-exist-0a3a7000-a
+      transitive-requires-package-does-not-exist-c953495f-a
   
     ''',
   })
@@ -434,6 +510,16 @@
       ├── b-2.0.0
       ├── b-3.0.0
       └── b-4.0.0
+      
+      transitive-requires-package-does-not-exist-c953495f
+      └── a-1.0.0
+          └── requires b
+              └── satisfied by b-1.0.0
+                  └── requires c
+                      └── unsatisfied
+      └── b-1.0.0
+          └── requires c
+              └── unsatisfied
       
   
     ''',
