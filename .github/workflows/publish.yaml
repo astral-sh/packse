@@ -42,17 +42,37 @@ jobs:
         run: |
           pip install poetry==${{ env.POETRY_VERSION }}
 
+      - name: Install zsh
+        run: |
+          sudo apt-get update
+          sudo apt-get install zsh
+
       - name: Install packages
         run: |
           poetry install
 
+      - name: Collect scenarios
+        run: |
+          scenarios=(scenarios/**/*.json)
+
+          # Display for debug
+          for scenario in $scenarios
+          do
+            echo "$scenario"
+          done
+          echo "SCENARIOS=$scenarios" >> "$GITHUB_ENV"
+
+          # Assigning a glob to a variable in `bash` is such a pain I don't want to talk about it
+          # instead we just use zsh
+        shell: zsh {0}
+
       - name: View scenarios
         run: |
-          packse view scenarios/**/*.json
+          poetry run packse view $SCENARIOS
 
       - name: Build scenarios
         run: |
-          packse build scenarios/**/*.json
+          poetry run packse build $SCENARIOS
 
       - name: Publish scenarios
         env:
@@ -60,4 +80,4 @@ jobs:
           TWINE_USERNAME: "__token__"
           TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
         run: |
-          packse publish --skip-existing dist/*
+          poetry run packse publish --skip-existing dist/*
