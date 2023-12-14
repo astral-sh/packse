@@ -304,35 +304,35 @@
         __version__ = "1.0.0"
   
       ''',
-      'dist/requires-exact-version-does-not-exist-e6dc3dbc/requires_exact_version_does_not_exist_e6dc3dbc-0.0.0.tar.gz': 'md5:de818f882df8a4d6b18e3ecfbcfac02c',
-      'dist/requires-exact-version-does-not-exist-e6dc3dbc/requires_exact_version_does_not_exist_e6dc3dbc_a-1.0.0-py3-none-any.whl': 'md5:e85fdf91e7fe089cc9df892234f40427',
-      'dist/requires-exact-version-does-not-exist-e6dc3dbc/requires_exact_version_does_not_exist_e6dc3dbc_a-1.0.0.tar.gz': 'md5:52c1ab3840f1056b0896aca80b787f7e',
-      'dist/requires-exact-version-does-not-exist-e6dc3dbc/requires_exact_version_does_not_exist_e6dc3dbc_b-1.0.0-py3-none-any.whl': 'md5:997792917b3e1bbf16a907cf7845b96e',
-      'dist/requires-exact-version-does-not-exist-e6dc3dbc/requires_exact_version_does_not_exist_e6dc3dbc_b-1.0.0.tar.gz': 'md5:2611456b8c048011faeb04be0b934e9c',
-      'dist/requires-greater-version-does-not-exist-0292e3fd/requires_greater_version_does_not_exist_0292e3fd-0.0.0.tar.gz': 'md5:30654cbb07305043c5448051caacc887',
-      'dist/requires-greater-version-does-not-exist-0292e3fd/requires_greater_version_does_not_exist_0292e3fd_a-1.0.0-py3-none-any.whl': 'md5:37ac0f0e7fb045698179517b72085de8',
-      'dist/requires-greater-version-does-not-exist-0292e3fd/requires_greater_version_does_not_exist_0292e3fd_a-1.0.0.tar.gz': 'md5:ee55f55c7408e24026ab58bcb25cd026',
-      'dist/requires-greater-version-does-not-exist-0292e3fd/requires_greater_version_does_not_exist_0292e3fd_b-0.1.0-py3-none-any.whl': 'md5:8d5159f0cc4fcfd37d78cbefdd639261',
-      'dist/requires-greater-version-does-not-exist-0292e3fd/requires_greater_version_does_not_exist_0292e3fd_b-0.1.0.tar.gz': 'md5:1c6a356749f9f4bfa0ff03f6f4975d86',
-      'dist/requires-greater-version-does-not-exist-0292e3fd/requires_greater_version_does_not_exist_0292e3fd_b-1.0.0-py3-none-any.whl': 'md5:cd9241f0b75213007e31fa1867c1a040',
-      'dist/requires-greater-version-does-not-exist-0292e3fd/requires_greater_version_does_not_exist_0292e3fd_b-1.0.0.tar.gz': 'md5:f71af51a0a4f8ce52ab9afd3681f1ab1',
-      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6-0.0.0.tar.gz': 'md5:261526505b30fac087628302ca784545',
-      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6_a-1.0.0-py3-none-any.whl': 'md5:059efa528e1324e0e5ba7f57c9b8fd43',
-      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6_a-1.0.0.tar.gz': 'md5:464762e5b6ef86b9d9497e3af2d5636d',
-      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6_b-2.0.0-py3-none-any.whl': 'md5:3b1fe89b1205ed63bb642c73d407425e',
-      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6_b-2.0.0.tar.gz': 'md5:817090eb31abdadbc8ef3f2f34ce248c',
-      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6_b-3.0.0-py3-none-any.whl': 'md5:72bcd5b2df838f2a99de4b8f6fceb311',
-      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6_b-3.0.0.tar.gz': 'md5:9b5f51a259474ff62875af24c40bcd27',
-      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6_b-4.0.0-py3-none-any.whl': 'md5:a86f1c2074ca143a607e0e265156d0b9',
-      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6_b-4.0.0.tar.gz': 'md5:ff146c0c11df044a2eea0dd5293236e9',
-      'dist/requires-package-does-not-exist-2b0c3851/requires_package_does_not_exist_2b0c3851-0.0.0.tar.gz': 'md5:dbb35767dc4996e279d2573ab0fe38ff',
-      'dist/requires-package-does-not-exist-2b0c3851/requires_package_does_not_exist_2b0c3851_a-1.0.0-py3-none-any.whl': 'md5:aca58bea9a3ddf3d7e71713b9f332ef4',
-      'dist/requires-package-does-not-exist-2b0c3851/requires_package_does_not_exist_2b0c3851_a-1.0.0.tar.gz': 'md5:3f7ac2b6048a943a8d7718137a5ef6df',
-      'dist/transitive-requires-package-does-not-exist-ccfa77f5/transitive_requires_package_does_not_exist_ccfa77f5-0.0.0.tar.gz': 'md5:ce7cede5a217e67a61cc6c2220ca9bb7',
-      'dist/transitive-requires-package-does-not-exist-ccfa77f5/transitive_requires_package_does_not_exist_ccfa77f5_a-1.0.0-py3-none-any.whl': 'md5:878cc882aaeb5bc15f8d82f5cb74f61f',
-      'dist/transitive-requires-package-does-not-exist-ccfa77f5/transitive_requires_package_does_not_exist_ccfa77f5_a-1.0.0.tar.gz': 'md5:ff767f6c26a98366019f118ed4257f90',
-      'dist/transitive-requires-package-does-not-exist-ccfa77f5/transitive_requires_package_does_not_exist_ccfa77f5_b-1.0.0-py3-none-any.whl': 'md5:610ae18df8cce1f508d68422a97dd146',
-      'dist/transitive-requires-package-does-not-exist-ccfa77f5/transitive_requires_package_does_not_exist_ccfa77f5_b-1.0.0.tar.gz': 'md5:79fe086e86378d98b8e668248eed09ec',
+      'dist/requires-exact-version-does-not-exist-e6dc3dbc/requires_exact_version_does_not_exist_e6dc3dbc-0.0.0.tar.gz': 'md5:57d04a49d613045ef151068b14afb7a1',
+      'dist/requires-exact-version-does-not-exist-e6dc3dbc/requires_exact_version_does_not_exist_e6dc3dbc_a-1.0.0-py3-none-any.whl': 'md5:b41d3cba0f0079980c2893e33f8cd8ba',
+      'dist/requires-exact-version-does-not-exist-e6dc3dbc/requires_exact_version_does_not_exist_e6dc3dbc_a-1.0.0.tar.gz': 'md5:54b34b764e645c73b92fbcc82c7822ad',
+      'dist/requires-exact-version-does-not-exist-e6dc3dbc/requires_exact_version_does_not_exist_e6dc3dbc_b-1.0.0-py3-none-any.whl': 'md5:e57267581513efc716e2428883df34cd',
+      'dist/requires-exact-version-does-not-exist-e6dc3dbc/requires_exact_version_does_not_exist_e6dc3dbc_b-1.0.0.tar.gz': 'md5:acac7d6b37021d0d453eea37aa5495ee',
+      'dist/requires-greater-version-does-not-exist-0292e3fd/requires_greater_version_does_not_exist_0292e3fd-0.0.0.tar.gz': 'md5:3afa4793ecb0d8fe4c90fb9214b95b3a',
+      'dist/requires-greater-version-does-not-exist-0292e3fd/requires_greater_version_does_not_exist_0292e3fd_a-1.0.0-py3-none-any.whl': 'md5:fdfdd4b373915e9a0ae44a8eb18f7806',
+      'dist/requires-greater-version-does-not-exist-0292e3fd/requires_greater_version_does_not_exist_0292e3fd_a-1.0.0.tar.gz': 'md5:8372917b195ea60ab0ce60f6a46b69db',
+      'dist/requires-greater-version-does-not-exist-0292e3fd/requires_greater_version_does_not_exist_0292e3fd_b-0.1.0-py3-none-any.whl': 'md5:64956dff8e010242b36f831b2b902571',
+      'dist/requires-greater-version-does-not-exist-0292e3fd/requires_greater_version_does_not_exist_0292e3fd_b-0.1.0.tar.gz': 'md5:5861d50680990cfd3982d499d610a2f2',
+      'dist/requires-greater-version-does-not-exist-0292e3fd/requires_greater_version_does_not_exist_0292e3fd_b-1.0.0-py3-none-any.whl': 'md5:0cb228a6ae18e6c68de3b24fd1b3c7e7',
+      'dist/requires-greater-version-does-not-exist-0292e3fd/requires_greater_version_does_not_exist_0292e3fd_b-1.0.0.tar.gz': 'md5:ff205ea8adb9f4dc0219676df9bdbedf',
+      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6-0.0.0.tar.gz': 'md5:7558ba6d52acf537daeda65fd55099ec',
+      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6_a-1.0.0-py3-none-any.whl': 'md5:afcee7cd36eb7dad51c92d6e9f827263',
+      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6_a-1.0.0.tar.gz': 'md5:8679aab3dcafe58768a730d1cd9804f6',
+      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6_b-2.0.0-py3-none-any.whl': 'md5:640710db1a46f45d8cc8cf1e504c6f69',
+      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6_b-2.0.0.tar.gz': 'md5:08b09c051f1b048cabfe1e21ef13ccad',
+      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6_b-3.0.0-py3-none-any.whl': 'md5:ab652b81c8cd62ae5ba72b46319f3382',
+      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6_b-3.0.0.tar.gz': 'md5:ce6534e61734021a855cc26df9c8cc2c',
+      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6_b-4.0.0-py3-none-any.whl': 'md5:671bd2d3227312375dc292fa61396338',
+      'dist/requires-less-version-does-not-exist-709e7ab6/requires_less_version_does_not_exist_709e7ab6_b-4.0.0.tar.gz': 'md5:671c3f57d1486a8355569904779ade68',
+      'dist/requires-package-does-not-exist-2b0c3851/requires_package_does_not_exist_2b0c3851-0.0.0.tar.gz': 'md5:6ea97dc6d822c5655d8303adc383a1d9',
+      'dist/requires-package-does-not-exist-2b0c3851/requires_package_does_not_exist_2b0c3851_a-1.0.0-py3-none-any.whl': 'md5:9a1123c7d819e8810ff3baf58f906f03',
+      'dist/requires-package-does-not-exist-2b0c3851/requires_package_does_not_exist_2b0c3851_a-1.0.0.tar.gz': 'md5:3b86e30598211dd4f8b973fed21d440c',
+      'dist/transitive-requires-package-does-not-exist-ccfa77f5/transitive_requires_package_does_not_exist_ccfa77f5-0.0.0.tar.gz': 'md5:b08692ea88fab65466b3f3ff27ede9bc',
+      'dist/transitive-requires-package-does-not-exist-ccfa77f5/transitive_requires_package_does_not_exist_ccfa77f5_a-1.0.0-py3-none-any.whl': 'md5:7cfa6790189712b73391e21a8273c9d1',
+      'dist/transitive-requires-package-does-not-exist-ccfa77f5/transitive_requires_package_does_not_exist_ccfa77f5_a-1.0.0.tar.gz': 'md5:ee7d90091d94d03d505b72f5cb3b300f',
+      'dist/transitive-requires-package-does-not-exist-ccfa77f5/transitive_requires_package_does_not_exist_ccfa77f5_b-1.0.0-py3-none-any.whl': 'md5:f253be399fcf4a0b43dd36247ff27537',
+      'dist/transitive-requires-package-does-not-exist-ccfa77f5/transitive_requires_package_does_not_exist_ccfa77f5_b-1.0.0.tar.gz': 'md5:1909413b0230cfc0676cec9131a0ab42',
       'tree': '''
         test_build_all_scenarios_requi0
         ├── build
@@ -466,58 +466,12 @@
   
       ''',
     }),
-    'stderr': '''
-      INFO:packse.build:Building 'requires-package-does-not-exist-2b0c3851' in directory 'build/requires-package-does-not-exist-2b0c3851'
-      INFO:packse.build:Generated project for 'requires-package-does-not-exist-2b0c3851-a-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-package-does-not-exist-2b0c3851-a-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-package-does-not-exist-2b0c3851-0.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-package-does-not-exist-2b0c3851-0.0.0' in [TIME]
-      INFO:packse.build:Built scenario 'requires-package-does-not-exist-2b0c3851' in [TIME]
-      INFO:packse.build:Building 'requires-exact-version-does-not-exist-e6dc3dbc' in directory 'build/requires-exact-version-does-not-exist-e6dc3dbc'
-      INFO:packse.build:Generated project for 'requires-exact-version-does-not-exist-e6dc3dbc-a-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-exact-version-does-not-exist-e6dc3dbc-a-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-exact-version-does-not-exist-e6dc3dbc-b-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-exact-version-does-not-exist-e6dc3dbc-b-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-exact-version-does-not-exist-e6dc3dbc-0.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-exact-version-does-not-exist-e6dc3dbc-0.0.0' in [TIME]
-      INFO:packse.build:Built scenario 'requires-exact-version-does-not-exist-e6dc3dbc' in [TIME]
-      INFO:packse.build:Building 'requires-greater-version-does-not-exist-0292e3fd' in directory 'build/requires-greater-version-does-not-exist-0292e3fd'
-      INFO:packse.build:Generated project for 'requires-greater-version-does-not-exist-0292e3fd-a-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-greater-version-does-not-exist-0292e3fd-a-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-greater-version-does-not-exist-0292e3fd-b-0.1.0' in [TIME]
-      INFO:packse.build:Built package 'requires-greater-version-does-not-exist-0292e3fd-b-0.1.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-greater-version-does-not-exist-0292e3fd-b-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-greater-version-does-not-exist-0292e3fd-b-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-greater-version-does-not-exist-0292e3fd-0.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-greater-version-does-not-exist-0292e3fd-0.0.0' in [TIME]
-      INFO:packse.build:Built scenario 'requires-greater-version-does-not-exist-0292e3fd' in [TIME]
-      INFO:packse.build:Building 'requires-less-version-does-not-exist-709e7ab6' in directory 'build/requires-less-version-does-not-exist-709e7ab6'
-      INFO:packse.build:Generated project for 'requires-less-version-does-not-exist-709e7ab6-a-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-less-version-does-not-exist-709e7ab6-a-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-less-version-does-not-exist-709e7ab6-b-2.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-less-version-does-not-exist-709e7ab6-b-2.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-less-version-does-not-exist-709e7ab6-b-3.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-less-version-does-not-exist-709e7ab6-b-3.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-less-version-does-not-exist-709e7ab6-b-4.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-less-version-does-not-exist-709e7ab6-b-4.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-less-version-does-not-exist-709e7ab6-0.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-less-version-does-not-exist-709e7ab6-0.0.0' in [TIME]
-      INFO:packse.build:Built scenario 'requires-less-version-does-not-exist-709e7ab6' in [TIME]
-      INFO:packse.build:Building 'transitive-requires-package-does-not-exist-ccfa77f5' in directory 'build/transitive-requires-package-does-not-exist-ccfa77f5'
-      INFO:packse.build:Generated project for 'transitive-requires-package-does-not-exist-ccfa77f5-a-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'transitive-requires-package-does-not-exist-ccfa77f5-a-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'transitive-requires-package-does-not-exist-ccfa77f5-b-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'transitive-requires-package-does-not-exist-ccfa77f5-b-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'transitive-requires-package-does-not-exist-ccfa77f5-0.0.0' in [TIME]
-      INFO:packse.build:Built package 'transitive-requires-package-does-not-exist-ccfa77f5-0.0.0' in [TIME]
-      INFO:packse.build:Built scenario 'transitive-requires-package-does-not-exist-ccfa77f5' in [TIME]
-  
-    ''',
+    'stderr': '<not included>',
     'stdout': '''
-      requires-package-does-not-exist-2b0c3851
       requires-exact-version-does-not-exist-e6dc3dbc
       requires-greater-version-does-not-exist-0292e3fd
       requires-less-version-does-not-exist-709e7ab6
+      requires-package-does-not-exist-2b0c3851
       transitive-requires-package-does-not-exist-ccfa77f5
   
     ''',
@@ -710,33 +664,33 @@
         __version__ = "2.0.0"
   
       ''',
-      'dist/requires-direct-incompatible-versions-ff0dfdf1/requires_direct_incompatible_versions_ff0dfdf1-0.0.0.tar.gz': 'md5:f4ce2c117b3c52afb7baadb0277e824e',
-      'dist/requires-direct-incompatible-versions-ff0dfdf1/requires_direct_incompatible_versions_ff0dfdf1_a-1.0.0-py3-none-any.whl': 'md5:d0b26379e7472882c8375e0cb6aeec65',
-      'dist/requires-direct-incompatible-versions-ff0dfdf1/requires_direct_incompatible_versions_ff0dfdf1_a-1.0.0.tar.gz': 'md5:d850b21106bb82078d9453f22d589d7d',
-      'dist/requires-direct-incompatible-versions-ff0dfdf1/requires_direct_incompatible_versions_ff0dfdf1_b-1.0.0-py3-none-any.whl': 'md5:45507061d95f5e9429f3709946782ce8',
-      'dist/requires-direct-incompatible-versions-ff0dfdf1/requires_direct_incompatible_versions_ff0dfdf1_b-1.0.0.tar.gz': 'md5:06e0ce9c79d44134963595466025ce38',
-      'dist/requires-direct-incompatible-versions-ff0dfdf1/requires_direct_incompatible_versions_ff0dfdf1_b-2.0.0-py3-none-any.whl': 'md5:6a0ae203ab12aeb876783fd0ece0e0ef',
-      'dist/requires-direct-incompatible-versions-ff0dfdf1/requires_direct_incompatible_versions_ff0dfdf1_b-2.0.0.tar.gz': 'md5:ac3827e853f184f97134ba586f47d4b6',
-      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1-0.0.0.tar.gz': 'md5:fd94fb8e398628e3fafea78c3e450e1d',
-      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1_a-1.0.0-py3-none-any.whl': 'md5:ec39e07c82d432b6b7e7f6304ae89f72',
-      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1_a-1.0.0.tar.gz': 'md5:a98b5c6db755a6d5d697c68dfdd8c73c',
-      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1_b-1.0.0-py3-none-any.whl': 'md5:af0e10adcaa132ef7a6f8884d0dd76af',
-      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1_b-1.0.0.tar.gz': 'md5:221ca9a380c6523456b7edca1ab6d4de',
-      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1_c-1.0.0-py3-none-any.whl': 'md5:86d9e06e90b02574b737ad9ced909af7',
-      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1_c-1.0.0.tar.gz': 'md5:6673c6e0600b512d66f00b6b2a6e0abb',
-      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1_c-2.0.0-py3-none-any.whl': 'md5:eca1b2cb379a06088815cfecb29e9ea8',
-      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1_c-2.0.0.tar.gz': 'md5:79cade79b1a7a2afc8fc5cff9d5dea16',
-      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f-0.0.0.tar.gz': 'md5:c48c5f0213bbbb63ffba61d07a5b6ae3',
-      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_a-1.0.0-py3-none-any.whl': 'md5:9f0156cc3fb1d09d5db36a4b461a5131',
-      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_a-1.0.0.tar.gz': 'md5:abc2fcc0090c975ab84d06aa0a2d9961',
-      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_b-1.0.0-py3-none-any.whl': 'md5:64c8ca55f26e94add4860a387ac62052',
-      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_b-1.0.0.tar.gz': 'md5:7963e82d6f0ebdf2c97af122979f1a0b',
-      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_c-1.0.0-py3-none-any.whl': 'md5:09acb0577d20adfddd7c3aeaf66dec48',
-      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_c-1.0.0.tar.gz': 'md5:c64d8f1e6b0e68b741affd8931729dc0',
-      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_d-1.0.0-py3-none-any.whl': 'md5:893e1759ea4460e2c0f0cc4244f74985',
-      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_d-1.0.0.tar.gz': 'md5:27512d1dc548cfddf8c062e0b51990a5',
-      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_d-2.0.0-py3-none-any.whl': 'md5:c7313f15c06088bdc882dfa2b8c53fbf',
-      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_d-2.0.0.tar.gz': 'md5:599b036e68b7e65edc2d1850678e175b',
+      'dist/requires-direct-incompatible-versions-ff0dfdf1/requires_direct_incompatible_versions_ff0dfdf1-0.0.0.tar.gz': 'md5:92fd431c65b1eb2a30dd33ec44dcbb21',
+      'dist/requires-direct-incompatible-versions-ff0dfdf1/requires_direct_incompatible_versions_ff0dfdf1_a-1.0.0-py3-none-any.whl': 'md5:d6ce7dbf844cb4891a9405d22ccbf959',
+      'dist/requires-direct-incompatible-versions-ff0dfdf1/requires_direct_incompatible_versions_ff0dfdf1_a-1.0.0.tar.gz': 'md5:6399af2bad0065b3b15229119398f03c',
+      'dist/requires-direct-incompatible-versions-ff0dfdf1/requires_direct_incompatible_versions_ff0dfdf1_b-1.0.0-py3-none-any.whl': 'md5:80ea4107905f5a95d40e3fb448d7357f',
+      'dist/requires-direct-incompatible-versions-ff0dfdf1/requires_direct_incompatible_versions_ff0dfdf1_b-1.0.0.tar.gz': 'md5:d5b6f1ea35acab0a0b71934169efb866',
+      'dist/requires-direct-incompatible-versions-ff0dfdf1/requires_direct_incompatible_versions_ff0dfdf1_b-2.0.0-py3-none-any.whl': 'md5:3a51843a4f2b743c990bea5b4f288acf',
+      'dist/requires-direct-incompatible-versions-ff0dfdf1/requires_direct_incompatible_versions_ff0dfdf1_b-2.0.0.tar.gz': 'md5:79c277e475db0cc86c4f8675abd4b675',
+      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1-0.0.0.tar.gz': 'md5:458886312b2ab2a616f4ea60409d2a5c',
+      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1_a-1.0.0-py3-none-any.whl': 'md5:03b8dfde8c08cc7d27d7b46805489d87',
+      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1_a-1.0.0.tar.gz': 'md5:fe1565127ccedd3273658ae7992d0dae',
+      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1_b-1.0.0-py3-none-any.whl': 'md5:c466a429d0c2fbab6a28126bd9896c44',
+      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1_b-1.0.0.tar.gz': 'md5:ac121d1ddf7229696daebbdf881e3521',
+      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1_c-1.0.0-py3-none-any.whl': 'md5:ea585426e263d80517bfe535b674c3d5',
+      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1_c-1.0.0.tar.gz': 'md5:402b08bb00ca73eb82c590fbdf6d0dd6',
+      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1_c-2.0.0-py3-none-any.whl': 'md5:69e9ebf6d39e85d59acc1a42a83bf92b',
+      'dist/requires-transitive-incompatible-with-root-version-5c1b7dc1/requires_transitive_incompatible_with_root_version_5c1b7dc1_c-2.0.0.tar.gz': 'md5:bee7b54c283d2301eac728a2967c5e71',
+      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f-0.0.0.tar.gz': 'md5:0321ae1052b2b98bfac7783305f74283',
+      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_a-1.0.0-py3-none-any.whl': 'md5:50fdd4182386890c3e8c99d276d1f47b',
+      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_a-1.0.0.tar.gz': 'md5:3c899e9cbb36827eb483169664eb299c',
+      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_b-1.0.0-py3-none-any.whl': 'md5:52145a4aecc9b393ea2471f44c257702',
+      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_b-1.0.0.tar.gz': 'md5:6b7212f74d5d93e0d3e2545604aeaa67',
+      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_c-1.0.0-py3-none-any.whl': 'md5:66a45a60dda3c7aa18c26361c68a6352',
+      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_c-1.0.0.tar.gz': 'md5:735ceefebc30f87db9d788a6f77a25d8',
+      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_d-1.0.0-py3-none-any.whl': 'md5:124df7a8e6bd434dc196668e31eae6d7',
+      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_d-1.0.0.tar.gz': 'md5:b423245032b40ed9ffecc4ac1b5737af',
+      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_d-2.0.0-py3-none-any.whl': 'md5:d4645470b3b7572be5a51efd51f30bf4',
+      'dist/requires-transitive-incompatible-with-transitive-d87a3d1f/requires_transitive_incompatible_with_transitive_d87a3d1f_d-2.0.0.tar.gz': 'md5:341e6435891be391aa725fc58476d4e9',
       'tree': '''
         test_build_all_scenarios_requi1
         ├── build
@@ -854,45 +808,7 @@
   
       ''',
     }),
-    'stderr': '''
-      INFO:packse.build:Building 'requires-direct-incompatible-versions-ff0dfdf1' in directory 'build/requires-direct-incompatible-versions-ff0dfdf1'
-      INFO:packse.build:Generated project for 'requires-direct-incompatible-versions-ff0dfdf1-a-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-direct-incompatible-versions-ff0dfdf1-a-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-direct-incompatible-versions-ff0dfdf1-b-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-direct-incompatible-versions-ff0dfdf1-b-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-direct-incompatible-versions-ff0dfdf1-b-2.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-direct-incompatible-versions-ff0dfdf1-b-2.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-direct-incompatible-versions-ff0dfdf1-0.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-direct-incompatible-versions-ff0dfdf1-0.0.0' in [TIME]
-      INFO:packse.build:Built scenario 'requires-direct-incompatible-versions-ff0dfdf1' in [TIME]
-      INFO:packse.build:Building 'requires-transitive-incompatible-with-root-version-5c1b7dc1' in directory 'build/requires-transitive-incompatible-with-root-version-5c1b7dc1'
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-root-version-5c1b7dc1-a-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-root-version-5c1b7dc1-a-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-root-version-5c1b7dc1-b-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-root-version-5c1b7dc1-b-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-root-version-5c1b7dc1-c-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-root-version-5c1b7dc1-c-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-root-version-5c1b7dc1-c-2.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-root-version-5c1b7dc1-c-2.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-root-version-5c1b7dc1-0.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-root-version-5c1b7dc1-0.0.0' in [TIME]
-      INFO:packse.build:Built scenario 'requires-transitive-incompatible-with-root-version-5c1b7dc1' in [TIME]
-      INFO:packse.build:Building 'requires-transitive-incompatible-with-transitive-d87a3d1f' in directory 'build/requires-transitive-incompatible-with-transitive-d87a3d1f'
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-a-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-a-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-b-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-b-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-c-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-c-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-d-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-d-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-d-2.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-d-2.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-0.0.0' in [TIME]
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-0.0.0' in [TIME]
-      INFO:packse.build:Built scenario 'requires-transitive-incompatible-with-transitive-d87a3d1f' in [TIME]
-  
-    ''',
+    'stderr': '<not included>',
     'stdout': '''
       requires-direct-incompatible-versions-ff0dfdf1
       requires-transitive-incompatible-with-root-version-5c1b7dc1
