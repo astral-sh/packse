@@ -6,6 +6,8 @@ import shutil
 import subprocess
 import textwrap
 import time
+from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import wait as wait_for_futures
 from pathlib import Path
 from typing import Generator
 
@@ -42,8 +44,16 @@ def build(targets: list[Path], rm_destination: bool):
             raise InvalidScenario(target, reason=str(exc)) from exc
 
     # Then build each one
-    for scenario in scenarios:
-        result = build_scenario(scenario, rm_destination)
+    with ThreadPoolExecutor(thread_name_prefix="packse-scenario-") as executor:
+        futures = [
+            executor.submit(build_scenario, scenario, rm_destination)
+            for scenario in scenarios
+        ]
+
+        wait_for_futures(futures)
+
+    results = [future.result() for future in futures]
+    for result in sorted(results):
         print(result)
 
 
@@ -82,26 +92,38 @@ def build_scenario(scenario: Scenario, rm_destination: bool) -> str:
 
     dist_destination.mkdir(parents=True)
 
-    for name, package in scenario.packages.items():
-        build_scenario_package(
-            scenario=scenario,
-            prefix=prefix,
-            name=name,
-            package=package,
-            work_dir=work_dir,
-            build_destination=build_destination,
-            dist_destination=dist_destination,
+    with ThreadPoolExecutor(thread_name_prefix="packse-build-") as executor:
+        futures = [
+            executor.submit(
+                build_scenario_package,
+                scenario=scenario,
+                prefix=prefix,
+                name=name,
+                package=package,
+                work_dir=work_dir,
+                build_destination=build_destination,
+                dist_destination=dist_destination,
+            )
+            for name, package in scenario.packages.items()
+        ]
+
+        futures.append(
+            executor.submit(
+                build_scenario_package,
+                scenario=scenario,
+                prefix=prefix,
+                name="",
+                package=make_entrypoint_package(scenario),
+                work_dir=work_dir,
+                build_destination=build_destination,
+                dist_destination=dist_destination,
+            )
         )
 
-    build_scenario_package(
-        scenario=scenario,
-        prefix=prefix,
-        name="",
-        package=make_entrypoint_package(scenario),
-        work_dir=work_dir,
-        build_destination=build_destination,
-        dist_destination=dist_destination,
-    )
+        wait_for_futures(futures)
+        for future in futures:
+            # TODO(zanieb): Display _all_ of the errors to the user
+            future.result()
 
     logger.info(
         "Built scenario '%s' in %.2fs",

@@ -26,7 +26,8 @@ ALL_SCENARIO_IDS = tuple(path.name.removesuffix(".json") for path in ALL_SCENARI
 @pytest.mark.usefixtures("tmpcwd")
 def test_build_all_scenarios(snapshot, target):
     assert (
-        snapshot_command(["build", str(target)], snapshot_filesystem=True) == snapshot
+        snapshot_command(["build", str(target)], stderr=False, snapshot_filesystem=True)
+        == snapshot
     )
 
 

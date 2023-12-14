@@ -22,6 +22,8 @@ def snapshot_command(
     command: list[str],
     working_directory: Path | None = None,
     snapshot_filesystem: bool = False,
+    stderr: bool = True,
+    stdout: bool = True,
 ) -> dict:
     # By default, filter out absolute references to the working directory
     filters = [
@@ -41,8 +43,16 @@ def snapshot_command(
     )
     result = {
         "exit_code": process.returncode,
-        "stdout": apply_filters(process.stdout.decode(), filters),
-        "stderr": apply_filters(process.stderr.decode(), filters),
+        "stdout": (
+            apply_filters(process.stdout.decode(), filters)
+            if stdout
+            else "<not included>"
+        ),
+        "stderr": (
+            apply_filters(process.stderr.decode(), filters)
+            if stderr
+            else "<not included>"
+        ),
     }
 
     if snapshot_filesystem:

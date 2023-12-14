@@ -72,11 +72,11 @@
         __version__ = "1.0.0"
   
       ''',
-      'dist/example-0611cb74/example_0611cb74-0.0.0.tar.gz': 'md5:122f0762969764b1c7efa72e6cc32a68',
-      'dist/example-0611cb74/example_0611cb74_a-1.0.0-py3-none-any.whl': 'md5:ad587c99746197e2e435d23dd683f6cd',
-      'dist/example-0611cb74/example_0611cb74_a-1.0.0.tar.gz': 'md5:bf581c21ad045fb85c4053151e4ca94b',
-      'dist/example-0611cb74/example_0611cb74_b-1.0.0-py3-none-any.whl': 'md5:6dac15ad470e653f5f47ea6ddc3a6180',
-      'dist/example-0611cb74/example_0611cb74_b-1.0.0.tar.gz': 'md5:5555c31ea0c212cc69528753b06ad9ac',
+      'dist/example-0611cb74/example_0611cb74-0.0.0.tar.gz': 'md5:e00ccc70ae676c0d646df168f1cd65f8',
+      'dist/example-0611cb74/example_0611cb74_a-1.0.0-py3-none-any.whl': 'md5:114f32f20dae3da0053c02d6338c70db',
+      'dist/example-0611cb74/example_0611cb74_a-1.0.0.tar.gz': 'md5:fea71a58e2f6b8024c3fe7e843ca4e31',
+      'dist/example-0611cb74/example_0611cb74_b-1.0.0-py3-none-any.whl': 'md5:5bb20f24e7e2c9e03df6d0ba367b996d',
+      'dist/example-0611cb74/example_0611cb74_b-1.0.0.tar.gz': 'md5:85963f88d5090ce68ca00ad5babcc978',
       'tree': '''
         test_build_example0
         ├── build
@@ -108,17 +108,7 @@
   
       ''',
     }),
-    'stderr': '''
-      INFO:packse.build:Building 'example-0611cb74' in directory 'build/example-0611cb74'
-      INFO:packse.build:Generated project for 'example-0611cb74-a-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'example-0611cb74-a-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'example-0611cb74-b-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'example-0611cb74-b-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'example-0611cb74-0.0.0' in [TIME]
-      INFO:packse.build:Built package 'example-0611cb74-0.0.0' in [TIME]
-      INFO:packse.build:Built scenario 'example-0611cb74' in [TIME]
-  
-    ''',
+    'stderr': '<not included>',
     'stdout': '''
       example-0611cb74
   
@@ -127,144 +117,29 @@
 # ---
 # name: test_build_example_already_exists
   dict({
-    'exit_code': 0,
+    'exit_code': 1,
     'filesystem': dict({
-      'build/example-0611cb74/example-0611cb74-0.0.0/pyproject.toml': '''
-        [build-system]
-        requires = ["hatchling"]
-        build-backend = "hatchling.build"
-        
-        [tool.hatch.build.targets.wheel]
-        packages = ["src/example_0611cb74"]
-        
-        [tool.hatch.build.targets.sdist]
-        only-include = ["src/example_0611cb74"]
-        
-        [project]
-        name = "example-0611cb74"
-        version = "0.0.0"
-        dependencies = ["example-0611cb74-a"]
-        requires-python = ">=3.7"
-        description = "null"
-  
-      ''',
-      'build/example-0611cb74/example-0611cb74-0.0.0/src/example_0611cb74/__init__.py': '''
-        __version__ = "0.0.0"
-  
-      ''',
-      'build/example-0611cb74/example-0611cb74-a-1.0.0/pyproject.toml': '''
-        [build-system]
-        requires = ["hatchling"]
-        build-backend = "hatchling.build"
-        
-        [tool.hatch.build.targets.wheel]
-        packages = ["src/example_0611cb74_a"]
-        
-        [tool.hatch.build.targets.sdist]
-        only-include = ["src/example_0611cb74_a"]
-        
-        [project]
-        name = "example-0611cb74-a"
-        version = "1.0.0"
-        dependencies = ["example-0611cb74-b>=1.0.0"]
-        requires-python = ">=3.7"
-        description = ""
-  
-      ''',
-      'build/example-0611cb74/example-0611cb74-a-1.0.0/src/example_0611cb74_a/__init__.py': '''
-        __version__ = "1.0.0"
-  
-      ''',
-      'build/example-0611cb74/example-0611cb74-b-1.0.0/pyproject.toml': '''
-        [build-system]
-        requires = ["hatchling"]
-        build-backend = "hatchling.build"
-        
-        [tool.hatch.build.targets.wheel]
-        packages = ["src/example_0611cb74_b"]
-        
-        [tool.hatch.build.targets.sdist]
-        only-include = ["src/example_0611cb74_b"]
-        
-        [project]
-        name = "example-0611cb74-b"
-        version = "1.0.0"
-        dependencies = []
-        requires-python = ">=3.7"
-        description = ""
-  
-      ''',
-      'build/example-0611cb74/example-0611cb74-b-1.0.0/src/example_0611cb74_b/__init__.py': '''
-        __version__ = "1.0.0"
-  
-      ''',
-      'dist/example-0611cb74/example_0611cb74-0.0.0.tar.gz': 'md5:122f0762969764b1c7efa72e6cc32a68',
-      'dist/example-0611cb74/example_0611cb74_a-1.0.0-py3-none-any.whl': 'md5:ad587c99746197e2e435d23dd683f6cd',
-      'dist/example-0611cb74/example_0611cb74_a-1.0.0.tar.gz': 'md5:bf581c21ad045fb85c4053151e4ca94b',
-      'dist/example-0611cb74/example_0611cb74_b-1.0.0-py3-none-any.whl': 'md5:6dac15ad470e653f5f47ea6ddc3a6180',
-      'dist/example-0611cb74/example_0611cb74_b-1.0.0.tar.gz': 'md5:5555c31ea0c212cc69528753b06ad9ac',
       'tree': '''
         test_build_example_already_exi0
-        ├── build
-        │   └── example-0611cb74
-        │       ├── example-0611cb74-0.0.0
-        │       │   ├── pyproject.toml
-        │       │   └── src
-        │       │       └── example_0611cb74
-        │       │           └── __init__.py
-        │       ├── example-0611cb74-a-1.0.0
-        │       │   ├── pyproject.toml
-        │       │   └── src
-        │       │       └── example_0611cb74_a
-        │       │           └── __init__.py
-        │       └── example-0611cb74-b-1.0.0
-        │           ├── pyproject.toml
-        │           └── src
-        │               └── example_0611cb74_b
-        │                   └── __init__.py
-        └── dist
+        └── build
             └── example-0611cb74
-                ├── example_0611cb74-0.0.0.tar.gz
-                ├── example_0611cb74_a-1.0.0-py3-none-any.whl
-                ├── example_0611cb74_a-1.0.0.tar.gz
-                ├── example_0611cb74_b-1.0.0-py3-none-any.whl
-                └── example_0611cb74_b-1.0.0.tar.gz
         
-        13 directories, 11 files
+        2 directories
   
       ''',
     }),
     'stderr': '''
       INFO:packse.build:Building 'example-0611cb74' in directory 'build/example-0611cb74'
-      INFO:packse.build:Generated project for 'example-0611cb74-a-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'example-0611cb74-a-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'example-0611cb74-b-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'example-0611cb74-b-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'example-0611cb74-0.0.0' in [TIME]
-      INFO:packse.build:Built package 'example-0611cb74-0.0.0' in [TIME]
-      INFO:packse.build:Built scenario 'example-0611cb74' in [TIME]
+      Destination directory '[PWD]/build/example-0611cb74' already exists. Pass `--rm` to allow removal.
   
     ''',
-    'stdout': '''
-      example-0611cb74
-  
-    ''',
+    'stdout': '',
   })
 # ---
 # name: test_build_example_already_exists_with_rm_flag
   dict({
     'exit_code': 0,
-    'stderr': '''
-      INFO:packse.build:Building 'example-0611cb74' in directory 'build/example-0611cb74'
-      INFO:packse.build:Generated project for 'example-0611cb74-a-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'example-0611cb74-a-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'example-0611cb74-b-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'example-0611cb74-b-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'example-0611cb74-0.0.0' in [TIME]
-      INFO:packse.build:Built package 'example-0611cb74-0.0.0' in [TIME]
-      INFO:packse.build:Built scenario 'example-0611cb74' in [TIME]
-  
-    ''',
+    'stderr': '<not included>',
     'stdout': '''
       example-0611cb74
   
@@ -344,11 +219,11 @@
         __version__ = "1.0.0"
   
       ''',
-      'dist/example-da7f36ff/example_da7f36ff-0.0.0.tar.gz': 'md5:eae13d7168259363672d16e84ddd8fb4',
-      'dist/example-da7f36ff/example_da7f36ff_a-1.0.0-py3-none-any.whl': 'md5:78463a93467c33e2e0f2dab1d5dd7eaf',
-      'dist/example-da7f36ff/example_da7f36ff_a-1.0.0.tar.gz': 'md5:954ba198f542d768e13aa1720b0d183f',
-      'dist/example-da7f36ff/example_da7f36ff_b-1.0.0-py3-none-any.whl': 'md5:fa1b5955e385df12c8f700b75145a633',
-      'dist/example-da7f36ff/example_da7f36ff_b-1.0.0.tar.gz': 'md5:767be368bf5e60088bd12c636dd888eb',
+      'dist/example-da7f36ff/example_da7f36ff-0.0.0.tar.gz': 'md5:4ef0b272d74c93704036b93dd761de5a',
+      'dist/example-da7f36ff/example_da7f36ff_a-1.0.0-py3-none-any.whl': 'md5:4cf3ac0330e3be466382473c116a6390',
+      'dist/example-da7f36ff/example_da7f36ff_a-1.0.0.tar.gz': 'md5:b87c419b762a3893787131273972d9ad',
+      'dist/example-da7f36ff/example_da7f36ff_b-1.0.0-py3-none-any.whl': 'md5:5c64f942c60bacb0d083723cfdcc5bd6',
+      'dist/example-da7f36ff/example_da7f36ff_b-1.0.0.tar.gz': 'md5:c497d4b592bfa4eda86ce7d85414df91',
       'tree': '''
         test_build_example_with_seed0
         ├── build
@@ -380,17 +255,7 @@
   
       ''',
     }),
-    'stderr': '''
-      INFO:packse.build:Building 'example-da7f36ff' in directory 'build/example-da7f36ff'
-      INFO:packse.build:Generated project for 'example-da7f36ff-a-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'example-da7f36ff-a-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'example-da7f36ff-b-1.0.0' in [TIME]
-      INFO:packse.build:Built package 'example-da7f36ff-b-1.0.0' in [TIME]
-      INFO:packse.build:Generated project for 'example-da7f36ff-0.0.0' in [TIME]
-      INFO:packse.build:Built package 'example-da7f36ff-0.0.0' in [TIME]
-      INFO:packse.build:Built scenario 'example-da7f36ff' in [TIME]
-  
-    ''',
+    'stderr': '<not included>',
     'stdout': '''
       example-da7f36ff
   

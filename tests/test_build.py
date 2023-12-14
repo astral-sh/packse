@@ -3,6 +3,7 @@ from pathlib import Path
 
 import pytest
 from packse import __development_base_path__
+from packse.scenario import load_scenario, scenario_prefix
 
 from .common import snapshot_command
 
@@ -25,7 +26,8 @@ def test_build_invalid_target(snapshot, tmpcwd):
 def test_build_example(snapshot):
     target = __development_base_path__ / "scenarios" / "example.json"
     assert (
-        snapshot_command(["build", str(target)], snapshot_filesystem=True) == snapshot
+        snapshot_command(["build", str(target)], snapshot_filesystem=True, stderr=False)
+        == snapshot
     )
 
 
@@ -35,14 +37,17 @@ def test_build_example_with_seed(snapshot):
     target = __development_base_path__ / "scenarios" / "example.json"
     os.environ["PACKSE_VERSION_SEED"] = "foo"
     assert (
-        snapshot_command(["build", str(target)], snapshot_filesystem=True) == snapshot
+        snapshot_command(["build", str(target)], snapshot_filesystem=True, stderr=False)
+        == snapshot
     )
 
 
 @pytest.mark.usefixtures("tmpcwd")
 def test_build_example_already_exists(snapshot):
     target = __development_base_path__ / "scenarios" / "example.json"
-    (Path(".") / "build").mkdir()
+    scenario = load_scenario(target)
+    prefix = scenario_prefix(scenario)
+    (Path.cwd() / "build" / prefix).mkdir(parents=True)
     assert snapshot_command(["build", target], snapshot_filesystem=True) == snapshot
 
 
@@ -50,4 +55,4 @@ def test_build_example_already_exists(snapshot):
 def test_build_example_already_exists_with_rm_flag(snapshot):
     target = __development_base_path__ / "scenarios" / "example.json"
     (Path(".") / "build").mkdir()
-    assert snapshot_command(["build", target, "--rm"]) == snapshot
+    assert snapshot_command(["build", target, "--rm"], stderr=False) == snapshot
