@@ -4,7 +4,7 @@ from pathlib import Path
 
 import msgspec
 
-from packse.template import get_template_version
+from packse.template import load_template_config
 
 
 class PackageVersion(msgspec.Struct):
@@ -108,9 +108,9 @@ def scenario_version(scenario: Scenario) -> str:
     """
     Generate a unique version for a scenario based on its contents.
     """
-    template_version = get_template_version(scenario.template)
+    template_version = load_template_config(scenario.template).version
     hasher = hashlib.new("md5", usedforsecurity=False)
-    hasher.update(template_version.encode())
+    hasher.update(template_version.to_bytes())
     hasher.update(scenario.hash().encode())
     hasher.update(os.environ.get("PACKSE_VERSION_SEED", "").encode())
     return hasher.hexdigest()[:8]

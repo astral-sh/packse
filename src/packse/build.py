@@ -5,6 +5,7 @@ import logging
 import shutil
 import subprocess
 import textwrap
+import time
 from pathlib import Path
 from typing import Generator
 
@@ -21,7 +22,7 @@ from packse.scenario import (
     load_scenarios,
     scenario_prefix,
 )
-from packse.template import create_from_template
+from packse.template import TemplateConfig, create_from_template, load_template_config
 
 logger = logging.getLogger(__name__)
 
@@ -57,8 +58,9 @@ def build_scenario(scenario: Scenario, rm_destination: bool) -> str:
     work_dir = Path.cwd()
     build_destination = work_dir / "build" / prefix
     dist_destination = work_dir / "dist" / prefix
+    start_time = time.time()
 
-    logging.info(
+    logger.info(
         "Building '%s' in directory '%s'",
         prefix,
         build_destination.relative_to(work_dir),
@@ -101,6 +103,11 @@ def build_scenario(scenario: Scenario, rm_destination: bool) -> str:
         dist_destination=dist_destination,
     )
 
+    logger.info(
+        "Built scenario '%s' in %.2fs",
+        prefix,
+        time.time() - start_time,
+    )
     return prefix
 
 
@@ -138,8 +145,12 @@ def build_scenario_package(
     # Generate a Python module name
     module_name = package_name.replace("-", "_")
 
+    template_config = load_template_config(scenario.template)
+
     for version, package_version in package.versions.items():
-        logger.info("Generating project for '%s'", package_name)
+        start_time = time.time()
+
+        logger.debug("Generating project for '%s-%s'", package_name, version)
         package_destination = create_from_template(
             build_destination,
             template_name=scenario.template,
@@ -156,30 +167,38 @@ def build_scenario_package(
             },
         )
 
-        for dist in build_package_distributions(package_version, package_destination):
+        logger.info(
+            "Generated project for '%s-%s' in %.2fms",
+            package_name,
+            version,
+            (time.time() - start_time) * 1000.0,
+        )
+
+        for dist in build_package_distributions(
+            template_config, package_version, package_destination
+        ):
             shared_path = dist_destination / dist.name
-            logger.info("Linked distribution to %s", shared_path.relative_to(work_dir))
+            logger.debug("Linked distribution to %s", shared_path.relative_to(work_dir))
             shared_path.hardlink_to(dist)
 
 
 def build_package_distributions(
-    package_version: PackageVersion, target: Path
+    template_config: TemplateConfig, package_version: PackageVersion, target: Path
 ) -> Generator[Path, None, None]:
     """
     Build package distributions, yield each built distribution path, then delete the distribution folder.
     """
+    command = template_config.build_base
 
-    command = ["hatch", "build"]
     if package_version.sdist:
-        command.extend(["-t", "sdist"])
+        command.extend(template_config.build_sdist)
     if package_version.wheel:
-        command.extend(["-t", "wheel"])
+        command.extend(template_config.build_wheel)
+
+    start_time = time.time()
 
     try:
         output = subprocess.check_output(command, cwd=target, stderr=subprocess.STDOUT)
-
-        yield from sorted((target / "dist").iterdir())
-        shutil.rmtree(target / "dist")
 
     except subprocess.CalledProcessError as exc:
         raise BuildError(
@@ -187,8 +206,17 @@ def build_package_distributions(
             exc.output.decode(),
         )
     else:
-        logger.debug(
-            "Building %s:\n\n%s",
-            target.name,
-            textwrap.indent(output.decode(), " " * 4),
+        logs = (
+            (":\n\n" + textwrap.indent(output.decode(), " " * 4))
+            if logger.getEffectiveLevel() <= logging.DEBUG
+            else ""
         )
+        logger.info(
+            "Built package '%s' in %.2fs%s",
+            target.name,
+            time.time() - start_time,
+            logs,
+        )
+
+    yield from sorted((target / "dist").iterdir())
+    shutil.rmtree(target / "dist")

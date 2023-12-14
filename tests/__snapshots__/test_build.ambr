@@ -3,131 +3,124 @@
   dict({
     'exit_code': 0,
     'filesystem': dict({
-      'build/example-cd797223/example-cd797223-0.0.0/pyproject.toml': '''
+      'build/example-0611cb74/example-0611cb74-0.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
         
-        [tool.hatch.build]
-        sources = ["src"]
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_0611cb74"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_0611cb74"]
         
         [project]
-        name = "example-cd797223"
+        name = "example-0611cb74"
         version = "0.0.0"
-        dependencies = ["example-cd797223-a"]
+        dependencies = ["example-0611cb74-a"]
         requires-python = ">=3.7"
         description = "null"
   
       ''',
-      'build/example-cd797223/example-cd797223-0.0.0/src/example_cd797223/__init__.py': '''
+      'build/example-0611cb74/example-0611cb74-0.0.0/src/example_0611cb74/__init__.py': '''
         __version__ = "0.0.0"
   
       ''',
-      'build/example-cd797223/example-cd797223-a-1.0.0/pyproject.toml': '''
+      'build/example-0611cb74/example-0611cb74-a-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
         
-        [tool.hatch.build]
-        sources = ["src"]
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_0611cb74_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_0611cb74_a"]
         
         [project]
-        name = "example-cd797223-a"
+        name = "example-0611cb74-a"
         version = "1.0.0"
-        dependencies = ["example-cd797223-b>=1.0.0"]
+        dependencies = ["example-0611cb74-b>=1.0.0"]
         requires-python = ">=3.7"
         description = ""
   
       ''',
-      'build/example-cd797223/example-cd797223-a-1.0.0/src/example_cd797223_a/__init__.py': '''
+      'build/example-0611cb74/example-0611cb74-a-1.0.0/src/example_0611cb74_a/__init__.py': '''
         __version__ = "1.0.0"
   
       ''',
-      'build/example-cd797223/example-cd797223-b-1.0.0/pyproject.toml': '''
+      'build/example-0611cb74/example-0611cb74-b-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
         
-        [tool.hatch.build]
-        sources = ["src"]
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_0611cb74_b"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_0611cb74_b"]
         
         [project]
-        name = "example-cd797223-b"
+        name = "example-0611cb74-b"
         version = "1.0.0"
         dependencies = []
         requires-python = ">=3.7"
         description = ""
   
       ''',
-      'build/example-cd797223/example-cd797223-b-1.0.0/src/example_cd797223_b/__init__.py': '''
+      'build/example-0611cb74/example-0611cb74-b-1.0.0/src/example_0611cb74_b/__init__.py': '''
         __version__ = "1.0.0"
   
       ''',
-      'dist/example-cd797223/example_cd797223-0.0.0.tar.gz': 'md5:54ee806a367a3defeff075f925446ed6',
-      'dist/example-cd797223/example_cd797223_a-1.0.0-py3-none-any.whl': 'md5:faa8dde3d6637662e11790eba6669e69',
-      'dist/example-cd797223/example_cd797223_a-1.0.0.tar.gz': 'md5:12e0c46421e41ba0a985414ee80112a5',
-      'dist/example-cd797223/example_cd797223_b-1.0.0-py3-none-any.whl': 'md5:5094ffef466de99e9dbbe930b96f1715',
-      'dist/example-cd797223/example_cd797223_b-1.0.0.tar.gz': 'md5:5f1e5fb18dfcb257ec018a2b96910d09',
+      'dist/example-0611cb74/example_0611cb74-0.0.0.tar.gz': 'md5:122f0762969764b1c7efa72e6cc32a68',
+      'dist/example-0611cb74/example_0611cb74_a-1.0.0-py3-none-any.whl': 'md5:ad587c99746197e2e435d23dd683f6cd',
+      'dist/example-0611cb74/example_0611cb74_a-1.0.0.tar.gz': 'md5:bf581c21ad045fb85c4053151e4ca94b',
+      'dist/example-0611cb74/example_0611cb74_b-1.0.0-py3-none-any.whl': 'md5:6dac15ad470e653f5f47ea6ddc3a6180',
+      'dist/example-0611cb74/example_0611cb74_b-1.0.0.tar.gz': 'md5:5555c31ea0c212cc69528753b06ad9ac',
       'tree': '''
         test_build_example0
         ├── build
-        │   └── example-cd797223
-        │       ├── example-cd797223-0.0.0
+        │   └── example-0611cb74
+        │       ├── example-0611cb74-0.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── example_cd797223
+        │       │       └── example_0611cb74
         │       │           └── __init__.py
-        │       ├── example-cd797223-a-1.0.0
+        │       ├── example-0611cb74-a-1.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── example_cd797223_a
+        │       │       └── example_0611cb74_a
         │       │           └── __init__.py
-        │       └── example-cd797223-b-1.0.0
+        │       └── example-0611cb74-b-1.0.0
         │           ├── pyproject.toml
         │           └── src
-        │               └── example_cd797223_b
+        │               └── example_0611cb74_b
         │                   └── __init__.py
         └── dist
-            └── example-cd797223
-                ├── example_cd797223-0.0.0.tar.gz
-                ├── example_cd797223_a-1.0.0-py3-none-any.whl
-                ├── example_cd797223_a-1.0.0.tar.gz
-                ├── example_cd797223_b-1.0.0-py3-none-any.whl
-                └── example_cd797223_b-1.0.0.tar.gz
+            └── example-0611cb74
+                ├── example_0611cb74-0.0.0.tar.gz
+                ├── example_0611cb74_a-1.0.0-py3-none-any.whl
+                ├── example_0611cb74_a-1.0.0.tar.gz
+                ├── example_0611cb74_b-1.0.0-py3-none-any.whl
+                └── example_0611cb74_b-1.0.0.tar.gz
         
         13 directories, 11 files
   
       ''',
     }),
     'stderr': '''
-      INFO:root:Building 'example-cd797223' in directory 'build/example-cd797223'
-      INFO:packse.build:Generating project for 'example-cd797223-a'
-      INFO:packse.template:Creating example-cd797223-a-1.0.0
-      INFO:packse.template:Creating example-cd797223-a-1.0.0/pyproject.toml
-      INFO:packse.template:Creating example-cd797223-a-1.0.0/src
-      INFO:packse.template:Creating example-cd797223-a-1.0.0/src/example_cd797223_a
-      INFO:packse.template:Creating example-cd797223-a-1.0.0/src/example_cd797223_a/__init__.py
-      INFO:packse.build:Linked distribution to dist/example-cd797223/example_cd797223_a-1.0.0-py3-none-any.whl
-      INFO:packse.build:Linked distribution to dist/example-cd797223/example_cd797223_a-1.0.0.tar.gz
-      INFO:packse.build:Generating project for 'example-cd797223-b'
-      INFO:packse.template:Creating example-cd797223-b-1.0.0
-      INFO:packse.template:Creating example-cd797223-b-1.0.0/pyproject.toml
-      INFO:packse.template:Creating example-cd797223-b-1.0.0/src
-      INFO:packse.template:Creating example-cd797223-b-1.0.0/src/example_cd797223_b
-      INFO:packse.template:Creating example-cd797223-b-1.0.0/src/example_cd797223_b/__init__.py
-      INFO:packse.build:Linked distribution to dist/example-cd797223/example_cd797223_b-1.0.0-py3-none-any.whl
-      INFO:packse.build:Linked distribution to dist/example-cd797223/example_cd797223_b-1.0.0.tar.gz
-      INFO:packse.build:Generating project for 'example-cd797223'
-      INFO:packse.template:Creating example-cd797223-0.0.0
-      INFO:packse.template:Creating example-cd797223-0.0.0/pyproject.toml
-      INFO:packse.template:Creating example-cd797223-0.0.0/src
-      INFO:packse.template:Creating example-cd797223-0.0.0/src/example_cd797223
-      INFO:packse.template:Creating example-cd797223-0.0.0/src/example_cd797223/__init__.py
-      INFO:packse.build:Linked distribution to dist/example-cd797223/example_cd797223-0.0.0.tar.gz
+      INFO:packse.build:Building 'example-0611cb74' in directory 'build/example-0611cb74'
+      INFO:packse.build:Generated project for 'example-0611cb74-a-1.0.0' in 0.99ms
+      INFO:packse.build:Built package 'example-0611cb74-a-1.0.0' in 2.23s
+      INFO:packse.build:Generated project for 'example-0611cb74-b-1.0.0' in 0.95ms
+      INFO:packse.build:Built package 'example-0611cb74-b-1.0.0' in 1.77s
+      INFO:packse.build:Generated project for 'example-0611cb74-0.0.0' in 0.89ms
+      INFO:packse.build:Built package 'example-0611cb74-0.0.0' in 1.64s
+      INFO:packse.build:Built scenario 'example-0611cb74' in 5.66s
   
     ''',
     'stdout': '''
-      example-cd797223
+      example-0611cb74
   
     ''',
   })
@@ -136,131 +129,124 @@
   dict({
     'exit_code': 0,
     'filesystem': dict({
-      'build/example-cd797223/example-cd797223-0.0.0/pyproject.toml': '''
+      'build/example-0611cb74/example-0611cb74-0.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
         
-        [tool.hatch.build]
-        sources = ["src"]
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_0611cb74"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_0611cb74"]
         
         [project]
-        name = "example-cd797223"
+        name = "example-0611cb74"
         version = "0.0.0"
-        dependencies = ["example-cd797223-a"]
+        dependencies = ["example-0611cb74-a"]
         requires-python = ">=3.7"
         description = "null"
   
       ''',
-      'build/example-cd797223/example-cd797223-0.0.0/src/example_cd797223/__init__.py': '''
+      'build/example-0611cb74/example-0611cb74-0.0.0/src/example_0611cb74/__init__.py': '''
         __version__ = "0.0.0"
   
       ''',
-      'build/example-cd797223/example-cd797223-a-1.0.0/pyproject.toml': '''
+      'build/example-0611cb74/example-0611cb74-a-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
         
-        [tool.hatch.build]
-        sources = ["src"]
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_0611cb74_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_0611cb74_a"]
         
         [project]
-        name = "example-cd797223-a"
+        name = "example-0611cb74-a"
         version = "1.0.0"
-        dependencies = ["example-cd797223-b>=1.0.0"]
+        dependencies = ["example-0611cb74-b>=1.0.0"]
         requires-python = ">=3.7"
         description = ""
   
       ''',
-      'build/example-cd797223/example-cd797223-a-1.0.0/src/example_cd797223_a/__init__.py': '''
+      'build/example-0611cb74/example-0611cb74-a-1.0.0/src/example_0611cb74_a/__init__.py': '''
         __version__ = "1.0.0"
   
       ''',
-      'build/example-cd797223/example-cd797223-b-1.0.0/pyproject.toml': '''
+      'build/example-0611cb74/example-0611cb74-b-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
         
-        [tool.hatch.build]
-        sources = ["src"]
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_0611cb74_b"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_0611cb74_b"]
         
         [project]
-        name = "example-cd797223-b"
+        name = "example-0611cb74-b"
         version = "1.0.0"
         dependencies = []
         requires-python = ">=3.7"
         description = ""
   
       ''',
-      'build/example-cd797223/example-cd797223-b-1.0.0/src/example_cd797223_b/__init__.py': '''
+      'build/example-0611cb74/example-0611cb74-b-1.0.0/src/example_0611cb74_b/__init__.py': '''
         __version__ = "1.0.0"
   
       ''',
-      'dist/example-cd797223/example_cd797223-0.0.0.tar.gz': 'md5:54ee806a367a3defeff075f925446ed6',
-      'dist/example-cd797223/example_cd797223_a-1.0.0-py3-none-any.whl': 'md5:faa8dde3d6637662e11790eba6669e69',
-      'dist/example-cd797223/example_cd797223_a-1.0.0.tar.gz': 'md5:12e0c46421e41ba0a985414ee80112a5',
-      'dist/example-cd797223/example_cd797223_b-1.0.0-py3-none-any.whl': 'md5:5094ffef466de99e9dbbe930b96f1715',
-      'dist/example-cd797223/example_cd797223_b-1.0.0.tar.gz': 'md5:5f1e5fb18dfcb257ec018a2b96910d09',
+      'dist/example-0611cb74/example_0611cb74-0.0.0.tar.gz': 'md5:122f0762969764b1c7efa72e6cc32a68',
+      'dist/example-0611cb74/example_0611cb74_a-1.0.0-py3-none-any.whl': 'md5:ad587c99746197e2e435d23dd683f6cd',
+      'dist/example-0611cb74/example_0611cb74_a-1.0.0.tar.gz': 'md5:bf581c21ad045fb85c4053151e4ca94b',
+      'dist/example-0611cb74/example_0611cb74_b-1.0.0-py3-none-any.whl': 'md5:6dac15ad470e653f5f47ea6ddc3a6180',
+      'dist/example-0611cb74/example_0611cb74_b-1.0.0.tar.gz': 'md5:5555c31ea0c212cc69528753b06ad9ac',
       'tree': '''
         test_build_example_already_exi0
         ├── build
-        │   └── example-cd797223
-        │       ├── example-cd797223-0.0.0
+        │   └── example-0611cb74
+        │       ├── example-0611cb74-0.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── example_cd797223
+        │       │       └── example_0611cb74
         │       │           └── __init__.py
-        │       ├── example-cd797223-a-1.0.0
+        │       ├── example-0611cb74-a-1.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── example_cd797223_a
+        │       │       └── example_0611cb74_a
         │       │           └── __init__.py
-        │       └── example-cd797223-b-1.0.0
+        │       └── example-0611cb74-b-1.0.0
         │           ├── pyproject.toml
         │           └── src
-        │               └── example_cd797223_b
+        │               └── example_0611cb74_b
         │                   └── __init__.py
         └── dist
-            └── example-cd797223
-                ├── example_cd797223-0.0.0.tar.gz
-                ├── example_cd797223_a-1.0.0-py3-none-any.whl
-                ├── example_cd797223_a-1.0.0.tar.gz
-                ├── example_cd797223_b-1.0.0-py3-none-any.whl
-                └── example_cd797223_b-1.0.0.tar.gz
+            └── example-0611cb74
+                ├── example_0611cb74-0.0.0.tar.gz
+                ├── example_0611cb74_a-1.0.0-py3-none-any.whl
+                ├── example_0611cb74_a-1.0.0.tar.gz
+                ├── example_0611cb74_b-1.0.0-py3-none-any.whl
+                └── example_0611cb74_b-1.0.0.tar.gz
         
         13 directories, 11 files
   
       ''',
     }),
     'stderr': '''
-      INFO:root:Building 'example-cd797223' in directory 'build/example-cd797223'
-      INFO:packse.build:Generating project for 'example-cd797223-a'
-      INFO:packse.template:Creating example-cd797223-a-1.0.0
-      INFO:packse.template:Creating example-cd797223-a-1.0.0/pyproject.toml
-      INFO:packse.template:Creating example-cd797223-a-1.0.0/src
-      INFO:packse.template:Creating example-cd797223-a-1.0.0/src/example_cd797223_a
-      INFO:packse.template:Creating example-cd797223-a-1.0.0/src/example_cd797223_a/__init__.py
-      INFO:packse.build:Linked distribution to dist/example-cd797223/example_cd797223_a-1.0.0-py3-none-any.whl
-      INFO:packse.build:Linked distribution to dist/example-cd797223/example_cd797223_a-1.0.0.tar.gz
-      INFO:packse.build:Generating project for 'example-cd797223-b'
-      INFO:packse.template:Creating example-cd797223-b-1.0.0
-      INFO:packse.template:Creating example-cd797223-b-1.0.0/pyproject.toml
-      INFO:packse.template:Creating example-cd797223-b-1.0.0/src
-      INFO:packse.template:Creating example-cd797223-b-1.0.0/src/example_cd797223_b
-      INFO:packse.template:Creating example-cd797223-b-1.0.0/src/example_cd797223_b/__init__.py
-      INFO:packse.build:Linked distribution to dist/example-cd797223/example_cd797223_b-1.0.0-py3-none-any.whl
-      INFO:packse.build:Linked distribution to dist/example-cd797223/example_cd797223_b-1.0.0.tar.gz
-      INFO:packse.build:Generating project for 'example-cd797223'
-      INFO:packse.template:Creating example-cd797223-0.0.0
-      INFO:packse.template:Creating example-cd797223-0.0.0/pyproject.toml
-      INFO:packse.template:Creating example-cd797223-0.0.0/src
-      INFO:packse.template:Creating example-cd797223-0.0.0/src/example_cd797223
-      INFO:packse.template:Creating example-cd797223-0.0.0/src/example_cd797223/__init__.py
-      INFO:packse.build:Linked distribution to dist/example-cd797223/example_cd797223-0.0.0.tar.gz
+      INFO:packse.build:Building 'example-0611cb74' in directory 'build/example-0611cb74'
+      INFO:packse.build:Generated project for 'example-0611cb74-a-1.0.0' in 0.81ms
+      INFO:packse.build:Built package 'example-0611cb74-a-1.0.0' in 1.64s
+      INFO:packse.build:Generated project for 'example-0611cb74-b-1.0.0' in 0.87ms
+      INFO:packse.build:Built package 'example-0611cb74-b-1.0.0' in 1.68s
+      INFO:packse.build:Generated project for 'example-0611cb74-0.0.0' in 0.85ms
+      INFO:packse.build:Built package 'example-0611cb74-0.0.0' in 1.62s
+      INFO:packse.build:Built scenario 'example-0611cb74' in 4.94s
   
     ''',
     'stdout': '''
-      example-cd797223
+      example-0611cb74
   
     ''',
   })
@@ -269,34 +255,18 @@
   dict({
     'exit_code': 0,
     'stderr': '''
-      INFO:root:Building 'example-cd797223' in directory 'build/example-cd797223'
-      INFO:packse.build:Generating project for 'example-cd797223-a'
-      INFO:packse.template:Creating example-cd797223-a-1.0.0
-      INFO:packse.template:Creating example-cd797223-a-1.0.0/pyproject.toml
-      INFO:packse.template:Creating example-cd797223-a-1.0.0/src
-      INFO:packse.template:Creating example-cd797223-a-1.0.0/src/example_cd797223_a
-      INFO:packse.template:Creating example-cd797223-a-1.0.0/src/example_cd797223_a/__init__.py
-      INFO:packse.build:Linked distribution to dist/example-cd797223/example_cd797223_a-1.0.0-py3-none-any.whl
-      INFO:packse.build:Linked distribution to dist/example-cd797223/example_cd797223_a-1.0.0.tar.gz
-      INFO:packse.build:Generating project for 'example-cd797223-b'
-      INFO:packse.template:Creating example-cd797223-b-1.0.0
-      INFO:packse.template:Creating example-cd797223-b-1.0.0/pyproject.toml
-      INFO:packse.template:Creating example-cd797223-b-1.0.0/src
-      INFO:packse.template:Creating example-cd797223-b-1.0.0/src/example_cd797223_b
-      INFO:packse.template:Creating example-cd797223-b-1.0.0/src/example_cd797223_b/__init__.py
-      INFO:packse.build:Linked distribution to dist/example-cd797223/example_cd797223_b-1.0.0-py3-none-any.whl
-      INFO:packse.build:Linked distribution to dist/example-cd797223/example_cd797223_b-1.0.0.tar.gz
-      INFO:packse.build:Generating project for 'example-cd797223'
-      INFO:packse.template:Creating example-cd797223-0.0.0
-      INFO:packse.template:Creating example-cd797223-0.0.0/pyproject.toml
-      INFO:packse.template:Creating example-cd797223-0.0.0/src
-      INFO:packse.template:Creating example-cd797223-0.0.0/src/example_cd797223
-      INFO:packse.template:Creating example-cd797223-0.0.0/src/example_cd797223/__init__.py
-      INFO:packse.build:Linked distribution to dist/example-cd797223/example_cd797223-0.0.0.tar.gz
+      INFO:packse.build:Building 'example-0611cb74' in directory 'build/example-0611cb74'
+      INFO:packse.build:Generated project for 'example-0611cb74-a-1.0.0' in 0.82ms
+      INFO:packse.build:Built package 'example-0611cb74-a-1.0.0' in 1.67s
+      INFO:packse.build:Generated project for 'example-0611cb74-b-1.0.0' in 0.86ms
+      INFO:packse.build:Built package 'example-0611cb74-b-1.0.0' in 1.78s
+      INFO:packse.build:Generated project for 'example-0611cb74-0.0.0' in 0.82ms
+      INFO:packse.build:Built package 'example-0611cb74-0.0.0' in 1.63s
+      INFO:packse.build:Built scenario 'example-0611cb74' in 5.09s
   
     ''',
     'stdout': '''
-      example-cd797223
+      example-0611cb74
   
     ''',
   })
@@ -305,131 +275,124 @@
   dict({
     'exit_code': 0,
     'filesystem': dict({
-      'build/example-17bdcd0e/example-17bdcd0e-0.0.0/pyproject.toml': '''
+      'build/example-da7f36ff/example-da7f36ff-0.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
         
-        [tool.hatch.build]
-        sources = ["src"]
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_da7f36ff"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_da7f36ff"]
         
         [project]
-        name = "example-17bdcd0e"
+        name = "example-da7f36ff"
         version = "0.0.0"
-        dependencies = ["example-17bdcd0e-a"]
+        dependencies = ["example-da7f36ff-a"]
         requires-python = ">=3.7"
         description = "null"
   
       ''',
-      'build/example-17bdcd0e/example-17bdcd0e-0.0.0/src/example_17bdcd0e/__init__.py': '''
+      'build/example-da7f36ff/example-da7f36ff-0.0.0/src/example_da7f36ff/__init__.py': '''
         __version__ = "0.0.0"
   
       ''',
-      'build/example-17bdcd0e/example-17bdcd0e-a-1.0.0/pyproject.toml': '''
+      'build/example-da7f36ff/example-da7f36ff-a-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
         
-        [tool.hatch.build]
-        sources = ["src"]
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_da7f36ff_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_da7f36ff_a"]
         
         [project]
-        name = "example-17bdcd0e-a"
+        name = "example-da7f36ff-a"
         version = "1.0.0"
-        dependencies = ["example-17bdcd0e-b>=1.0.0"]
+        dependencies = ["example-da7f36ff-b>=1.0.0"]
         requires-python = ">=3.7"
         description = ""
   
       ''',
-      'build/example-17bdcd0e/example-17bdcd0e-a-1.0.0/src/example_17bdcd0e_a/__init__.py': '''
+      'build/example-da7f36ff/example-da7f36ff-a-1.0.0/src/example_da7f36ff_a/__init__.py': '''
         __version__ = "1.0.0"
   
       ''',
-      'build/example-17bdcd0e/example-17bdcd0e-b-1.0.0/pyproject.toml': '''
+      'build/example-da7f36ff/example-da7f36ff-b-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
         
-        [tool.hatch.build]
-        sources = ["src"]
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_da7f36ff_b"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_da7f36ff_b"]
         
         [project]
-        name = "example-17bdcd0e-b"
+        name = "example-da7f36ff-b"
         version = "1.0.0"
         dependencies = []
         requires-python = ">=3.7"
         description = ""
   
       ''',
-      'build/example-17bdcd0e/example-17bdcd0e-b-1.0.0/src/example_17bdcd0e_b/__init__.py': '''
+      'build/example-da7f36ff/example-da7f36ff-b-1.0.0/src/example_da7f36ff_b/__init__.py': '''
         __version__ = "1.0.0"
   
       ''',
-      'dist/example-17bdcd0e/example_17bdcd0e-0.0.0.tar.gz': 'md5:cf42041c38d6b479da0982a4be306bb9',
-      'dist/example-17bdcd0e/example_17bdcd0e_a-1.0.0-py3-none-any.whl': 'md5:06db9ba92742b36d384692dffa325ad5',
-      'dist/example-17bdcd0e/example_17bdcd0e_a-1.0.0.tar.gz': 'md5:03df0192969d9df03c55b46379b41c96',
-      'dist/example-17bdcd0e/example_17bdcd0e_b-1.0.0-py3-none-any.whl': 'md5:6eedf0f7db8998f7c3b87230d6ef58f6',
-      'dist/example-17bdcd0e/example_17bdcd0e_b-1.0.0.tar.gz': 'md5:746218d86f3503c45e4313c290348c1a',
+      'dist/example-da7f36ff/example_da7f36ff-0.0.0.tar.gz': 'md5:eae13d7168259363672d16e84ddd8fb4',
+      'dist/example-da7f36ff/example_da7f36ff_a-1.0.0-py3-none-any.whl': 'md5:78463a93467c33e2e0f2dab1d5dd7eaf',
+      'dist/example-da7f36ff/example_da7f36ff_a-1.0.0.tar.gz': 'md5:954ba198f542d768e13aa1720b0d183f',
+      'dist/example-da7f36ff/example_da7f36ff_b-1.0.0-py3-none-any.whl': 'md5:fa1b5955e385df12c8f700b75145a633',
+      'dist/example-da7f36ff/example_da7f36ff_b-1.0.0.tar.gz': 'md5:767be368bf5e60088bd12c636dd888eb',
       'tree': '''
         test_build_example_with_seed0
         ├── build
-        │   └── example-17bdcd0e
-        │       ├── example-17bdcd0e-0.0.0
+        │   └── example-da7f36ff
+        │       ├── example-da7f36ff-0.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── example_17bdcd0e
+        │       │       └── example_da7f36ff
         │       │           └── __init__.py
-        │       ├── example-17bdcd0e-a-1.0.0
+        │       ├── example-da7f36ff-a-1.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── example_17bdcd0e_a
+        │       │       └── example_da7f36ff_a
         │       │           └── __init__.py
-        │       └── example-17bdcd0e-b-1.0.0
+        │       └── example-da7f36ff-b-1.0.0
         │           ├── pyproject.toml
         │           └── src
-        │               └── example_17bdcd0e_b
+        │               └── example_da7f36ff_b
         │                   └── __init__.py
         └── dist
-            └── example-17bdcd0e
-                ├── example_17bdcd0e-0.0.0.tar.gz
-                ├── example_17bdcd0e_a-1.0.0-py3-none-any.whl
-                ├── example_17bdcd0e_a-1.0.0.tar.gz
-                ├── example_17bdcd0e_b-1.0.0-py3-none-any.whl
-                └── example_17bdcd0e_b-1.0.0.tar.gz
+            └── example-da7f36ff
+                ├── example_da7f36ff-0.0.0.tar.gz
+                ├── example_da7f36ff_a-1.0.0-py3-none-any.whl
+                ├── example_da7f36ff_a-1.0.0.tar.gz
+                ├── example_da7f36ff_b-1.0.0-py3-none-any.whl
+                └── example_da7f36ff_b-1.0.0.tar.gz
         
         13 directories, 11 files
   
       ''',
     }),
     'stderr': '''
-      INFO:root:Building 'example-17bdcd0e' in directory 'build/example-17bdcd0e'
-      INFO:packse.build:Generating project for 'example-17bdcd0e-a'
-      INFO:packse.template:Creating example-17bdcd0e-a-1.0.0
-      INFO:packse.template:Creating example-17bdcd0e-a-1.0.0/pyproject.toml
-      INFO:packse.template:Creating example-17bdcd0e-a-1.0.0/src
-      INFO:packse.template:Creating example-17bdcd0e-a-1.0.0/src/example_17bdcd0e_a
-      INFO:packse.template:Creating example-17bdcd0e-a-1.0.0/src/example_17bdcd0e_a/__init__.py
-      INFO:packse.build:Linked distribution to dist/example-17bdcd0e/example_17bdcd0e_a-1.0.0-py3-none-any.whl
-      INFO:packse.build:Linked distribution to dist/example-17bdcd0e/example_17bdcd0e_a-1.0.0.tar.gz
-      INFO:packse.build:Generating project for 'example-17bdcd0e-b'
-      INFO:packse.template:Creating example-17bdcd0e-b-1.0.0
-      INFO:packse.template:Creating example-17bdcd0e-b-1.0.0/pyproject.toml
-      INFO:packse.template:Creating example-17bdcd0e-b-1.0.0/src
-      INFO:packse.template:Creating example-17bdcd0e-b-1.0.0/src/example_17bdcd0e_b
-      INFO:packse.template:Creating example-17bdcd0e-b-1.0.0/src/example_17bdcd0e_b/__init__.py
-      INFO:packse.build:Linked distribution to dist/example-17bdcd0e/example_17bdcd0e_b-1.0.0-py3-none-any.whl
-      INFO:packse.build:Linked distribution to dist/example-17bdcd0e/example_17bdcd0e_b-1.0.0.tar.gz
-      INFO:packse.build:Generating project for 'example-17bdcd0e'
-      INFO:packse.template:Creating example-17bdcd0e-0.0.0
-      INFO:packse.template:Creating example-17bdcd0e-0.0.0/pyproject.toml
-      INFO:packse.template:Creating example-17bdcd0e-0.0.0/src
-      INFO:packse.template:Creating example-17bdcd0e-0.0.0/src/example_17bdcd0e
-      INFO:packse.template:Creating example-17bdcd0e-0.0.0/src/example_17bdcd0e/__init__.py
-      INFO:packse.build:Linked distribution to dist/example-17bdcd0e/example_17bdcd0e-0.0.0.tar.gz
+      INFO:packse.build:Building 'example-da7f36ff' in directory 'build/example-da7f36ff'
+      INFO:packse.build:Generated project for 'example-da7f36ff-a-1.0.0' in 0.82ms
+      INFO:packse.build:Built package 'example-da7f36ff-a-1.0.0' in 1.79s
+      INFO:packse.build:Generated project for 'example-da7f36ff-b-1.0.0' in 1.26ms
+      INFO:packse.build:Built package 'example-da7f36ff-b-1.0.0' in 1.71s
+      INFO:packse.build:Generated project for 'example-da7f36ff-0.0.0' in 0.85ms
+      INFO:packse.build:Built package 'example-da7f36ff-0.0.0' in 1.56s
+      INFO:packse.build:Built scenario 'example-da7f36ff' in 5.06s
   
     ''',
     'stdout': '''
-      example-17bdcd0e
+      example-da7f36ff
   
     ''',
   })

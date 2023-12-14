@@ -4,6 +4,7 @@ Publish package distributions.
 import logging
 import subprocess
 import textwrap
+import time
 from pathlib import Path
 
 from packse.error import (
@@ -44,6 +45,7 @@ def publish_package_distribution(target: Path, dry_run: bool) -> None:
         print("Would execute: " + " ".join(command))
         return
 
+    start_time = time.time()
     try:
         output = subprocess.check_output(command, stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as exc:
@@ -55,8 +57,14 @@ def publish_package_distribution(target: Path, dry_run: bool) -> None:
             output,
         )
     else:
+        logs = (
+            (":\n\n" + textwrap.indent(output.decode(), " " * 4))
+            if logger.getEffectiveLevel() <= logging.DEBUG
+            else ""
+        )
         logger.debug(
-            "Publishing %s:\n\n%s",
+            "Published %s in %.2fs%s",
             target.name,
-            textwrap.indent(output.decode(), " " * 4),
+            time.time() - start_time,
+            logs,
         )

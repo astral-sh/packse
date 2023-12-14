@@ -4,7 +4,7 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      example-cd797223
+      example-0611cb74
       └── a-1.0.0
           └── requires b>=1.0.0
               └── satisfied by b-1.0.0
