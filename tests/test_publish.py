@@ -75,6 +75,7 @@ def test_publish_example_dry_run(snapshot, scenario_dist: Path):
         snapshot_command(
             ["publish", "--dry-run", scenario_dist],
             extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
+            stderr=False,
         )
         == snapshot
     )
@@ -89,6 +90,7 @@ def test_publish_example_twine_succeeds(
         snapshot_command(
             ["publish", scenario_dist, "-v"],
             extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
+            stderr=False,
         )
         == snapshot
     )
@@ -103,6 +105,7 @@ def test_publish_example_twine_fails_with_unknown_error(
         snapshot_command(
             ["publish", scenario_dist, "-v"],
             extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
+            stderr=False,
         )
         == snapshot
     )
@@ -131,8 +134,9 @@ ERROR    HTTPError: 429 Too Many Requests from https://test.pypi.org/legacy/
 
     assert (
         snapshot_command(
-            ["publish", scenario_dist, "-v"],
+            ["publish", scenario_dist],
             extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
+            stderr=False,
         )
         == snapshot
     )
@@ -156,6 +160,7 @@ ERROR    HTTPError: 400 Bad Request from https://test.pypi.org/legacy/
         snapshot_command(
             ["publish", scenario_dist, "-v"],
             extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
+            stderr=False,
         )
         == snapshot
     )

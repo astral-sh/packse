@@ -2,22 +2,14 @@
 # name: test_publish_example_dry_run
   dict({
     'exit_code': 0,
-    'stderr': '''
-      INFO:packse.publish:Publishing 1 target...
-      INFO:packse.publish:Publishing 'example-0611cb74'...
-      INFO:packse.publish:Published 'example_0611cb74-0.0.0.tar.gz'
-      INFO:packse.publish:Published 'example_0611cb74_a-1.0.0-py3-none-any.whl'
-      INFO:packse.publish:Published 'example_0611cb74_a-1.0.0.tar.gz'
-      INFO:packse.publish:Published 'example_0611cb74_b-1.0.0-py3-none-any.whl'
-      INFO:packse.publish:Published 'example_0611cb74_b-1.0.0.tar.gz'
-  
-    ''',
+    'stderr': '<not included>',
     'stdout': '''
       Would execute: twine upload -r testpypi [DISTDIR]/example_0611cb74-0.0.0.tar.gz
       Would execute: twine upload -r testpypi [DISTDIR]/example_0611cb74_a-1.0.0-py3-none-any.whl
       Would execute: twine upload -r testpypi [DISTDIR]/example_0611cb74_a-1.0.0.tar.gz
       Would execute: twine upload -r testpypi [DISTDIR]/example_0611cb74_b-1.0.0-py3-none-any.whl
       Would execute: twine upload -r testpypi [DISTDIR]/example_0611cb74_b-1.0.0.tar.gz
+      example-0611cb74
   
     ''',
   })
@@ -25,74 +17,31 @@
 # name: test_publish_example_twine_fails_with_already_exists
   dict({
     'exit_code': 1,
-    'stderr': '''
-      INFO:packse.publish:Publishing 1 target...
-      INFO:packse.publish:Publishing 'example-0611cb74'...
-      Publish for 'example_0611cb74-0.0.0.tar.gz' already exists
-  
-    ''',
+    'stderr': '<not included>',
     'stdout': '',
   })
 # ---
 # name: test_publish_example_twine_fails_with_rate_limit
   dict({
     'exit_code': 1,
-    'stderr': '''
-      INFO:packse.publish:Publishing 1 target...
-      INFO:packse.publish:Publishing 'example-0611cb74'...
-      Publish of 'example_0611cb74-0.0.0.tar.gz' failed due to rate limits
-  
-    ''',
+    'stderr': '<not included>',
     'stdout': '',
   })
 # ---
 # name: test_publish_example_twine_fails_with_unknown_error
   dict({
     'exit_code': 1,
-    'stderr': '''
-      INFO:packse.publish:Publishing 1 target...
-      INFO:packse.publish:Publishing 'example-0611cb74'...
-      Publishing example_0611cb74-0.0.0.tar.gz with twine failed:
-          <twine error message>
-      
-  
-    ''',
+    'stderr': '<not included>',
     'stdout': '',
   })
 # ---
 # name: test_publish_example_twine_succeeds
   dict({
     'exit_code': 0,
-    'stderr': '''
-      INFO:packse.publish:Publishing 1 target...
-      INFO:packse.publish:Publishing 'example-0611cb74'...
-      DEBUG:packse.publish:Published example_0611cb74-0.0.0.tar.gz in [TIME]:
-      
-          <twine happy message>
-      
-      INFO:packse.publish:Published 'example_0611cb74-0.0.0.tar.gz'
-      DEBUG:packse.publish:Published example_0611cb74_a-1.0.0-py3-none-any.whl in [TIME]:
-      
-          <twine happy message>
-      
-      INFO:packse.publish:Published 'example_0611cb74_a-1.0.0-py3-none-any.whl'
-      DEBUG:packse.publish:Published example_0611cb74_a-1.0.0.tar.gz in [TIME]:
-      
-          <twine happy message>
-      
-      INFO:packse.publish:Published 'example_0611cb74_a-1.0.0.tar.gz'
-      DEBUG:packse.publish:Published example_0611cb74_b-1.0.0-py3-none-any.whl in [TIME]:
-      
-          <twine happy message>
-      
-      INFO:packse.publish:Published 'example_0611cb74_b-1.0.0-py3-none-any.whl'
-      DEBUG:packse.publish:Published example_0611cb74_b-1.0.0.tar.gz in [TIME]:
-      
-          <twine happy message>
-      
-      INFO:packse.publish:Published 'example_0611cb74_b-1.0.0.tar.gz'
+    'stderr': '<not included>',
+    'stdout': '''
+      example-0611cb74
   
     ''',
-    'stdout': '',
   })
 # ---

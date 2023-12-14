@@ -5,6 +5,8 @@ import logging
 import subprocess
 import textwrap
 import time
+from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import wait as wait_for_futures
 from pathlib import Path
 
 from packse.error import (
@@ -36,13 +38,42 @@ def publish(
     logger.info("Publishing %s target%s...", len(targets), s)
     for target in sorted(targets):
         logger.info("Publishing '%s'...", target.name)
-        for distfile in sorted(target.iterdir()):
-            publish_package_distribution_with_retries(
-                distfile,
-                skip_existing=skip_existing,
-                dry_run=dry_run,
-                max_attempts=MAX_ATTEMPTS if retry_on_rate_limit else 1,
+
+    # Publish each directory
+    with ThreadPoolExecutor(thread_name_prefix="packse-scenario-") as executor:
+        futures = [
+            executor.submit(
+                publish_package_distributions,
+                target,
+                skip_existing,
+                dry_run,
+                retry_on_rate_limit,
             )
+            for target in targets
+        ]
+
+        wait_for_futures(futures)
+
+    results = [future.result() for future in futures]
+    for result in sorted(results):
+        print(result)
+
+
+def publish_package_distributions(
+    target: Path, skip_existing: bool, dry_run: bool, retry_on_rate_limit: bool
+) -> str:
+    """
+    Publish a directory of package distribution files.
+    """
+    for distfile in sorted(target.iterdir()):
+        publish_package_distribution_with_retries(
+            distfile,
+            skip_existing=skip_existing,
+            dry_run=dry_run,
+            max_attempts=MAX_ATTEMPTS if retry_on_rate_limit else 1,
+        )
+
+    return target.name
 
 
 def publish_package_distribution_with_retries(
@@ -51,6 +82,9 @@ def publish_package_distribution_with_retries(
     dry_run: bool,
     max_attempts: int,
 ):
+    """
+    Publish a package distribution file with retries and error handling.
+    """
     attempts = 0
     retry_time = RETRY_TIME
     while attempts < max_attempts:
@@ -78,7 +112,7 @@ def publish_package_distribution_with_retries(
 
 def publish_package_distribution(target: Path, dry_run: bool) -> None:
     """
-    Publish package distribution.
+    Publish a package distribution file.
     """
     command = ["twine", "upload", "-r", "testpypi", str(target.resolve())]
     if dry_run:
