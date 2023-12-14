@@ -25,8 +25,8 @@ packse = "packse.cli:entrypoint"
 [tool.poetry.dependencies]
 python = "^3.12"
 msgspec = "^0.18.4"
-hatch = "^1.7.0"
 twine = "^4.0.2"
+hatchling = "^1.20.0"
 
 [tool.poetry.group.dev.dependencies]
 syrupy = "^4.6.0"
