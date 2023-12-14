@@ -28,7 +28,7 @@ def entrypoint():
     else:
         log_level = logging.INFO
 
-    logging.basicConfig(level=log_level)
+    logging.basicConfig(level=log_level, format="%(message)s")
 
     # Call the implementation wrapper e.g. `_call_build`
     try:

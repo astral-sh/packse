@@ -129,7 +129,7 @@
       ''',
     }),
     'stderr': '''
-      INFO:packse.build:Building 'example-0611cb74' in directory 'build/example-0611cb74'
+      Building 'example-0611cb74' in directory 'build/example-0611cb74'
       Destination directory '[PWD]/build/example-0611cb74' already exists. Pass `--rm` to allow removal.
   
     ''',
