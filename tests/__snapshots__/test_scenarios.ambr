@@ -472,6 +472,471 @@
     ''',
   })
 # ---
+# name: test_build_all_scenarios[requires-incompatible-versions]
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'build/requires-direct-incompatible-versionst-80410829/requires-direct-incompatible-versionst-80410829-a-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build]
+        sources = ["src"]
+        
+        [project]
+        name = "requires-direct-incompatible-versionst-80410829-a"
+        version = "1.0.0"
+        dependencies = ["requires-direct-incompatible-versionst-80410829-b==1.0.0", "requires-direct-incompatible-versionst-80410829-b==2.0.0"]
+        requires-python = ">=3.7"
+  
+      ''',
+      'build/requires-direct-incompatible-versionst-80410829/requires-direct-incompatible-versionst-80410829-a-1.0.0/src/requires_direct_incompatible_versionst_80410829_a/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-direct-incompatible-versionst-80410829/requires-direct-incompatible-versionst-80410829-b-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build]
+        sources = ["src"]
+        
+        [project]
+        name = "requires-direct-incompatible-versionst-80410829-b"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+  
+      ''',
+      'build/requires-direct-incompatible-versionst-80410829/requires-direct-incompatible-versionst-80410829-b-1.0.0/src/requires_direct_incompatible_versionst_80410829_b/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-direct-incompatible-versionst-80410829/requires-direct-incompatible-versionst-80410829-b-2.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build]
+        sources = ["src"]
+        
+        [project]
+        name = "requires-direct-incompatible-versionst-80410829-b"
+        version = "2.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+  
+      ''',
+      'build/requires-direct-incompatible-versionst-80410829/requires-direct-incompatible-versionst-80410829-b-2.0.0/src/requires_direct_incompatible_versionst_80410829_b/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-root-version-7e6379f3/requires-transitive-incompatible-with-root-version-7e6379f3-a-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build]
+        sources = ["src"]
+        
+        [project]
+        name = "requires-transitive-incompatible-with-root-version-7e6379f3-a"
+        version = "1.0.0"
+        dependencies = ["requires-transitive-incompatible-with-root-version-7e6379f3-b", "requires-transitive-incompatible-with-root-version-7e6379f3-c==1.0.0"]
+        requires-python = ">=3.7"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-root-version-7e6379f3/requires-transitive-incompatible-with-root-version-7e6379f3-a-1.0.0/src/requires_transitive_incompatible_with_root_version_7e6379f3_a/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-root-version-7e6379f3/requires-transitive-incompatible-with-root-version-7e6379f3-b-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build]
+        sources = ["src"]
+        
+        [project]
+        name = "requires-transitive-incompatible-with-root-version-7e6379f3-b"
+        version = "1.0.0"
+        dependencies = ["requires-transitive-incompatible-with-root-version-7e6379f3-c==2.0.0"]
+        requires-python = ">=3.7"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-root-version-7e6379f3/requires-transitive-incompatible-with-root-version-7e6379f3-b-1.0.0/src/requires_transitive_incompatible_with_root_version_7e6379f3_b/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-root-version-7e6379f3/requires-transitive-incompatible-with-root-version-7e6379f3-c-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build]
+        sources = ["src"]
+        
+        [project]
+        name = "requires-transitive-incompatible-with-root-version-7e6379f3-c"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-root-version-7e6379f3/requires-transitive-incompatible-with-root-version-7e6379f3-c-1.0.0/src/requires_transitive_incompatible_with_root_version_7e6379f3_c/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-root-version-7e6379f3/requires-transitive-incompatible-with-root-version-7e6379f3-c-2.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build]
+        sources = ["src"]
+        
+        [project]
+        name = "requires-transitive-incompatible-with-root-version-7e6379f3-c"
+        version = "2.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-root-version-7e6379f3/requires-transitive-incompatible-with-root-version-7e6379f3-c-2.0.0/src/requires_transitive_incompatible_with_root_version_7e6379f3_c/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-transitive-a8c0caa6/requires-transitive-incompatible-with-transitive-a8c0caa6-a-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build]
+        sources = ["src"]
+        
+        [project]
+        name = "requires-transitive-incompatible-with-transitive-a8c0caa6-a"
+        version = "1.0.0"
+        dependencies = ["requires-transitive-incompatible-with-transitive-a8c0caa6-b", "requires-transitive-incompatible-with-transitive-a8c0caa6-c"]
+        requires-python = ">=3.7"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-transitive-a8c0caa6/requires-transitive-incompatible-with-transitive-a8c0caa6-a-1.0.0/src/requires_transitive_incompatible_with_transitive_a8c0caa6_a/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-transitive-a8c0caa6/requires-transitive-incompatible-with-transitive-a8c0caa6-b-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build]
+        sources = ["src"]
+        
+        [project]
+        name = "requires-transitive-incompatible-with-transitive-a8c0caa6-b"
+        version = "1.0.0"
+        dependencies = ["requires-transitive-incompatible-with-transitive-a8c0caa6-d==1.0.0"]
+        requires-python = ">=3.7"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-transitive-a8c0caa6/requires-transitive-incompatible-with-transitive-a8c0caa6-b-1.0.0/src/requires_transitive_incompatible_with_transitive_a8c0caa6_b/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-transitive-a8c0caa6/requires-transitive-incompatible-with-transitive-a8c0caa6-c-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build]
+        sources = ["src"]
+        
+        [project]
+        name = "requires-transitive-incompatible-with-transitive-a8c0caa6-c"
+        version = "1.0.0"
+        dependencies = ["requires-transitive-incompatible-with-transitive-a8c0caa6-d==2.0.0"]
+        requires-python = ">=3.7"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-transitive-a8c0caa6/requires-transitive-incompatible-with-transitive-a8c0caa6-c-1.0.0/src/requires_transitive_incompatible_with_transitive_a8c0caa6_c/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-transitive-a8c0caa6/requires-transitive-incompatible-with-transitive-a8c0caa6-d-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build]
+        sources = ["src"]
+        
+        [project]
+        name = "requires-transitive-incompatible-with-transitive-a8c0caa6-d"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-transitive-a8c0caa6/requires-transitive-incompatible-with-transitive-a8c0caa6-d-1.0.0/src/requires_transitive_incompatible_with_transitive_a8c0caa6_d/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-transitive-a8c0caa6/requires-transitive-incompatible-with-transitive-a8c0caa6-d-2.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build]
+        sources = ["src"]
+        
+        [project]
+        name = "requires-transitive-incompatible-with-transitive-a8c0caa6-d"
+        version = "2.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+  
+      ''',
+      'build/requires-transitive-incompatible-with-transitive-a8c0caa6/requires-transitive-incompatible-with-transitive-a8c0caa6-d-2.0.0/src/requires_transitive_incompatible_with_transitive_a8c0caa6_d/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'dist/requires-direct-incompatible-versionst-80410829/requires_direct_incompatible_versionst_80410829_a-1.0.0-py3-none-any.whl': 'md5:a2dc44ac40d210bd2471b5be2b2a8bdb',
+      'dist/requires-direct-incompatible-versionst-80410829/requires_direct_incompatible_versionst_80410829_a-1.0.0.tar.gz': 'md5:b3892c9b006c05978e525ec286313c99',
+      'dist/requires-direct-incompatible-versionst-80410829/requires_direct_incompatible_versionst_80410829_b-1.0.0-py3-none-any.whl': 'md5:4678cd85e42743eafb364d6e6b98ac4f',
+      'dist/requires-direct-incompatible-versionst-80410829/requires_direct_incompatible_versionst_80410829_b-1.0.0.tar.gz': 'md5:bdb103113c36d79cf841c81f18c9c0a3',
+      'dist/requires-direct-incompatible-versionst-80410829/requires_direct_incompatible_versionst_80410829_b-2.0.0-py3-none-any.whl': 'md5:f7a48683eee161bd70baa48e7d7400e5',
+      'dist/requires-direct-incompatible-versionst-80410829/requires_direct_incompatible_versionst_80410829_b-2.0.0.tar.gz': 'md5:0297de40cfc0c4c3055cd281a3356a56',
+      'dist/requires-transitive-incompatible-with-root-version-7e6379f3/requires_transitive_incompatible_with_root_version_7e6379f3_a-1.0.0-py3-none-any.whl': 'md5:ac1b0066c9bfcc527802d3ac3e9ec6f3',
+      'dist/requires-transitive-incompatible-with-root-version-7e6379f3/requires_transitive_incompatible_with_root_version_7e6379f3_a-1.0.0.tar.gz': 'md5:9a33e8f17deb9f7d4be45c666d9ed1f5',
+      'dist/requires-transitive-incompatible-with-root-version-7e6379f3/requires_transitive_incompatible_with_root_version_7e6379f3_b-1.0.0-py3-none-any.whl': 'md5:b0a565f6b7eedcfe40effca4b48ae4c1',
+      'dist/requires-transitive-incompatible-with-root-version-7e6379f3/requires_transitive_incompatible_with_root_version_7e6379f3_b-1.0.0.tar.gz': 'md5:1b43735dcb057d4ee88b279adb4f4b1e',
+      'dist/requires-transitive-incompatible-with-root-version-7e6379f3/requires_transitive_incompatible_with_root_version_7e6379f3_c-1.0.0-py3-none-any.whl': 'md5:596174b2e1407072e1ef83cc0bec0182',
+      'dist/requires-transitive-incompatible-with-root-version-7e6379f3/requires_transitive_incompatible_with_root_version_7e6379f3_c-1.0.0.tar.gz': 'md5:dfaaab16a6ea8761733fc1da299dc9a4',
+      'dist/requires-transitive-incompatible-with-root-version-7e6379f3/requires_transitive_incompatible_with_root_version_7e6379f3_c-2.0.0-py3-none-any.whl': 'md5:f4f60a19ac56309fe11deb102411104f',
+      'dist/requires-transitive-incompatible-with-root-version-7e6379f3/requires_transitive_incompatible_with_root_version_7e6379f3_c-2.0.0.tar.gz': 'md5:88f027af62b99b8d917e09164cbb5502',
+      'dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_a-1.0.0-py3-none-any.whl': 'md5:10e61ec7e9a71df72b49791bd3e9acb7',
+      'dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_a-1.0.0.tar.gz': 'md5:aba664f0ccc5a4ace45d15817fa43e46',
+      'dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_b-1.0.0-py3-none-any.whl': 'md5:e7dae5e756c6bf89ff436b03964565a6',
+      'dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_b-1.0.0.tar.gz': 'md5:2ca9b02cc8436f75c7346fd893d8852c',
+      'dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_c-1.0.0-py3-none-any.whl': 'md5:65e5968d34daca988ec1f3f949bdc9f2',
+      'dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_c-1.0.0.tar.gz': 'md5:cc738f1e687588ada5c159d4e0f63162',
+      'dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_d-1.0.0-py3-none-any.whl': 'md5:e1f10cefa009f02898527e92f9c8a727',
+      'dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_d-1.0.0.tar.gz': 'md5:cbd0dbba7663d25daa982e6df0cd3869',
+      'dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_d-2.0.0-py3-none-any.whl': 'md5:52ee1dd8c71dab3d1dcd2d40ee55daf5',
+      'dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_d-2.0.0.tar.gz': 'md5:a83b8db05ddb6e8789c77540b65b4d93',
+      'tree': '''
+        test_build_all_scenarios_requi1
+        ├── build
+        │   ├── requires-direct-incompatible-versionst-80410829
+        │   │   ├── requires-direct-incompatible-versionst-80410829-a-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_direct_incompatible_versionst_80410829_a
+        │   │   │           └── __init__.py
+        │   │   ├── requires-direct-incompatible-versionst-80410829-b-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_direct_incompatible_versionst_80410829_b
+        │   │   │           └── __init__.py
+        │   │   └── requires-direct-incompatible-versionst-80410829-b-2.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_direct_incompatible_versionst_80410829_b
+        │   │               └── __init__.py
+        │   ├── requires-transitive-incompatible-with-root-version-7e6379f3
+        │   │   ├── requires-transitive-incompatible-with-root-version-7e6379f3-a-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_transitive_incompatible_with_root_version_7e6379f3_a
+        │   │   │           └── __init__.py
+        │   │   ├── requires-transitive-incompatible-with-root-version-7e6379f3-b-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_transitive_incompatible_with_root_version_7e6379f3_b
+        │   │   │           └── __init__.py
+        │   │   ├── requires-transitive-incompatible-with-root-version-7e6379f3-c-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_transitive_incompatible_with_root_version_7e6379f3_c
+        │   │   │           └── __init__.py
+        │   │   └── requires-transitive-incompatible-with-root-version-7e6379f3-c-2.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_transitive_incompatible_with_root_version_7e6379f3_c
+        │   │               └── __init__.py
+        │   └── requires-transitive-incompatible-with-transitive-a8c0caa6
+        │       ├── requires-transitive-incompatible-with-transitive-a8c0caa6-a-1.0.0
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── requires_transitive_incompatible_with_transitive_a8c0caa6_a
+        │       │           └── __init__.py
+        │       ├── requires-transitive-incompatible-with-transitive-a8c0caa6-b-1.0.0
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── requires_transitive_incompatible_with_transitive_a8c0caa6_b
+        │       │           └── __init__.py
+        │       ├── requires-transitive-incompatible-with-transitive-a8c0caa6-c-1.0.0
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── requires_transitive_incompatible_with_transitive_a8c0caa6_c
+        │       │           └── __init__.py
+        │       ├── requires-transitive-incompatible-with-transitive-a8c0caa6-d-1.0.0
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── requires_transitive_incompatible_with_transitive_a8c0caa6_d
+        │       │           └── __init__.py
+        │       └── requires-transitive-incompatible-with-transitive-a8c0caa6-d-2.0.0
+        │           ├── pyproject.toml
+        │           └── src
+        │               └── requires_transitive_incompatible_with_transitive_a8c0caa6_d
+        │                   └── __init__.py
+        └── dist
+            ├── requires-direct-incompatible-versionst-80410829
+            │   ├── requires_direct_incompatible_versionst_80410829_a-1.0.0-py3-none-any.whl
+            │   ├── requires_direct_incompatible_versionst_80410829_a-1.0.0.tar.gz
+            │   ├── requires_direct_incompatible_versionst_80410829_b-1.0.0-py3-none-any.whl
+            │   ├── requires_direct_incompatible_versionst_80410829_b-1.0.0.tar.gz
+            │   ├── requires_direct_incompatible_versionst_80410829_b-2.0.0-py3-none-any.whl
+            │   └── requires_direct_incompatible_versionst_80410829_b-2.0.0.tar.gz
+            ├── requires-transitive-incompatible-with-root-version-7e6379f3
+            │   ├── requires_transitive_incompatible_with_root_version_7e6379f3_a-1.0.0-py3-none-any.whl
+            │   ├── requires_transitive_incompatible_with_root_version_7e6379f3_a-1.0.0.tar.gz
+            │   ├── requires_transitive_incompatible_with_root_version_7e6379f3_b-1.0.0-py3-none-any.whl
+            │   ├── requires_transitive_incompatible_with_root_version_7e6379f3_b-1.0.0.tar.gz
+            │   ├── requires_transitive_incompatible_with_root_version_7e6379f3_c-1.0.0-py3-none-any.whl
+            │   ├── requires_transitive_incompatible_with_root_version_7e6379f3_c-1.0.0.tar.gz
+            │   ├── requires_transitive_incompatible_with_root_version_7e6379f3_c-2.0.0-py3-none-any.whl
+            │   └── requires_transitive_incompatible_with_root_version_7e6379f3_c-2.0.0.tar.gz
+            └── requires-transitive-incompatible-with-transitive-a8c0caa6
+                ├── requires_transitive_incompatible_with_transitive_a8c0caa6_a-1.0.0-py3-none-any.whl
+                ├── requires_transitive_incompatible_with_transitive_a8c0caa6_a-1.0.0.tar.gz
+                ├── requires_transitive_incompatible_with_transitive_a8c0caa6_b-1.0.0-py3-none-any.whl
+                ├── requires_transitive_incompatible_with_transitive_a8c0caa6_b-1.0.0.tar.gz
+                ├── requires_transitive_incompatible_with_transitive_a8c0caa6_c-1.0.0-py3-none-any.whl
+                ├── requires_transitive_incompatible_with_transitive_a8c0caa6_c-1.0.0.tar.gz
+                ├── requires_transitive_incompatible_with_transitive_a8c0caa6_d-1.0.0-py3-none-any.whl
+                ├── requires_transitive_incompatible_with_transitive_a8c0caa6_d-1.0.0.tar.gz
+                ├── requires_transitive_incompatible_with_transitive_a8c0caa6_d-2.0.0-py3-none-any.whl
+                └── requires_transitive_incompatible_with_transitive_a8c0caa6_d-2.0.0.tar.gz
+        
+        44 directories, 48 files
+  
+      ''',
+    }),
+    'stderr': '''
+      INFO:root:Building 'requires-direct-incompatible-versionst-80410829' in directory 'build/requires-direct-incompatible-versionst-80410829'
+      INFO:packse.template:Creating requires-direct-incompatible-versionst-80410829-a-1.0.0
+      INFO:packse.template:Creating requires-direct-incompatible-versionst-80410829-a-1.0.0/pyproject.toml
+      INFO:packse.template:Creating requires-direct-incompatible-versionst-80410829-a-1.0.0/src
+      INFO:packse.template:Creating requires-direct-incompatible-versionst-80410829-a-1.0.0/src/requires_direct_incompatible_versionst_80410829_a
+      INFO:packse.template:Creating requires-direct-incompatible-versionst-80410829-a-1.0.0/src/requires_direct_incompatible_versionst_80410829_a/__init__.py
+      INFO:packse.build:Building build/requires-direct-incompatible-versionst-80410829/requires-direct-incompatible-versionst-80410829-a-1.0.0 with hatch
+      INFO:packse.build:Linked distribution to dist/requires-direct-incompatible-versionst-80410829/requires_direct_incompatible_versionst_80410829_a-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/requires-direct-incompatible-versionst-80410829/requires_direct_incompatible_versionst_80410829_a-1.0.0.tar.gz
+      INFO:packse.template:Creating requires-direct-incompatible-versionst-80410829-b-1.0.0
+      INFO:packse.template:Creating requires-direct-incompatible-versionst-80410829-b-1.0.0/pyproject.toml
+      INFO:packse.template:Creating requires-direct-incompatible-versionst-80410829-b-1.0.0/src
+      INFO:packse.template:Creating requires-direct-incompatible-versionst-80410829-b-1.0.0/src/requires_direct_incompatible_versionst_80410829_b
+      INFO:packse.template:Creating requires-direct-incompatible-versionst-80410829-b-1.0.0/src/requires_direct_incompatible_versionst_80410829_b/__init__.py
+      INFO:packse.build:Building build/requires-direct-incompatible-versionst-80410829/requires-direct-incompatible-versionst-80410829-b-1.0.0 with hatch
+      INFO:packse.build:Linked distribution to dist/requires-direct-incompatible-versionst-80410829/requires_direct_incompatible_versionst_80410829_b-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/requires-direct-incompatible-versionst-80410829/requires_direct_incompatible_versionst_80410829_b-1.0.0.tar.gz
+      INFO:packse.template:Creating requires-direct-incompatible-versionst-80410829-b-2.0.0
+      INFO:packse.template:Creating requires-direct-incompatible-versionst-80410829-b-2.0.0/pyproject.toml
+      INFO:packse.template:Creating requires-direct-incompatible-versionst-80410829-b-2.0.0/src
+      INFO:packse.template:Creating requires-direct-incompatible-versionst-80410829-b-2.0.0/src/requires_direct_incompatible_versionst_80410829_b
+      INFO:packse.template:Creating requires-direct-incompatible-versionst-80410829-b-2.0.0/src/requires_direct_incompatible_versionst_80410829_b/__init__.py
+      INFO:packse.build:Building build/requires-direct-incompatible-versionst-80410829/requires-direct-incompatible-versionst-80410829-b-2.0.0 with hatch
+      INFO:packse.build:Linked distribution to dist/requires-direct-incompatible-versionst-80410829/requires_direct_incompatible_versionst_80410829_b-2.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/requires-direct-incompatible-versionst-80410829/requires_direct_incompatible_versionst_80410829_b-2.0.0.tar.gz
+      INFO:root:Building 'requires-transitive-incompatible-with-root-version-7e6379f3' in directory 'build/requires-transitive-incompatible-with-root-version-7e6379f3'
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-a-1.0.0
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-a-1.0.0/pyproject.toml
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-a-1.0.0/src
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-a-1.0.0/src/requires_transitive_incompatible_with_root_version_7e6379f3_a
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-a-1.0.0/src/requires_transitive_incompatible_with_root_version_7e6379f3_a/__init__.py
+      INFO:packse.build:Building build/requires-transitive-incompatible-with-root-version-7e6379f3/requires-transitive-incompatible-with-root-version-7e6379f3-a-1.0.0 with hatch
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-root-version-7e6379f3/requires_transitive_incompatible_with_root_version_7e6379f3_a-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-root-version-7e6379f3/requires_transitive_incompatible_with_root_version_7e6379f3_a-1.0.0.tar.gz
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-b-1.0.0
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-b-1.0.0/pyproject.toml
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-b-1.0.0/src
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-b-1.0.0/src/requires_transitive_incompatible_with_root_version_7e6379f3_b
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-b-1.0.0/src/requires_transitive_incompatible_with_root_version_7e6379f3_b/__init__.py
+      INFO:packse.build:Building build/requires-transitive-incompatible-with-root-version-7e6379f3/requires-transitive-incompatible-with-root-version-7e6379f3-b-1.0.0 with hatch
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-root-version-7e6379f3/requires_transitive_incompatible_with_root_version_7e6379f3_b-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-root-version-7e6379f3/requires_transitive_incompatible_with_root_version_7e6379f3_b-1.0.0.tar.gz
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-c-1.0.0
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-c-1.0.0/pyproject.toml
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-c-1.0.0/src
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-c-1.0.0/src/requires_transitive_incompatible_with_root_version_7e6379f3_c
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-c-1.0.0/src/requires_transitive_incompatible_with_root_version_7e6379f3_c/__init__.py
+      INFO:packse.build:Building build/requires-transitive-incompatible-with-root-version-7e6379f3/requires-transitive-incompatible-with-root-version-7e6379f3-c-1.0.0 with hatch
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-root-version-7e6379f3/requires_transitive_incompatible_with_root_version_7e6379f3_c-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-root-version-7e6379f3/requires_transitive_incompatible_with_root_version_7e6379f3_c-1.0.0.tar.gz
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-c-2.0.0
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-c-2.0.0/pyproject.toml
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-c-2.0.0/src
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-c-2.0.0/src/requires_transitive_incompatible_with_root_version_7e6379f3_c
+      INFO:packse.template:Creating requires-transitive-incompatible-with-root-version-7e6379f3-c-2.0.0/src/requires_transitive_incompatible_with_root_version_7e6379f3_c/__init__.py
+      INFO:packse.build:Building build/requires-transitive-incompatible-with-root-version-7e6379f3/requires-transitive-incompatible-with-root-version-7e6379f3-c-2.0.0 with hatch
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-root-version-7e6379f3/requires_transitive_incompatible_with_root_version_7e6379f3_c-2.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-root-version-7e6379f3/requires_transitive_incompatible_with_root_version_7e6379f3_c-2.0.0.tar.gz
+      INFO:root:Building 'requires-transitive-incompatible-with-transitive-a8c0caa6' in directory 'build/requires-transitive-incompatible-with-transitive-a8c0caa6'
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-a-1.0.0
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-a-1.0.0/pyproject.toml
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-a-1.0.0/src
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-a-1.0.0/src/requires_transitive_incompatible_with_transitive_a8c0caa6_a
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-a-1.0.0/src/requires_transitive_incompatible_with_transitive_a8c0caa6_a/__init__.py
+      INFO:packse.build:Building build/requires-transitive-incompatible-with-transitive-a8c0caa6/requires-transitive-incompatible-with-transitive-a8c0caa6-a-1.0.0 with hatch
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_a-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_a-1.0.0.tar.gz
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-b-1.0.0
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-b-1.0.0/pyproject.toml
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-b-1.0.0/src
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-b-1.0.0/src/requires_transitive_incompatible_with_transitive_a8c0caa6_b
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-b-1.0.0/src/requires_transitive_incompatible_with_transitive_a8c0caa6_b/__init__.py
+      INFO:packse.build:Building build/requires-transitive-incompatible-with-transitive-a8c0caa6/requires-transitive-incompatible-with-transitive-a8c0caa6-b-1.0.0 with hatch
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_b-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_b-1.0.0.tar.gz
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-c-1.0.0
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-c-1.0.0/pyproject.toml
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-c-1.0.0/src
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-c-1.0.0/src/requires_transitive_incompatible_with_transitive_a8c0caa6_c
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-c-1.0.0/src/requires_transitive_incompatible_with_transitive_a8c0caa6_c/__init__.py
+      INFO:packse.build:Building build/requires-transitive-incompatible-with-transitive-a8c0caa6/requires-transitive-incompatible-with-transitive-a8c0caa6-c-1.0.0 with hatch
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_c-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_c-1.0.0.tar.gz
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-d-1.0.0
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-d-1.0.0/pyproject.toml
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-d-1.0.0/src
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-d-1.0.0/src/requires_transitive_incompatible_with_transitive_a8c0caa6_d
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-d-1.0.0/src/requires_transitive_incompatible_with_transitive_a8c0caa6_d/__init__.py
+      INFO:packse.build:Building build/requires-transitive-incompatible-with-transitive-a8c0caa6/requires-transitive-incompatible-with-transitive-a8c0caa6-d-1.0.0 with hatch
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_d-1.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_d-1.0.0.tar.gz
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-d-2.0.0
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-d-2.0.0/pyproject.toml
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-d-2.0.0/src
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-d-2.0.0/src/requires_transitive_incompatible_with_transitive_a8c0caa6_d
+      INFO:packse.template:Creating requires-transitive-incompatible-with-transitive-a8c0caa6-d-2.0.0/src/requires_transitive_incompatible_with_transitive_a8c0caa6_d/__init__.py
+      INFO:packse.build:Building build/requires-transitive-incompatible-with-transitive-a8c0caa6/requires-transitive-incompatible-with-transitive-a8c0caa6-d-2.0.0 with hatch
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_d-2.0.0-py3-none-any.whl
+      INFO:packse.build:Linked distribution to dist/requires-transitive-incompatible-with-transitive-a8c0caa6/requires_transitive_incompatible_with_transitive_a8c0caa6_d-2.0.0.tar.gz
+  
+    ''',
+    'stdout': '''
+      requires-direct-incompatible-versionst-80410829-a
+      requires-transitive-incompatible-with-root-version-7e6379f3-a
+      requires-transitive-incompatible-with-transitive-a8c0caa6-a
+  
+    ''',
+  })
+# ---
 # name: test_view_all_scenarios[requires-does-not-exist]
   dict({
     'exit_code': 0,
@@ -520,6 +985,65 @@
       └── b-1.0.0
           └── requires c
               └── unsatisfied
+      
+  
+    ''',
+  })
+# ---
+# name: test_view_all_scenarios[requires-incompatible-versions]
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'tree': '''
+        test_view_all_scenarios_requir1
+        
+        0 directories
+  
+      ''',
+    }),
+    'stderr': '',
+    'stdout': '''
+      requires-direct-incompatible-versionst-80410829
+      └── a-1.0.0
+          ├── requires b==1.0.0
+          │   ├── satisfied by b-1.0.0
+          └── requires b==2.0.0
+              └── satisfied by b-2.0.0
+      ├── b-1.0.0
+      └── b-2.0.0
+      
+      requires-transitive-incompatible-with-root-version-7e6379f3
+      └── a-1.0.0
+          ├── requires b
+          │   └── satisfied by b-1.0.0
+          │       └── requires c==2.0.0
+          │           └── satisfied by c-2.0.0
+          └── requires c==1.0.0
+              ├── satisfied by c-1.0.0
+      └── b-1.0.0
+          └── requires c==2.0.0
+              └── satisfied by c-2.0.0
+      ├── c-1.0.0
+      └── c-2.0.0
+      
+      requires-transitive-incompatible-with-transitive-a8c0caa6
+      └── a-1.0.0
+          ├── requires b
+          │   └── satisfied by b-1.0.0
+          │       └── requires d==1.0.0
+          │           ├── satisfied by d-1.0.0
+          └── requires c
+              └── satisfied by c-1.0.0
+                  └── requires d==2.0.0
+                      └── satisfied by d-2.0.0
+      └── b-1.0.0
+          └── requires d==1.0.0
+              ├── satisfied by d-1.0.0
+      └── c-1.0.0
+          └── requires d==2.0.0
+              └── satisfied by d-2.0.0
+      ├── d-1.0.0
+      └── d-2.0.0
       
   
     ''',
