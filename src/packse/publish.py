@@ -28,7 +28,11 @@ RETRY_BACKOFF_FACTOR = 1.5
 
 
 def publish(
-    targets: list[Path], skip_existing: bool, dry_run: bool, retry_on_rate_limit: bool
+    targets: list[Path],
+    skip_existing: bool,
+    dry_run: bool,
+    retry_on_rate_limit: bool,
+    workers: int,
 ):
     for target in targets:
         if not target.is_dir():
@@ -40,7 +44,9 @@ def publish(
         logger.info("Publishing '%s'...", target.name)
 
     # Publish each directory
-    with ThreadPoolExecutor(thread_name_prefix="packse-scenario-") as executor:
+    with ThreadPoolExecutor(
+        thread_name_prefix="packse-scenario-", max_workers=workers
+    ) as executor:
         futures = [
             executor.submit(
                 publish_package_distributions,
