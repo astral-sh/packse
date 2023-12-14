@@ -1,18 +1,15 @@
+import re
+import shutil
+import stat
 import subprocess
+import tempfile
 from pathlib import Path
+from typing import Generator
 
+import pytest
 from packse import __development_base_path__
 
-from .common import snapshot_command, tmpchdir
-import tempfile
-import shutil
-import packse.publish
-import pytest
-import stat
-import re
-import subprocess
-from typing import Generator
-from unittest.mock import MagicMock
+from .common import snapshot_command
 
 
 @pytest.fixture(scope="module")
@@ -77,7 +74,7 @@ def test_publish_example_dry_run(snapshot, scenario_dist: Path):
     assert (
         snapshot_command(
             ["publish", "--dry-run", scenario_dist],
-            extra_filters=[(re.escape(str(scenario_dist)), "[DISTDIR]")],
+            extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
         )
         == snapshot
     )
@@ -91,7 +88,7 @@ def test_publish_example_twine_succeeds(
     assert (
         snapshot_command(
             ["publish", scenario_dist, "-v"],
-            extra_filters=[(re.escape(str(scenario_dist)), "[DISTDIR]")],
+            extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
         )
         == snapshot
     )
@@ -105,7 +102,7 @@ def test_publish_example_twine_fails_with_unknown_error(
     assert (
         snapshot_command(
             ["publish", scenario_dist, "-v"],
-            extra_filters=[(re.escape(str(scenario_dist)), "[DISTDIR]")],
+            extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
         )
         == snapshot
     )
@@ -135,7 +132,7 @@ ERROR    HTTPError: 429 Too Many Requests from https://test.pypi.org/legacy/
     assert (
         snapshot_command(
             ["publish", scenario_dist, "-v"],
-            extra_filters=[(re.escape(str(scenario_dist)), "[DISTDIR]")],
+            extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
         )
         == snapshot
     )
@@ -158,7 +155,7 @@ ERROR    HTTPError: 400 Bad Request from https://test.pypi.org/legacy/
     assert (
         snapshot_command(
             ["publish", scenario_dist, "-v"],
-            extra_filters=[(re.escape(str(scenario_dist)), "[DISTDIR]")],
+            extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
         )
         == snapshot
     )

@@ -34,7 +34,7 @@ def publish(
 
     s = "" if len(targets) == 1 else "s"
     logger.info("Publishing %s target%s...", len(targets), s)
-    for target in targets:
+    for target in sorted(targets):
         logger.info("Publishing '%s'...", target.name)
         for distfile in sorted(target.iterdir()):
             publish_package_distribution_with_retries(
