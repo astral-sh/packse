@@ -1,4 +1,4 @@
 version = 1
-build_base = ["hatch", "build"]
+build_base = ["hatchling", "build"]
 build_sdist = ["-t", "sdist"]
 build_wheel = ["-t", "wheel"]
