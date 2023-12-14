@@ -24,6 +24,7 @@ def snapshot_command(
     snapshot_filesystem: bool = False,
     stderr: bool = True,
     stdout: bool = True,
+    extra_filters: list[tuple[str, str]] | None = None,
 ) -> dict:
     # By default, filter out absolute references to the working directory
     filters = [
@@ -34,12 +35,15 @@ def snapshot_command(
             "[TIME]",
         ),
     ]
+    if extra_filters:
+        filters += extra_filters
 
     process = subprocess.run(
         ["packse"] + command,
         cwd=working_directory,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
+        env=os.environ,
     )
     result = {
         "exit_code": process.returncode,

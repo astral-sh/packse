@@ -87,7 +87,11 @@ def publish_package_distribution(target: Path, dry_run: bool) -> None:
 
     start_time = time.time()
     try:
-        output = subprocess.check_output(command, stderr=subprocess.STDOUT)
+        import os
+
+        output = subprocess.check_output(
+            command, stderr=subprocess.STDOUT, env=os.environ
+        )
     except subprocess.CalledProcessError as exc:
         output = exc.output.decode()
         if "File already exists" in output:
@@ -95,7 +99,7 @@ def publish_package_distribution(target: Path, dry_run: bool) -> None:
         if "HTTPError: 429 Too Many Requests" in output:
             raise PublishRateLimit(target.name)
         raise PublishToolError(
-            f"Publishing {target} with twine failed",
+            f"Publishing {target.name} with twine failed",
             output,
         )
     else:
