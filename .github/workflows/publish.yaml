@@ -77,12 +77,12 @@ jobs:
           poetry run packse build $SCENARIOS
 
       - name: Publish scenarios [dry-run]
-        if: github.ref != 'refs/heads/master'
+        if: github.ref != 'refs/heads/main'
         run: |
           poetry run packse publish --dry-run dist/*
 
       - name: Publish scenarios
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         env:
           TWINE_NON_INTERACTIVE: 1
           TWINE_USERNAME: "__token__"
