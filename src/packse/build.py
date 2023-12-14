@@ -19,7 +19,7 @@ from packse.error import (
 )
 from packse.scenario import (
     Package,
-    PackageVersion,
+    PackageMetadata,
     Scenario,
     load_scenarios,
     scenario_prefix,
@@ -113,7 +113,7 @@ def build_scenario(scenario: Scenario, rm_destination: bool) -> str:
                 scenario=scenario,
                 prefix=prefix,
                 name="",
-                package=make_entrypoint_package(scenario),
+                package=make_root_package(scenario),
                 work_dir=work_dir,
                 build_destination=build_destination,
                 dist_destination=dist_destination,
@@ -133,14 +133,15 @@ def build_scenario(scenario: Scenario, rm_destination: bool) -> str:
     return prefix
 
 
-def make_entrypoint_package(scenario: Scenario) -> Package:
+def make_root_package(scenario: Scenario) -> Package:
     """
-    Generate an entrypoint `Package` for a scenario that just requires the scenario root package.
+    Generate a full package from the root package of the scenario.
     """
     return Package(
         versions={
-            "0.0.0": PackageVersion(
-                requires=[scenario.root],
+            "0.0.0": PackageMetadata(
+                requires=scenario.root.requires,
+                requires_python=scenario.root.requires_python,
                 # Do not build wheels for the root package
                 wheel=False,
                 # The scenario's description is used for the entrypoint package
@@ -205,7 +206,7 @@ def build_scenario_package(
 
 
 def build_package_distributions(
-    template_config: TemplateConfig, package_version: PackageVersion, target: Path
+    template_config: TemplateConfig, package_version: PackageMetadata, target: Path
 ) -> Generator[Path, None, None]:
     """
     Build package distributions, yield each built distribution path, then delete the distribution folder.

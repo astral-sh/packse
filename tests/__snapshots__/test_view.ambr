@@ -4,11 +4,21 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      example-0611cb74
-      └── a-1.0.0
-          └── requires b>=1.0.0
-              └── satisfied by b-1.0.0
-      └── b-1.0.0
+      example-5803604b
+      ├── root
+      │   └── requires a
+      │       └── satisfied by a-1.0.0
+      ├── a
+      │   └── a-1.0.0
+      │       └── requires b>1.0.0
+      │           ├── satisfied by b-2.0.0
+      │           └── satisfied by b-3.0.0
+      └── b
+          ├── b-1.0.0
+          ├── b-2.0.0
+          │   └── requires c
+          │       └── unsatisfied
+          └── b-3.0.0
       
   
     ''',

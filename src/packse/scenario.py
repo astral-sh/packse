@@ -7,12 +7,45 @@ import msgspec
 from packse.template import load_template_config
 
 
-class PackageVersion(msgspec.Struct):
+class PackageName(str):
+    pass
+
+
+class PackageVersion(str):
+    pass
+
+
+VersionSpec = str
+
+
+class PackageMetadata(msgspec.Struct):
+    """
+    Metadata for a single version of a package.
+    """
+
     requires_python: str | None = ">=3.7"
-    requires: list[str] = []
+    requires: list[VersionSpec] = []
     sdist: bool = True
     wheel: bool = True
     description: str = ""
+
+    def hash(self) -> str:
+        """
+        Return a hash of the contents
+        """
+        hasher = hashlib.new("md5", usedforsecurity=False)
+        hasher.update((self.requires_python or "").encode())
+        for require in self.requires:
+            hasher.update(require.encode())
+        hasher.update(self.sdist.to_bytes())
+        hasher.update(self.wheel.to_bytes())
+        hasher.update(self.description.encode())
+        return hasher.hexdigest()
+
+
+class RootPackageMetadata(msgspec.Struct):
+    requires_python: str | None = ">=3.7"
+    requires: list[VersionSpec] = []
 
     def hash(self) -> str:
         """
@@ -26,7 +59,7 @@ class PackageVersion(msgspec.Struct):
 
 
 class Package(msgspec.Struct):
-    versions: dict[str, PackageVersion]
+    versions: dict[PackageVersion, PackageMetadata]
 
     def hash(self) -> str:
         """
@@ -45,16 +78,14 @@ class Scenario(msgspec.Struct):
     The name of the scenario.
     """
 
-    packages: dict[str, Package]
+    packages: dict[PackageName, Package]
     """
     The packages available in the scenario.
     """
 
-    root: str
+    root: RootPackageMetadata
     """
     The root package of the scenario.
-
-    The scenario entrypoint package will require this package.
     """
 
     template: str = "simple"
