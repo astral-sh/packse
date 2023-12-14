@@ -1,23 +1,30 @@
 {
     "name": "example",
-    "root": "a",
+    "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`",
+    "root": {
+        "requires": [
+            "a"
+        ]
+    },
     "packages": {
         "a": {
             "versions": {
                 "1.0.0": {
-                    "requires_python": ">=3.7",
                     "requires": [
-                        "b>=1.0.0"
+                        "b>1.0.0"
                     ]
                 }
             }
         },
         "b": {
             "versions": {
-                "1.0.0": {
-                    "requires_python": ">=3.7",
-                    "requires": []
-                }
+                "1.0.0": {},
+                "2.0.0": {
+                    "requires": [
+                        "c"
+                    ]
+                },
+                "3.0.0": {}
             }
         }
     }
