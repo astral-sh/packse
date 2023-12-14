@@ -56,7 +56,12 @@ def _call_view(args):
 
 
 def _call_publish(args):
-    publish(args.targets, dry_run=args.dry_run, skip_existing=args.skip_existing)
+    publish(
+        args.targets,
+        dry_run=args.dry_run,
+        skip_existing=args.skip_existing,
+        retry_on_rate_limit=args.retry,
+    )
 
 
 def _root_parser():
@@ -102,6 +107,11 @@ def _add_publish_parser(subparsers):
         "--skip-existing",
         action="store_true",
         help="Skip existing distributions instead of failing.",
+    )
+    parser.add_argument(
+        "--retry",
+        action="store_true",
+        help="Retry when rate limits are encountered instead of failing. Note retries must be very long to succeed.",
     )
     _add_shared_arguments(parser)
 
