@@ -22,12 +22,30 @@ A scenario is a JSON description of a dependency tree.
 
 See [`scenarios/example.json`](./scenarios/example.json)
 
+Each scenario file can contain one or more scenarios.
+
 ### Listing scenarios
 
 A list of available scenarios can be printed with the `list` command:
 
 ```bash
 packse list
+```
+
+By default, packse will search for scenarios in the current tree. You may also pass a file to read 
+from:
+
+```bash
+packse list scenarios/example.json
+```
+
+Each scenario will be listed with its unique identifier e.g. `example-cd797223`. This is the name of the package
+that can be installed to run the scenario once it is built and published.
+
+Each `packse` command supports reading multiple scenario files. For example, with `list`:
+
+```bash
+packse list scenarios/example.json scenarios/requires-does-not-exist.json
 ```
 
 ### Building scenarios
@@ -41,12 +59,9 @@ packse build scenario/example.json
 The `build/` directory will contain sources for all of the packages in the scenario.
 The `dist/` directory will contain built distributions for all of the packages in the scenario.
 
-
 When a scenario is built, it is given a unique identifier based on a hash of the scenario contents and the project
-templates used to generate the packages. Each package in the scenario will include the unique identifier.
-
-The `build` command will print the unique identifier for the scenario e.g. `example-cd797223`. A special entrypoint
-package is generated for the scenario which can be used later to install the scenario.
+templates used to generate the packages. Each package and requirement in the scenario will be prefixed with the 
+identifier.
 
 The `PACKSE_VERSION_SEED` environment variable can be used to override the seed used to generate the unique
 identifier, allowing versions to differ based on information outside of packse.
