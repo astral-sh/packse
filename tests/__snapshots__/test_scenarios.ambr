@@ -631,12 +631,12 @@
       requires-package-does-not-exist-e4666012
       └── root
           └── requires a
-              └── unsatisfied
+              └── unsatisfied: no versions for package
       
       requires-exact-version-does-not-exist-c640da4b
       ├── root
       │   └── requires a==2.0.0
-      │       └── unsatisfied
+      │       └── unsatisfied: no matching version
       └── a
           └── a-1.0.0
       
@@ -651,7 +651,7 @@
       requires-less-version-does-not-exist-14de847d
       ├── root
       │   └── requires a<2.0.0
-      │       └── unsatisfied
+      │       └── unsatisfied: no matching version
       └── a
           ├── a-2.0.0
           ├── a-3.0.0
@@ -664,7 +664,7 @@
       └── a
           └── a-1.0.0
               └── requires b
-                  └── unsatisfied
+                  └── unsatisfied: no versions for package
       
   
     ''',
@@ -686,7 +686,7 @@
       requires-direct-incompatible-versions-3a64108d
       ├── root
       │   ├── requires a==1.0.0
-      │   │   ├── satisfied by a-1.0.0
+      │   │   └── satisfied by a-1.0.0
       │   └── requires a==2.0.0
       │       └── satisfied by a-2.0.0
       └── a
@@ -698,7 +698,7 @@
       │   ├── requires a
       │   │   └── satisfied by a-1.0.0
       │   └── requires b==1.0.0
-      │       ├── satisfied by b-1.0.0
+      │       └── satisfied by b-1.0.0
       ├── a
       │   └── a-1.0.0
       │       └── requires b==2.0.0
@@ -716,7 +716,7 @@
       ├── a
       │   └── a-1.0.0
       │       └── requires c==1.0.0
-      │           ├── satisfied by c-1.0.0
+      │           └── satisfied by c-1.0.0
       ├── b
       │   └── b-1.0.0
       │       └── requires c==2.0.0
