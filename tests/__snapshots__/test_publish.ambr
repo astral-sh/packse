@@ -13,11 +13,11 @@
   
     ''',
     'stdout': '''
-      Would execute: twine upload -r testpypi $PWD/dist/example-0611cb74/example_0611cb74-0.0.0.tar.gz
-      Would execute: twine upload -r testpypi $PWD/dist/example-0611cb74/example_0611cb74_a-1.0.0-py3-none-any.whl
-      Would execute: twine upload -r testpypi $PWD/dist/example-0611cb74/example_0611cb74_a-1.0.0.tar.gz
-      Would execute: twine upload -r testpypi $PWD/dist/example-0611cb74/example_0611cb74_b-1.0.0-py3-none-any.whl
-      Would execute: twine upload -r testpypi $PWD/dist/example-0611cb74/example_0611cb74_b-1.0.0.tar.gz
+      Would execute: twine upload -r testpypi [PWD]/dist/example-0611cb74/example_0611cb74-0.0.0.tar.gz
+      Would execute: twine upload -r testpypi [PWD]/dist/example-0611cb74/example_0611cb74_a-1.0.0-py3-none-any.whl
+      Would execute: twine upload -r testpypi [PWD]/dist/example-0611cb74/example_0611cb74_a-1.0.0.tar.gz
+      Would execute: twine upload -r testpypi [PWD]/dist/example-0611cb74/example_0611cb74_b-1.0.0-py3-none-any.whl
+      Would execute: twine upload -r testpypi [PWD]/dist/example-0611cb74/example_0611cb74_b-1.0.0.tar.gz
   
     ''',
   })

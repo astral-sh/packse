@@ -468,49 +468,49 @@
     }),
     'stderr': '''
       INFO:packse.build:Building 'requires-package-does-not-exist-2b0c3851' in directory 'build/requires-package-does-not-exist-2b0c3851'
-      INFO:packse.build:Generated project for 'requires-package-does-not-exist-2b0c3851-a-1.0.0' in 1.12ms
-      INFO:packse.build:Built package 'requires-package-does-not-exist-2b0c3851-a-1.0.0' in 1.71s
-      INFO:packse.build:Generated project for 'requires-package-does-not-exist-2b0c3851-0.0.0' in 0.84ms
-      INFO:packse.build:Built package 'requires-package-does-not-exist-2b0c3851-0.0.0' in 1.62s
-      INFO:packse.build:Built scenario 'requires-package-does-not-exist-2b0c3851' in 3.34s
+      INFO:packse.build:Generated project for 'requires-package-does-not-exist-2b0c3851-a-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-package-does-not-exist-2b0c3851-a-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-package-does-not-exist-2b0c3851-0.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-package-does-not-exist-2b0c3851-0.0.0' in [TIME]
+      INFO:packse.build:Built scenario 'requires-package-does-not-exist-2b0c3851' in [TIME]
       INFO:packse.build:Building 'requires-exact-version-does-not-exist-e6dc3dbc' in directory 'build/requires-exact-version-does-not-exist-e6dc3dbc'
-      INFO:packse.build:Generated project for 'requires-exact-version-does-not-exist-e6dc3dbc-a-1.0.0' in 1.14ms
-      INFO:packse.build:Built package 'requires-exact-version-does-not-exist-e6dc3dbc-a-1.0.0' in 1.75s
-      INFO:packse.build:Generated project for 'requires-exact-version-does-not-exist-e6dc3dbc-b-1.0.0' in 0.83ms
-      INFO:packse.build:Built package 'requires-exact-version-does-not-exist-e6dc3dbc-b-1.0.0' in 1.66s
-      INFO:packse.build:Generated project for 'requires-exact-version-does-not-exist-e6dc3dbc-0.0.0' in 0.86ms
-      INFO:packse.build:Built package 'requires-exact-version-does-not-exist-e6dc3dbc-0.0.0' in 1.73s
-      INFO:packse.build:Built scenario 'requires-exact-version-does-not-exist-e6dc3dbc' in 5.15s
+      INFO:packse.build:Generated project for 'requires-exact-version-does-not-exist-e6dc3dbc-a-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-exact-version-does-not-exist-e6dc3dbc-a-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-exact-version-does-not-exist-e6dc3dbc-b-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-exact-version-does-not-exist-e6dc3dbc-b-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-exact-version-does-not-exist-e6dc3dbc-0.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-exact-version-does-not-exist-e6dc3dbc-0.0.0' in [TIME]
+      INFO:packse.build:Built scenario 'requires-exact-version-does-not-exist-e6dc3dbc' in [TIME]
       INFO:packse.build:Building 'requires-greater-version-does-not-exist-0292e3fd' in directory 'build/requires-greater-version-does-not-exist-0292e3fd'
-      INFO:packse.build:Generated project for 'requires-greater-version-does-not-exist-0292e3fd-a-1.0.0' in 0.82ms
-      INFO:packse.build:Built package 'requires-greater-version-does-not-exist-0292e3fd-a-1.0.0' in 1.62s
-      INFO:packse.build:Generated project for 'requires-greater-version-does-not-exist-0292e3fd-b-0.1.0' in 0.87ms
-      INFO:packse.build:Built package 'requires-greater-version-does-not-exist-0292e3fd-b-0.1.0' in 1.68s
-      INFO:packse.build:Generated project for 'requires-greater-version-does-not-exist-0292e3fd-b-1.0.0' in 0.90ms
-      INFO:packse.build:Built package 'requires-greater-version-does-not-exist-0292e3fd-b-1.0.0' in 1.82s
-      INFO:packse.build:Generated project for 'requires-greater-version-does-not-exist-0292e3fd-0.0.0' in 0.85ms
-      INFO:packse.build:Built package 'requires-greater-version-does-not-exist-0292e3fd-0.0.0' in 2.17s
-      INFO:packse.build:Built scenario 'requires-greater-version-does-not-exist-0292e3fd' in 7.30s
+      INFO:packse.build:Generated project for 'requires-greater-version-does-not-exist-0292e3fd-a-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-greater-version-does-not-exist-0292e3fd-a-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-greater-version-does-not-exist-0292e3fd-b-0.1.0' in [TIME]
+      INFO:packse.build:Built package 'requires-greater-version-does-not-exist-0292e3fd-b-0.1.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-greater-version-does-not-exist-0292e3fd-b-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-greater-version-does-not-exist-0292e3fd-b-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-greater-version-does-not-exist-0292e3fd-0.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-greater-version-does-not-exist-0292e3fd-0.0.0' in [TIME]
+      INFO:packse.build:Built scenario 'requires-greater-version-does-not-exist-0292e3fd' in [TIME]
       INFO:packse.build:Building 'requires-less-version-does-not-exist-709e7ab6' in directory 'build/requires-less-version-does-not-exist-709e7ab6'
-      INFO:packse.build:Generated project for 'requires-less-version-does-not-exist-709e7ab6-a-1.0.0' in 1.09ms
-      INFO:packse.build:Built package 'requires-less-version-does-not-exist-709e7ab6-a-1.0.0' in 1.67s
-      INFO:packse.build:Generated project for 'requires-less-version-does-not-exist-709e7ab6-b-2.0.0' in 0.86ms
-      INFO:packse.build:Built package 'requires-less-version-does-not-exist-709e7ab6-b-2.0.0' in 1.65s
-      INFO:packse.build:Generated project for 'requires-less-version-does-not-exist-709e7ab6-b-3.0.0' in 0.91ms
-      INFO:packse.build:Built package 'requires-less-version-does-not-exist-709e7ab6-b-3.0.0' in 1.85s
-      INFO:packse.build:Generated project for 'requires-less-version-does-not-exist-709e7ab6-b-4.0.0' in 0.95ms
-      INFO:packse.build:Built package 'requires-less-version-does-not-exist-709e7ab6-b-4.0.0' in 2.05s
-      INFO:packse.build:Generated project for 'requires-less-version-does-not-exist-709e7ab6-0.0.0' in 0.86ms
-      INFO:packse.build:Built package 'requires-less-version-does-not-exist-709e7ab6-0.0.0' in 1.63s
-      INFO:packse.build:Built scenario 'requires-less-version-does-not-exist-709e7ab6' in 8.86s
+      INFO:packse.build:Generated project for 'requires-less-version-does-not-exist-709e7ab6-a-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-less-version-does-not-exist-709e7ab6-a-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-less-version-does-not-exist-709e7ab6-b-2.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-less-version-does-not-exist-709e7ab6-b-2.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-less-version-does-not-exist-709e7ab6-b-3.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-less-version-does-not-exist-709e7ab6-b-3.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-less-version-does-not-exist-709e7ab6-b-4.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-less-version-does-not-exist-709e7ab6-b-4.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-less-version-does-not-exist-709e7ab6-0.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-less-version-does-not-exist-709e7ab6-0.0.0' in [TIME]
+      INFO:packse.build:Built scenario 'requires-less-version-does-not-exist-709e7ab6' in [TIME]
       INFO:packse.build:Building 'transitive-requires-package-does-not-exist-ccfa77f5' in directory 'build/transitive-requires-package-does-not-exist-ccfa77f5'
-      INFO:packse.build:Generated project for 'transitive-requires-package-does-not-exist-ccfa77f5-a-1.0.0' in 0.90ms
-      INFO:packse.build:Built package 'transitive-requires-package-does-not-exist-ccfa77f5-a-1.0.0' in 1.77s
-      INFO:packse.build:Generated project for 'transitive-requires-package-does-not-exist-ccfa77f5-b-1.0.0' in 0.87ms
-      INFO:packse.build:Built package 'transitive-requires-package-does-not-exist-ccfa77f5-b-1.0.0' in 1.70s
-      INFO:packse.build:Generated project for 'transitive-requires-package-does-not-exist-ccfa77f5-0.0.0' in 0.84ms
-      INFO:packse.build:Built package 'transitive-requires-package-does-not-exist-ccfa77f5-0.0.0' in 1.58s
-      INFO:packse.build:Built scenario 'transitive-requires-package-does-not-exist-ccfa77f5' in 5.06s
+      INFO:packse.build:Generated project for 'transitive-requires-package-does-not-exist-ccfa77f5-a-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'transitive-requires-package-does-not-exist-ccfa77f5-a-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'transitive-requires-package-does-not-exist-ccfa77f5-b-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'transitive-requires-package-does-not-exist-ccfa77f5-b-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'transitive-requires-package-does-not-exist-ccfa77f5-0.0.0' in [TIME]
+      INFO:packse.build:Built package 'transitive-requires-package-does-not-exist-ccfa77f5-0.0.0' in [TIME]
+      INFO:packse.build:Built scenario 'transitive-requires-package-does-not-exist-ccfa77f5' in [TIME]
   
     ''',
     'stdout': '''
@@ -856,41 +856,41 @@
     }),
     'stderr': '''
       INFO:packse.build:Building 'requires-direct-incompatible-versions-ff0dfdf1' in directory 'build/requires-direct-incompatible-versions-ff0dfdf1'
-      INFO:packse.build:Generated project for 'requires-direct-incompatible-versions-ff0dfdf1-a-1.0.0' in 1.11ms
-      INFO:packse.build:Built package 'requires-direct-incompatible-versions-ff0dfdf1-a-1.0.0' in 1.73s
-      INFO:packse.build:Generated project for 'requires-direct-incompatible-versions-ff0dfdf1-b-1.0.0' in 0.87ms
-      INFO:packse.build:Built package 'requires-direct-incompatible-versions-ff0dfdf1-b-1.0.0' in 1.82s
-      INFO:packse.build:Generated project for 'requires-direct-incompatible-versions-ff0dfdf1-b-2.0.0' in 0.90ms
-      INFO:packse.build:Built package 'requires-direct-incompatible-versions-ff0dfdf1-b-2.0.0' in 1.79s
-      INFO:packse.build:Generated project for 'requires-direct-incompatible-versions-ff0dfdf1-0.0.0' in 1.01ms
-      INFO:packse.build:Built package 'requires-direct-incompatible-versions-ff0dfdf1-0.0.0' in 1.56s
-      INFO:packse.build:Built scenario 'requires-direct-incompatible-versions-ff0dfdf1' in 6.92s
+      INFO:packse.build:Generated project for 'requires-direct-incompatible-versions-ff0dfdf1-a-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-direct-incompatible-versions-ff0dfdf1-a-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-direct-incompatible-versions-ff0dfdf1-b-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-direct-incompatible-versions-ff0dfdf1-b-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-direct-incompatible-versions-ff0dfdf1-b-2.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-direct-incompatible-versions-ff0dfdf1-b-2.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-direct-incompatible-versions-ff0dfdf1-0.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-direct-incompatible-versions-ff0dfdf1-0.0.0' in [TIME]
+      INFO:packse.build:Built scenario 'requires-direct-incompatible-versions-ff0dfdf1' in [TIME]
       INFO:packse.build:Building 'requires-transitive-incompatible-with-root-version-5c1b7dc1' in directory 'build/requires-transitive-incompatible-with-root-version-5c1b7dc1'
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-root-version-5c1b7dc1-a-1.0.0' in 0.86ms
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-root-version-5c1b7dc1-a-1.0.0' in 1.63s
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-root-version-5c1b7dc1-b-1.0.0' in 0.84ms
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-root-version-5c1b7dc1-b-1.0.0' in 1.60s
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-root-version-5c1b7dc1-c-1.0.0' in 0.87ms
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-root-version-5c1b7dc1-c-1.0.0' in 1.63s
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-root-version-5c1b7dc1-c-2.0.0' in 0.87ms
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-root-version-5c1b7dc1-c-2.0.0' in 1.85s
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-root-version-5c1b7dc1-0.0.0' in 0.84ms
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-root-version-5c1b7dc1-0.0.0' in 1.54s
-      INFO:packse.build:Built scenario 'requires-transitive-incompatible-with-root-version-5c1b7dc1' in 8.26s
+      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-root-version-5c1b7dc1-a-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-transitive-incompatible-with-root-version-5c1b7dc1-a-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-root-version-5c1b7dc1-b-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-transitive-incompatible-with-root-version-5c1b7dc1-b-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-root-version-5c1b7dc1-c-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-transitive-incompatible-with-root-version-5c1b7dc1-c-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-root-version-5c1b7dc1-c-2.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-transitive-incompatible-with-root-version-5c1b7dc1-c-2.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-root-version-5c1b7dc1-0.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-transitive-incompatible-with-root-version-5c1b7dc1-0.0.0' in [TIME]
+      INFO:packse.build:Built scenario 'requires-transitive-incompatible-with-root-version-5c1b7dc1' in [TIME]
       INFO:packse.build:Building 'requires-transitive-incompatible-with-transitive-d87a3d1f' in directory 'build/requires-transitive-incompatible-with-transitive-d87a3d1f'
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-a-1.0.0' in 0.83ms
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-a-1.0.0' in 1.70s
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-b-1.0.0' in 0.84ms
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-b-1.0.0' in 1.78s
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-c-1.0.0' in 0.90ms
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-c-1.0.0' in 1.67s
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-d-1.0.0' in 0.85ms
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-d-1.0.0' in 1.61s
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-d-2.0.0' in 0.92ms
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-d-2.0.0' in 1.88s
-      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-0.0.0' in 0.85ms
-      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-0.0.0' in 1.59s
-      INFO:packse.build:Built scenario 'requires-transitive-incompatible-with-transitive-d87a3d1f' in 10.23s
+      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-a-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-a-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-b-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-b-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-c-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-c-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-d-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-d-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-d-2.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-d-2.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'requires-transitive-incompatible-with-transitive-d87a3d1f-0.0.0' in [TIME]
+      INFO:packse.build:Built package 'requires-transitive-incompatible-with-transitive-d87a3d1f-0.0.0' in [TIME]
+      INFO:packse.build:Built scenario 'requires-transitive-incompatible-with-transitive-d87a3d1f' in [TIME]
   
     ''',
     'stdout': '''

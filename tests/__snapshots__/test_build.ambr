@@ -110,13 +110,13 @@
     }),
     'stderr': '''
       INFO:packse.build:Building 'example-0611cb74' in directory 'build/example-0611cb74'
-      INFO:packse.build:Generated project for 'example-0611cb74-a-1.0.0' in 0.99ms
-      INFO:packse.build:Built package 'example-0611cb74-a-1.0.0' in 2.23s
-      INFO:packse.build:Generated project for 'example-0611cb74-b-1.0.0' in 0.95ms
-      INFO:packse.build:Built package 'example-0611cb74-b-1.0.0' in 1.77s
-      INFO:packse.build:Generated project for 'example-0611cb74-0.0.0' in 0.89ms
-      INFO:packse.build:Built package 'example-0611cb74-0.0.0' in 1.64s
-      INFO:packse.build:Built scenario 'example-0611cb74' in 5.66s
+      INFO:packse.build:Generated project for 'example-0611cb74-a-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'example-0611cb74-a-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'example-0611cb74-b-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'example-0611cb74-b-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'example-0611cb74-0.0.0' in [TIME]
+      INFO:packse.build:Built package 'example-0611cb74-0.0.0' in [TIME]
+      INFO:packse.build:Built scenario 'example-0611cb74' in [TIME]
   
     ''',
     'stdout': '''
@@ -236,13 +236,13 @@
     }),
     'stderr': '''
       INFO:packse.build:Building 'example-0611cb74' in directory 'build/example-0611cb74'
-      INFO:packse.build:Generated project for 'example-0611cb74-a-1.0.0' in 0.81ms
-      INFO:packse.build:Built package 'example-0611cb74-a-1.0.0' in 1.64s
-      INFO:packse.build:Generated project for 'example-0611cb74-b-1.0.0' in 0.87ms
-      INFO:packse.build:Built package 'example-0611cb74-b-1.0.0' in 1.68s
-      INFO:packse.build:Generated project for 'example-0611cb74-0.0.0' in 0.85ms
-      INFO:packse.build:Built package 'example-0611cb74-0.0.0' in 1.62s
-      INFO:packse.build:Built scenario 'example-0611cb74' in 4.94s
+      INFO:packse.build:Generated project for 'example-0611cb74-a-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'example-0611cb74-a-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'example-0611cb74-b-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'example-0611cb74-b-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'example-0611cb74-0.0.0' in [TIME]
+      INFO:packse.build:Built package 'example-0611cb74-0.0.0' in [TIME]
+      INFO:packse.build:Built scenario 'example-0611cb74' in [TIME]
   
     ''',
     'stdout': '''
@@ -256,13 +256,13 @@
     'exit_code': 0,
     'stderr': '''
       INFO:packse.build:Building 'example-0611cb74' in directory 'build/example-0611cb74'
-      INFO:packse.build:Generated project for 'example-0611cb74-a-1.0.0' in 0.82ms
-      INFO:packse.build:Built package 'example-0611cb74-a-1.0.0' in 1.67s
-      INFO:packse.build:Generated project for 'example-0611cb74-b-1.0.0' in 0.86ms
-      INFO:packse.build:Built package 'example-0611cb74-b-1.0.0' in 1.78s
-      INFO:packse.build:Generated project for 'example-0611cb74-0.0.0' in 0.82ms
-      INFO:packse.build:Built package 'example-0611cb74-0.0.0' in 1.63s
-      INFO:packse.build:Built scenario 'example-0611cb74' in 5.09s
+      INFO:packse.build:Generated project for 'example-0611cb74-a-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'example-0611cb74-a-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'example-0611cb74-b-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'example-0611cb74-b-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'example-0611cb74-0.0.0' in [TIME]
+      INFO:packse.build:Built package 'example-0611cb74-0.0.0' in [TIME]
+      INFO:packse.build:Built scenario 'example-0611cb74' in [TIME]
   
     ''',
     'stdout': '''
@@ -382,13 +382,13 @@
     }),
     'stderr': '''
       INFO:packse.build:Building 'example-da7f36ff' in directory 'build/example-da7f36ff'
-      INFO:packse.build:Generated project for 'example-da7f36ff-a-1.0.0' in 0.82ms
-      INFO:packse.build:Built package 'example-da7f36ff-a-1.0.0' in 1.79s
-      INFO:packse.build:Generated project for 'example-da7f36ff-b-1.0.0' in 1.26ms
-      INFO:packse.build:Built package 'example-da7f36ff-b-1.0.0' in 1.71s
-      INFO:packse.build:Generated project for 'example-da7f36ff-0.0.0' in 0.85ms
-      INFO:packse.build:Built package 'example-da7f36ff-0.0.0' in 1.56s
-      INFO:packse.build:Built scenario 'example-da7f36ff' in 5.06s
+      INFO:packse.build:Generated project for 'example-da7f36ff-a-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'example-da7f36ff-a-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'example-da7f36ff-b-1.0.0' in [TIME]
+      INFO:packse.build:Built package 'example-da7f36ff-b-1.0.0' in [TIME]
+      INFO:packse.build:Generated project for 'example-da7f36ff-0.0.0' in [TIME]
+      INFO:packse.build:Built package 'example-da7f36ff-0.0.0' in [TIME]
+      INFO:packse.build:Built scenario 'example-da7f36ff' in [TIME]
   
     ''',
     'stdout': '''
@@ -401,7 +401,7 @@
   dict({
     'exit_code': 1,
     'stderr': '''
-      File at '$PWD/test.json' is not a valid scenario: Input data was truncated.
+      File at '[PWD]/test.json' is not a valid scenario: Input data was truncated.
   
     ''',
     'stdout': '',
