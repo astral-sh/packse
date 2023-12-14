@@ -1,6 +1,6 @@
 [
     {
-        "name": "requires-direct-incompatible-versionst",
+        "name": "requires-direct-incompatible-versions",
         "description": "Package `a` requires two incompatible versions of package `b`",
         "root": "a",
         "packages": {

@@ -10,6 +10,9 @@ from packse.template import get_template_version
 class PackageVersion(msgspec.Struct):
     requires_python: str | None = ">=3.7"
     requires: list[str] = []
+    sdist: bool = True
+    wheel: bool = True
+    description: str = ""
 
     def hash(self) -> str:
         """
@@ -39,7 +42,7 @@ class Package(msgspec.Struct):
 class Scenario(msgspec.Struct):
     name: str
     """
-    The name of the scenario
+    The name of the scenario.
     """
 
     packages: dict[str, Package]
@@ -49,7 +52,9 @@ class Scenario(msgspec.Struct):
 
     root: str
     """
-    The root package, intended to be installed to test the scenario.
+    The root package of the scenario.
+
+    The scenario entrypoint package will require this package.
     """
 
     template: str = "simple"
@@ -59,7 +64,7 @@ class Scenario(msgspec.Struct):
 
     description: str | None = None
     """
-    The description of the scenario
+    The description of the scenario.
     """
 
     def hash(self) -> str:
