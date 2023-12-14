@@ -17,7 +17,7 @@
           ├── b-1.0.0
           ├── b-2.0.0
           │   └── requires c
-          │       └── unsatisfied
+          │       └── unsatisfied: no versions for package
           └── b-3.0.0
       
   

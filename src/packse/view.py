@@ -64,14 +64,19 @@ def dependency_tree(scenario: Scenario):
         for_requirement: Requirement | None = None,
     ):
         versions = packages[package].versions
+        if for_requirement:
+            versions = [
+                version
+                for version in versions
+                if for_requirement.specifier.contains(version)
+            ]
+
+            if not versions:
+                yield prefix + last + "unsatisfied: no matching version"
+                return
 
         pointers = [tee] * (len(versions) - 1) + [last]
-        satisfied = False
         for pointer, version in zip(pointers, versions):
-            if for_requirement and not for_requirement.specifier.contains(version):
-                continue
-
-            satisfied = True
             message = "satisfied by " if for_requirement else ""
             yield prefix + pointer + message + f"{package}-{version}"
 
@@ -80,9 +85,6 @@ def dependency_tree(scenario: Scenario):
                 yield from render_requirements(
                     versions[version].requires, prefix=prefix + extension
                 )
-
-        if for_requirement and not satisfied:
-            yield prefix + last + "unsatisfied"
 
     def render_requirements(requirements: list[str], prefix: str = ""):
         pointers = [tee] * (len(requirements) - 1) + [last]
@@ -99,7 +101,7 @@ def dependency_tree(scenario: Scenario):
                     for_requirement=parsed_requirement,
                 )
             else:
-                yield prefix + space + last + "unsatisfied"
+                yield prefix + space + last + "unsatisfied: no versions for package"
 
     # Print the root package first
     pointer = tee if scenario.packages else last
