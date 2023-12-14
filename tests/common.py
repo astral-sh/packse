@@ -13,6 +13,7 @@ from itertools import islice
 from pathlib import Path
 
 import pytest
+from packse import __development_base_path__
 
 MAX_FILE_LENGTH = 500
 """Maximum number of characters to store per file in filesystem snapshots. If exceeded, a hash of the contents will be used instead."""
@@ -34,6 +35,7 @@ def snapshot_command(
             r"(\d+\.)?\d+(ms|s)",
             "[TIME]",
         ),
+        (re.escape(str(__development_base_path__.absolute())), "[PROJECT_ROOT]"),
     ]
     if extra_filters:
         filters += extra_filters

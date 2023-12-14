@@ -14,8 +14,8 @@ from typing import Generator
 from packse.error import (
     BuildError,
     DestinationAlreadyExists,
+    FileNotFound,
     InvalidScenario,
-    ScenarioNotFound,
 )
 from packse.scenario import (
     Package,
@@ -35,7 +35,7 @@ def build(targets: list[Path], rm_destination: bool):
 
     for target in targets:
         if not target.exists():
-            raise ScenarioNotFound(target)
+            raise FileNotFound(target)
 
         try:
             logger.debug("Loading %s", target)

@@ -6,7 +6,7 @@ from pathlib import Path
 
 from packaging.requirements import Requirement
 
-from packse.error import InvalidScenario, ScenarioNotFound
+from packse.error import FileNotFound, InvalidScenario
 from packse.scenario import (
     Package,
     Scenario,
@@ -23,7 +23,7 @@ def view(targets: list[Path]):
     # Validate and collect all targets first
     for target in targets:
         if not target.exists():
-            raise ScenarioNotFound(target)
+            raise FileNotFound(target)
 
         try:
             logger.debug("Loading %s", target)

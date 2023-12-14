@@ -1,0 +1,113 @@
+# serializer version: 1
+# name: test_list_example
+  dict({
+    'exit_code': 0,
+    'stderr': '',
+    'stdout': '''
+      scenarios/example.json
+          example-5803604b
+  
+    ''',
+  })
+# ---
+# name: test_list_invalid_target
+  dict({
+    'exit_code': 1,
+    'stderr': '''
+      File at '[PWD]/test.json' is not a valid scenario: Input data was truncated.
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_list_invalid_target_skip_invalid
+  dict({
+    'exit_code': 0,
+    'stderr': '',
+    'stdout': '''
+      [PROJECT_ROOT]/scenarios/example.json
+          example-5803604b
+  
+    ''',
+  })
+# ---
+# name: test_list_no_sources
+  dict({
+    'exit_code': 0,
+    'stderr': '',
+    'stdout': '''
+      example-5803604b
+      requires-package-does-not-exist-e4666012
+      requires-exact-version-does-not-exist-c640da4b
+      requires-greater-version-does-not-exist-ceb05782
+      requires-less-version-does-not-exist-14de847d
+      transitive-requires-package-does-not-exist-15763ba4
+      requires-direct-incompatible-versions-3a64108d
+      requires-transitive-incompatible-with-root-version-8af9847a
+      requires-transitive-incompatible-with-transitive-cb77ed7e
+  
+    ''',
+  })
+# ---
+# name: test_list_no_target_finds_all_valid_scenarios
+  dict({
+    'exit_code': 0,
+    'stderr': '',
+    'stdout': '''
+      scenarios/example.json
+          example-5803604b
+      scenarios/requires-does-not-exist.json
+          requires-package-does-not-exist-e4666012
+          requires-exact-version-does-not-exist-c640da4b
+          requires-greater-version-does-not-exist-ceb05782
+          requires-less-version-does-not-exist-14de847d
+          transitive-requires-package-does-not-exist-15763ba4
+      scenarios/requires-incompatible-versions.json
+          requires-direct-incompatible-versions-3a64108d
+          requires-transitive-incompatible-with-root-version-8af9847a
+          requires-transitive-incompatible-with-transitive-cb77ed7e
+  
+    ''',
+  })
+# ---
+# name: test_list_no_versions
+  dict({
+    'exit_code': 0,
+    'stderr': '',
+    'stdout': '''
+      scenarios/example.json
+          example
+      scenarios/requires-does-not-exist.json
+          requires-package-does-not-exist
+          requires-exact-version-does-not-exist
+          requires-greater-version-does-not-exist
+          requires-less-version-does-not-exist
+          transitive-requires-package-does-not-exist
+      scenarios/requires-incompatible-versions.json
+          requires-direct-incompatible-versions
+          requires-transitive-incompatible-with-root-version
+          requires-transitive-incompatible-with-transitive
+  
+    ''',
+  })
+# ---
+# name: test_list_one_target_does_not_exist
+  dict({
+    'exit_code': 1,
+    'stderr': '''
+      File 'foo' not found.
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_list_target_does_not_exist
+  dict({
+    'exit_code': 1,
+    'stderr': '''
+      File 'foo' not found.
+  
+    ''',
+    'stdout': '',
+  })
+# ---
