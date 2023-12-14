@@ -61,6 +61,7 @@ def _call_publish(args):
         dry_run=args.dry_run,
         skip_existing=args.skip_existing,
         retry_on_rate_limit=args.retry,
+        workers=args.workers,
     )
 
 
@@ -90,7 +91,9 @@ def _add_build_parser(subparsers):
 
 
 def _add_publish_parser(subparsers):
-    parser = subparsers.add_parser("publish", help="Publish packages for a scenario")
+    parser: argparse.ArgumentParser = subparsers.add_parser(
+        "publish", help="Publish packages for a scenario"
+    )
     parser.set_defaults(call=_call_publish)
     parser.add_argument(
         "targets",
@@ -112,6 +115,12 @@ def _add_publish_parser(subparsers):
         "--retry",
         action="store_true",
         help="Retry when rate limits are encountered instead of failing. Note retries must be very long to succeed.",
+    )
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=8,
+        help="Number of threads to use when publishing.",
     )
     _add_shared_arguments(parser)
 

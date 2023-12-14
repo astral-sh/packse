@@ -87,8 +87,24 @@ def test_publish_example_twine_succeeds(
 
     assert (
         snapshot_command(
+            ["publish", scenario_dist, "-v", "--workers", "1"],
+            extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
+        )
+        == snapshot
+    )
+
+
+def test_publish_example_twine_succeeds_parallel(
+    snapshot, scenario_dist: Path, mock_twine: MockBinary
+):
+    mock_twine.set_success("<twine happy message>")
+
+    assert (
+        snapshot_command(
             ["publish", scenario_dist, "-v"],
             extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
+            # Cannot record stderr when running in parallel
+            stderr=False,
         )
         == snapshot
     )
@@ -101,7 +117,7 @@ def test_publish_example_twine_fails_with_unknown_error(
 
     assert (
         snapshot_command(
-            ["publish", scenario_dist, "-v"],
+            ["publish", scenario_dist, "-v", "--workers", "1"],
             extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
         )
         == snapshot
@@ -131,7 +147,7 @@ ERROR    HTTPError: 429 Too Many Requests from https://test.pypi.org/legacy/
 
     assert (
         snapshot_command(
-            ["publish", scenario_dist, "-v"],
+            ["publish", scenario_dist, "--workers", "1"],
             extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
         )
         == snapshot
@@ -154,7 +170,7 @@ ERROR    HTTPError: 400 Bad Request from https://test.pypi.org/legacy/
 
     assert (
         snapshot_command(
-            ["publish", scenario_dist, "-v"],
+            ["publish", scenario_dist, "-v", "--workers", "1"],
             extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
         )
         == snapshot

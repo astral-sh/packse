@@ -18,6 +18,7 @@
       Would execute: twine upload -r testpypi [DISTDIR]/example_0611cb74_a-1.0.0.tar.gz
       Would execute: twine upload -r testpypi [DISTDIR]/example_0611cb74_b-1.0.0-py3-none-any.whl
       Would execute: twine upload -r testpypi [DISTDIR]/example_0611cb74_b-1.0.0.tar.gz
+      example-0611cb74
   
     ''',
   })
@@ -93,6 +94,19 @@
       INFO:packse.publish:Published 'example_0611cb74_b-1.0.0.tar.gz'
   
     ''',
-    'stdout': '',
+    'stdout': '''
+      example-0611cb74
+  
+    ''',
+  })
+# ---
+# name: test_publish_example_twine_succeeds_parallel
+  dict({
+    'exit_code': 0,
+    'stderr': '<not included>',
+    'stdout': '''
+      example-0611cb74
+  
+    ''',
   })
 # ---
