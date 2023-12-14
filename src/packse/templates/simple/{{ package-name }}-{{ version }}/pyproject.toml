@@ -10,3 +10,4 @@ name = "{{ package-name }}"
 version = "{{ version }}"
 dependencies = {{ dependencies }}
 requires-python = "{{ requires-python }}"
+description = "{{ description }}"

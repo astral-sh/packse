@@ -5,6 +5,7 @@
     'stderr': '''
       INFO:packse.publish:Publishing 1 target...
       INFO:packse.publish:Publishing 'example-cd797223'...
+      INFO:packse.publish:Published 'example_cd797223-0.0.0.tar.gz'
       INFO:packse.publish:Published 'example_cd797223_a-1.0.0-py3-none-any.whl'
       INFO:packse.publish:Published 'example_cd797223_a-1.0.0.tar.gz'
       INFO:packse.publish:Published 'example_cd797223_b-1.0.0-py3-none-any.whl'
@@ -12,6 +13,7 @@
   
     ''',
     'stdout': '''
+      Would execute: twine upload -r testpypi $PWD/dist/example-cd797223/example_cd797223-0.0.0.tar.gz
       Would execute: twine upload -r testpypi $PWD/dist/example-cd797223/example_cd797223_a-1.0.0-py3-none-any.whl
       Would execute: twine upload -r testpypi $PWD/dist/example-cd797223/example_cd797223_a-1.0.0.tar.gz
       Would execute: twine upload -r testpypi $PWD/dist/example-cd797223/example_cd797223_b-1.0.0-py3-none-any.whl

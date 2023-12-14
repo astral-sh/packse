@@ -14,7 +14,13 @@ from packse.error import (
     InvalidScenario,
     ScenarioNotFound,
 )
-from packse.scenario import Package, Scenario, load_scenarios, scenario_prefix
+from packse.scenario import (
+    Package,
+    PackageVersion,
+    Scenario,
+    load_scenarios,
+    scenario_prefix,
+)
 from packse.template import create_from_template
 
 logger = logging.getLogger(__name__)
@@ -44,7 +50,7 @@ def build_scenario(scenario: Scenario, rm_destination: bool) -> str:
     """
     Build the scenario defined at the given path.
 
-    Returns the scenario's root package name.
+    Returns the scenario's entrypoint package name.
     """
     prefix = scenario_prefix(scenario)
 
@@ -85,7 +91,34 @@ def build_scenario(scenario: Scenario, rm_destination: bool) -> str:
             dist_destination=dist_destination,
         )
 
-    return f"{prefix}-{scenario.root}"
+    build_scenario_package(
+        scenario=scenario,
+        prefix=prefix,
+        name="",
+        package=make_entrypoint_package(scenario),
+        work_dir=work_dir,
+        build_destination=build_destination,
+        dist_destination=dist_destination,
+    )
+
+    return prefix
+
+
+def make_entrypoint_package(scenario: Scenario) -> Package:
+    """
+    Generate an entrypoint `Package` for a scenario that just requires the scenario root package.
+    """
+    return Package(
+        versions={
+            "0.0.0": PackageVersion(
+                requires=[scenario.root],
+                # Do not build wheels for the root package
+                wheel=False,
+                # The scenario's description is used for the entrypoint package
+                description=scenario.description,
+            )
+        }
+    )
 
 
 def build_scenario_package(
@@ -97,12 +130,16 @@ def build_scenario_package(
     build_destination: Path,
     dist_destination: Path,
 ):
-    package_name = f"{prefix}-{name}"
+    # Only allow the name to be empty for entrypoint packages
+    assert name or list(package.versions.keys()) == ["0.0.0"]
+
+    package_name = f"{prefix}-{name}" if name else prefix
 
     # Generate a Python module name
     module_name = package_name.replace("-", "_")
 
-    for version, specification in package.versions.items():
+    for version, package_version in package.versions.items():
+        logger.info("Generating project for '%s'", package_name)
         package_destination = create_from_template(
             build_destination,
             template_name=scenario.template,
@@ -111,32 +148,35 @@ def build_scenario_package(
                 "package-name": package_name,
                 "module-name": module_name,
                 "version": version,
-                "dependencies": [f"{prefix}-{spec}" for spec in specification.requires],
-                "requires-python": specification.requires_python,
+                "dependencies": [
+                    f"{prefix}-{spec}" for spec in package_version.requires
+                ],
+                "requires-python": package_version.requires_python,
+                "description": package_version.description,
             },
         )
 
-        logger.info(
-            "Building %s with hatch",
-            package_destination.relative_to(work_dir),
-        )
-
-        for dist in build_package_distributions(package_destination):
+        for dist in build_package_distributions(package_version, package_destination):
             shared_path = dist_destination / dist.name
             logger.info("Linked distribution to %s", shared_path.relative_to(work_dir))
             shared_path.hardlink_to(dist)
 
 
-def build_package_distributions(target: Path) -> Generator[Path, None, None]:
+def build_package_distributions(
+    package_version: PackageVersion, target: Path
+) -> Generator[Path, None, None]:
     """
     Build package distributions, yield each built distribution path, then delete the distribution folder.
     """
+
+    command = ["hatch", "build"]
+    if package_version.sdist:
+        command.extend(["-t", "sdist"])
+    if package_version.wheel:
+        command.extend(["-t", "wheel"])
+
     try:
-        output = subprocess.check_output(
-            ["hatch", "build"],
-            cwd=target,
-            stderr=subprocess.STDOUT,
-        )
+        output = subprocess.check_output(command, cwd=target, stderr=subprocess.STDOUT)
 
         yield from sorted((target / "dist").iterdir())
         shutil.rmtree(target / "dist")
