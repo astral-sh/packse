@@ -3,20 +3,28 @@ import logging
 from pathlib import Path
 from typing import Any
 
+import msgspec
+
 from packse.templates import __templates_path__
 
-TEMPLATE_VERSION = ".template-version"
+TEMPLATE_CONFIG = "template.toml"
 
 logger = logging.getLogger(__name__)
 
 
-def get_template_version(template_name: str) -> str:
+class TemplateConfig(msgspec.Struct):
+    version: int
+    build_base: list[str]
+    build_sdist: list[str]
+    build_wheel: list[str]
+
+
+def load_template_config(template_name: str) -> TemplateConfig:
     template_path = __templates_path__ / template_name
-    version_path = template_path / TEMPLATE_VERSION
-    if version_path.exists():
-        return version_path.read_text()
-    else:
-        return "0"
+    config = template_path / TEMPLATE_CONFIG
+    if not config.exists():
+        raise RuntimeError(f"Template {template_name} missing config file.")
+    return msgspec.toml.decode(config.read_text(), type=TemplateConfig)
 
 
 def create_from_template(
@@ -37,7 +45,7 @@ def create_from_template(
             first_root = new_root
 
         # Create the new directory
-        logger.info("Creating %s", new_root.relative_to(destination))
+        logger.debug("Creating %s", new_root.relative_to(destination))
         new_root.mkdir()
 
         for file in files:
@@ -45,7 +53,7 @@ def create_from_template(
 
             # Determine the new file path
             new_file_path = new_root / replace_placeholders(file, variables)
-            logger.info("Creating %s", new_file_path.relative_to(destination))
+            logger.debug("Creating %s", new_file_path.relative_to(destination))
 
             new_file_path.write_text(
                 replace_placeholders(file_path.read_text(), variables)

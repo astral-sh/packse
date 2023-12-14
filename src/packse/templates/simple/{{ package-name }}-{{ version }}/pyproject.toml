@@ -2,8 +2,11 @@
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[tool.hatch.build]
-sources = ["src"]
+[tool.hatch.build.targets.wheel]
+packages = ["src/{{ module-name }}"]
+
+[tool.hatch.build.targets.sdist]
+only-include = ["src/{{ module-name }}"]
 
 [project]
 name = "{{ package-name }}"

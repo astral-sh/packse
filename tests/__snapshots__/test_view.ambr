@@ -4,7 +4,7 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      example-cd797223
+      example-0611cb74
       └── a-1.0.0
           └── requires b>=1.0.0
               └── satisfied by b-1.0.0
@@ -18,7 +18,7 @@
   dict({
     'exit_code': 1,
     'stderr': '''
-      File at '$PWD/test.json' is not a valid scenario: Input data was truncated.
+      File at '[PWD]/test.json' is not a valid scenario: Input data was truncated.
   
     ''',
     'stdout': '',

@@ -28,7 +28,7 @@ def view(targets: list[Path]):
 
     # Then view each one
     for scenario in scenarios:
-        logging.debug("Viewing %s", scenario.name)
+        logger.debug("Viewing %s", scenario.name)
         view_scenario(scenario)
 
 

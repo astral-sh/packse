@@ -25,8 +25,12 @@ def snapshot_command(
 ) -> dict:
     # By default, filter out absolute references to the working directory
     filters = [
-        (re.escape(str(Path(sys.executable).parent)), "$PYTHON_BIN"),
-        (re.escape(str((working_directory or Path.cwd()).absolute())), "$PWD"),
+        (re.escape(str(Path(sys.executable).parent)), "[PYTHON_BINDIR]"),
+        (re.escape(str((working_directory or Path.cwd()).absolute())), "[PWD]"),
+        (
+            r"(\d+\.)?\d+(ms|s)",
+            "[TIME]",
+        ),
     ]
 
     process = subprocess.run(
