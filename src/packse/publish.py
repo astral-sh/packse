@@ -10,10 +10,15 @@ from pathlib import Path
 from packse.error import (
     InvalidPublishTarget,
     PublishAlreadyExists,
-    PublishError,
+    PublishRateLimit,
+    PublishToolError,
 )
 
 logger = logging.getLogger(__name__)
+
+MAX_RETRIES = 3
+INITIAL_RETRY_TIME = 10
+RETRY_BACKOFF_FACTOR = 2
 
 
 def publish(targets: list[Path], skip_existing: bool, dry_run: bool):
@@ -26,14 +31,35 @@ def publish(targets: list[Path], skip_existing: bool, dry_run: bool):
     for target in targets:
         logger.info("Publishing '%s'...", target.name)
         for distfile in sorted(target.iterdir()):
-            try:
-                publish_package_distribution(distfile, dry_run)
-            except PublishAlreadyExists:
-                if not skip_existing:
-                    raise
-                logger.info("Skipped '%s': already published.", distfile.name)
-            else:
-                logger.info("Published '%s'", distfile.name)
+            publish_package_distribution_with_retries(distfile, skip_existing, dry_run)
+
+
+def publish_package_distribution_with_retries(
+    target: Path, skip_existing: bool, dry_run: bool
+):
+    retries = 0
+    retry_time = INITIAL_RETRY_TIME
+    while retries < MAX_RETRIES:
+        retry_time = retry_time * RETRY_BACKOFF_FACTOR
+        retries += 1
+        try:
+            publish_package_distribution(target, dry_run)
+        except PublishAlreadyExists:
+            if not skip_existing:
+                raise
+            logger.info("Skipped '%s': already published.", target.name)
+        except PublishRateLimit:
+            if retries >= MAX_RETRIES:
+                raise
+            logger.warning(
+                "Encountered rate limit publishing '%s', retrying in %d seconds",
+                target.name,
+                retry_time,
+            )
+            time.sleep(retry_time)
+        else:
+            logger.info("Published '%s'", target.name)
+            break
 
 
 def publish_package_distribution(target: Path, dry_run: bool) -> None:
@@ -52,7 +78,9 @@ def publish_package_distribution(target: Path, dry_run: bool) -> None:
         output = exc.output.decode()
         if "File already exists" in output:
             raise PublishAlreadyExists(target.name)
-        raise PublishError(
+        if "HTTPError: 429 Too Many Requests" in output:
+            raise PublishRateLimit(target.name)
+        raise PublishToolError(
             f"Publishing {target} with twine failed",
             output,
         )

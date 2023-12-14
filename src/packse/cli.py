@@ -4,7 +4,12 @@ import sys
 from pathlib import Path
 
 from packse.build import build
-from packse.error import BuildError, DestinationAlreadyExists, UserError
+from packse.error import (
+    BuildError,
+    DestinationAlreadyExists,
+    PublishError,
+    UserError,
+)
 from packse.publish import publish
 from packse.view import view
 
@@ -35,6 +40,9 @@ def entrypoint():
         print(f"{exc}.", file=sys.stderr)
         exit(1)
     except BuildError as exc:
+        print(f"{exc}", file=sys.stderr)
+        exit(1)
+    except PublishError as exc:
         print(f"{exc}", file=sys.stderr)
         exit(1)
 

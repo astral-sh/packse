@@ -35,14 +35,24 @@ class BuildError(PackseError):
 
 
 class PublishError(PackseError):
+    pass
+
+
+class PublishToolError(PublishError):
     def __init__(self, message, output) -> None:
         message = message + ":\n" + textwrap.indent(output, " " * 4)
         super().__init__(message)
 
 
-class PublishAlreadyExists(PackseError):
+class PublishAlreadyExists(PublishError):
     def __init__(self, package: str) -> None:
-        message = f"Publish for '{package}' already exists."
+        message = f"Publish for '{package}' already exists"
+        super().__init__(message)
+
+
+class PublishRateLimit(PublishError):
+    def __init__(self, package: str) -> None:
+        message = f"Publish of '{package}' failed due to rate limits"
         super().__init__(message)
 
 
