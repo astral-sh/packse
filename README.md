@@ -22,6 +22,14 @@ A scenario is a JSON description of a dependency tree.
 
 See [`scenarios/example.json`](./scenarios/example.json)
 
+### Listing scenarios
+
+A list of available scenarios can be printed with the `list` command:
+
+```bash
+packse list
+```
+
 ### Building scenarios
 
 A scenario can be used to generate packages and build distributions:

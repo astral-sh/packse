@@ -4,7 +4,7 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      usage: packse [-h] [-v] [-q] {build,view,publish} ...
+      usage: packse [-h] [-v] [-q] {build,view,publish,list} ...
       
       Utilities for working example packaging scenarios
       
@@ -14,10 +14,11 @@
         -q, --quiet           Disable logging
       
       commands:
-        {build,view,publish}
+        {build,view,publish,list}
           build               Build packages for a scenario
           view                View a scenario
           publish             Publish packages for a scenario
+          list                List scenarios
   
     ''',
   })
@@ -27,7 +28,7 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      usage: packse [-h] [-v] [-q] {build,view,publish} ...
+      usage: packse [-h] [-v] [-q] {build,view,publish,list} ...
       
       Utilities for working example packaging scenarios
       
@@ -37,10 +38,11 @@
         -q, --quiet           Disable logging
       
       commands:
-        {build,view,publish}
+        {build,view,publish,list}
           build               Build packages for a scenario
           view                View a scenario
           publish             Publish packages for a scenario
+          list                List scenarios
   
     ''',
   })
@@ -50,7 +52,7 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      usage: packse [-h] [-v] [-q] {build,view,publish} ...
+      usage: packse [-h] [-v] [-q] {build,view,publish,list} ...
       
       Utilities for working example packaging scenarios
       
@@ -60,10 +62,11 @@
         -q, --quiet           Disable logging
       
       commands:
-        {build,view,publish}
+        {build,view,publish,list}
           build               Build packages for a scenario
           view                View a scenario
           publish             Publish packages for a scenario
+          list                List scenarios
   
     ''',
   })

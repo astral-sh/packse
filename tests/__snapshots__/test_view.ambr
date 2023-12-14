@@ -49,7 +49,7 @@
   dict({
     'exit_code': 1,
     'stderr': '''
-      Scenario 'foo' not found.
+      File 'foo' not found.
   
     ''',
     'stdout': '',
@@ -59,7 +59,7 @@
   dict({
     'exit_code': 1,
     'stderr': '''
-      Scenario 'foo' not found.
+      File 'foo' not found.
   
     ''',
     'stdout': '',

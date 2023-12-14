@@ -10,6 +10,7 @@ from packse.error import (
     PublishError,
     UserError,
 )
+from packse.list import list
 from packse.publish import publish
 from packse.view import view
 
@@ -63,6 +64,15 @@ def _call_publish(args):
         retry_on_rate_limit=args.retry,
         workers=args.workers,
     )
+
+
+def _call_list(args):
+    skip_invalid = args.skip_invalid
+    if not args.targets:
+        skip_invalid = True
+        args.targets = Path.cwd().glob("**/*.json")
+
+    list(args.targets, args.no_versions, skip_invalid, args.no_sources)
 
 
 def _root_parser():
@@ -138,6 +148,33 @@ def _add_view_parser(subparsers):
     _add_shared_arguments(parser)
 
 
+def _add_list_parser(subparsers):
+    parser = subparsers.add_parser("list", help="List scenarios")
+    parser.set_defaults(call=_call_list)
+    parser.add_argument(
+        "targets",
+        type=Path,
+        nargs="*",
+        help="The scenario files to load",
+    )
+    parser.add_argument(
+        "--no-versions",
+        action="store_true",
+        help="Do not include in the scenario versions in the displayed names.",
+    )
+    parser.add_argument(
+        "--skip-invalid",
+        action="store_true",
+        help="Skip invalid scenario files instead of failing.",
+    )
+    parser.add_argument(
+        "--no-sources",
+        action="store_true",
+        help="Do not show the source file for each scenario.",
+    )
+    _add_shared_arguments(parser)
+
+
 def _add_shared_arguments(parser):
     parser.add_argument(
         "-v",
@@ -160,5 +197,6 @@ def get_parser() -> argparse.ArgumentParser:
     _add_build_parser(subparsers)
     _add_view_parser(subparsers)
     _add_publish_parser(subparsers)
+    _add_list_parser(subparsers)
 
     return parser

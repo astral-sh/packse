@@ -22,9 +22,9 @@ class InvalidScenario(UserError):
         super().__init__(message)
 
 
-class ScenarioNotFound(UserError):
+class FileNotFound(UserError):
     def __init__(self, path: Path) -> None:
-        message = f"Scenario '{path}' not found"
+        message = f"File '{path}' not found"
         super().__init__(message)
 
 
