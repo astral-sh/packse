@@ -9,10 +9,12 @@ from packse.error import (
     DestinationAlreadyExists,
     PublishError,
     UserError,
+    ServeError,
 )
 from packse.list import list
 from packse.publish import publish
 from packse.view import view
+from packse.serve import serve
 
 
 def entrypoint():
@@ -41,10 +43,13 @@ def entrypoint():
         print(f"{exc}.", file=sys.stderr)
         exit(1)
     except BuildError as exc:
-        print(f"{exc}", file=sys.stderr)
+        print(f"{exc}.", file=sys.stderr)
         exit(1)
     except PublishError as exc:
-        print(f"{exc}", file=sys.stderr)
+        print(f"{exc}.", file=sys.stderr)
+        exit(1)
+    except ServeError as exc:
+        print(f"{exc}.", file=sys.stderr)
         exit(1)
 
 
@@ -56,6 +61,10 @@ def _call_view(args):
     view(args.targets)
 
 
+def _call_serve(args):
+    serve(args.targets)
+
+
 def _call_publish(args):
     publish(
         args.targets,
@@ -63,6 +72,7 @@ def _call_publish(args):
         dry_run=args.dry_run,
         skip_existing=args.skip_existing,
         retry_on_rate_limit=args.retry,
+        anonymous=args.anonymous,
         workers=args.workers,
     )
 
@@ -139,6 +149,9 @@ def _add_publish_parser(subparsers):
         default="https://test.pypi.org/legacy/",
         help="The URL of the package index to publish the packages to.",
     )
+    parser.add_argument(
+        "--anonymous", action="store_true", help="Upload without credentials."
+    )
     _add_shared_arguments(parser)
 
 
@@ -150,6 +163,21 @@ def _add_view_parser(subparsers):
         type=Path,
         nargs="+",
         help="The scenario to view",
+    )
+
+    _add_shared_arguments(parser)
+
+
+def _add_serve_parser(subparsers):
+    parser = subparsers.add_parser(
+        "serve", help="Serve a package index with a scenario"
+    )
+    parser.set_defaults(call=_call_serve)
+    parser.add_argument(
+        "targets",
+        type=Path,
+        nargs="*",
+        help="The scenarios to serve",
     )
 
     _add_shared_arguments(parser)
@@ -205,5 +233,6 @@ def get_parser() -> argparse.ArgumentParser:
     _add_view_parser(subparsers)
     _add_publish_parser(subparsers)
     _add_list_parser(subparsers)
+    _add_serve_parser(subparsers)
 
     return parser

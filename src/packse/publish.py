@@ -37,8 +37,9 @@ def publish(
     dry_run: bool,
     retry_on_rate_limit: bool,
     workers: int,
+    anonymous: bool,
 ):
-    if not dry_run and not (
+    if not anonymous and not (
         "TWINE_PASSWORD" in os.environ or "PACKSE_PUBLISH_PASSWORD" in os.environ
     ):
         raise PublishNoCredentials()
@@ -61,9 +62,10 @@ def publish(
                 publish_package_distributions,
                 target,
                 index_url,
-                skip_existing,
-                dry_run,
-                retry_on_rate_limit,
+                skip_existing=skip_existing,
+                dry_run=dry_run,
+                retry_on_rate_limit=retry_on_rate_limit,
+                anonymous=anonymous,
             )
             for target in targets
         ]
@@ -80,6 +82,7 @@ def publish_package_distributions(
     index_url: str,
     skip_existing: bool,
     dry_run: bool,
+    anonymous: bool,
     retry_on_rate_limit: bool,
 ) -> str:
     """
@@ -91,6 +94,7 @@ def publish_package_distributions(
             index_url,
             skip_existing=skip_existing,
             dry_run=dry_run,
+            anonymous=anonymous,
             max_attempts=MAX_ATTEMPTS if retry_on_rate_limit else 1,
         )
 
@@ -102,6 +106,7 @@ def publish_package_distribution_with_retries(
     index_url: str,
     skip_existing: bool,
     dry_run: bool,
+    anonymous: bool,
     max_attempts: int,
 ):
     """
@@ -113,7 +118,7 @@ def publish_package_distribution_with_retries(
         retry_time = retry_time * RETRY_BACKOFF_FACTOR
         attempts += 1
         try:
-            publish_package_distribution(target, index_url, dry_run)
+            publish_package_distribution(target, index_url, anonymous, dry_run)
         except PublishAlreadyExists:
             if not skip_existing:
                 raise
@@ -132,7 +137,9 @@ def publish_package_distribution_with_retries(
             break
 
 
-def publish_package_distribution(target: Path, index_url: str, dry_run: bool) -> None:
+def publish_package_distribution(
+    target: Path, index_url: str, anonymous: bool, dry_run: bool
+) -> None:
     """
     Publish a package distribution file.
     """
@@ -157,6 +164,11 @@ def publish_package_distribution(target: Path, index_url: str, dry_run: bool) ->
         # Pass the publish token through to twine
         if publish_token := os.environ.get("PACKSE_PUBLISH_PASSWORD"):
             env["TWINE_PASSWORD"] = publish_token
+
+        # Twine requires a username and password even if we don't want to use them
+        if anonymous:
+            env["TWINE_USERNAME"] = "ANON"
+            env["TWINE_PASSWORD"] = "ANON"
 
         output = subprocess.check_output(
             command, stderr=subprocess.STDOUT, env=env, timeout=60

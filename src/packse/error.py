@@ -46,7 +46,10 @@ class PublishToolError(PublishError):
 
 class PublishNoCredentials(PublishError):
     def __init__(self) -> None:
-        message = "No credentials provided for publish. Provide an API token via `PACKSE_PUBLISH_PASSWORD`."
+        message = (
+            "No credentials found for publish!\n"
+            "Provide an API token via `PACKSE_PUBLISH_PASSWORD` or disable authentication with `--anonymous`"
+        )
         super().__init__(message)
 
 
@@ -65,4 +68,15 @@ class PublishRateLimit(PublishError):
 class InvalidPublishTarget(UserError):
     def __init__(self, path: Path, reason: str) -> None:
         message = f"Publish target at '{path}' is not a valid: {reason}"
+        super().__init__(message)
+
+
+class ServeError(PackseError):
+    def __init__(self, message: str) -> None:
+        super().__init__(message)
+
+
+class ServeAddressInUse(ServeError):
+    def __init__(self, url: str) -> None:
+        message = f"Address '{url}' already in use."
         super().__init__(message)
