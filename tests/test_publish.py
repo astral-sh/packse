@@ -1,8 +1,8 @@
+import os
 import re
 import shutil
 import stat
 import subprocess
-import os
 import tempfile
 from pathlib import Path
 from typing import Generator

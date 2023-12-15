@@ -2,10 +2,10 @@
 Publish package distributions.
 """
 import logging
+import os
 import subprocess
 import textwrap
 import time
-import os
 from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import wait as wait_for_futures
 from pathlib import Path
@@ -13,10 +13,10 @@ from pathlib import Path
 from packse.error import (
     InvalidPublishTarget,
     PublishAlreadyExists,
-    PublishRateLimit,
     PublishError,
-    PublishToolError,
     PublishNoCredentials,
+    PublishRateLimit,
+    PublishToolError,
 )
 
 logger = logging.getLogger(__name__)
