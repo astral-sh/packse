@@ -182,7 +182,7 @@ def _add_view_parser(subparsers):
 
 def _add_serve_parser(subparsers):
     parser = subparsers.add_parser(
-        "serve", help="Serve scenarios on a local package index"
+        "serve", help="Serve scenarios on a temporary local package index"
     )
     parser.set_defaults(call=_call_serve)
     parser.add_argument(
@@ -196,7 +196,7 @@ def _add_serve_parser(subparsers):
 
 
 def _add_server_parser(subparsers):
-    parser = subparsers.add_parser("server", help="Control a package index server")
+    parser = subparsers.add_parser("server", help="Run a local package index")
 
     subparsers = parser.add_subparsers(title="commands")
     start = subparsers.add_parser("start", help="Start a package index server")

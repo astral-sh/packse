@@ -78,5 +78,5 @@ class ServeError(PackseError):
 
 class ServeAddressInUse(ServeError):
     def __init__(self, url: str) -> None:
-        message = f"Address '{url}' already in use."
+        message = f"Address '{url}' already in use"
         super().__init__(message)
