@@ -49,47 +49,47 @@
       Publishing 'example-5803604b'...
       Published example_5803604b-0.0.0.tar.gz in [TIME]:
       
-      
+          <mock twine logs>
       
       Published 'example_5803604b-0.0.0.tar.gz'
       Published example_5803604b_a-1.0.0-py3-none-any.whl in [TIME]:
       
-      
+          <mock twine logs>
       
       Published 'example_5803604b_a-1.0.0-py3-none-any.whl'
       Published example_5803604b_a-1.0.0.tar.gz in [TIME]:
       
-      
+          <mock twine logs>
       
       Published 'example_5803604b_a-1.0.0.tar.gz'
       Published example_5803604b_b-1.0.0-py3-none-any.whl in [TIME]:
       
-      
+          <mock twine logs>
       
       Published 'example_5803604b_b-1.0.0-py3-none-any.whl'
       Published example_5803604b_b-1.0.0.tar.gz in [TIME]:
       
-      
+          <mock twine logs>
       
       Published 'example_5803604b_b-1.0.0.tar.gz'
       Published example_5803604b_b-2.0.0-py3-none-any.whl in [TIME]:
       
-      
+          <mock twine logs>
       
       Published 'example_5803604b_b-2.0.0-py3-none-any.whl'
       Published example_5803604b_b-2.0.0.tar.gz in [TIME]:
       
-      
+          <mock twine logs>
       
       Published 'example_5803604b_b-2.0.0.tar.gz'
       Published example_5803604b_b-3.0.0-py3-none-any.whl in [TIME]:
       
-      
+          <mock twine logs>
       
       Published 'example_5803604b_b-3.0.0-py3-none-any.whl'
       Published example_5803604b_b-3.0.0.tar.gz in [TIME]:
       
-      
+          <mock twine logs>
       
       Published 'example_5803604b_b-3.0.0.tar.gz'
   

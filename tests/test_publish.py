@@ -69,7 +69,7 @@ def mock_twine(monkeypatch: pytest.MonkeyPatch) -> Generator[MockBinary, None, N
     # Create a temp directory to register as a bin
     with tempfile.TemporaryDirectory() as tmpdir:
         mock = MockBinary(Path(tmpdir) / "twine")
-        mock.set_success()
+        mock.set_success("<mock twine logs>")
 
         # Add to the path
         monkeypatch.setenv("PATH", tmpdir, prepend=":")
