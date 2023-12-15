@@ -14,6 +14,7 @@ from packse.error import (
 from packse.list import list
 from packse.publish import publish
 from packse.serve import serve
+from packse.server import start_server, stop_server
 from packse.view import view
 
 
@@ -51,6 +52,9 @@ def entrypoint():
     except ServeError as exc:
         print(f"{exc}.", file=sys.stderr)
         exit(1)
+    except KeyboardInterrupt:
+        print("Interrupted!", file=sys.stderr)
+        exit(1)
 
 
 def _call_build(args):
@@ -63,6 +67,14 @@ def _call_view(args):
 
 def _call_serve(args):
     serve(args.targets)
+
+
+def _call_server_start(args):
+    start_server(background=args.bg)
+
+
+def _call_server_stop(args):  # noqa
+    stop_server()
 
 
 def _call_publish(args):
@@ -170,7 +182,7 @@ def _add_view_parser(subparsers):
 
 def _add_serve_parser(subparsers):
     parser = subparsers.add_parser(
-        "serve", help="Serve a package index with a scenario"
+        "serve", help="Serve scenarios on a local package index"
     )
     parser.set_defaults(call=_call_serve)
     parser.add_argument(
@@ -181,6 +193,27 @@ def _add_serve_parser(subparsers):
     )
 
     _add_shared_arguments(parser)
+
+
+def _add_server_parser(subparsers):
+    parser = subparsers.add_parser("server", help="Control a package index server")
+
+    subparsers = parser.add_subparsers(title="commands")
+    start = subparsers.add_parser("start", help="Start a package index server")
+    start.add_argument(
+        "--bg",
+        action="store_true",
+        help="Run the server in the background after startup.",
+    )
+
+    start.set_defaults(call=_call_server_start)
+
+    stop = subparsers.add_parser("stop", help="Stop a running package index server")
+    stop.set_defaults(call=_call_server_stop)
+
+    _add_shared_arguments(parser)
+    _add_shared_arguments(start)
+    _add_shared_arguments(stop)
 
 
 def _add_list_parser(subparsers):
@@ -234,5 +267,6 @@ def get_parser() -> argparse.ArgumentParser:
     _add_publish_parser(subparsers)
     _add_list_parser(subparsers)
     _add_serve_parser(subparsers)
+    _add_server_parser(subparsers)
 
     return parser
