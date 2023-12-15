@@ -1,15 +1,14 @@
 """
 Serve the given
 """
-import subprocess
+import logging
 import secrets
+import subprocess
+from contextlib import nullcontext
 from pathlib import Path
 from tempfile import TemporaryDirectory
-import logging
-from contextlib import nullcontext
 
 from packse.error import ServeAddressInUse
-
 
 logger = logging.getLogger(__name__)
 
