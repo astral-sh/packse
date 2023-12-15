@@ -44,6 +44,12 @@ class PublishToolError(PublishError):
         super().__init__(message)
 
 
+class PublishNoCredentials(PublishError):
+    def __init__(self) -> None:
+        message = "No credentials provided for publish. Provide an API token via `PACKSE_PUBLISH_PASSWORD`."
+        super().__init__(message)
+
+
 class PublishAlreadyExists(PublishError):
     def __init__(self, package: str) -> None:
         message = f"Publish for '{package}' already exists"

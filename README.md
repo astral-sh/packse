@@ -74,6 +74,9 @@ packse publish dist/example-cd797223
 
 By default, packages are published to the Test PyPI server.
 
+Credentials must be provided via the `PACKSE_PYPI_PASSWORD` environment variable. `PACKSE_PYPI_USERNAME` can be
+used to set a username if not using an API token.
+
 ### Testing scenarios
 
 Published scenarios can then be tested with your choice of package manager.

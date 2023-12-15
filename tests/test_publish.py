@@ -1,3 +1,4 @@
+import os
 import re
 import shutil
 import stat
@@ -31,6 +32,13 @@ def scenario_dist() -> Generator[Path, None, None]:
         yield dist
 
 
+@pytest.fixture
+def credentials(tmpenviron) -> None:
+    os.environ["PACKSE_PUBLISH_USERNAME"] = "username"
+    os.environ["PACKSE_PUBLISH_PASSWORD"] = "password"
+    yield
+
+
 class MockBinary:
     def __init__(self, path: Path) -> None:
         self.path = path
@@ -61,7 +69,7 @@ def mock_twine(monkeypatch: pytest.MonkeyPatch) -> Generator[MockBinary, None, N
     # Create a temp directory to register as a bin
     with tempfile.TemporaryDirectory() as tmpdir:
         mock = MockBinary(Path(tmpdir) / "twine")
-        mock.set_success()
+        mock.set_success("<mock twine logs>")
 
         # Add to the path
         monkeypatch.setenv("PATH", tmpdir, prepend=":")
@@ -70,6 +78,7 @@ def mock_twine(monkeypatch: pytest.MonkeyPatch) -> Generator[MockBinary, None, N
         yield mock
 
 
+@pytest.mark.usefixtures("credentials")
 def test_publish_example_dry_run(snapshot, scenario_dist: Path):
     assert (
         snapshot_command(
@@ -80,6 +89,7 @@ def test_publish_example_dry_run(snapshot, scenario_dist: Path):
     )
 
 
+@pytest.mark.usefixtures("credentials")
 def test_publish_example_twine_succeeds(
     snapshot, scenario_dist: Path, mock_twine: MockBinary
 ):
@@ -94,6 +104,7 @@ def test_publish_example_twine_succeeds(
     )
 
 
+@pytest.mark.usefixtures("credentials")
 def test_publish_example_twine_succeeds_parallel(
     snapshot, scenario_dist: Path, mock_twine: MockBinary
 ):
@@ -110,6 +121,7 @@ def test_publish_example_twine_succeeds_parallel(
     )
 
 
+@pytest.mark.usefixtures("credentials")
 def test_publish_example_twine_fails_with_unknown_error(
     snapshot, scenario_dist: Path, mock_twine: MockBinary
 ):
@@ -124,6 +136,7 @@ def test_publish_example_twine_fails_with_unknown_error(
     )
 
 
+@pytest.mark.usefixtures("credentials")
 def test_publish_example_twine_fails_with_rate_limit(
     snapshot, scenario_dist: Path, mock_twine: MockBinary
 ):
@@ -154,6 +167,7 @@ ERROR    HTTPError: 429 Too Many Requests from https://test.pypi.org/legacy/
     )
 
 
+@pytest.mark.usefixtures("credentials")
 def test_publish_example_twine_fails_with_already_exists(
     snapshot, scenario_dist: Path, mock_twine: MockBinary
 ):
@@ -167,6 +181,54 @@ ERROR    HTTPError: 400 Bad Request from https://test.pypi.org/legacy/
          File already exists. See https://test.pypi.org/help/#file-name-reuse for more information.  
         """
     )
+
+    assert (
+        snapshot_command(
+            ["publish", scenario_dist, "-v", "--workers", "1"],
+            extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
+        )
+        == snapshot
+    )
+
+
+@pytest.mark.usefixtures("tmpenviron")
+def test_publish_example_no_credentials(
+    snapshot,
+    scenario_dist: Path,
+    mock_twine: MockBinary,
+):
+    # Ensure these do not exist
+    if "PACKSE_PUBLISH_PASSWORD" in os.environ:
+        os.environ.pop("PACKSE_PUBLISH_PASSWORD")
+    if "TWINE_PASSWORD" in os.environ:
+        os.environ.pop("TWINE_PASSWORD")
+
+    mock_twine.set_error(
+        """
+        Should not be reached!
+        """
+    )
+
+    assert (
+        snapshot_command(
+            ["publish", scenario_dist, "-v", "--workers", "1"],
+            extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
+        )
+        == snapshot
+    )
+
+
+@pytest.mark.usefixtures("credentials")
+def test_publish_example_no_username_defaults_to_token(
+    snapshot,
+    scenario_dist: Path,
+    mock_twine: MockBinary,
+):
+    # Ensure these do not exist
+    if "PACKSE_PUBLISH_USERNAME" in os.environ:
+        os.environ.pop("PACKSE_PUBLISH_USERNAME")
+    if "TWINE_USERNAME" in os.environ:
+        os.environ.pop("TWINE_USERNAME")
 
     assert (
         snapshot_command(

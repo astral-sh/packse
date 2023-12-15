@@ -2,6 +2,7 @@
 Publish package distributions.
 """
 import logging
+import os
 import subprocess
 import textwrap
 import time
@@ -12,6 +13,8 @@ from pathlib import Path
 from packse.error import (
     InvalidPublishTarget,
     PublishAlreadyExists,
+    PublishError,
+    PublishNoCredentials,
     PublishRateLimit,
     PublishToolError,
 )
@@ -29,17 +32,23 @@ RETRY_BACKOFF_FACTOR = 1.5
 
 def publish(
     targets: list[Path],
+    index_url: str,
     skip_existing: bool,
     dry_run: bool,
     retry_on_rate_limit: bool,
     workers: int,
 ):
+    if not dry_run and not (
+        "TWINE_PASSWORD" in os.environ or "PACKSE_PUBLISH_PASSWORD" in os.environ
+    ):
+        raise PublishNoCredentials()
+
     for target in targets:
         if not target.is_dir():
             raise InvalidPublishTarget(target, reason="Not a directory.")
 
     s = "" if len(targets) == 1 else "s"
-    logger.info("Publishing %s target%s...", len(targets), s)
+    logger.info("Publishing %s target%s to %s...", len(targets), s, index_url)
     for target in sorted(targets):
         logger.info("Publishing '%s'...", target.name)
 
@@ -51,6 +60,7 @@ def publish(
             executor.submit(
                 publish_package_distributions,
                 target,
+                index_url,
                 skip_existing,
                 dry_run,
                 retry_on_rate_limit,
@@ -66,7 +76,11 @@ def publish(
 
 
 def publish_package_distributions(
-    target: Path, skip_existing: bool, dry_run: bool, retry_on_rate_limit: bool
+    target: Path,
+    index_url: str,
+    skip_existing: bool,
+    dry_run: bool,
+    retry_on_rate_limit: bool,
 ) -> str:
     """
     Publish a directory of package distribution files.
@@ -74,6 +88,7 @@ def publish_package_distributions(
     for distfile in sorted(target.iterdir()):
         publish_package_distribution_with_retries(
             distfile,
+            index_url,
             skip_existing=skip_existing,
             dry_run=dry_run,
             max_attempts=MAX_ATTEMPTS if retry_on_rate_limit else 1,
@@ -84,6 +99,7 @@ def publish_package_distributions(
 
 def publish_package_distribution_with_retries(
     target: Path,
+    index_url: str,
     skip_existing: bool,
     dry_run: bool,
     max_attempts: int,
@@ -97,7 +113,7 @@ def publish_package_distribution_with_retries(
         retry_time = retry_time * RETRY_BACKOFF_FACTOR
         attempts += 1
         try:
-            publish_package_distribution(target, dry_run)
+            publish_package_distribution(target, index_url, dry_run)
         except PublishAlreadyExists:
             if not skip_existing:
                 raise
@@ -116,22 +132,37 @@ def publish_package_distribution_with_retries(
             break
 
 
-def publish_package_distribution(target: Path, dry_run: bool) -> None:
+def publish_package_distribution(target: Path, index_url: str, dry_run: bool) -> None:
     """
     Publish a package distribution file.
     """
-    command = ["twine", "upload", "-r", "testpypi", str(target.resolve())]
+    command = ["twine", "upload", "--repository-url", index_url, str(target.resolve())]
     if dry_run:
         print("Would execute: " + " ".join(command))
         return
 
     start_time = time.time()
     try:
-        import os
+        env = os.environ.copy()
+        # Ensure twine does not prompt for credentials
+        env["TWINE_NON_INTERACTIVE"] = "1"
+
+        # Pass the publish username through to twine
+        if publish_username := os.environ.get("PACKSE_PUBLISH_USERNAME"):
+            env["TWINE_USERNAME"] = publish_username
+
+        # Configure the username for tokens by default
+        env.setdefault("TWINE_USERNAME", "__token__")
+
+        # Pass the publish token through to twine
+        if publish_token := os.environ.get("PACKSE_PUBLISH_PASSWORD"):
+            env["TWINE_PASSWORD"] = publish_token
 
         output = subprocess.check_output(
-            command, stderr=subprocess.STDOUT, env=os.environ
+            command, stderr=subprocess.STDOUT, env=env, timeout=60
         )
+    except subprocess.TimeoutExpired:
+        raise PublishError(f"Publish of {target.name} timed out.")
     except subprocess.CalledProcessError as exc:
         output = exc.output.decode()
         if "File already exists" in output:

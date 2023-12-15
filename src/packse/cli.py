@@ -59,6 +59,7 @@ def _call_view(args):
 def _call_publish(args):
     publish(
         args.targets,
+        index_url=args.index_url,
         dry_run=args.dry_run,
         skip_existing=args.skip_existing,
         retry_on_rate_limit=args.retry,
@@ -131,6 +132,12 @@ def _add_publish_parser(subparsers):
         type=int,
         default=8,
         help="Number of threads to use when publishing.",
+    )
+    parser.add_argument(
+        "--index-url",
+        type=str,
+        default="https://test.pypi.org/legacy/",
+        help="The URL of the package index to publish the packages to.",
     )
     _add_shared_arguments(parser)
 
