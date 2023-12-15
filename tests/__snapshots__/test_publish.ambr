@@ -3,7 +3,7 @@
   dict({
     'exit_code': 0,
     'stderr': '''
-      Publishing 1 target...
+      Publishing 1 target to https://test.pypi.org/legacy/...
       Publishing 'example-5803604b'...
       Published 'example_5803604b-0.0.0.tar.gz'
       Published 'example_5803604b_a-1.0.0-py3-none-any.whl'
@@ -17,15 +17,84 @@
   
     ''',
     'stdout': '''
-      Would execute: twine upload -r testpypi [DISTDIR]/example_5803604b-0.0.0.tar.gz
-      Would execute: twine upload -r testpypi [DISTDIR]/example_5803604b_a-1.0.0-py3-none-any.whl
-      Would execute: twine upload -r testpypi [DISTDIR]/example_5803604b_a-1.0.0.tar.gz
-      Would execute: twine upload -r testpypi [DISTDIR]/example_5803604b_b-1.0.0-py3-none-any.whl
-      Would execute: twine upload -r testpypi [DISTDIR]/example_5803604b_b-1.0.0.tar.gz
-      Would execute: twine upload -r testpypi [DISTDIR]/example_5803604b_b-2.0.0-py3-none-any.whl
-      Would execute: twine upload -r testpypi [DISTDIR]/example_5803604b_b-2.0.0.tar.gz
-      Would execute: twine upload -r testpypi [DISTDIR]/example_5803604b_b-3.0.0-py3-none-any.whl
-      Would execute: twine upload -r testpypi [DISTDIR]/example_5803604b_b-3.0.0.tar.gz
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_5803604b-0.0.0.tar.gz
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_5803604b_a-1.0.0-py3-none-any.whl
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_5803604b_a-1.0.0.tar.gz
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_5803604b_b-1.0.0-py3-none-any.whl
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_5803604b_b-1.0.0.tar.gz
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_5803604b_b-2.0.0-py3-none-any.whl
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_5803604b_b-2.0.0.tar.gz
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_5803604b_b-3.0.0-py3-none-any.whl
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_5803604b_b-3.0.0.tar.gz
+      example-5803604b
+  
+    ''',
+  })
+# ---
+# name: test_publish_example_no_credentials
+  dict({
+    'exit_code': 1,
+    'stderr': '''
+      No credentials provided for publish. Provide an API token via `PACKSE_PUBLISH_PASSWORD`.
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_publish_example_no_username_defaults_to_token
+  dict({
+    'exit_code': 0,
+    'stderr': '''
+      Publishing 1 target to https://test.pypi.org/legacy/...
+      Publishing 'example-5803604b'...
+      Published example_5803604b-0.0.0.tar.gz in [TIME]:
+      
+      
+      
+      Published 'example_5803604b-0.0.0.tar.gz'
+      Published example_5803604b_a-1.0.0-py3-none-any.whl in [TIME]:
+      
+      
+      
+      Published 'example_5803604b_a-1.0.0-py3-none-any.whl'
+      Published example_5803604b_a-1.0.0.tar.gz in [TIME]:
+      
+      
+      
+      Published 'example_5803604b_a-1.0.0.tar.gz'
+      Published example_5803604b_b-1.0.0-py3-none-any.whl in [TIME]:
+      
+      
+      
+      Published 'example_5803604b_b-1.0.0-py3-none-any.whl'
+      Published example_5803604b_b-1.0.0.tar.gz in [TIME]:
+      
+      
+      
+      Published 'example_5803604b_b-1.0.0.tar.gz'
+      Published example_5803604b_b-2.0.0-py3-none-any.whl in [TIME]:
+      
+      
+      
+      Published 'example_5803604b_b-2.0.0-py3-none-any.whl'
+      Published example_5803604b_b-2.0.0.tar.gz in [TIME]:
+      
+      
+      
+      Published 'example_5803604b_b-2.0.0.tar.gz'
+      Published example_5803604b_b-3.0.0-py3-none-any.whl in [TIME]:
+      
+      
+      
+      Published 'example_5803604b_b-3.0.0-py3-none-any.whl'
+      Published example_5803604b_b-3.0.0.tar.gz in [TIME]:
+      
+      
+      
+      Published 'example_5803604b_b-3.0.0.tar.gz'
+  
+    ''',
+    'stdout': '''
       example-5803604b
   
     ''',
@@ -35,7 +104,7 @@
   dict({
     'exit_code': 1,
     'stderr': '''
-      Publishing 1 target...
+      Publishing 1 target to https://test.pypi.org/legacy/...
       Publishing 'example-5803604b'...
       Publish for 'example_5803604b-0.0.0.tar.gz' already exists
   
@@ -47,7 +116,7 @@
   dict({
     'exit_code': 1,
     'stderr': '''
-      Publishing 1 target...
+      Publishing 1 target to https://test.pypi.org/legacy/...
       Publishing 'example-5803604b'...
       Publish of 'example_5803604b-0.0.0.tar.gz' failed due to rate limits
   
@@ -59,7 +128,7 @@
   dict({
     'exit_code': 1,
     'stderr': '''
-      Publishing 1 target...
+      Publishing 1 target to https://test.pypi.org/legacy/...
       Publishing 'example-5803604b'...
       Publishing example_5803604b-0.0.0.tar.gz with twine failed:
           <twine error message>
@@ -73,7 +142,7 @@
   dict({
     'exit_code': 0,
     'stderr': '''
-      Publishing 1 target...
+      Publishing 1 target to https://test.pypi.org/legacy/...
       Publishing 'example-5803604b'...
       Published example_5803604b-0.0.0.tar.gz in [TIME]:
       
