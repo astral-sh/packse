@@ -68,7 +68,7 @@ def publish(
             for target in targets
         ]
 
-        wait_for_futures(futures, timeout=10.0)
+        wait_for_futures(futures)
 
     results = [future.result() for future in futures]
     for result in sorted(results):
