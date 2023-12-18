@@ -4,12 +4,13 @@ import os
 import secrets
 import signal
 import subprocess
+import shutil
 import time
 from contextlib import nullcontext, contextmanager
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from packse.error import ServeAddressInUse
+from packse.error import ServeAddressInUse, ServeAlreadyRunning
 
 logger = logging.getLogger(__name__)
 
@@ -18,8 +19,15 @@ def index_up(
     host: str = "localhost",
     port: int = 3141,
     storage_path: Path | None = None,
+    reset: bool = False,
 ):
-    run_index_server(host=host, port=port, storage_path=storage_path, background=True)
+    run_index_server(
+        host=host,
+        port=port,
+        storage_path=storage_path,
+        background=True,
+        reset=reset,
+    )
 
 
 def index_down():
@@ -57,7 +65,15 @@ def run_index_server(
     port: int = 3141,
     background: bool = False,
     storage_path: Path | None = None,
+    reset: bool = False,
 ):
+    server_url = f"http://{host}:{port}"
+
+    if background:
+        if pid := get_server_pid():
+            if is_running(pid):
+                raise ServeAlreadyRunning()
+
     storage_context = (
         nullcontext(storage_path)
         if storage_path is not None
@@ -73,12 +89,16 @@ def run_index_server(
         server_storage = storage_path / "server"
         client_storage = storage_path / "client"
 
+        if reset:
+            logger.info("Clearing existing server data...")
+            shutil.rmtree(server_storage)
+            shutil.rmtree(client_storage)
+
         logger.debug("Storing data at %s", storage_path)
 
         if not server_storage.exists():
             init_server(server_storage)
 
-        server_url = f"http://{host}:{port}"
         server_log_path = storage_path / "server.log" if background else None
 
         logger.info("Starting server at %s...", server_url)

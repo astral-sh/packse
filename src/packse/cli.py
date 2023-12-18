@@ -70,7 +70,9 @@ def _call_serve(args):
 
 
 def _call_index_up(args):
-    index_up()
+    index_up(
+        host=args.host, port=args.port, reset=args.reset, storage_path=args.storage_path
+    )
 
 
 def _call_index_run(args):
@@ -206,6 +208,29 @@ def _add_index_parser(subparsers):
     up = subparsers.add_parser(
         "up", help="Start a package index server in the background."
     )
+    up.add_argument(
+        "--host",
+        type=str,
+        default="localhost",
+        help="The host to bind the package index to.",
+    )
+    up.add_argument(
+        "--port",
+        type=int,
+        default=3141,
+        help="The port to bind the package index to.",
+    )
+    up.add_argument(
+        "--reset",
+        action="store_true",
+        help="Reset the server's state on start.",
+    )
+    up.add_argument(
+        "--storage-path",
+        type=Path,
+        default=None,
+        help="The path to store server data at. Defaults to '~/.packse'.",
+    )
     up.set_defaults(call=_call_index_up)
 
     down = subparsers.add_parser("down", help="Stop a running package index server.")
@@ -213,6 +238,24 @@ def _add_index_parser(subparsers):
 
     run = subparsers.add_parser(
         "run", help="Start a package index server in the background."
+    )
+    run.add_argument(
+        "--host",
+        type=str,
+        default="localhost",
+        help="The host to bind the package index to.",
+    )
+    run.add_argument(
+        "--port",
+        type=int,
+        default=3141,
+        help="The port to bind the package index to.",
+    )
+
+    run.add_argument(
+        "--storage-path",
+        type=Path,
+        help="The path to store server data at. Defaults to a temporary directory.",
     )
     run.set_defaults(call=_call_index_run)
 

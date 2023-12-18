@@ -80,3 +80,9 @@ class ServeAddressInUse(ServeError):
     def __init__(self, url: str) -> None:
         message = f"Address '{url}' already in use"
         super().__init__(message)
+
+
+class ServeAlreadyRunning(ServeError):
+    def __init__(self) -> None:
+        message = "Server is already running."
+        super().__init__(message)
