@@ -1,7 +1,7 @@
 import logging
 from pathlib import Path
 
-from packse.server import start_server
+from packse.index import run_index_server
 
 logger = logging.getLogger(__name__)
 
@@ -12,4 +12,4 @@ def serve(
     # port: int = 3141,
     # storage_path: Path | None = None,
 ):
-    start_server()
+    run_index_server()

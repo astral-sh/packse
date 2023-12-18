@@ -14,11 +14,49 @@ from packse.error import ServeAddressInUse
 logger = logging.getLogger(__name__)
 
 
-def start_server(
+def index_up(
     host: str = "localhost",
     port: int = 3141,
     storage_path: Path | None = None,
+):
+    run_index_server(host=host, port=port, storage_path=storage_path, background=True)
+
+
+def index_down():
+    if pid := get_server_pid():
+        logger.info("Stopping server at PID %s...", pid)
+        try:
+            os.kill(pid, signal.SIGINT)
+        except ProcessLookupError:
+            # Just move on if it's already dead
+            pass
+
+        # Wait for the server to exit for 10s
+        limit = 10
+        start_time = time.time()
+        while time.time() - start_time < limit:
+            if not is_running(pid):
+                break
+            time.sleep(0.1)
+        else:
+            # After the limit is reached, send a stronger signal...
+            logger.info("Server has not stopped after %ds, sending kill...", limit)
+            os.kill(pid, signal.SIGKILL)
+
+            while is_running(pid):
+                time.sleep(0.1)
+
+        reset_pidfile()
+        logger.info("Stopped server!")
+    else:
+        logger.warning("No server detected!")
+
+
+def run_index_server(
+    host: str = "localhost",
+    port: int = 3141,
     background: bool = False,
+    storage_path: Path | None = None,
 ):
     storage_context = (
         nullcontext(storage_path)
@@ -44,7 +82,7 @@ def start_server(
         server_log_path = storage_path / "server.log" if background else None
 
         logger.info("Starting server at %s...", server_url)
-        with start_server_process(
+        with start_index_server(
             server_storage, host, port, server_log_path
         ) as server_process:
             init_client(client_storage, server_url)
@@ -80,7 +118,7 @@ def start_server(
 
 
 @contextmanager
-def start_server_process(
+def start_index_server(
     server_storage: Path, host: str, port: int, server_log_path: Path
 ) -> subprocess.Popen:
     server_url = f"http://{host}:{port}"
@@ -218,36 +256,6 @@ def login_user(username: str, password: str, client_storage: Path):
         ],
         stderr=subprocess.STDOUT,
     )
-
-
-def stop_server():
-    if pid := get_server_pid():
-        logger.info("Stopping server at PID %s...", pid)
-        try:
-            os.kill(pid, signal.SIGINT)
-        except ProcessLookupError:
-            # Just move on if it's already dead
-            pass
-
-        # Wait for the server to exit for 10s
-        limit = 10
-        start_time = time.time()
-        while time.time() - start_time < limit:
-            if not is_running(pid):
-                break
-            time.sleep(0.1)
-        else:
-            # After the limit is reached, send a stronger signal...
-            logger.info("Server has not stopped after %ds, sending kill...", limit)
-            os.kill(pid, signal.SIGKILL)
-
-            while is_running(pid):
-                time.sleep(0.1)
-
-        reset_pidfile()
-        logger.info("Stopped server!")
-    else:
-        logger.warning("No server detected!")
 
 
 def get_storage_directory() -> Path:

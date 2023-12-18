@@ -14,7 +14,7 @@ from packse.error import (
 from packse.list import list
 from packse.publish import publish
 from packse.serve import serve
-from packse.server import start_server, stop_server
+from packse.index import index_up, index_down, run_index_server
 from packse.view import view
 
 
@@ -69,12 +69,16 @@ def _call_serve(args):
     serve(args.targets)
 
 
-def _call_server_start(args):
-    start_server(background=args.bg)
+def _call_index_up(args):
+    index_up()
 
 
-def _call_server_stop(args):  # noqa
-    stop_server()
+def _call_index_run(args):
+    run_index_server(background=False)
+
+
+def _call_index_down(args):
+    index_down()
 
 
 def _call_publish(args):
@@ -195,25 +199,27 @@ def _add_serve_parser(subparsers):
     _add_shared_arguments(parser)
 
 
-def _add_server_parser(subparsers):
-    parser = subparsers.add_parser("server", help="Run a local package index")
+def _add_index_parser(subparsers):
+    parser = subparsers.add_parser("index", help="Run a local package index")
 
     subparsers = parser.add_subparsers(title="commands")
-    start = subparsers.add_parser("start", help="Start a package index server")
-    start.add_argument(
-        "--bg",
-        action="store_true",
-        help="Run the server in the background after startup.",
+    up = subparsers.add_parser(
+        "up", help="Start a package index server in the background."
     )
+    up.set_defaults(call=_call_index_up)
 
-    start.set_defaults(call=_call_server_start)
+    down = subparsers.add_parser("down", help="Stop a running package index server.")
+    down.set_defaults(call=_call_index_down)
 
-    stop = subparsers.add_parser("stop", help="Stop a running package index server")
-    stop.set_defaults(call=_call_server_stop)
+    run = subparsers.add_parser(
+        "run", help="Start a package index server in the background."
+    )
+    run.set_defaults(call=_call_index_run)
 
     _add_shared_arguments(parser)
-    _add_shared_arguments(start)
-    _add_shared_arguments(stop)
+    _add_shared_arguments(up)
+    _add_shared_arguments(down)
+    _add_shared_arguments(run)
 
 
 def _add_list_parser(subparsers):
@@ -267,6 +273,6 @@ def get_parser() -> argparse.ArgumentParser:
     _add_publish_parser(subparsers)
     _add_list_parser(subparsers)
     _add_serve_parser(subparsers)
-    _add_server_parser(subparsers)
+    _add_index_parser(subparsers)
 
     return parser
