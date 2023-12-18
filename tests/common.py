@@ -54,7 +54,7 @@ def snapshot_command(
         stdout, stderr = process.communicate(timeout=interrupt_after)
     except subprocess.TimeoutExpired:
         process.send_signal(signal.SIGINT)
-        stdout, stderr = process.communicate()
+        stdout, stderr = process.communicate(timeout=2)
         killed = True
 
     result = {

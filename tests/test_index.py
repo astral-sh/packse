@@ -38,7 +38,7 @@ def test_index_up_background(snapshot, tmpcwd, tmpenviron):
     try:
         assert (
             snapshot_command(
-                ["index", "up", "--bg", "-v"],
+                ["index", "up", "--bg"],
                 extra_filters=FILTERS,
             )
             == snapshot
@@ -52,7 +52,9 @@ def test_index_up_foreground(snapshot, tmpcwd, tmpenviron):
 
     assert (
         snapshot_command(
-            ["index", "up", "-v"], extra_filters=FILTERS, interrupt_after=5
+            ["index", "up"],
+            extra_filters=FILTERS,
+            interrupt_after=5,
         )
         == snapshot
     )
