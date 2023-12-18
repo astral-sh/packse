@@ -11,10 +11,10 @@ from packse.error import (
     ServeError,
     UserError,
 )
+from packse.index import index_down, index_up, run_index_server
 from packse.list import list
 from packse.publish import publish
 from packse.serve import serve
-from packse.index import index_up, index_down, run_index_server
 from packse.view import view
 
 
@@ -76,7 +76,13 @@ def _call_index_up(args):
 
 
 def _call_index_run(args):
-    run_index_server(background=False)
+    run_index_server(
+        host=args.host,
+        port=args.port,
+        reset=args.reset,
+        storage_path=args.storage_path,
+        background=False,
+    )
 
 
 def _call_index_down(args):
@@ -251,11 +257,15 @@ def _add_index_parser(subparsers):
         default=3141,
         help="The port to bind the package index to.",
     )
-
     run.add_argument(
         "--storage-path",
         type=Path,
         help="The path to store server data at. Defaults to a temporary directory.",
+    )
+    run.add_argument(
+        "--reset",
+        action="store_true",
+        help="Reset the server's state on start.",
     )
     run.set_defaults(call=_call_index_run)
 

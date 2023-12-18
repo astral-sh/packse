@@ -2,11 +2,11 @@ import errno
 import logging
 import os
 import secrets
+import shutil
 import signal
 import subprocess
-import shutil
 import time
-from contextlib import nullcontext, contextmanager
+from contextlib import contextmanager, nullcontext
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -91,8 +91,10 @@ def run_index_server(
 
         if reset:
             logger.info("Clearing existing server data...")
-            shutil.rmtree(server_storage)
-            shutil.rmtree(client_storage)
+            if server_storage.exists():
+                shutil.rmtree(server_storage)
+            if client_storage.exists():
+                shutil.rmtree(client_storage)
 
         logger.debug("Storing data at %s", storage_path)
 
