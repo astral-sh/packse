@@ -51,19 +51,23 @@ def snapshot_command(
         env=os.environ,
     )
     try:
-        stdout, stderr = process.communicate(timeout=stop_after)
+        result_stdout, result_stderr = process.communicate(timeout=stop_after)
     except subprocess.TimeoutExpired:
         process.send_signal(signal.SIGINT)
-        stdout, stderr = process.communicate()
+        result_stdout, result_stderr = process.communicate()
         killed = True
 
     result = {
         "exit_code": process.returncode if not killed else "<stopped>",
         "stdout": (
-            apply_filters(stdout.decode(), filters) if stdout else "<not included>"
+            apply_filters(result_stdout.decode(), filters)
+            if stdout
+            else "<not included>"
         ),
         "stderr": (
-            apply_filters(stderr.decode(), filters) if stderr else "<not included>"
+            apply_filters(result_stderr.decode(), filters)
+            if stderr
+            else "<not included>"
         ),
     }
 
