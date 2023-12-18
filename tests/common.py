@@ -24,10 +24,10 @@ def snapshot_command(
     command: list[str],
     working_directory: Path | None = None,
     snapshot_filesystem: bool = False,
-    stderr: bool = True,
-    stdout: bool = True,
+    snapshot_stderr: bool = True,
+    snapshot_stdout: bool = True,
     extra_filters: list[tuple[str, str]] | None = None,
-    stop_after: float = None,
+    interrupt_after: float = None,
 ) -> dict:
     # By default, filter out absolute references to the working directory
     filters = [
@@ -51,22 +51,22 @@ def snapshot_command(
         env=os.environ,
     )
     try:
-        result_stdout, result_stderr = process.communicate(timeout=stop_after)
+        stdout, stderr = process.communicate(timeout=interrupt_after)
     except subprocess.TimeoutExpired:
         process.send_signal(signal.SIGINT)
-        result_stdout, result_stderr = process.communicate()
+        stdout, stderr = process.communicate()
         killed = True
 
     result = {
         "exit_code": process.returncode if not killed else "<stopped>",
         "stdout": (
-            apply_filters(result_stdout.decode(), filters)
-            if stdout
+            apply_filters(stdout.decode(), filters)
+            if snapshot_stdout
             else "<not included>"
         ),
         "stderr": (
-            apply_filters(result_stderr.decode(), filters)
-            if stderr
+            apply_filters(stderr.decode(), filters)
+            if snapshot_stderr
             else "<not included>"
         ),
     }

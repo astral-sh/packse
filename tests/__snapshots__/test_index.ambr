@@ -1,0 +1,150 @@
+# serializer version: 1
+# name: test_index_down
+  dict({
+    'exit_code': 0,
+    'stderr': '''
+      Stopping server with pid [PID]...
+      Stopped server!
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_index_down_no_server_found
+  dict({
+    'exit_code': 1,
+    'stderr': '''
+      No server detected!
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_index_down_server_stopped
+  dict({
+    'exit_code': 1,
+    'stderr': '''
+      Server looks shutdown already.
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_index_down_with_storage_path
+  dict({
+    'exit_code': 0,
+    'stderr': '''
+      Stopping server with pid [PID]...
+      Stopped server!
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_index_up_background
+  dict({
+    'exit_code': 0,
+    'stderr': '''
+      Storing data at [PWD]/.packse
+      Initializing server...
+      Starting server at http://localhost:3141...
+      Configuring client...
+      Generating password...
+      Creating user 'packages'...
+      Logging in...
+      Creating package index 'packages/all'...
+      Index available at http://localhost:3141/packages/all
+      Running in background with pid [PID]
+      Stop index server with `packse index down`.
+  
+    ''',
+    'stdout': '''
+      [TIMESTAMP] INFO  NOCTX Loading node info from [PWD]/.packse/server/.nodeinfo
+      [TIMESTAMP] INFO  NOCTX wrote nodeinfo to: [PWD]/.packse/server/.nodeinfo
+      [TIMESTAMP] INFO  NOCTX running with role 'standalone'
+      [TIMESTAMP] WARNI NOCTX No secret file provided, creating a new random secret. Login tokens issued before are invalid. Use --secretfile option to provide a persistent secret. You can create a proper secret with the devpi-gen-secret command.
+      [TIMESTAMP] INFO  NOCTX Found plugin devpi-web-4.2.1.
+      [TIMESTAMP] INFO  NOCTX Using [PWD]/.packse/server/.indices for Whoosh index files.
+      [TIMESTAMP] INFO  [ASYN] Starting asyncio event loop
+      [TIMESTAMP] INFO  [NOTI] [Rtx0] triggering load of initial projectnames for root/pypi
+      [TIMESTAMP] INFO  NOCTX devpi-server version: 6.9.2
+      [TIMESTAMP] INFO  NOCTX serverdir: [PWD]/.packse/server
+      [TIMESTAMP] INFO  NOCTX uuid: [UUID]
+      [TIMESTAMP] INFO  NOCTX serving at url: http://localhost:3141 (might be http://[localhost]:3141 for IPv6)
+      [TIMESTAMP] INFO  NOCTX using 50 threads
+      [TIMESTAMP] INFO  NOCTX bug tracker: https://github.com/devpi/devpi/issues
+      [TIMESTAMP] INFO  NOCTX Hit Ctrl-C to quit.
+      [TIMESTAMP] INFO  Serving on http://[::1]:3141
+      http://localhost:3141/packages/all
+  
+    ''',
+  })
+# ---
+# name: test_index_up_foreground
+  dict({
+    'exit_code': '<stopped>',
+    'stderr': '''
+      Storing data at /var/folders/bc/qlsk3t6x7c9fhhbvvcg68k9c0000gp/T/packse-serve-vzr40ky7
+      Initializing server...
+      Starting server at http://localhost:3141...
+      Configuring client...
+      Generating password...
+      Creating user 'packages'...
+      Logging in...
+      Creating package index 'packages/all'...
+      Index available at http://localhost:3141/packages/all
+      Ready! [Stop with Ctrl-C]
+      Interrupted!
+  
+    ''',
+    'stdout': '''
+      [TIMESTAMP] INFO  NOCTX Loading node info from /var/folders/bc/qlsk3t6x7c9fhhbvvcg68k9c0000gp/T/packse-serve-vzr40ky7/server/.nodeinfo
+      [TIMESTAMP] INFO  NOCTX wrote nodeinfo to: /var/folders/bc/qlsk3t6x7c9fhhbvvcg68k9c0000gp/T/packse-serve-vzr40ky7/server/.nodeinfo
+      [TIMESTAMP] INFO  NOCTX running with role 'standalone'
+      [TIMESTAMP] WARNI NOCTX No secret file provided, creating a new random secret. Login tokens issued before are invalid. Use --secretfile option to provide a persistent secret. You can create a proper secret with the devpi-gen-secret command.
+      [TIMESTAMP] INFO  NOCTX Found plugin devpi-web-4.2.1.
+      [TIMESTAMP] INFO  NOCTX Using /var/folders/bc/qlsk3t6x7c9fhhbvvcg68k9c0000gp/T/packse-serve-vzr40ky7/server/.indices for Whoosh index files.
+      [TIMESTAMP] INFO  [ASYN] Starting asyncio event loop
+      [TIMESTAMP] INFO  [NOTI] [Rtx0] triggering load of initial projectnames for root/pypi
+      [TIMESTAMP] INFO  NOCTX devpi-server version: 6.9.2
+      [TIMESTAMP] INFO  NOCTX serverdir: /var/folders/bc/qlsk3t6x7c9fhhbvvcg68k9c0000gp/T/packse-serve-vzr40ky7/server
+      [TIMESTAMP] INFO  NOCTX uuid: [UUID]
+      [TIMESTAMP] INFO  NOCTX serving at url: http://localhost:3141 (might be http://[localhost]:3141 for IPv6)
+      [TIMESTAMP] INFO  NOCTX using 50 threads
+      [TIMESTAMP] INFO  NOCTX bug tracker: https://github.com/devpi/devpi/issues
+      [TIMESTAMP] INFO  NOCTX Hit Ctrl-C to quit.
+      [TIMESTAMP] INFO  Serving on http://[::1]:3141
+      [TIMESTAMP] INFO  Serving on http://127.0.0.1:3141
+      [TIMESTAMP] INFO  [req0] GET /+api
+      [TIMESTAMP] INFO  [req1] PUT /packages
+      [TIMESTAMP] INFO  [req1] [Wtx0] setting password for user 'packages'
+      [TIMESTAMP] INFO  [req1] [Wtx0] created user 'packages' with email 'null'
+      [TIMESTAMP] INFO  [req1] [Wtx0] fswriter1: committed at 1
+      [TIMESTAMP] INFO  [req2] POST /+login
+      [TIMESTAMP] INFO  [req3] PUT /packages/all
+      [TIMESTAMP] INFO  [req3] [Wtx1] created index packages/all: {'acl_upload': [':ANONYMOUS:'], 'bases': ('root/pypi',), 'volatile': False, 'mirror_whitelist': [], 'mirror_whitelist_inheritance': 'intersection', 'acl_toxresult_upload': [':ANONYMOUS:'], 'type': 'stage'}
+      [TIMESTAMP] INFO  [req3] [Wtx1] fswriter2: committed at 2
+      [TIMESTAMP] INFO  [req4] GET /packages/all
+  
+    ''',
+  })
+# ---
+# name: test_index_up_with_storage_path
+  dict({
+    'exit_code': 0,
+    'stderr': '''
+      Initializing server...
+      Starting server at http://localhost:3141...
+      Configuring client...
+      Creating package index 'packages/all'...
+      Index available at http://localhost:3141/packages/all
+      Running in background with pid [PID]
+      Stop index server with `packse index down`.
+  
+    ''',
+    'stdout': '''
+      http://localhost:3141/packages/all
+  
+    ''',
+  })
+# ---
