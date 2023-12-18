@@ -76,12 +76,19 @@ jobs:
         run: |
           poetry run packse build $SCENARIOS
 
-      - name: Publish scenarios [dry-run]
+      - name: Publish scenarios [local]
         if: github.ref != 'refs/heads/main'
         run: |
-          poetry run packse publish --dry-run dist/*
+          # Start the local index server
+          index_url=$(poetry run packse index up --bg)
 
-      - name: Publish scenarios
+          # Publish the packages
+          poetry run packse publish --anonymous --index-url "$index_url" dist/*
+
+          # Shutdown the index server
+          poetry run packse index down
+
+      - name: Publish scenarios [test pypi]
         if: github.ref == 'refs/heads/main'
         env:
           PACKSE_PUBLISH_PASSWORD=: ${{ secrets.TEST_PYPI_API_TOKEN }}

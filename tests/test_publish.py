@@ -115,7 +115,7 @@ def test_publish_example_twine_succeeds_parallel(
             ["publish", scenario_dist, "-v"],
             extra_filters=[(re.escape(str(scenario_dist.resolve())), "[DISTDIR]")],
             # Cannot record stderr when running in parallel
-            stderr=False,
+            snapshot_stderr=False,
         )
         == snapshot
     )

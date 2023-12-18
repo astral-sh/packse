@@ -90,7 +90,33 @@ packse publish dist/example-cd797223
 By default, packages are published to the Test PyPI server.
 
 Credentials must be provided via the `PACKSE_PYPI_PASSWORD` environment variable. `PACKSE_PYPI_USERNAME` can be
-used to set a username if not using an API token.
+used to set a username if not using an API token. If using a server which does not require authentication, the
+`--anonymous` flag can be passed.
+
+### Running a package index
+
+A local package index can be controlled with the `index` command. For example, to start a local package index:
+
+```bash
+packse index up
+```
+
+The `--bg` flag can be passed to run the index in the background.
+
+When running an index in the background, state will be stored in the `~/.packse` directory. The `PACKSE_STORAGE_PATH`
+environment variable can be used to override the storage directory. Additionally, `--storage-path` can be passed
+to the `index` command to change the storage path of server state.
+
+To stop the index, use `packse index down`:
+```
+packse index down
+```
+
+Packages can be published to the local index by providing the `--index-url` flag to the `publish` command:
+
+```bash
+packse publish dist/example-cd797223 --index-url http://localhost:3141/packages/all --anonymous
+```
 
 ### Testing scenarios
 

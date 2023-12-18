@@ -35,7 +35,8 @@
   dict({
     'exit_code': 1,
     'stderr': '''
-      No credentials provided for publish. Provide an API token via `PACKSE_PUBLISH_PASSWORD`.
+      No credentials found for publish!
+      Provide an API token via `PACKSE_PUBLISH_PASSWORD` or disable authentication with `--anonymous`.
   
     ''',
     'stdout': '',
@@ -106,7 +107,7 @@
     'stderr': '''
       Publishing 1 target to https://test.pypi.org/legacy/...
       Publishing 'example-5803604b'...
-      Publish for 'example_5803604b-0.0.0.tar.gz' already exists
+      Publish for 'example_5803604b-0.0.0.tar.gz' already exists.
   
     ''',
     'stdout': '',
@@ -118,7 +119,7 @@
     'stderr': '''
       Publishing 1 target to https://test.pypi.org/legacy/...
       Publishing 'example-5803604b'...
-      Publish of 'example_5803604b-0.0.0.tar.gz' failed due to rate limits
+      Publish of 'example_5803604b-0.0.0.tar.gz' failed due to rate limits.
   
     ''',
     'stdout': '',
@@ -132,7 +133,7 @@
       Publishing 'example-5803604b'...
       Publishing example_5803604b-0.0.0.tar.gz with twine failed:
           <twine error message>
-      
+      .
   
     ''',
     'stdout': '',

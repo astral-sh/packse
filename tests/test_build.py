@@ -26,7 +26,9 @@ def test_build_invalid_target(snapshot, tmpcwd):
 def test_build_example(snapshot):
     target = __development_base_path__ / "scenarios" / "example.json"
     assert (
-        snapshot_command(["build", str(target)], snapshot_filesystem=True, stderr=False)
+        snapshot_command(
+            ["build", str(target)], snapshot_filesystem=True, snapshot_stderr=False
+        )
         == snapshot
     )
 
@@ -37,7 +39,9 @@ def test_build_example_with_seed(snapshot):
     target = __development_base_path__ / "scenarios" / "example.json"
     os.environ["PACKSE_VERSION_SEED"] = "foo"
     assert (
-        snapshot_command(["build", str(target)], snapshot_filesystem=True, stderr=False)
+        snapshot_command(
+            ["build", str(target)], snapshot_filesystem=True, snapshot_stderr=False
+        )
         == snapshot
     )
 
@@ -55,4 +59,6 @@ def test_build_example_already_exists(snapshot):
 def test_build_example_already_exists_with_rm_flag(snapshot):
     target = __development_base_path__ / "scenarios" / "example.json"
     (Path(".") / "build").mkdir()
-    assert snapshot_command(["build", target, "--rm"], stderr=False) == snapshot
+    assert (
+        snapshot_command(["build", target, "--rm"], snapshot_stderr=False) == snapshot
+    )

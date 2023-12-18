@@ -8,10 +8,13 @@ from packse.error import (
     BuildError,
     DestinationAlreadyExists,
     PublishError,
+    ServeError,
     UserError,
 )
+from packse.index import index_down, index_up
 from packse.list import list
 from packse.publish import publish
+from packse.serve import serve
 from packse.view import view
 
 
@@ -41,10 +44,16 @@ def entrypoint():
         print(f"{exc}.", file=sys.stderr)
         exit(1)
     except BuildError as exc:
-        print(f"{exc}", file=sys.stderr)
+        print(f"{exc}.", file=sys.stderr)
         exit(1)
     except PublishError as exc:
-        print(f"{exc}", file=sys.stderr)
+        print(f"{exc}.", file=sys.stderr)
+        exit(1)
+    except ServeError as exc:
+        print(f"{exc}.", file=sys.stderr)
+        exit(1)
+    except KeyboardInterrupt:
+        print("Interrupted!", file=sys.stderr)
         exit(1)
 
 
@@ -56,6 +65,26 @@ def _call_view(args):
     view(args.targets)
 
 
+def _call_serve(args):
+    serve(args.targets)
+
+
+def _call_index_up(args):
+    index_up(
+        host=args.host,
+        port=args.port,
+        reset=args.reset,
+        storage_path=args.storage_path,
+        background=args.bg,
+    )
+
+
+def _call_index_down(args):
+    success = index_down(storage_path=args.storage_path)
+    if not success:
+        exit(1)
+
+
 def _call_publish(args):
     publish(
         args.targets,
@@ -63,6 +92,7 @@ def _call_publish(args):
         dry_run=args.dry_run,
         skip_existing=args.skip_existing,
         retry_on_rate_limit=args.retry,
+        anonymous=args.anonymous,
         workers=args.workers,
     )
 
@@ -139,6 +169,9 @@ def _add_publish_parser(subparsers):
         default="https://test.pypi.org/legacy/",
         help="The URL of the package index to publish the packages to.",
     )
+    parser.add_argument(
+        "--anonymous", action="store_true", help="Upload without credentials."
+    )
     _add_shared_arguments(parser)
 
 
@@ -153,6 +186,72 @@ def _add_view_parser(subparsers):
     )
 
     _add_shared_arguments(parser)
+
+
+def _add_serve_parser(subparsers):
+    parser = subparsers.add_parser(
+        "serve", help="Serve scenarios on a temporary local package index"
+    )
+    parser.set_defaults(call=_call_serve)
+    parser.add_argument(
+        "targets",
+        type=Path,
+        nargs="*",
+        help="The scenarios to serve",
+    )
+
+    _add_shared_arguments(parser)
+
+
+def _add_index_parser(subparsers):
+    parser = subparsers.add_parser("index", help="Run a local package index")
+
+    subparsers = parser.add_subparsers(title="commands")
+    up = subparsers.add_parser(
+        "up", help="Start a package index server in the background."
+    )
+    up.add_argument(
+        "--host",
+        type=str,
+        default="localhost",
+        help="The host to bind the package index to.",
+    )
+    up.add_argument(
+        "--port",
+        type=int,
+        default=3141,
+        help="The port to bind the package index to.",
+    )
+    up.add_argument(
+        "--reset",
+        action="store_true",
+        help="Reset the server's state on start.",
+    )
+    up.add_argument(
+        "--storage-path",
+        type=Path,
+        default=None,
+        help="The path to store server data at. Defaults to '~/.packse' if in the background, otherwise a temporary directory is used.",
+    )
+    up.add_argument(
+        "--bg",
+        action="store_true",
+        help="Run the index server in the background, exiting after it is ready.",
+    )
+    up.set_defaults(call=_call_index_up)
+
+    down = subparsers.add_parser("down", help="Stop a running package index server.")
+    down.add_argument(
+        "--storage-path",
+        type=Path,
+        default=None,
+        help="The path used to store server data.",
+    )
+    down.set_defaults(call=_call_index_down)
+
+    _add_shared_arguments(parser)
+    _add_shared_arguments(up)
+    _add_shared_arguments(down)
 
 
 def _add_list_parser(subparsers):
@@ -205,5 +304,7 @@ def get_parser() -> argparse.ArgumentParser:
     _add_view_parser(subparsers)
     _add_publish_parser(subparsers)
     _add_list_parser(subparsers)
+    _add_serve_parser(subparsers)
+    _add_index_parser(subparsers)
 
     return parser

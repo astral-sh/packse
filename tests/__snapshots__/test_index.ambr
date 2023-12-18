@@ -1,0 +1,97 @@
+# serializer version: 1
+# name: test_index_down
+  dict({
+    'exit_code': 0,
+    'stderr': '''
+      Stopping server with pid [PID]...
+      Stopped server!
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_index_down_no_server_found
+  dict({
+    'exit_code': 1,
+    'stderr': '''
+      No server detected!
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_index_down_server_stopped
+  dict({
+    'exit_code': 1,
+    'stderr': '''
+      Server looks shutdown already.
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_index_down_with_storage_path
+  dict({
+    'exit_code': 0,
+    'stderr': '''
+      Stopping server with pid [PID]...
+      Stopped server!
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_index_up_background
+  dict({
+    'exit_code': 0,
+    'stderr': '''
+      Initializing server...
+      Starting server at http://localhost:3141...
+      Configuring client...
+      Creating package index 'packages/all'...
+      Index available at http://localhost:3141/packages/all
+      Running in background with pid [PID]
+      Stop index server with `packse index down`.
+  
+    ''',
+    'stdout': '''
+      http://localhost:3141/packages/all
+  
+    ''',
+  })
+# ---
+# name: test_index_up_foreground
+  dict({
+    'exit_code': '<stopped>',
+    'stderr': '''
+      Initializing server...
+      Starting server at http://localhost:3141...
+      Configuring client...
+      Creating package index 'packages/all'...
+      Index available at http://localhost:3141/packages/all
+      Ready! [Stop with Ctrl-C]
+      Interrupted!
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_index_up_with_storage_path
+  dict({
+    'exit_code': 0,
+    'stderr': '''
+      Initializing server...
+      Starting server at http://localhost:3141...
+      Configuring client...
+      Creating package index 'packages/all'...
+      Index available at http://localhost:3141/packages/all
+      Running in background with pid [PID]
+      Stop index server with `packse index down`.
+  
+    ''',
+    'stdout': '''
+      http://localhost:3141/packages/all
+  
+    ''',
+  })
+# ---
