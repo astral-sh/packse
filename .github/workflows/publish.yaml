@@ -80,7 +80,7 @@ jobs:
         if: github.ref != 'refs/heads/main'
         run: |
           # Start the local index server, do not allow packages from PyPI
-          index_url=$(poetry run packse index up --bg)
+          index_url=$(poetry run packse index up --bg --offline)
 
           # Publish the packages
           poetry run packse publish --anonymous --index-url "$index_url" dist/*
