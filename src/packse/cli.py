@@ -11,7 +11,7 @@ from packse.error import (
     ServeError,
     UserError,
 )
-from packse.index import index_down, index_up, run_index_server
+from packse.index import index_down, index_up
 from packse.list import list
 from packse.publish import publish
 from packse.serve import serve
@@ -71,22 +71,18 @@ def _call_serve(args):
 
 def _call_index_up(args):
     index_up(
-        host=args.host, port=args.port, reset=args.reset, storage_path=args.storage_path
-    )
-
-
-def _call_index_run(args):
-    run_index_server(
         host=args.host,
         port=args.port,
         reset=args.reset,
         storage_path=args.storage_path,
-        background=False,
+        background=args.bg,
     )
 
 
 def _call_index_down(args):
-    index_down()
+    success = index_down(storage_path=args.storage_path)
+    if not success:
+        exit(1)
 
 
 def _call_publish(args):
@@ -235,44 +231,27 @@ def _add_index_parser(subparsers):
         "--storage-path",
         type=Path,
         default=None,
-        help="The path to store server data at. Defaults to '~/.packse'.",
+        help="The path to store server data at. Defaults to '~/.packse' if in the background, otherwise a temporary directory is used.",
+    )
+    up.add_argument(
+        "--bg",
+        action="store_true",
+        help="Run the index server in the background, exiting after it is ready.",
     )
     up.set_defaults(call=_call_index_up)
 
     down = subparsers.add_parser("down", help="Stop a running package index server.")
-    down.set_defaults(call=_call_index_down)
-
-    run = subparsers.add_parser(
-        "run", help="Start a package index server in the background."
-    )
-    run.add_argument(
-        "--host",
-        type=str,
-        default="localhost",
-        help="The host to bind the package index to.",
-    )
-    run.add_argument(
-        "--port",
-        type=int,
-        default=3141,
-        help="The port to bind the package index to.",
-    )
-    run.add_argument(
+    down.add_argument(
         "--storage-path",
         type=Path,
-        help="The path to store server data at. Defaults to a temporary directory.",
+        default=None,
+        help="The path used to store server data.",
     )
-    run.add_argument(
-        "--reset",
-        action="store_true",
-        help="Reset the server's state on start.",
-    )
-    run.set_defaults(call=_call_index_run)
+    down.set_defaults(call=_call_index_down)
 
     _add_shared_arguments(parser)
     _add_shared_arguments(up)
     _add_shared_arguments(down)
-    _add_shared_arguments(run)
 
 
 def _add_list_parser(subparsers):

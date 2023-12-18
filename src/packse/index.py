@@ -18,51 +18,6 @@ logger = logging.getLogger(__name__)
 def index_up(
     host: str = "localhost",
     port: int = 3141,
-    storage_path: Path | None = None,
-    reset: bool = False,
-):
-    run_index_server(
-        host=host,
-        port=port,
-        storage_path=storage_path,
-        background=True,
-        reset=reset,
-    )
-
-
-def index_down():
-    if pid := get_server_pid():
-        logger.info("Stopping server at PID %s...", pid)
-        try:
-            os.kill(pid, signal.SIGINT)
-        except ProcessLookupError:
-            # Just move on if it's already dead
-            pass
-
-        # Wait for the server to exit for 10s
-        limit = 10
-        start_time = time.time()
-        while time.time() - start_time < limit:
-            if not is_running(pid):
-                break
-            time.sleep(0.1)
-        else:
-            # After the limit is reached, send a stronger signal...
-            logger.info("Server has not stopped after %ds, sending kill...", limit)
-            os.kill(pid, signal.SIGKILL)
-
-            while is_running(pid):
-                time.sleep(0.1)
-
-        reset_pidfile()
-        logger.info("Stopped server!")
-    else:
-        logger.warning("No server detected!")
-
-
-def run_index_server(
-    host: str = "localhost",
-    port: int = 3141,
     background: bool = False,
     storage_path: Path | None = None,
     reset: bool = False,
@@ -70,7 +25,7 @@ def run_index_server(
     server_url = f"http://{host}:{port}"
 
     if background:
-        if pid := get_server_pid():
+        if pid := get_server_pid(storage_path):
             if is_running(pid):
                 raise ServeAlreadyRunning()
 
@@ -78,7 +33,7 @@ def run_index_server(
         nullcontext(storage_path)
         if storage_path is not None
         else (
-            get_storage_directory()
+            get_storage_directory(storage_path)
             if background
             else TemporaryDirectory(prefix="packse-serve-")
         )
@@ -105,7 +60,7 @@ def run_index_server(
 
         logger.info("Starting server at %s...", server_url)
         with start_index_server(
-            server_storage, host, port, server_log_path
+            storage_path, server_storage, host, port, server_log_path
         ) as server_process:
             init_client(client_storage, server_url)
 
@@ -129,19 +84,69 @@ def run_index_server(
             logger.info("Index available at %s", index_url)
 
             if background:
-                logger.info("Running in background with PID %s", server_process.pid)
+                logger.info("Running in background with pid %s", server_process.pid)
                 logger.info("Stop index server with `packse index down`.")
                 print(index_url)
             else:
-                # TODO(zanieb): Stream logs from this process
                 logger.info("Ready! [Stop with Ctrl-C]")
-                server_process.wait()
-                reset_pidfile()
+
+                line = ""
+                while True:
+                    line = server_process.stdout.readline().decode()
+                    if logger.getEffectiveLevel() <= logging.DEBUG:
+                        print(line, end="")
+
+
+def index_down(storage_path: Path | None) -> bool:
+    storage_path = get_storage_directory(storage_path, create=False)
+
+    if not storage_path.exists():
+        logger.warning("No server detected!")
+        return False
+
+    if pid := get_server_pid(storage_path):
+        if not is_running(pid):
+            logger.info("Server looks shutdown already.")
+            reset_pidfile(storage_path)
+            return
+
+        logger.info("Stopping server with pid %s...", pid)
+        try:
+            os.kill(pid, signal.SIGINT)
+        except ProcessLookupError:
+            # Just move on if it's already dead
+            pass
+
+        # Wait for the server to exit for 10s
+        limit = 10
+        start_time = time.time()
+        while time.time() - start_time < limit:
+            if not is_running(pid):
+                break
+            time.sleep(0.1)
+        else:
+            # After the limit is reached, send a stronger signal...
+            logger.info("Server has not stopped after %ds, sending kill...", limit)
+            os.kill(pid, signal.SIGKILL)
+
+            while is_running(pid):
+                time.sleep(0.1)
+
+        reset_pidfile(storage_path)
+        logger.info("Stopped server!")
+        return True
+    else:
+        logger.warning("No server detected!")
+        return False
 
 
 @contextmanager
 def start_index_server(
-    server_storage: Path, host: str, port: int, server_log_path: Path
+    storage_path: Path,
+    server_storage: Path,
+    host: str,
+    port: int,
+    server_log_path: Path,
 ) -> subprocess.Popen:
     server_url = f"http://{host}:{port}"
 
@@ -175,7 +180,7 @@ def start_index_server(
                     raise ServeAddressInUse(server_url)
 
         # Server started!
-        write_server_pid(server_process.pid)
+        write_server_pid(storage_path, server_process.pid)
 
         yield server_process
 
@@ -184,7 +189,7 @@ def start_index_server(
 
         # Do not reset the pidfile when a server was already running!
         if not isinstance(exc, ServeAddressInUse):
-            reset_pidfile()
+            reset_pidfile(storage_path)
 
         raise
 
@@ -280,31 +285,36 @@ def login_user(username: str, password: str, client_storage: Path):
     )
 
 
-def get_storage_directory() -> Path:
-    path = os.environ.get("PACKSE_STORAGE_PATH", Path.home() / ".packse")
-    path.mkdir(exist_ok=True)
+def get_storage_directory(storage_path: Path | None, create: bool = True) -> Path:
+    path = (
+        storage_path
+        or os.environ.get("PACKSE_STORAGE_PATH")
+        or (Path.home() / ".packse")
+    )
+    if create:
+        path.mkdir(exist_ok=True)
     return path
 
 
-def get_pidfile_path() -> Path:
-    return get_storage_directory() / "server.pid"
+def get_pidfile_path(storage_path: Path | None) -> Path:
+    return get_storage_directory(storage_path) / "server.pid"
 
 
-def get_server_pid() -> int | None:
-    pidfile = get_pidfile_path()
+def get_server_pid(storage_path: Path | None) -> int | None:
+    pidfile = get_pidfile_path(storage_path)
     if not pidfile.exists():
         return None
     else:
         return int(pidfile.read_text())
 
 
-def write_server_pid(pid: int) -> None:
-    pidfile = get_pidfile_path()
+def write_server_pid(storage_path: Path | None, pid: int) -> None:
+    pidfile = get_pidfile_path(storage_path)
     pidfile.write_text(str(pid))
 
 
-def reset_pidfile():
-    pidfile = get_pidfile_path()
+def reset_pidfile(storage_path: Path | None):
+    pidfile = get_pidfile_path(storage_path)
     pidfile.unlink(missing_ok=True)
 
 
@@ -312,7 +322,7 @@ def is_running(pid):
     try:
         os.kill(pid, 0)
     except OSError as err:
-        # ESRCH: PID not exist
+        # ESRCH: pid not exist
         if err.errno == errno.ESRCH:
             return False
     return True

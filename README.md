@@ -98,14 +98,10 @@ used to set a username if not using an API token. If using a server which does n
 A local package index can be controlled with the `index` command. For example, to start a local package index:
 
 ```bash
-packse index run
-```
-
-To run the package index in the background, use `packse index up`:
-
-```bash
 packse index up
 ```
+
+The `--bg` flag can be passed to run the index in the background.
 
 When running an index in the background, state will be stored in the `~/.packse` directory. The `PACKSE_STORAGE_PATH`
 environment variable can be used to override the storage directory. Additionally, `--storage-path` can be passed
