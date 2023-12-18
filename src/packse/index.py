@@ -23,7 +23,7 @@ def index_up(
     storage_path: Path | None = None,
     reset: bool = False,
     offline: bool = False,
-    strict: bool = False,
+    all: bool = False,
 ):
     server_url = f"http://{host}:{port}"
 
@@ -86,26 +86,28 @@ def index_up(
             login_user(username, password, client_storage)
 
             all_index = "packages/all"
-            strict_index = "packages/strict"
+            local_index = "packages/local"
             pypi_index = "root/pypi"
 
-            # First, create the strict index which does not allow fallback to PyPI
-            create_index(strict_index, client_storage, exists_ok=background, bases=[])
+            # First, create the "local" index which does not allow fallback to PyPI
+            create_index(local_index, client_storage, exists_ok=background, bases=[])
 
-            # Then, create the lenient index which uses the strict index and the other
+            # Then, create the "all" index which pulls from the "local" index or PyPI
             create_index(
                 all_index,
                 client_storage,
                 exists_ok=background,
-                bases=[strict_index, pypi_index],
+                bases=[local_index, pypi_index],
             )
 
-            logger.info("Ensuring strict index has build dependencies...")
-            add_build_requirements(strict_index, client_storage)
+            logger.info("Ensuring local index has build dependencies...")
+            add_build_requirements(local_index, client_storage)
 
             all_index_url = f"{server_url}/{all_index}"
-            strict_index_url = f"{server_url}/{strict_index}"
-            logger.info("Index available at %s and %s", all_index_url, strict_index_url)
+            local_index_url = f"{server_url}/{local_index}"
+            logger.info(
+                "Indexes available at %s and %s", all_index_url, local_index_url
+            )
 
             logger.debug(
                 "To use `devpi` commands, include `--clientdir %s`", client_storage
@@ -115,10 +117,10 @@ def index_up(
                 logger.info("Running in background with pid %s", server_process.pid)
                 logger.info("Stop index server with `packse index down`.")
 
-                if strict:
-                    print(strict_index_url)
-                else:
+                if all:
                     print(all_index_url)
+                else:
+                    print(local_index_url)
 
             else:
                 logger.info("Ready! [Stop with Ctrl-C]")

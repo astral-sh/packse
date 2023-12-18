@@ -77,7 +77,7 @@ def _call_index_up(args):
         storage_path=args.storage_path,
         background=args.bg,
         offline=args.offline,
-        strict=args.strict,
+        all=args.all,
     )
 
 
@@ -246,9 +246,9 @@ def _add_index_parser(subparsers):
         help="Run the index server without acccess to the real PyPI.",
     )
     up.add_argument(
-        "--strict",
+        "--all",
         action="store_true",
-        help="Print the strict index server to standard output instead of the one that allows fallback to the real PyPI.",
+        help="Output the index server URL that allows fallback to the real PyPI.",
     )
     up.set_defaults(call=_call_index_up)
 
