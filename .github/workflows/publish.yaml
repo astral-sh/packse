@@ -79,14 +79,14 @@ jobs:
       - name: Publish scenarios [local]
         if: github.ref != 'refs/heads/main'
         run: |
-          # Start the local server
-          index_url=$(poetry run packse server start --bg)
+          # Start the local index server
+          index_url=$(poetry run packse index up)
 
           # Publish the packages
           poetry run packse publish --anonymous --index-url "$index_url" dist/*
 
-          # Shutdown the server
-          poetry run packse server stop
+          # Shutdown the index server
+          poetry run packse index down
 
       - name: Publish scenarios [test pypi]
         if: github.ref == 'refs/heads/main'
