@@ -243,7 +243,7 @@ def _add_index_parser(subparsers):
     up.add_argument(
         "--offline",
         action="store_true",
-        help="Run the index server without acccess to the real PyPI.",
+        help="Run the all index servers without acccess to the real PyPI.",
     )
     up.add_argument(
         "--all",
