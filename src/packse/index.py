@@ -130,7 +130,7 @@ def run_index_server(
 
             if background:
                 logger.info("Running in background with PID %s", server_process.pid)
-                logger.info("Stop server with `packse server stop`.")
+                logger.info("Stop index server with `packse index down`.")
                 print(index_url)
             else:
                 # TODO(zanieb): Stream logs from this process
