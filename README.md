@@ -101,19 +101,21 @@ A local package index can be controlled with the `index` command. For example, t
 packse index up
 ```
 
-The `--bg` flag can be passed to run the index in the background.
+The `--bg` flag can be passed to run the index in the background. 
+When running an index in the background, state will be stored in the `~/.packse` directory. The `PACKSE_STORAGE_PATH`
+environment variable or the `--storage-path` option can be used to change the storage path.
 
-Two package indexes are created:
+Two package indexes are available:
 
 - `packages/local`: which only allows locally published packages to be installed
 - `packages/all`: which includes local packages but allows missing packages to be pulled from PyPI
 
-When publishing scenario packages, you should always use the `packages/local` package index; or they will not be
-available when installing from `packages/all`.
+When installing packages, you can choose the index to use by passing the `--index-url` flag to the installer
+e.g. with `pip`:
 
-When running an index in the background, state will be stored in the `~/.packse` directory. The `PACKSE_STORAGE_PATH`
-environment variable can be used to override the storage directory. Additionally, `--storage-path` can be passed
-to the `index` command to change the storage path of server state.
+```bash
+pip install --index-url http://127.0.0.1:3141/packages/local example-0611cb74
+```
 
 To stop the index, use `packse index down`:
 ```
@@ -123,8 +125,12 @@ packse index down
 Packages can be published to the local index by providing the `--index-url` flag to the `publish` command:
 
 ```bash
-packse publish dist/example-cd797223 --index-url http://localhost:3141/packages/all --anonymous
+packse publish dist/example-cd797223 --index-url http://localhost:3141/packages/local --anonymous
 ```
+
+When publishing scenario packages, you should always use the `packages/local` package index; or they will not be
+available when installing from `packages/all`.
+
 
 ### Testing scenarios
 
