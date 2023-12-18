@@ -23,6 +23,7 @@ def index_up(
     storage_path: Path | None = None,
     reset: bool = False,
     offline: bool = False,
+    strict: bool = False,
 ):
     server_url = f"http://{host}:{port}"
 
@@ -113,7 +114,12 @@ def index_up(
             if background:
                 logger.info("Running in background with pid %s", server_process.pid)
                 logger.info("Stop index server with `packse index down`.")
-                print(all_index_url)
+
+                if strict:
+                    print(strict_index_url)
+                else:
+                    print(all_index_url)
+
             else:
                 logger.info("Ready! [Stop with Ctrl-C]")
 
