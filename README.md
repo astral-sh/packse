@@ -107,6 +107,10 @@ To run the package index in the background, use `packse index up`:
 packse index up
 ```
 
+When running an index in the background, state will be stored in the `~/.packse` directory. The `PACKSE_STORAGE_PATH`
+environment variable can be used to override the storage directory. Additionally, `--storage-path` can be passed
+to the `index` command to change the storage path of server state.
+
 To stop the index, use `packse index down`:
 ```
 packse index down
