@@ -76,6 +76,8 @@ def _call_index_up(args):
         reset=args.reset,
         storage_path=args.storage_path,
         background=args.bg,
+        offline=args.offline,
+        all=args.all,
     )
 
 
@@ -237,6 +239,16 @@ def _add_index_parser(subparsers):
         "--bg",
         action="store_true",
         help="Run the index server in the background, exiting after it is ready.",
+    )
+    up.add_argument(
+        "--offline",
+        action="store_true",
+        help="Run the all index servers without acccess to the real PyPI.",
+    )
+    up.add_argument(
+        "--all",
+        action="store_true",
+        help="Output the index server URL that allows fallback to the real PyPI.",
     )
     up.set_defaults(call=_call_index_up)
 

@@ -1,3 +1,4 @@
+import os
 import subprocess
 
 import psutil
@@ -44,7 +45,7 @@ def test_index_up_background(snapshot, tmpcwd, tmpenviron):
             == snapshot
         )
     finally:
-        subprocess.call(["packse", "index", "down"])
+        subprocess.call(["packse", "index", "down"], env=tmpenviron)
 
 
 def test_index_up_foreground(snapshot, tmpcwd, tmpenviron):
@@ -54,7 +55,8 @@ def test_index_up_foreground(snapshot, tmpcwd, tmpenviron):
         snapshot_command(
             ["index", "up"],
             extra_filters=FILTERS,
-            interrupt_after=5,
+            # Send a keyboard interrupt after a bit — use a longer delay for slow CI machines
+            interrupt_after=10 if os.environ.get("CI") else 5,
         )
         == snapshot
     )

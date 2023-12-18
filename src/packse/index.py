@@ -10,6 +10,7 @@ from contextlib import contextmanager, nullcontext
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
+from packse import __development_base_path__
 from packse.error import ServeAddressInUse, ServeAlreadyRunning
 
 logger = logging.getLogger(__name__)
@@ -21,6 +22,8 @@ def index_up(
     background: bool = False,
     storage_path: Path | None = None,
     reset: bool = False,
+    offline: bool = False,
+    all: bool = False,
 ):
     server_url = f"http://{host}:{port}"
 
@@ -60,7 +63,12 @@ def index_up(
 
         logger.info("Starting server at %s...", server_url)
         with start_index_server(
-            storage_path, server_storage, host, port, server_log_path
+            storage_path,
+            server_storage,
+            host,
+            port,
+            server_log_path,
+            offline=offline,
         ) as server_process:
             init_client(client_storage, server_url)
 
@@ -77,16 +85,43 @@ def index_up(
             logger.debug("Logging in...")
             login_user(username, password, client_storage)
 
-            index = "packages/all"
-            create_index(index, client_storage, exists_ok=background)
+            all_index = "packages/all"
+            local_index = "packages/local"
+            pypi_index = "root/pypi"
 
-            index_url = f"{server_url}/{index}"
-            logger.info("Index available at %s", index_url)
+            # First, create the "local" index which does not allow fallback to PyPI
+            create_index(local_index, client_storage, exists_ok=background, bases=[])
+
+            # Then, create the "all" index which pulls from the "local" index or PyPI
+            create_index(
+                all_index,
+                client_storage,
+                exists_ok=background,
+                bases=[local_index, pypi_index],
+            )
+
+            logger.info("Ensuring local index has build dependencies...")
+            add_build_requirements(local_index, client_storage)
+
+            all_index_url = f"{server_url}/{all_index}"
+            local_index_url = f"{server_url}/{local_index}"
+            logger.info(
+                "Indexes available at %s and %s", all_index_url, local_index_url
+            )
+
+            logger.debug(
+                "To use `devpi` commands, include `--clientdir %s`", client_storage
+            )
 
             if background:
                 logger.info("Running in background with pid %s", server_process.pid)
                 logger.info("Stop index server with `packse index down`.")
-                print(index_url)
+
+                if all:
+                    print(all_index_url)
+                else:
+                    print(local_index_url)
+
             else:
                 logger.info("Ready! [Stop with Ctrl-C]")
 
@@ -147,21 +182,26 @@ def start_index_server(
     host: str,
     port: int,
     server_log_path: Path,
+    offline: bool,
 ) -> subprocess.Popen:
     server_url = f"http://{host}:{port}"
+    command = [
+        "devpi-server",
+        "--serverdir",
+        str(server_storage),
+        # Future default, let's just opt-in now for better output
+        "--absolute-urls",
+        "--host",
+        host,
+        "--port",
+        str(port),
+    ]
+
+    if offline:
+        command.append("--offline")
 
     server_process = subprocess.Popen(
-        [
-            "devpi-server",
-            "--serverdir",
-            str(server_storage),
-            # Future default, let's just opt-in now for better output
-            "--absolute-urls",
-            "--host",
-            host,
-            "--port",
-            str(port),
-        ],
+        command,
         stderr=subprocess.STDOUT,
         stdout=server_log_path.open("wb") if server_log_path else subprocess.PIPE,
     )
@@ -186,6 +226,10 @@ def start_index_server(
 
     except BaseException as exc:
         server_process.kill()
+
+        stdout, _ = server_process.communicate(timeout=2)
+        if logger.getEffectiveLevel() <= logging.DEBUG:
+            print(stdout.decode())
 
         # Do not reset the pidfile when a server was already running!
         if not isinstance(exc, ServeAddressInUse):
@@ -222,21 +266,51 @@ def init_client(client_storage: Path, server_url: str):
     )
 
 
-def create_index(name: str, client_storage: Path, exists_ok: bool = False):
+def add_build_requirements(
+    to_index: str,
+    client_storage: Path,
+):
+    """
+    Pushes package build requirements to an index that does not allow fallback to PyPI.
+    """
+    build_directory = __development_base_path__ / "vendor" / "build"
+    logger.debug("Uploading build packages to index %s", to_index)
+    subprocess.check_output(
+        [
+            "devpi",
+            "upload",
+            "--clientdir",
+            str(client_storage),
+            "--from-dir",
+            str(build_directory.resolve()),
+            "--index",
+            to_index,
+        ]
+    )
+
+
+def create_index(
+    name: str,
+    client_storage: Path,
+    bases: list[str],
+    exists_ok: bool = False,
+):
     logger.info("Creating package index %r...", name)
+    command = [
+        "devpi",
+        "index",
+        "--clientdir",
+        str(client_storage),
+        "-c",
+        name,
+        "volatile=False",
+        "acl_upload=:ANONYMOUS:",  # Do not require auth to upload packages
+    ]
+    if bases:
+        command.append("bases={}".format(",".join(bases)))
     try:
         subprocess.check_output(
-            [
-                "devpi",
-                "index",
-                "--clientdir",
-                str(client_storage),
-                "-c",
-                name,
-                "bases=root/pypi",  # TODO(zanieb): Allow users to disable pull from real PyPI
-                "volatile=False",
-                "acl_upload=:ANONYMOUS:",  # Do not require auth to upload packages
-            ],
+            command,
             stderr=subprocess.STDOUT,
         )
     except subprocess.CalledProcessError as exc:

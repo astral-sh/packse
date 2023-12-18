@@ -34,8 +34,8 @@ def snapshot_command(
         (re.escape(str(Path(sys.executable).parent)), "[PYTHON_BINDIR]"),
         (re.escape(str((working_directory or Path.cwd()).absolute())), "[PWD]"),
         (
-            r"(\d+\.)?\d+(ms|s)",
-            "[TIME]",
+            r"in (\d+\.)?\d+(ms|s)",
+            "in [TIME]",
         ),
         (re.escape(str(__development_base_path__.absolute())), "[PROJECT_ROOT]"),
     ]
