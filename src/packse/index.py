@@ -91,6 +91,12 @@ def index_up(
 
             # First, create the "local" index which does not allow fallback to PyPI
             create_index(local_index, client_storage, exists_ok=background, bases=[])
+            local_index_url = f"{server_url}/{local_index}"
+
+            logger.info("Uploading build dependencies to local index...")
+            add_build_requirements(local_index, client_storage)
+
+            logger.info("Index available at %s", local_index_url)
 
             # Then, create the "all" index which pulls from the "local" index or PyPI
             create_index(
@@ -99,15 +105,8 @@ def index_up(
                 exists_ok=background,
                 bases=[local_index, pypi_index],
             )
-
-            logger.info("Ensuring local index has build dependencies...")
-            add_build_requirements(local_index, client_storage)
-
             all_index_url = f"{server_url}/{all_index}"
-            local_index_url = f"{server_url}/{local_index}"
-            logger.info(
-                "Indexes available at %s and %s", all_index_url, local_index_url
-            )
+            logger.info("Index available at %s", all_index_url)
 
             logger.debug(
                 "To use `devpi` commands, include `--clientdir %s`", client_storage
