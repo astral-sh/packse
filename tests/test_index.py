@@ -56,7 +56,7 @@ def test_index_up_foreground(snapshot, tmpcwd, tmpenviron):
             ["index", "up"],
             extra_filters=FILTERS,
             # Send a keyboard interrupt after a bit — use a longer delay for slow CI machines
-            interrupt_after=10 if os.environ.get("CI") else 5,
+            interrupt_after=15 if os.environ.get("CI") else 5,
         )
         == snapshot
     )
