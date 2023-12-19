@@ -118,7 +118,9 @@ def publish_package_distribution_with_retries(
         retry_time = retry_time * RETRY_BACKOFF_FACTOR
         attempts += 1
         try:
-            publish_package_distribution(target, index_url, anonymous, dry_run)
+            publish_package_distribution(
+                target, index_url, anonymous=anonymous, dry_run=dry_run
+            )
         except PublishAlreadyExists:
             if not skip_existing:
                 raise

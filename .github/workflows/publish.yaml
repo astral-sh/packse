@@ -91,6 +91,6 @@ jobs:
       - name: Publish scenarios [test pypi]
         if: github.ref == 'refs/heads/main'
         env:
-          PACKSE_PUBLISH_PASSWORD=: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          PACKSE_PUBLISH_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
         run: |
           poetry run packse publish --skip-existing dist/*
