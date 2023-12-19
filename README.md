@@ -105,10 +105,12 @@ The `--bg` flag can be passed to run the index in the background.
 When running an index in the background, state will be stored in the `~/.packse` directory. The `PACKSE_STORAGE_PATH`
 environment variable or the `--storage-path` option can be used to change the storage path.
 
-Two package indexes are available:
+The following package indexes are available:
 
 - `packages/local`: which only allows locally published packages to be installed
-- `packages/all`: which includes local packages but allows missing packages to be pulled from PyPI
+- `packages/pypi`: which mirrors the production PyPI index
+- `packages/test-pypi`: which mirrors the test PyPI index
+- `packages/all`: which includes all of the listed indexes, with priority following the list order above
 
 When installing packages, you can choose the index to use by passing the `--index-url` flag to the installer
 e.g. with `pip`:
