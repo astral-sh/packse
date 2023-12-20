@@ -41,6 +41,9 @@ def index_up(
             else TemporaryDirectory(prefix="packse-serve-")
         )
     )
+
+    exists_ok = (background or storage_path is not None) and not reset
+
     with storage_context as storage_path:
         # Ensure we have the right type, tmpdir returns a string
         storage_path = Path(storage_path)
@@ -79,7 +82,7 @@ def index_up(
                 username,
                 client_storage,
                 password,
-                exists_ok=background,
+                exists_ok=exists_ok,
             )
 
             logger.debug("Logging in...")
@@ -91,7 +94,7 @@ def index_up(
             test_pypi_index = "packages/test-pypi"
 
             # First, create the "local" index which does not allow fallback to PyPI
-            create_index(local_index, client_storage, exists_ok=background, bases=[])
+            create_index(local_index, client_storage, exists_ok=exists_ok, bases=[])
 
             # Crate mirror indexes for PyPI
             create_mirror_index(
@@ -103,7 +106,7 @@ def index_up(
             create_index(
                 all_index,
                 client_storage,
-                exists_ok=background,
+                exists_ok=exists_ok,
                 bases=[local_index, pypi_index, test_pypi_index],
             )
 
@@ -131,9 +134,10 @@ def index_up(
                 logger.info("Ready! [Stop with Ctrl-C]")
 
                 line = ""
+                debug = logger.getEffectiveLevel() <= logging.DEBUG
                 while True:
                     line = server_process.stdout.readline().decode()
-                    if logger.getEffectiveLevel() <= logging.DEBUG:
+                    if debug:
                         print(line, end="")
 
 
@@ -194,16 +198,18 @@ def start_index_server(
         "devpi-server",
         "--serverdir",
         str(server_storage),
-        # Future default, let's just opt-in now for better output
-        "--absolute-urls",
         "--host",
         host,
         "--port",
         str(port),
+        # Future default behavior
+        "--absolute-urls",
     ]
 
     if offline:
         command.append("--offline")
+
+    logger.debug("Running: %s", " ".join(command))
 
     server_process = subprocess.Popen(
         command,
@@ -230,9 +236,15 @@ def start_index_server(
         yield server_process
 
     except BaseException as exc:
+        server_process.terminate()
+
+        stdout, _ = server_process.communicate(timeout=1)
+        if logger.getEffectiveLevel() <= logging.DEBUG:
+            print(stdout.decode())
+
         server_process.kill()
 
-        stdout, _ = server_process.communicate(timeout=2)
+        stdout, _ = server_process.communicate(timeout=1)
         if logger.getEffectiveLevel() <= logging.DEBUG:
             print(stdout.decode())
 
