@@ -2,6 +2,7 @@ import argparse
 import logging
 import sys
 from pathlib import Path
+from subprocess import CalledProcessError
 
 from packse.build import build
 from packse.error import (
@@ -52,6 +53,13 @@ def entrypoint():
     except ServeError as exc:
         print(f"{exc}.", file=sys.stderr)
         exit(1)
+    except CalledProcessError as exc:
+        print(
+            f"Error running command: {', '.join(exc.cmd)!r} (exit code {exc.returncode})",
+            file=sys.stderr,
+        )
+        print(exc.output.decode(), file=sys.stderr)
+        exit(2)
     except KeyboardInterrupt:
         print("Interrupted!", file=sys.stderr)
         exit(1)
