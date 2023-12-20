@@ -87,27 +87,32 @@ def index_up(
 
             all_index = "packages/all"
             local_index = "packages/local"
-            pypi_index = "root/pypi"
+            pypi_index = "packages/pypi"
+            test_pypi_index = "packages/test-pypi"
 
             # First, create the "local" index which does not allow fallback to PyPI
             create_index(local_index, client_storage, exists_ok=background, bases=[])
+
+            # Crate mirror indexes for PyPI
+            create_mirror_index(
+                test_pypi_index, client_storage, "https://test.pypi.org/simple/"
+            )
+            create_mirror_index(pypi_index, client_storage, "https://pypi.org/simple/")
 
             # Then, create the "all" index which pulls from the "local" index or PyPI
             create_index(
                 all_index,
                 client_storage,
                 exists_ok=background,
-                bases=[local_index, pypi_index],
+                bases=[local_index, pypi_index, test_pypi_index],
             )
 
-            logger.info("Ensuring local index has build dependencies...")
+            logger.info("Uploading build dependencies to local index...")
             add_build_requirements(local_index, client_storage)
 
             all_index_url = f"{server_url}/{all_index}"
             local_index_url = f"{server_url}/{local_index}"
-            logger.info(
-                "Indexes available at %s and %s", all_index_url, local_index_url
-            )
+            logger.info("Indexes available at %s/<index-name>", server_url)
 
             logger.debug(
                 "To use `devpi` commands, include `--clientdir %s`", client_storage
@@ -287,6 +292,34 @@ def add_build_requirements(
             to_index,
         ]
     )
+
+
+def create_mirror_index(
+    name: str,
+    client_storage: Path,
+    url: str,
+    exists_ok: bool = False,
+):
+    logger.info("Creating mirror package index %r for %s...", name, url)
+    command = [
+        "devpi",
+        "index",
+        "--clientdir",
+        str(client_storage),
+        "-c",
+        name,
+        "type=mirror",
+        f"mirror_url={url}",
+    ]
+    try:
+        subprocess.check_output(
+            command,
+            stderr=subprocess.STDOUT,
+        )
+    except subprocess.CalledProcessError as exc:
+        # TODO(zanieb): Improve these error handling cases
+        if not exists_ok and "409 Conflict" not in exc.stdout.decode():
+            raise
 
 
 def create_index(
