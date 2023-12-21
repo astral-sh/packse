@@ -206,6 +206,12 @@ def start_index_server(
         "--requests-only",
         # Future default behavior
         "--absolute-urls",
+        # Lots of threads for lots of parallel requests (default of 50)
+        "--threads",
+        "200",
+        # Increase the PyPI request timeout (default of 5)
+        "--request-timeout",
+        "30",
     ]
 
     if offline:
