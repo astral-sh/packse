@@ -202,6 +202,8 @@ def start_index_server(
         host,
         "--port",
         str(port),
+        # Do not spawn a background thread crawling PyPI
+        "--requests-only",
         # Future default behavior
         "--absolute-urls",
     ]
