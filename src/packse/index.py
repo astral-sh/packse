@@ -204,8 +204,8 @@ def start_index_server(
         str(port),
         # Do not spawn a background thread crawling PyPI
         "--requests-only",
-        # Future default behavior
-        "--absolute-urls",
+        # Future default behavior, use absolute URLs when linking to files and such
+        # "--absolute-urls",
         # Lots of threads for lots of parallel requests (default of 50)
         "--threads",
         "200",
