@@ -17,7 +17,7 @@ from packse.scenario import (
 logger = logging.getLogger(__name__)
 
 
-def view(targets: list[Path]):
+def view(targets: list[Path], name: str | None = None):
     scenarios = []
 
     # Validate and collect all targets first
@@ -33,7 +33,24 @@ def view(targets: list[Path]):
 
     # Then view each one
     for scenario in scenarios:
-        logging.debug("Viewing %s", scenario.name)
+        if (
+            name is not None
+            # Allow user to provide the name with or without the prefix
+            and scenario.name != name
+            and scenario_prefix(scenario) != name
+        ):
+            logging.debug("Skipping %s", scenario.name)
+            continue
+
+        # When viewing a single scenario, show the name and description
+        if name is not None:
+            print(scenario.name)
+            print()
+            print(scenario.description)
+            print()
+        else:
+            logging.debug("Viewing %s", scenario.name)
+
         view_scenario(scenario)
 
 
