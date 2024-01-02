@@ -113,7 +113,13 @@ def _call_list(args):
         skip_invalid = True
         args.targets = Path.cwd().glob("**/*.json")
 
-    list(args.targets, args.no_versions, skip_invalid, args.no_sources)
+    list(
+        args.targets,
+        args.no_versions,
+        skip_invalid,
+        args.no_sources,
+        args.output_format,
+    )
 
 
 def _root_parser():
@@ -303,6 +309,12 @@ def _add_list_parser(subparsers):
         "--no-sources",
         action="store_true",
         help="Do not show the source file for each scenario.",
+    )
+    parser.add_argument(
+        "--output-format",
+        choices=["pretty", "json"],
+        default="pretty",
+        help="The output format.",
     )
     _add_shared_arguments(parser)
 

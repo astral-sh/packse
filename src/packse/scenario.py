@@ -3,6 +3,7 @@ import os
 from pathlib import Path
 
 import msgspec
+import json
 
 from packse.template import load_template_config
 
@@ -109,6 +110,9 @@ class Scenario(msgspec.Struct):
             hasher.update(name.encode())
             hasher.update(package.hash().encode())
         return hasher.hexdigest()
+
+    def dict(self) -> dict:
+        return json.loads(msgspec.json.encode(self))
 
 
 def load_scenario(target: Path) -> Scenario:

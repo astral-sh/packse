@@ -3,6 +3,8 @@ List all scenarios.
 """
 import logging
 from pathlib import Path
+from typing import Literal, cast
+import json
 
 from packse.error import FileNotFound, InvalidScenario
 from packse.scenario import (
@@ -19,8 +21,9 @@ def list(
     no_versions: bool = False,
     skip_invalid: bool = False,
     no_sources: bool = False,
+    format: Literal["json", "pretty"] = "pretty",
 ):
-    scenarios: dict[Path, list[Scenario]] = {}
+    scenarios_by_path: dict[Path, list[Scenario]] = {}
 
     # Validate and collect all targets first
     for target in sorted(targets):
@@ -29,24 +32,36 @@ def list(
 
         try:
             logger.debug("Loading %s", target)
-            scenarios[target] = load_scenarios(target)
+            scenarios_by_path[target] = load_scenarios(target)
         except Exception as exc:
             if not skip_invalid:
                 raise InvalidScenario(target, reason=str(exc)) from exc
 
     # Then list each one
-    for source, scenarios in scenarios.items():
+    result = {"scenarios": []}
+    for source, scenarios in scenarios_by_path.items():
         prefix = "" if no_sources else " " * 4
-        if not no_sources:
+        if not no_sources and format == "pretty":
             print(to_display_path(source))
 
         for scenario in scenarios:
+            scenario = cast(Scenario, scenario)
+
+            raw = scenario.dict()
+            raw["source"] = str(source)
+            result["scenarios"].append(raw)
+            result["prefix"] = scenario_prefix(scenario)
+
             if no_versions:
                 name = scenario.name
             else:
                 name = scenario_prefix(scenario)
 
-            print(prefix + name)
+            if format == "pretty":
+                print(prefix + name)
+
+    if format == "json":
+        print(json.dumps(result, indent=2))
 
 
 def to_display_path(path: Path | str, relative_to: Path | str | None = None) -> str:
