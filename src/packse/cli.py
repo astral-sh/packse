@@ -70,7 +70,7 @@ def _call_build(args):
 
 
 def _call_view(args):
-    view(args.targets)
+    view(args.targets, args.name)
 
 
 def _call_serve(args):
@@ -192,7 +192,13 @@ def _add_view_parser(subparsers):
         "targets",
         type=Path,
         nargs="+",
-        help="The scenario to view",
+        help="The scenario file to view",
+    )
+    parser.add_argument(
+        "--name",
+        type=str,
+        default=None,
+        help="The scenario name to view",
     )
 
     _add_shared_arguments(parser)
