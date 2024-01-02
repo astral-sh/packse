@@ -19,7 +19,7 @@
     },
     {
         "name": "requires-transitive-incompatible-with-root-version",
-        "description": "The user requires package `a` and `b` but `a` requires a different version of `b`",
+        "description": "The user requires packages `a` and `b` but `a` requires a different version of `b`",
         "root": {
             "requires": [
                 "a",
