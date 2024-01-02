@@ -111,10 +111,18 @@ def _call_list(args):
     skip_invalid = args.skip_invalid
     if not args.targets:
         skip_invalid = True
-        args.targets = Path.cwd().glob("**/*.json")
+        targets = Path.cwd().glob("**/*.json")
+    else:
+        targets = []
+        for target in args.targets:
+            # Expand any directories to json files within
+            if target.is_dir():
+                targets.extend(target.glob("**/*.json"))
+            else:
+                targets.append(target)
 
     list(
-        args.targets,
+        targets,
         args.no_versions,
         skip_invalid,
         args.no_sources,

@@ -49,8 +49,8 @@ def list(
 
             raw = scenario.dict()
             raw["source"] = str(source)
+            raw["prefix"] = scenario_prefix(scenario)
             result["scenarios"].append(raw)
-            result["prefix"] = scenario_prefix(scenario)
 
             if no_versions:
                 name = scenario.name

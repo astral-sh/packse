@@ -8,15 +8,9 @@ import json
 from packse.template import load_template_config
 
 
-class PackageName(str):
-    pass
-
-
-class PackageVersion(str):
-    pass
-
-
-VersionSpec = str
+type PackageName = str
+type PackageVersion = str
+type VersionSpec = str
 
 
 class PackageMetadata(msgspec.Struct):
