@@ -42,7 +42,7 @@ jobs:
 
       - name: Set up Poetry
         run: |
-          pip install poetry==${{ env.POETRY_VERSION }}
+          pipx install poetry==${{ env.POETRY_VERSION }}
 
       - name: Install zsh
         run: |
