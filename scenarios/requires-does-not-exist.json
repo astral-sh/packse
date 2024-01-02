@@ -44,7 +44,7 @@
     },
     {
         "name": "requires-less-version-does-not-exist",
-        "description": "The user requires a version of `a`  less than `1.0.0` but only larger versions exist",
+        "description": "The user requires a version of `a` less than `1.0.0` but only larger versions exist",
         "root": {
             "requires": [
                 "a<2.0.0"
@@ -62,7 +62,7 @@
     },
     {
         "name": "transitive-requires-package-does-not-exist",
-        "description": "The user requires package `a` but `a` package `b` which does not exist",
+        "description": "The user requires package `a` but `a` requires package `b` which does not exist",
         "root": {
             "requires": [
                 "a"
