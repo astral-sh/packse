@@ -1,10 +1,10 @@
 """
 List all scenarios.
 """
+import json
 import logging
 from pathlib import Path
 from typing import Literal, cast
-import json
 
 from packse.error import FileNotFound, InvalidScenario
 from packse.scenario import (

@@ -1,12 +1,11 @@
 import hashlib
+import json
 import os
 from pathlib import Path
 
 import msgspec
-import json
 
 from packse.template import load_template_config
-
 
 type PackageName = str
 type PackageVersion = str
