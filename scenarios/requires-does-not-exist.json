@@ -30,7 +30,7 @@
         "description": "The user requires a version of `a` greater than `1.0.0` but only smaller or equal versions exist",
         "root": {
             "requires": [
-                "a>=1.0.0"
+                "a>1.0.0"
             ]
         },
         "packages": {
