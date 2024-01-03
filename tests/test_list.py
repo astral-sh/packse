@@ -46,3 +46,10 @@ def test_list_invalid_target_skip_invalid(snapshot, tmpcwd):
 def test_list_example(snapshot):
     target = __development_base_path__ / "scenarios" / "example.json"
     assert snapshot_command(["list", str(target)]) == snapshot
+
+
+def test_list_output_format(snapshot):
+    target = __development_base_path__ / "scenarios" / "example.json"
+    assert (
+        snapshot_command(["list", str(target), "--output-format", "json"]) == snapshot
+    )

@@ -119,13 +119,13 @@
   
       ''',
       'dist/example-5803604b/example_5803604b-0.0.0.tar.gz': 'md5:3f66f9c9f2e7d126fc11417ed1d7be1c',
-      'dist/example-5803604b/example_5803604b_a-1.0.0-py3-none-any.whl': 'md5:e0d3212094761f48e7a0acfc74b522af',
+      'dist/example-5803604b/example_5803604b_a-1.0.0-py3-none-any.whl': 'md5:4b4700654e73de004695cca56020f84d',
       'dist/example-5803604b/example_5803604b_a-1.0.0.tar.gz': 'md5:667676ba8f350e715ff9a7bcca154202',
-      'dist/example-5803604b/example_5803604b_b-1.0.0-py3-none-any.whl': 'md5:43630bcef79b4de9030ee4c5800d7861',
+      'dist/example-5803604b/example_5803604b_b-1.0.0-py3-none-any.whl': 'md5:850c2558f1e9d4c6dfbbca1a68abda1a',
       'dist/example-5803604b/example_5803604b_b-1.0.0.tar.gz': 'md5:d947be6ef69b26722e8f54a5eaaaa0e9',
-      'dist/example-5803604b/example_5803604b_b-2.0.0-py3-none-any.whl': 'md5:28e81dfb8106e0da2cc12ef6a6d986d5',
+      'dist/example-5803604b/example_5803604b_b-2.0.0-py3-none-any.whl': 'md5:5612ce500423b8efb8f2e4a3115f06e7',
       'dist/example-5803604b/example_5803604b_b-2.0.0.tar.gz': 'md5:b6602a08c699e1a3873266057666a310',
-      'dist/example-5803604b/example_5803604b_b-3.0.0-py3-none-any.whl': 'md5:ca4319acf2d0ce2b869cb917efe519c3',
+      'dist/example-5803604b/example_5803604b_b-3.0.0-py3-none-any.whl': 'md5:b4a2e8ef0e163babd838d1e3a1a8d7c4',
       'dist/example-5803604b/example_5803604b_b-3.0.0.tar.gz': 'md5:785b533567ba1d24bb21cedfd58aebe9',
       'tree': '''
         test_build_example0
@@ -330,13 +330,13 @@
   
       ''',
       'dist/example-e0012891/example_e0012891-0.0.0.tar.gz': 'md5:82e19984cf1035449d1ecbceeb1e8004',
-      'dist/example-e0012891/example_e0012891_a-1.0.0-py3-none-any.whl': 'md5:a65c0a8b7a223260ba5c69771c10cdb3',
+      'dist/example-e0012891/example_e0012891_a-1.0.0-py3-none-any.whl': 'md5:6cdf5d7f86f513a4b0ffabc6ebf5ca29',
       'dist/example-e0012891/example_e0012891_a-1.0.0.tar.gz': 'md5:025ab4a3e19c0cdd999131bb63789696',
-      'dist/example-e0012891/example_e0012891_b-1.0.0-py3-none-any.whl': 'md5:67b8fb525d2d2d4a26291e05eba39b6e',
+      'dist/example-e0012891/example_e0012891_b-1.0.0-py3-none-any.whl': 'md5:9a4b3a6d4bdb90b239ce2881d6ae4848',
       'dist/example-e0012891/example_e0012891_b-1.0.0.tar.gz': 'md5:b3a9e938d7f97c5db198bf92f1b18afb',
-      'dist/example-e0012891/example_e0012891_b-2.0.0-py3-none-any.whl': 'md5:56770ade8a7b8f25e57bf661c1b303b7',
+      'dist/example-e0012891/example_e0012891_b-2.0.0-py3-none-any.whl': 'md5:df19550f9048db3dfe3f3c22a5bb6778',
       'dist/example-e0012891/example_e0012891_b-2.0.0.tar.gz': 'md5:6a106ffdee177cc37403f25adde559b2',
-      'dist/example-e0012891/example_e0012891_b-3.0.0-py3-none-any.whl': 'md5:b1e077e3faad44fc0d40087a852e7d34',
+      'dist/example-e0012891/example_e0012891_b-3.0.0-py3-none-any.whl': 'md5:63bd3dd222f9f55538f3973fea85e85c',
       'dist/example-e0012891/example_e0012891_b-3.0.0.tar.gz': 'md5:6bb3dc7918670fb77310f375ec442f63',
       'tree': '''
         test_build_example_with_seed0

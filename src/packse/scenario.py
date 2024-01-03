@@ -1,4 +1,5 @@
 import hashlib
+import json
 import os
 from pathlib import Path
 
@@ -6,16 +7,9 @@ import msgspec
 
 from packse.template import load_template_config
 
-
-class PackageName(str):
-    pass
-
-
-class PackageVersion(str):
-    pass
-
-
-VersionSpec = str
+type PackageName = str
+type PackageVersion = str
+type VersionSpec = str
 
 
 class PackageMetadata(msgspec.Struct):
@@ -109,6 +103,9 @@ class Scenario(msgspec.Struct):
             hasher.update(name.encode())
             hasher.update(package.hash().encode())
         return hasher.hexdigest()
+
+    def dict(self) -> dict:
+        return json.loads(msgspec.json.encode(self))
 
 
 def load_scenario(target: Path) -> Scenario:

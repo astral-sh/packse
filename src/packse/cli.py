@@ -111,9 +111,23 @@ def _call_list(args):
     skip_invalid = args.skip_invalid
     if not args.targets:
         skip_invalid = True
-        args.targets = Path.cwd().glob("**/*.json")
+        targets = Path.cwd().glob("**/*.json")
+    else:
+        targets = []
+        for target in args.targets:
+            # Expand any directories to json files within
+            if target.is_dir():
+                targets.extend(target.glob("**/*.json"))
+            else:
+                targets.append(target)
 
-    list(args.targets, args.no_versions, skip_invalid, args.no_sources)
+    list(
+        targets,
+        args.no_versions,
+        skip_invalid,
+        args.no_sources,
+        args.output_format,
+    )
 
 
 def _root_parser():
@@ -303,6 +317,12 @@ def _add_list_parser(subparsers):
         "--no-sources",
         action="store_true",
         help="Do not show the source file for each scenario.",
+    )
+    parser.add_argument(
+        "--output-format",
+        choices=["pretty", "json"],
+        default="pretty",
+        help="The output format.",
     )
     _add_shared_arguments(parser)
 
