@@ -4,7 +4,7 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      usage: packse [-h] [-v] [-q] {build,view,publish,list,serve,index} ...
+      usage: packse [-h] [-v] [-q] {build,view,publish,list,inspect,serve,index} ...
       
       Utilities for working example packaging scenarios
       
@@ -14,11 +14,12 @@
         -q, --quiet           Disable logging
       
       commands:
-        {build,view,publish,list,serve,index}
+        {build,view,publish,list,inspect,serve,index}
           build               Build packages for a scenario
           view                View a scenario
           publish             Publish packages for a scenario
-          list                List scenarios
+          list                List scenarios at the given paths
+          inspect             Inspect scenarios at the given paths
           serve               Serve scenarios on a temporary local package index
           index               Run a local package index
   
@@ -30,7 +31,7 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      usage: packse [-h] [-v] [-q] {build,view,publish,list,serve,index} ...
+      usage: packse [-h] [-v] [-q] {build,view,publish,list,inspect,serve,index} ...
       
       Utilities for working example packaging scenarios
       
@@ -40,11 +41,12 @@
         -q, --quiet           Disable logging
       
       commands:
-        {build,view,publish,list,serve,index}
+        {build,view,publish,list,inspect,serve,index}
           build               Build packages for a scenario
           view                View a scenario
           publish             Publish packages for a scenario
-          list                List scenarios
+          list                List scenarios at the given paths
+          inspect             Inspect scenarios at the given paths
           serve               Serve scenarios on a temporary local package index
           index               Run a local package index
   
@@ -56,7 +58,7 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      usage: packse [-h] [-v] [-q] {build,view,publish,list,serve,index} ...
+      usage: packse [-h] [-v] [-q] {build,view,publish,list,inspect,serve,index} ...
       
       Utilities for working example packaging scenarios
       
@@ -66,11 +68,12 @@
         -q, --quiet           Disable logging
       
       commands:
-        {build,view,publish,list,serve,index}
+        {build,view,publish,list,inspect,serve,index}
           build               Build packages for a scenario
           view                View a scenario
           publish             Publish packages for a scenario
-          list                List scenarios
+          list                List scenarios at the given paths
+          inspect             Inspect scenarios at the given paths
           serve               Serve scenarios on a temporary local package index
           index               Run a local package index
   

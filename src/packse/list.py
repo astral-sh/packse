@@ -1,10 +1,9 @@
 """
 List all scenarios.
 """
-import json
 import logging
 from pathlib import Path
-from typing import Literal, cast
+from typing import cast
 
 from packse.error import FileNotFound, InvalidScenario
 from packse.scenario import (
@@ -21,7 +20,6 @@ def list(
     no_versions: bool = False,
     skip_invalid: bool = False,
     no_sources: bool = False,
-    format: Literal["json", "pretty"] = "pretty",
 ):
     scenarios_by_path: dict[Path, list[Scenario]] = {}
 
@@ -38,30 +36,20 @@ def list(
                 raise InvalidScenario(target, reason=str(exc)) from exc
 
     # Then list each one
-    result = {"scenarios": []}
     for source, scenarios in scenarios_by_path.items():
         prefix = "" if no_sources else " " * 4
-        if not no_sources and format == "pretty":
+        if not no_sources:
             print(to_display_path(source))
 
         for scenario in scenarios:
             scenario = cast(Scenario, scenario)
-
-            raw = scenario.dict()
-            raw["source"] = str(source)
-            raw["prefix"] = scenario_prefix(scenario)
-            result["scenarios"].append(raw)
 
             if no_versions:
                 name = scenario.name
             else:
                 name = scenario_prefix(scenario)
 
-            if format == "pretty":
-                print(prefix + name)
-
-    if format == "json":
-        print(json.dumps(result, indent=2))
+            print(prefix + name)
 
 
 def to_display_path(path: Path | str, relative_to: Path | str | None = None) -> str:
