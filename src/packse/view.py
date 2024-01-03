@@ -61,7 +61,7 @@ def view_scenario(scenario: Scenario):
     print(dependency_tree(scenario))
 
 
-def dependency_tree(scenario: Scenario):
+def dependency_tree(scenario: Scenario) -> str:
     """
     Generate a dependency tree for a scenario
     """

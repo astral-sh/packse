@@ -13,6 +13,7 @@ from packse.error import (
     UserError,
 )
 from packse.index import index_down, index_up
+from packse.inspect import inspect
 from packse.list import list
 from packse.publish import publish
 from packse.serve import serve
@@ -126,8 +127,24 @@ def _call_list(args):
         args.no_versions,
         skip_invalid,
         args.no_sources,
-        args.output_format,
     )
+
+
+def _call_inspect(args):
+    skip_invalid = args.skip_invalid
+    if not args.targets:
+        skip_invalid = True
+        targets = Path.cwd().glob("**/*.json")
+    else:
+        targets = []
+        for target in args.targets:
+            # Expand any directories to json files within
+            if target.is_dir():
+                targets.extend(target.glob("**/*.json"))
+            else:
+                targets.append(target)
+
+    inspect(targets, skip_invalid)
 
 
 def _root_parser():
@@ -295,7 +312,7 @@ def _add_index_parser(subparsers):
 
 
 def _add_list_parser(subparsers):
-    parser = subparsers.add_parser("list", help="List scenarios")
+    parser = subparsers.add_parser("list", help="List scenarios at the given paths")
     parser.set_defaults(call=_call_list)
     parser.add_argument(
         "targets",
@@ -318,11 +335,24 @@ def _add_list_parser(subparsers):
         action="store_true",
         help="Do not show the source file for each scenario.",
     )
+    _add_shared_arguments(parser)
+
+
+def _add_inspect_parser(subparsers):
+    parser = subparsers.add_parser(
+        "inspect", help="Inspect scenarios at the given paths"
+    )
+    parser.set_defaults(call=_call_inspect)
     parser.add_argument(
-        "--output-format",
-        choices=["pretty", "json"],
-        default="pretty",
-        help="The output format.",
+        "targets",
+        type=Path,
+        nargs="*",
+        help="The scenario files to load",
+    )
+    parser.add_argument(
+        "--skip-invalid",
+        action="store_true",
+        help="Skip invalid scenario files instead of failing.",
     )
     _add_shared_arguments(parser)
 
@@ -350,6 +380,7 @@ def get_parser() -> argparse.ArgumentParser:
     _add_view_parser(subparsers)
     _add_publish_parser(subparsers)
     _add_list_parser(subparsers)
+    _add_inspect_parser(subparsers)
     _add_serve_parser(subparsers)
     _add_index_parser(subparsers)
 
