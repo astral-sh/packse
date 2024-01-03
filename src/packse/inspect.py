@@ -41,7 +41,7 @@ def inspect(targets: list[Path], skip_invalid: bool = False):
             raw = scenario.dict()
             raw["source"] = str(source)
             raw["prefix"] = scenario_prefix(scenario)
-            raw["tree"] = dependency_tree(scenario)
+            raw["tree"] = dependency_tree(scenario).splitlines()
             result["scenarios"].append(raw)
 
     print(json.dumps(result, indent=2))
