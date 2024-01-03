@@ -99,6 +99,7 @@ class Scenario(msgspec.Struct):
         hasher = hashlib.new("md5", usedforsecurity=False)
         hasher.update(self.name.encode())
         hasher.update(self.template.encode())
+        hasher.update(self.root.hash().encode())
         for name, package in self.packages.items():
             hasher.update(name.encode())
             hasher.update(package.hash().encode())
