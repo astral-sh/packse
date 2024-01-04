@@ -48,6 +48,57 @@ Each `packse` command supports reading multiple scenario files. For example, wit
 packse list scenarios/example.json scenarios/requires-does-not-exist.json
 ```
 
+### Viewing scenarios
+
+The dependency tree of a scenario can be previewed using the `view` command:
+
+```
+$ packse view scenarios/example.json
+example-89cac9f1
+├── root
+│   └── requires a
+│       └── satisfied by a-1.0.0
+├── a
+│   └── a-1.0.0
+│       └── requires b>1.0.0
+│           ├── satisfied by b-2.0.0
+│           └── satisfied by b-3.0.0
+└── b
+    ├── b-1.0.0
+    ├── b-2.0.0
+    │   └── requires c
+    │       └── unsatisfied: no versions for package
+    └── b-3.0.0
+```
+
+Note the `view` command will view all scenarios in a file by default. A single scenario can be viewed by providing
+the `--name` option:
+
+```
+$ packse view scenarios/example.json --name example
+example
+
+This is an example scenario, in which the user depends on a single package `a` which requires `b`
+
+example-89cac9f1
+├── root
+│   └── requires a
+│       └── satisfied by a-1.0.0
+├── a
+│   └── a-1.0.0
+│       └── requires b>1.0.0
+│           ├── satisfied by b-2.0.0
+│           └── satisfied by b-3.0.0
+└── b
+    ├── b-1.0.0
+    ├── b-2.0.0
+    │   └── requires c
+    │       └── unsatisfied: no versions for package
+    └── b-3.0.0
+```
+
+Notice, when a specific scenario is specified, there is more information displayed.
+
 ### Building scenarios
 
 A scenario can be used to generate packages and build distributions:
@@ -65,19 +116,6 @@ identifier.
 
 The `PACKSE_VERSION_SEED` environment variable can be used to override the seed used to generate the unique
 identifier, allowing versions to differ based on information outside of packse.
-
-### Viewing scenarios
-
-The dependency tree of a scenario can be previewed using the `view` command:
-
-```
-$ packse view scenarios/example.json
-example-cd797223
-└── a-1.0.0
-    └── requires b>=1.0.0
-        └── satisfied by b-1.0.0
-└── b-1.0.0
-```
 
 ### Publishing scenarios
 
@@ -144,8 +182,13 @@ For example, with `pip`:
 pip install -i https://test.pypi.org/simple/ example-cd797223
 ```
 
+### Exporting scenarios
+
+Scenario information can be exported with the `packse inspect`. This creates a JSON representation of the scenarios
+with additional generated information such as the root package name and the tree displayed during `packse view`.
+
 ### Writing new scenarios
 
 Scenario files may contain one or more scenarios written in JSON.
 
-**Documentation not yet written**
+**Documentation not yet written; the scenario schema is under development.**
