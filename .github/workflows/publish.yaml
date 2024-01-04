@@ -67,6 +67,8 @@ jobs:
           echo "conclusion=$CONCLUSION"
           echo "conclusion=$CONCLUSION" >> $GITHUB_OUTPUT
 
+          # Implementation based on https://github.com/MercymeIlya/last-workflow-status
+
       - name: Set up Poetry
         if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         run: |
