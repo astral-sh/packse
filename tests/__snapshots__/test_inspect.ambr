@@ -56,25 +56,34 @@
                 "a"
               ]
             },
+            "environment": {
+              "python": "3.7"
+            },
             "template": "simple",
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`",
             "source": "[PWD]/scenarios/example.json",
-            "prefix": "example-89cac9f1",
+            "prefix": "example-4287e2f2",
             "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
               "\u251c\u2500\u2500 root",
               "\u2502   \u2514\u2500\u2500 requires a",
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u2514\u2500\u2500 requires b>1.0.0",
-              "\u2502           \u251c\u2500\u2500 satisfied by b-2.0.0",
-              "\u2502           \u2514\u2500\u2500 satisfied by b-3.0.0",
+              "\u2502       \u251c\u2500\u2500 requires b>1.0.0",
+              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by b-3.0.0",
+              "\u2502       \u2514\u2500\u2500 requires python>=3.7",
               "\u2514\u2500\u2500 b",
               "    \u251c\u2500\u2500 b-1.0.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
               "    \u251c\u2500\u2500 b-2.0.0",
-              "    \u2502   \u2514\u2500\u2500 requires c",
+              "    \u2502   \u251c\u2500\u2500 requires c",
               "    \u2502       \u2514\u2500\u2500 unsatisfied: no versions for package",
-              "    \u2514\u2500\u2500 b-3.0.0"
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 b-3.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.7"
             ]
           }
         ]
@@ -150,25 +159,34 @@
                 "a"
               ]
             },
+            "environment": {
+              "python": "3.7"
+            },
             "template": "simple",
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`",
             "source": "[PROJECT_ROOT]/scenarios/example.json",
-            "prefix": "example-89cac9f1",
+            "prefix": "example-4287e2f2",
             "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
               "\u251c\u2500\u2500 root",
               "\u2502   \u2514\u2500\u2500 requires a",
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u2514\u2500\u2500 requires b>1.0.0",
-              "\u2502           \u251c\u2500\u2500 satisfied by b-2.0.0",
-              "\u2502           \u2514\u2500\u2500 satisfied by b-3.0.0",
+              "\u2502       \u251c\u2500\u2500 requires b>1.0.0",
+              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by b-3.0.0",
+              "\u2502       \u2514\u2500\u2500 requires python>=3.7",
               "\u2514\u2500\u2500 b",
               "    \u251c\u2500\u2500 b-1.0.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
               "    \u251c\u2500\u2500 b-2.0.0",
-              "    \u2502   \u2514\u2500\u2500 requires c",
+              "    \u2502   \u251c\u2500\u2500 requires c",
               "    \u2502       \u2514\u2500\u2500 unsatisfied: no versions for package",
-              "    \u2514\u2500\u2500 b-3.0.0"
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 b-3.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.7"
             ]
           }
         ]
@@ -234,25 +252,34 @@
                 "a"
               ]
             },
+            "environment": {
+              "python": "3.7"
+            },
             "template": "simple",
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`",
             "source": "[PWD]/scenarios/example.json",
-            "prefix": "example-89cac9f1",
+            "prefix": "example-4287e2f2",
             "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
               "\u251c\u2500\u2500 root",
               "\u2502   \u2514\u2500\u2500 requires a",
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u2514\u2500\u2500 requires b>1.0.0",
-              "\u2502           \u251c\u2500\u2500 satisfied by b-2.0.0",
-              "\u2502           \u2514\u2500\u2500 satisfied by b-3.0.0",
+              "\u2502       \u251c\u2500\u2500 requires b>1.0.0",
+              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by b-3.0.0",
+              "\u2502       \u2514\u2500\u2500 requires python>=3.7",
               "\u2514\u2500\u2500 b",
               "    \u251c\u2500\u2500 b-1.0.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
               "    \u251c\u2500\u2500 b-2.0.0",
-              "    \u2502   \u2514\u2500\u2500 requires c",
+              "    \u2502   \u251c\u2500\u2500 requires c",
               "    \u2502       \u2514\u2500\u2500 unsatisfied: no versions for package",
-              "    \u2514\u2500\u2500 b-3.0.0"
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 b-3.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.7"
             ]
           },
           {
@@ -264,11 +291,16 @@
                 "a"
               ]
             },
+            "environment": {
+              "python": "3.7"
+            },
             "template": "simple",
             "description": "The user requires any version of package `a` which does not exist.",
             "source": "[PWD]/scenarios/requires-does-not-exist.json",
-            "prefix": "requires-package-does-not-exist-59108293",
+            "prefix": "requires-package-does-not-exist-bc7df012",
             "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
               "\u2514\u2500\u2500 root",
               "    \u2514\u2500\u2500 requires a",
               "        \u2514\u2500\u2500 unsatisfied: no versions for package"
@@ -295,16 +327,22 @@
                 "a==2.0.0"
               ]
             },
+            "environment": {
+              "python": "3.7"
+            },
             "template": "simple",
             "description": "The user requires an exact version of package `a` but only other versions exist",
             "source": "[PWD]/scenarios/requires-does-not-exist.json",
-            "prefix": "requires-exact-version-does-not-exist-bc5f5f6d",
+            "prefix": "requires-exact-version-does-not-exist-c275ce96",
             "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
               "\u251c\u2500\u2500 root",
               "\u2502   \u2514\u2500\u2500 requires a==2.0.0",
               "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
               "\u2514\u2500\u2500 a",
-              "    \u2514\u2500\u2500 a-1.0.0"
+              "    \u2514\u2500\u2500 a-1.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.7"
             ]
           },
           {
@@ -335,17 +373,24 @@
                 "a>1.0.0"
               ]
             },
+            "environment": {
+              "python": "3.7"
+            },
             "template": "simple",
             "description": "The user requires a version of `a` greater than `1.0.0` but only smaller or equal versions exist",
             "source": "[PWD]/scenarios/requires-does-not-exist.json",
-            "prefix": "requires-greater-version-does-not-exist-670431f9",
+            "prefix": "requires-greater-version-does-not-exist-d34821ba",
             "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
               "\u251c\u2500\u2500 root",
               "\u2502   \u2514\u2500\u2500 requires a>1.0.0",
               "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
               "\u2514\u2500\u2500 a",
               "    \u251c\u2500\u2500 a-0.1.0",
-              "    \u2514\u2500\u2500 a-1.0.0"
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 a-1.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.7"
             ]
           },
           {
@@ -383,18 +428,26 @@
                 "a<2.0.0"
               ]
             },
+            "environment": {
+              "python": "3.7"
+            },
             "template": "simple",
             "description": "The user requires a version of `a` less than `1.0.0` but only larger versions exist",
             "source": "[PWD]/scenarios/requires-does-not-exist.json",
-            "prefix": "requires-less-version-does-not-exist-9a75991b",
+            "prefix": "requires-less-version-does-not-exist-4088ec1b",
             "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
               "\u251c\u2500\u2500 root",
               "\u2502   \u2514\u2500\u2500 requires a<2.0.0",
               "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
               "\u2514\u2500\u2500 a",
               "    \u251c\u2500\u2500 a-2.0.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
               "    \u251c\u2500\u2500 a-3.0.0",
-              "    \u2514\u2500\u2500 a-4.0.0"
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 a-4.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.7"
             ]
           },
           {
@@ -420,18 +473,24 @@
                 "a"
               ]
             },
+            "environment": {
+              "python": "3.7"
+            },
             "template": "simple",
             "description": "The user requires package `a` but `a` requires package `b` which does not exist",
             "source": "[PWD]/scenarios/requires-does-not-exist.json",
-            "prefix": "transitive-requires-package-does-not-exist-ca79eaa2",
+            "prefix": "transitive-requires-package-does-not-exist-63ca5a54",
             "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
               "\u251c\u2500\u2500 root",
               "\u2502   \u2514\u2500\u2500 requires a",
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
               "\u2514\u2500\u2500 a",
               "    \u2514\u2500\u2500 a-1.0.0",
-              "        \u2514\u2500\u2500 requires b",
-              "            \u2514\u2500\u2500 unsatisfied: no versions for package"
+              "        \u251c\u2500\u2500 requires b",
+              "            \u2514\u2500\u2500 unsatisfied: no versions for package",
+              "        \u2514\u2500\u2500 requires python>=3.7"
             ]
           },
           {
@@ -463,11 +522,16 @@
                 "a==2.0.0"
               ]
             },
+            "environment": {
+              "python": "3.7"
+            },
             "template": "simple",
             "description": "The user requires two incompatible, existing versions of package `a`",
             "source": "[PWD]/scenarios/requires-incompatible-versions.json",
-            "prefix": "requires-direct-incompatible-versions-350bd4b0",
+            "prefix": "requires-direct-incompatible-versions-1432ee4c",
             "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
               "\u251c\u2500\u2500 root",
               "\u2502   \u251c\u2500\u2500 requires a==1.0.0",
               "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-1.0.0",
@@ -475,7 +539,9 @@
               "\u2502       \u2514\u2500\u2500 satisfied by a-2.0.0",
               "\u2514\u2500\u2500 a",
               "    \u251c\u2500\u2500 a-1.0.0",
-              "    \u2514\u2500\u2500 a-2.0.0"
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 a-2.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.7"
             ]
           },
           {
@@ -520,11 +586,16 @@
                 "b==1.0.0"
               ]
             },
+            "environment": {
+              "python": "3.7"
+            },
             "template": "simple",
             "description": "The user requires packages `a` and `b` but `a` requires a different version of `b`",
             "source": "[PWD]/scenarios/requires-incompatible-versions.json",
-            "prefix": "requires-transitive-incompatible-with-root-version-3240dab1",
+            "prefix": "requires-transitive-incompatible-with-root-version-b3c83bbd",
             "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
               "\u251c\u2500\u2500 root",
               "\u2502   \u251c\u2500\u2500 requires a",
               "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-1.0.0",
@@ -532,11 +603,14 @@
               "\u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u2514\u2500\u2500 requires b==2.0.0",
-              "\u2502           \u2514\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502       \u251c\u2500\u2500 requires b==2.0.0",
+              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502       \u2514\u2500\u2500 requires python>=3.7",
               "\u2514\u2500\u2500 b",
               "    \u251c\u2500\u2500 b-1.0.0",
-              "    \u2514\u2500\u2500 b-2.0.0"
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 b-2.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.7"
             ]
           },
           {
@@ -594,11 +668,16 @@
                 "b"
               ]
             },
+            "environment": {
+              "python": "3.7"
+            },
             "template": "simple",
             "description": "The user requires package `a` and `b`; `a` and `b` require different versions of `c`",
             "source": "[PWD]/scenarios/requires-incompatible-versions.json",
-            "prefix": "requires-transitive-incompatible-with-transitive-8329cfc0",
+            "prefix": "requires-transitive-incompatible-with-transitive-a35362d1",
             "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
               "\u251c\u2500\u2500 root",
               "\u2502   \u251c\u2500\u2500 requires a",
               "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-1.0.0",
@@ -606,15 +685,411 @@
               "\u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u2514\u2500\u2500 requires c==1.0.0",
-              "\u2502           \u2514\u2500\u2500 satisfied by c-1.0.0",
+              "\u2502       \u251c\u2500\u2500 requires c==1.0.0",
+              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by c-1.0.0",
+              "\u2502       \u2514\u2500\u2500 requires python>=3.7",
               "\u251c\u2500\u2500 b",
               "\u2502   \u2514\u2500\u2500 b-1.0.0",
-              "\u2502       \u2514\u2500\u2500 requires c==2.0.0",
-              "\u2502           \u2514\u2500\u2500 satisfied by c-2.0.0",
+              "\u2502       \u251c\u2500\u2500 requires c==2.0.0",
+              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by c-2.0.0",
+              "\u2502       \u2514\u2500\u2500 requires python>=3.7",
               "\u2514\u2500\u2500 c",
               "    \u251c\u2500\u2500 c-1.0.0",
-              "    \u2514\u2500\u2500 c-2.0.0"
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 c-2.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.7"
+            ]
+          },
+          {
+            "name": "requires-python-version-does-not-exist",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=4.0",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a==1.0.0"
+              ]
+            },
+            "environment": {
+              "python": "3.7"
+            },
+            "template": "simple",
+            "description": "The user requires a package which requires a Python version that does not exist",
+            "source": "[PWD]/scenarios/requires-python.json",
+            "prefix": "requires-python-version-does-not-exist-d1fc625b",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a==1.0.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0",
+              "        \u2514\u2500\u2500 requires python>=4.0 (incompatible with environment)"
+            ]
+          },
+          {
+            "name": "requires-python-version-less-than-current",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": "<=3.8",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a==1.0.0"
+              ]
+            },
+            "environment": {
+              "python": "3.9"
+            },
+            "template": "simple",
+            "description": "The user requires a package which requires a Python version less than the current version",
+            "source": "[PWD]/scenarios/requires-python.json",
+            "prefix": "requires-python-version-less-than-current-48bada28",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.9",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a==1.0.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0",
+              "        \u2514\u2500\u2500 requires python<=3.8 (incompatible with environment)"
+            ]
+          },
+          {
+            "name": "requires-python-version-greater-than-current",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.10",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a==1.0.0"
+              ]
+            },
+            "environment": {
+              "python": "3.9"
+            },
+            "template": "simple",
+            "description": "The user requires a package which requires a Python version greater than the current version",
+            "source": "[PWD]/scenarios/requires-python.json",
+            "prefix": "requires-python-version-greater-than-current-00f79f44",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.9",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a==1.0.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)"
+            ]
+          },
+          {
+            "name": "requires-python-version-greater-than-current-many",
+            "packages": {
+              "a": {
+                "versions": {
+                  "2.0.0": {
+                    "requires_python": ">=3.10",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.1.0": {
+                    "requires_python": ">=3.10",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.2.0": {
+                    "requires_python": ">=3.10",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.3.0": {
+                    "requires_python": ">=3.10",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.4.0": {
+                    "requires_python": ">=3.10",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.5.0": {
+                    "requires_python": ">=3.10",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "3.0.0": {
+                    "requires_python": ">=3.11",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "3.1.0": {
+                    "requires_python": ">=3.11",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "3.2.0": {
+                    "requires_python": ">=3.11",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "3.3.0": {
+                    "requires_python": ">=3.11",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "3.4.0": {
+                    "requires_python": ">=3.11",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "3.5.0": {
+                    "requires_python": ">=3.11",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a==1.0.0"
+              ]
+            },
+            "environment": {
+              "python": "3.9"
+            },
+            "template": "simple",
+            "description": "The user requires a package which has many versions which all require a Python version greater than the current version",
+            "source": "[PWD]/scenarios/requires-python.json",
+            "prefix": "requires-python-version-greater-than-current-many-b33dc0cb",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.9",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a==1.0.0",
+              "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-2.0.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)",
+              "    \u251c\u2500\u2500 a-2.1.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)",
+              "    \u251c\u2500\u2500 a-2.2.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)",
+              "    \u251c\u2500\u2500 a-2.3.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)",
+              "    \u251c\u2500\u2500 a-2.4.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)",
+              "    \u251c\u2500\u2500 a-2.5.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)",
+              "    \u251c\u2500\u2500 a-3.0.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.11 (incompatible with environment)",
+              "    \u251c\u2500\u2500 a-3.1.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.11 (incompatible with environment)",
+              "    \u251c\u2500\u2500 a-3.2.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.11 (incompatible with environment)",
+              "    \u251c\u2500\u2500 a-3.3.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.11 (incompatible with environment)",
+              "    \u251c\u2500\u2500 a-3.4.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.11 (incompatible with environment)",
+              "    \u2514\u2500\u2500 a-3.5.0",
+              "        \u2514\u2500\u2500 requires python>=3.11 (incompatible with environment)"
+            ]
+          },
+          {
+            "name": "requires-python-version-greater-than-current-backtrack",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.9",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0": {
+                    "requires_python": ">=3.10",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "3.0.0": {
+                    "requires_python": ">=3.11",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "4.0.0": {
+                    "requires_python": ">=3.12",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a"
+              ]
+            },
+            "environment": {
+              "python": "3.9"
+            },
+            "template": "simple",
+            "description": "The user requires a package where recent versions require a Python version greater than the current version, but an older version is compatible.",
+            "source": "[PWD]/scenarios/requires-python.json",
+            "prefix": "requires-python-version-greater-than-current-backtrack-d756219a",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.9",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-1.0.0",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-2.0.0",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-3.0.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-4.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-1.0.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.9",
+              "    \u251c\u2500\u2500 a-2.0.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)",
+              "    \u251c\u2500\u2500 a-3.0.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.11 (incompatible with environment)",
+              "    \u2514\u2500\u2500 a-4.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.12 (incompatible with environment)"
+            ]
+          },
+          {
+            "name": "requires-python-version-greater-than-current-excluded",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.9",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0": {
+                    "requires_python": ">=3.10",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "3.0.0": {
+                    "requires_python": ">=3.11",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "4.0.0": {
+                    "requires_python": ">=3.12",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a>=2.0.0"
+              ]
+            },
+            "environment": {
+              "python": "3.9"
+            },
+            "template": "simple",
+            "description": "The user requires a package where recent versions require a Python version greater than the current version, but an excluded older version is compatible.",
+            "source": "[PWD]/scenarios/requires-python.json",
+            "prefix": "requires-python-version-greater-than-current-excluded-7869d97e",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.9",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a>=2.0.0",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-2.0.0",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-3.0.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-4.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-1.0.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.9",
+              "    \u251c\u2500\u2500 a-2.0.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)",
+              "    \u251c\u2500\u2500 a-3.0.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.11 (incompatible with environment)",
+              "    \u2514\u2500\u2500 a-4.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.12 (incompatible with environment)"
             ]
           }
         ]

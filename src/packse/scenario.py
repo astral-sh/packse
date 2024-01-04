@@ -52,6 +52,18 @@ class RootPackageMetadata(msgspec.Struct):
         return hasher.hexdigest()
 
 
+class EnvironmentMetadata(msgspec.Struct):
+    python: str = "3.7"
+
+    def hash(self) -> str:
+        """
+        Return a hash of the contents
+        """
+        hasher = hashlib.new("md5", usedforsecurity=False)
+        hasher.update(self.python.encode())
+        return hasher.hexdigest()
+
+
 class Package(msgspec.Struct):
     versions: dict[PackageVersion, PackageMetadata]
 
@@ -82,6 +94,13 @@ class Scenario(msgspec.Struct):
     The root package of the scenario.
     """
 
+    environment: EnvironmentMetadata = msgspec.field(
+        default_factory=EnvironmentMetadata
+    )
+    """
+    Metadata about the installation environment.
+    """
+
     template: str = "simple"
     """
     The template to use for scenario packages.
@@ -100,6 +119,7 @@ class Scenario(msgspec.Struct):
         hasher.update(self.name.encode())
         hasher.update(self.template.encode())
         hasher.update(self.root.hash().encode())
+        hasher.update(self.environment.hash().encode())
         for name, package in self.packages.items():
             hasher.update(name.encode())
             hasher.update(package.hash().encode())

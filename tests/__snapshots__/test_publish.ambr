@@ -4,29 +4,29 @@
     'exit_code': 0,
     'stderr': '''
       Publishing 1 target to https://test.pypi.org/legacy/...
-      Publishing 'example-89cac9f1'...
-      Published 'example_89cac9f1-0.0.0.tar.gz'
-      Published 'example_89cac9f1_a-1.0.0-py3-none-any.whl'
-      Published 'example_89cac9f1_a-1.0.0.tar.gz'
-      Published 'example_89cac9f1_b-1.0.0-py3-none-any.whl'
-      Published 'example_89cac9f1_b-1.0.0.tar.gz'
-      Published 'example_89cac9f1_b-2.0.0-py3-none-any.whl'
-      Published 'example_89cac9f1_b-2.0.0.tar.gz'
-      Published 'example_89cac9f1_b-3.0.0-py3-none-any.whl'
-      Published 'example_89cac9f1_b-3.0.0.tar.gz'
+      Publishing 'example-4287e2f2'...
+      Published 'example_4287e2f2-0.0.0.tar.gz'
+      Published 'example_4287e2f2_a-1.0.0-py3-none-any.whl'
+      Published 'example_4287e2f2_a-1.0.0.tar.gz'
+      Published 'example_4287e2f2_b-1.0.0-py3-none-any.whl'
+      Published 'example_4287e2f2_b-1.0.0.tar.gz'
+      Published 'example_4287e2f2_b-2.0.0-py3-none-any.whl'
+      Published 'example_4287e2f2_b-2.0.0.tar.gz'
+      Published 'example_4287e2f2_b-3.0.0-py3-none-any.whl'
+      Published 'example_4287e2f2_b-3.0.0.tar.gz'
   
     ''',
     'stdout': '''
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_89cac9f1-0.0.0.tar.gz
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_89cac9f1_a-1.0.0-py3-none-any.whl
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_89cac9f1_a-1.0.0.tar.gz
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_89cac9f1_b-1.0.0-py3-none-any.whl
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_89cac9f1_b-1.0.0.tar.gz
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_89cac9f1_b-2.0.0-py3-none-any.whl
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_89cac9f1_b-2.0.0.tar.gz
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_89cac9f1_b-3.0.0-py3-none-any.whl
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_89cac9f1_b-3.0.0.tar.gz
-      example-89cac9f1
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_4287e2f2-0.0.0.tar.gz
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_4287e2f2_a-1.0.0-py3-none-any.whl
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_4287e2f2_a-1.0.0.tar.gz
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_4287e2f2_b-1.0.0-py3-none-any.whl
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_4287e2f2_b-1.0.0.tar.gz
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_4287e2f2_b-2.0.0-py3-none-any.whl
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_4287e2f2_b-2.0.0.tar.gz
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_4287e2f2_b-3.0.0-py3-none-any.whl
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_4287e2f2_b-3.0.0.tar.gz
+      example-4287e2f2
   
     ''',
   })
@@ -47,56 +47,56 @@
     'exit_code': 0,
     'stderr': '''
       Publishing 1 target to https://test.pypi.org/legacy/...
-      Publishing 'example-89cac9f1'...
-      Published example_89cac9f1-0.0.0.tar.gz in [TIME]:
+      Publishing 'example-4287e2f2'...
+      Published example_4287e2f2-0.0.0.tar.gz in [TIME]:
       
           <mock twine logs>
       
-      Published 'example_89cac9f1-0.0.0.tar.gz'
-      Published example_89cac9f1_a-1.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_4287e2f2-0.0.0.tar.gz'
+      Published example_4287e2f2_a-1.0.0-py3-none-any.whl in [TIME]:
       
           <mock twine logs>
       
-      Published 'example_89cac9f1_a-1.0.0-py3-none-any.whl'
-      Published example_89cac9f1_a-1.0.0.tar.gz in [TIME]:
+      Published 'example_4287e2f2_a-1.0.0-py3-none-any.whl'
+      Published example_4287e2f2_a-1.0.0.tar.gz in [TIME]:
       
           <mock twine logs>
       
-      Published 'example_89cac9f1_a-1.0.0.tar.gz'
-      Published example_89cac9f1_b-1.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_4287e2f2_a-1.0.0.tar.gz'
+      Published example_4287e2f2_b-1.0.0-py3-none-any.whl in [TIME]:
       
           <mock twine logs>
       
-      Published 'example_89cac9f1_b-1.0.0-py3-none-any.whl'
-      Published example_89cac9f1_b-1.0.0.tar.gz in [TIME]:
+      Published 'example_4287e2f2_b-1.0.0-py3-none-any.whl'
+      Published example_4287e2f2_b-1.0.0.tar.gz in [TIME]:
       
           <mock twine logs>
       
-      Published 'example_89cac9f1_b-1.0.0.tar.gz'
-      Published example_89cac9f1_b-2.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_4287e2f2_b-1.0.0.tar.gz'
+      Published example_4287e2f2_b-2.0.0-py3-none-any.whl in [TIME]:
       
           <mock twine logs>
       
-      Published 'example_89cac9f1_b-2.0.0-py3-none-any.whl'
-      Published example_89cac9f1_b-2.0.0.tar.gz in [TIME]:
+      Published 'example_4287e2f2_b-2.0.0-py3-none-any.whl'
+      Published example_4287e2f2_b-2.0.0.tar.gz in [TIME]:
       
           <mock twine logs>
       
-      Published 'example_89cac9f1_b-2.0.0.tar.gz'
-      Published example_89cac9f1_b-3.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_4287e2f2_b-2.0.0.tar.gz'
+      Published example_4287e2f2_b-3.0.0-py3-none-any.whl in [TIME]:
       
           <mock twine logs>
       
-      Published 'example_89cac9f1_b-3.0.0-py3-none-any.whl'
-      Published example_89cac9f1_b-3.0.0.tar.gz in [TIME]:
+      Published 'example_4287e2f2_b-3.0.0-py3-none-any.whl'
+      Published example_4287e2f2_b-3.0.0.tar.gz in [TIME]:
       
           <mock twine logs>
       
-      Published 'example_89cac9f1_b-3.0.0.tar.gz'
+      Published 'example_4287e2f2_b-3.0.0.tar.gz'
   
     ''',
     'stdout': '''
-      example-89cac9f1
+      example-4287e2f2
   
     ''',
   })
@@ -106,8 +106,8 @@
     'exit_code': 1,
     'stderr': '''
       Publishing 1 target to https://test.pypi.org/legacy/...
-      Publishing 'example-89cac9f1'...
-      Publish for 'example_89cac9f1-0.0.0.tar.gz' already exists.
+      Publishing 'example-4287e2f2'...
+      Publish for 'example_4287e2f2-0.0.0.tar.gz' already exists.
   
     ''',
     'stdout': '',
@@ -118,8 +118,8 @@
     'exit_code': 1,
     'stderr': '''
       Publishing 1 target to https://test.pypi.org/legacy/...
-      Publishing 'example-89cac9f1'...
-      Publish of 'example_89cac9f1-0.0.0.tar.gz' failed due to rate limits.
+      Publishing 'example-4287e2f2'...
+      Publish of 'example_4287e2f2-0.0.0.tar.gz' failed due to rate limits.
   
     ''',
     'stdout': '',
@@ -130,8 +130,8 @@
     'exit_code': 1,
     'stderr': '''
       Publishing 1 target to https://test.pypi.org/legacy/...
-      Publishing 'example-89cac9f1'...
-      Publishing example_89cac9f1-0.0.0.tar.gz with twine failed:
+      Publishing 'example-4287e2f2'...
+      Publishing example_4287e2f2-0.0.0.tar.gz with twine failed:
           <twine error message>
       .
   
@@ -144,56 +144,56 @@
     'exit_code': 0,
     'stderr': '''
       Publishing 1 target to https://test.pypi.org/legacy/...
-      Publishing 'example-89cac9f1'...
-      Published example_89cac9f1-0.0.0.tar.gz in [TIME]:
+      Publishing 'example-4287e2f2'...
+      Published example_4287e2f2-0.0.0.tar.gz in [TIME]:
       
           <twine happy message>
       
-      Published 'example_89cac9f1-0.0.0.tar.gz'
-      Published example_89cac9f1_a-1.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_4287e2f2-0.0.0.tar.gz'
+      Published example_4287e2f2_a-1.0.0-py3-none-any.whl in [TIME]:
       
           <twine happy message>
       
-      Published 'example_89cac9f1_a-1.0.0-py3-none-any.whl'
-      Published example_89cac9f1_a-1.0.0.tar.gz in [TIME]:
+      Published 'example_4287e2f2_a-1.0.0-py3-none-any.whl'
+      Published example_4287e2f2_a-1.0.0.tar.gz in [TIME]:
       
           <twine happy message>
       
-      Published 'example_89cac9f1_a-1.0.0.tar.gz'
-      Published example_89cac9f1_b-1.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_4287e2f2_a-1.0.0.tar.gz'
+      Published example_4287e2f2_b-1.0.0-py3-none-any.whl in [TIME]:
       
           <twine happy message>
       
-      Published 'example_89cac9f1_b-1.0.0-py3-none-any.whl'
-      Published example_89cac9f1_b-1.0.0.tar.gz in [TIME]:
+      Published 'example_4287e2f2_b-1.0.0-py3-none-any.whl'
+      Published example_4287e2f2_b-1.0.0.tar.gz in [TIME]:
       
           <twine happy message>
       
-      Published 'example_89cac9f1_b-1.0.0.tar.gz'
-      Published example_89cac9f1_b-2.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_4287e2f2_b-1.0.0.tar.gz'
+      Published example_4287e2f2_b-2.0.0-py3-none-any.whl in [TIME]:
       
           <twine happy message>
       
-      Published 'example_89cac9f1_b-2.0.0-py3-none-any.whl'
-      Published example_89cac9f1_b-2.0.0.tar.gz in [TIME]:
+      Published 'example_4287e2f2_b-2.0.0-py3-none-any.whl'
+      Published example_4287e2f2_b-2.0.0.tar.gz in [TIME]:
       
           <twine happy message>
       
-      Published 'example_89cac9f1_b-2.0.0.tar.gz'
-      Published example_89cac9f1_b-3.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_4287e2f2_b-2.0.0.tar.gz'
+      Published example_4287e2f2_b-3.0.0-py3-none-any.whl in [TIME]:
       
           <twine happy message>
       
-      Published 'example_89cac9f1_b-3.0.0-py3-none-any.whl'
-      Published example_89cac9f1_b-3.0.0.tar.gz in [TIME]:
+      Published 'example_4287e2f2_b-3.0.0-py3-none-any.whl'
+      Published example_4287e2f2_b-3.0.0.tar.gz in [TIME]:
       
           <twine happy message>
       
-      Published 'example_89cac9f1_b-3.0.0.tar.gz'
+      Published 'example_4287e2f2_b-3.0.0.tar.gz'
   
     ''',
     'stdout': '''
-      example-89cac9f1
+      example-4287e2f2
   
     ''',
   })
@@ -203,7 +203,7 @@
     'exit_code': 0,
     'stderr': '<not included>',
     'stdout': '''
-      example-89cac9f1
+      example-4287e2f2
   
     ''',
   })
