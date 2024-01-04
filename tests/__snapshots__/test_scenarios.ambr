@@ -1,4 +1,990 @@
 # serializer version: 1
+# name: test_build_all_scenarios[prereleases]
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'build/requires-package-multiple-prereleases-kinds-a37dce95/requires-package-multiple-prereleases-kinds-a37dce95-0.0.0/pyproject.toml': 'md5:367869d7bce2d790aaafc0f2c5533a64',
+      'build/requires-package-multiple-prereleases-kinds-a37dce95/requires-package-multiple-prereleases-kinds-a37dce95-0.0.0/src/requires_package_multiple_prereleases_kinds_a37dce95/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-package-multiple-prereleases-kinds-a37dce95/requires-package-multiple-prereleases-kinds-a37dce95-a-1.0.0a1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_multiple_prereleases_kinds_a37dce95_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_multiple_prereleases_kinds_a37dce95_a"]
+        
+        [project]
+        name = "requires-package-multiple-prereleases-kinds-a37dce95-a"
+        version = "1.0.0a1"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-multiple-prereleases-kinds-a37dce95/requires-package-multiple-prereleases-kinds-a37dce95-a-1.0.0a1/src/requires_package_multiple_prereleases_kinds_a37dce95_a/__init__.py': '''
+        __version__ = "1.0.0a1"
+  
+      ''',
+      'build/requires-package-multiple-prereleases-kinds-a37dce95/requires-package-multiple-prereleases-kinds-a37dce95-a-1.0.0b1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_multiple_prereleases_kinds_a37dce95_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_multiple_prereleases_kinds_a37dce95_a"]
+        
+        [project]
+        name = "requires-package-multiple-prereleases-kinds-a37dce95-a"
+        version = "1.0.0b1"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-multiple-prereleases-kinds-a37dce95/requires-package-multiple-prereleases-kinds-a37dce95-a-1.0.0b1/src/requires_package_multiple_prereleases_kinds_a37dce95_a/__init__.py': '''
+        __version__ = "1.0.0b1"
+  
+      ''',
+      'build/requires-package-multiple-prereleases-kinds-a37dce95/requires-package-multiple-prereleases-kinds-a37dce95-a-1.0.0rc1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_multiple_prereleases_kinds_a37dce95_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_multiple_prereleases_kinds_a37dce95_a"]
+        
+        [project]
+        name = "requires-package-multiple-prereleases-kinds-a37dce95-a"
+        version = "1.0.0rc1"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-multiple-prereleases-kinds-a37dce95/requires-package-multiple-prereleases-kinds-a37dce95-a-1.0.0rc1/src/requires_package_multiple_prereleases_kinds_a37dce95_a/__init__.py': '''
+        __version__ = "1.0.0rc1"
+  
+      ''',
+      'build/requires-package-multiple-prereleases-numbers-4c3655b7/requires-package-multiple-prereleases-numbers-4c3655b7-0.0.0/pyproject.toml': 'md5:d671aa38e45255a4c7662d67c43ea84d',
+      'build/requires-package-multiple-prereleases-numbers-4c3655b7/requires-package-multiple-prereleases-numbers-4c3655b7-0.0.0/src/requires_package_multiple_prereleases_numbers_4c3655b7/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-package-multiple-prereleases-numbers-4c3655b7/requires-package-multiple-prereleases-numbers-4c3655b7-a-1.0.0a1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_multiple_prereleases_numbers_4c3655b7_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_multiple_prereleases_numbers_4c3655b7_a"]
+        
+        [project]
+        name = "requires-package-multiple-prereleases-numbers-4c3655b7-a"
+        version = "1.0.0a1"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-multiple-prereleases-numbers-4c3655b7/requires-package-multiple-prereleases-numbers-4c3655b7-a-1.0.0a1/src/requires_package_multiple_prereleases_numbers_4c3655b7_a/__init__.py': '''
+        __version__ = "1.0.0a1"
+  
+      ''',
+      'build/requires-package-multiple-prereleases-numbers-4c3655b7/requires-package-multiple-prereleases-numbers-4c3655b7-a-1.0.0a2/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_multiple_prereleases_numbers_4c3655b7_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_multiple_prereleases_numbers_4c3655b7_a"]
+        
+        [project]
+        name = "requires-package-multiple-prereleases-numbers-4c3655b7-a"
+        version = "1.0.0a2"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-multiple-prereleases-numbers-4c3655b7/requires-package-multiple-prereleases-numbers-4c3655b7-a-1.0.0a2/src/requires_package_multiple_prereleases_numbers_4c3655b7_a/__init__.py': '''
+        __version__ = "1.0.0a2"
+  
+      ''',
+      'build/requires-package-multiple-prereleases-numbers-4c3655b7/requires-package-multiple-prereleases-numbers-4c3655b7-a-1.0.0a3/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_multiple_prereleases_numbers_4c3655b7_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_multiple_prereleases_numbers_4c3655b7_a"]
+        
+        [project]
+        name = "requires-package-multiple-prereleases-numbers-4c3655b7-a"
+        version = "1.0.0a3"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-multiple-prereleases-numbers-4c3655b7/requires-package-multiple-prereleases-numbers-4c3655b7-a-1.0.0a3/src/requires_package_multiple_prereleases_numbers_4c3655b7_a/__init__.py': '''
+        __version__ = "1.0.0a3"
+  
+      ''',
+      'build/requires-package-only-prereleases-11aca5f4/requires-package-only-prereleases-11aca5f4-0.0.0/pyproject.toml': 'md5:84c864b280aa56b9c7e7a83c24c89ede',
+      'build/requires-package-only-prereleases-11aca5f4/requires-package-only-prereleases-11aca5f4-0.0.0/src/requires_package_only_prereleases_11aca5f4/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-package-only-prereleases-11aca5f4/requires-package-only-prereleases-11aca5f4-a-1.0.0a1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_only_prereleases_11aca5f4_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_only_prereleases_11aca5f4_a"]
+        
+        [project]
+        name = "requires-package-only-prereleases-11aca5f4-a"
+        version = "1.0.0a1"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-only-prereleases-11aca5f4/requires-package-only-prereleases-11aca5f4-a-1.0.0a1/src/requires_package_only_prereleases_11aca5f4_a/__init__.py': '''
+        __version__ = "1.0.0a1"
+  
+      ''',
+      'build/requires-package-only-prereleases-in-range-bc409bd0/requires-package-only-prereleases-in-range-bc409bd0-0.0.0/pyproject.toml': 'md5:7c41e4b996d2bcaf6abd7e5fc28bf5bf',
+      'build/requires-package-only-prereleases-in-range-bc409bd0/requires-package-only-prereleases-in-range-bc409bd0-0.0.0/src/requires_package_only_prereleases_in_range_bc409bd0/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-package-only-prereleases-in-range-bc409bd0/requires-package-only-prereleases-in-range-bc409bd0-a-0.1.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_only_prereleases_in_range_bc409bd0_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_only_prereleases_in_range_bc409bd0_a"]
+        
+        [project]
+        name = "requires-package-only-prereleases-in-range-bc409bd0-a"
+        version = "0.1.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-only-prereleases-in-range-bc409bd0/requires-package-only-prereleases-in-range-bc409bd0-a-0.1.0/src/requires_package_only_prereleases_in_range_bc409bd0_a/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/requires-package-only-prereleases-in-range-bc409bd0/requires-package-only-prereleases-in-range-bc409bd0-a-1.0.0a1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_only_prereleases_in_range_bc409bd0_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_only_prereleases_in_range_bc409bd0_a"]
+        
+        [project]
+        name = "requires-package-only-prereleases-in-range-bc409bd0-a"
+        version = "1.0.0a1"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-only-prereleases-in-range-bc409bd0/requires-package-only-prereleases-in-range-bc409bd0-a-1.0.0a1/src/requires_package_only_prereleases_in_range_bc409bd0_a/__init__.py': '''
+        __version__ = "1.0.0a1"
+  
+      ''',
+      'build/requires-package-prerelease-and-final-any-c18a46ab/requires-package-prerelease-and-final-any-c18a46ab-0.0.0/pyproject.toml': 'md5:8268e2ed45ffe8fd0f4d2bcdbef52c80',
+      'build/requires-package-prerelease-and-final-any-c18a46ab/requires-package-prerelease-and-final-any-c18a46ab-0.0.0/src/requires_package_prerelease_and_final_any_c18a46ab/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-package-prerelease-and-final-any-c18a46ab/requires-package-prerelease-and-final-any-c18a46ab-a-0.1.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_prerelease_and_final_any_c18a46ab_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_prerelease_and_final_any_c18a46ab_a"]
+        
+        [project]
+        name = "requires-package-prerelease-and-final-any-c18a46ab-a"
+        version = "0.1.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-prerelease-and-final-any-c18a46ab/requires-package-prerelease-and-final-any-c18a46ab-a-0.1.0/src/requires_package_prerelease_and_final_any_c18a46ab_a/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/requires-package-prerelease-and-final-any-c18a46ab/requires-package-prerelease-and-final-any-c18a46ab-a-1.0.0a1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_prerelease_and_final_any_c18a46ab_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_prerelease_and_final_any_c18a46ab_a"]
+        
+        [project]
+        name = "requires-package-prerelease-and-final-any-c18a46ab-a"
+        version = "1.0.0a1"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-prerelease-and-final-any-c18a46ab/requires-package-prerelease-and-final-any-c18a46ab-a-1.0.0a1/src/requires_package_prerelease_and_final_any_c18a46ab_a/__init__.py': '''
+        __version__ = "1.0.0a1"
+  
+      ''',
+      'build/requires-package-prerelease-specified-mixed-available-65974a95/requires-package-prerelease-specified-mixed-available-65974a95-0.0.0/pyproject.toml': 'md5:715515b899163d350e68db3de105d050',
+      'build/requires-package-prerelease-specified-mixed-available-65974a95/requires-package-prerelease-specified-mixed-available-65974a95-0.0.0/src/requires_package_prerelease_specified_mixed_available_65974a95/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-package-prerelease-specified-mixed-available-65974a95/requires-package-prerelease-specified-mixed-available-65974a95-a-0.1.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_prerelease_specified_mixed_available_65974a95_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_prerelease_specified_mixed_available_65974a95_a"]
+        
+        [project]
+        name = "requires-package-prerelease-specified-mixed-available-65974a95-a"
+        version = "0.1.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-prerelease-specified-mixed-available-65974a95/requires-package-prerelease-specified-mixed-available-65974a95-a-0.1.0/src/requires_package_prerelease_specified_mixed_available_65974a95_a/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/requires-package-prerelease-specified-mixed-available-65974a95/requires-package-prerelease-specified-mixed-available-65974a95-a-0.2.0a1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_prerelease_specified_mixed_available_65974a95_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_prerelease_specified_mixed_available_65974a95_a"]
+        
+        [project]
+        name = "requires-package-prerelease-specified-mixed-available-65974a95-a"
+        version = "0.2.0a1"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-prerelease-specified-mixed-available-65974a95/requires-package-prerelease-specified-mixed-available-65974a95-a-0.2.0a1/src/requires_package_prerelease_specified_mixed_available_65974a95_a/__init__.py': '''
+        __version__ = "0.2.0a1"
+  
+      ''',
+      'build/requires-package-prerelease-specified-mixed-available-65974a95/requires-package-prerelease-specified-mixed-available-65974a95-a-0.3.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_prerelease_specified_mixed_available_65974a95_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_prerelease_specified_mixed_available_65974a95_a"]
+        
+        [project]
+        name = "requires-package-prerelease-specified-mixed-available-65974a95-a"
+        version = "0.3.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-prerelease-specified-mixed-available-65974a95/requires-package-prerelease-specified-mixed-available-65974a95-a-0.3.0/src/requires_package_prerelease_specified_mixed_available_65974a95_a/__init__.py': '''
+        __version__ = "0.3.0"
+  
+      ''',
+      'build/requires-package-prerelease-specified-mixed-available-65974a95/requires-package-prerelease-specified-mixed-available-65974a95-a-1.0.0a1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_prerelease_specified_mixed_available_65974a95_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_prerelease_specified_mixed_available_65974a95_a"]
+        
+        [project]
+        name = "requires-package-prerelease-specified-mixed-available-65974a95-a"
+        version = "1.0.0a1"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-prerelease-specified-mixed-available-65974a95/requires-package-prerelease-specified-mixed-available-65974a95-a-1.0.0a1/src/requires_package_prerelease_specified_mixed_available_65974a95_a/__init__.py': '''
+        __version__ = "1.0.0a1"
+  
+      ''',
+      'build/requires-package-prerelease-specified-only-final-available-909404f2/requires-package-prerelease-specified-only-final-available-909404f2-0.0.0/pyproject.toml': 'md5:3154e23cdafbb4731aca5e16ea19ffc6',
+      'build/requires-package-prerelease-specified-only-final-available-909404f2/requires-package-prerelease-specified-only-final-available-909404f2-0.0.0/src/requires_package_prerelease_specified_only_final_available_909404f2/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-package-prerelease-specified-only-final-available-909404f2/requires-package-prerelease-specified-only-final-available-909404f2-a-0.1.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_prerelease_specified_only_final_available_909404f2_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_prerelease_specified_only_final_available_909404f2_a"]
+        
+        [project]
+        name = "requires-package-prerelease-specified-only-final-available-909404f2-a"
+        version = "0.1.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-prerelease-specified-only-final-available-909404f2/requires-package-prerelease-specified-only-final-available-909404f2-a-0.1.0/src/requires_package_prerelease_specified_only_final_available_909404f2_a/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/requires-package-prerelease-specified-only-final-available-909404f2/requires-package-prerelease-specified-only-final-available-909404f2-a-0.2.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_prerelease_specified_only_final_available_909404f2_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_prerelease_specified_only_final_available_909404f2_a"]
+        
+        [project]
+        name = "requires-package-prerelease-specified-only-final-available-909404f2-a"
+        version = "0.2.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-prerelease-specified-only-final-available-909404f2/requires-package-prerelease-specified-only-final-available-909404f2-a-0.2.0/src/requires_package_prerelease_specified_only_final_available_909404f2_a/__init__.py': '''
+        __version__ = "0.2.0"
+  
+      ''',
+      'build/requires-package-prerelease-specified-only-final-available-909404f2/requires-package-prerelease-specified-only-final-available-909404f2-a-0.3.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_prerelease_specified_only_final_available_909404f2_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_prerelease_specified_only_final_available_909404f2_a"]
+        
+        [project]
+        name = "requires-package-prerelease-specified-only-final-available-909404f2-a"
+        version = "0.3.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-prerelease-specified-only-final-available-909404f2/requires-package-prerelease-specified-only-final-available-909404f2-a-0.3.0/src/requires_package_prerelease_specified_only_final_available_909404f2_a/__init__.py': '''
+        __version__ = "0.3.0"
+  
+      ''',
+      'build/requires-package-prerelease-specified-only-prerelease-available-5c9b204c/requires-package-prerelease-specified-only-prerelease-available-5c9b204c-0.0.0/pyproject.toml': 'md5:23c1cdb191f2665b1880afdf10191fd3',
+      'build/requires-package-prerelease-specified-only-prerelease-available-5c9b204c/requires-package-prerelease-specified-only-prerelease-available-5c9b204c-0.0.0/src/requires_package_prerelease_specified_only_prerelease_available_5c9b204c/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-package-prerelease-specified-only-prerelease-available-5c9b204c/requires-package-prerelease-specified-only-prerelease-available-5c9b204c-a-0.1.0a1/pyproject.toml': 'md5:a9c8aaa07f5689a0b6ecc46dc95ecfc2',
+      'build/requires-package-prerelease-specified-only-prerelease-available-5c9b204c/requires-package-prerelease-specified-only-prerelease-available-5c9b204c-a-0.1.0a1/src/requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a/__init__.py': '''
+        __version__ = "0.1.0a1"
+  
+      ''',
+      'build/requires-package-prerelease-specified-only-prerelease-available-5c9b204c/requires-package-prerelease-specified-only-prerelease-available-5c9b204c-a-0.2.0a1/pyproject.toml': 'md5:451b1e40de772c46ebc8ac4aa2e5278b',
+      'build/requires-package-prerelease-specified-only-prerelease-available-5c9b204c/requires-package-prerelease-specified-only-prerelease-available-5c9b204c-a-0.2.0a1/src/requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a/__init__.py': '''
+        __version__ = "0.2.0a1"
+  
+      ''',
+      'build/requires-package-prerelease-specified-only-prerelease-available-5c9b204c/requires-package-prerelease-specified-only-prerelease-available-5c9b204c-a-0.3.0a1/pyproject.toml': 'md5:f7cfb0fb9a759a017b0e42508eca7342',
+      'build/requires-package-prerelease-specified-only-prerelease-available-5c9b204c/requires-package-prerelease-specified-only-prerelease-available-5c9b204c-a-0.3.0a1/src/requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a/__init__.py': '''
+        __version__ = "0.3.0a1"
+  
+      ''',
+      'build/requires-transitive-package-only-prereleases-2e76f091/requires-transitive-package-only-prereleases-2e76f091-0.0.0/pyproject.toml': 'md5:21aa1e0afe23c8e10d3c9d8e32e53775',
+      'build/requires-transitive-package-only-prereleases-2e76f091/requires-transitive-package-only-prereleases-2e76f091-0.0.0/src/requires_transitive_package_only_prereleases_2e76f091/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-transitive-package-only-prereleases-2e76f091/requires-transitive-package-only-prereleases-2e76f091-a-0.1.0/pyproject.toml': 'md5:f7bca05d20b382b43c79a46f013a39cf',
+      'build/requires-transitive-package-only-prereleases-2e76f091/requires-transitive-package-only-prereleases-2e76f091-a-0.1.0/src/requires_transitive_package_only_prereleases_2e76f091_a/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/requires-transitive-package-only-prereleases-2e76f091/requires-transitive-package-only-prereleases-2e76f091-b-1.0.0a1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_transitive_package_only_prereleases_2e76f091_b"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_transitive_package_only_prereleases_2e76f091_b"]
+        
+        [project]
+        name = "requires-transitive-package-only-prereleases-2e76f091-b"
+        version = "1.0.0a1"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-transitive-package-only-prereleases-2e76f091/requires-transitive-package-only-prereleases-2e76f091-b-1.0.0a1/src/requires_transitive_package_only_prereleases_2e76f091_b/__init__.py': '''
+        __version__ = "1.0.0a1"
+  
+      ''',
+      'build/requires-transitive-package-only-prereleases-in-range-a25044b5/requires-transitive-package-only-prereleases-in-range-a25044b5-0.0.0/pyproject.toml': 'md5:ed54535ec87dc93f740790694655e305',
+      'build/requires-transitive-package-only-prereleases-in-range-a25044b5/requires-transitive-package-only-prereleases-in-range-a25044b5-0.0.0/src/requires_transitive_package_only_prereleases_in_range_a25044b5/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-transitive-package-only-prereleases-in-range-a25044b5/requires-transitive-package-only-prereleases-in-range-a25044b5-a-0.1.0/pyproject.toml': 'md5:35368b8a5bcd91f0e4b257f3e52f96e0',
+      'build/requires-transitive-package-only-prereleases-in-range-a25044b5/requires-transitive-package-only-prereleases-in-range-a25044b5-a-0.1.0/src/requires_transitive_package_only_prereleases_in_range_a25044b5_a/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/requires-transitive-package-only-prereleases-in-range-a25044b5/requires-transitive-package-only-prereleases-in-range-a25044b5-b-0.1.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_transitive_package_only_prereleases_in_range_a25044b5_b"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_transitive_package_only_prereleases_in_range_a25044b5_b"]
+        
+        [project]
+        name = "requires-transitive-package-only-prereleases-in-range-a25044b5-b"
+        version = "0.1.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-transitive-package-only-prereleases-in-range-a25044b5/requires-transitive-package-only-prereleases-in-range-a25044b5-b-0.1.0/src/requires_transitive_package_only_prereleases_in_range_a25044b5_b/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/requires-transitive-package-only-prereleases-in-range-a25044b5/requires-transitive-package-only-prereleases-in-range-a25044b5-b-1.0.0a1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_transitive_package_only_prereleases_in_range_a25044b5_b"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_transitive_package_only_prereleases_in_range_a25044b5_b"]
+        
+        [project]
+        name = "requires-transitive-package-only-prereleases-in-range-a25044b5-b"
+        version = "1.0.0a1"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-transitive-package-only-prereleases-in-range-a25044b5/requires-transitive-package-only-prereleases-in-range-a25044b5-b-1.0.0a1/src/requires_transitive_package_only_prereleases_in_range_a25044b5_b/__init__.py': '''
+        __version__ = "1.0.0a1"
+  
+      ''',
+      'build/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc-0.0.0/pyproject.toml': 'md5:c7b98d6a377a8ffde2f2b5da15df650c',
+      'build/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc-0.0.0/src/requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc-a-0.1.0/pyproject.toml': 'md5:aed14afe2b6a9770a95349a2211d6dbf',
+      'build/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc-a-0.1.0/src/requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_a/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc-b-0.1.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_b"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_b"]
+        
+        [project]
+        name = "requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc-b"
+        version = "0.1.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc-b-0.1.0/src/requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_b/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc-b-1.0.0a1/pyproject.toml': 'md5:aeb735413818e7bc7e49733900570aad',
+      'build/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc-b-1.0.0a1/src/requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_b/__init__.py': '''
+        __version__ = "1.0.0a1"
+  
+      ''',
+      'dist/requires-package-multiple-prereleases-kinds-a37dce95/requires_package_multiple_prereleases_kinds_a37dce95-0.0.0.tar.gz': 'md5:f4735d12505a1c88028df8b1a1992b26',
+      'dist/requires-package-multiple-prereleases-kinds-a37dce95/requires_package_multiple_prereleases_kinds_a37dce95_a-1.0.0a1-py3-none-any.whl': 'md5:02769f0b23ed39d08f98852eebee9c06',
+      'dist/requires-package-multiple-prereleases-kinds-a37dce95/requires_package_multiple_prereleases_kinds_a37dce95_a-1.0.0a1.tar.gz': 'md5:a007ae6a6b92baa4af80e054cd30868a',
+      'dist/requires-package-multiple-prereleases-kinds-a37dce95/requires_package_multiple_prereleases_kinds_a37dce95_a-1.0.0b1-py3-none-any.whl': 'md5:f209e25d444690f09eadd1b3cd5ba5a1',
+      'dist/requires-package-multiple-prereleases-kinds-a37dce95/requires_package_multiple_prereleases_kinds_a37dce95_a-1.0.0b1.tar.gz': 'md5:b28a8361ee2e17c33904d64ee32fd3ac',
+      'dist/requires-package-multiple-prereleases-kinds-a37dce95/requires_package_multiple_prereleases_kinds_a37dce95_a-1.0.0rc1-py3-none-any.whl': 'md5:625fded6632f523fbb78182b27ce2e9d',
+      'dist/requires-package-multiple-prereleases-kinds-a37dce95/requires_package_multiple_prereleases_kinds_a37dce95_a-1.0.0rc1.tar.gz': 'md5:971b33b776f9e337014fa1ec69eafef3',
+      'dist/requires-package-multiple-prereleases-numbers-4c3655b7/requires_package_multiple_prereleases_numbers_4c3655b7-0.0.0.tar.gz': 'md5:2da350c32290c55b3789f9b81d71646e',
+      'dist/requires-package-multiple-prereleases-numbers-4c3655b7/requires_package_multiple_prereleases_numbers_4c3655b7_a-1.0.0a1-py3-none-any.whl': 'md5:9b11b5b3c9ea1acec61d8adc870165ed',
+      'dist/requires-package-multiple-prereleases-numbers-4c3655b7/requires_package_multiple_prereleases_numbers_4c3655b7_a-1.0.0a1.tar.gz': 'md5:d74020a610109fb67f235450378f3d83',
+      'dist/requires-package-multiple-prereleases-numbers-4c3655b7/requires_package_multiple_prereleases_numbers_4c3655b7_a-1.0.0a2-py3-none-any.whl': 'md5:f1800fdda8bc581d39e926ed6ce39e1d',
+      'dist/requires-package-multiple-prereleases-numbers-4c3655b7/requires_package_multiple_prereleases_numbers_4c3655b7_a-1.0.0a2.tar.gz': 'md5:61e90bf864ab9fd8bd9703cbb91e753e',
+      'dist/requires-package-multiple-prereleases-numbers-4c3655b7/requires_package_multiple_prereleases_numbers_4c3655b7_a-1.0.0a3-py3-none-any.whl': 'md5:b33555118f262929007e8ce16575566a',
+      'dist/requires-package-multiple-prereleases-numbers-4c3655b7/requires_package_multiple_prereleases_numbers_4c3655b7_a-1.0.0a3.tar.gz': 'md5:5f4a0f8719b69eeeb602312455d04f37',
+      'dist/requires-package-only-prereleases-11aca5f4/requires_package_only_prereleases_11aca5f4-0.0.0.tar.gz': 'md5:f2203a808bb6e0161902545b54593f48',
+      'dist/requires-package-only-prereleases-11aca5f4/requires_package_only_prereleases_11aca5f4_a-1.0.0a1-py3-none-any.whl': 'md5:f5166a27bca109a3fff78de582c75b30',
+      'dist/requires-package-only-prereleases-11aca5f4/requires_package_only_prereleases_11aca5f4_a-1.0.0a1.tar.gz': 'md5:ff5293ea1d870274f3d9feda1b7fd585',
+      'dist/requires-package-only-prereleases-in-range-bc409bd0/requires_package_only_prereleases_in_range_bc409bd0-0.0.0.tar.gz': 'md5:5618a66a29af2ba7307545ada02a7944',
+      'dist/requires-package-only-prereleases-in-range-bc409bd0/requires_package_only_prereleases_in_range_bc409bd0_a-0.1.0-py3-none-any.whl': 'md5:4edeaf1d10f6cd40c9325a6de477d989',
+      'dist/requires-package-only-prereleases-in-range-bc409bd0/requires_package_only_prereleases_in_range_bc409bd0_a-0.1.0.tar.gz': 'md5:782645921dc74e6433de755ca1654068',
+      'dist/requires-package-only-prereleases-in-range-bc409bd0/requires_package_only_prereleases_in_range_bc409bd0_a-1.0.0a1-py3-none-any.whl': 'md5:5355dca02cbfa6c0b23a511291b0a88b',
+      'dist/requires-package-only-prereleases-in-range-bc409bd0/requires_package_only_prereleases_in_range_bc409bd0_a-1.0.0a1.tar.gz': 'md5:d7654b215ac613615f0ba6968288c1d7',
+      'dist/requires-package-prerelease-and-final-any-c18a46ab/requires_package_prerelease_and_final_any_c18a46ab-0.0.0.tar.gz': 'md5:463aba3e8c10ba2252a818e123aa2988',
+      'dist/requires-package-prerelease-and-final-any-c18a46ab/requires_package_prerelease_and_final_any_c18a46ab_a-0.1.0-py3-none-any.whl': 'md5:4784884cd80d34f13e9b9da35cc83c53',
+      'dist/requires-package-prerelease-and-final-any-c18a46ab/requires_package_prerelease_and_final_any_c18a46ab_a-0.1.0.tar.gz': 'md5:dcd83bf67a5be695fa74293c45d9d600',
+      'dist/requires-package-prerelease-and-final-any-c18a46ab/requires_package_prerelease_and_final_any_c18a46ab_a-1.0.0a1-py3-none-any.whl': 'md5:3f82a46644f00c81c3018127409f1b99',
+      'dist/requires-package-prerelease-and-final-any-c18a46ab/requires_package_prerelease_and_final_any_c18a46ab_a-1.0.0a1.tar.gz': 'md5:16fec850608ce0a369cfd3e06204a932',
+      'dist/requires-package-prerelease-specified-mixed-available-65974a95/requires_package_prerelease_specified_mixed_available_65974a95-0.0.0.tar.gz': 'md5:af6e05689c143aa1247c517074ee79bb',
+      'dist/requires-package-prerelease-specified-mixed-available-65974a95/requires_package_prerelease_specified_mixed_available_65974a95_a-0.1.0-py3-none-any.whl': 'md5:ac5adbef62654efc4f8b6659b35a458a',
+      'dist/requires-package-prerelease-specified-mixed-available-65974a95/requires_package_prerelease_specified_mixed_available_65974a95_a-0.1.0.tar.gz': 'md5:270729f2fd30ef7b8d2688114f0367c7',
+      'dist/requires-package-prerelease-specified-mixed-available-65974a95/requires_package_prerelease_specified_mixed_available_65974a95_a-0.2.0a1-py3-none-any.whl': 'md5:995834c0682afec934a6a60d189b54e1',
+      'dist/requires-package-prerelease-specified-mixed-available-65974a95/requires_package_prerelease_specified_mixed_available_65974a95_a-0.2.0a1.tar.gz': 'md5:ae606fe77a34237f83329ecba303ff0e',
+      'dist/requires-package-prerelease-specified-mixed-available-65974a95/requires_package_prerelease_specified_mixed_available_65974a95_a-0.3.0-py3-none-any.whl': 'md5:5291884b25355582c00370f6f0d96b1b',
+      'dist/requires-package-prerelease-specified-mixed-available-65974a95/requires_package_prerelease_specified_mixed_available_65974a95_a-0.3.0.tar.gz': 'md5:da6fd372db13c8f45f64683aa228e1b5',
+      'dist/requires-package-prerelease-specified-mixed-available-65974a95/requires_package_prerelease_specified_mixed_available_65974a95_a-1.0.0a1-py3-none-any.whl': 'md5:b4b025a2fe64c8d9f776a3219513d093',
+      'dist/requires-package-prerelease-specified-mixed-available-65974a95/requires_package_prerelease_specified_mixed_available_65974a95_a-1.0.0a1.tar.gz': 'md5:06c5170b177f232e9b607a12a32048ea',
+      'dist/requires-package-prerelease-specified-only-final-available-909404f2/requires_package_prerelease_specified_only_final_available_909404f2-0.0.0.tar.gz': 'md5:ae896cc031bcb1a47031cd53b6512bc0',
+      'dist/requires-package-prerelease-specified-only-final-available-909404f2/requires_package_prerelease_specified_only_final_available_909404f2_a-0.1.0-py3-none-any.whl': 'md5:a7a6579d0f39e3a9ae5c69c8534fc709',
+      'dist/requires-package-prerelease-specified-only-final-available-909404f2/requires_package_prerelease_specified_only_final_available_909404f2_a-0.1.0.tar.gz': 'md5:e9200a69bfc5300f239787ba79b70473',
+      'dist/requires-package-prerelease-specified-only-final-available-909404f2/requires_package_prerelease_specified_only_final_available_909404f2_a-0.2.0-py3-none-any.whl': 'md5:b7b633e731db65e992509f78fbed30ae',
+      'dist/requires-package-prerelease-specified-only-final-available-909404f2/requires_package_prerelease_specified_only_final_available_909404f2_a-0.2.0.tar.gz': 'md5:2aa4cc77f961367b4223721670045ba2',
+      'dist/requires-package-prerelease-specified-only-final-available-909404f2/requires_package_prerelease_specified_only_final_available_909404f2_a-0.3.0-py3-none-any.whl': 'md5:b809e91965ab760036da30dc9048fad7',
+      'dist/requires-package-prerelease-specified-only-final-available-909404f2/requires_package_prerelease_specified_only_final_available_909404f2_a-0.3.0.tar.gz': 'md5:1066e4dbc8cedb2c70a9350de0c5ee9d',
+      'dist/requires-package-prerelease-specified-only-prerelease-available-5c9b204c/requires_package_prerelease_specified_only_prerelease_available_5c9b204c-0.0.0.tar.gz': 'md5:3899521a7b5f1dbe65f7bd7ee754fba7',
+      'dist/requires-package-prerelease-specified-only-prerelease-available-5c9b204c/requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a-0.1.0a1-py3-none-any.whl': 'md5:7e2d560ca9c722e5d503a5f41260a697',
+      'dist/requires-package-prerelease-specified-only-prerelease-available-5c9b204c/requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a-0.1.0a1.tar.gz': 'md5:ad3aa72e656df1d0c493794cea593020',
+      'dist/requires-package-prerelease-specified-only-prerelease-available-5c9b204c/requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a-0.2.0a1-py3-none-any.whl': 'md5:16300c2cec1344bb22651723c755cac2',
+      'dist/requires-package-prerelease-specified-only-prerelease-available-5c9b204c/requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a-0.2.0a1.tar.gz': 'md5:b14d4e333f62adf4faf3c2a9fdb146dc',
+      'dist/requires-package-prerelease-specified-only-prerelease-available-5c9b204c/requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a-0.3.0a1-py3-none-any.whl': 'md5:19e29530e6fdcc8c4154536bc130fe96',
+      'dist/requires-package-prerelease-specified-only-prerelease-available-5c9b204c/requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a-0.3.0a1.tar.gz': 'md5:53c4799b3a62b68d1fb56b805fba37ea',
+      'dist/requires-transitive-package-only-prereleases-2e76f091/requires_transitive_package_only_prereleases_2e76f091-0.0.0.tar.gz': 'md5:0f76fef5fcf560941315b3eecde4b4f7',
+      'dist/requires-transitive-package-only-prereleases-2e76f091/requires_transitive_package_only_prereleases_2e76f091_a-0.1.0-py3-none-any.whl': 'md5:aca10572a8d994ee834e3e1ea4adffbb',
+      'dist/requires-transitive-package-only-prereleases-2e76f091/requires_transitive_package_only_prereleases_2e76f091_a-0.1.0.tar.gz': 'md5:758b4bb2fbd3ea77200788517931f4be',
+      'dist/requires-transitive-package-only-prereleases-2e76f091/requires_transitive_package_only_prereleases_2e76f091_b-1.0.0a1-py3-none-any.whl': 'md5:3e5773e4de4754e7d6a9191b8015b2d0',
+      'dist/requires-transitive-package-only-prereleases-2e76f091/requires_transitive_package_only_prereleases_2e76f091_b-1.0.0a1.tar.gz': 'md5:1ec4e56071d8ff5697d1c5c2255063ab',
+      'dist/requires-transitive-package-only-prereleases-in-range-a25044b5/requires_transitive_package_only_prereleases_in_range_a25044b5-0.0.0.tar.gz': 'md5:bc8e221f512987170c5701b28d335fe9',
+      'dist/requires-transitive-package-only-prereleases-in-range-a25044b5/requires_transitive_package_only_prereleases_in_range_a25044b5_a-0.1.0-py3-none-any.whl': 'md5:f419af743852ff2fa4973d2b06ab29f1',
+      'dist/requires-transitive-package-only-prereleases-in-range-a25044b5/requires_transitive_package_only_prereleases_in_range_a25044b5_a-0.1.0.tar.gz': 'md5:854e31c192b3ae9ea465717cf58c4c1f',
+      'dist/requires-transitive-package-only-prereleases-in-range-a25044b5/requires_transitive_package_only_prereleases_in_range_a25044b5_b-0.1.0-py3-none-any.whl': 'md5:c1653cb2f65049ff368a757fa298b0f6',
+      'dist/requires-transitive-package-only-prereleases-in-range-a25044b5/requires_transitive_package_only_prereleases_in_range_a25044b5_b-0.1.0.tar.gz': 'md5:2239a5cc2ddf4f7393c37d7e209d14f6',
+      'dist/requires-transitive-package-only-prereleases-in-range-a25044b5/requires_transitive_package_only_prereleases_in_range_a25044b5_b-1.0.0a1-py3-none-any.whl': 'md5:f270fa73268bdb534011ba3574a5dd4f',
+      'dist/requires-transitive-package-only-prereleases-in-range-a25044b5/requires_transitive_package_only_prereleases_in_range_a25044b5_b-1.0.0a1.tar.gz': 'md5:f4279806fb4f02211fa5ff742d6d6c93',
+      'dist/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc/requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc-0.0.0.tar.gz': 'md5:10f36d5c9de1883b0fc66d1aa67ebe06',
+      'dist/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc/requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_a-0.1.0-py3-none-any.whl': 'md5:03c87fd8fcb99bed620949b50bd7b955',
+      'dist/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc/requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_a-0.1.0.tar.gz': 'md5:8ea563a2585b1c9475dffbd891466ff7',
+      'dist/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc/requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_b-0.1.0-py3-none-any.whl': 'md5:f0feeccf8b1a9c431885c554720142f3',
+      'dist/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc/requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_b-0.1.0.tar.gz': 'md5:51f0e07e68790b51d87998d16dd4ea63',
+      'dist/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc/requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_b-1.0.0a1-py3-none-any.whl': 'md5:ab30d400bb472ea00de1dc429ebb906d',
+      'dist/requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc/requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_b-1.0.0a1.tar.gz': 'md5:5571065103e25abd5b5928d3bde9ab68',
+      'tree': '''
+        test_build_all_scenarios_prere0
+        ├── build
+        │   ├── requires-package-multiple-prereleases-kinds-a37dce95
+        │   │   ├── requires-package-multiple-prereleases-kinds-a37dce95-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_multiple_prereleases_kinds_a37dce95
+        │   │   │           └── __init__.py
+        │   │   ├── requires-package-multiple-prereleases-kinds-a37dce95-a-1.0.0a1
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_multiple_prereleases_kinds_a37dce95_a
+        │   │   │           └── __init__.py
+        │   │   ├── requires-package-multiple-prereleases-kinds-a37dce95-a-1.0.0b1
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_multiple_prereleases_kinds_a37dce95_a
+        │   │   │           └── __init__.py
+        │   │   └── requires-package-multiple-prereleases-kinds-a37dce95-a-1.0.0rc1
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_package_multiple_prereleases_kinds_a37dce95_a
+        │   │               └── __init__.py
+        │   ├── requires-package-multiple-prereleases-numbers-4c3655b7
+        │   │   ├── requires-package-multiple-prereleases-numbers-4c3655b7-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_multiple_prereleases_numbers_4c3655b7
+        │   │   │           └── __init__.py
+        │   │   ├── requires-package-multiple-prereleases-numbers-4c3655b7-a-1.0.0a1
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_multiple_prereleases_numbers_4c3655b7_a
+        │   │   │           └── __init__.py
+        │   │   ├── requires-package-multiple-prereleases-numbers-4c3655b7-a-1.0.0a2
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_multiple_prereleases_numbers_4c3655b7_a
+        │   │   │           └── __init__.py
+        │   │   └── requires-package-multiple-prereleases-numbers-4c3655b7-a-1.0.0a3
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_package_multiple_prereleases_numbers_4c3655b7_a
+        │   │               └── __init__.py
+        │   ├── requires-package-only-prereleases-11aca5f4
+        │   │   ├── requires-package-only-prereleases-11aca5f4-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_only_prereleases_11aca5f4
+        │   │   │           └── __init__.py
+        │   │   └── requires-package-only-prereleases-11aca5f4-a-1.0.0a1
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_package_only_prereleases_11aca5f4_a
+        │   │               └── __init__.py
+        │   ├── requires-package-only-prereleases-in-range-bc409bd0
+        │   │   ├── requires-package-only-prereleases-in-range-bc409bd0-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_only_prereleases_in_range_bc409bd0
+        │   │   │           └── __init__.py
+        │   │   ├── requires-package-only-prereleases-in-range-bc409bd0-a-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_only_prereleases_in_range_bc409bd0_a
+        │   │   │           └── __init__.py
+        │   │   └── requires-package-only-prereleases-in-range-bc409bd0-a-1.0.0a1
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_package_only_prereleases_in_range_bc409bd0_a
+        │   │               └── __init__.py
+        │   ├── requires-package-prerelease-and-final-any-c18a46ab
+        │   │   ├── requires-package-prerelease-and-final-any-c18a46ab-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_prerelease_and_final_any_c18a46ab
+        │   │   │           └── __init__.py
+        │   │   ├── requires-package-prerelease-and-final-any-c18a46ab-a-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_prerelease_and_final_any_c18a46ab_a
+        │   │   │           └── __init__.py
+        │   │   └── requires-package-prerelease-and-final-any-c18a46ab-a-1.0.0a1
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_package_prerelease_and_final_any_c18a46ab_a
+        │   │               └── __init__.py
+        │   ├── requires-package-prerelease-specified-mixed-available-65974a95
+        │   │   ├── requires-package-prerelease-specified-mixed-available-65974a95-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_prerelease_specified_mixed_available_65974a95
+        │   │   │           └── __init__.py
+        │   │   ├── requires-package-prerelease-specified-mixed-available-65974a95-a-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_prerelease_specified_mixed_available_65974a95_a
+        │   │   │           └── __init__.py
+        │   │   ├── requires-package-prerelease-specified-mixed-available-65974a95-a-0.2.0a1
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_prerelease_specified_mixed_available_65974a95_a
+        │   │   │           └── __init__.py
+        │   │   ├── requires-package-prerelease-specified-mixed-available-65974a95-a-0.3.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_prerelease_specified_mixed_available_65974a95_a
+        │   │   │           └── __init__.py
+        │   │   └── requires-package-prerelease-specified-mixed-available-65974a95-a-1.0.0a1
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_package_prerelease_specified_mixed_available_65974a95_a
+        │   │               └── __init__.py
+        │   ├── requires-package-prerelease-specified-only-final-available-909404f2
+        │   │   ├── requires-package-prerelease-specified-only-final-available-909404f2-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_prerelease_specified_only_final_available_909404f2
+        │   │   │           └── __init__.py
+        │   │   ├── requires-package-prerelease-specified-only-final-available-909404f2-a-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_prerelease_specified_only_final_available_909404f2_a
+        │   │   │           └── __init__.py
+        │   │   ├── requires-package-prerelease-specified-only-final-available-909404f2-a-0.2.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_prerelease_specified_only_final_available_909404f2_a
+        │   │   │           └── __init__.py
+        │   │   └── requires-package-prerelease-specified-only-final-available-909404f2-a-0.3.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_package_prerelease_specified_only_final_available_909404f2_a
+        │   │               └── __init__.py
+        │   ├── requires-package-prerelease-specified-only-prerelease-available-5c9b204c
+        │   │   ├── requires-package-prerelease-specified-only-prerelease-available-5c9b204c-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_prerelease_specified_only_prerelease_available_5c9b204c
+        │   │   │           └── __init__.py
+        │   │   ├── requires-package-prerelease-specified-only-prerelease-available-5c9b204c-a-0.1.0a1
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a
+        │   │   │           └── __init__.py
+        │   │   ├── requires-package-prerelease-specified-only-prerelease-available-5c9b204c-a-0.2.0a1
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a
+        │   │   │           └── __init__.py
+        │   │   └── requires-package-prerelease-specified-only-prerelease-available-5c9b204c-a-0.3.0a1
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a
+        │   │               └── __init__.py
+        │   ├── requires-transitive-package-only-prereleases-2e76f091
+        │   │   ├── requires-transitive-package-only-prereleases-2e76f091-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_transitive_package_only_prereleases_2e76f091
+        │   │   │           └── __init__.py
+        │   │   ├── requires-transitive-package-only-prereleases-2e76f091-a-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_transitive_package_only_prereleases_2e76f091_a
+        │   │   │           └── __init__.py
+        │   │   └── requires-transitive-package-only-prereleases-2e76f091-b-1.0.0a1
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_transitive_package_only_prereleases_2e76f091_b
+        │   │               └── __init__.py
+        │   ├── requires-transitive-package-only-prereleases-in-range-a25044b5
+        │   │   ├── requires-transitive-package-only-prereleases-in-range-a25044b5-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_transitive_package_only_prereleases_in_range_a25044b5
+        │   │   │           └── __init__.py
+        │   │   ├── requires-transitive-package-only-prereleases-in-range-a25044b5-a-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_transitive_package_only_prereleases_in_range_a25044b5_a
+        │   │   │           └── __init__.py
+        │   │   ├── requires-transitive-package-only-prereleases-in-range-a25044b5-b-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_transitive_package_only_prereleases_in_range_a25044b5_b
+        │   │   │           └── __init__.py
+        │   │   └── requires-transitive-package-only-prereleases-in-range-a25044b5-b-1.0.0a1
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_transitive_package_only_prereleases_in_range_a25044b5_b
+        │   │               └── __init__.py
+        │   └── requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc
+        │       ├── requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc-0.0.0
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc
+        │       │           └── __init__.py
+        │       ├── requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc-a-0.1.0
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_a
+        │       │           └── __init__.py
+        │       ├── requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc-b-0.1.0
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_b
+        │       │           └── __init__.py
+        │       └── requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc-b-1.0.0a1
+        │           ├── pyproject.toml
+        │           └── src
+        │               └── requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_b
+        │                   └── __init__.py
+        └── dist
+            ├── requires-package-multiple-prereleases-kinds-a37dce95
+            │   ├── requires_package_multiple_prereleases_kinds_a37dce95-0.0.0.tar.gz
+            │   ├── requires_package_multiple_prereleases_kinds_a37dce95_a-1.0.0a1-py3-none-any.whl
+            │   ├── requires_package_multiple_prereleases_kinds_a37dce95_a-1.0.0a1.tar.gz
+            │   ├── requires_package_multiple_prereleases_kinds_a37dce95_a-1.0.0b1-py3-none-any.whl
+            │   ├── requires_package_multiple_prereleases_kinds_a37dce95_a-1.0.0b1.tar.gz
+            │   ├── requires_package_multiple_prereleases_kinds_a37dce95_a-1.0.0rc1-py3-none-any.whl
+            │   └── requires_package_multiple_prereleases_kinds_a37dce95_a-1.0.0rc1.tar.gz
+            ├── requires-package-multiple-prereleases-numbers-4c3655b7
+            │   ├── requires_package_multiple_prereleases_numbers_4c3655b7-0.0.0.tar.gz
+            │   ├── requires_package_multiple_prereleases_numbers_4c3655b7_a-1.0.0a1-py3-none-any.whl
+            │   ├── requires_package_multiple_prereleases_numbers_4c3655b7_a-1.0.0a1.tar.gz
+            │   ├── requires_package_multiple_prereleases_numbers_4c3655b7_a-1.0.0a2-py3-none-any.whl
+            │   ├── requires_package_multiple_prereleases_numbers_4c3655b7_a-1.0.0a2.tar.gz
+            │   ├── requires_package_multiple_prereleases_numbers_4c3655b7_a-1.0.0a3-py3-none-any.whl
+            │   └── requires_package_multiple_prereleases_numbers_4c3655b7_a-1.0.0a3.tar.gz
+            ├── requires-package-only-prereleases-11aca5f4
+            │   ├── requires_package_only_prereleases_11aca5f4-0.0.0.tar.gz
+            │   ├── requires_package_only_prereleases_11aca5f4_a-1.0.0a1-py3-none-any.whl
+            │   └── requires_package_only_prereleases_11aca5f4_a-1.0.0a1.tar.gz
+            ├── requires-package-only-prereleases-in-range-bc409bd0
+            │   ├── requires_package_only_prereleases_in_range_bc409bd0-0.0.0.tar.gz
+            │   ├── requires_package_only_prereleases_in_range_bc409bd0_a-0.1.0-py3-none-any.whl
+            │   ├── requires_package_only_prereleases_in_range_bc409bd0_a-0.1.0.tar.gz
+            │   ├── requires_package_only_prereleases_in_range_bc409bd0_a-1.0.0a1-py3-none-any.whl
+            │   └── requires_package_only_prereleases_in_range_bc409bd0_a-1.0.0a1.tar.gz
+            ├── requires-package-prerelease-and-final-any-c18a46ab
+            │   ├── requires_package_prerelease_and_final_any_c18a46ab-0.0.0.tar.gz
+            │   ├── requires_package_prerelease_and_final_any_c18a46ab_a-0.1.0-py3-none-any.whl
+            │   ├── requires_package_prerelease_and_final_any_c18a46ab_a-0.1.0.tar.gz
+            │   ├── requires_package_prerelease_and_final_any_c18a46ab_a-1.0.0a1-py3-none-any.whl
+            │   └── requires_package_prerelease_and_final_any_c18a46ab_a-1.0.0a1.tar.gz
+            ├── requires-package-prerelease-specified-mixed-available-65974a95
+            │   ├── requires_package_prerelease_specified_mixed_available_65974a95-0.0.0.tar.gz
+            │   ├── requires_package_prerelease_specified_mixed_available_65974a95_a-0.1.0-py3-none-any.whl
+            │   ├── requires_package_prerelease_specified_mixed_available_65974a95_a-0.1.0.tar.gz
+            │   ├── requires_package_prerelease_specified_mixed_available_65974a95_a-0.2.0a1-py3-none-any.whl
+            │   ├── requires_package_prerelease_specified_mixed_available_65974a95_a-0.2.0a1.tar.gz
+            │   ├── requires_package_prerelease_specified_mixed_available_65974a95_a-0.3.0-py3-none-any.whl
+            │   ├── requires_package_prerelease_specified_mixed_available_65974a95_a-0.3.0.tar.gz
+            │   ├── requires_package_prerelease_specified_mixed_available_65974a95_a-1.0.0a1-py3-none-any.whl
+            │   └── requires_package_prerelease_specified_mixed_available_65974a95_a-1.0.0a1.tar.gz
+            ├── requires-package-prerelease-specified-only-final-available-909404f2
+            │   ├── requires_package_prerelease_specified_only_final_available_909404f2-0.0.0.tar.gz
+            │   ├── requires_package_prerelease_specified_only_final_available_909404f2_a-0.1.0-py3-none-any.whl
+            │   ├── requires_package_prerelease_specified_only_final_available_909404f2_a-0.1.0.tar.gz
+            │   ├── requires_package_prerelease_specified_only_final_available_909404f2_a-0.2.0-py3-none-any.whl
+            │   ├── requires_package_prerelease_specified_only_final_available_909404f2_a-0.2.0.tar.gz
+            │   ├── requires_package_prerelease_specified_only_final_available_909404f2_a-0.3.0-py3-none-any.whl
+            │   └── requires_package_prerelease_specified_only_final_available_909404f2_a-0.3.0.tar.gz
+            ├── requires-package-prerelease-specified-only-prerelease-available-5c9b204c
+            │   ├── requires_package_prerelease_specified_only_prerelease_available_5c9b204c-0.0.0.tar.gz
+            │   ├── requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a-0.1.0a1-py3-none-any.whl
+            │   ├── requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a-0.1.0a1.tar.gz
+            │   ├── requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a-0.2.0a1-py3-none-any.whl
+            │   ├── requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a-0.2.0a1.tar.gz
+            │   ├── requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a-0.3.0a1-py3-none-any.whl
+            │   └── requires_package_prerelease_specified_only_prerelease_available_5c9b204c_a-0.3.0a1.tar.gz
+            ├── requires-transitive-package-only-prereleases-2e76f091
+            │   ├── requires_transitive_package_only_prereleases_2e76f091-0.0.0.tar.gz
+            │   ├── requires_transitive_package_only_prereleases_2e76f091_a-0.1.0-py3-none-any.whl
+            │   ├── requires_transitive_package_only_prereleases_2e76f091_a-0.1.0.tar.gz
+            │   ├── requires_transitive_package_only_prereleases_2e76f091_b-1.0.0a1-py3-none-any.whl
+            │   └── requires_transitive_package_only_prereleases_2e76f091_b-1.0.0a1.tar.gz
+            ├── requires-transitive-package-only-prereleases-in-range-a25044b5
+            │   ├── requires_transitive_package_only_prereleases_in_range_a25044b5-0.0.0.tar.gz
+            │   ├── requires_transitive_package_only_prereleases_in_range_a25044b5_a-0.1.0-py3-none-any.whl
+            │   ├── requires_transitive_package_only_prereleases_in_range_a25044b5_a-0.1.0.tar.gz
+            │   ├── requires_transitive_package_only_prereleases_in_range_a25044b5_b-0.1.0-py3-none-any.whl
+            │   ├── requires_transitive_package_only_prereleases_in_range_a25044b5_b-0.1.0.tar.gz
+            │   ├── requires_transitive_package_only_prereleases_in_range_a25044b5_b-1.0.0a1-py3-none-any.whl
+            │   └── requires_transitive_package_only_prereleases_in_range_a25044b5_b-1.0.0a1.tar.gz
+            └── requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc
+                ├── requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc-0.0.0.tar.gz
+                ├── requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_a-0.1.0-py3-none-any.whl
+                ├── requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_a-0.1.0.tar.gz
+                ├── requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_b-0.1.0-py3-none-any.whl
+                ├── requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_b-0.1.0.tar.gz
+                ├── requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_b-1.0.0a1-py3-none-any.whl
+                └── requires_transitive_package_only_prereleases_in_range_opt_in_a8f715bc_b-1.0.0a1.tar.gz
+        
+        144 directories, 149 files
+  
+      ''',
+    }),
+    'stderr': '<not included>',
+    'stdout': '''
+      requires-package-multiple-prereleases-kinds-a37dce95
+      requires-package-multiple-prereleases-numbers-4c3655b7
+      requires-package-only-prereleases-11aca5f4
+      requires-package-only-prereleases-in-range-bc409bd0
+      requires-package-prerelease-and-final-any-c18a46ab
+      requires-package-prerelease-specified-mixed-available-65974a95
+      requires-package-prerelease-specified-only-final-available-909404f2
+      requires-package-prerelease-specified-only-prerelease-available-5c9b204c
+      requires-transitive-package-only-prereleases-2e76f091
+      requires-transitive-package-only-prereleases-in-range-a25044b5
+      requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc
+  
+    ''',
+  })
+# ---
 # name: test_build_all_scenarios[requires-does-not-exist]
   dict({
     'exit_code': 0,
@@ -1456,6 +2442,191 @@
       requires-python-version-greater-than-current-excluded-7869d97e
       requires-python-version-greater-than-current-many-b33dc0cb
       requires-python-version-less-than-current-48bada28
+  
+    ''',
+  })
+# ---
+# name: test_view_all_scenarios[prereleases]
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'tree': '''
+        test_view_all_scenarios_prerel0
+        
+        0 directories
+  
+      ''',
+    }),
+    'stderr': '',
+    'stdout': '''
+      requires-package-only-prereleases-11aca5f4
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a
+      │       └── unsatisfied: no matching version
+      └── a
+          └── a-1.0.0a1
+              └── requires python>=3.7
+      
+      requires-package-only-prereleases-in-range-bc409bd0
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a>0.1.0
+      │       └── unsatisfied: no matching version
+      └── a
+          ├── a-0.1.0
+          │   └── requires python>=3.7
+          └── a-1.0.0a1
+              └── requires python>=3.7
+      
+      requires-package-prerelease-and-final-any-c18a46ab
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a
+      │       └── satisfied by a-0.1.0
+      └── a
+          ├── a-0.1.0
+          │   └── requires python>=3.7
+          └── a-1.0.0a1
+              └── requires python>=3.7
+      
+      requires-package-prerelease-specified-only-final-available-909404f2
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a>=0.1.0a1
+      │       ├── satisfied by a-0.1.0
+      │       ├── satisfied by a-0.2.0
+      │       └── satisfied by a-0.3.0
+      └── a
+          ├── a-0.1.0
+          │   └── requires python>=3.7
+          ├── a-0.2.0
+          │   └── requires python>=3.7
+          └── a-0.3.0
+              └── requires python>=3.7
+      
+      requires-package-prerelease-specified-only-prerelease-available-5c9b204c
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a>=0.1.0a1
+      │       ├── satisfied by a-0.1.0a1
+      │       ├── satisfied by a-0.2.0a1
+      │       └── satisfied by a-0.3.0a1
+      └── a
+          ├── a-0.1.0a1
+          │   └── requires python>=3.7
+          ├── a-0.2.0a1
+          │   └── requires python>=3.7
+          └── a-0.3.0a1
+              └── requires python>=3.7
+      
+      requires-package-prerelease-specified-mixed-available-65974a95
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a>=0.1.0a1
+      │       ├── satisfied by a-0.1.0
+      │       ├── satisfied by a-0.2.0a1
+      │       ├── satisfied by a-0.3.0
+      │       └── satisfied by a-1.0.0a1
+      └── a
+          ├── a-0.1.0
+          │   └── requires python>=3.7
+          ├── a-0.2.0a1
+          │   └── requires python>=3.7
+          ├── a-0.3.0
+          │   └── requires python>=3.7
+          └── a-1.0.0a1
+              └── requires python>=3.7
+      
+      requires-package-multiple-prereleases-kinds-a37dce95
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a>=1.0.0a1
+      │       ├── satisfied by a-1.0.0a1
+      │       ├── satisfied by a-1.0.0b1
+      │       └── satisfied by a-1.0.0rc1
+      └── a
+          ├── a-1.0.0a1
+          │   └── requires python>=3.7
+          ├── a-1.0.0b1
+          │   └── requires python>=3.7
+          └── a-1.0.0rc1
+              └── requires python>=3.7
+      
+      requires-package-multiple-prereleases-numbers-4c3655b7
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a>=1.0.0a1
+      │       ├── satisfied by a-1.0.0a1
+      │       ├── satisfied by a-1.0.0a2
+      │       └── satisfied by a-1.0.0a3
+      └── a
+          ├── a-1.0.0a1
+          │   └── requires python>=3.7
+          ├── a-1.0.0a2
+          │   └── requires python>=3.7
+          └── a-1.0.0a3
+              └── requires python>=3.7
+      
+      requires-transitive-package-only-prereleases-2e76f091
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a
+      │       └── satisfied by a-0.1.0
+      ├── a
+      │   └── a-0.1.0
+      │       ├── requires b
+      │       │   └── unsatisfied: no matching version
+      │       └── requires python>=3.7
+      └── b
+          └── b-1.0.0a1
+              └── requires python>=3.7
+      
+      requires-transitive-package-only-prereleases-in-range-a25044b5
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a
+      │       └── satisfied by a-0.1.0
+      ├── a
+      │   └── a-0.1.0
+      │       ├── requires b>0.1
+      │       │   └── unsatisfied: no matching version
+      │       └── requires python>=3.7
+      └── b
+          ├── b-0.1.0
+          │   └── requires python>=3.7
+          └── b-1.0.0a1
+              └── requires python>=3.7
+      
+      requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   ├── requires a
+      │   │   └── satisfied by a-0.1.0
+      │   └── requires b>0.0.0a1
+      │       └── satisfied by b-0.1.0
+      ├── a
+      │   └── a-0.1.0
+      │       ├── requires b>0.1
+      │       │   └── unsatisfied: no matching version
+      │       └── requires python>=3.7
+      └── b
+          ├── b-0.1.0
+          │   └── requires python>=3.7
+          └── b-1.0.0a1
+              └── requires python>=3.7
+      
   
     ''',
   })
