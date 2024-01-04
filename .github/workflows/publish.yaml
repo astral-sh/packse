@@ -14,8 +14,10 @@ on:
       - main
 
   schedule:
-    # Run hourly; will only do work if the last job succeeded
-    - cron:  '0 * * * *'
+    # Run every 90 minutes; will only do work if the last job succeeded.
+    # This ensures that after rate limits are encountered, we attempt to publish again.
+    # PyPI has a 60 minute rate limit for project creation.
+    - cron: "*/90 * * * *"
 
 
 permissions:
