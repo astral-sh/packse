@@ -40,8 +40,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Only runs during the scheduled job
+      # The rest of the workflow will be skipped during scheduled runs unless the last run failed
       - name: Check status of last workflow run
         id: check_last_run
+        if: github.event.schedule
         run: |
           WORKFLOW_ID=$( \
             curl \
