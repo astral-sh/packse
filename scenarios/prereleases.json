@@ -40,7 +40,7 @@
         },
         "expected": {
             "satisfiable": false,
-            "explanation": "Since there are final versions of `a` available, pre-release versions should not be selected without explicit opt-in."
+            "explanation": "Since there are stable versions of `a` available, pre-release versions should not be selected without explicit opt-in."
         }
     },
     {
@@ -64,12 +64,12 @@
             "packages": {
                 "a": "0.1.0"
             },
-            "explanation": "Since the user did not provide a pre-release specifier, the older final version should be selected."
+            "explanation": "Since the user did not provide a pre-release specifier, the older stable version should be selected."
         }
     },
     {
         "name": "requires-package-prerelease-specified-only-final-available",
-        "description": "The user requires a version of `a` with a pre-release specifier and only final releases are available.",
+        "description": "The user requires a version of `a` with a pre-release specifier and only stable releases are available.",
         "root": {
             "requires": [
                 "a>=0.1.0a1"
@@ -89,7 +89,7 @@
             "packages": {
                 "a": "0.3.0"
             },
-            "explanation": "The latest final version should be selected."
+            "explanation": "The latest stable version should be selected."
         }
     },
     {
@@ -119,7 +119,7 @@
     },
     {
         "name": "requires-package-prerelease-specified-mixed-available",
-        "description": "The user requires a version of `a` with a pre-release specifier and both pre-release and final releases are available.",
+        "description": "The user requires a version of `a` with a pre-release specifier and both pre-release and stable releases are available.",
         "root": {
             "requires": [
                 "a>=0.1.0a1"
@@ -253,7 +253,7 @@
         },
         "expected": {
             "satisfiable": false,
-            "explanation": "Since there are final versions of `b` available, the pre-release version should not be selected without explicit opt-in. The available version is excluded by the range requested by the user."
+            "explanation": "Since there are stable versions of `b` available, the pre-release version should not be selected without explicit opt-in. The available version is excluded by the range requested by the user."
         }
     },
     {
