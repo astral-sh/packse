@@ -4,7 +4,7 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      example-4287e2f2
+      example-97db95eb
       ├── environment
       │   └── python3.7
       ├── root
@@ -20,10 +20,10 @@
           ├── b-1.0.0
           │   └── requires python>=3.7
           ├── b-2.0.0
-          │   ├── requires c
-          │       └── unsatisfied: no versions for package
           │   └── requires python>=3.7
           └── b-3.0.0
+              ├── requires c
+                  └── unsatisfied: no versions for package
               └── requires python>=3.7
       
   
@@ -37,9 +37,9 @@
     'stdout': '''
       example
       
-      This is an example scenario, in which the user depends on a single package `a` which requires `b`
+      This is an example scenario, in which the user depends on a single package `a` which requires `b`.
       
-      example-4287e2f2
+      example-97db95eb
       ├── environment
       │   └── python3.7
       ├── root
@@ -55,10 +55,10 @@
           ├── b-1.0.0
           │   └── requires python>=3.7
           ├── b-2.0.0
-          │   ├── requires c
-          │       └── unsatisfied: no versions for package
           │   └── requires python>=3.7
           └── b-3.0.0
+              ├── requires c
+                  └── unsatisfied: no versions for package
               └── requires python>=3.7
       
   

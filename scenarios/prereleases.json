@@ -13,6 +13,13 @@
                     "1.0.0a1": {}
                 }
             }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0a1"
+            },
+            "explanation": "Since there are only pre-release versions of `a` available, it should be installed even though the user did not include a pre-release specifier."
         }
     },
     {
@@ -30,6 +37,10 @@
                     "1.0.0a1": {}
                 }
             }
+        },
+        "expected": {
+            "satisfiable": false,
+            "explanation": "Since there are final versions of `a` available, pre-release versions should not be selected without explicit opt-in."
         }
     },
     {
@@ -47,6 +58,13 @@
                     "1.0.0a1": {}
                 }
             }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "0.1.0"
+            },
+            "explanation": "Since the user did not provide a pre-release specifier, the older final version should be selected."
         }
     },
     {
@@ -65,6 +83,13 @@
                     "0.3.0": {}
                 }
             }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "0.3.0"
+            },
+            "explanation": "The latest final version should be selected."
         }
     },
     {
@@ -83,6 +108,13 @@
                     "0.3.0a1": {}
                 }
             }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "0.3.0a1"
+            },
+            "explanation": "The latest pre-release version should be selected."
         }
     },
     {
@@ -102,6 +134,13 @@
                     "1.0.0a1": {}
                 }
             }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0a1"
+            },
+            "explanation": "Since the user provided a pre-release specifier, the latest pre-release version should be selected."
         }
     },
     {
@@ -120,6 +159,13 @@
                     "1.0.0rc1": {}
                 }
             }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0rc1"
+            },
+            "explanation": "Release candidates should be the highest precedence pre-release kind."
         }
     },
     {
@@ -138,11 +184,18 @@
                     "1.0.0a3": {}
                 }
             }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0a3"
+            },
+            "explanation": "The latest alpha version should be selected."
         }
     },
     {
         "name": "requires-transitive-package-only-prereleases",
-        "description": "The user requires any version of package `a` which only has pre-release versions available.",
+        "description": "The user requires any version of package `a` which requires `b` which only has pre-release versions available.",
         "root": {
             "requires": [
                 "a"
@@ -163,11 +216,19 @@
                     "1.0.0a1": {}
                 }
             }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "0.1.0",
+                "b": "1.0.0a1"
+            },
+            "explanation": "Since there are only pre-release versions of `b` available, it should be selected even though the user did not opt-in to pre-releases."
         }
     },
     {
         "name": "requires-transitive-package-only-prereleases-in-range",
-        "description": "The user requires package `a` which has a dependency on a package which only matches pre-release versions but they did not include a prerelease specifier.",
+        "description": "The user requires package `a` which has a dependency on a package which only matches pre-release versions but they did not include a pre-release specifier.",
         "root": {
             "requires": [
                 "a"
@@ -189,6 +250,10 @@
                     "1.0.0a1": {}
                 }
             }
+        },
+        "expected": {
+            "satisfiable": false,
+            "explanation": "Since there are final versions of `b` available, the pre-release version should not be selected without explicit opt-in. The available version is excluded by the range requested by the user."
         }
     },
     {
@@ -216,6 +281,14 @@
                     "1.0.0a1": {}
                 }
             }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "0.1.0",
+                "b": "1.0.0a1"
+            },
+            "explanation": "Since the user included a dependency on `b` with a pre-release specifier, a pre-release version can be selected."
         }
     }
 ]
