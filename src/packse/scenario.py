@@ -78,6 +78,42 @@ class Package(msgspec.Struct):
         return hasher.hexdigest()
 
 
+class Expected(msgspec.Struct):
+    """
+    The expected outcome of a scenario.
+    """
+
+    satisfiable: bool
+    """
+    Are the packages in the scenario resolvable?
+    """
+
+    packages: dict[PackageName, PackageVersion] = {}
+    """
+    The expected versions to be installed for each package in the scenario.
+
+    Only relevant if `satisfiable` is true.
+    """
+
+    explanation: str | None = None
+    """
+    An optional explanation for the expected result.
+    """
+
+    def hash(self) -> str:
+        """
+        Return a hash of the contents
+        """
+        hasher = hashlib.new("md5", usedforsecurity=False)
+        hasher.update(str(self.satisfiable).encode())
+        if self.explanation:
+            hasher.update(self.explanation.encode())
+        for name, package in self.packages.items():
+            hasher.update(name.encode())
+            hasher.update(package.encode())
+        return hasher.hexdigest()
+
+
 class Scenario(msgspec.Struct):
     name: str
     """
@@ -92,6 +128,11 @@ class Scenario(msgspec.Struct):
     root: RootPackageMetadata
     """
     The root package of the scenario.
+    """
+
+    expected: Expected
+    """
+    The expected result when resolving the scenario.
     """
 
     environment: EnvironmentMetadata = msgspec.field(
@@ -120,6 +161,7 @@ class Scenario(msgspec.Struct):
         hasher.update(self.template.encode())
         hasher.update(self.root.hash().encode())
         hasher.update(self.environment.hash().encode())
+        hasher.update(self.expected.hash().encode())
         for name, package in self.packages.items():
             hasher.update(name.encode())
             hasher.update(package.hash().encode())

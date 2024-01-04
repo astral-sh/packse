@@ -15,6 +15,9 @@
                     }
                 }
             }
+        },
+        "expected": {
+            "satisfiable": false
         }
     },
     {
@@ -36,6 +39,9 @@
                     }
                 }
             }
+        },
+        "expected": {
+            "satisfiable": false
         }
     },
     {
@@ -57,6 +63,9 @@
                     }
                 }
             }
+        },
+        "expected": {
+            "satisfiable": false
         }
     },
     {
@@ -111,6 +120,9 @@
                     }
                 }
             }
+        },
+        "expected": {
+            "satisfiable": false
         }
     },
     {
@@ -140,6 +152,12 @@
                         "requires_python": ">=3.12"
                     }
                 }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0"
             }
         }
     },
@@ -171,6 +189,9 @@
                     }
                 }
             }
+        },
+        "expected": {
+            "satisfiable": false
         }
     }
 ]

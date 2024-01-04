@@ -15,6 +15,9 @@
                     "2.0.0": {}
                 }
             }
+        },
+        "expected": {
+            "satisfiable": false
         }
     },
     {
@@ -42,6 +45,9 @@
                     "2.0.0": {}
                 }
             }
+        },
+        "expected": {
+            "satisfiable": false
         }
     },
     {
@@ -78,6 +84,9 @@
                     "2.0.0": {}
                 }
             }
+        },
+        "expected": {
+            "satisfiable": false
         }
     }
 ]

@@ -33,16 +33,16 @@
                   },
                   "2.0.0": {
                     "requires_python": ">=3.7",
-                    "requires": [
-                      "c"
-                    ],
+                    "requires": [],
                     "sdist": true,
                     "wheel": true,
                     "description": ""
                   },
                   "3.0.0": {
                     "requires_python": ">=3.7",
-                    "requires": [],
+                    "requires": [
+                      "c"
+                    ],
                     "sdist": true,
                     "wheel": true,
                     "description": ""
@@ -56,13 +56,21 @@
                 "a"
               ]
             },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "1.0.0",
+                "b": "3.0.0"
+              },
+              "explanation": "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
-            "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`",
+            "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
             "source": "[PWD]/scenarios/example.json",
-            "prefix": "example-4287e2f2",
+            "prefix": "example-97db95eb",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -79,10 +87,10 @@
               "    \u251c\u2500\u2500 b-1.0.0",
               "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
               "    \u251c\u2500\u2500 b-2.0.0",
-              "    \u2502   \u251c\u2500\u2500 requires c",
-              "    \u2502       \u2514\u2500\u2500 unsatisfied: no versions for package",
               "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
               "    \u2514\u2500\u2500 b-3.0.0",
+              "        \u251c\u2500\u2500 requires c",
+              "            \u2514\u2500\u2500 unsatisfied: no versions for package",
               "        \u2514\u2500\u2500 requires python>=3.7"
             ]
           }
@@ -136,16 +144,16 @@
                   },
                   "2.0.0": {
                     "requires_python": ">=3.7",
-                    "requires": [
-                      "c"
-                    ],
+                    "requires": [],
                     "sdist": true,
                     "wheel": true,
                     "description": ""
                   },
                   "3.0.0": {
                     "requires_python": ">=3.7",
-                    "requires": [],
+                    "requires": [
+                      "c"
+                    ],
                     "sdist": true,
                     "wheel": true,
                     "description": ""
@@ -159,13 +167,21 @@
                 "a"
               ]
             },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "1.0.0",
+                "b": "3.0.0"
+              },
+              "explanation": "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
-            "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`",
+            "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
             "source": "[PROJECT_ROOT]/scenarios/example.json",
-            "prefix": "example-4287e2f2",
+            "prefix": "example-97db95eb",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -182,10 +198,10 @@
               "    \u251c\u2500\u2500 b-1.0.0",
               "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
               "    \u251c\u2500\u2500 b-2.0.0",
-              "    \u2502   \u251c\u2500\u2500 requires c",
-              "    \u2502       \u2514\u2500\u2500 unsatisfied: no versions for package",
               "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
               "    \u2514\u2500\u2500 b-3.0.0",
+              "        \u251c\u2500\u2500 requires c",
+              "            \u2514\u2500\u2500 unsatisfied: no versions for package",
               "        \u2514\u2500\u2500 requires python>=3.7"
             ]
           }
@@ -229,16 +245,16 @@
                   },
                   "2.0.0": {
                     "requires_python": ">=3.7",
-                    "requires": [
-                      "c"
-                    ],
+                    "requires": [],
                     "sdist": true,
                     "wheel": true,
                     "description": ""
                   },
                   "3.0.0": {
                     "requires_python": ">=3.7",
-                    "requires": [],
+                    "requires": [
+                      "c"
+                    ],
                     "sdist": true,
                     "wheel": true,
                     "description": ""
@@ -252,13 +268,21 @@
                 "a"
               ]
             },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "1.0.0",
+                "b": "3.0.0"
+              },
+              "explanation": "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
-            "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`",
+            "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
             "source": "[PWD]/scenarios/example.json",
-            "prefix": "example-4287e2f2",
+            "prefix": "example-97db95eb",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -275,10 +299,10 @@
               "    \u251c\u2500\u2500 b-1.0.0",
               "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
               "    \u251c\u2500\u2500 b-2.0.0",
-              "    \u2502   \u251c\u2500\u2500 requires c",
-              "    \u2502       \u2514\u2500\u2500 unsatisfied: no versions for package",
               "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
               "    \u2514\u2500\u2500 b-3.0.0",
+              "        \u251c\u2500\u2500 requires c",
+              "            \u2514\u2500\u2500 unsatisfied: no versions for package",
               "        \u2514\u2500\u2500 requires python>=3.7"
             ]
           },
@@ -303,13 +327,20 @@
                 "a"
               ]
             },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "1.0.0a1"
+              },
+              "explanation": "Since there are only pre-release versions of `a` available, it should be installed even though the user did not include a pre-release specifier."
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires any version of package `a` which only has pre-release versions available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-only-prereleases-11aca5f4",
+            "prefix": "requires-package-only-prereleases-5829a64d",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -349,13 +380,18 @@
                 "a>0.1.0"
               ]
             },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": "Since there are final versions of `a` available, pre-release versions should not be selected without explicit opt-in."
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires a version of package `a` which only matches pre-release versions but they did not include a prerelease specifier.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-only-prereleases-in-range-bc409bd0",
+            "prefix": "requires-package-only-prereleases-in-range-12a9315d",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -397,13 +433,20 @@
                 "a"
               ]
             },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "0.1.0"
+              },
+              "explanation": "Since the user did not provide a pre-release specifier, the older final version should be selected."
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires any version of package `a` has a pre-release version available and an older non-prerelease version.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-prerelease-and-final-any-c18a46ab",
+            "prefix": "requires-package-prerelease-and-final-any-19abc200",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -452,13 +495,20 @@
                 "a>=0.1.0a1"
               ]
             },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "0.3.0"
+              },
+              "explanation": "The latest final version should be selected."
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires a version of `a` with a pre-release specifier and only final releases are available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-prerelease-specified-only-final-available-909404f2",
+            "prefix": "requires-package-prerelease-specified-only-final-available-2ad40ba1",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -511,13 +561,20 @@
                 "a>=0.1.0a1"
               ]
             },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "0.3.0a1"
+              },
+              "explanation": "The latest pre-release version should be selected."
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires a version of `a` with a pre-release specifier and only pre-release releases are available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-prerelease-specified-only-prerelease-available-5c9b204c",
+            "prefix": "requires-package-prerelease-specified-only-prerelease-available-fa8a64e0",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -577,13 +634,20 @@
                 "a>=0.1.0a1"
               ]
             },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "1.0.0a1"
+              },
+              "explanation": "Since the user provided a pre-release specifier, the latest pre-release version should be selected."
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires a version of `a` with a pre-release specifier and both pre-release and final releases are available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-prerelease-specified-mixed-available-65974a95",
+            "prefix": "requires-package-prerelease-specified-mixed-available-caf5dd1a",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -639,13 +703,20 @@
                 "a>=1.0.0a1"
               ]
             },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "1.0.0rc1"
+              },
+              "explanation": "Release candidates should be the highest precedence pre-release kind."
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires `a` which has multiple prereleases available with different labels.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-multiple-prereleases-kinds-a37dce95",
+            "prefix": "requires-package-multiple-prereleases-kinds-08c2f99b",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -698,13 +769,20 @@
                 "a>=1.0.0a1"
               ]
             },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "1.0.0a3"
+              },
+              "explanation": "The latest alpha version should be selected."
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires `a` which has multiple alphas available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-multiple-prereleases-numbers-4c3655b7",
+            "prefix": "requires-package-multiple-prereleases-numbers-4cf7acef",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -756,13 +834,21 @@
                 "a"
               ]
             },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "0.1.0",
+                "b": "1.0.0a1"
+              },
+              "explanation": "Since there are only pre-release versions of `b` available, it should be selected even though the user did not opt-in to pre-releases."
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
-            "description": "The user requires any version of package `a` which only has pre-release versions available.",
+            "description": "The user requires any version of package `a` which requires `b` which only has pre-release versions available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-transitive-package-only-prereleases-2e76f091",
+            "prefix": "requires-transitive-package-only-prereleases-fa02005e",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -820,13 +906,18 @@
                 "a"
               ]
             },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": "Since there are final versions of `b` available, the pre-release version should not be selected without explicit opt-in. The available version is excluded by the range requested by the user."
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
-            "description": "The user requires package `a` which has a dependency on a package which only matches pre-release versions but they did not include a prerelease specifier.",
+            "description": "The user requires package `a` which has a dependency on a package which only matches pre-release versions but they did not include a pre-release specifier.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-transitive-package-only-prereleases-in-range-a25044b5",
+            "prefix": "requires-transitive-package-only-prereleases-in-range-f859ef9f",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -887,13 +978,21 @@
                 "b>0.0.0a1"
               ]
             },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "0.1.0",
+                "b": "1.0.0a1"
+              },
+              "explanation": "Since the user included a dependency on `b` with a pre-release specifier, a pre-release version can be selected."
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires package `a` which has a dependency on a package which only matches pre-release versions; the user has opted into allowing prereleases in `b` explicitly.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc",
+            "prefix": "requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -923,13 +1022,18 @@
                 "a"
               ]
             },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires any version of package `a` which does not exist.",
             "source": "[PWD]/scenarios/requires-does-not-exist.json",
-            "prefix": "requires-package-does-not-exist-bc7df012",
+            "prefix": "requires-package-does-not-exist-57cd4136",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -959,13 +1063,18 @@
                 "a==2.0.0"
               ]
             },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires an exact version of package `a` but only other versions exist",
             "source": "[PWD]/scenarios/requires-does-not-exist.json",
-            "prefix": "requires-exact-version-does-not-exist-c275ce96",
+            "prefix": "requires-exact-version-does-not-exist-eaa03067",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1005,13 +1114,18 @@
                 "a>1.0.0"
               ]
             },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires a version of `a` greater than `1.0.0` but only smaller or equal versions exist",
             "source": "[PWD]/scenarios/requires-does-not-exist.json",
-            "prefix": "requires-greater-version-does-not-exist-d34821ba",
+            "prefix": "requires-greater-version-does-not-exist-6e8e01df",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1060,13 +1174,18 @@
                 "a<2.0.0"
               ]
             },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires a version of `a` less than `1.0.0` but only larger versions exist",
             "source": "[PWD]/scenarios/requires-does-not-exist.json",
-            "prefix": "requires-less-version-does-not-exist-4088ec1b",
+            "prefix": "requires-less-version-does-not-exist-e45cec3c",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1105,13 +1224,18 @@
                 "a"
               ]
             },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires package `a` but `a` requires package `b` which does not exist",
             "source": "[PWD]/scenarios/requires-does-not-exist.json",
-            "prefix": "transitive-requires-package-does-not-exist-63ca5a54",
+            "prefix": "transitive-requires-package-does-not-exist-aca2796a",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1154,13 +1278,18 @@
                 "a==2.0.0"
               ]
             },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires two incompatible, existing versions of package `a`",
             "source": "[PWD]/scenarios/requires-incompatible-versions.json",
-            "prefix": "requires-direct-incompatible-versions-1432ee4c",
+            "prefix": "requires-direct-incompatible-versions-063ec9d3",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1218,13 +1347,18 @@
                 "b==1.0.0"
               ]
             },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires packages `a` and `b` but `a` requires a different version of `b`",
             "source": "[PWD]/scenarios/requires-incompatible-versions.json",
-            "prefix": "requires-transitive-incompatible-with-root-version-b3c83bbd",
+            "prefix": "requires-transitive-incompatible-with-root-version-638350f3",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1300,13 +1434,18 @@
                 "b"
               ]
             },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires package `a` and `b`; `a` and `b` require different versions of `c`",
             "source": "[PWD]/scenarios/requires-incompatible-versions.json",
-            "prefix": "requires-transitive-incompatible-with-transitive-a35362d1",
+            "prefix": "requires-transitive-incompatible-with-transitive-9b595175",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1353,13 +1492,18 @@
                 "a==1.0.0"
               ]
             },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
             "environment": {
               "python": "3.7"
             },
             "template": "simple",
             "description": "The user requires a package which requires a Python version that does not exist",
             "source": "[PWD]/scenarios/requires-python.json",
-            "prefix": "requires-python-version-does-not-exist-d1fc625b",
+            "prefix": "requires-python-version-does-not-exist-0825b69c",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1392,13 +1536,18 @@
                 "a==1.0.0"
               ]
             },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
             "environment": {
               "python": "3.9"
             },
             "template": "simple",
             "description": "The user requires a package which requires a Python version less than the current version",
             "source": "[PWD]/scenarios/requires-python.json",
-            "prefix": "requires-python-version-less-than-current-48bada28",
+            "prefix": "requires-python-version-less-than-current-f9296b84",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.9",
@@ -1431,13 +1580,18 @@
                 "a==1.0.0"
               ]
             },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
             "environment": {
               "python": "3.9"
             },
             "template": "simple",
             "description": "The user requires a package which requires a Python version greater than the current version",
             "source": "[PWD]/scenarios/requires-python.json",
-            "prefix": "requires-python-version-greater-than-current-00f79f44",
+            "prefix": "requires-python-version-greater-than-current-a11d5394",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.9",
@@ -1547,13 +1701,18 @@
                 "a==1.0.0"
               ]
             },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
             "environment": {
               "python": "3.9"
             },
             "template": "simple",
             "description": "The user requires a package which has many versions which all require a Python version greater than the current version",
             "source": "[PWD]/scenarios/requires-python.json",
-            "prefix": "requires-python-version-greater-than-current-many-b33dc0cb",
+            "prefix": "requires-python-version-greater-than-current-many-02dc550c",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.9",
@@ -1629,13 +1788,20 @@
                 "a"
               ]
             },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "1.0.0"
+              },
+              "explanation": null
+            },
             "environment": {
               "python": "3.9"
             },
             "template": "simple",
             "description": "The user requires a package where recent versions require a Python version greater than the current version, but an older version is compatible.",
             "source": "[PWD]/scenarios/requires-python.json",
-            "prefix": "requires-python-version-greater-than-current-backtrack-d756219a",
+            "prefix": "requires-python-version-greater-than-current-backtrack-ef060cef",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.9",
@@ -1698,13 +1864,18 @@
                 "a>=2.0.0"
               ]
             },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
             "environment": {
               "python": "3.9"
             },
             "template": "simple",
             "description": "The user requires a package where recent versions require a Python version greater than the current version, but an excluded older version is compatible.",
             "source": "[PWD]/scenarios/requires-python.json",
-            "prefix": "requires-python-version-greater-than-current-excluded-7869d97e",
+            "prefix": "requires-python-version-greater-than-current-excluded-1bde0c18",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.9",
