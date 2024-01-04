@@ -44,6 +44,32 @@
         }
     },
     {
+        "name": "requires-package-only-prereleases-in-range-global-opt-in",
+        "description": "The user requires a version of package `a` which only matches pre-release versions. They did not include a prerelease specifier for the package, but they opted into pre-releases globally.",
+        "environment": {
+            "prereleases": true
+        },
+        "root": {
+            "requires": [
+                "a>0.1.0"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {},
+                    "1.0.0a1": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0a1"
+            }
+        }
+    },
+    {
         "name": "requires-package-prerelease-and-final-any",
         "description": "The user requires any version of package `a` has a pre-release version available and an older non-prerelease version.",
         "root": {

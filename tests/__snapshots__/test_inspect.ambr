@@ -65,7 +65,8 @@
               "explanation": "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
@@ -176,7 +177,8 @@
               "explanation": "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
@@ -277,7 +279,8 @@
               "explanation": "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
@@ -335,7 +338,8 @@
               "explanation": "Since there are only pre-release versions of `a` available, it should be installed even though the user did not include a pre-release specifier."
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires any version of package `a` which only has pre-release versions available.",
@@ -386,12 +390,69 @@
               "explanation": "Since there are stable versions of `a` available, pre-release versions should not be selected without explicit opt-in."
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a version of package `a` which only matches pre-release versions but they did not include a prerelease specifier.",
             "source": "[PWD]/scenarios/prereleases.json",
             "prefix": "requires-package-only-prereleases-in-range-2b0594c8",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a>0.1.0",
+              "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-0.1.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 a-1.0.0a1",
+              "        \u2514\u2500\u2500 requires python>=3.7"
+            ]
+          },
+          {
+            "name": "requires-package-only-prereleases-in-range-global-opt-in",
+            "packages": {
+              "a": {
+                "versions": {
+                  "0.1.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "1.0.0a1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a>0.1.0"
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "1.0.0a1"
+              },
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": true
+            },
+            "template": "simple",
+            "description": "The user requires a version of package `a` which only matches pre-release versions. They did not include a prerelease specifier for the package, but they opted into pre-releases globally.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "prefix": "requires-package-only-prereleases-in-range-global-opt-in-51f94da2",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -441,7 +502,8 @@
               "explanation": "Since the user did not provide a pre-release specifier, the older stable version should be selected."
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires any version of package `a` has a pre-release version available and an older non-prerelease version.",
@@ -503,7 +565,8 @@
               "explanation": "The latest stable version should be selected."
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a version of `a` with a pre-release specifier and only stable releases are available.",
@@ -569,7 +632,8 @@
               "explanation": "The latest pre-release version should be selected."
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a version of `a` with a pre-release specifier and only pre-release releases are available.",
@@ -642,7 +706,8 @@
               "explanation": "Since the user provided a pre-release specifier, the latest pre-release version should be selected."
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a version of `a` with a pre-release specifier and both pre-release and stable releases are available.",
@@ -711,7 +776,8 @@
               "explanation": "Release candidates should be the highest precedence pre-release kind."
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires `a` which has multiple prereleases available with different labels.",
@@ -777,7 +843,8 @@
               "explanation": "The latest alpha version should be selected."
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires `a` which has multiple alphas available.",
@@ -843,7 +910,8 @@
               "explanation": "Since there are only pre-release versions of `b` available, it should be selected even though the user did not opt-in to pre-releases."
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires any version of package `a` which requires `b` which only has pre-release versions available.",
@@ -912,7 +980,8 @@
               "explanation": "Since there are stable versions of `b` available, the pre-release version should not be selected without explicit opt-in. The available version is excluded by the range requested by the user."
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires package `a` which has a dependency on a package which only matches pre-release versions but they did not include a pre-release specifier.",
@@ -987,7 +1056,8 @@
               "explanation": "Since the user included a dependency on `b` with a pre-release specifier, a pre-release version can be selected."
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires package `a` which has a dependency on a package which only matches pre-release versions; the user has opted into allowing prereleases in `b` explicitly.",
@@ -1074,7 +1144,8 @@
               "explanation": "Since the user did not explicitly opt-in to a prerelease, it cannot be selected."
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease",
@@ -1171,7 +1242,8 @@
               "explanation": "Since the user explicitly opted-in to a prerelease for `c`, it can be installed."
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. The user includes an opt-in to prereleases of the transitive dependency.",
@@ -1220,7 +1292,8 @@
               "explanation": null
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires any version of package `a` which does not exist.",
@@ -1261,7 +1334,8 @@
               "explanation": null
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires an exact version of package `a` but only other versions exist",
@@ -1312,7 +1386,8 @@
               "explanation": null
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a version of `a` greater than `1.0.0` but only smaller or equal versions exist",
@@ -1372,7 +1447,8 @@
               "explanation": null
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a version of `a` less than `1.0.0` but only larger versions exist",
@@ -1422,7 +1498,8 @@
               "explanation": null
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires package `a` but `a` requires package `b` which does not exist",
@@ -1476,7 +1553,8 @@
               "explanation": null
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires two incompatible, existing versions of package `a`",
@@ -1545,7 +1623,8 @@
               "explanation": null
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires packages `a` and `b` but `a` requires a different version of `b`",
@@ -1632,7 +1711,8 @@
               "explanation": null
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires package `a` and `b`; `a` and `b` require different versions of `c`",
@@ -1690,7 +1770,8 @@
               "explanation": null
             },
             "environment": {
-              "python": "3.7"
+              "python": "3.7",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a package which requires a Python version that does not exist",
@@ -1734,7 +1815,8 @@
               "explanation": null
             },
             "environment": {
-              "python": "3.9"
+              "python": "3.9",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a package which requires a Python version less than the current version",
@@ -1778,7 +1860,8 @@
               "explanation": null
             },
             "environment": {
-              "python": "3.9"
+              "python": "3.9",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a package which requires a Python version greater than the current version",
@@ -1899,7 +1982,8 @@
               "explanation": null
             },
             "environment": {
-              "python": "3.9"
+              "python": "3.9",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a package which has many versions which all require a Python version greater than the current version",
@@ -1988,7 +2072,8 @@
               "explanation": null
             },
             "environment": {
-              "python": "3.9"
+              "python": "3.9",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a package where recent versions require a Python version greater than the current version, but an older version is compatible.",
@@ -2062,7 +2147,8 @@
               "explanation": null
             },
             "environment": {
-              "python": "3.9"
+              "python": "3.9",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a package where recent versions require a Python version greater than the current version, but an excluded older version is compatible.",

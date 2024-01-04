@@ -230,6 +230,57 @@
         __version__ = "1.0.0a1"
   
       ''',
+      'build/requires-package-only-prereleases-in-range-global-opt-in-51f94da2/requires-package-only-prereleases-in-range-global-opt-in-51f94da2-0.0.0/pyproject.toml': 'md5:93302a76233441ecb142adbdf4ae149b',
+      'build/requires-package-only-prereleases-in-range-global-opt-in-51f94da2/requires-package-only-prereleases-in-range-global-opt-in-51f94da2-0.0.0/src/requires_package_only_prereleases_in_range_global_opt_in_51f94da2/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-package-only-prereleases-in-range-global-opt-in-51f94da2/requires-package-only-prereleases-in-range-global-opt-in-51f94da2-a-0.1.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_only_prereleases_in_range_global_opt_in_51f94da2_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_only_prereleases_in_range_global_opt_in_51f94da2_a"]
+        
+        [project]
+        name = "requires-package-only-prereleases-in-range-global-opt-in-51f94da2-a"
+        version = "0.1.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-only-prereleases-in-range-global-opt-in-51f94da2/requires-package-only-prereleases-in-range-global-opt-in-51f94da2-a-0.1.0/src/requires_package_only_prereleases_in_range_global_opt_in_51f94da2_a/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/requires-package-only-prereleases-in-range-global-opt-in-51f94da2/requires-package-only-prereleases-in-range-global-opt-in-51f94da2-a-1.0.0a1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_only_prereleases_in_range_global_opt_in_51f94da2_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_only_prereleases_in_range_global_opt_in_51f94da2_a"]
+        
+        [project]
+        name = "requires-package-only-prereleases-in-range-global-opt-in-51f94da2-a"
+        version = "1.0.0a1"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-package-only-prereleases-in-range-global-opt-in-51f94da2/requires-package-only-prereleases-in-range-global-opt-in-51f94da2-a-1.0.0a1/src/requires_package_only_prereleases_in_range_global_opt_in_51f94da2_a/__init__.py': '''
+        __version__ = "1.0.0a1"
+  
+      ''',
       'build/requires-package-prerelease-and-final-any-66989e88/requires-package-prerelease-and-final-any-66989e88-0.0.0/pyproject.toml': 'md5:6b708eaf51d18699ea57aab003bb7b97',
       'build/requires-package-prerelease-and-final-any-66989e88/requires-package-prerelease-and-final-any-66989e88-0.0.0/src/requires_package_prerelease_and_final_any_66989e88/__init__.py': '''
         __version__ = "0.0.0"
@@ -743,6 +794,11 @@
       'dist/requires-package-only-prereleases-in-range-2b0594c8/requires_package_only_prereleases_in_range_2b0594c8_a-0.1.0.tar.gz': 'md5:6b278e9892e9e1da72d4f84a6069c13e',
       'dist/requires-package-only-prereleases-in-range-2b0594c8/requires_package_only_prereleases_in_range_2b0594c8_a-1.0.0a1-py3-none-any.whl': 'md5:6aaa4011730b855cba8ebe4ba07317a7',
       'dist/requires-package-only-prereleases-in-range-2b0594c8/requires_package_only_prereleases_in_range_2b0594c8_a-1.0.0a1.tar.gz': 'md5:cf24d120a10714945fd938570bd12eb7',
+      'dist/requires-package-only-prereleases-in-range-global-opt-in-51f94da2/requires_package_only_prereleases_in_range_global_opt_in_51f94da2-0.0.0.tar.gz': 'md5:3e31853bea3433a8e8b6cb8f20a0437a',
+      'dist/requires-package-only-prereleases-in-range-global-opt-in-51f94da2/requires_package_only_prereleases_in_range_global_opt_in_51f94da2_a-0.1.0-py3-none-any.whl': 'md5:28a7c4a669f40f1ce6593adaecb1aafe',
+      'dist/requires-package-only-prereleases-in-range-global-opt-in-51f94da2/requires_package_only_prereleases_in_range_global_opt_in_51f94da2_a-0.1.0.tar.gz': 'md5:ed8c7560b326aba9bff34efcff0c909e',
+      'dist/requires-package-only-prereleases-in-range-global-opt-in-51f94da2/requires_package_only_prereleases_in_range_global_opt_in_51f94da2_a-1.0.0a1-py3-none-any.whl': 'md5:aab94c7ec1faa26fe2084b3090dbd93b',
+      'dist/requires-package-only-prereleases-in-range-global-opt-in-51f94da2/requires_package_only_prereleases_in_range_global_opt_in_51f94da2_a-1.0.0a1.tar.gz': 'md5:db6e3a94a109f64c4a1fcc8b79621760',
       'dist/requires-package-prerelease-and-final-any-66989e88/requires_package_prerelease_and_final_any_66989e88-0.0.0.tar.gz': 'md5:a7d840baf27d246077666cdebfafc96d',
       'dist/requires-package-prerelease-and-final-any-66989e88/requires_package_prerelease_and_final_any_66989e88_a-0.1.0-py3-none-any.whl': 'md5:69602eae5fe2bff1cada0649a1cc5947',
       'dist/requires-package-prerelease-and-final-any-66989e88/requires_package_prerelease_and_final_any_66989e88_a-0.1.0.tar.gz': 'md5:6b85e60d4aadd39372392d199a61012b',
@@ -879,6 +935,22 @@
         │   │       ├── pyproject.toml
         │   │       └── src
         │   │           └── requires_package_only_prereleases_in_range_2b0594c8_a
+        │   │               └── __init__.py
+        │   ├── requires-package-only-prereleases-in-range-global-opt-in-51f94da2
+        │   │   ├── requires-package-only-prereleases-in-range-global-opt-in-51f94da2-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_only_prereleases_in_range_global_opt_in_51f94da2
+        │   │   │           └── __init__.py
+        │   │   ├── requires-package-only-prereleases-in-range-global-opt-in-51f94da2-a-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_only_prereleases_in_range_global_opt_in_51f94da2_a
+        │   │   │           └── __init__.py
+        │   │   └── requires-package-only-prereleases-in-range-global-opt-in-51f94da2-a-1.0.0a1
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_package_only_prereleases_in_range_global_opt_in_51f94da2_a
         │   │               └── __init__.py
         │   ├── requires-package-prerelease-and-final-any-66989e88
         │   │   ├── requires-package-prerelease-and-final-any-66989e88-0.0.0
@@ -1101,6 +1173,12 @@
             │   ├── requires_package_only_prereleases_in_range_2b0594c8_a-0.1.0.tar.gz
             │   ├── requires_package_only_prereleases_in_range_2b0594c8_a-1.0.0a1-py3-none-any.whl
             │   └── requires_package_only_prereleases_in_range_2b0594c8_a-1.0.0a1.tar.gz
+            ├── requires-package-only-prereleases-in-range-global-opt-in-51f94da2
+            │   ├── requires_package_only_prereleases_in_range_global_opt_in_51f94da2-0.0.0.tar.gz
+            │   ├── requires_package_only_prereleases_in_range_global_opt_in_51f94da2_a-0.1.0-py3-none-any.whl
+            │   ├── requires_package_only_prereleases_in_range_global_opt_in_51f94da2_a-0.1.0.tar.gz
+            │   ├── requires_package_only_prereleases_in_range_global_opt_in_51f94da2_a-1.0.0a1-py3-none-any.whl
+            │   └── requires_package_only_prereleases_in_range_global_opt_in_51f94da2_a-1.0.0a1.tar.gz
             ├── requires-package-prerelease-and-final-any-66989e88
             │   ├── requires_package_prerelease_and_final_any_66989e88-0.0.0.tar.gz
             │   ├── requires_package_prerelease_and_final_any_66989e88_a-0.1.0-py3-none-any.whl
@@ -1176,7 +1254,7 @@
                 ├── requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c-2.0.0b1-py3-none-any.whl
                 └── requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c-2.0.0b1.tar.gz
         
-        178 directories, 187 files
+        189 directories, 198 files
   
       ''',
     }),
@@ -1186,6 +1264,7 @@
       requires-package-multiple-prereleases-numbers-4cf7acef
       requires-package-only-prereleases-5829a64d
       requires-package-only-prereleases-in-range-2b0594c8
+      requires-package-only-prereleases-in-range-global-opt-in-51f94da2
       requires-package-prerelease-and-final-any-66989e88
       requires-package-prerelease-specified-mixed-available-caf5dd1a
       requires-package-prerelease-specified-only-final-available-8c3e26d4
@@ -2684,6 +2763,18 @@
               └── requires python>=3.7
       
       requires-package-only-prereleases-in-range-2b0594c8
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a>0.1.0
+      │       └── unsatisfied: no matching version
+      └── a
+          ├── a-0.1.0
+          │   └── requires python>=3.7
+          └── a-1.0.0a1
+              └── requires python>=3.7
+      
+      requires-package-only-prereleases-in-range-global-opt-in-51f94da2
       ├── environment
       │   └── python3.7
       ├── root

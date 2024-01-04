@@ -54,6 +54,14 @@ class RootPackageMetadata(msgspec.Struct):
 
 class EnvironmentMetadata(msgspec.Struct):
     python: str = "3.7"
+    """
+    The Python version being used.
+    """
+
+    prereleases: bool = False
+    """
+    If selection of prereleases should be enabled for all packages.
+    """
 
     def hash(self) -> str:
         """
