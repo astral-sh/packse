@@ -599,6 +599,128 @@
         __version__ = "1.0.0a1"
   
       ''',
+      'build/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires-transitive-prerelease-and-stable-dependency-31b546ef-0.0.0/pyproject.toml': 'md5:744899dc59c9a8c011de0d0e38fe2321',
+      'build/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires-transitive-prerelease-and-stable-dependency-31b546ef-0.0.0/src/requires_transitive_prerelease_and_stable_dependency_31b546ef/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires-transitive-prerelease-and-stable-dependency-31b546ef-a-1.0.0/pyproject.toml': 'md5:ed46bc02a42f91ba20d6cecd7050c06d',
+      'build/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires-transitive-prerelease-and-stable-dependency-31b546ef-a-1.0.0/src/requires_transitive_prerelease_and_stable_dependency_31b546ef_a/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires-transitive-prerelease-and-stable-dependency-31b546ef-b-1.0.0/pyproject.toml': 'md5:a1bcd1e327a1c5a6a2ec116582d6bbe4',
+      'build/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires-transitive-prerelease-and-stable-dependency-31b546ef-b-1.0.0/src/requires_transitive_prerelease_and_stable_dependency_31b546ef_b/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires-transitive-prerelease-and-stable-dependency-31b546ef-c-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_transitive_prerelease_and_stable_dependency_31b546ef_c"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_transitive_prerelease_and_stable_dependency_31b546ef_c"]
+        
+        [project]
+        name = "requires-transitive-prerelease-and-stable-dependency-31b546ef-c"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires-transitive-prerelease-and-stable-dependency-31b546ef-c-1.0.0/src/requires_transitive_prerelease_and_stable_dependency_31b546ef_c/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires-transitive-prerelease-and-stable-dependency-31b546ef-c-2.0.0b1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_transitive_prerelease_and_stable_dependency_31b546ef_c"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_transitive_prerelease_and_stable_dependency_31b546ef_c"]
+        
+        [project]
+        name = "requires-transitive-prerelease-and-stable-dependency-31b546ef-c"
+        version = "2.0.0b1"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires-transitive-prerelease-and-stable-dependency-31b546ef-c-2.0.0b1/src/requires_transitive_prerelease_and_stable_dependency_31b546ef_c/__init__.py': '''
+        __version__ = "2.0.0b1"
+  
+      ''',
+      'build/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f-0.0.0/pyproject.toml': 'md5:ede31dce56678250fc3eba25cd69f389',
+      'build/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f-0.0.0/src/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f-a-1.0.0/pyproject.toml': 'md5:074467fbbfb9942c02a2f8ed4eceb5e0',
+      'build/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f-a-1.0.0/src/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_a/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f-b-1.0.0/pyproject.toml': 'md5:7593af06c62b12f82b3941b4470abbbf',
+      'build/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f-b-1.0.0/src/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_b/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f-c-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c"]
+        
+        [project]
+        name = "requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f-c"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f-c-1.0.0/src/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f-c-2.0.0b1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c"]
+        
+        [project]
+        name = "requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f-c"
+        version = "2.0.0b1"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f-c-2.0.0b1/src/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c/__init__.py': '''
+        __version__ = "2.0.0b1"
+  
+      ''',
       'dist/requires-package-multiple-prereleases-kinds-08c2f99b/requires_package_multiple_prereleases_kinds_08c2f99b-0.0.0.tar.gz': 'md5:4b3387dea156733cd0de035fc15fc5d8',
       'dist/requires-package-multiple-prereleases-kinds-08c2f99b/requires_package_multiple_prereleases_kinds_08c2f99b_a-1.0.0a1-py3-none-any.whl': 'md5:585e7c3b94a1fb06b10d8b806922c168',
       'dist/requires-package-multiple-prereleases-kinds-08c2f99b/requires_package_multiple_prereleases_kinds_08c2f99b_a-1.0.0a1.tar.gz': 'md5:f8c62536c3f53a83087287c8a1618b21',
@@ -668,6 +790,24 @@
       'dist/requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42/requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_b-0.1.0.tar.gz': 'md5:51c789bfcece05fa050c8ecc65d21994',
       'dist/requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42/requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_b-1.0.0a1-py3-none-any.whl': 'md5:535524b85d4bae0f5d3d8a324eca25f6',
       'dist/requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42/requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_b-1.0.0a1.tar.gz': 'md5:731a2616fdee2acc666d4ded6fbe903c',
+      'dist/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires_transitive_prerelease_and_stable_dependency_31b546ef-0.0.0.tar.gz': 'md5:f00b32918aa819a8508e01b7ac4ead22',
+      'dist/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires_transitive_prerelease_and_stable_dependency_31b546ef_a-1.0.0-py3-none-any.whl': 'md5:7e0b308ca14e1b3a8b1a5edcb72d1718',
+      'dist/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires_transitive_prerelease_and_stable_dependency_31b546ef_a-1.0.0.tar.gz': 'md5:e24e591e135a2dcbe42abf47b72bd995',
+      'dist/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires_transitive_prerelease_and_stable_dependency_31b546ef_b-1.0.0-py3-none-any.whl': 'md5:b974b1b40ddac7f4a275b33e43be12f8',
+      'dist/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires_transitive_prerelease_and_stable_dependency_31b546ef_b-1.0.0.tar.gz': 'md5:c1d4ee47d9a30bd5bd07ca51a246bdd9',
+      'dist/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires_transitive_prerelease_and_stable_dependency_31b546ef_c-1.0.0-py3-none-any.whl': 'md5:236c1289831d1220662627d7d49042fe',
+      'dist/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires_transitive_prerelease_and_stable_dependency_31b546ef_c-1.0.0.tar.gz': 'md5:195306f618e4ab13bb3087433659f837',
+      'dist/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires_transitive_prerelease_and_stable_dependency_31b546ef_c-2.0.0b1-py3-none-any.whl': 'md5:832e830ddd4e2751da424d2134458f7a',
+      'dist/requires-transitive-prerelease-and-stable-dependency-31b546ef/requires_transitive_prerelease_and_stable_dependency_31b546ef_c-2.0.0b1.tar.gz': 'md5:df235d36f76ec5cc3358299b21360916',
+      'dist/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f-0.0.0.tar.gz': 'md5:6108ff004367f1596c696d60498e6b6c',
+      'dist/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_a-1.0.0-py3-none-any.whl': 'md5:47bc0d8ed35216612dc5ccf1c2f4f741',
+      'dist/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_a-1.0.0.tar.gz': 'md5:5b95d329e9e4e5b1e41d605ee55e47c3',
+      'dist/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_b-1.0.0-py3-none-any.whl': 'md5:3ec9f3d650ae26b2532c2cdf1d3970be',
+      'dist/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_b-1.0.0.tar.gz': 'md5:4f39a85c9d32f62421d902ce0798bedc',
+      'dist/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c-1.0.0-py3-none-any.whl': 'md5:f6bad602f5d176ab44d2eb54e63bfd23',
+      'dist/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c-1.0.0.tar.gz': 'md5:780b83f49810f1dd9d7508506be4b64f',
+      'dist/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c-2.0.0b1-py3-none-any.whl': 'md5:b8a9782c831a77a44c2e7f8426748149',
+      'dist/requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f/requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c-2.0.0b1.tar.gz': 'md5:f61b6df49b7da09ef3723442f17327c5',
       'tree': '''
         test_build_all_scenarios_prere0
         ├── build
@@ -861,26 +1001,78 @@
         │   │       └── src
         │   │           └── requires_transitive_package_only_prereleases_in_range_f859ef9f_b
         │   │               └── __init__.py
-        │   └── requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42
-        │       ├── requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42-0.0.0
+        │   ├── requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42
+        │   │   ├── requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42
+        │   │   │           └── __init__.py
+        │   │   ├── requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42-a-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_a
+        │   │   │           └── __init__.py
+        │   │   ├── requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42-b-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_b
+        │   │   │           └── __init__.py
+        │   │   └── requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42-b-1.0.0a1
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_b
+        │   │               └── __init__.py
+        │   ├── requires-transitive-prerelease-and-stable-dependency-31b546ef
+        │   │   ├── requires-transitive-prerelease-and-stable-dependency-31b546ef-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_transitive_prerelease_and_stable_dependency_31b546ef
+        │   │   │           └── __init__.py
+        │   │   ├── requires-transitive-prerelease-and-stable-dependency-31b546ef-a-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_transitive_prerelease_and_stable_dependency_31b546ef_a
+        │   │   │           └── __init__.py
+        │   │   ├── requires-transitive-prerelease-and-stable-dependency-31b546ef-b-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_transitive_prerelease_and_stable_dependency_31b546ef_b
+        │   │   │           └── __init__.py
+        │   │   ├── requires-transitive-prerelease-and-stable-dependency-31b546ef-c-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_transitive_prerelease_and_stable_dependency_31b546ef_c
+        │   │   │           └── __init__.py
+        │   │   └── requires-transitive-prerelease-and-stable-dependency-31b546ef-c-2.0.0b1
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_transitive_prerelease_and_stable_dependency_31b546ef_c
+        │   │               └── __init__.py
+        │   └── requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f
+        │       ├── requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f-0.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42
+        │       │       └── requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f
         │       │           └── __init__.py
-        │       ├── requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42-a-0.1.0
+        │       ├── requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f-a-1.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_a
+        │       │       └── requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_a
         │       │           └── __init__.py
-        │       ├── requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42-b-0.1.0
+        │       ├── requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f-b-1.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_b
+        │       │       └── requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_b
         │       │           └── __init__.py
-        │       └── requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42-b-1.0.0a1
+        │       ├── requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f-c-1.0.0
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c
+        │       │           └── __init__.py
+        │       └── requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f-c-2.0.0b1
         │           ├── pyproject.toml
         │           └── src
-        │               └── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_b
+        │               └── requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c
         │                   └── __init__.py
         └── dist
             ├── requires-package-multiple-prereleases-kinds-08c2f99b
@@ -955,16 +1147,36 @@
             │   ├── requires_transitive_package_only_prereleases_in_range_f859ef9f_b-0.1.0.tar.gz
             │   ├── requires_transitive_package_only_prereleases_in_range_f859ef9f_b-1.0.0a1-py3-none-any.whl
             │   └── requires_transitive_package_only_prereleases_in_range_f859ef9f_b-1.0.0a1.tar.gz
-            └── requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42
-                ├── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42-0.0.0.tar.gz
-                ├── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_a-0.1.0-py3-none-any.whl
-                ├── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_a-0.1.0.tar.gz
-                ├── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_b-0.1.0-py3-none-any.whl
-                ├── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_b-0.1.0.tar.gz
-                ├── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_b-1.0.0a1-py3-none-any.whl
-                └── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_b-1.0.0a1.tar.gz
+            ├── requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42
+            │   ├── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42-0.0.0.tar.gz
+            │   ├── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_a-0.1.0-py3-none-any.whl
+            │   ├── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_a-0.1.0.tar.gz
+            │   ├── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_b-0.1.0-py3-none-any.whl
+            │   ├── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_b-0.1.0.tar.gz
+            │   ├── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_b-1.0.0a1-py3-none-any.whl
+            │   └── requires_transitive_package_only_prereleases_in_range_opt_in_4ca10c42_b-1.0.0a1.tar.gz
+            ├── requires-transitive-prerelease-and-stable-dependency-31b546ef
+            │   ├── requires_transitive_prerelease_and_stable_dependency_31b546ef-0.0.0.tar.gz
+            │   ├── requires_transitive_prerelease_and_stable_dependency_31b546ef_a-1.0.0-py3-none-any.whl
+            │   ├── requires_transitive_prerelease_and_stable_dependency_31b546ef_a-1.0.0.tar.gz
+            │   ├── requires_transitive_prerelease_and_stable_dependency_31b546ef_b-1.0.0-py3-none-any.whl
+            │   ├── requires_transitive_prerelease_and_stable_dependency_31b546ef_b-1.0.0.tar.gz
+            │   ├── requires_transitive_prerelease_and_stable_dependency_31b546ef_c-1.0.0-py3-none-any.whl
+            │   ├── requires_transitive_prerelease_and_stable_dependency_31b546ef_c-1.0.0.tar.gz
+            │   ├── requires_transitive_prerelease_and_stable_dependency_31b546ef_c-2.0.0b1-py3-none-any.whl
+            │   └── requires_transitive_prerelease_and_stable_dependency_31b546ef_c-2.0.0b1.tar.gz
+            └── requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f
+                ├── requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f-0.0.0.tar.gz
+                ├── requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_a-1.0.0-py3-none-any.whl
+                ├── requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_a-1.0.0.tar.gz
+                ├── requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_b-1.0.0-py3-none-any.whl
+                ├── requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_b-1.0.0.tar.gz
+                ├── requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c-1.0.0-py3-none-any.whl
+                ├── requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c-1.0.0.tar.gz
+                ├── requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c-2.0.0b1-py3-none-any.whl
+                └── requires_transitive_prerelease_and_stable_dependency_opt_in_dd00a87f_c-2.0.0b1.tar.gz
         
-        144 directories, 149 files
+        178 directories, 187 files
   
       ''',
     }),
@@ -981,6 +1193,8 @@
       requires-transitive-package-only-prereleases-fa02005e
       requires-transitive-package-only-prereleases-in-range-f859ef9f
       requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42
+      requires-transitive-prerelease-and-stable-dependency-31b546ef
+      requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f
   
     ''',
   })
@@ -2625,6 +2839,57 @@
           ├── b-0.1.0
           │   └── requires python>=3.7
           └── b-1.0.0a1
+              └── requires python>=3.7
+      
+      requires-transitive-prerelease-and-stable-dependency-31b546ef
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   ├── requires a
+      │   │   └── satisfied by a-1.0.0
+      │   └── requires b
+      │       └── satisfied by b-1.0.0
+      ├── a
+      │   └── a-1.0.0
+      │       ├── requires c==2.0.0b1
+      │       │   └── satisfied by c-2.0.0b1
+      │       └── requires python>=3.7
+      ├── b
+      │   └── b-1.0.0
+      │       ├── requires c>=1.0.0,<=3.0.0
+      │       │   └── satisfied by c-1.0.0
+      │       └── requires python>=3.7
+      └── c
+          ├── c-1.0.0
+          │   └── requires python>=3.7
+          └── c-2.0.0b1
+              └── requires python>=3.7
+      
+      requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   ├── requires a
+      │   │   └── satisfied by a-1.0.0
+      │   ├── requires b
+      │   │   └── satisfied by b-1.0.0
+      │   └── requires c>=0.0.0a1
+      │       ├── satisfied by c-1.0.0
+      │       └── satisfied by c-2.0.0b1
+      ├── a
+      │   └── a-1.0.0
+      │       ├── requires c==2.0.0b1
+      │       │   └── satisfied by c-2.0.0b1
+      │       └── requires python>=3.7
+      ├── b
+      │   └── b-1.0.0
+      │       ├── requires c>=1.0.0,<=3.0.0
+      │       │   └── satisfied by c-1.0.0
+      │       └── requires python>=3.7
+      └── c
+          ├── c-1.0.0
+          │   └── requires python>=3.7
+          └── c-2.0.0b1
               └── requires python>=3.7
       
   
