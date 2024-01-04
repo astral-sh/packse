@@ -38,15 +38,15 @@
     'stdout': '''
       example-97db95eb
       requires-package-only-prereleases-5829a64d
-      requires-package-only-prereleases-in-range-12a9315d
-      requires-package-prerelease-and-final-any-19abc200
-      requires-package-prerelease-specified-only-final-available-2ad40ba1
+      requires-package-only-prereleases-in-range-2b0594c8
+      requires-package-prerelease-and-final-any-66989e88
+      requires-package-prerelease-specified-only-final-available-8c3e26d4
       requires-package-prerelease-specified-only-prerelease-available-fa8a64e0
       requires-package-prerelease-specified-mixed-available-caf5dd1a
       requires-package-multiple-prereleases-kinds-08c2f99b
       requires-package-multiple-prereleases-numbers-4cf7acef
       requires-transitive-package-only-prereleases-fa02005e
-      requires-transitive-package-only-prereleases-in-range-f859ef9f
+      requires-transitive-package-only-prereleases-in-range-4800779d
       requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42
       requires-transitive-prerelease-and-stable-dependency-31b546ef
       requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f
@@ -77,15 +77,15 @@
           example-97db95eb
       scenarios/prereleases.json
           requires-package-only-prereleases-5829a64d
-          requires-package-only-prereleases-in-range-12a9315d
-          requires-package-prerelease-and-final-any-19abc200
-          requires-package-prerelease-specified-only-final-available-2ad40ba1
+          requires-package-only-prereleases-in-range-2b0594c8
+          requires-package-prerelease-and-final-any-66989e88
+          requires-package-prerelease-specified-only-final-available-8c3e26d4
           requires-package-prerelease-specified-only-prerelease-available-fa8a64e0
           requires-package-prerelease-specified-mixed-available-caf5dd1a
           requires-package-multiple-prereleases-kinds-08c2f99b
           requires-package-multiple-prereleases-numbers-4cf7acef
           requires-transitive-package-only-prereleases-fa02005e
-          requires-transitive-package-only-prereleases-in-range-f859ef9f
+          requires-transitive-package-only-prereleases-in-range-4800779d
           requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42
           requires-transitive-prerelease-and-stable-dependency-31b546ef
           requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f
