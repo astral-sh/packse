@@ -39,6 +39,7 @@
       example-97db95eb
       requires-package-only-prereleases-5829a64d
       requires-package-only-prereleases-in-range-2b0594c8
+      requires-package-only-prereleases-in-range-global-opt-in-51f94da2
       requires-package-prerelease-and-final-any-66989e88
       requires-package-prerelease-specified-only-final-available-8c3e26d4
       requires-package-prerelease-specified-only-prerelease-available-fa8a64e0
@@ -78,6 +79,7 @@
       scenarios/prereleases.json
           requires-package-only-prereleases-5829a64d
           requires-package-only-prereleases-in-range-2b0594c8
+          requires-package-only-prereleases-in-range-global-opt-in-51f94da2
           requires-package-prerelease-and-final-any-66989e88
           requires-package-prerelease-specified-only-final-available-8c3e26d4
           requires-package-prerelease-specified-only-prerelease-available-fa8a64e0
@@ -120,6 +122,7 @@
       scenarios/prereleases.json
           requires-package-only-prereleases
           requires-package-only-prereleases-in-range
+          requires-package-only-prereleases-in-range-global-opt-in
           requires-package-prerelease-and-final-any
           requires-package-prerelease-specified-only-final-available
           requires-package-prerelease-specified-only-prerelease-available
