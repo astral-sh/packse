@@ -1,0 +1,221 @@
+[
+    {
+        "name": "requires-package-only-prereleases",
+        "description": "The user requires any version of package `a` which only has pre-release versions available.",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0a1": {}
+                }
+            }
+        }
+    },
+    {
+        "name": "requires-package-only-prereleases-in-range",
+        "description": "The user requires a version of package `a` which only matches pre-release versions but they did not include a prerelease specifier.",
+        "root": {
+            "requires": [
+                "a>0.1.0"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {},
+                    "1.0.0a1": {}
+                }
+            }
+        }
+    },
+    {
+        "name": "requires-package-prerelease-and-final-any",
+        "description": "The user requires any version of package `a` has a pre-release version available and an older non-prerelease version.",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {},
+                    "1.0.0a1": {}
+                }
+            }
+        }
+    },
+    {
+        "name": "requires-package-prerelease-specified-only-final-available",
+        "description": "The user requires a version of `a` with a pre-release specifier and only final releases are available.",
+        "root": {
+            "requires": [
+                "a>=0.1.0a1"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {},
+                    "0.2.0": {},
+                    "0.3.0": {}
+                }
+            }
+        }
+    },
+    {
+        "name": "requires-package-prerelease-specified-only-prerelease-available",
+        "description": "The user requires a version of `a` with a pre-release specifier and only pre-release releases are available.",
+        "root": {
+            "requires": [
+                "a>=0.1.0a1"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0a1": {},
+                    "0.2.0a1": {},
+                    "0.3.0a1": {}
+                }
+            }
+        }
+    },
+    {
+        "name": "requires-package-prerelease-specified-mixed-available",
+        "description": "The user requires a version of `a` with a pre-release specifier and both pre-release and final releases are available.",
+        "root": {
+            "requires": [
+                "a>=0.1.0a1"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {},
+                    "0.2.0a1": {},
+                    "0.3.0": {},
+                    "1.0.0a1": {}
+                }
+            }
+        }
+    },
+    {
+        "name": "requires-package-multiple-prereleases-kinds",
+        "description": "The user requires `a` which has multiple prereleases available with different labels.",
+        "root": {
+            "requires": [
+                "a>=1.0.0a1"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0a1": {},
+                    "1.0.0b1": {},
+                    "1.0.0rc1": {}
+                }
+            }
+        }
+    },
+    {
+        "name": "requires-package-multiple-prereleases-numbers",
+        "description": "The user requires `a` which has multiple alphas available.",
+        "root": {
+            "requires": [
+                "a>=1.0.0a1"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0a1": {},
+                    "1.0.0a2": {},
+                    "1.0.0a3": {}
+                }
+            }
+        }
+    },
+    {
+        "name": "requires-transitive-package-only-prereleases",
+        "description": "The user requires any version of package `a` which only has pre-release versions available.",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {
+                        "requires": [
+                            "b"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0a1": {}
+                }
+            }
+        }
+    },
+    {
+        "name": "requires-transitive-package-only-prereleases-in-range",
+        "description": "The user requires package `a` which has a dependency on a package which only matches pre-release versions but they did not include a prerelease specifier.",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {
+                        "requires": [
+                            "b>0.1"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "0.1.0": {},
+                    "1.0.0a1": {}
+                }
+            }
+        }
+    },
+    {
+        "name": "requires-transitive-package-only-prereleases-in-range-opt-in",
+        "description": "The user requires package `a` which has a dependency on a package which only matches pre-release versions; the user has opted into allowing prereleases in `b` explicitly.",
+        "root": {
+            "requires": [
+                "a",
+                "b>0.0.0a1"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {
+                        "requires": [
+                            "b>0.1"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "0.1.0": {},
+                    "1.0.0a1": {}
+                }
+            }
+        }
+    }
+]

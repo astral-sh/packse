@@ -283,6 +283,638 @@
             ]
           },
           {
+            "name": "requires-package-only-prereleases",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0a1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a"
+              ]
+            },
+            "environment": {
+              "python": "3.7"
+            },
+            "template": "simple",
+            "description": "The user requires any version of package `a` which only has pre-release versions available.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "prefix": "requires-package-only-prereleases-11aca5f4",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0a1",
+              "        \u2514\u2500\u2500 requires python>=3.7"
+            ]
+          },
+          {
+            "name": "requires-package-only-prereleases-in-range",
+            "packages": {
+              "a": {
+                "versions": {
+                  "0.1.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "1.0.0a1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a>0.1.0"
+              ]
+            },
+            "environment": {
+              "python": "3.7"
+            },
+            "template": "simple",
+            "description": "The user requires a version of package `a` which only matches pre-release versions but they did not include a prerelease specifier.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "prefix": "requires-package-only-prereleases-in-range-bc409bd0",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a>0.1.0",
+              "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-0.1.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 a-1.0.0a1",
+              "        \u2514\u2500\u2500 requires python>=3.7"
+            ]
+          },
+          {
+            "name": "requires-package-prerelease-and-final-any",
+            "packages": {
+              "a": {
+                "versions": {
+                  "0.1.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "1.0.0a1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a"
+              ]
+            },
+            "environment": {
+              "python": "3.7"
+            },
+            "template": "simple",
+            "description": "The user requires any version of package `a` has a pre-release version available and an older non-prerelease version.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "prefix": "requires-package-prerelease-and-final-any-c18a46ab",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-0.1.0",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-0.1.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 a-1.0.0a1",
+              "        \u2514\u2500\u2500 requires python>=3.7"
+            ]
+          },
+          {
+            "name": "requires-package-prerelease-specified-only-final-available",
+            "packages": {
+              "a": {
+                "versions": {
+                  "0.1.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "0.2.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "0.3.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a>=0.1.0a1"
+              ]
+            },
+            "environment": {
+              "python": "3.7"
+            },
+            "template": "simple",
+            "description": "The user requires a version of `a` with a pre-release specifier and only final releases are available.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "prefix": "requires-package-prerelease-specified-only-final-available-909404f2",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a>=0.1.0a1",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-0.1.0",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-0.2.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-0.3.0",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-0.1.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 a-0.2.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 a-0.3.0",
+              "        \u2514\u2500\u2500 requires python>=3.7"
+            ]
+          },
+          {
+            "name": "requires-package-prerelease-specified-only-prerelease-available",
+            "packages": {
+              "a": {
+                "versions": {
+                  "0.1.0a1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "0.2.0a1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "0.3.0a1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a>=0.1.0a1"
+              ]
+            },
+            "environment": {
+              "python": "3.7"
+            },
+            "template": "simple",
+            "description": "The user requires a version of `a` with a pre-release specifier and only pre-release releases are available.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "prefix": "requires-package-prerelease-specified-only-prerelease-available-5c9b204c",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a>=0.1.0a1",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-0.1.0a1",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-0.2.0a1",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-0.3.0a1",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-0.1.0a1",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 a-0.2.0a1",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 a-0.3.0a1",
+              "        \u2514\u2500\u2500 requires python>=3.7"
+            ]
+          },
+          {
+            "name": "requires-package-prerelease-specified-mixed-available",
+            "packages": {
+              "a": {
+                "versions": {
+                  "0.1.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "0.2.0a1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "0.3.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "1.0.0a1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a>=0.1.0a1"
+              ]
+            },
+            "environment": {
+              "python": "3.7"
+            },
+            "template": "simple",
+            "description": "The user requires a version of `a` with a pre-release specifier and both pre-release and final releases are available.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "prefix": "requires-package-prerelease-specified-mixed-available-65974a95",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a>=0.1.0a1",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-0.1.0",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-0.2.0a1",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-0.3.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0a1",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-0.1.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 a-0.2.0a1",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 a-0.3.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 a-1.0.0a1",
+              "        \u2514\u2500\u2500 requires python>=3.7"
+            ]
+          },
+          {
+            "name": "requires-package-multiple-prereleases-kinds",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0a1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "1.0.0b1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "1.0.0rc1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a>=1.0.0a1"
+              ]
+            },
+            "environment": {
+              "python": "3.7"
+            },
+            "template": "simple",
+            "description": "The user requires `a` which has multiple prereleases available with different labels.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "prefix": "requires-package-multiple-prereleases-kinds-a37dce95",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a>=1.0.0a1",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-1.0.0a1",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-1.0.0b1",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0rc1",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-1.0.0a1",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 a-1.0.0b1",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 a-1.0.0rc1",
+              "        \u2514\u2500\u2500 requires python>=3.7"
+            ]
+          },
+          {
+            "name": "requires-package-multiple-prereleases-numbers",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0a1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "1.0.0a2": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "1.0.0a3": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a>=1.0.0a1"
+              ]
+            },
+            "environment": {
+              "python": "3.7"
+            },
+            "template": "simple",
+            "description": "The user requires `a` which has multiple alphas available.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "prefix": "requires-package-multiple-prereleases-numbers-4c3655b7",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a>=1.0.0a1",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-1.0.0a1",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-1.0.0a2",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0a3",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-1.0.0a1",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 a-1.0.0a2",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 a-1.0.0a3",
+              "        \u2514\u2500\u2500 requires python>=3.7"
+            ]
+          },
+          {
+            "name": "requires-transitive-package-only-prereleases",
+            "packages": {
+              "a": {
+                "versions": {
+                  "0.1.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "b"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              },
+              "b": {
+                "versions": {
+                  "1.0.0a1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a"
+              ]
+            },
+            "environment": {
+              "python": "3.7"
+            },
+            "template": "simple",
+            "description": "The user requires any version of package `a` which only has pre-release versions available.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "prefix": "requires-transitive-package-only-prereleases-2e76f091",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-0.1.0",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u2514\u2500\u2500 a-0.1.0",
+              "\u2502       \u251c\u2500\u2500 requires b",
+              "\u2502       \u2502   \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2502       \u2514\u2500\u2500 requires python>=3.7",
+              "\u2514\u2500\u2500 b",
+              "    \u2514\u2500\u2500 b-1.0.0a1",
+              "        \u2514\u2500\u2500 requires python>=3.7"
+            ]
+          },
+          {
+            "name": "requires-transitive-package-only-prereleases-in-range",
+            "packages": {
+              "a": {
+                "versions": {
+                  "0.1.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "b>0.1"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              },
+              "b": {
+                "versions": {
+                  "0.1.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "1.0.0a1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a"
+              ]
+            },
+            "environment": {
+              "python": "3.7"
+            },
+            "template": "simple",
+            "description": "The user requires package `a` which has a dependency on a package which only matches pre-release versions but they did not include a prerelease specifier.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "prefix": "requires-transitive-package-only-prereleases-in-range-a25044b5",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-0.1.0",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u2514\u2500\u2500 a-0.1.0",
+              "\u2502       \u251c\u2500\u2500 requires b>0.1",
+              "\u2502       \u2502   \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2502       \u2514\u2500\u2500 requires python>=3.7",
+              "\u2514\u2500\u2500 b",
+              "    \u251c\u2500\u2500 b-0.1.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 b-1.0.0a1",
+              "        \u2514\u2500\u2500 requires python>=3.7"
+            ]
+          },
+          {
+            "name": "requires-transitive-package-only-prereleases-in-range-opt-in",
+            "packages": {
+              "a": {
+                "versions": {
+                  "0.1.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "b>0.1"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              },
+              "b": {
+                "versions": {
+                  "0.1.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "1.0.0a1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a",
+                "b>0.0.0a1"
+              ]
+            },
+            "environment": {
+              "python": "3.7"
+            },
+            "template": "simple",
+            "description": "The user requires package `a` which has a dependency on a package which only matches pre-release versions; the user has opted into allowing prereleases in `b` explicitly.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "prefix": "requires-transitive-package-only-prereleases-in-range-opt-in-a8f715bc",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u251c\u2500\u2500 requires a",
+              "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-0.1.0",
+              "\u2502   \u2514\u2500\u2500 requires b>0.0.0a1",
+              "\u2502       \u2514\u2500\u2500 satisfied by b-0.1.0",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u2514\u2500\u2500 a-0.1.0",
+              "\u2502       \u251c\u2500\u2500 requires b>0.1",
+              "\u2502       \u2502   \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2502       \u2514\u2500\u2500 requires python>=3.7",
+              "\u2514\u2500\u2500 b",
+              "    \u251c\u2500\u2500 b-0.1.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 b-1.0.0a1",
+              "        \u2514\u2500\u2500 requires python>=3.7"
+            ]
+          },
+          {
             "name": "requires-package-does-not-exist",
             "packages": {},
             "root": {
