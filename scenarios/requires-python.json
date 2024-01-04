@@ -1,0 +1,176 @@
+[
+    {
+        "name": "requires-python-version-does-not-exist",
+        "description": "The user requires a package which requires a Python version that does not exist",
+        "root": {
+            "requires": [
+                "a==1.0.0"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires_python": ">=4.0"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "requires-python-version-less-than-current",
+        "description": "The user requires a package which requires a Python version less than the current version",
+        "root": {
+            "requires": [
+                "a==1.0.0"
+            ]
+        },
+        "environment": {
+            "python": "3.9"
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires_python": "<=3.8"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "requires-python-version-greater-than-current",
+        "description": "The user requires a package which requires a Python version greater than the current version",
+        "root": {
+            "requires": [
+                "a==1.0.0"
+            ]
+        },
+        "environment": {
+            "python": "3.9"
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires_python": ">=3.10"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "requires-python-version-greater-than-current-many",
+        "description": "The user requires a package which has many versions which all require a Python version greater than the current version",
+        "root": {
+            "requires": [
+                "a==1.0.0"
+            ]
+        },
+        "environment": {
+            "python": "3.9"
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "2.0.0": {
+                        "requires_python": ">=3.10"
+                    },
+                    "2.1.0": {
+                        "requires_python": ">=3.10"
+                    },
+                    "2.2.0": {
+                        "requires_python": ">=3.10"
+                    },
+                    "2.3.0": {
+                        "requires_python": ">=3.10"
+                    },
+                    "2.4.0": {
+                        "requires_python": ">=3.10"
+                    },
+                    "2.5.0": {
+                        "requires_python": ">=3.10"
+                    },
+                    "3.0.0": {
+                        "requires_python": ">=3.11"
+                    },
+                    "3.1.0": {
+                        "requires_python": ">=3.11"
+                    },
+                    "3.2.0": {
+                        "requires_python": ">=3.11"
+                    },
+                    "3.3.0": {
+                        "requires_python": ">=3.11"
+                    },
+                    "3.4.0": {
+                        "requires_python": ">=3.11"
+                    },
+                    "3.5.0": {
+                        "requires_python": ">=3.11"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "requires-python-version-greater-than-current-backtrack",
+        "description": "The user requires a package where recent versions require a Python version greater than the current version, but an older version is compatible.",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "environment": {
+            "python": "3.9"
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires_python": ">=3.9"
+                    },
+                    "2.0.0": {
+                        "requires_python": ">=3.10"
+                    },
+                    "3.0.0": {
+                        "requires_python": ">=3.11"
+                    },
+                    "4.0.0": {
+                        "requires_python": ">=3.12"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "requires-python-version-greater-than-current-excluded",
+        "description": "The user requires a package where recent versions require a Python version greater than the current version, but an excluded older version is compatible.",
+        "root": {
+            "requires": [
+                "a>=2.0.0"
+            ]
+        },
+        "environment": {
+            "python": "3.9"
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires_python": ">=3.9"
+                    },
+                    "2.0.0": {
+                        "requires_python": ">=3.10"
+                    },
+                    "3.0.0": {
+                        "requires_python": ">=3.11"
+                    },
+                    "4.0.0": {
+                        "requires_python": ">=3.12"
+                    }
+                }
+            }
+        }
+    }
+]

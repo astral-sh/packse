@@ -94,21 +94,35 @@ def dependency_tree(scenario: Scenario) -> str:
 
         pointers = [tee] * (len(versions) - 1) + [last]
         for pointer, version in zip(pointers, versions):
-            message = "satisfied by " if for_requirement else ""
+            message = "satisfied by " if for_requirement and package else ""
             yield prefix + pointer + message + f"{package}-{version}"
 
             if not for_requirement:
                 extension = branch if pointer == tee else space
                 yield from render_requirements(
-                    versions[version].requires, prefix=prefix + extension
+                    versions[version].requires
+                    + [f"python{versions[version].requires_python}"],
+                    prefix=prefix + extension,
                 )
 
     def render_requirements(requirements: list[str], prefix: str = ""):
         pointers = [tee] * (len(requirements) - 1) + [last]
         for pointer, requirement in zip(pointers, sorted(requirements)):
-            yield prefix + pointer + "requires " + requirement
-
             parsed_requirement = Requirement(requirement)
+            suffix = ""
+
+            if parsed_requirement.name == "python":
+                # Display `requires python` incompatibilities
+                if not parsed_requirement.specifier.contains(
+                    scenario.environment.python
+                ):
+                    suffix = " (incompatible with environment)"
+
+            yield prefix + pointer + "requires " + requirement + suffix
+
+            if parsed_requirement.name == "python":
+                # Do not display more information about Python requirements
+                continue
 
             if parsed_requirement.name in packages:
                 extension = branch if pointer == tee else space
@@ -120,13 +134,22 @@ def dependency_tree(scenario: Scenario) -> str:
             else:
                 yield prefix + space + last + "unsatisfied: no versions for package"
 
+    # Print the environment first
+    pointer = tee
+    buffer += pointer + "environment\n"
+    prefix = branch
+    buffer += prefix + last + f"python{scenario.environment.python}\n"
+
     # Print the root package first
     pointer = tee if scenario.packages else last
     buffer += pointer + "root\n"
     prefix = branch if pointer == tee else space
 
     # Then render versions for the root package
-    for line in render_requirements(scenario.root.requires, prefix=prefix):
+    for line in render_requirements(
+        scenario.root.requires,
+        prefix=prefix,
+    ):
         buffer += line + "\n"
 
     # Then render all the other provided packages
