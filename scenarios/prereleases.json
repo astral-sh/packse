@@ -290,5 +290,91 @@
             },
             "explanation": "Since the user included a dependency on `b` with a pre-release specifier, a pre-release version can be selected."
         }
+    },
+    {
+        "name": "requires-transitive-prerelease-and-stable-dependency",
+        "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease",
+        "root": {
+            "requires": [
+                "a",
+                "b"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "c==2.0.0b1"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "c>=1.0.0,<=3.0.0"
+                        ]
+                    }
+                }
+            },
+            "c": {
+                "versions": {
+                    "1.0.0": {},
+                    "2.0.0b1": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": false,
+            "explanation": "Since the user did not explicitly opt-in to a prerelease, it cannot be selected."
+        }
+    },
+    {
+        "name": "requires-transitive-prerelease-and-stable-dependency-opt-in",
+        "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. The user includes an opt-in to prereleases of the transitive dependency.",
+        "root": {
+            "requires": [
+                "a",
+                "b",
+                "c>=0.0.0a1"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "c==2.0.0b1"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "c>=1.0.0,<=3.0.0"
+                        ]
+                    }
+                }
+            },
+            "c": {
+                "versions": {
+                    "1.0.0": {},
+                    "2.0.0b1": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0",
+                "b": "1.0.0",
+                "c": "2.0.0b1"
+            },
+            "explanation": "Since the user explicitly opted-in to a prerelease for `c`, it can be installed."
+        }
     }
 ]
