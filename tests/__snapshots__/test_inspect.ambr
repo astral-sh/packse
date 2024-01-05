@@ -298,6 +298,333 @@
             ]
           },
           {
+            "name": "excluded-only-version",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a!=1.0.0"
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": "Only `a==1.0.0` is available but the user excluded it."
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "Only one version of the requested package is available, but the user has banned that version.",
+            "source": "[PWD]/scenarios/excluded.json",
+            "prefix": "excluded-only-version-7a9ed79c",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a!=1.0.0",
+              "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0"
+            ]
+          },
+          {
+            "name": "excluded-only-valid-version",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "b==1.0.0"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "b==2.0.0"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "3.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "b==3.0.0"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              },
+              "b": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "3.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a!=2.0.0",
+                "b>=2.0.0,<3.0.0"
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": "Only `a==1.2.0` is available since `a==1.0.0` and `a==3.0.0` require incompatible versions of `b`. The user has excluded that version of `a` so resolution fails."
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "Only one version of the requested package `a` is valid, but the user has banned that version.",
+            "source": "[PWD]/scenarios/excluded.json",
+            "prefix": "excluded-only-valid-version-c8500c6e",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u251c\u2500\u2500 requires a!=2.0.0",
+              "\u2502   \u2502   \u251c\u2500\u2500 satisfied by a-1.0.0",
+              "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-3.0.0",
+              "\u2502   \u2514\u2500\u2500 requires b>=2.0.0,<3.0.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by b-2.0.0",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u251c\u2500\u2500 a-1.0.0",
+              "\u2502   \u2502   \u2514\u2500\u2500 requires b==1.0.0",
+              "\u2502   \u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
+              "\u2502   \u251c\u2500\u2500 a-2.0.0",
+              "\u2502   \u2502   \u2514\u2500\u2500 requires b==2.0.0",
+              "\u2502   \u2502       \u2514\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502   \u2514\u2500\u2500 a-3.0.0",
+              "\u2502       \u2514\u2500\u2500 requires b==3.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by b-3.0.0",
+              "\u2514\u2500\u2500 b",
+              "    \u251c\u2500\u2500 b-1.0.0",
+              "    \u251c\u2500\u2500 b-2.0.0",
+              "    \u2514\u2500\u2500 b-3.0.0"
+            ]
+          },
+          {
+            "name": "dependency-excludes-range-of-valid-versions",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "b==1.0.0"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "b==2.0.0"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.1.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "b==2.0.0"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.2.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "b==2.0.0"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.3.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "b==2.0.0"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "3.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "b==3.0.0"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              },
+              "b": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "3.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              },
+              "c": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "a<2.0.0"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "a>=3.0.0"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a",
+                "b>=2.0.0,<3.0.0",
+                "c"
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": "Only the `2.x` versions of `a` are available since `a==1.0.0` and `a==3.0.0` require incompatible versions of `b`, but all available versions of `c` exclude that range of `a` so resolution fails."
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "There is a range of valid versions for the requested package `a`, but another dependency `c` excludes that range.",
+            "source": "[PWD]/scenarios/excluded.json",
+            "prefix": "dependency-excludes-range-of-valid-versions-ba826abc",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u251c\u2500\u2500 requires a",
+              "\u2502   \u2502   \u251c\u2500\u2500 satisfied by a-1.0.0",
+              "\u2502   \u2502   \u251c\u2500\u2500 satisfied by a-2.0.0",
+              "\u2502   \u2502   \u251c\u2500\u2500 satisfied by a-2.1.0",
+              "\u2502   \u2502   \u251c\u2500\u2500 satisfied by a-2.2.0",
+              "\u2502   \u2502   \u251c\u2500\u2500 satisfied by a-2.3.0",
+              "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-3.0.0",
+              "\u2502   \u251c\u2500\u2500 requires b>=2.0.0,<3.0.0",
+              "\u2502   \u2502   \u2514\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502   \u2514\u2500\u2500 requires c",
+              "\u2502       \u251c\u2500\u2500 satisfied by c-1.0.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by c-2.0.0",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u251c\u2500\u2500 a-1.0.0",
+              "\u2502   \u2502   \u2514\u2500\u2500 requires b==1.0.0",
+              "\u2502   \u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
+              "\u2502   \u251c\u2500\u2500 a-2.0.0",
+              "\u2502   \u2502   \u2514\u2500\u2500 requires b==2.0.0",
+              "\u2502   \u2502       \u2514\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502   \u251c\u2500\u2500 a-2.1.0",
+              "\u2502   \u2502   \u2514\u2500\u2500 requires b==2.0.0",
+              "\u2502   \u2502       \u2514\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502   \u251c\u2500\u2500 a-2.2.0",
+              "\u2502   \u2502   \u2514\u2500\u2500 requires b==2.0.0",
+              "\u2502   \u2502       \u2514\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502   \u251c\u2500\u2500 a-2.3.0",
+              "\u2502   \u2502   \u2514\u2500\u2500 requires b==2.0.0",
+              "\u2502   \u2502       \u2514\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502   \u2514\u2500\u2500 a-3.0.0",
+              "\u2502       \u2514\u2500\u2500 requires b==3.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by b-3.0.0",
+              "\u251c\u2500\u2500 b",
+              "\u2502   \u251c\u2500\u2500 b-1.0.0",
+              "\u2502   \u251c\u2500\u2500 b-2.0.0",
+              "\u2502   \u2514\u2500\u2500 b-3.0.0",
+              "\u2514\u2500\u2500 c",
+              "    \u251c\u2500\u2500 c-1.0.0",
+              "    \u2502   \u2514\u2500\u2500 requires a<2.0.0",
+              "    \u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "    \u2514\u2500\u2500 c-2.0.0",
+              "        \u2514\u2500\u2500 requires a>=3.0.0",
+              "            \u2514\u2500\u2500 satisfied by a-3.0.0"
+            ]
+          },
+          {
             "name": "requires-package-only-prereleases",
             "packages": {
               "a": {
