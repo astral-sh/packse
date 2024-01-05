@@ -37,6 +37,10 @@
     'stderr': '',
     'stdout': '''
       example-97db95eb
+      excluded-only-version-7a9ed79c
+      excluded-only-compatible-version-d28c9e3c
+      dependency-excludes-range-of-compatible-versions-2023222f
+      dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208
       requires-package-only-prereleases-a8b21d15
       requires-package-only-prereleases-in-range-b4df71d2
       requires-package-only-prereleases-in-range-global-opt-in-51f94da2
@@ -78,6 +82,11 @@
     'stdout': '''
       scenarios/example.json
           example-97db95eb
+      scenarios/excluded.json
+          excluded-only-version-7a9ed79c
+          excluded-only-compatible-version-d28c9e3c
+          dependency-excludes-range-of-compatible-versions-2023222f
+          dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208
       scenarios/prereleases.json
           requires-package-only-prereleases-a8b21d15
           requires-package-only-prereleases-in-range-b4df71d2
@@ -123,6 +132,11 @@
     'stdout': '''
       scenarios/example.json
           example
+      scenarios/excluded.json
+          excluded-only-version
+          excluded-only-compatible-version
+          dependency-excludes-range-of-compatible-versions
+          dependency-excludes-non-contiguous-range-of-compatible-versions
       scenarios/prereleases.json
           requires-package-only-prereleases
           requires-package-only-prereleases-in-range

@@ -1,4 +1,683 @@
 # serializer version: 1
+# name: test_build_all_scenarios[excluded]
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-0.0.0/pyproject.toml': 'md5:7780d0407cd7300fc9b4d62e12444329',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-0.0.0/src/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-1.0.0/pyproject.toml': 'md5:da4b3139d8280d837f94d6b9979413cb',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-1.0.0/src/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-2.0.0/pyproject.toml': 'md5:e8416702f299ce95a38a4f667882c424',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-2.0.0/src/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-2.1.0/pyproject.toml': 'md5:3edbfd42afce4d73f7b4831188fad868',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-2.1.0/src/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a/__init__.py': '''
+        __version__ = "2.1.0"
+  
+      ''',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-2.2.0/pyproject.toml': 'md5:9bcaf1b857b430aa48ceaf3ba32ae649',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-2.2.0/src/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a/__init__.py': '''
+        __version__ = "2.2.0"
+  
+      ''',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-2.3.0/pyproject.toml': 'md5:4d68b8dc7d0d974bcc4515eab5c4eec6',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-2.3.0/src/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a/__init__.py': '''
+        __version__ = "2.3.0"
+  
+      ''',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-2.4.0/pyproject.toml': 'md5:3515cbf71e804677e3fca99414859842',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-2.4.0/src/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a/__init__.py': '''
+        __version__ = "2.4.0"
+  
+      ''',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-3.0.0/pyproject.toml': 'md5:c4a92038800945aa5d01f296b47c3bdb',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-3.0.0/src/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a/__init__.py': '''
+        __version__ = "3.0.0"
+  
+      ''',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-b-1.0.0/pyproject.toml': 'md5:df16026541066c0fbbaa6bb1059bb629',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-b-1.0.0/src/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-b-2.0.0/pyproject.toml': 'md5:39d042cfd9624c5d9578f35d5a1c4ebd',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-b-2.0.0/src/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-b-3.0.0/pyproject.toml': 'md5:afad69d031c0e09b18a8a16a65c869fb',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-b-3.0.0/src/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b/__init__.py': '''
+        __version__ = "3.0.0"
+  
+      ''',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-c-1.0.0/pyproject.toml': 'md5:6570b7681314f9d79401da41dd307863',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-c-1.0.0/src/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_c/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-c-2.0.0/pyproject.toml': 'md5:2ada8757256d2158f08f6b5f05d9b9bb',
+      'build/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-c-2.0.0/src/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_c/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-0.0.0/pyproject.toml': 'md5:88520d34147969096f6a9161f3c32d15',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-0.0.0/src/dependency_excludes_range_of_compatible_versions_2023222f/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-a-1.0.0/pyproject.toml': 'md5:d9004eccf4fd8175f376f14c929da102',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-a-1.0.0/src/dependency_excludes_range_of_compatible_versions_2023222f_a/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-a-2.0.0/pyproject.toml': 'md5:82d4325123476ab7abae32ef1c65caed',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-a-2.0.0/src/dependency_excludes_range_of_compatible_versions_2023222f_a/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-a-2.1.0/pyproject.toml': 'md5:e15880bd445bd50bb756b9a05d45875f',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-a-2.1.0/src/dependency_excludes_range_of_compatible_versions_2023222f_a/__init__.py': '''
+        __version__ = "2.1.0"
+  
+      ''',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-a-2.2.0/pyproject.toml': 'md5:2722365fe8328686577f0f499e2ed895',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-a-2.2.0/src/dependency_excludes_range_of_compatible_versions_2023222f_a/__init__.py': '''
+        __version__ = "2.2.0"
+  
+      ''',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-a-2.3.0/pyproject.toml': 'md5:7909149a922842c0c9b045e8db11f5b7',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-a-2.3.0/src/dependency_excludes_range_of_compatible_versions_2023222f_a/__init__.py': '''
+        __version__ = "2.3.0"
+  
+      ''',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-a-3.0.0/pyproject.toml': 'md5:60105b7b34311d1e331a9d57cb7bd9cf',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-a-3.0.0/src/dependency_excludes_range_of_compatible_versions_2023222f_a/__init__.py': '''
+        __version__ = "3.0.0"
+  
+      ''',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-b-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/dependency_excludes_range_of_compatible_versions_2023222f_b"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/dependency_excludes_range_of_compatible_versions_2023222f_b"]
+        
+        [project]
+        name = "dependency-excludes-range-of-compatible-versions-2023222f-b"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-b-1.0.0/src/dependency_excludes_range_of_compatible_versions_2023222f_b/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-b-2.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/dependency_excludes_range_of_compatible_versions_2023222f_b"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/dependency_excludes_range_of_compatible_versions_2023222f_b"]
+        
+        [project]
+        name = "dependency-excludes-range-of-compatible-versions-2023222f-b"
+        version = "2.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-b-2.0.0/src/dependency_excludes_range_of_compatible_versions_2023222f_b/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-b-3.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/dependency_excludes_range_of_compatible_versions_2023222f_b"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/dependency_excludes_range_of_compatible_versions_2023222f_b"]
+        
+        [project]
+        name = "dependency-excludes-range-of-compatible-versions-2023222f-b"
+        version = "3.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-b-3.0.0/src/dependency_excludes_range_of_compatible_versions_2023222f_b/__init__.py': '''
+        __version__ = "3.0.0"
+  
+      ''',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-c-1.0.0/pyproject.toml': 'md5:d1a223bd5dccc91721fa1f642d844d3c',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-c-1.0.0/src/dependency_excludes_range_of_compatible_versions_2023222f_c/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-c-2.0.0/pyproject.toml': 'md5:16afcb13a0c6e1afecefc29fe555ea49',
+      'build/dependency-excludes-range-of-compatible-versions-2023222f/dependency-excludes-range-of-compatible-versions-2023222f-c-2.0.0/src/dependency_excludes_range_of_compatible_versions_2023222f_c/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'build/excluded-only-compatible-version-d28c9e3c/excluded-only-compatible-version-d28c9e3c-0.0.0/pyproject.toml': 'md5:f5909c0a410589764721702d9d10bd2d',
+      'build/excluded-only-compatible-version-d28c9e3c/excluded-only-compatible-version-d28c9e3c-0.0.0/src/excluded_only_compatible_version_d28c9e3c/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/excluded-only-compatible-version-d28c9e3c/excluded-only-compatible-version-d28c9e3c-a-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/excluded_only_compatible_version_d28c9e3c_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/excluded_only_compatible_version_d28c9e3c_a"]
+        
+        [project]
+        name = "excluded-only-compatible-version-d28c9e3c-a"
+        version = "1.0.0"
+        dependencies = ["excluded-only-compatible-version-d28c9e3c-b==1.0.0"]
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/excluded-only-compatible-version-d28c9e3c/excluded-only-compatible-version-d28c9e3c-a-1.0.0/src/excluded_only_compatible_version_d28c9e3c_a/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/excluded-only-compatible-version-d28c9e3c/excluded-only-compatible-version-d28c9e3c-a-2.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/excluded_only_compatible_version_d28c9e3c_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/excluded_only_compatible_version_d28c9e3c_a"]
+        
+        [project]
+        name = "excluded-only-compatible-version-d28c9e3c-a"
+        version = "2.0.0"
+        dependencies = ["excluded-only-compatible-version-d28c9e3c-b==2.0.0"]
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/excluded-only-compatible-version-d28c9e3c/excluded-only-compatible-version-d28c9e3c-a-2.0.0/src/excluded_only_compatible_version_d28c9e3c_a/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'build/excluded-only-compatible-version-d28c9e3c/excluded-only-compatible-version-d28c9e3c-a-3.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/excluded_only_compatible_version_d28c9e3c_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/excluded_only_compatible_version_d28c9e3c_a"]
+        
+        [project]
+        name = "excluded-only-compatible-version-d28c9e3c-a"
+        version = "3.0.0"
+        dependencies = ["excluded-only-compatible-version-d28c9e3c-b==3.0.0"]
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/excluded-only-compatible-version-d28c9e3c/excluded-only-compatible-version-d28c9e3c-a-3.0.0/src/excluded_only_compatible_version_d28c9e3c_a/__init__.py': '''
+        __version__ = "3.0.0"
+  
+      ''',
+      'build/excluded-only-compatible-version-d28c9e3c/excluded-only-compatible-version-d28c9e3c-b-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/excluded_only_compatible_version_d28c9e3c_b"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/excluded_only_compatible_version_d28c9e3c_b"]
+        
+        [project]
+        name = "excluded-only-compatible-version-d28c9e3c-b"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/excluded-only-compatible-version-d28c9e3c/excluded-only-compatible-version-d28c9e3c-b-1.0.0/src/excluded_only_compatible_version_d28c9e3c_b/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/excluded-only-compatible-version-d28c9e3c/excluded-only-compatible-version-d28c9e3c-b-2.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/excluded_only_compatible_version_d28c9e3c_b"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/excluded_only_compatible_version_d28c9e3c_b"]
+        
+        [project]
+        name = "excluded-only-compatible-version-d28c9e3c-b"
+        version = "2.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/excluded-only-compatible-version-d28c9e3c/excluded-only-compatible-version-d28c9e3c-b-2.0.0/src/excluded_only_compatible_version_d28c9e3c_b/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'build/excluded-only-compatible-version-d28c9e3c/excluded-only-compatible-version-d28c9e3c-b-3.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/excluded_only_compatible_version_d28c9e3c_b"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/excluded_only_compatible_version_d28c9e3c_b"]
+        
+        [project]
+        name = "excluded-only-compatible-version-d28c9e3c-b"
+        version = "3.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/excluded-only-compatible-version-d28c9e3c/excluded-only-compatible-version-d28c9e3c-b-3.0.0/src/excluded_only_compatible_version_d28c9e3c_b/__init__.py': '''
+        __version__ = "3.0.0"
+  
+      ''',
+      'build/excluded-only-version-7a9ed79c/excluded-only-version-7a9ed79c-0.0.0/pyproject.toml': 'md5:c0a58b367df0a29b4ab94b9a71657e3f',
+      'build/excluded-only-version-7a9ed79c/excluded-only-version-7a9ed79c-0.0.0/src/excluded_only_version_7a9ed79c/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/excluded-only-version-7a9ed79c/excluded-only-version-7a9ed79c-a-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/excluded_only_version_7a9ed79c_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/excluded_only_version_7a9ed79c_a"]
+        
+        [project]
+        name = "excluded-only-version-7a9ed79c-a"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/excluded-only-version-7a9ed79c/excluded-only-version-7a9ed79c-a-1.0.0/src/excluded_only_version_7a9ed79c_a/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208-0.0.0.tar.gz': 'md5:7d8b799e69dbf11e08681e2a9c1ccf57',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-1.0.0-py3-none-any.whl': 'md5:e10d09456da37e66a71c2c334c7da48e',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-1.0.0.tar.gz': 'md5:62793b7749acaac554e4f29349ee8608',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.0.0-py3-none-any.whl': 'md5:38cb62ab5e6be8c08ed8532e2c9da789',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.0.0.tar.gz': 'md5:afbf20097d1de170e1da262f89ee002a',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.1.0-py3-none-any.whl': 'md5:fa8aeabcfc4aad36b47252ecc5ab65ec',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.1.0.tar.gz': 'md5:888f753541da974815640b7a4fe83329',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.2.0-py3-none-any.whl': 'md5:bcafb189cc2c907dbd7b5042a2ffab18',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.2.0.tar.gz': 'md5:d7798eab82310f2a3811ccd942a0de30',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.3.0-py3-none-any.whl': 'md5:701ad5ec26bc0129b071bb2dfb8bde68',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.3.0.tar.gz': 'md5:bed20e05e183e134791b5d6b29d5ea77',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.4.0-py3-none-any.whl': 'md5:ca320b77db130673d573d8c66601d515',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.4.0.tar.gz': 'md5:cd13f13aa48a597ee62273ed6746232f',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-3.0.0-py3-none-any.whl': 'md5:499a1aaebdcb9174eb6e74c6192f3829',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-3.0.0.tar.gz': 'md5:71fcee49c9de593f0f3ed8331014ff9e',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b-1.0.0-py3-none-any.whl': 'md5:26f43d24546203faadda1dacd6acc735',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b-1.0.0.tar.gz': 'md5:1d85e4671edd2bb747790adfe8ee1391',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b-2.0.0-py3-none-any.whl': 'md5:f95e1a015fb1c3b545b593268dc170db',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b-2.0.0.tar.gz': 'md5:7ff29ff097b905c5eae40ec7713bb0ae',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b-3.0.0-py3-none-any.whl': 'md5:dc19e569f86b82ef39882f390da262e2',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b-3.0.0.tar.gz': 'md5:967e05abc38a96c4f61f6b02a9becb29',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_c-1.0.0-py3-none-any.whl': 'md5:775dc7cecadc3b832b8152ea5ce4f7c5',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_c-1.0.0.tar.gz': 'md5:faa12f2de329af9f5058a6de1be78ed4',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_c-2.0.0-py3-none-any.whl': 'md5:55f05e0c3c8f154aa64bc744ba037cca',
+      'dist/dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208/dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_c-2.0.0.tar.gz': 'md5:4a830ea79edc9c2baedd5da69299ca51',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f-0.0.0.tar.gz': 'md5:0a4f1caf41be03ee1098ad33a581b844',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_a-1.0.0-py3-none-any.whl': 'md5:a12a21968cb7147ecad15e5a13e433c6',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_a-1.0.0.tar.gz': 'md5:99568761bfeda95e2010042f59f3b858',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_a-2.0.0-py3-none-any.whl': 'md5:f12bab7556174fc0785866a4db0a79ca',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_a-2.0.0.tar.gz': 'md5:1f4bb909d65e191e3b846b7aa3fe8c18',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_a-2.1.0-py3-none-any.whl': 'md5:815ca0e036409bfd61be306033b330ab',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_a-2.1.0.tar.gz': 'md5:6fd70e96539526479a40007e03e8ff0b',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_a-2.2.0-py3-none-any.whl': 'md5:2476b3d9fec6da9ab906f88edebc3af9',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_a-2.2.0.tar.gz': 'md5:df5b0bbe97dad65e6271dfa8e3bd6f9d',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_a-2.3.0-py3-none-any.whl': 'md5:bed1fa5c26c7fe513e8c6a1e581665f3',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_a-2.3.0.tar.gz': 'md5:5e2aa06054832bac6d41c3ccb38fd844',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_a-3.0.0-py3-none-any.whl': 'md5:e937415ec0f8866acd10579848363aa1',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_a-3.0.0.tar.gz': 'md5:3dbc1becd497ae09064a7de74585e707',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_b-1.0.0-py3-none-any.whl': 'md5:4fea35bbc30fbede56d9b119d8003577',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_b-1.0.0.tar.gz': 'md5:6a3da83d63121844c0330795921f8ce4',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_b-2.0.0-py3-none-any.whl': 'md5:8f8b56f1898d0dce0bcdb8187c9b837c',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_b-2.0.0.tar.gz': 'md5:7cd6d0519777ce1ac1442a8836a8f2ab',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_b-3.0.0-py3-none-any.whl': 'md5:b5ea5196c5dff6c467f62a6f571d5893',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_b-3.0.0.tar.gz': 'md5:781e4effadbb1b7fbb1e8aee8843ff74',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_c-1.0.0-py3-none-any.whl': 'md5:6fb45cb3c27be6ec3a20e8f5eed38003',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_c-1.0.0.tar.gz': 'md5:0d1f47ce225a45c836738a3cf9768da4',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_c-2.0.0-py3-none-any.whl': 'md5:8adafbcb148964096163edd0f5db09de',
+      'dist/dependency-excludes-range-of-compatible-versions-2023222f/dependency_excludes_range_of_compatible_versions_2023222f_c-2.0.0.tar.gz': 'md5:63ac124ed21cd7e3b6eabc566cff05ce',
+      'dist/excluded-only-compatible-version-d28c9e3c/excluded_only_compatible_version_d28c9e3c-0.0.0.tar.gz': 'md5:8d868896404984de26c956c84f3304f4',
+      'dist/excluded-only-compatible-version-d28c9e3c/excluded_only_compatible_version_d28c9e3c_a-1.0.0-py3-none-any.whl': 'md5:6d0e8643f92ee39b1123ac694cf96827',
+      'dist/excluded-only-compatible-version-d28c9e3c/excluded_only_compatible_version_d28c9e3c_a-1.0.0.tar.gz': 'md5:cd8c2d13b882f85ac7b11c35b3709bf3',
+      'dist/excluded-only-compatible-version-d28c9e3c/excluded_only_compatible_version_d28c9e3c_a-2.0.0-py3-none-any.whl': 'md5:e0c9c3ffda0510db25c2e5f96ff8e525',
+      'dist/excluded-only-compatible-version-d28c9e3c/excluded_only_compatible_version_d28c9e3c_a-2.0.0.tar.gz': 'md5:7911ab432e722e4e8664af0a70b07d85',
+      'dist/excluded-only-compatible-version-d28c9e3c/excluded_only_compatible_version_d28c9e3c_a-3.0.0-py3-none-any.whl': 'md5:eeaf72fac93305ae4666cd521636f0f3',
+      'dist/excluded-only-compatible-version-d28c9e3c/excluded_only_compatible_version_d28c9e3c_a-3.0.0.tar.gz': 'md5:4b560d5367b1716db7448b5118c6e0ef',
+      'dist/excluded-only-compatible-version-d28c9e3c/excluded_only_compatible_version_d28c9e3c_b-1.0.0-py3-none-any.whl': 'md5:924e4228d6a1791dcf1ba06f8a1228da',
+      'dist/excluded-only-compatible-version-d28c9e3c/excluded_only_compatible_version_d28c9e3c_b-1.0.0.tar.gz': 'md5:8aab0fa49ed1e26c1251155aed116199',
+      'dist/excluded-only-compatible-version-d28c9e3c/excluded_only_compatible_version_d28c9e3c_b-2.0.0-py3-none-any.whl': 'md5:38bfa284d6c039c5428364d19aedb512',
+      'dist/excluded-only-compatible-version-d28c9e3c/excluded_only_compatible_version_d28c9e3c_b-2.0.0.tar.gz': 'md5:7450d2c89bbd35c6c7367d4f6d64fc93',
+      'dist/excluded-only-compatible-version-d28c9e3c/excluded_only_compatible_version_d28c9e3c_b-3.0.0-py3-none-any.whl': 'md5:bf4a3ac072c825569ebd41d218c558b2',
+      'dist/excluded-only-compatible-version-d28c9e3c/excluded_only_compatible_version_d28c9e3c_b-3.0.0.tar.gz': 'md5:ce94467686a1c7ebd24fd6be799a7b22',
+      'dist/excluded-only-version-7a9ed79c/excluded_only_version_7a9ed79c-0.0.0.tar.gz': 'md5:353af56d8663d5fe2cc83293bc33e2d8',
+      'dist/excluded-only-version-7a9ed79c/excluded_only_version_7a9ed79c_a-1.0.0-py3-none-any.whl': 'md5:c4448e40e88b207dda6b2d8adb3ab4ae',
+      'dist/excluded-only-version-7a9ed79c/excluded_only_version_7a9ed79c_a-1.0.0.tar.gz': 'md5:dd8d832834f8902cebd5e7b509fb7cc3',
+      'tree': '''
+        test_build_all_scenarios_exclu0
+        ├── build
+        │   ├── dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208
+        │   │   ├── dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-2.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-2.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-2.2.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-2.3.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-2.4.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-a-3.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-b-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-b-2.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-b-3.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-c-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_c
+        │   │   │           └── __init__.py
+        │   │   └── dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208-c-2.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_c
+        │   │               └── __init__.py
+        │   ├── dependency-excludes-range-of-compatible-versions-2023222f
+        │   │   ├── dependency-excludes-range-of-compatible-versions-2023222f-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_range_of_compatible_versions_2023222f
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-range-of-compatible-versions-2023222f-a-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_range_of_compatible_versions_2023222f_a
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-range-of-compatible-versions-2023222f-a-2.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_range_of_compatible_versions_2023222f_a
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-range-of-compatible-versions-2023222f-a-2.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_range_of_compatible_versions_2023222f_a
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-range-of-compatible-versions-2023222f-a-2.2.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_range_of_compatible_versions_2023222f_a
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-range-of-compatible-versions-2023222f-a-2.3.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_range_of_compatible_versions_2023222f_a
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-range-of-compatible-versions-2023222f-a-3.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_range_of_compatible_versions_2023222f_a
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-range-of-compatible-versions-2023222f-b-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_range_of_compatible_versions_2023222f_b
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-range-of-compatible-versions-2023222f-b-2.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_range_of_compatible_versions_2023222f_b
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-range-of-compatible-versions-2023222f-b-3.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_range_of_compatible_versions_2023222f_b
+        │   │   │           └── __init__.py
+        │   │   ├── dependency-excludes-range-of-compatible-versions-2023222f-c-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── dependency_excludes_range_of_compatible_versions_2023222f_c
+        │   │   │           └── __init__.py
+        │   │   └── dependency-excludes-range-of-compatible-versions-2023222f-c-2.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── dependency_excludes_range_of_compatible_versions_2023222f_c
+        │   │               └── __init__.py
+        │   ├── excluded-only-compatible-version-d28c9e3c
+        │   │   ├── excluded-only-compatible-version-d28c9e3c-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── excluded_only_compatible_version_d28c9e3c
+        │   │   │           └── __init__.py
+        │   │   ├── excluded-only-compatible-version-d28c9e3c-a-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── excluded_only_compatible_version_d28c9e3c_a
+        │   │   │           └── __init__.py
+        │   │   ├── excluded-only-compatible-version-d28c9e3c-a-2.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── excluded_only_compatible_version_d28c9e3c_a
+        │   │   │           └── __init__.py
+        │   │   ├── excluded-only-compatible-version-d28c9e3c-a-3.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── excluded_only_compatible_version_d28c9e3c_a
+        │   │   │           └── __init__.py
+        │   │   ├── excluded-only-compatible-version-d28c9e3c-b-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── excluded_only_compatible_version_d28c9e3c_b
+        │   │   │           └── __init__.py
+        │   │   ├── excluded-only-compatible-version-d28c9e3c-b-2.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── excluded_only_compatible_version_d28c9e3c_b
+        │   │   │           └── __init__.py
+        │   │   └── excluded-only-compatible-version-d28c9e3c-b-3.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── excluded_only_compatible_version_d28c9e3c_b
+        │   │               └── __init__.py
+        │   └── excluded-only-version-7a9ed79c
+        │       ├── excluded-only-version-7a9ed79c-0.0.0
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── excluded_only_version_7a9ed79c
+        │       │           └── __init__.py
+        │       └── excluded-only-version-7a9ed79c-a-1.0.0
+        │           ├── pyproject.toml
+        │           └── src
+        │               └── excluded_only_version_7a9ed79c_a
+        │                   └── __init__.py
+        └── dist
+            ├── dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208-0.0.0.tar.gz
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-1.0.0-py3-none-any.whl
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-1.0.0.tar.gz
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.0.0-py3-none-any.whl
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.0.0.tar.gz
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.1.0-py3-none-any.whl
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.1.0.tar.gz
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.2.0-py3-none-any.whl
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.2.0.tar.gz
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.3.0-py3-none-any.whl
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.3.0.tar.gz
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.4.0-py3-none-any.whl
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-2.4.0.tar.gz
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-3.0.0-py3-none-any.whl
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_a-3.0.0.tar.gz
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b-1.0.0-py3-none-any.whl
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b-1.0.0.tar.gz
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b-2.0.0-py3-none-any.whl
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b-2.0.0.tar.gz
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b-3.0.0-py3-none-any.whl
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_b-3.0.0.tar.gz
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_c-1.0.0-py3-none-any.whl
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_c-1.0.0.tar.gz
+            │   ├── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_c-2.0.0-py3-none-any.whl
+            │   └── dependency_excludes_non_contiguous_range_of_compatible_versions_aece4208_c-2.0.0.tar.gz
+            ├── dependency-excludes-range-of-compatible-versions-2023222f
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f-0.0.0.tar.gz
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_a-1.0.0-py3-none-any.whl
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_a-1.0.0.tar.gz
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_a-2.0.0-py3-none-any.whl
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_a-2.0.0.tar.gz
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_a-2.1.0-py3-none-any.whl
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_a-2.1.0.tar.gz
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_a-2.2.0-py3-none-any.whl
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_a-2.2.0.tar.gz
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_a-2.3.0-py3-none-any.whl
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_a-2.3.0.tar.gz
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_a-3.0.0-py3-none-any.whl
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_a-3.0.0.tar.gz
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_b-1.0.0-py3-none-any.whl
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_b-1.0.0.tar.gz
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_b-2.0.0-py3-none-any.whl
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_b-2.0.0.tar.gz
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_b-3.0.0-py3-none-any.whl
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_b-3.0.0.tar.gz
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_c-1.0.0-py3-none-any.whl
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_c-1.0.0.tar.gz
+            │   ├── dependency_excludes_range_of_compatible_versions_2023222f_c-2.0.0-py3-none-any.whl
+            │   └── dependency_excludes_range_of_compatible_versions_2023222f_c-2.0.0.tar.gz
+            ├── excluded-only-compatible-version-d28c9e3c
+            │   ├── excluded_only_compatible_version_d28c9e3c-0.0.0.tar.gz
+            │   ├── excluded_only_compatible_version_d28c9e3c_a-1.0.0-py3-none-any.whl
+            │   ├── excluded_only_compatible_version_d28c9e3c_a-1.0.0.tar.gz
+            │   ├── excluded_only_compatible_version_d28c9e3c_a-2.0.0-py3-none-any.whl
+            │   ├── excluded_only_compatible_version_d28c9e3c_a-2.0.0.tar.gz
+            │   ├── excluded_only_compatible_version_d28c9e3c_a-3.0.0-py3-none-any.whl
+            │   ├── excluded_only_compatible_version_d28c9e3c_a-3.0.0.tar.gz
+            │   ├── excluded_only_compatible_version_d28c9e3c_b-1.0.0-py3-none-any.whl
+            │   ├── excluded_only_compatible_version_d28c9e3c_b-1.0.0.tar.gz
+            │   ├── excluded_only_compatible_version_d28c9e3c_b-2.0.0-py3-none-any.whl
+            │   ├── excluded_only_compatible_version_d28c9e3c_b-2.0.0.tar.gz
+            │   ├── excluded_only_compatible_version_d28c9e3c_b-3.0.0-py3-none-any.whl
+            │   └── excluded_only_compatible_version_d28c9e3c_b-3.0.0.tar.gz
+            └── excluded-only-version-7a9ed79c
+                ├── excluded_only_version_7a9ed79c-0.0.0.tar.gz
+                ├── excluded_only_version_7a9ed79c_a-1.0.0-py3-none-any.whl
+                └── excluded_only_version_7a9ed79c_a-1.0.0.tar.gz
+        
+        112 directories, 132 files
+  
+      ''',
+    }),
+    'stderr': '<not included>',
+    'stdout': '''
+      dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208
+      dependency-excludes-range-of-compatible-versions-2023222f
+      excluded-only-compatible-version-d28c9e3c
+      excluded-only-version-7a9ed79c
+  
+    ''',
+  })
+# ---
 # name: test_build_all_scenarios[prereleases]
   dict({
     'exit_code': 0,
@@ -3353,6 +4032,158 @@
       requires-python-version-greater-than-current-excluded-1bde0c18
       requires-python-version-greater-than-current-many-02dc550c
       requires-python-version-less-than-current-f9296b84
+  
+    ''',
+  })
+# ---
+# name: test_view_all_scenarios[excluded]
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'tree': '''
+        test_view_all_scenarios_exclud0
+        
+        0 directories
+  
+      ''',
+    }),
+    'stderr': '',
+    'stdout': '''
+      excluded-only-version-7a9ed79c
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a!=1.0.0
+      │       └── unsatisfied: no matching version
+      └── a
+          └── a-1.0.0
+      
+      excluded-only-compatible-version-d28c9e3c
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   ├── requires a!=2.0.0
+      │   │   ├── satisfied by a-1.0.0
+      │   │   └── satisfied by a-3.0.0
+      │   └── requires b>=2.0.0,<3.0.0
+      │       └── satisfied by b-2.0.0
+      ├── a
+      │   ├── a-1.0.0
+      │   │   └── requires b==1.0.0
+      │   │       └── satisfied by b-1.0.0
+      │   ├── a-2.0.0
+      │   │   └── requires b==2.0.0
+      │   │       └── satisfied by b-2.0.0
+      │   └── a-3.0.0
+      │       └── requires b==3.0.0
+      │           └── satisfied by b-3.0.0
+      └── b
+          ├── b-1.0.0
+          ├── b-2.0.0
+          └── b-3.0.0
+      
+      dependency-excludes-range-of-compatible-versions-2023222f
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   ├── requires a
+      │   │   ├── satisfied by a-1.0.0
+      │   │   ├── satisfied by a-2.0.0
+      │   │   ├── satisfied by a-2.1.0
+      │   │   ├── satisfied by a-2.2.0
+      │   │   ├── satisfied by a-2.3.0
+      │   │   └── satisfied by a-3.0.0
+      │   ├── requires b>=2.0.0,<3.0.0
+      │   │   └── satisfied by b-2.0.0
+      │   └── requires c
+      │       ├── satisfied by c-1.0.0
+      │       └── satisfied by c-2.0.0
+      ├── a
+      │   ├── a-1.0.0
+      │   │   └── requires b==1.0.0
+      │   │       └── satisfied by b-1.0.0
+      │   ├── a-2.0.0
+      │   │   └── requires b==2.0.0
+      │   │       └── satisfied by b-2.0.0
+      │   ├── a-2.1.0
+      │   │   └── requires b==2.0.0
+      │   │       └── satisfied by b-2.0.0
+      │   ├── a-2.2.0
+      │   │   └── requires b==2.0.0
+      │   │       └── satisfied by b-2.0.0
+      │   ├── a-2.3.0
+      │   │   └── requires b==2.0.0
+      │   │       └── satisfied by b-2.0.0
+      │   └── a-3.0.0
+      │       └── requires b==3.0.0
+      │           └── satisfied by b-3.0.0
+      ├── b
+      │   ├── b-1.0.0
+      │   ├── b-2.0.0
+      │   └── b-3.0.0
+      └── c
+          ├── c-1.0.0
+          │   └── requires a<2.0.0
+          │       └── satisfied by a-1.0.0
+          └── c-2.0.0
+              └── requires a>=3.0.0
+                  └── satisfied by a-3.0.0
+      
+      dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   ├── requires a
+      │   │   ├── satisfied by a-1.0.0
+      │   │   ├── satisfied by a-2.0.0
+      │   │   ├── satisfied by a-2.1.0
+      │   │   ├── satisfied by a-2.2.0
+      │   │   ├── satisfied by a-2.3.0
+      │   │   ├── satisfied by a-2.4.0
+      │   │   └── satisfied by a-3.0.0
+      │   ├── requires b>=2.0.0,<3.0.0
+      │   │   └── satisfied by b-2.0.0
+      │   └── requires c
+      │       ├── satisfied by c-1.0.0
+      │       └── satisfied by c-2.0.0
+      ├── a
+      │   ├── a-1.0.0
+      │   │   └── requires b==1.0.0
+      │   │       └── satisfied by b-1.0.0
+      │   ├── a-2.0.0
+      │   │   └── requires b==2.0.0
+      │   │       └── satisfied by b-2.0.0
+      │   ├── a-2.1.0
+      │   │   ├── requires b==2.0.0
+      │   │   │   └── satisfied by b-2.0.0
+      │   │   └── requires d
+      │   │       └── unsatisfied: no versions for package
+      │   ├── a-2.2.0
+      │   │   └── requires b==2.0.0
+      │   │       └── satisfied by b-2.0.0
+      │   ├── a-2.3.0
+      │   │   ├── requires b==2.0.0
+      │   │   │   └── satisfied by b-2.0.0
+      │   │   └── requires d
+      │   │       └── unsatisfied: no versions for package
+      │   ├── a-2.4.0
+      │   │   └── requires b==2.0.0
+      │   │       └── satisfied by b-2.0.0
+      │   └── a-3.0.0
+      │       └── requires b==3.0.0
+      │           └── satisfied by b-3.0.0
+      ├── b
+      │   ├── b-1.0.0
+      │   ├── b-2.0.0
+      │   └── b-3.0.0
+      └── c
+          ├── c-1.0.0
+          │   └── requires a<2.0.0
+          │       └── satisfied by a-1.0.0
+          └── c-2.0.0
+              └── requires a>=3.0.0
+                  └── satisfied by a-3.0.0
+      
   
     ''',
   })
