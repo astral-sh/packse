@@ -1278,6 +1278,506 @@
             ]
           },
           {
+            "name": "requires-transitive-prerelease-and-stable-dependency-many-versions",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "c>=2.0.0b1"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              },
+              "b": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "c>=1.0.0,<=3.0.0"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              },
+              "c": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a2": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a3": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a4": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a5": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a6": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a7": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a8": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a9": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b2": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b3": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b4": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b5": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b6": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b7": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b8": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b9": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a",
+                "b"
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": "Since the user did not explicitly opt-in to a pre-release, it cannot be selected."
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. There are many prerelease versions.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "prefix": "requires-transitive-prerelease-and-stable-dependency-many-versions-260cdf7a",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u251c\u2500\u2500 requires a",
+              "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2502   \u2514\u2500\u2500 requires b",
+              "\u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u2514\u2500\u2500 a-1.0.0",
+              "\u2502       \u251c\u2500\u2500 requires c>=2.0.0b1",
+              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by c-2.0.0b1",
+              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by c-2.0.0b2",
+              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by c-2.0.0b3",
+              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by c-2.0.0b4",
+              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by c-2.0.0b5",
+              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by c-2.0.0b6",
+              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by c-2.0.0b7",
+              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by c-2.0.0b8",
+              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by c-2.0.0b9",
+              "\u2502       \u2514\u2500\u2500 requires python>=3.7",
+              "\u251c\u2500\u2500 b",
+              "\u2502   \u2514\u2500\u2500 b-1.0.0",
+              "\u2502       \u251c\u2500\u2500 requires c>=1.0.0,<=3.0.0",
+              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by c-1.0.0",
+              "\u2502       \u2514\u2500\u2500 requires python>=3.7",
+              "\u2514\u2500\u2500 c",
+              "    \u251c\u2500\u2500 c-1.0.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a1",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a2",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a3",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a4",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a5",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a6",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a7",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a8",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a9",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0b1",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0b2",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0b3",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0b4",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0b5",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0b6",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0b7",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0b8",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 c-2.0.0b9",
+              "        \u2514\u2500\u2500 requires python>=3.7"
+            ]
+          },
+          {
+            "name": "requires-transitive-prerelease-and-stable-dependency-many-versions-holes",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "c>1.0.0,!=2.0.0a5,!=2.0.0a6,!=2.0.0a7,!=2.0.0b1,<2.0.0b5"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              },
+              "b": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "c>=1.0.0,<=3.0.0"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              },
+              "c": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a2": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a3": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a4": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a5": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a6": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a7": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a8": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0a9": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b1": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b2": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b3": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b4": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b5": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b6": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b7": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b8": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0b9": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a",
+                "b"
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": "Since the user did not explicitly opt-in to a pre-release, it cannot be selected."
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. There are many prerelease versions and some are excluded.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "prefix": "requires-transitive-prerelease-and-stable-dependency-many-versions-holes-28a344b9",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u251c\u2500\u2500 requires a",
+              "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2502   \u2514\u2500\u2500 requires b",
+              "\u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u2514\u2500\u2500 a-1.0.0",
+              "\u2502       \u251c\u2500\u2500 requires c>1.0.0,!=2.0.0a5,!=2.0.0a6,!=2.0.0a7,!=2.0.0b1,<2.0.0b5",
+              "\u2502       \u2502   \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2502       \u2514\u2500\u2500 requires python>=3.7",
+              "\u251c\u2500\u2500 b",
+              "\u2502   \u2514\u2500\u2500 b-1.0.0",
+              "\u2502       \u251c\u2500\u2500 requires c>=1.0.0,<=3.0.0",
+              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by c-1.0.0",
+              "\u2502       \u2514\u2500\u2500 requires python>=3.7",
+              "\u2514\u2500\u2500 c",
+              "    \u251c\u2500\u2500 c-1.0.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a1",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a2",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a3",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a4",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a5",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a6",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a7",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a8",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0a9",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0b1",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0b2",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0b3",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0b4",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0b5",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0b6",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0b7",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u251c\u2500\u2500 c-2.0.0b8",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.7",
+              "    \u2514\u2500\u2500 c-2.0.0b9",
+              "        \u2514\u2500\u2500 requires python>=3.7"
+            ]
+          },
+          {
             "name": "requires-package-does-not-exist",
             "packages": {},
             "root": {
