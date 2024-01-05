@@ -15,16 +15,12 @@
       │       ├── requires b>1.0.0
       │       │   ├── satisfied by b-2.0.0
       │       │   └── satisfied by b-3.0.0
-      │       └── requires python>=3.7
       └── b
           ├── b-1.0.0
-          │   └── requires python>=3.7
           ├── b-2.0.0
-          │   └── requires python>=3.7
           └── b-3.0.0
               ├── requires c
                   └── unsatisfied: no versions for package
-              └── requires python>=3.7
       
   
     ''',
@@ -50,16 +46,12 @@
       │       ├── requires b>1.0.0
       │       │   ├── satisfied by b-2.0.0
       │       │   └── satisfied by b-3.0.0
-      │       └── requires python>=3.7
       └── b
           ├── b-1.0.0
-          │   └── requires python>=3.7
           ├── b-2.0.0
-          │   └── requires python>=3.7
           └── b-3.0.0
               ├── requires c
                   └── unsatisfied: no versions for package
-              └── requires python>=3.7
       
   
     ''',

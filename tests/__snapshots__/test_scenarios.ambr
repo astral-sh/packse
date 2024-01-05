@@ -3378,7 +3378,6 @@
       │       └── unsatisfied: no matching version
       └── a
           └── a-1.0.0a1
-              └── requires python>=3.7
       
       requires-package-only-prereleases-in-range-2b0594c8
       ├── environment
@@ -3388,9 +3387,7 @@
       │       └── unsatisfied: no matching version
       └── a
           ├── a-0.1.0
-          │   └── requires python>=3.7
           └── a-1.0.0a1
-              └── requires python>=3.7
       
       requires-package-only-prereleases-in-range-global-opt-in-51f94da2
       ├── environment
@@ -3400,9 +3397,7 @@
       │       └── unsatisfied: no matching version
       └── a
           ├── a-0.1.0
-          │   └── requires python>=3.7
           └── a-1.0.0a1
-              └── requires python>=3.7
       
       requires-package-prerelease-and-final-any-66989e88
       ├── environment
@@ -3412,9 +3407,7 @@
       │       └── satisfied by a-0.1.0
       └── a
           ├── a-0.1.0
-          │   └── requires python>=3.7
           └── a-1.0.0a1
-              └── requires python>=3.7
       
       requires-package-prerelease-specified-only-final-available-8c3e26d4
       ├── environment
@@ -3426,11 +3419,8 @@
       │       └── satisfied by a-0.3.0
       └── a
           ├── a-0.1.0
-          │   └── requires python>=3.7
           ├── a-0.2.0
-          │   └── requires python>=3.7
           └── a-0.3.0
-              └── requires python>=3.7
       
       requires-package-prerelease-specified-only-prerelease-available-fa8a64e0
       ├── environment
@@ -3442,11 +3432,8 @@
       │       └── satisfied by a-0.3.0a1
       └── a
           ├── a-0.1.0a1
-          │   └── requires python>=3.7
           ├── a-0.2.0a1
-          │   └── requires python>=3.7
           └── a-0.3.0a1
-              └── requires python>=3.7
       
       requires-package-prerelease-specified-mixed-available-caf5dd1a
       ├── environment
@@ -3459,13 +3446,9 @@
       │       └── satisfied by a-1.0.0a1
       └── a
           ├── a-0.1.0
-          │   └── requires python>=3.7
           ├── a-0.2.0a1
-          │   └── requires python>=3.7
           ├── a-0.3.0
-          │   └── requires python>=3.7
           └── a-1.0.0a1
-              └── requires python>=3.7
       
       requires-package-multiple-prereleases-kinds-08c2f99b
       ├── environment
@@ -3477,11 +3460,8 @@
       │       └── satisfied by a-1.0.0rc1
       └── a
           ├── a-1.0.0a1
-          │   └── requires python>=3.7
           ├── a-1.0.0b1
-          │   └── requires python>=3.7
           └── a-1.0.0rc1
-              └── requires python>=3.7
       
       requires-package-multiple-prereleases-numbers-4cf7acef
       ├── environment
@@ -3493,11 +3473,8 @@
       │       └── satisfied by a-1.0.0a3
       └── a
           ├── a-1.0.0a1
-          │   └── requires python>=3.7
           ├── a-1.0.0a2
-          │   └── requires python>=3.7
           └── a-1.0.0a3
-              └── requires python>=3.7
       
       requires-transitive-package-only-prereleases-fa02005e
       ├── environment
@@ -3509,10 +3486,8 @@
       │   └── a-0.1.0
       │       ├── requires b
       │       │   └── unsatisfied: no matching version
-      │       └── requires python>=3.7
       └── b
           └── b-1.0.0a1
-              └── requires python>=3.7
       
       requires-transitive-package-only-prereleases-in-range-4800779d
       ├── environment
@@ -3524,12 +3499,9 @@
       │   └── a-0.1.0
       │       ├── requires b>0.1
       │       │   └── unsatisfied: no matching version
-      │       └── requires python>=3.7
       └── b
           ├── b-0.1.0
-          │   └── requires python>=3.7
           └── b-1.0.0a1
-              └── requires python>=3.7
       
       requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42
       ├── environment
@@ -3543,12 +3515,9 @@
       │   └── a-0.1.0
       │       ├── requires b>0.1
       │       │   └── unsatisfied: no matching version
-      │       └── requires python>=3.7
       └── b
           ├── b-0.1.0
-          │   └── requires python>=3.7
           └── b-1.0.0a1
-              └── requires python>=3.7
       
       requires-transitive-prerelease-and-stable-dependency-31b546ef
       ├── environment
@@ -3562,17 +3531,13 @@
       │   └── a-1.0.0
       │       ├── requires c==2.0.0b1
       │       │   └── satisfied by c-2.0.0b1
-      │       └── requires python>=3.7
       ├── b
       │   └── b-1.0.0
       │       ├── requires c>=1.0.0,<=3.0.0
       │       │   └── satisfied by c-1.0.0
-      │       └── requires python>=3.7
       └── c
           ├── c-1.0.0
-          │   └── requires python>=3.7
           └── c-2.0.0b1
-              └── requires python>=3.7
       
       requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f
       ├── environment
@@ -3589,17 +3554,13 @@
       │   └── a-1.0.0
       │       ├── requires c==2.0.0b1
       │       │   └── satisfied by c-2.0.0b1
-      │       └── requires python>=3.7
       ├── b
       │   └── b-1.0.0
       │       ├── requires c>=1.0.0,<=3.0.0
       │       │   └── satisfied by c-1.0.0
-      │       └── requires python>=3.7
       └── c
           ├── c-1.0.0
-          │   └── requires python>=3.7
           └── c-2.0.0b1
-              └── requires python>=3.7
       
       requires-transitive-prerelease-and-stable-dependency-many-versions-260cdf7a
       ├── environment
@@ -3621,51 +3582,30 @@
       │       │   ├── satisfied by c-2.0.0b7
       │       │   ├── satisfied by c-2.0.0b8
       │       │   └── satisfied by c-2.0.0b9
-      │       └── requires python>=3.7
       ├── b
       │   └── b-1.0.0
       │       ├── requires c>=1.0.0,<=3.0.0
       │       │   └── satisfied by c-1.0.0
-      │       └── requires python>=3.7
       └── c
           ├── c-1.0.0
-          │   └── requires python>=3.7
           ├── c-2.0.0a1
-          │   └── requires python>=3.7
           ├── c-2.0.0a2
-          │   └── requires python>=3.7
           ├── c-2.0.0a3
-          │   └── requires python>=3.7
           ├── c-2.0.0a4
-          │   └── requires python>=3.7
           ├── c-2.0.0a5
-          │   └── requires python>=3.7
           ├── c-2.0.0a6
-          │   └── requires python>=3.7
           ├── c-2.0.0a7
-          │   └── requires python>=3.7
           ├── c-2.0.0a8
-          │   └── requires python>=3.7
           ├── c-2.0.0a9
-          │   └── requires python>=3.7
           ├── c-2.0.0b1
-          │   └── requires python>=3.7
           ├── c-2.0.0b2
-          │   └── requires python>=3.7
           ├── c-2.0.0b3
-          │   └── requires python>=3.7
           ├── c-2.0.0b4
-          │   └── requires python>=3.7
           ├── c-2.0.0b5
-          │   └── requires python>=3.7
           ├── c-2.0.0b6
-          │   └── requires python>=3.7
           ├── c-2.0.0b7
-          │   └── requires python>=3.7
           ├── c-2.0.0b8
-          │   └── requires python>=3.7
           └── c-2.0.0b9
-              └── requires python>=3.7
       
       requires-transitive-prerelease-and-stable-dependency-many-versions-holes-28a344b9
       ├── environment
@@ -3679,51 +3619,30 @@
       │   └── a-1.0.0
       │       ├── requires c>1.0.0,!=2.0.0a5,!=2.0.0a6,!=2.0.0a7,!=2.0.0b1,<2.0.0b5
       │       │   └── unsatisfied: no matching version
-      │       └── requires python>=3.7
       ├── b
       │   └── b-1.0.0
       │       ├── requires c>=1.0.0,<=3.0.0
       │       │   └── satisfied by c-1.0.0
-      │       └── requires python>=3.7
       └── c
           ├── c-1.0.0
-          │   └── requires python>=3.7
           ├── c-2.0.0a1
-          │   └── requires python>=3.7
           ├── c-2.0.0a2
-          │   └── requires python>=3.7
           ├── c-2.0.0a3
-          │   └── requires python>=3.7
           ├── c-2.0.0a4
-          │   └── requires python>=3.7
           ├── c-2.0.0a5
-          │   └── requires python>=3.7
           ├── c-2.0.0a6
-          │   └── requires python>=3.7
           ├── c-2.0.0a7
-          │   └── requires python>=3.7
           ├── c-2.0.0a8
-          │   └── requires python>=3.7
           ├── c-2.0.0a9
-          │   └── requires python>=3.7
           ├── c-2.0.0b1
-          │   └── requires python>=3.7
           ├── c-2.0.0b2
-          │   └── requires python>=3.7
           ├── c-2.0.0b3
-          │   └── requires python>=3.7
           ├── c-2.0.0b4
-          │   └── requires python>=3.7
           ├── c-2.0.0b5
-          │   └── requires python>=3.7
           ├── c-2.0.0b6
-          │   └── requires python>=3.7
           ├── c-2.0.0b7
-          │   └── requires python>=3.7
           ├── c-2.0.0b8
-          │   └── requires python>=3.7
           └── c-2.0.0b9
-              └── requires python>=3.7
       
   
     ''',
@@ -3757,7 +3676,6 @@
       │       └── unsatisfied: no matching version
       └── a
           └── a-1.0.0
-              └── requires python>=3.7
       
       requires-greater-version-does-not-exist-6e8e01df
       ├── environment
@@ -3767,9 +3685,7 @@
       │       └── unsatisfied: no matching version
       └── a
           ├── a-0.1.0
-          │   └── requires python>=3.7
           └── a-1.0.0
-              └── requires python>=3.7
       
       requires-less-version-does-not-exist-e45cec3c
       ├── environment
@@ -3779,11 +3695,8 @@
       │       └── unsatisfied: no matching version
       └── a
           ├── a-2.0.0
-          │   └── requires python>=3.7
           ├── a-3.0.0
-          │   └── requires python>=3.7
           └── a-4.0.0
-              └── requires python>=3.7
       
       transitive-requires-package-does-not-exist-aca2796a
       ├── environment
@@ -3795,7 +3708,6 @@
           └── a-1.0.0
               ├── requires b
                   └── unsatisfied: no versions for package
-              └── requires python>=3.7
       
   
     ''',
@@ -3824,9 +3736,7 @@
       │       └── satisfied by a-2.0.0
       └── a
           ├── a-1.0.0
-          │   └── requires python>=3.7
           └── a-2.0.0
-              └── requires python>=3.7
       
       requires-transitive-incompatible-with-root-version-638350f3
       ├── environment
@@ -3840,12 +3750,9 @@
       │   └── a-1.0.0
       │       ├── requires b==2.0.0
       │       │   └── satisfied by b-2.0.0
-      │       └── requires python>=3.7
       └── b
           ├── b-1.0.0
-          │   └── requires python>=3.7
           └── b-2.0.0
-              └── requires python>=3.7
       
       requires-transitive-incompatible-with-transitive-9b595175
       ├── environment
@@ -3859,17 +3766,13 @@
       │   └── a-1.0.0
       │       ├── requires c==1.0.0
       │       │   └── satisfied by c-1.0.0
-      │       └── requires python>=3.7
       ├── b
       │   └── b-1.0.0
       │       ├── requires c==2.0.0
       │       │   └── satisfied by c-2.0.0
-      │       └── requires python>=3.7
       └── c
           ├── c-1.0.0
-          │   └── requires python>=3.7
           └── c-2.0.0
-              └── requires python>=3.7
       
   
     ''',
@@ -3896,7 +3799,7 @@
       │       └── satisfied by a-1.0.0
       └── a
           └── a-1.0.0
-              └── requires python>=4.0 (incompatible with environment)
+              └── incompatible requires-python >=4.0
       
       requires-python-version-less-than-current-f9296b84
       ├── environment
@@ -3906,7 +3809,7 @@
       │       └── satisfied by a-1.0.0
       └── a
           └── a-1.0.0
-              └── requires python<=3.8 (incompatible with environment)
+              └── incompatible requires-python <=3.8
       
       requires-python-version-greater-than-current-a11d5394
       ├── environment
@@ -3916,7 +3819,7 @@
       │       └── satisfied by a-1.0.0
       └── a
           └── a-1.0.0
-              └── requires python>=3.10 (incompatible with environment)
+              └── incompatible requires-python >=3.10
       
       requires-python-version-greater-than-current-many-02dc550c
       ├── environment
@@ -3926,29 +3829,29 @@
       │       └── unsatisfied: no matching version
       └── a
           ├── a-2.0.0
-          │   └── requires python>=3.10 (incompatible with environment)
+          │   └── incompatible requires-python >=3.10
           ├── a-2.1.0
-          │   └── requires python>=3.10 (incompatible with environment)
+          │   └── incompatible requires-python >=3.10
           ├── a-2.2.0
-          │   └── requires python>=3.10 (incompatible with environment)
+          │   └── incompatible requires-python >=3.10
           ├── a-2.3.0
-          │   └── requires python>=3.10 (incompatible with environment)
+          │   └── incompatible requires-python >=3.10
           ├── a-2.4.0
-          │   └── requires python>=3.10 (incompatible with environment)
+          │   └── incompatible requires-python >=3.10
           ├── a-2.5.0
-          │   └── requires python>=3.10 (incompatible with environment)
+          │   └── incompatible requires-python >=3.10
           ├── a-3.0.0
-          │   └── requires python>=3.11 (incompatible with environment)
+          │   └── incompatible requires-python >=3.11
           ├── a-3.1.0
-          │   └── requires python>=3.11 (incompatible with environment)
+          │   └── incompatible requires-python >=3.11
           ├── a-3.2.0
-          │   └── requires python>=3.11 (incompatible with environment)
+          │   └── incompatible requires-python >=3.11
           ├── a-3.3.0
-          │   └── requires python>=3.11 (incompatible with environment)
+          │   └── incompatible requires-python >=3.11
           ├── a-3.4.0
-          │   └── requires python>=3.11 (incompatible with environment)
+          │   └── incompatible requires-python >=3.11
           └── a-3.5.0
-              └── requires python>=3.11 (incompatible with environment)
+              └── incompatible requires-python >=3.11
       
       requires-python-version-greater-than-current-backtrack-ef060cef
       ├── environment
@@ -3961,13 +3864,12 @@
       │       └── satisfied by a-4.0.0
       └── a
           ├── a-1.0.0
-          │   └── requires python>=3.9
           ├── a-2.0.0
-          │   └── requires python>=3.10 (incompatible with environment)
+          │   └── incompatible requires-python >=3.10
           ├── a-3.0.0
-          │   └── requires python>=3.11 (incompatible with environment)
+          │   └── incompatible requires-python >=3.11
           └── a-4.0.0
-              └── requires python>=3.12 (incompatible with environment)
+              └── incompatible requires-python >=3.12
       
       requires-python-version-greater-than-current-excluded-1bde0c18
       ├── environment
@@ -3979,13 +3881,12 @@
       │       └── satisfied by a-4.0.0
       └── a
           ├── a-1.0.0
-          │   └── requires python>=3.9
           ├── a-2.0.0
-          │   └── requires python>=3.10 (incompatible with environment)
+          │   └── incompatible requires-python >=3.10
           ├── a-3.0.0
-          │   └── requires python>=3.11 (incompatible with environment)
+          │   └── incompatible requires-python >=3.11
           └── a-4.0.0
-              └── requires python>=3.12 (incompatible with environment)
+              └── incompatible requires-python >=3.12
       
   
     ''',
