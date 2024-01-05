@@ -402,5 +402,119 @@
             },
             "explanation": "Since the user explicitly opted-in to a prerelease for `c`, it can be installed."
         }
+    },
+    {
+        "name": "requires-transitive-prerelease-and-stable-dependency-many-versions",
+        "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. There are many prerelease versions.",
+        "root": {
+            "requires": [
+                "a",
+                "b"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "c>=2.0.0b1"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "c>=1.0.0,<=3.0.0"
+                        ]
+                    }
+                }
+            },
+            "c": {
+                "versions": {
+                    "1.0.0": {},
+                    "2.0.0a1": {},
+                    "2.0.0a2": {},
+                    "2.0.0a3": {},
+                    "2.0.0a4": {},
+                    "2.0.0a5": {},
+                    "2.0.0a6": {},
+                    "2.0.0a7": {},
+                    "2.0.0a8": {},
+                    "2.0.0a9": {},
+                    "2.0.0b1": {},
+                    "2.0.0b2": {},
+                    "2.0.0b3": {},
+                    "2.0.0b4": {},
+                    "2.0.0b5": {},
+                    "2.0.0b6": {},
+                    "2.0.0b7": {},
+                    "2.0.0b8": {},
+                    "2.0.0b9": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": false,
+            "explanation": "Since the user did not explicitly opt-in to a pre-release, it cannot be selected."
+        }
+    },
+    {
+        "name": "requires-transitive-prerelease-and-stable-dependency-many-versions-holes",
+        "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. There are many prerelease versions and some are excluded.",
+        "root": {
+            "requires": [
+                "a",
+                "b"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "c>1.0.0,!=2.0.0a5,!=2.0.0a6,!=2.0.0a7,!=2.0.0b1,<2.0.0b5"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "c>=1.0.0,<=3.0.0"
+                        ]
+                    }
+                }
+            },
+            "c": {
+                "versions": {
+                    "1.0.0": {},
+                    "2.0.0a1": {},
+                    "2.0.0a2": {},
+                    "2.0.0a3": {},
+                    "2.0.0a4": {},
+                    "2.0.0a5": {},
+                    "2.0.0a6": {},
+                    "2.0.0a7": {},
+                    "2.0.0a8": {},
+                    "2.0.0a9": {},
+                    "2.0.0b1": {},
+                    "2.0.0b2": {},
+                    "2.0.0b3": {},
+                    "2.0.0b4": {},
+                    "2.0.0b5": {},
+                    "2.0.0b6": {},
+                    "2.0.0b7": {},
+                    "2.0.0b8": {},
+                    "2.0.0b9": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": false,
+            "explanation": "Since the user did not explicitly opt-in to a pre-release, it cannot be selected."
+        }
     }
 ]

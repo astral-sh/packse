@@ -51,6 +51,8 @@
       requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42
       requires-transitive-prerelease-and-stable-dependency-31b546ef
       requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f
+      requires-transitive-prerelease-and-stable-dependency-many-versions-260cdf7a
+      requires-transitive-prerelease-and-stable-dependency-many-versions-holes-28a344b9
       requires-package-does-not-exist-57cd4136
       requires-exact-version-does-not-exist-eaa03067
       requires-greater-version-does-not-exist-6e8e01df
@@ -91,6 +93,8 @@
           requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42
           requires-transitive-prerelease-and-stable-dependency-31b546ef
           requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f
+          requires-transitive-prerelease-and-stable-dependency-many-versions-260cdf7a
+          requires-transitive-prerelease-and-stable-dependency-many-versions-holes-28a344b9
       scenarios/requires-does-not-exist.json
           requires-package-does-not-exist-57cd4136
           requires-exact-version-does-not-exist-eaa03067
@@ -134,6 +138,8 @@
           requires-transitive-package-only-prereleases-in-range-opt-in
           requires-transitive-prerelease-and-stable-dependency
           requires-transitive-prerelease-and-stable-dependency-opt-in
+          requires-transitive-prerelease-and-stable-dependency-many-versions
+          requires-transitive-prerelease-and-stable-dependency-many-versions-holes
       scenarios/requires-does-not-exist.json
           requires-package-does-not-exist
           requires-exact-version-does-not-exist
