@@ -106,35 +106,36 @@ def dependency_tree(scenario: Scenario) -> str:
                 )
 
     def render_requirements(requirements: list[str], prefix: str = ""):
+        for index, requirement in enumerate(requirements):
+            # TODO: Consider avoiding parsing the requirement twice
+            parsed_requirement = Requirement(requirement)
+
+            # Skip display of Python requirements that are satisfied and not complex
+            # We do this before the following iteration so the pointers are correct
+            if (
+                parsed_requirement.name == "python"
+                and parsed_requirement.specifier.contains(scenario.environment.python)
+                and len(parsed_requirement.specifier) == 1
+                and next(iter(parsed_requirement.specifier)).version
+                == scenario.environment.python
+            ):
+                requirements = requirements.copy()
+                requirements.pop(index)
+
         pointers = [tee] * (len(requirements) - 1) + [last]
         for pointer, requirement in zip(pointers, sorted(requirements)):
             parsed_requirement = Requirement(requirement)
 
+            # Display `requires-python`
             if parsed_requirement.name == "python":
-                # Display `requires-python` incompatibilities
-                if not parsed_requirement.specifier.contains(
-                    scenario.environment.python
-                ):
-                    yield (
-                        prefix
-                        + pointer
-                        + "incompatible requires-python "
-                        + str(parsed_requirement.specifier)
+                suffix = (
+                    " (incompatible with environment)"
+                    if not parsed_requirement.specifier.contains(
+                        scenario.environment.python
                     )
-                else:
-                    # Display `requires-python` unless it is simple and matches environment
-                    if not (
-                        len(parsed_requirement.specifier) == 1
-                        and next(iter(parsed_requirement.specifier)).version
-                        == scenario.environment.python
-                    ):
-                        yield (
-                            prefix
-                            + pointer
-                            + "requires-python "
-                            + parsed_requirement.specifier
-                        )
-
+                    else ""
+                )
+                yield prefix + pointer + "requires " + requirement + suffix
                 continue
 
             yield prefix + pointer + "requires " + requirement

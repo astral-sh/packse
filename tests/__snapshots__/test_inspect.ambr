@@ -80,14 +80,14 @@
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires b>1.0.0",
-              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by b-2.0.0",
-              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by b-3.0.0",
+              "\u2502       \u2514\u2500\u2500 requires b>1.0.0",
+              "\u2502           \u251c\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by b-3.0.0",
               "\u2514\u2500\u2500 b",
               "    \u251c\u2500\u2500 b-1.0.0",
               "    \u251c\u2500\u2500 b-2.0.0",
               "    \u2514\u2500\u2500 b-3.0.0",
-              "        \u251c\u2500\u2500 requires c",
+              "        \u2514\u2500\u2500 requires c",
               "            \u2514\u2500\u2500 unsatisfied: no versions for package"
             ]
           }
@@ -188,14 +188,14 @@
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires b>1.0.0",
-              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by b-2.0.0",
-              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by b-3.0.0",
+              "\u2502       \u2514\u2500\u2500 requires b>1.0.0",
+              "\u2502           \u251c\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by b-3.0.0",
               "\u2514\u2500\u2500 b",
               "    \u251c\u2500\u2500 b-1.0.0",
               "    \u251c\u2500\u2500 b-2.0.0",
               "    \u2514\u2500\u2500 b-3.0.0",
-              "        \u251c\u2500\u2500 requires c",
+              "        \u2514\u2500\u2500 requires c",
               "            \u2514\u2500\u2500 unsatisfied: no versions for package"
             ]
           }
@@ -286,14 +286,14 @@
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires b>1.0.0",
-              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by b-2.0.0",
-              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by b-3.0.0",
+              "\u2502       \u2514\u2500\u2500 requires b>1.0.0",
+              "\u2502           \u251c\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by b-3.0.0",
               "\u2514\u2500\u2500 b",
               "    \u251c\u2500\u2500 b-1.0.0",
               "    \u251c\u2500\u2500 b-2.0.0",
               "    \u2514\u2500\u2500 b-3.0.0",
-              "        \u251c\u2500\u2500 requires c",
+              "        \u2514\u2500\u2500 requires c",
               "            \u2514\u2500\u2500 unsatisfied: no versions for package"
             ]
           },
@@ -890,8 +890,8 @@
               "\u2502       \u2514\u2500\u2500 satisfied by a-0.1.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-0.1.0",
-              "\u2502       \u251c\u2500\u2500 requires b",
-              "\u2502       \u2502   \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2502       \u2514\u2500\u2500 requires b",
+              "\u2502           \u2514\u2500\u2500 unsatisfied: no matching version",
               "\u2514\u2500\u2500 b",
               "    \u2514\u2500\u2500 b-1.0.0a1"
             ]
@@ -958,8 +958,8 @@
               "\u2502       \u2514\u2500\u2500 satisfied by a-0.1.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-0.1.0",
-              "\u2502       \u251c\u2500\u2500 requires b>0.1",
-              "\u2502       \u2502   \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2502       \u2514\u2500\u2500 requires b>0.1",
+              "\u2502           \u2514\u2500\u2500 unsatisfied: no matching version",
               "\u2514\u2500\u2500 b",
               "    \u251c\u2500\u2500 b-0.1.0",
               "    \u2514\u2500\u2500 b-1.0.0a1"
@@ -1033,8 +1033,8 @@
               "\u2502       \u2514\u2500\u2500 satisfied by b-0.1.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-0.1.0",
-              "\u2502       \u251c\u2500\u2500 requires b>0.1",
-              "\u2502       \u2502   \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2502       \u2514\u2500\u2500 requires b>0.1",
+              "\u2502           \u2514\u2500\u2500 unsatisfied: no matching version",
               "\u2514\u2500\u2500 b",
               "    \u251c\u2500\u2500 b-0.1.0",
               "    \u2514\u2500\u2500 b-1.0.0a1"
@@ -1118,12 +1118,12 @@
               "\u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires c==2.0.0b1",
-              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by c-2.0.0b1",
+              "\u2502       \u2514\u2500\u2500 requires c==2.0.0b1",
+              "\u2502           \u2514\u2500\u2500 satisfied by c-2.0.0b1",
               "\u251c\u2500\u2500 b",
               "\u2502   \u2514\u2500\u2500 b-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires c>=1.0.0,<=3.0.0",
-              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by c-1.0.0",
+              "\u2502       \u2514\u2500\u2500 requires c>=1.0.0,<=3.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by c-1.0.0",
               "\u2514\u2500\u2500 c",
               "    \u251c\u2500\u2500 c-1.0.0",
               "    \u2514\u2500\u2500 c-2.0.0b1"
@@ -1215,12 +1215,12 @@
               "\u2502       \u2514\u2500\u2500 satisfied by c-2.0.0b1",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires c==2.0.0b1",
-              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by c-2.0.0b1",
+              "\u2502       \u2514\u2500\u2500 requires c==2.0.0b1",
+              "\u2502           \u2514\u2500\u2500 satisfied by c-2.0.0b1",
               "\u251c\u2500\u2500 b",
               "\u2502   \u2514\u2500\u2500 b-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires c>=1.0.0,<=3.0.0",
-              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by c-1.0.0",
+              "\u2502       \u2514\u2500\u2500 requires c>=1.0.0,<=3.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by c-1.0.0",
               "\u2514\u2500\u2500 c",
               "    \u251c\u2500\u2500 c-1.0.0",
               "    \u2514\u2500\u2500 c-2.0.0b1"
@@ -1423,20 +1423,20 @@
               "\u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires c>=2.0.0b1",
-              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by c-2.0.0b1",
-              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by c-2.0.0b2",
-              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by c-2.0.0b3",
-              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by c-2.0.0b4",
-              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by c-2.0.0b5",
-              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by c-2.0.0b6",
-              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by c-2.0.0b7",
-              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by c-2.0.0b8",
-              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by c-2.0.0b9",
+              "\u2502       \u2514\u2500\u2500 requires c>=2.0.0b1",
+              "\u2502           \u251c\u2500\u2500 satisfied by c-2.0.0b1",
+              "\u2502           \u251c\u2500\u2500 satisfied by c-2.0.0b2",
+              "\u2502           \u251c\u2500\u2500 satisfied by c-2.0.0b3",
+              "\u2502           \u251c\u2500\u2500 satisfied by c-2.0.0b4",
+              "\u2502           \u251c\u2500\u2500 satisfied by c-2.0.0b5",
+              "\u2502           \u251c\u2500\u2500 satisfied by c-2.0.0b6",
+              "\u2502           \u251c\u2500\u2500 satisfied by c-2.0.0b7",
+              "\u2502           \u251c\u2500\u2500 satisfied by c-2.0.0b8",
+              "\u2502           \u2514\u2500\u2500 satisfied by c-2.0.0b9",
               "\u251c\u2500\u2500 b",
               "\u2502   \u2514\u2500\u2500 b-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires c>=1.0.0,<=3.0.0",
-              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by c-1.0.0",
+              "\u2502       \u2514\u2500\u2500 requires c>=1.0.0,<=3.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by c-1.0.0",
               "\u2514\u2500\u2500 c",
               "    \u251c\u2500\u2500 c-1.0.0",
               "    \u251c\u2500\u2500 c-2.0.0a1",
@@ -1656,12 +1656,12 @@
               "\u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires c>1.0.0,!=2.0.0a5,!=2.0.0a6,!=2.0.0a7,!=2.0.0b1,<2.0.0b5",
-              "\u2502       \u2502   \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2502       \u2514\u2500\u2500 requires c>1.0.0,!=2.0.0a5,!=2.0.0a6,!=2.0.0a7,!=2.0.0b1,<2.0.0b5",
+              "\u2502           \u2514\u2500\u2500 unsatisfied: no matching version",
               "\u251c\u2500\u2500 b",
               "\u2502   \u2514\u2500\u2500 b-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires c>=1.0.0,<=3.0.0",
-              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by c-1.0.0",
+              "\u2502       \u2514\u2500\u2500 requires c>=1.0.0,<=3.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by c-1.0.0",
               "\u2514\u2500\u2500 c",
               "    \u251c\u2500\u2500 c-1.0.0",
               "    \u251c\u2500\u2500 c-2.0.0a1",
@@ -1914,7 +1914,7 @@
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
               "\u2514\u2500\u2500 a",
               "    \u2514\u2500\u2500 a-1.0.0",
-              "        \u251c\u2500\u2500 requires b",
+              "        \u2514\u2500\u2500 requires b",
               "            \u2514\u2500\u2500 unsatisfied: no versions for package"
             ]
           },
@@ -2038,8 +2038,8 @@
               "\u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires b==2.0.0",
-              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502       \u2514\u2500\u2500 requires b==2.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by b-2.0.0",
               "\u2514\u2500\u2500 b",
               "    \u251c\u2500\u2500 b-1.0.0",
               "    \u2514\u2500\u2500 b-2.0.0"
@@ -2123,12 +2123,12 @@
               "\u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires c==1.0.0",
-              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by c-1.0.0",
+              "\u2502       \u2514\u2500\u2500 requires c==1.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by c-1.0.0",
               "\u251c\u2500\u2500 b",
               "\u2502   \u2514\u2500\u2500 b-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires c==2.0.0",
-              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by c-2.0.0",
+              "\u2502       \u2514\u2500\u2500 requires c==2.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by c-2.0.0",
               "\u2514\u2500\u2500 c",
               "    \u251c\u2500\u2500 c-1.0.0",
               "    \u2514\u2500\u2500 c-2.0.0"
@@ -2176,7 +2176,7 @@
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
               "\u2514\u2500\u2500 a",
               "    \u2514\u2500\u2500 a-1.0.0",
-              "        \u2514\u2500\u2500 incompatible requires-python >=4.0"
+              "        \u2514\u2500\u2500 requires python>=4.0 (incompatible with environment)"
             ]
           },
           {
@@ -2221,7 +2221,7 @@
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
               "\u2514\u2500\u2500 a",
               "    \u2514\u2500\u2500 a-1.0.0",
-              "        \u2514\u2500\u2500 incompatible requires-python <=3.8"
+              "        \u2514\u2500\u2500 requires python<=3.8 (incompatible with environment)"
             ]
           },
           {
@@ -2266,7 +2266,7 @@
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
               "\u2514\u2500\u2500 a",
               "    \u2514\u2500\u2500 a-1.0.0",
-              "        \u2514\u2500\u2500 incompatible requires-python >=3.10"
+              "        \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)"
             ]
           },
           {
@@ -2388,29 +2388,29 @@
               "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
               "\u2514\u2500\u2500 a",
               "    \u251c\u2500\u2500 a-2.0.0",
-              "    \u2502   \u2514\u2500\u2500 incompatible requires-python >=3.10",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)",
               "    \u251c\u2500\u2500 a-2.1.0",
-              "    \u2502   \u2514\u2500\u2500 incompatible requires-python >=3.10",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)",
               "    \u251c\u2500\u2500 a-2.2.0",
-              "    \u2502   \u2514\u2500\u2500 incompatible requires-python >=3.10",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)",
               "    \u251c\u2500\u2500 a-2.3.0",
-              "    \u2502   \u2514\u2500\u2500 incompatible requires-python >=3.10",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)",
               "    \u251c\u2500\u2500 a-2.4.0",
-              "    \u2502   \u2514\u2500\u2500 incompatible requires-python >=3.10",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)",
               "    \u251c\u2500\u2500 a-2.5.0",
-              "    \u2502   \u2514\u2500\u2500 incompatible requires-python >=3.10",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)",
               "    \u251c\u2500\u2500 a-3.0.0",
-              "    \u2502   \u2514\u2500\u2500 incompatible requires-python >=3.11",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.11 (incompatible with environment)",
               "    \u251c\u2500\u2500 a-3.1.0",
-              "    \u2502   \u2514\u2500\u2500 incompatible requires-python >=3.11",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.11 (incompatible with environment)",
               "    \u251c\u2500\u2500 a-3.2.0",
-              "    \u2502   \u2514\u2500\u2500 incompatible requires-python >=3.11",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.11 (incompatible with environment)",
               "    \u251c\u2500\u2500 a-3.3.0",
-              "    \u2502   \u2514\u2500\u2500 incompatible requires-python >=3.11",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.11 (incompatible with environment)",
               "    \u251c\u2500\u2500 a-3.4.0",
-              "    \u2502   \u2514\u2500\u2500 incompatible requires-python >=3.11",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.11 (incompatible with environment)",
               "    \u2514\u2500\u2500 a-3.5.0",
-              "        \u2514\u2500\u2500 incompatible requires-python >=3.11"
+              "        \u2514\u2500\u2500 requires python>=3.11 (incompatible with environment)"
             ]
           },
           {
@@ -2482,11 +2482,11 @@
               "\u2514\u2500\u2500 a",
               "    \u251c\u2500\u2500 a-1.0.0",
               "    \u251c\u2500\u2500 a-2.0.0",
-              "    \u2502   \u2514\u2500\u2500 incompatible requires-python >=3.10",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)",
               "    \u251c\u2500\u2500 a-3.0.0",
-              "    \u2502   \u2514\u2500\u2500 incompatible requires-python >=3.11",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.11 (incompatible with environment)",
               "    \u2514\u2500\u2500 a-4.0.0",
-              "        \u2514\u2500\u2500 incompatible requires-python >=3.12"
+              "        \u2514\u2500\u2500 requires python>=3.12 (incompatible with environment)"
             ]
           },
           {
@@ -2555,11 +2555,11 @@
               "\u2514\u2500\u2500 a",
               "    \u251c\u2500\u2500 a-1.0.0",
               "    \u251c\u2500\u2500 a-2.0.0",
-              "    \u2502   \u2514\u2500\u2500 incompatible requires-python >=3.10",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)",
               "    \u251c\u2500\u2500 a-3.0.0",
-              "    \u2502   \u2514\u2500\u2500 incompatible requires-python >=3.11",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.11 (incompatible with environment)",
               "    \u2514\u2500\u2500 a-4.0.0",
-              "        \u2514\u2500\u2500 incompatible requires-python >=3.12"
+              "        \u2514\u2500\u2500 requires python>=3.12 (incompatible with environment)"
             ]
           }
         ]

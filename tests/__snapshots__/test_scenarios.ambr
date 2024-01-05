@@ -3484,8 +3484,8 @@
       │       └── satisfied by a-0.1.0
       ├── a
       │   └── a-0.1.0
-      │       ├── requires b
-      │       │   └── unsatisfied: no matching version
+      │       └── requires b
+      │           └── unsatisfied: no matching version
       └── b
           └── b-1.0.0a1
       
@@ -3497,8 +3497,8 @@
       │       └── satisfied by a-0.1.0
       ├── a
       │   └── a-0.1.0
-      │       ├── requires b>0.1
-      │       │   └── unsatisfied: no matching version
+      │       └── requires b>0.1
+      │           └── unsatisfied: no matching version
       └── b
           ├── b-0.1.0
           └── b-1.0.0a1
@@ -3513,8 +3513,8 @@
       │       └── satisfied by b-0.1.0
       ├── a
       │   └── a-0.1.0
-      │       ├── requires b>0.1
-      │       │   └── unsatisfied: no matching version
+      │       └── requires b>0.1
+      │           └── unsatisfied: no matching version
       └── b
           ├── b-0.1.0
           └── b-1.0.0a1
@@ -3529,12 +3529,12 @@
       │       └── satisfied by b-1.0.0
       ├── a
       │   └── a-1.0.0
-      │       ├── requires c==2.0.0b1
-      │       │   └── satisfied by c-2.0.0b1
+      │       └── requires c==2.0.0b1
+      │           └── satisfied by c-2.0.0b1
       ├── b
       │   └── b-1.0.0
-      │       ├── requires c>=1.0.0,<=3.0.0
-      │       │   └── satisfied by c-1.0.0
+      │       └── requires c>=1.0.0,<=3.0.0
+      │           └── satisfied by c-1.0.0
       └── c
           ├── c-1.0.0
           └── c-2.0.0b1
@@ -3552,12 +3552,12 @@
       │       └── satisfied by c-2.0.0b1
       ├── a
       │   └── a-1.0.0
-      │       ├── requires c==2.0.0b1
-      │       │   └── satisfied by c-2.0.0b1
+      │       └── requires c==2.0.0b1
+      │           └── satisfied by c-2.0.0b1
       ├── b
       │   └── b-1.0.0
-      │       ├── requires c>=1.0.0,<=3.0.0
-      │       │   └── satisfied by c-1.0.0
+      │       └── requires c>=1.0.0,<=3.0.0
+      │           └── satisfied by c-1.0.0
       └── c
           ├── c-1.0.0
           └── c-2.0.0b1
@@ -3572,20 +3572,20 @@
       │       └── satisfied by b-1.0.0
       ├── a
       │   └── a-1.0.0
-      │       ├── requires c>=2.0.0b1
-      │       │   ├── satisfied by c-2.0.0b1
-      │       │   ├── satisfied by c-2.0.0b2
-      │       │   ├── satisfied by c-2.0.0b3
-      │       │   ├── satisfied by c-2.0.0b4
-      │       │   ├── satisfied by c-2.0.0b5
-      │       │   ├── satisfied by c-2.0.0b6
-      │       │   ├── satisfied by c-2.0.0b7
-      │       │   ├── satisfied by c-2.0.0b8
-      │       │   └── satisfied by c-2.0.0b9
+      │       └── requires c>=2.0.0b1
+      │           ├── satisfied by c-2.0.0b1
+      │           ├── satisfied by c-2.0.0b2
+      │           ├── satisfied by c-2.0.0b3
+      │           ├── satisfied by c-2.0.0b4
+      │           ├── satisfied by c-2.0.0b5
+      │           ├── satisfied by c-2.0.0b6
+      │           ├── satisfied by c-2.0.0b7
+      │           ├── satisfied by c-2.0.0b8
+      │           └── satisfied by c-2.0.0b9
       ├── b
       │   └── b-1.0.0
-      │       ├── requires c>=1.0.0,<=3.0.0
-      │       │   └── satisfied by c-1.0.0
+      │       └── requires c>=1.0.0,<=3.0.0
+      │           └── satisfied by c-1.0.0
       └── c
           ├── c-1.0.0
           ├── c-2.0.0a1
@@ -3617,12 +3617,12 @@
       │       └── satisfied by b-1.0.0
       ├── a
       │   └── a-1.0.0
-      │       ├── requires c>1.0.0,!=2.0.0a5,!=2.0.0a6,!=2.0.0a7,!=2.0.0b1,<2.0.0b5
-      │       │   └── unsatisfied: no matching version
+      │       └── requires c>1.0.0,!=2.0.0a5,!=2.0.0a6,!=2.0.0a7,!=2.0.0b1,<2.0.0b5
+      │           └── unsatisfied: no matching version
       ├── b
       │   └── b-1.0.0
-      │       ├── requires c>=1.0.0,<=3.0.0
-      │       │   └── satisfied by c-1.0.0
+      │       └── requires c>=1.0.0,<=3.0.0
+      │           └── satisfied by c-1.0.0
       └── c
           ├── c-1.0.0
           ├── c-2.0.0a1
@@ -3706,7 +3706,7 @@
       │       └── satisfied by a-1.0.0
       └── a
           └── a-1.0.0
-              ├── requires b
+              └── requires b
                   └── unsatisfied: no versions for package
       
   
@@ -3748,8 +3748,8 @@
       │       └── satisfied by b-1.0.0
       ├── a
       │   └── a-1.0.0
-      │       ├── requires b==2.0.0
-      │       │   └── satisfied by b-2.0.0
+      │       └── requires b==2.0.0
+      │           └── satisfied by b-2.0.0
       └── b
           ├── b-1.0.0
           └── b-2.0.0
@@ -3764,12 +3764,12 @@
       │       └── satisfied by b-1.0.0
       ├── a
       │   └── a-1.0.0
-      │       ├── requires c==1.0.0
-      │       │   └── satisfied by c-1.0.0
+      │       └── requires c==1.0.0
+      │           └── satisfied by c-1.0.0
       ├── b
       │   └── b-1.0.0
-      │       ├── requires c==2.0.0
-      │       │   └── satisfied by c-2.0.0
+      │       └── requires c==2.0.0
+      │           └── satisfied by c-2.0.0
       └── c
           ├── c-1.0.0
           └── c-2.0.0
@@ -3799,7 +3799,7 @@
       │       └── satisfied by a-1.0.0
       └── a
           └── a-1.0.0
-              └── incompatible requires-python >=4.0
+              └── requires python>=4.0 (incompatible with environment)
       
       requires-python-version-less-than-current-f9296b84
       ├── environment
@@ -3809,7 +3809,7 @@
       │       └── satisfied by a-1.0.0
       └── a
           └── a-1.0.0
-              └── incompatible requires-python <=3.8
+              └── requires python<=3.8 (incompatible with environment)
       
       requires-python-version-greater-than-current-a11d5394
       ├── environment
@@ -3819,7 +3819,7 @@
       │       └── satisfied by a-1.0.0
       └── a
           └── a-1.0.0
-              └── incompatible requires-python >=3.10
+              └── requires python>=3.10 (incompatible with environment)
       
       requires-python-version-greater-than-current-many-02dc550c
       ├── environment
@@ -3829,29 +3829,29 @@
       │       └── unsatisfied: no matching version
       └── a
           ├── a-2.0.0
-          │   └── incompatible requires-python >=3.10
+          │   └── requires python>=3.10 (incompatible with environment)
           ├── a-2.1.0
-          │   └── incompatible requires-python >=3.10
+          │   └── requires python>=3.10 (incompatible with environment)
           ├── a-2.2.0
-          │   └── incompatible requires-python >=3.10
+          │   └── requires python>=3.10 (incompatible with environment)
           ├── a-2.3.0
-          │   └── incompatible requires-python >=3.10
+          │   └── requires python>=3.10 (incompatible with environment)
           ├── a-2.4.0
-          │   └── incompatible requires-python >=3.10
+          │   └── requires python>=3.10 (incompatible with environment)
           ├── a-2.5.0
-          │   └── incompatible requires-python >=3.10
+          │   └── requires python>=3.10 (incompatible with environment)
           ├── a-3.0.0
-          │   └── incompatible requires-python >=3.11
+          │   └── requires python>=3.11 (incompatible with environment)
           ├── a-3.1.0
-          │   └── incompatible requires-python >=3.11
+          │   └── requires python>=3.11 (incompatible with environment)
           ├── a-3.2.0
-          │   └── incompatible requires-python >=3.11
+          │   └── requires python>=3.11 (incompatible with environment)
           ├── a-3.3.0
-          │   └── incompatible requires-python >=3.11
+          │   └── requires python>=3.11 (incompatible with environment)
           ├── a-3.4.0
-          │   └── incompatible requires-python >=3.11
+          │   └── requires python>=3.11 (incompatible with environment)
           └── a-3.5.0
-              └── incompatible requires-python >=3.11
+              └── requires python>=3.11 (incompatible with environment)
       
       requires-python-version-greater-than-current-backtrack-ef060cef
       ├── environment
@@ -3865,11 +3865,11 @@
       └── a
           ├── a-1.0.0
           ├── a-2.0.0
-          │   └── incompatible requires-python >=3.10
+          │   └── requires python>=3.10 (incompatible with environment)
           ├── a-3.0.0
-          │   └── incompatible requires-python >=3.11
+          │   └── requires python>=3.11 (incompatible with environment)
           └── a-4.0.0
-              └── incompatible requires-python >=3.12
+              └── requires python>=3.12 (incompatible with environment)
       
       requires-python-version-greater-than-current-excluded-1bde0c18
       ├── environment
@@ -3882,11 +3882,11 @@
       └── a
           ├── a-1.0.0
           ├── a-2.0.0
-          │   └── incompatible requires-python >=3.10
+          │   └── requires python>=3.10 (incompatible with environment)
           ├── a-3.0.0
-          │   └── incompatible requires-python >=3.11
+          │   └── requires python>=3.11 (incompatible with environment)
           └── a-4.0.0
-              └── incompatible requires-python >=3.12
+              └── requires python>=3.12 (incompatible with environment)
       
   
     ''',
