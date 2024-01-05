@@ -4,6 +4,7 @@ Publish package distributions.
 import logging
 import os
 import subprocess
+import sys
 import textwrap
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -72,8 +73,21 @@ def publish(
 
         wait_for_futures(futures)
 
-    results = [future.result() for future in futures]
-    for result in sorted(results):
+    # All the futures are done since the executor context has exited; check if any failed
+    incomplete = 0
+    for future in futures:
+        if (exc := future.exception()) is None:
+            continue
+        incomplete += 1
+        print(f"{exc}.", file=sys.stderr)
+
+    if incomplete:
+        s = "" if targets == 1 else "s"
+        raise PublishError(
+            f"Failed to publish {len(targets) - incomplete}/{len(targets)} target{s}"
+        )
+
+    for result in sorted(future.result() for future in futures):
         print(result)
 
 
