@@ -12,14 +12,14 @@
       │       └── satisfied by a-1.0.0
       ├── a
       │   └── a-1.0.0
-      │       ├── requires b>1.0.0
-      │       │   ├── satisfied by b-2.0.0
-      │       │   └── satisfied by b-3.0.0
+      │       └── requires b>1.0.0
+      │           ├── satisfied by b-2.0.0
+      │           └── satisfied by b-3.0.0
       └── b
           ├── b-1.0.0
           ├── b-2.0.0
           └── b-3.0.0
-              ├── requires c
+              └── requires c
                   └── unsatisfied: no versions for package
       
   
@@ -43,14 +43,14 @@
       │       └── satisfied by a-1.0.0
       ├── a
       │   └── a-1.0.0
-      │       ├── requires b>1.0.0
-      │       │   ├── satisfied by b-2.0.0
-      │       │   └── satisfied by b-3.0.0
+      │       └── requires b>1.0.0
+      │           ├── satisfied by b-2.0.0
+      │           └── satisfied by b-3.0.0
       └── b
           ├── b-1.0.0
           ├── b-2.0.0
           └── b-3.0.0
-              ├── requires c
+              └── requires c
                   └── unsatisfied: no versions for package
       
   
