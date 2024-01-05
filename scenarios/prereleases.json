@@ -1,7 +1,7 @@
 [
     {
         "name": "requires-package-only-prereleases",
-        "description": "The user requires any version of package `a` which only has pre-release versions available.",
+        "description": "The user requires any version of package `a` which only has prerelease versions available.",
         "root": {
             "requires": [
                 "a"
@@ -19,12 +19,12 @@
             "packages": {
                 "a": "1.0.0a1"
             },
-            "explanation": "Since there are only pre-release versions of `a` available, it should be installed even though the user did not include a pre-release specifier."
+            "explanation": "Since there are only prerelease versions of `a` available, it should be installed even though the user did not include a prerelease specifier."
         }
     },
     {
         "name": "requires-package-only-prereleases-in-range",
-        "description": "The user requires a version of package `a` which only matches pre-release versions but they did not include a prerelease specifier.",
+        "description": "The user requires a version of package `a` which only matches prerelease versions but they did not include a prerelease specifier.",
         "root": {
             "requires": [
                 "a>0.1.0"
@@ -40,12 +40,12 @@
         },
         "expected": {
             "satisfiable": false,
-            "explanation": "Since there are stable versions of `a` available, pre-release versions should not be selected without explicit opt-in."
+            "explanation": "Since there are stable versions of `a` available, prerelease versions should not be selected without explicit opt-in."
         }
     },
     {
         "name": "requires-package-only-prereleases-in-range-global-opt-in",
-        "description": "The user requires a version of package `a` which only matches pre-release versions. They did not include a prerelease specifier for the package, but they opted into pre-releases globally.",
+        "description": "The user requires a version of package `a` which only matches prerelease versions. They did not include a prerelease specifier for the package, but they opted into prereleases globally.",
         "environment": {
             "prereleases": true
         },
@@ -71,7 +71,7 @@
     },
     {
         "name": "requires-package-prerelease-and-final-any",
-        "description": "The user requires any version of package `a` has a pre-release version available and an older non-prerelease version.",
+        "description": "The user requires any version of package `a` has a prerelease version available and an older non-prerelease version.",
         "root": {
             "requires": [
                 "a"
@@ -90,12 +90,12 @@
             "packages": {
                 "a": "0.1.0"
             },
-            "explanation": "Since the user did not provide a pre-release specifier, the older stable version should be selected."
+            "explanation": "Since the user did not provide a prerelease specifier, the older stable version should be selected."
         }
     },
     {
         "name": "requires-package-prerelease-specified-only-final-available",
-        "description": "The user requires a version of `a` with a pre-release specifier and only stable releases are available.",
+        "description": "The user requires a version of `a` with a prerelease specifier and only stable releases are available.",
         "root": {
             "requires": [
                 "a>=0.1.0a1"
@@ -120,7 +120,7 @@
     },
     {
         "name": "requires-package-prerelease-specified-only-prerelease-available",
-        "description": "The user requires a version of `a` with a pre-release specifier and only pre-release releases are available.",
+        "description": "The user requires a version of `a` with a prerelease specifier and only prerelease releases are available.",
         "root": {
             "requires": [
                 "a>=0.1.0a1"
@@ -140,12 +140,12 @@
             "packages": {
                 "a": "0.3.0a1"
             },
-            "explanation": "The latest pre-release version should be selected."
+            "explanation": "The latest prerelease version should be selected."
         }
     },
     {
         "name": "requires-package-prerelease-specified-mixed-available",
-        "description": "The user requires a version of `a` with a pre-release specifier and both pre-release and stable releases are available.",
+        "description": "The user requires a version of `a` with a prerelease specifier and both prerelease and stable releases are available.",
         "root": {
             "requires": [
                 "a>=0.1.0a1"
@@ -166,7 +166,7 @@
             "packages": {
                 "a": "1.0.0a1"
             },
-            "explanation": "Since the user provided a pre-release specifier, the latest pre-release version should be selected."
+            "explanation": "Since the user provided a prerelease specifier, the latest prerelease version should be selected."
         }
     },
     {
@@ -191,7 +191,7 @@
             "packages": {
                 "a": "1.0.0rc1"
             },
-            "explanation": "Release candidates should be the highest precedence pre-release kind."
+            "explanation": "Release candidates should be the highest precedence prerelease kind."
         }
     },
     {
@@ -221,7 +221,7 @@
     },
     {
         "name": "requires-transitive-package-only-prereleases",
-        "description": "The user requires any version of package `a` which requires `b` which only has pre-release versions available.",
+        "description": "The user requires any version of package `a` which requires `b` which only has prerelease versions available.",
         "root": {
             "requires": [
                 "a"
@@ -249,12 +249,12 @@
                 "a": "0.1.0",
                 "b": "1.0.0a1"
             },
-            "explanation": "Since there are only pre-release versions of `b` available, it should be selected even though the user did not opt-in to pre-releases."
+            "explanation": "Since there are only prerelease versions of `b` available, it should be selected even though the user did not opt-in to prereleases."
         }
     },
     {
         "name": "requires-transitive-package-only-prereleases-in-range",
-        "description": "The user requires package `a` which has a dependency on a package which only matches pre-release versions but they did not include a pre-release specifier.",
+        "description": "The user requires package `a` which has a dependency on a package which only matches prerelease versions but they did not include a prerelease specifier.",
         "root": {
             "requires": [
                 "a"
@@ -279,12 +279,12 @@
         },
         "expected": {
             "satisfiable": false,
-            "explanation": "Since there are stable versions of `b` available, the pre-release version should not be selected without explicit opt-in. The available version is excluded by the range requested by the user."
+            "explanation": "Since there are stable versions of `b` available, the prerelease version should not be selected without explicit opt-in. The available version is excluded by the range requested by the user."
         }
     },
     {
         "name": "requires-transitive-package-only-prereleases-in-range-opt-in",
-        "description": "The user requires package `a` which has a dependency on a package which only matches pre-release versions; the user has opted into allowing prereleases in `b` explicitly.",
+        "description": "The user requires package `a` which has a dependency on a package which only matches prerelease versions; the user has opted into allowing prereleases in `b` explicitly.",
         "root": {
             "requires": [
                 "a",
@@ -314,7 +314,7 @@
                 "a": "0.1.0",
                 "b": "1.0.0a1"
             },
-            "explanation": "Since the user included a dependency on `b` with a pre-release specifier, a pre-release version can be selected."
+            "explanation": "Since the user included a dependency on `b` with a prerelease specifier, a prerelease version can be selected."
         }
     },
     {
@@ -457,7 +457,7 @@
         },
         "expected": {
             "satisfiable": false,
-            "explanation": "Since the user did not explicitly opt-in to a pre-release, it cannot be selected."
+            "explanation": "Since the user did not explicitly opt-in to a prerelease, it cannot be selected."
         }
     },
     {
@@ -514,7 +514,7 @@
         },
         "expected": {
             "satisfiable": false,
-            "explanation": "Since the user did not explicitly opt-in to a pre-release, it cannot be selected."
+            "explanation": "Since the user did not explicitly opt-in to a prerelease, it cannot be selected."
         }
     }
 ]
