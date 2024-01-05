@@ -109,20 +109,35 @@ def dependency_tree(scenario: Scenario) -> str:
         pointers = [tee] * (len(requirements) - 1) + [last]
         for pointer, requirement in zip(pointers, sorted(requirements)):
             parsed_requirement = Requirement(requirement)
-            suffix = ""
 
             if parsed_requirement.name == "python":
-                # Display `requires python` incompatibilities
+                # Display `requires-python` incompatibilities
                 if not parsed_requirement.specifier.contains(
                     scenario.environment.python
                 ):
-                    suffix = " (incompatible with environment)"
+                    yield (
+                        prefix
+                        + pointer
+                        + "incompatible requires-python "
+                        + str(parsed_requirement.specifier)
+                    )
+                else:
+                    # Display `requires-python` unless it is simple and matches environment
+                    if not (
+                        len(parsed_requirement.specifier) == 1
+                        and next(iter(parsed_requirement.specifier)).version
+                        == scenario.environment.python
+                    ):
+                        yield (
+                            prefix
+                            + pointer
+                            + "requires-python "
+                            + parsed_requirement.specifier
+                        )
 
-            yield prefix + pointer + "requires " + requirement + suffix
-
-            if parsed_requirement.name == "python":
-                # Do not display more information about Python requirements
                 continue
+
+            yield prefix + pointer + "requires " + requirement
 
             if parsed_requirement.name in packages:
                 extension = branch if pointer == tee else space
