@@ -37,22 +37,22 @@
     'stderr': '',
     'stdout': '''
       example-97db95eb
-      requires-package-only-prereleases-5829a64d
-      requires-package-only-prereleases-in-range-2b0594c8
+      requires-package-only-prereleases-a8b21d15
+      requires-package-only-prereleases-in-range-b4df71d2
       requires-package-only-prereleases-in-range-global-opt-in-51f94da2
-      requires-package-prerelease-and-final-any-66989e88
+      requires-package-prerelease-and-final-any-eebe53a6
       requires-package-prerelease-specified-only-final-available-8c3e26d4
-      requires-package-prerelease-specified-only-prerelease-available-fa8a64e0
-      requires-package-prerelease-specified-mixed-available-caf5dd1a
-      requires-package-multiple-prereleases-kinds-08c2f99b
+      requires-package-prerelease-specified-only-prerelease-available-b91b9892
+      requires-package-prerelease-specified-mixed-available-48b383b8
+      requires-package-multiple-prereleases-kinds-91b38a0e
       requires-package-multiple-prereleases-numbers-4cf7acef
-      requires-transitive-package-only-prereleases-fa02005e
-      requires-transitive-package-only-prereleases-in-range-4800779d
-      requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42
+      requires-transitive-package-only-prereleases-6e20b294
+      requires-transitive-package-only-prereleases-in-range-848f2c77
+      requires-transitive-package-only-prereleases-in-range-opt-in-1d2fc5a9
       requires-transitive-prerelease-and-stable-dependency-31b546ef
       requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f
-      requires-transitive-prerelease-and-stable-dependency-many-versions-260cdf7a
-      requires-transitive-prerelease-and-stable-dependency-many-versions-holes-28a344b9
+      requires-transitive-prerelease-and-stable-dependency-many-versions-3258056f
+      requires-transitive-prerelease-and-stable-dependency-many-versions-holes-293fcbc7
       requires-package-does-not-exist-57cd4136
       requires-exact-version-does-not-exist-eaa03067
       requires-greater-version-does-not-exist-6e8e01df
@@ -79,22 +79,22 @@
       scenarios/example.json
           example-97db95eb
       scenarios/prereleases.json
-          requires-package-only-prereleases-5829a64d
-          requires-package-only-prereleases-in-range-2b0594c8
+          requires-package-only-prereleases-a8b21d15
+          requires-package-only-prereleases-in-range-b4df71d2
           requires-package-only-prereleases-in-range-global-opt-in-51f94da2
-          requires-package-prerelease-and-final-any-66989e88
+          requires-package-prerelease-and-final-any-eebe53a6
           requires-package-prerelease-specified-only-final-available-8c3e26d4
-          requires-package-prerelease-specified-only-prerelease-available-fa8a64e0
-          requires-package-prerelease-specified-mixed-available-caf5dd1a
-          requires-package-multiple-prereleases-kinds-08c2f99b
+          requires-package-prerelease-specified-only-prerelease-available-b91b9892
+          requires-package-prerelease-specified-mixed-available-48b383b8
+          requires-package-multiple-prereleases-kinds-91b38a0e
           requires-package-multiple-prereleases-numbers-4cf7acef
-          requires-transitive-package-only-prereleases-fa02005e
-          requires-transitive-package-only-prereleases-in-range-4800779d
-          requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42
+          requires-transitive-package-only-prereleases-6e20b294
+          requires-transitive-package-only-prereleases-in-range-848f2c77
+          requires-transitive-package-only-prereleases-in-range-opt-in-1d2fc5a9
           requires-transitive-prerelease-and-stable-dependency-31b546ef
           requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f
-          requires-transitive-prerelease-and-stable-dependency-many-versions-260cdf7a
-          requires-transitive-prerelease-and-stable-dependency-many-versions-holes-28a344b9
+          requires-transitive-prerelease-and-stable-dependency-many-versions-3258056f
+          requires-transitive-prerelease-and-stable-dependency-many-versions-holes-293fcbc7
       scenarios/requires-does-not-exist.json
           requires-package-does-not-exist-57cd4136
           requires-exact-version-does-not-exist-eaa03067

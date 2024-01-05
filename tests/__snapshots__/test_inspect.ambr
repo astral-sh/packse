@@ -323,16 +323,16 @@
               "packages": {
                 "a": "1.0.0a1"
               },
-              "explanation": "Since there are only pre-release versions of `a` available, it should be installed even though the user did not include a pre-release specifier."
+              "explanation": "Since there are only prerelease versions of `a` available, it should be installed even though the user did not include a prerelease specifier."
             },
             "environment": {
               "python": "3.7",
               "prereleases": false
             },
             "template": "simple",
-            "description": "The user requires any version of package `a` which only has pre-release versions available.",
+            "description": "The user requires any version of package `a` which only has prerelease versions available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-only-prereleases-5829a64d",
+            "prefix": "requires-package-only-prereleases-a8b21d15",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -374,16 +374,16 @@
             "expected": {
               "satisfiable": false,
               "packages": {},
-              "explanation": "Since there are stable versions of `a` available, pre-release versions should not be selected without explicit opt-in."
+              "explanation": "Since there are stable versions of `a` available, prerelease versions should not be selected without explicit opt-in."
             },
             "environment": {
               "python": "3.7",
               "prereleases": false
             },
             "template": "simple",
-            "description": "The user requires a version of package `a` which only matches pre-release versions but they did not include a prerelease specifier.",
+            "description": "The user requires a version of package `a` which only matches prerelease versions but they did not include a prerelease specifier.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-only-prereleases-in-range-2b0594c8",
+            "prefix": "requires-package-only-prereleases-in-range-b4df71d2",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -435,7 +435,7 @@
               "prereleases": true
             },
             "template": "simple",
-            "description": "The user requires a version of package `a` which only matches pre-release versions. They did not include a prerelease specifier for the package, but they opted into pre-releases globally.",
+            "description": "The user requires a version of package `a` which only matches prerelease versions. They did not include a prerelease specifier for the package, but they opted into prereleases globally.",
             "source": "[PWD]/scenarios/prereleases.json",
             "prefix": "requires-package-only-prereleases-in-range-global-opt-in-51f94da2",
             "tree": [
@@ -482,16 +482,16 @@
               "packages": {
                 "a": "0.1.0"
               },
-              "explanation": "Since the user did not provide a pre-release specifier, the older stable version should be selected."
+              "explanation": "Since the user did not provide a prerelease specifier, the older stable version should be selected."
             },
             "environment": {
               "python": "3.7",
               "prereleases": false
             },
             "template": "simple",
-            "description": "The user requires any version of package `a` has a pre-release version available and an older non-prerelease version.",
+            "description": "The user requires any version of package `a` has a prerelease version available and an older non-prerelease version.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-prerelease-and-final-any-66989e88",
+            "prefix": "requires-package-prerelease-and-final-any-eebe53a6",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -550,7 +550,7 @@
               "prereleases": false
             },
             "template": "simple",
-            "description": "The user requires a version of `a` with a pre-release specifier and only stable releases are available.",
+            "description": "The user requires a version of `a` with a prerelease specifier and only stable releases are available.",
             "source": "[PWD]/scenarios/prereleases.json",
             "prefix": "requires-package-prerelease-specified-only-final-available-8c3e26d4",
             "tree": [
@@ -607,16 +607,16 @@
               "packages": {
                 "a": "0.3.0a1"
               },
-              "explanation": "The latest pre-release version should be selected."
+              "explanation": "The latest prerelease version should be selected."
             },
             "environment": {
               "python": "3.7",
               "prereleases": false
             },
             "template": "simple",
-            "description": "The user requires a version of `a` with a pre-release specifier and only pre-release releases are available.",
+            "description": "The user requires a version of `a` with a prerelease specifier and only prerelease releases are available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-prerelease-specified-only-prerelease-available-fa8a64e0",
+            "prefix": "requires-package-prerelease-specified-only-prerelease-available-b91b9892",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -678,16 +678,16 @@
               "packages": {
                 "a": "1.0.0a1"
               },
-              "explanation": "Since the user provided a pre-release specifier, the latest pre-release version should be selected."
+              "explanation": "Since the user provided a prerelease specifier, the latest prerelease version should be selected."
             },
             "environment": {
               "python": "3.7",
               "prereleases": false
             },
             "template": "simple",
-            "description": "The user requires a version of `a` with a pre-release specifier and both pre-release and stable releases are available.",
+            "description": "The user requires a version of `a` with a prerelease specifier and both prerelease and stable releases are available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-prerelease-specified-mixed-available-caf5dd1a",
+            "prefix": "requires-package-prerelease-specified-mixed-available-48b383b8",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -744,7 +744,7 @@
               "packages": {
                 "a": "1.0.0rc1"
               },
-              "explanation": "Release candidates should be the highest precedence pre-release kind."
+              "explanation": "Release candidates should be the highest precedence prerelease kind."
             },
             "environment": {
               "python": "3.7",
@@ -753,7 +753,7 @@
             "template": "simple",
             "description": "The user requires `a` which has multiple prereleases available with different labels.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-multiple-prereleases-kinds-08c2f99b",
+            "prefix": "requires-package-multiple-prereleases-kinds-91b38a0e",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -872,16 +872,16 @@
                 "a": "0.1.0",
                 "b": "1.0.0a1"
               },
-              "explanation": "Since there are only pre-release versions of `b` available, it should be selected even though the user did not opt-in to pre-releases."
+              "explanation": "Since there are only prerelease versions of `b` available, it should be selected even though the user did not opt-in to prereleases."
             },
             "environment": {
               "python": "3.7",
               "prereleases": false
             },
             "template": "simple",
-            "description": "The user requires any version of package `a` which requires `b` which only has pre-release versions available.",
+            "description": "The user requires any version of package `a` which requires `b` which only has prerelease versions available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-transitive-package-only-prereleases-fa02005e",
+            "prefix": "requires-transitive-package-only-prereleases-6e20b294",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -940,16 +940,16 @@
             "expected": {
               "satisfiable": false,
               "packages": {},
-              "explanation": "Since there are stable versions of `b` available, the pre-release version should not be selected without explicit opt-in. The available version is excluded by the range requested by the user."
+              "explanation": "Since there are stable versions of `b` available, the prerelease version should not be selected without explicit opt-in. The available version is excluded by the range requested by the user."
             },
             "environment": {
               "python": "3.7",
               "prereleases": false
             },
             "template": "simple",
-            "description": "The user requires package `a` which has a dependency on a package which only matches pre-release versions but they did not include a pre-release specifier.",
+            "description": "The user requires package `a` which has a dependency on a package which only matches prerelease versions but they did not include a prerelease specifier.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-transitive-package-only-prereleases-in-range-4800779d",
+            "prefix": "requires-transitive-package-only-prereleases-in-range-848f2c77",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1013,16 +1013,16 @@
                 "a": "0.1.0",
                 "b": "1.0.0a1"
               },
-              "explanation": "Since the user included a dependency on `b` with a pre-release specifier, a pre-release version can be selected."
+              "explanation": "Since the user included a dependency on `b` with a prerelease specifier, a prerelease version can be selected."
             },
             "environment": {
               "python": "3.7",
               "prereleases": false
             },
             "template": "simple",
-            "description": "The user requires package `a` which has a dependency on a package which only matches pre-release versions; the user has opted into allowing prereleases in `b` explicitly.",
+            "description": "The user requires package `a` which has a dependency on a package which only matches prerelease versions; the user has opted into allowing prereleases in `b` explicitly.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-transitive-package-only-prereleases-in-range-opt-in-4ca10c42",
+            "prefix": "requires-transitive-package-only-prereleases-in-range-opt-in-1d2fc5a9",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1403,7 +1403,7 @@
             "expected": {
               "satisfiable": false,
               "packages": {},
-              "explanation": "Since the user did not explicitly opt-in to a pre-release, it cannot be selected."
+              "explanation": "Since the user did not explicitly opt-in to a prerelease, it cannot be selected."
             },
             "environment": {
               "python": "3.7",
@@ -1412,7 +1412,7 @@
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. There are many prerelease versions.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-transitive-prerelease-and-stable-dependency-many-versions-260cdf7a",
+            "prefix": "requires-transitive-prerelease-and-stable-dependency-many-versions-3258056f",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1636,7 +1636,7 @@
             "expected": {
               "satisfiable": false,
               "packages": {},
-              "explanation": "Since the user did not explicitly opt-in to a pre-release, it cannot be selected."
+              "explanation": "Since the user did not explicitly opt-in to a prerelease, it cannot be selected."
             },
             "environment": {
               "python": "3.7",
@@ -1645,7 +1645,7 @@
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. There are many prerelease versions and some are excluded.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-transitive-prerelease-and-stable-dependency-many-versions-holes-28a344b9",
+            "prefix": "requires-transitive-prerelease-and-stable-dependency-many-versions-holes-293fcbc7",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
