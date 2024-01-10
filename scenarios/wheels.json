@@ -1,24 +1,91 @@
-{
-    "name": "specific-tag-and-default",
-    "description": "This is a scenario where a wheel for a specific platform is available alongside the default.",
-    "root": {
-        "requires": [
-            "a"
-        ]
-    },
-    "packages": {
-        "a": {
-            "versions": {
-                "1.0.0": {
-                    "wheel_tags": [
-                        "cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64",
-                        "py3-none-any"
-                    ]
+[
+    {
+        "name": "specific-tag-and-default",
+        "description": "A wheel for a specific platform is available alongside the default.",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "wheel_tags": [
+                            "cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64",
+                            "py3-none-any"
+                        ]
+                    }
                 }
             }
+        },
+        "expected": {
+            "satisfiable": true
         }
     },
-    "expected": {
-        "satisfiable": true
+    {
+        "name": "only-wheels",
+        "description": "No source distributions are available, only wheels.",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "sdist": false
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true
+        }
+    },
+    {
+        "name": "no-wheels",
+        "description": "No wheels are available, only source distributions.",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "wheel": false
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true
+        }
+    },
+    {
+        "name": "no-wheels-with-matching-platform",
+        "description": "No wheels with valid tags are available, just source distributions.",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "wheel-tags": [
+                            "unknown-tag"
+                        ]
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true
+        }
     }
-}
+]

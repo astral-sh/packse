@@ -4036,11 +4036,149 @@
     ''',
   })
 # ---
-# name: test_build_all_scenarios[wheel-tags]
+# name: test_build_all_scenarios[wheels]
   dict({
     'exit_code': 0,
     'filesystem': dict({
-      'build/specific-tag-and-default-74e4a459/specific-tag-and-default-74e4a459-0.0.0/pyproject.toml': 'md5:8cc5ec783954da433670d1ead9155d00',
+      'build/no-wheels-614d801c/no-wheels-614d801c-0.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/no_wheels_614d801c"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/no_wheels_614d801c"]
+        
+        [project]
+        name = "no-wheels-614d801c"
+        version = "0.0.0"
+        dependencies = ["no-wheels-614d801c-a"]
+        requires-python = ">=3.7"
+        description = "No wheels are available, only source distributions."
+  
+      ''',
+      'build/no-wheels-614d801c/no-wheels-614d801c-0.0.0/src/no_wheels_614d801c/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/no-wheels-614d801c/no-wheels-614d801c-a-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/no_wheels_614d801c_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/no_wheels_614d801c_a"]
+        
+        [project]
+        name = "no-wheels-614d801c-a"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/no-wheels-614d801c/no-wheels-614d801c-a-1.0.0/src/no_wheels_614d801c_a/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/no-wheels-with-matching-platform-737bbfd4/no-wheels-with-matching-platform-737bbfd4-0.0.0/pyproject.toml': 'md5:f64fdc5a78102cfd0e99c00a3752661c',
+      'build/no-wheels-with-matching-platform-737bbfd4/no-wheels-with-matching-platform-737bbfd4-0.0.0/src/no_wheels_with_matching_platform_737bbfd4/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/no-wheels-with-matching-platform-737bbfd4/no-wheels-with-matching-platform-737bbfd4-a-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/no_wheels_with_matching_platform_737bbfd4_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/no_wheels_with_matching_platform_737bbfd4_a"]
+        
+        [project]
+        name = "no-wheels-with-matching-platform-737bbfd4-a"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/no-wheels-with-matching-platform-737bbfd4/no-wheels-with-matching-platform-737bbfd4-a-1.0.0/src/no_wheels_with_matching_platform_737bbfd4_a/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/only-wheels-4f019491/only-wheels-4f019491-0.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/only_wheels_4f019491"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/only_wheels_4f019491"]
+        
+        [project]
+        name = "only-wheels-4f019491"
+        version = "0.0.0"
+        dependencies = ["only-wheels-4f019491-a"]
+        requires-python = ">=3.7"
+        description = "No source distributions are available, only wheels."
+  
+      ''',
+      'build/only-wheels-4f019491/only-wheels-4f019491-0.0.0/src/only_wheels_4f019491/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/only-wheels-4f019491/only-wheels-4f019491-a-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/only_wheels_4f019491_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/only_wheels_4f019491_a"]
+        
+        [project]
+        name = "only-wheels-4f019491-a"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/only-wheels-4f019491/only-wheels-4f019491-a-1.0.0/src/only_wheels_4f019491_a/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/specific-tag-and-default-74e4a459/specific-tag-and-default-74e4a459-0.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/specific_tag_and_default_74e4a459"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/specific_tag_and_default_74e4a459"]
+        
+        [project]
+        name = "specific-tag-and-default-74e4a459"
+        version = "0.0.0"
+        dependencies = ["specific-tag-and-default-74e4a459-a"]
+        requires-python = ">=3.7"
+        description = "A wheel for a specific platform is available alongside the default."
+  
+      ''',
       'build/specific-tag-and-default-74e4a459/specific-tag-and-default-74e4a459-0.0.0/src/specific_tag_and_default_74e4a459/__init__.py': '''
         __version__ = "0.0.0"
   
@@ -4068,13 +4206,53 @@
         __version__ = "1.0.0"
   
       ''',
-      'dist/specific-tag-and-default-74e4a459/specific_tag_and_default_74e4a459-0.0.0.tar.gz': 'md5:b358f4538eb34680b89faed06cc56aa8',
+      'dist/no-wheels-614d801c/no_wheels_614d801c-0.0.0.tar.gz': 'md5:20ad7f5511b5553b020dd46fbb3b1316',
+      'dist/no-wheels-614d801c/no_wheels_614d801c_a-1.0.0.tar.gz': 'md5:51e5886a724d0de9f46d42001fdf508d',
+      'dist/no-wheels-with-matching-platform-737bbfd4/no_wheels_with_matching_platform_737bbfd4-0.0.0.tar.gz': 'md5:3a59270188b2dbc18d58776489525ded',
+      'dist/no-wheels-with-matching-platform-737bbfd4/no_wheels_with_matching_platform_737bbfd4_a-1.0.0-py3-none-any.whl': 'md5:a224c2931e3278ae50318a3cf3ae28d2',
+      'dist/no-wheels-with-matching-platform-737bbfd4/no_wheels_with_matching_platform_737bbfd4_a-1.0.0.tar.gz': 'md5:a558a20fc85b9de189d23a9cb3b12486',
+      'dist/only-wheels-4f019491/only_wheels_4f019491-0.0.0.tar.gz': 'md5:2bfa90886b87723ac442000b2c7fe793',
+      'dist/only-wheels-4f019491/only_wheels_4f019491_a-1.0.0-py3-none-any.whl': 'md5:f7459b841347758d2cfddbe36d11af3f',
+      'dist/specific-tag-and-default-74e4a459/specific_tag_and_default_74e4a459-0.0.0.tar.gz': 'md5:83e18f03e44f1109545d44daa3b9fd34',
       'dist/specific-tag-and-default-74e4a459/specific_tag_and_default_74e4a459_a-1.0.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl': 'md5:276ed7fcd3e7c6d265b6ec2d34d89fb7',
       'dist/specific-tag-and-default-74e4a459/specific_tag_and_default_74e4a459_a-1.0.0-py3-none-any.whl': 'md5:276ed7fcd3e7c6d265b6ec2d34d89fb7',
       'dist/specific-tag-and-default-74e4a459/specific_tag_and_default_74e4a459_a-1.0.0.tar.gz': 'md5:3e6b336e680455c5b6acfac7f5eb13d9',
       'tree': '''
         test_build_all_scenarios_wheel0
         ├── build
+        │   ├── no-wheels-614d801c
+        │   │   ├── no-wheels-614d801c-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── no_wheels_614d801c
+        │   │   │           └── __init__.py
+        │   │   └── no-wheels-614d801c-a-1.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── no_wheels_614d801c_a
+        │   │               └── __init__.py
+        │   ├── no-wheels-with-matching-platform-737bbfd4
+        │   │   ├── no-wheels-with-matching-platform-737bbfd4-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── no_wheels_with_matching_platform_737bbfd4
+        │   │   │           └── __init__.py
+        │   │   └── no-wheels-with-matching-platform-737bbfd4-a-1.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── no_wheels_with_matching_platform_737bbfd4_a
+        │   │               └── __init__.py
+        │   ├── only-wheels-4f019491
+        │   │   ├── only-wheels-4f019491-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── only_wheels_4f019491
+        │   │   │           └── __init__.py
+        │   │   └── only-wheels-4f019491-a-1.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── only_wheels_4f019491_a
+        │   │               └── __init__.py
         │   └── specific-tag-and-default-74e4a459
         │       ├── specific-tag-and-default-74e4a459-0.0.0
         │       │   ├── pyproject.toml
@@ -4087,18 +4265,31 @@
         │               └── specific_tag_and_default_74e4a459_a
         │                   └── __init__.py
         └── dist
+            ├── no-wheels-614d801c
+            │   ├── no_wheels_614d801c-0.0.0.tar.gz
+            │   └── no_wheels_614d801c_a-1.0.0.tar.gz
+            ├── no-wheels-with-matching-platform-737bbfd4
+            │   ├── no_wheels_with_matching_platform_737bbfd4-0.0.0.tar.gz
+            │   ├── no_wheels_with_matching_platform_737bbfd4_a-1.0.0-py3-none-any.whl
+            │   └── no_wheels_with_matching_platform_737bbfd4_a-1.0.0.tar.gz
+            ├── only-wheels-4f019491
+            │   ├── only_wheels_4f019491-0.0.0.tar.gz
+            │   └── only_wheels_4f019491_a-1.0.0-py3-none-any.whl
             └── specific-tag-and-default-74e4a459
                 ├── specific_tag_and_default_74e4a459-0.0.0.tar.gz
                 ├── specific_tag_and_default_74e4a459_a-1.0.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
                 ├── specific_tag_and_default_74e4a459_a-1.0.0-py3-none-any.whl
                 └── specific_tag_and_default_74e4a459_a-1.0.0.tar.gz
         
-        10 directories, 8 files
+        34 directories, 27 files
   
       ''',
     }),
     'stderr': '<not included>',
     'stdout': '''
+      no-wheels-614d801c
+      no-wheels-with-matching-platform-737bbfd4
+      only-wheels-4f019491
       specific-tag-and-default-74e4a459
   
     ''',
@@ -4791,12 +4982,12 @@
     ''',
   })
 # ---
-# name: test_view_all_scenarios[wheel-tags]
+# name: test_view_all_scenarios[wheels]
   dict({
     'exit_code': 0,
     'filesystem': dict({
       'tree': '''
-        test_view_all_scenarios_wheel_0
+        test_view_all_scenarios_wheels0
         
         0 directories
   
@@ -4805,6 +4996,33 @@
     'stderr': '',
     'stdout': '''
       specific-tag-and-default-74e4a459
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a
+      │       └── satisfied by a-1.0.0
+      └── a
+          └── a-1.0.0
+      
+      only-wheels-4f019491
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a
+      │       └── satisfied by a-1.0.0
+      └── a
+          └── a-1.0.0
+      
+      no-wheels-614d801c
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a
+      │       └── satisfied by a-1.0.0
+      └── a
+          └── a-1.0.0
+      
+      no-wheels-with-matching-platform-737bbfd4
       ├── environment
       │   └── python3.7
       ├── root
