@@ -34,6 +34,19 @@ def test_build_example(snapshot):
 
 
 @pytest.mark.usefixtures("tmpcwd")
+def test_build_example_short_names(snapshot):
+    target = __development_base_path__ / "scenarios" / "example.json"
+    assert (
+        snapshot_command(
+            ["build", str(target), "--short-names"],
+            snapshot_filesystem=True,
+            snapshot_stderr=False,
+        )
+        == snapshot
+    )
+
+
+@pytest.mark.usefixtures("tmpcwd")
 @pytest.mark.usefixtures("tmpenviron")
 def test_build_example_with_seed(snapshot):
     target = __development_base_path__ / "scenarios" / "example.json"
@@ -50,7 +63,7 @@ def test_build_example_with_seed(snapshot):
 def test_build_example_already_exists(snapshot):
     target = __development_base_path__ / "scenarios" / "example.json"
     scenario = load_scenario(target)
-    prefix = scenario_prefix(scenario)
+    prefix = scenario_prefix(scenario, short=False)
     (Path.cwd() / "build" / prefix).mkdir(parents=True)
     assert snapshot_command(["build", target], snapshot_filesystem=True) == snapshot
 

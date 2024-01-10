@@ -40,3 +40,8 @@ def test_inspect_invalid_target_skip_invalid(snapshot, tmpcwd):
 def test_inspect(snapshot):
     target = __development_base_path__ / "scenarios" / "example.json"
     assert snapshot_command(["inspect", str(target)]) == snapshot
+
+
+def test_inspect_short_names(snapshot):
+    target = __development_base_path__ / "scenarios" / "example.json"
+    assert snapshot_command(["inspect", str(target), "--short-names"]) == snapshot

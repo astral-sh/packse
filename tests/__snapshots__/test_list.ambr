@@ -185,6 +185,56 @@
     'stdout': '',
   })
 # ---
+# name: test_list_short_names
+  dict({
+    'exit_code': 0,
+    'stderr': '',
+    'stdout': '''
+      scenarios/example.json
+          97db95eb
+      scenarios/excluded.json
+          7a9ed79c
+          d28c9e3c
+          2023222f
+          aece4208
+      scenarios/prereleases.json
+          a8b21d15
+          b4df71d2
+          51f94da2
+          eebe53a6
+          8c3e26d4
+          b91b9892
+          48b383b8
+          91b38a0e
+          4cf7acef
+          6e20b294
+          848f2c77
+          1d2fc5a9
+          31b546ef
+          dd00a87f
+          3258056f
+          293fcbc7
+      scenarios/requires-does-not-exist.json
+          57cd4136
+          eaa03067
+          6e8e01df
+          e45cec3c
+          aca2796a
+      scenarios/requires-incompatible-versions.json
+          063ec9d3
+          638350f3
+          9b595175
+      scenarios/requires-python.json
+          0825b69c
+          f9296b84
+          a11d5394
+          02dc550c
+          ef060cef
+          1bde0c18
+  
+    ''',
+  })
+# ---
 # name: test_list_target_does_not_exist
   dict({
     'exit_code': 1,

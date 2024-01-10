@@ -12,6 +12,10 @@ def test_list_no_versions(snapshot):
     assert snapshot_command(["list", "--no-versions"]) == snapshot
 
 
+def test_list_short_names(snapshot):
+    assert snapshot_command(["list", "--short-names"]) == snapshot
+
+
 def test_list_no_sources(snapshot):
     assert snapshot_command(["list", "--no-sources"]) == snapshot
 

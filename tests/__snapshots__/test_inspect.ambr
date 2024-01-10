@@ -3102,6 +3102,104 @@
     'stdout': '',
   })
 # ---
+# name: test_inspect_short_names
+  dict({
+    'exit_code': 0,
+    'stderr': '',
+    'stdout': '''
+      {
+        "scenarios": [
+          {
+            "name": "example",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "b>1.0.0"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              },
+              "b": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "2.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  },
+                  "3.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "c"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a"
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "1.0.0",
+                "b": "3.0.0"
+              },
+              "explanation": "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
+            "source": "[PWD]/scenarios/example.json",
+            "prefix": "97db95eb",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u2514\u2500\u2500 a-1.0.0",
+              "\u2502       \u2514\u2500\u2500 requires b>1.0.0",
+              "\u2502           \u251c\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by b-3.0.0",
+              "\u2514\u2500\u2500 b",
+              "    \u251c\u2500\u2500 b-1.0.0",
+              "    \u251c\u2500\u2500 b-2.0.0",
+              "    \u2514\u2500\u2500 b-3.0.0",
+              "        \u2514\u2500\u2500 requires c",
+              "            \u2514\u2500\u2500 unsatisfied: no versions for package"
+            ]
+          }
+        ]
+      }
+  
+    ''',
+  })
+# ---
 # name: test_inspect_target_does_not_exist
   dict({
     'exit_code': 1,

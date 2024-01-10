@@ -118,7 +118,7 @@ jobs:
       - name: Build scenarios
         if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         run: |
-          poetry run packse build $SCENARIOS
+          poetry run packse build --short-names $SCENARIOS
 
       - name: Publish scenarios [local]
         if: github.ref != 'refs/heads/main'

@@ -20,6 +20,7 @@ def list(
     no_versions: bool = False,
     skip_invalid: bool = False,
     no_sources: bool = False,
+    short_names: bool = False,
 ):
     scenarios_by_path: dict[Path, list[Scenario]] = {}
 
@@ -47,7 +48,7 @@ def list(
             if no_versions:
                 name = scenario.name
             else:
-                name = scenario_prefix(scenario)
+                name = scenario_prefix(scenario, short_names)
 
             print(prefix + name)
 
