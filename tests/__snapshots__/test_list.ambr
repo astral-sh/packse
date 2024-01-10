@@ -71,6 +71,7 @@
       requires-python-version-greater-than-current-many-02dc550c
       requires-python-version-greater-than-current-backtrack-ef060cef
       requires-python-version-greater-than-current-excluded-1bde0c18
+      specific-tag-and-default-74e4a459
   
     ''',
   })
@@ -121,6 +122,8 @@
           requires-python-version-greater-than-current-many-02dc550c
           requires-python-version-greater-than-current-backtrack-ef060cef
           requires-python-version-greater-than-current-excluded-1bde0c18
+      scenarios/wheel-tags.json
+          specific-tag-and-default-74e4a459
   
     ''',
   })
@@ -171,6 +174,8 @@
           requires-python-version-greater-than-current-many
           requires-python-version-greater-than-current-backtrack
           requires-python-version-greater-than-current-excluded
+      scenarios/wheel-tags.json
+          specific-tag-and-default
   
     ''',
   })
@@ -231,6 +236,8 @@
           02dc550c
           ef060cef
           1bde0c18
+      scenarios/wheel-tags.json
+          74e4a459
   
     ''',
   })

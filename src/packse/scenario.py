@@ -21,6 +21,7 @@ class PackageMetadata(msgspec.Struct):
     requires: list[VersionSpec] = []
     sdist: bool = True
     wheel: bool = True
+    wheel_tags: list[str] = []
     description: str = ""
 
     def hash(self) -> str:
@@ -33,6 +34,9 @@ class PackageMetadata(msgspec.Struct):
             hasher.update(require.encode())
         hasher.update(self.sdist.to_bytes())
         hasher.update(self.wheel.to_bytes())
+        if self.wheel:
+            for wheel_tag in self.wheel_tags:
+                hasher.update(wheel_tag.encode())
         hasher.update(self.description.encode())
         return hasher.hexdigest()
 
