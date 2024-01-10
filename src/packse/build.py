@@ -270,3 +270,77 @@ def build_package_distributions(
 
     yield from sorted((target / "dist").iterdir())
     shutil.rmtree(target / "dist")
+
+
+def build_package(
+    name: str,
+    version: str,
+    no_wheel: bool,
+    no_sdist: bool,
+    wheel_tags: list[str],
+    rm_destination: bool,
+):
+    """
+    Build a package without a scenario
+    """
+
+    work_dir = Path.cwd()
+    build_destination = work_dir / "build" / name
+    dist_destination = work_dir / "dist" / name
+    start_time = time.time()
+
+    if build_destination.exists():
+        if rm_destination:
+            shutil.rmtree(build_destination)
+        else:
+            raise DestinationAlreadyExists(build_destination)
+
+    build_destination.mkdir(parents=True)
+
+    if dist_destination.exists():
+        if rm_destination:
+            shutil.rmtree(dist_destination)
+        else:
+            raise DestinationAlreadyExists(dist_destination)
+
+    dist_destination.mkdir(parents=True)
+    package_name = name
+    package_version = PackageMetadata(
+        sdist=not no_sdist, wheel=not no_wheel, wheel_tags=wheel_tags
+    )
+    module_name = package_name.replace("-", "_")
+
+    template_config = load_template_config("simple")
+
+    logger.debug("Generating project for '%s-%s'", package_name, version)
+
+    package_destination = create_from_template(
+        build_destination,
+        template_name="simple",
+        variables={
+            "package-name": package_name,
+            "module-name": module_name,
+            "version": version,
+            "dependencies": [],
+            "requires-python": package_version.requires_python,
+            "description": package_version.description,
+        },
+    )
+
+    logger.info(
+        "Generated project for '%s-%s'",
+        package_name,
+        version,
+    )
+
+    for dist in build_package_distributions(
+        template_config, package_version, package_destination
+    ):
+        shared_path = dist_destination / dist.name
+        logger.info("Linked distribution to %s", shared_path.relative_to(work_dir))
+        shared_path.hardlink_to(dist)
+
+    logger.info(
+        "Done in %.2fms",
+        (time.time() - start_time) * 1000.0,
+    )
