@@ -11,10 +11,13 @@ from concurrent.futures import wait as wait_for_futures
 from pathlib import Path
 from typing import Generator
 
+import packaging.version
+
 from packse.error import (
     BuildError,
     DestinationAlreadyExists,
     FileNotFound,
+    InvalidPackageVersion,
     InvalidScenario,
 )
 from packse.scenario import (
@@ -283,6 +286,11 @@ def build_package(
     """
     Build a package without a scenario
     """
+
+    try:
+        packaging.version.Version(version)
+    except Exception:
+        raise InvalidPackageVersion(version) from None
 
     work_dir = Path.cwd()
     build_destination = work_dir / "build" / name

@@ -22,6 +22,14 @@ class InvalidScenario(UserError):
         super().__init__(message)
 
 
+class InvalidPackageVersion(UserError):
+    """Version is not PEP compliant"""
+
+    def __init__(self, version: str) -> None:
+        message = f"Version {version!r} is not valid."
+        super().__init__(message)
+
+
 class FileNotFound(UserError):
     def __init__(self, path: Path) -> None:
         message = f"File '{path}' not found"

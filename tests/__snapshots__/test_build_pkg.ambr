@@ -61,29 +61,7 @@
   dict({
     'exit_code': 1,
     'stderr': '''
-      Generated project for 'foo-bar'in [TIME]
-      Building foo-bar with hatch failed:
-          [sdist]
-          Traceback (most recent call last):
-            File "[PYTHON_BINDIR]/hatchling", line 8, in <module>
-              sys.exit(hatchling())
-                       ^^^^^^^^^^^
-            File "/Users/mz/.pyenv/versions/3.12.0/lib/python3.12/site-packages/hatchling/cli/__init__.py", line 26, in hatchling
-              command(**kwargs)
-            File "/Users/mz/.pyenv/versions/3.12.0/lib/python3.12/site-packages/hatchling/cli/build/__init__.py", line 75, in build_impl
-              for artifact in builder.build(
-            File "/Users/mz/.pyenv/versions/3.12.0/lib/python3.12/site-packages/hatchling/builders/plugin/interface.py", line 90, in build
-              self.metadata.validate_fields()
-            File "/Users/mz/.pyenv/versions/3.12.0/lib/python3.12/site-packages/hatchling/metadata/core.py", line 243, in validate_fields
-              _ = self.version
-                  ^^^^^^^^^^^^
-            File "/Users/mz/.pyenv/versions/3.12.0/lib/python3.12/site-packages/hatchling/metadata/core.py", line 128, in version
-              self._version = self._get_version()
-                              ^^^^^^^^^^^^^^^^^^^
-            File "/Users/mz/.pyenv/versions/3.12.0/lib/python3.12/site-packages/hatchling/metadata/core.py", line 238, in _get_version
-              raise ValueError(message) from None
-          ValueError: Invalid version `bar` from field `project.version`, see https://peps.python.org/pep-0440/
-      .
+      Version 'bar' is not valid..
   
     ''',
     'stdout': '',
