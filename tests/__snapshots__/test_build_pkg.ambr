@@ -1,0 +1,266 @@
+# serializer version: 1
+# name: test_build_pkg
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'build/foo/foo-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/foo"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/foo"]
+        
+        [project]
+        name = "foo"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/foo/foo-1.0.0/src/foo/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'dist/foo/foo-1.0.0-py3-none-any.whl': 'md5:fa25598ba0f3b049fa9b2e3870df1de7',
+      'dist/foo/foo-1.0.0.tar.gz': 'md5:8cd885b44d20dd9ec139be7a7d603efc',
+      'tree': '''
+        test_build_pkg0
+        ├── build
+        │   └── foo
+        │       └── foo-1.0.0
+        │           ├── pyproject.toml
+        │           └── src
+        │               └── foo
+        │                   └── __init__.py
+        └── dist
+            └── foo
+                ├── foo-1.0.0-py3-none-any.whl
+                └── foo-1.0.0.tar.gz
+        
+        7 directories, 4 files
+  
+      ''',
+    }),
+    'stderr': '''
+      Generated project for 'foo-1.0.0'in [TIME]
+      Built package 'foo-1.0.0' in [TIME]
+      Linked distribution to dist/foo/foo-1.0.0-py3-none-any.whl
+      Linked distribution to dist/foo/foo-1.0.0.tar.gz
+      Done in [TIME]
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_build_pkg_invalid_version
+  dict({
+    'exit_code': 1,
+    'stderr': '''
+      Version 'bar' is not valid..
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_build_pkg_no_name
+  dict({
+    'exit_code': 2,
+    'stderr': '''
+      usage: packse build-pkg [-h] [-t WHEEL_TAG] [--no-wheel] [--no-sdist] [--rm]
+                              [-v] [-q]
+                              name version
+      packse build-pkg: error: the following arguments are required: name, version
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_build_pkg_no_sdist
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'build/foo/foo-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/foo"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/foo"]
+        
+        [project]
+        name = "foo"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/foo/foo-1.0.0/src/foo/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'dist/foo/foo-1.0.0-py3-none-any.whl': 'md5:fa25598ba0f3b049fa9b2e3870df1de7',
+      'tree': '''
+        test_build_pkg_no_sdist0
+        ├── build
+        │   └── foo
+        │       └── foo-1.0.0
+        │           ├── pyproject.toml
+        │           └── src
+        │               └── foo
+        │                   └── __init__.py
+        └── dist
+            └── foo
+                └── foo-1.0.0-py3-none-any.whl
+        
+        7 directories, 3 files
+  
+      ''',
+    }),
+    'stderr': '''
+      Generated project for 'foo-1.0.0'in [TIME]
+      Built package 'foo-1.0.0' in [TIME]
+      Linked distribution to dist/foo/foo-1.0.0-py3-none-any.whl
+      Done in [TIME]
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_build_pkg_no_version
+  dict({
+    'exit_code': 2,
+    'stderr': '''
+      usage: packse build-pkg [-h] [-t WHEEL_TAG] [--no-wheel] [--no-sdist] [--rm]
+                              [-v] [-q]
+                              name version
+      packse build-pkg: error: the following arguments are required: version
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_build_pkg_no_wheel
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'build/foo/foo-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/foo"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/foo"]
+        
+        [project]
+        name = "foo"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/foo/foo-1.0.0/src/foo/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'dist/foo/foo-1.0.0.tar.gz': 'md5:8cd885b44d20dd9ec139be7a7d603efc',
+      'tree': '''
+        test_build_pkg_no_wheel0
+        ├── build
+        │   └── foo
+        │       └── foo-1.0.0
+        │           ├── pyproject.toml
+        │           └── src
+        │               └── foo
+        │                   └── __init__.py
+        └── dist
+            └── foo
+                └── foo-1.0.0.tar.gz
+        
+        7 directories, 3 files
+  
+      ''',
+    }),
+    'stderr': '''
+      Generated project for 'foo-1.0.0'in [TIME]
+      Built package 'foo-1.0.0' in [TIME]
+      Linked distribution to dist/foo/foo-1.0.0.tar.gz
+      Done in [TIME]
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_build_pkg_wheel_tags
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'build/foo/foo-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/foo"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/foo"]
+        
+        [project]
+        name = "foo"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/foo/foo-1.0.0/src/foo/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'dist/foo/foo-1.0.0-tag1.whl': 'md5:fa25598ba0f3b049fa9b2e3870df1de7',
+      'dist/foo/foo-1.0.0-tag2.whl': 'md5:fa25598ba0f3b049fa9b2e3870df1de7',
+      'dist/foo/foo-1.0.0.tar.gz': 'md5:8cd885b44d20dd9ec139be7a7d603efc',
+      'tree': '''
+        test_build_pkg_wheel_tags0
+        ├── build
+        │   └── foo
+        │       └── foo-1.0.0
+        │           ├── pyproject.toml
+        │           └── src
+        │               └── foo
+        │                   └── __init__.py
+        └── dist
+            └── foo
+                ├── foo-1.0.0-tag1.whl
+                ├── foo-1.0.0-tag2.whl
+                └── foo-1.0.0.tar.gz
+        
+        7 directories, 5 files
+  
+      ''',
+    }),
+    'stderr': '''
+      Generated project for 'foo-1.0.0'in [TIME]
+      Built package 'foo-1.0.0' in [TIME]
+      Linked distribution to dist/foo/foo-1.0.0-tag1.whl
+      Linked distribution to dist/foo/foo-1.0.0-tag2.whl
+      Linked distribution to dist/foo/foo-1.0.0.tar.gz
+      Done in [TIME]
+  
+    ''',
+    'stdout': '',
+  })
+# ---

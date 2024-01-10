@@ -4,7 +4,8 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      usage: packse [-h] [-v] [-q] {build,view,publish,list,inspect,serve,index} ...
+      usage: packse [-h] [-v] [-q]
+                    {build,build-pkg,view,publish,list,inspect,serve,index} ...
       
       Utilities for working example packaging scenarios
       
@@ -14,8 +15,9 @@
         -q, --quiet           Disable logging
       
       commands:
-        {build,view,publish,list,inspect,serve,index}
+        {build,build-pkg,view,publish,list,inspect,serve,index}
           build               Build packages for a scenario
+          build-pkg           Build a single package
           view                View a scenario
           publish             Publish packages for a scenario
           list                List scenarios at the given paths
@@ -31,7 +33,8 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      usage: packse [-h] [-v] [-q] {build,view,publish,list,inspect,serve,index} ...
+      usage: packse [-h] [-v] [-q]
+                    {build,build-pkg,view,publish,list,inspect,serve,index} ...
       
       Utilities for working example packaging scenarios
       
@@ -41,8 +44,9 @@
         -q, --quiet           Disable logging
       
       commands:
-        {build,view,publish,list,inspect,serve,index}
+        {build,build-pkg,view,publish,list,inspect,serve,index}
           build               Build packages for a scenario
+          build-pkg           Build a single package
           view                View a scenario
           publish             Publish packages for a scenario
           list                List scenarios at the given paths
@@ -58,7 +62,8 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      usage: packse [-h] [-v] [-q] {build,view,publish,list,inspect,serve,index} ...
+      usage: packse [-h] [-v] [-q]
+                    {build,build-pkg,view,publish,list,inspect,serve,index} ...
       
       Utilities for working example packaging scenarios
       
@@ -68,8 +73,9 @@
         -q, --quiet           Disable logging
       
       commands:
-        {build,view,publish,list,inspect,serve,index}
+        {build,build-pkg,view,publish,list,inspect,serve,index}
           build               Build packages for a scenario
+          build-pkg           Build a single package
           view                View a scenario
           publish             Publish packages for a scenario
           list                List scenarios at the given paths

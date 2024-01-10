@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 from subprocess import CalledProcessError
 
-from packse.build import build
+from packse.build import build, build_package
 from packse.error import (
     BuildError,
     DestinationAlreadyExists,
@@ -68,6 +68,12 @@ def entrypoint():
 
 def _call_build(args):
     build(args.targets, rm_destination=args.rm, short_names=args.short_names)
+
+
+def _call_build_package(args):
+    build_package(
+        args.name, args.version, args.no_wheel, args.no_sdist, args.wheel_tag, args.rm
+    )
 
 
 def _call_view(args):
@@ -174,6 +180,44 @@ def _add_build_parser(subparsers):
         "--short-names",
         action="store_true",
         help="Exclude scenario names from generated packages.",
+    )
+    _add_shared_arguments(parser)
+
+
+def _add_build_package_parser(subparsers):
+    parser = subparsers.add_parser("build-pkg", help="Build a single package")
+    parser.set_defaults(call=_call_build_package)
+    parser.add_argument(
+        "name",
+        type=str,
+        help="The package name",
+    )
+    parser.add_argument(
+        "version",
+        type=str,
+        help="The package version",
+    )
+    parser.add_argument(
+        "-t",
+        "--wheel-tag",
+        type=str,
+        help="The tags for wheels",
+        action="append",
+    )
+    parser.add_argument(
+        "--no-wheel",
+        action="store_true",
+        help="Disable building wheels",
+    )
+    parser.add_argument(
+        "--no-sdist",
+        action="store_true",
+        help="Disable building source distributions",
+    )
+    parser.add_argument(
+        "--rm",
+        action="store_true",
+        help="Allow removal of existing build directory",
     )
     _add_shared_arguments(parser)
 
@@ -397,6 +441,7 @@ def get_parser() -> argparse.ArgumentParser:
     parser = _root_parser()
     subparsers = parser.add_subparsers(title="commands")
     _add_build_parser(subparsers)
+    _add_build_package_parser(subparsers)
     _add_view_parser(subparsers)
     _add_publish_parser(subparsers)
     _add_list_parser(subparsers)
