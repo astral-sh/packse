@@ -1,4 +1,3 @@
-
 import pytest
 
 from .common import snapshot_command
