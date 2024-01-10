@@ -241,5 +241,32 @@ def build_package_distributions(
             logs,
         )
 
+    # Create wheels with other tags if requested
+    if package_version.wheel and package_version.wheel_tags:
+        default_tag_wheel = None
+        for dist in (target / "dist").iterdir():
+            if dist.name.endswith("py3-none-any.whl"):
+                default_tag_wheel = dist
+                break
+        if not default_tag_wheel:
+            raise BuildError("No wheel found with tag `py3-none-any`.")
+
+        # Since we always build a universal wheel, we just create copies of it for other platforms
+        # which means we're lying about the compatibility of the wheel but it will always be installable
+        # on the given platform.
+        for tag in package_version.wheel_tags:
+            if tag == "py3-none-any":
+                continue
+
+            new_tag_wheel = (
+                target / "dist" / default_tag_wheel.name.replace("py3-none-any", tag)
+            )
+            new_tag_wheel.hardlink_to(default_tag_wheel)
+            logger.debug("Created wheel %s", new_tag_wheel.name)
+
+        # Delete the default wheel if not requested
+        if "py3-none-any" not in package_version.wheel_tags:
+            default_tag_wheel.unlink()
+
     yield from sorted((target / "dist").iterdir())
     shutil.rmtree(target / "dist")

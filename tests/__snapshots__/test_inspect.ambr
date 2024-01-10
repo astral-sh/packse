@@ -18,6 +18,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -29,6 +30,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0": {
@@ -36,6 +38,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.0.0": {
@@ -45,6 +48,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -126,6 +130,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -137,6 +142,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0": {
@@ -144,6 +150,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.0.0": {
@@ -153,6 +160,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -224,6 +232,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -235,6 +244,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0": {
@@ -242,6 +252,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.0.0": {
@@ -251,6 +262,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -307,6 +319,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -353,6 +366,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0": {
@@ -362,6 +376,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.0.0": {
@@ -371,6 +386,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -382,6 +398,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0": {
@@ -389,6 +406,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.0.0": {
@@ -396,6 +414,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -458,6 +477,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0": {
@@ -467,6 +487,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.1.0": {
@@ -476,6 +497,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.2.0": {
@@ -485,6 +507,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.3.0": {
@@ -494,6 +517,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.0.0": {
@@ -503,6 +527,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -514,6 +539,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0": {
@@ -521,6 +547,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.0.0": {
@@ -528,6 +555,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -541,6 +569,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0": {
@@ -550,6 +579,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -636,6 +666,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0": {
@@ -645,6 +676,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.1.0": {
@@ -655,6 +687,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.2.0": {
@@ -664,6 +697,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.3.0": {
@@ -674,6 +708,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.4.0": {
@@ -683,6 +718,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.0.0": {
@@ -692,6 +728,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -703,6 +740,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0": {
@@ -710,6 +748,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.0.0": {
@@ -717,6 +756,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -730,6 +770,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0": {
@@ -739,6 +780,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -831,6 +873,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -877,6 +920,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "1.0.0a1": {
@@ -884,6 +928,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -929,6 +974,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "1.0.0a1": {
@@ -936,6 +982,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -983,6 +1030,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "1.0.0a1": {
@@ -990,6 +1038,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1037,6 +1086,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "0.2.0": {
@@ -1044,6 +1094,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "0.3.0": {
@@ -1051,6 +1102,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1101,6 +1153,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "0.2.0a1": {
@@ -1108,6 +1161,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "0.3.0a1": {
@@ -1115,6 +1169,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1165,6 +1220,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "0.2.0a1": {
@@ -1172,6 +1228,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "0.3.0": {
@@ -1179,6 +1236,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "1.0.0a1": {
@@ -1186,6 +1244,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1238,6 +1297,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "1.0.0b1": {
@@ -1245,6 +1305,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "1.0.0rc1": {
@@ -1252,6 +1313,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1302,6 +1364,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "1.0.0a2": {
@@ -1309,6 +1372,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "1.0.0a3": {
@@ -1316,6 +1380,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1368,6 +1433,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1379,6 +1445,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1432,6 +1499,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1443,6 +1511,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "1.0.0a1": {
@@ -1450,6 +1519,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1501,6 +1571,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1512,6 +1583,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "1.0.0a1": {
@@ -1519,6 +1591,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1576,6 +1649,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1589,6 +1663,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1600,6 +1675,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b1": {
@@ -1607,6 +1683,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1665,6 +1742,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1678,6 +1756,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1689,6 +1768,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b1": {
@@ -1696,6 +1776,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1762,6 +1843,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1775,6 +1857,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1786,6 +1869,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a1": {
@@ -1793,6 +1877,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a2": {
@@ -1800,6 +1885,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a3": {
@@ -1807,6 +1893,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a4": {
@@ -1814,6 +1901,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a5": {
@@ -1821,6 +1909,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a6": {
@@ -1828,6 +1917,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a7": {
@@ -1835,6 +1925,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a8": {
@@ -1842,6 +1933,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a9": {
@@ -1849,6 +1941,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b1": {
@@ -1856,6 +1949,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b2": {
@@ -1863,6 +1957,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b3": {
@@ -1870,6 +1965,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b4": {
@@ -1877,6 +1973,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b5": {
@@ -1884,6 +1981,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b6": {
@@ -1891,6 +1989,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b7": {
@@ -1898,6 +1997,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b8": {
@@ -1905,6 +2005,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b9": {
@@ -1912,6 +2013,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -1995,6 +2097,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -2008,6 +2111,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -2019,6 +2123,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a1": {
@@ -2026,6 +2131,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a2": {
@@ -2033,6 +2139,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a3": {
@@ -2040,6 +2147,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a4": {
@@ -2047,6 +2155,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a5": {
@@ -2054,6 +2163,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a6": {
@@ -2061,6 +2171,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a7": {
@@ -2068,6 +2179,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a8": {
@@ -2075,6 +2187,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0a9": {
@@ -2082,6 +2195,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b1": {
@@ -2089,6 +2203,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b2": {
@@ -2096,6 +2211,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b3": {
@@ -2103,6 +2219,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b4": {
@@ -2110,6 +2227,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b5": {
@@ -2117,6 +2235,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b6": {
@@ -2124,6 +2243,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b7": {
@@ -2131,6 +2251,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b8": {
@@ -2138,6 +2259,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0b9": {
@@ -2145,6 +2267,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -2248,6 +2371,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -2292,6 +2416,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "1.0.0": {
@@ -2299,6 +2424,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -2344,6 +2470,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.0.0": {
@@ -2351,6 +2478,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "4.0.0": {
@@ -2358,6 +2486,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -2406,6 +2535,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -2452,6 +2582,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0": {
@@ -2459,6 +2590,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -2509,6 +2641,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -2520,6 +2653,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0": {
@@ -2527,6 +2661,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -2581,6 +2716,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -2594,6 +2730,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -2605,6 +2742,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0": {
@@ -2612,6 +2750,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -2668,6 +2807,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -2713,6 +2853,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -2758,6 +2899,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -2803,6 +2945,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.1.0": {
@@ -2810,6 +2953,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.2.0": {
@@ -2817,6 +2961,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.3.0": {
@@ -2824,6 +2969,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.4.0": {
@@ -2831,6 +2977,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.5.0": {
@@ -2838,6 +2985,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.0.0": {
@@ -2845,6 +2993,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.1.0": {
@@ -2852,6 +3001,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.2.0": {
@@ -2859,6 +3009,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.3.0": {
@@ -2866,6 +3017,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.4.0": {
@@ -2873,6 +3025,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.5.0": {
@@ -2880,6 +3033,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -2947,6 +3101,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0": {
@@ -2954,6 +3109,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.0.0": {
@@ -2961,6 +3117,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "4.0.0": {
@@ -2968,6 +3125,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -3023,6 +3181,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0": {
@@ -3030,6 +3189,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.0.0": {
@@ -3037,6 +3197,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "4.0.0": {
@@ -3044,6 +3205,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -3085,6 +3247,54 @@
               "    \u2514\u2500\u2500 a-4.0.0",
               "        \u2514\u2500\u2500 requires python>=3.12 (incompatible with environment)"
             ]
+          },
+          {
+            "name": "specific-tag-and-default",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [
+                      "cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64",
+                      "py3-none-any"
+                    ],
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a"
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": {},
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "This is a scenario where a wheel for a specific platform is available alongside the default.",
+            "source": "[PWD]/scenarios/wheel-tags.json",
+            "prefix": "specific-tag-and-default-74e4a459",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0"
+            ]
           }
         ]
       }
@@ -3121,6 +3331,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }
@@ -3132,6 +3343,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "2.0.0": {
@@ -3139,6 +3351,7 @@
                     "requires": [],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   },
                   "3.0.0": {
@@ -3148,6 +3361,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "wheel_tags": [],
                     "description": ""
                   }
                 }

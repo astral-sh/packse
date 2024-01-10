@@ -4036,6 +4036,74 @@
     ''',
   })
 # ---
+# name: test_build_all_scenarios[wheel-tags]
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'build/specific-tag-and-default-74e4a459/specific-tag-and-default-74e4a459-0.0.0/pyproject.toml': 'md5:8cc5ec783954da433670d1ead9155d00',
+      'build/specific-tag-and-default-74e4a459/specific-tag-and-default-74e4a459-0.0.0/src/specific_tag_and_default_74e4a459/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/specific-tag-and-default-74e4a459/specific-tag-and-default-74e4a459-a-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/specific_tag_and_default_74e4a459_a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/specific_tag_and_default_74e4a459_a"]
+        
+        [project]
+        name = "specific-tag-and-default-74e4a459-a"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+  
+      ''',
+      'build/specific-tag-and-default-74e4a459/specific-tag-and-default-74e4a459-a-1.0.0/src/specific_tag_and_default_74e4a459_a/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'dist/specific-tag-and-default-74e4a459/specific_tag_and_default_74e4a459-0.0.0.tar.gz': 'md5:b358f4538eb34680b89faed06cc56aa8',
+      'dist/specific-tag-and-default-74e4a459/specific_tag_and_default_74e4a459_a-1.0.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl': 'md5:276ed7fcd3e7c6d265b6ec2d34d89fb7',
+      'dist/specific-tag-and-default-74e4a459/specific_tag_and_default_74e4a459_a-1.0.0-py3-none-any.whl': 'md5:276ed7fcd3e7c6d265b6ec2d34d89fb7',
+      'dist/specific-tag-and-default-74e4a459/specific_tag_and_default_74e4a459_a-1.0.0.tar.gz': 'md5:3e6b336e680455c5b6acfac7f5eb13d9',
+      'tree': '''
+        test_build_all_scenarios_wheel0
+        ├── build
+        │   └── specific-tag-and-default-74e4a459
+        │       ├── specific-tag-and-default-74e4a459-0.0.0
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── specific_tag_and_default_74e4a459
+        │       │           └── __init__.py
+        │       └── specific-tag-and-default-74e4a459-a-1.0.0
+        │           ├── pyproject.toml
+        │           └── src
+        │               └── specific_tag_and_default_74e4a459_a
+        │                   └── __init__.py
+        └── dist
+            └── specific-tag-and-default-74e4a459
+                ├── specific_tag_and_default_74e4a459-0.0.0.tar.gz
+                ├── specific_tag_and_default_74e4a459_a-1.0.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+                ├── specific_tag_and_default_74e4a459_a-1.0.0-py3-none-any.whl
+                └── specific_tag_and_default_74e4a459_a-1.0.0.tar.gz
+        
+        10 directories, 8 files
+  
+      ''',
+    }),
+    'stderr': '<not included>',
+    'stdout': '''
+      specific-tag-and-default-74e4a459
+  
+    ''',
+  })
+# ---
 # name: test_view_all_scenarios[excluded]
   dict({
     'exit_code': 0,
@@ -4718,6 +4786,32 @@
           │   └── requires python>=3.11 (incompatible with environment)
           └── a-4.0.0
               └── requires python>=3.12 (incompatible with environment)
+      
+  
+    ''',
+  })
+# ---
+# name: test_view_all_scenarios[wheel-tags]
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'tree': '''
+        test_view_all_scenarios_wheel_0
+        
+        0 directories
+  
+      ''',
+    }),
+    'stderr': '',
+    'stdout': '''
+      specific-tag-and-default-74e4a459
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a
+      │       └── satisfied by a-1.0.0
+      └── a
+          └── a-1.0.0
       
   
     ''',
