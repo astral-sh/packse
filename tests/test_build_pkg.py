@@ -28,7 +28,6 @@ def test_build_pkg(snapshot):
         snapshot_command(
             ["build-pkg", "foo", "1.0.0"],
             snapshot_filesystem=True,
-            snapshot_stderr=False,
         )
         == snapshot
     )
@@ -40,7 +39,6 @@ def test_build_pkg_no_wheel(snapshot):
         snapshot_command(
             ["build-pkg", "foo", "1.0.0", "--no-wheel"],
             snapshot_filesystem=True,
-            snapshot_stderr=False,
         )
         == snapshot
     )
@@ -52,7 +50,6 @@ def test_build_pkg_no_sdist(snapshot):
         snapshot_command(
             ["build-pkg", "foo", "1.0.0", "--no-sdist"],
             snapshot_filesystem=True,
-            snapshot_stderr=False,
         )
         == snapshot
     )
@@ -64,7 +61,6 @@ def test_build_pkg_wheel_tags(snapshot):
         snapshot_command(
             ["build-pkg", "foo", "1.0.0", "-t", "tag1", "--wheel-tag", "tag2"],
             snapshot_filesystem=True,
-            snapshot_stderr=False,
         )
         == snapshot
     )

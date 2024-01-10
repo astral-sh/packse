@@ -328,9 +328,10 @@ def build_package(
     )
 
     logger.info(
-        "Generated project for '%s-%s'",
+        "Generated project for '%s-%s'in %.2fms",
         package_name,
         version,
+        (time.time() - start_time) * 1000.0,
     )
 
     for dist in build_package_distributions(

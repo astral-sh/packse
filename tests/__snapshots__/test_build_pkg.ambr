@@ -46,7 +46,14 @@
   
       ''',
     }),
-    'stderr': '<not included>',
+    'stderr': '''
+      Generated project for 'foo-1.0.0'in [TIME]
+      Built package 'foo-1.0.0' in [TIME]
+      Linked distribution to dist/foo/foo-1.0.0-py3-none-any.whl
+      Linked distribution to dist/foo/foo-1.0.0.tar.gz
+      Done in [TIME]
+  
+    ''',
     'stdout': '',
   })
 # ---
@@ -54,7 +61,7 @@
   dict({
     'exit_code': 1,
     'stderr': '''
-      Generated project for 'foo-bar'
+      Generated project for 'foo-bar'in [TIME]
       Building foo-bar with hatch failed:
           [sdist]
           Traceback (most recent call last):
@@ -140,7 +147,13 @@
   
       ''',
     }),
-    'stderr': '<not included>',
+    'stderr': '''
+      Generated project for 'foo-1.0.0'in [TIME]
+      Built package 'foo-1.0.0' in [TIME]
+      Linked distribution to dist/foo/foo-1.0.0-py3-none-any.whl
+      Done in [TIME]
+  
+    ''',
     'stdout': '',
   })
 # ---
@@ -202,7 +215,13 @@
   
       ''',
     }),
-    'stderr': '<not included>',
+    'stderr': '''
+      Generated project for 'foo-1.0.0'in [TIME]
+      Built package 'foo-1.0.0' in [TIME]
+      Linked distribution to dist/foo/foo-1.0.0.tar.gz
+      Done in [TIME]
+  
+    ''',
     'stdout': '',
   })
 # ---
@@ -255,7 +274,15 @@
   
       ''',
     }),
-    'stderr': '<not included>',
+    'stderr': '''
+      Generated project for 'foo-1.0.0'in [TIME]
+      Built package 'foo-1.0.0' in [TIME]
+      Linked distribution to dist/foo/foo-1.0.0-tag1.whl
+      Linked distribution to dist/foo/foo-1.0.0-tag2.whl
+      Linked distribution to dist/foo/foo-1.0.0.tar.gz
+      Done in [TIME]
+  
+    ''',
     'stdout': '',
   })
 # ---
