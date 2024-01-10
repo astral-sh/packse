@@ -215,9 +215,9 @@ def scenario_version(scenario: Scenario) -> str:
     return hasher.hexdigest()[:8]
 
 
-def scenario_prefix(scenario: Scenario) -> str:
+def scenario_prefix(scenario: Scenario, short: bool) -> str:
     """
     Generate a prefix for a scenario.
     """
     version = scenario_version(scenario)
-    return f"{scenario.name}-{version}"
+    return version if short else f"{scenario.name}-{version}"

@@ -57,6 +57,33 @@
     ''',
   })
 # ---
+# name: test_view_example_short_names
+  dict({
+    'exit_code': 0,
+    'stderr': '',
+    'stdout': '''
+      97db95eb
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a
+      │       └── satisfied by a-1.0.0
+      ├── a
+      │   └── a-1.0.0
+      │       └── requires b>1.0.0
+      │           ├── satisfied by b-2.0.0
+      │           └── satisfied by b-3.0.0
+      └── b
+          ├── b-1.0.0
+          ├── b-2.0.0
+          └── b-3.0.0
+              └── requires c
+                  └── unsatisfied: no versions for package
+      
+  
+    ''',
+  })
+# ---
 # name: test_view_invalid_target
   dict({
     'exit_code': 1,
@@ -71,7 +98,8 @@
   dict({
     'exit_code': 2,
     'stderr': '''
-      usage: packse view [-h] [--name NAME] [-v] [-q] targets [targets ...]
+      usage: packse view [-h] [--name NAME] [--short-names] [-v] [-q]
+                         targets [targets ...]
       packse view: error: the following arguments are required: targets
   
     ''',

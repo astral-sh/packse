@@ -29,7 +29,7 @@ from packse.template import TemplateConfig, create_from_template, load_template_
 logger = logging.getLogger(__name__)
 
 
-def build(targets: list[Path], rm_destination: bool):
+def build(targets: list[Path], rm_destination: bool, short_names: bool):
     # Validate and collect all targets first
     scenarios = []
 
@@ -46,7 +46,7 @@ def build(targets: list[Path], rm_destination: bool):
     # Then build each one
     with ThreadPoolExecutor(thread_name_prefix="packse-scenario-") as executor:
         futures = [
-            executor.submit(build_scenario, scenario, rm_destination)
+            executor.submit(build_scenario, scenario, rm_destination, short_names)
             for scenario in scenarios
         ]
 
@@ -57,13 +57,13 @@ def build(targets: list[Path], rm_destination: bool):
         print(result)
 
 
-def build_scenario(scenario: Scenario, rm_destination: bool) -> str:
+def build_scenario(scenario: Scenario, rm_destination: bool, short_names: bool) -> str:
     """
     Build the scenario defined at the given path.
 
     Returns the scenario's entrypoint package name.
     """
-    prefix = scenario_prefix(scenario)
+    prefix = scenario_prefix(scenario, short_names)
 
     work_dir = Path.cwd()
     build_destination = work_dir / "build" / prefix

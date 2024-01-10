@@ -17,7 +17,7 @@ from packse.scenario import (
 logger = logging.getLogger(__name__)
 
 
-def view(targets: list[Path], name: str | None = None):
+def view(targets: list[Path], name: str | None = None, short_names: bool = False):
     scenarios = []
 
     # Validate and collect all targets first
@@ -37,7 +37,7 @@ def view(targets: list[Path], name: str | None = None):
             name is not None
             # Allow user to provide the name with or without the prefix
             and scenario.name != name
-            and scenario_prefix(scenario) != name
+            and scenario_prefix(scenario, short_names) != name
         ):
             logging.debug("Skipping %s", scenario.name)
             continue
@@ -51,11 +51,11 @@ def view(targets: list[Path], name: str | None = None):
         else:
             logging.debug("Viewing %s", scenario.name)
 
-        view_scenario(scenario)
+        view_scenario(scenario, short_names)
 
 
-def view_scenario(scenario: Scenario):
-    prefix = scenario_prefix(scenario)
+def view_scenario(scenario: Scenario, short_names: bool):
+    prefix = scenario_prefix(scenario, short_names)
 
     print(prefix)
     print(dependency_tree(scenario))

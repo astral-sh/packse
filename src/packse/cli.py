@@ -67,11 +67,11 @@ def entrypoint():
 
 
 def _call_build(args):
-    build(args.targets, rm_destination=args.rm)
+    build(args.targets, rm_destination=args.rm, short_names=args.short_names)
 
 
 def _call_view(args):
-    view(args.targets, args.name)
+    view(args.targets, args.name, short_names=args.short_names)
 
 
 def _call_serve(args):
@@ -127,6 +127,7 @@ def _call_list(args):
         args.no_versions,
         skip_invalid,
         args.no_sources,
+        short_names=args.short_names,
     )
 
 
@@ -144,7 +145,7 @@ def _call_inspect(args):
             else:
                 targets.append(target)
 
-    inspect(targets, skip_invalid)
+    inspect(targets, skip_invalid, short_names=args.short_names)
 
 
 def _root_parser():
@@ -168,6 +169,11 @@ def _add_build_parser(subparsers):
         "--rm",
         action="store_true",
         help="Allow removal of existing build directory",
+    )
+    parser.add_argument(
+        "--short-names",
+        action="store_true",
+        help="Exclude scenario names from generated packages.",
     )
     _add_shared_arguments(parser)
 
@@ -231,7 +237,11 @@ def _add_view_parser(subparsers):
         default=None,
         help="The scenario name to view",
     )
-
+    parser.add_argument(
+        "--short-names",
+        action="store_true",
+        help="Exclude scenario names from generated packages.",
+    )
     _add_shared_arguments(parser)
 
 
@@ -335,6 +345,11 @@ def _add_list_parser(subparsers):
         action="store_true",
         help="Do not show the source file for each scenario.",
     )
+    parser.add_argument(
+        "--short-names",
+        action="store_true",
+        help="Exclude scenario names from generated packages.",
+    )
     _add_shared_arguments(parser)
 
 
@@ -353,6 +368,11 @@ def _add_inspect_parser(subparsers):
         "--skip-invalid",
         action="store_true",
         help="Skip invalid scenario files instead of failing.",
+    )
+    parser.add_argument(
+        "--short-names",
+        action="store_true",
+        help="Exclude scenario names from generated packages.",
     )
     _add_shared_arguments(parser)
 

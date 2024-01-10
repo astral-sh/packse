@@ -29,6 +29,11 @@ def test_view_example(snapshot):
     assert snapshot_command(["view", str(target)]) == snapshot
 
 
+def test_view_example_short_names(snapshot):
+    target = __development_base_path__ / "scenarios" / "example.json"
+    assert snapshot_command(["view", str(target), "--short-names"]) == snapshot
+
+
 def test_view_example_name(snapshot):
     target = __development_base_path__ / "scenarios" / "example.json"
     assert snapshot_command(["view", str(target), "--name", "example"]) == snapshot
