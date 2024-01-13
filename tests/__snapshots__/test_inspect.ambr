@@ -3283,9 +3283,144 @@
               "prereleases": false
             },
             "template": "simple",
-            "description": "This is a scenario where a wheel for a specific platform is available alongside the default.",
-            "source": "[PWD]/scenarios/wheel-tags.json",
+            "description": "A wheel for a specific platform is available alongside the default.",
+            "source": "[PWD]/scenarios/wheels.json",
             "prefix": "specific-tag-and-default-74e4a459",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0"
+            ]
+          },
+          {
+            "name": "only-wheels",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": false,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a"
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": {},
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "No source distributions are available, only wheels.",
+            "source": "[PWD]/scenarios/wheels.json",
+            "prefix": "only-wheels-4f019491",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0"
+            ]
+          },
+          {
+            "name": "no-wheels",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": false,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a"
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": {},
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "No wheels are available, only source distributions.",
+            "source": "[PWD]/scenarios/wheels.json",
+            "prefix": "no-wheels-614d801c",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0"
+            ]
+          },
+          {
+            "name": "no-wheels-with-matching-platform",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a"
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": {},
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "No wheels with valid tags are available, just source distributions.",
+            "source": "[PWD]/scenarios/wheels.json",
+            "prefix": "no-wheels-with-matching-platform-737bbfd4",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
