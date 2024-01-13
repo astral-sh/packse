@@ -36,35 +36,35 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      example-97db95eb
-      excluded-only-version-7a9ed79c
-      excluded-only-compatible-version-d28c9e3c
-      dependency-excludes-range-of-compatible-versions-2023222f
-      dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208
-      requires-package-only-prereleases-a8b21d15
-      requires-package-only-prereleases-in-range-b4df71d2
-      requires-package-only-prereleases-in-range-global-opt-in-51f94da2
-      requires-package-prerelease-and-final-any-eebe53a6
-      requires-package-prerelease-specified-only-final-available-8c3e26d4
-      requires-package-prerelease-specified-only-prerelease-available-b91b9892
-      requires-package-prerelease-specified-mixed-available-48b383b8
-      requires-package-multiple-prereleases-kinds-91b38a0e
-      requires-package-multiple-prereleases-numbers-4cf7acef
-      requires-transitive-package-only-prereleases-6e20b294
-      requires-transitive-package-only-prereleases-in-range-848f2c77
-      requires-transitive-package-only-prereleases-in-range-opt-in-1d2fc5a9
-      requires-transitive-prerelease-and-stable-dependency-31b546ef
-      requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f
-      requires-transitive-prerelease-and-stable-dependency-many-versions-3258056f
-      requires-transitive-prerelease-and-stable-dependency-many-versions-holes-293fcbc7
       requires-package-does-not-exist-57cd4136
       requires-exact-version-does-not-exist-eaa03067
       requires-greater-version-does-not-exist-6e8e01df
       requires-less-version-does-not-exist-e45cec3c
       transitive-requires-package-does-not-exist-aca2796a
-      requires-direct-incompatible-versions-063ec9d3
-      requires-transitive-incompatible-with-root-version-638350f3
-      requires-transitive-incompatible-with-transitive-9b595175
+      example-97db95eb
+      excluded-only-version-7a9ed79c
+      excluded-only-compatible-version-d28c9e3c
+      dependency-excludes-range-of-compatible-versions-2023222f
+      dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208
+      direct-incompatible-versions-80d82ee8
+      transitive-incompatible-with-root-version-a967e815
+      transitive-incompatible-with-transitive-6866d8dc
+      package-only-prereleases-9a1b3dda
+      package-only-prereleases-in-range-19673198
+      requires-package-only-prereleases-in-range-global-opt-in-51f94da2
+      requires-package-prerelease-and-final-any-eebe53a6
+      package-prerelease-specified-only-final-available-9d4725eb
+      package-prerelease-specified-only-prerelease-available-6cc95bc8
+      package-prerelease-specified-mixed-available-c97845e2
+      package-multiple-prereleases-kinds-e290bf29
+      package-multiple-prereleases-numbers-f5948c28
+      transitive-package-only-prereleases-44ebef16
+      transitive-package-only-prereleases-in-range-27759187
+      transitive-package-only-prereleases-in-range-opt-in-26efb6c5
+      transitive-prerelease-and-stable-dependency-c7ad0310
+      transitive-prerelease-and-stable-dependency-opt-in-a05f7cb8
+      transitive-prerelease-and-stable-dependency-many-versions-02ae765c
+      transitive-prerelease-and-stable-dependency-many-versions-holes-ef9ce80f
       requires-python-version-does-not-exist-0825b69c
       requires-python-version-less-than-current-f9296b84
       requires-python-version-greater-than-current-a11d5394
@@ -84,6 +84,12 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
+      scenarios/does-not-exist.json
+          requires-package-does-not-exist-57cd4136
+          requires-exact-version-does-not-exist-eaa03067
+          requires-greater-version-does-not-exist-6e8e01df
+          requires-less-version-does-not-exist-e45cec3c
+          transitive-requires-package-does-not-exist-aca2796a
       scenarios/example.json
           example-97db95eb
       scenarios/excluded.json
@@ -91,33 +97,27 @@
           excluded-only-compatible-version-d28c9e3c
           dependency-excludes-range-of-compatible-versions-2023222f
           dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208
+      scenarios/incompatible-versions.json
+          direct-incompatible-versions-80d82ee8
+          transitive-incompatible-with-root-version-a967e815
+          transitive-incompatible-with-transitive-6866d8dc
       scenarios/prereleases.json
-          requires-package-only-prereleases-a8b21d15
-          requires-package-only-prereleases-in-range-b4df71d2
+          package-only-prereleases-9a1b3dda
+          package-only-prereleases-in-range-19673198
           requires-package-only-prereleases-in-range-global-opt-in-51f94da2
           requires-package-prerelease-and-final-any-eebe53a6
-          requires-package-prerelease-specified-only-final-available-8c3e26d4
-          requires-package-prerelease-specified-only-prerelease-available-b91b9892
-          requires-package-prerelease-specified-mixed-available-48b383b8
-          requires-package-multiple-prereleases-kinds-91b38a0e
-          requires-package-multiple-prereleases-numbers-4cf7acef
-          requires-transitive-package-only-prereleases-6e20b294
-          requires-transitive-package-only-prereleases-in-range-848f2c77
-          requires-transitive-package-only-prereleases-in-range-opt-in-1d2fc5a9
-          requires-transitive-prerelease-and-stable-dependency-31b546ef
-          requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f
-          requires-transitive-prerelease-and-stable-dependency-many-versions-3258056f
-          requires-transitive-prerelease-and-stable-dependency-many-versions-holes-293fcbc7
-      scenarios/requires-does-not-exist.json
-          requires-package-does-not-exist-57cd4136
-          requires-exact-version-does-not-exist-eaa03067
-          requires-greater-version-does-not-exist-6e8e01df
-          requires-less-version-does-not-exist-e45cec3c
-          transitive-requires-package-does-not-exist-aca2796a
-      scenarios/requires-incompatible-versions.json
-          requires-direct-incompatible-versions-063ec9d3
-          requires-transitive-incompatible-with-root-version-638350f3
-          requires-transitive-incompatible-with-transitive-9b595175
+          package-prerelease-specified-only-final-available-9d4725eb
+          package-prerelease-specified-only-prerelease-available-6cc95bc8
+          package-prerelease-specified-mixed-available-c97845e2
+          package-multiple-prereleases-kinds-e290bf29
+          package-multiple-prereleases-numbers-f5948c28
+          transitive-package-only-prereleases-44ebef16
+          transitive-package-only-prereleases-in-range-27759187
+          transitive-package-only-prereleases-in-range-opt-in-26efb6c5
+          transitive-prerelease-and-stable-dependency-c7ad0310
+          transitive-prerelease-and-stable-dependency-opt-in-a05f7cb8
+          transitive-prerelease-and-stable-dependency-many-versions-02ae765c
+          transitive-prerelease-and-stable-dependency-many-versions-holes-ef9ce80f
       scenarios/requires-python.json
           requires-python-version-does-not-exist-0825b69c
           requires-python-version-less-than-current-f9296b84
@@ -139,6 +139,12 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
+      scenarios/does-not-exist.json
+          requires-package-does-not-exist
+          requires-exact-version-does-not-exist
+          requires-greater-version-does-not-exist
+          requires-less-version-does-not-exist
+          transitive-requires-package-does-not-exist
       scenarios/example.json
           example
       scenarios/excluded.json
@@ -146,33 +152,27 @@
           excluded-only-compatible-version
           dependency-excludes-range-of-compatible-versions
           dependency-excludes-non-contiguous-range-of-compatible-versions
+      scenarios/incompatible-versions.json
+          direct-incompatible-versions
+          transitive-incompatible-with-root-version
+          transitive-incompatible-with-transitive
       scenarios/prereleases.json
-          requires-package-only-prereleases
-          requires-package-only-prereleases-in-range
+          package-only-prereleases
+          package-only-prereleases-in-range
           requires-package-only-prereleases-in-range-global-opt-in
           requires-package-prerelease-and-final-any
-          requires-package-prerelease-specified-only-final-available
-          requires-package-prerelease-specified-only-prerelease-available
-          requires-package-prerelease-specified-mixed-available
-          requires-package-multiple-prereleases-kinds
-          requires-package-multiple-prereleases-numbers
-          requires-transitive-package-only-prereleases
-          requires-transitive-package-only-prereleases-in-range
-          requires-transitive-package-only-prereleases-in-range-opt-in
-          requires-transitive-prerelease-and-stable-dependency
-          requires-transitive-prerelease-and-stable-dependency-opt-in
-          requires-transitive-prerelease-and-stable-dependency-many-versions
-          requires-transitive-prerelease-and-stable-dependency-many-versions-holes
-      scenarios/requires-does-not-exist.json
-          requires-package-does-not-exist
-          requires-exact-version-does-not-exist
-          requires-greater-version-does-not-exist
-          requires-less-version-does-not-exist
-          transitive-requires-package-does-not-exist
-      scenarios/requires-incompatible-versions.json
-          requires-direct-incompatible-versions
-          requires-transitive-incompatible-with-root-version
-          requires-transitive-incompatible-with-transitive
+          package-prerelease-specified-only-final-available
+          package-prerelease-specified-only-prerelease-available
+          package-prerelease-specified-mixed-available
+          package-multiple-prereleases-kinds
+          package-multiple-prereleases-numbers
+          transitive-package-only-prereleases
+          transitive-package-only-prereleases-in-range
+          transitive-package-only-prereleases-in-range-opt-in
+          transitive-prerelease-and-stable-dependency
+          transitive-prerelease-and-stable-dependency-opt-in
+          transitive-prerelease-and-stable-dependency-many-versions
+          transitive-prerelease-and-stable-dependency-many-versions-holes
       scenarios/requires-python.json
           requires-python-version-does-not-exist
           requires-python-version-less-than-current
@@ -204,52 +204,52 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
+      scenarios/does-not-exist.json
+          s57cd4136
+          seaa03067
+          s6e8e01df
+          se45cec3c
+          saca2796a
       scenarios/example.json
-          97db95eb
+          s97db95eb
       scenarios/excluded.json
-          7a9ed79c
-          d28c9e3c
-          2023222f
-          aece4208
+          s7a9ed79c
+          sd28c9e3c
+          s2023222f
+          saece4208
+      scenarios/incompatible-versions.json
+          s80d82ee8
+          sa967e815
+          s6866d8dc
       scenarios/prereleases.json
-          a8b21d15
-          b4df71d2
-          51f94da2
-          eebe53a6
-          8c3e26d4
-          b91b9892
-          48b383b8
-          91b38a0e
-          4cf7acef
-          6e20b294
-          848f2c77
-          1d2fc5a9
-          31b546ef
-          dd00a87f
-          3258056f
-          293fcbc7
-      scenarios/requires-does-not-exist.json
-          57cd4136
-          eaa03067
-          6e8e01df
-          e45cec3c
-          aca2796a
-      scenarios/requires-incompatible-versions.json
-          063ec9d3
-          638350f3
-          9b595175
+          s9a1b3dda
+          s19673198
+          s51f94da2
+          seebe53a6
+          s9d4725eb
+          s6cc95bc8
+          sc97845e2
+          se290bf29
+          sf5948c28
+          s44ebef16
+          s27759187
+          s26efb6c5
+          sc7ad0310
+          sa05f7cb8
+          s02ae765c
+          sef9ce80f
       scenarios/requires-python.json
-          0825b69c
-          f9296b84
-          a11d5394
-          02dc550c
-          ef060cef
-          1bde0c18
+          s0825b69c
+          sf9296b84
+          sa11d5394
+          s02dc550c
+          sef060cef
+          s1bde0c18
       scenarios/wheels.json
-          74e4a459
-          4f019491
-          614d801c
-          737bbfd4
+          s74e4a459
+          s4f019491
+          s614d801c
+          s737bbfd4
   
     ''',
   })

@@ -1,6 +1,6 @@
 [
     {
-        "name": "requires-direct-incompatible-versions",
+        "name": "direct-incompatible-versions",
         "description": "The user requires two incompatible, existing versions of package `a`",
         "root": {
             "requires": [
@@ -21,7 +21,7 @@
         }
     },
     {
-        "name": "requires-transitive-incompatible-with-root-version",
+        "name": "transitive-incompatible-with-root-version",
         "description": "The user requires packages `a` and `b` but `a` requires a different version of `b`",
         "root": {
             "requires": [
@@ -51,7 +51,7 @@
         }
     },
     {
-        "name": "requires-transitive-incompatible-with-transitive",
+        "name": "transitive-incompatible-with-transitive",
         "description": "The user requires package `a` and `b`; `a` and `b` require different versions of `c`",
         "root": {
             "requires": [

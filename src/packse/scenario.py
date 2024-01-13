@@ -224,4 +224,6 @@ def scenario_prefix(scenario: Scenario, short: bool) -> str:
     Generate a prefix for a scenario.
     """
     version = scenario_version(scenario)
-    return version if short else f"{scenario.name}-{version}"
+    # Short name are always prefixed with "s" to ensure that the scenario
+    # has an importable Python module (first character cannot be numeric)
+    return f"s{version}" if short else f"{scenario.name}-{version}"
