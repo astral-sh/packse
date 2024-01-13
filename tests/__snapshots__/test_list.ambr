@@ -205,51 +205,51 @@
     'stderr': '',
     'stdout': '''
       scenarios/does-not-exist.json
-          57cd4136
-          eaa03067
-          6e8e01df
-          e45cec3c
-          aca2796a
+          s57cd4136
+          seaa03067
+          s6e8e01df
+          se45cec3c
+          saca2796a
       scenarios/example.json
-          97db95eb
+          s97db95eb
       scenarios/excluded.json
-          7a9ed79c
-          d28c9e3c
-          2023222f
-          aece4208
+          s7a9ed79c
+          sd28c9e3c
+          s2023222f
+          saece4208
       scenarios/incompatible-versions.json
-          80d82ee8
-          a967e815
-          6866d8dc
+          s80d82ee8
+          sa967e815
+          s6866d8dc
       scenarios/prereleases.json
-          9a1b3dda
-          19673198
-          51f94da2
-          eebe53a6
-          9d4725eb
-          6cc95bc8
-          c97845e2
-          e290bf29
-          f5948c28
-          44ebef16
-          27759187
-          26efb6c5
-          c7ad0310
-          a05f7cb8
-          02ae765c
-          ef9ce80f
+          s9a1b3dda
+          s19673198
+          s51f94da2
+          seebe53a6
+          s9d4725eb
+          s6cc95bc8
+          sc97845e2
+          se290bf29
+          sf5948c28
+          s44ebef16
+          s27759187
+          s26efb6c5
+          sc7ad0310
+          sa05f7cb8
+          s02ae765c
+          sef9ce80f
       scenarios/requires-python.json
-          0825b69c
-          f9296b84
-          a11d5394
-          02dc550c
-          ef060cef
-          1bde0c18
+          s0825b69c
+          sf9296b84
+          sa11d5394
+          s02dc550c
+          sef060cef
+          s1bde0c18
       scenarios/wheels.json
-          74e4a459
-          4f019491
-          614d801c
-          737bbfd4
+          s74e4a459
+          s4f019491
+          s614d801c
+          s737bbfd4
   
     ''',
   })

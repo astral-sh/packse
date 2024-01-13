@@ -62,7 +62,7 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      97db95eb
+      s97db95eb
       ├── environment
       │   └── python3.7
       ├── root
