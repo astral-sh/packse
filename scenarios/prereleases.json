@@ -1,6 +1,6 @@
 [
     {
-        "name": "requires-package-only-prereleases",
+        "name": "package-only-prereleases",
         "description": "The user requires any version of package `a` which only has prerelease versions available.",
         "root": {
             "requires": [
@@ -23,7 +23,7 @@
         }
     },
     {
-        "name": "requires-package-only-prereleases-in-range",
+        "name": "package-only-prereleases-in-range",
         "description": "The user requires a version of package `a` which only matches prerelease versions but they did not include a prerelease specifier.",
         "root": {
             "requires": [
@@ -94,7 +94,7 @@
         }
     },
     {
-        "name": "requires-package-prerelease-specified-only-final-available",
+        "name": "package-prerelease-specified-only-final-available",
         "description": "The user requires a version of `a` with a prerelease specifier and only stable releases are available.",
         "root": {
             "requires": [
@@ -119,7 +119,7 @@
         }
     },
     {
-        "name": "requires-package-prerelease-specified-only-prerelease-available",
+        "name": "package-prerelease-specified-only-prerelease-available",
         "description": "The user requires a version of `a` with a prerelease specifier and only prerelease releases are available.",
         "root": {
             "requires": [
@@ -144,7 +144,7 @@
         }
     },
     {
-        "name": "requires-package-prerelease-specified-mixed-available",
+        "name": "package-prerelease-specified-mixed-available",
         "description": "The user requires a version of `a` with a prerelease specifier and both prerelease and stable releases are available.",
         "root": {
             "requires": [
@@ -170,7 +170,7 @@
         }
     },
     {
-        "name": "requires-package-multiple-prereleases-kinds",
+        "name": "package-multiple-prereleases-kinds",
         "description": "The user requires `a` which has multiple prereleases available with different labels.",
         "root": {
             "requires": [
@@ -195,7 +195,7 @@
         }
     },
     {
-        "name": "requires-package-multiple-prereleases-numbers",
+        "name": "package-multiple-prereleases-numbers",
         "description": "The user requires `a` which has multiple alphas available.",
         "root": {
             "requires": [
@@ -220,7 +220,7 @@
         }
     },
     {
-        "name": "requires-transitive-package-only-prereleases",
+        "name": "transitive-package-only-prereleases",
         "description": "The user requires any version of package `a` which requires `b` which only has prerelease versions available.",
         "root": {
             "requires": [
@@ -253,7 +253,7 @@
         }
     },
     {
-        "name": "requires-transitive-package-only-prereleases-in-range",
+        "name": "transitive-package-only-prereleases-in-range",
         "description": "The user requires package `a` which has a dependency on a package which only matches prerelease versions but they did not include a prerelease specifier.",
         "root": {
             "requires": [
@@ -283,7 +283,7 @@
         }
     },
     {
-        "name": "requires-transitive-package-only-prereleases-in-range-opt-in",
+        "name": "transitive-package-only-prereleases-in-range-opt-in",
         "description": "The user requires package `a` which has a dependency on a package which only matches prerelease versions; the user has opted into allowing prereleases in `b` explicitly.",
         "root": {
             "requires": [
@@ -318,7 +318,7 @@
         }
     },
     {
-        "name": "requires-transitive-prerelease-and-stable-dependency",
+        "name": "transitive-prerelease-and-stable-dependency",
         "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease",
         "root": {
             "requires": [
@@ -358,7 +358,7 @@
         }
     },
     {
-        "name": "requires-transitive-prerelease-and-stable-dependency-opt-in",
+        "name": "transitive-prerelease-and-stable-dependency-opt-in",
         "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. The user includes an opt-in to prereleases of the transitive dependency.",
         "root": {
             "requires": [
@@ -404,7 +404,7 @@
         }
     },
     {
-        "name": "requires-transitive-prerelease-and-stable-dependency-many-versions",
+        "name": "transitive-prerelease-and-stable-dependency-many-versions",
         "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. There are many prerelease versions.",
         "root": {
             "requires": [
@@ -461,7 +461,7 @@
         }
     },
     {
-        "name": "requires-transitive-prerelease-and-stable-dependency-many-versions-holes",
+        "name": "transitive-prerelease-and-stable-dependency-many-versions-holes",
         "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. There are many prerelease versions and some are excluded.",
         "root": {
             "requires": [

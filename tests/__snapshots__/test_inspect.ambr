@@ -221,6 +221,247 @@
       {
         "scenarios": [
           {
+            "name": "requires-package-does-not-exist",
+            "packages": {},
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a"
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "The user requires any version of package `a` which does not exist.",
+            "source": "[PWD]/scenarios/does-not-exist.json",
+            "prefix": "requires-package-does-not-exist-57cd4136",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u2514\u2500\u2500 root",
+              "    \u2514\u2500\u2500 requires a",
+              "        \u2514\u2500\u2500 unsatisfied: no versions for package"
+            ]
+          },
+          {
+            "name": "requires-exact-version-does-not-exist",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a==2.0.0"
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "The user requires an exact version of package `a` but only other versions exist",
+            "source": "[PWD]/scenarios/does-not-exist.json",
+            "prefix": "requires-exact-version-does-not-exist-eaa03067",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a==2.0.0",
+              "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0"
+            ]
+          },
+          {
+            "name": "requires-greater-version-does-not-exist",
+            "packages": {
+              "a": {
+                "versions": {
+                  "0.1.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  },
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a>1.0.0"
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "The user requires a version of `a` greater than `1.0.0` but only smaller or equal versions exist",
+            "source": "[PWD]/scenarios/does-not-exist.json",
+            "prefix": "requires-greater-version-does-not-exist-6e8e01df",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a>1.0.0",
+              "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-0.1.0",
+              "    \u2514\u2500\u2500 a-1.0.0"
+            ]
+          },
+          {
+            "name": "requires-less-version-does-not-exist",
+            "packages": {
+              "a": {
+                "versions": {
+                  "2.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  },
+                  "3.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  },
+                  "4.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a<2.0.0"
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "The user requires a version of `a` less than `1.0.0` but only larger versions exist",
+            "source": "[PWD]/scenarios/does-not-exist.json",
+            "prefix": "requires-less-version-does-not-exist-e45cec3c",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a<2.0.0",
+              "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-2.0.0",
+              "    \u251c\u2500\u2500 a-3.0.0",
+              "    \u2514\u2500\u2500 a-4.0.0"
+            ]
+          },
+          {
+            "name": "transitive-requires-package-does-not-exist",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "b"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a"
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "The user requires package `a` but `a` requires package `b` which does not exist",
+            "source": "[PWD]/scenarios/does-not-exist.json",
+            "prefix": "transitive-requires-package-does-not-exist-aca2796a",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0",
+              "        \u2514\u2500\u2500 requires b",
+              "            \u2514\u2500\u2500 unsatisfied: no versions for package"
+            ]
+          },
+          {
             "name": "example",
             "packages": {
               "a": {
@@ -864,7 +1105,232 @@
             ]
           },
           {
-            "name": "requires-package-only-prereleases",
+            "name": "direct-incompatible-versions",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  },
+                  "2.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a==1.0.0",
+                "a==2.0.0"
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "The user requires two incompatible, existing versions of package `a`",
+            "source": "[PWD]/scenarios/incompatible-versions.json",
+            "prefix": "direct-incompatible-versions-80d82ee8",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u251c\u2500\u2500 requires a==1.0.0",
+              "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2502   \u2514\u2500\u2500 requires a==2.0.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-2.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-1.0.0",
+              "    \u2514\u2500\u2500 a-2.0.0"
+            ]
+          },
+          {
+            "name": "transitive-incompatible-with-root-version",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "b==2.0.0"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              },
+              "b": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  },
+                  "2.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a",
+                "b==1.0.0"
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "The user requires packages `a` and `b` but `a` requires a different version of `b`",
+            "source": "[PWD]/scenarios/incompatible-versions.json",
+            "prefix": "transitive-incompatible-with-root-version-a967e815",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u251c\u2500\u2500 requires a",
+              "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2502   \u2514\u2500\u2500 requires b==1.0.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u2514\u2500\u2500 a-1.0.0",
+              "\u2502       \u2514\u2500\u2500 requires b==2.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by b-2.0.0",
+              "\u2514\u2500\u2500 b",
+              "    \u251c\u2500\u2500 b-1.0.0",
+              "    \u2514\u2500\u2500 b-2.0.0"
+            ]
+          },
+          {
+            "name": "transitive-incompatible-with-transitive",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "c==1.0.0"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              },
+              "b": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [
+                      "c==2.0.0"
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              },
+              "c": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  },
+                  "2.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a",
+                "b"
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "The user requires package `a` and `b`; `a` and `b` require different versions of `c`",
+            "source": "[PWD]/scenarios/incompatible-versions.json",
+            "prefix": "transitive-incompatible-with-transitive-6866d8dc",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u251c\u2500\u2500 requires a",
+              "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2502   \u2514\u2500\u2500 requires b",
+              "\u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u2514\u2500\u2500 a-1.0.0",
+              "\u2502       \u2514\u2500\u2500 requires c==1.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by c-1.0.0",
+              "\u251c\u2500\u2500 b",
+              "\u2502   \u2514\u2500\u2500 b-1.0.0",
+              "\u2502       \u2514\u2500\u2500 requires c==2.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by c-2.0.0",
+              "\u2514\u2500\u2500 c",
+              "    \u251c\u2500\u2500 c-1.0.0",
+              "    \u2514\u2500\u2500 c-2.0.0"
+            ]
+          },
+          {
+            "name": "package-only-prereleases",
             "packages": {
               "a": {
                 "versions": {
@@ -899,7 +1365,7 @@
             "template": "simple",
             "description": "The user requires any version of package `a` which only has prerelease versions available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-only-prereleases-a8b21d15",
+            "prefix": "package-only-prereleases-9a1b3dda",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -911,7 +1377,7 @@
             ]
           },
           {
-            "name": "requires-package-only-prereleases-in-range",
+            "name": "package-only-prereleases-in-range",
             "packages": {
               "a": {
                 "versions": {
@@ -952,7 +1418,7 @@
             "template": "simple",
             "description": "The user requires a version of package `a` which only matches prerelease versions but they did not include a prerelease specifier.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-only-prereleases-in-range-b4df71d2",
+            "prefix": "package-only-prereleases-in-range-19673198",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1077,7 +1543,7 @@
             ]
           },
           {
-            "name": "requires-package-prerelease-specified-only-final-available",
+            "name": "package-prerelease-specified-only-final-available",
             "packages": {
               "a": {
                 "versions": {
@@ -1128,7 +1594,7 @@
             "template": "simple",
             "description": "The user requires a version of `a` with a prerelease specifier and only stable releases are available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-prerelease-specified-only-final-available-8c3e26d4",
+            "prefix": "package-prerelease-specified-only-final-available-9d4725eb",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1144,7 +1610,7 @@
             ]
           },
           {
-            "name": "requires-package-prerelease-specified-only-prerelease-available",
+            "name": "package-prerelease-specified-only-prerelease-available",
             "packages": {
               "a": {
                 "versions": {
@@ -1195,7 +1661,7 @@
             "template": "simple",
             "description": "The user requires a version of `a` with a prerelease specifier and only prerelease releases are available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-prerelease-specified-only-prerelease-available-b91b9892",
+            "prefix": "package-prerelease-specified-only-prerelease-available-6cc95bc8",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1211,7 +1677,7 @@
             ]
           },
           {
-            "name": "requires-package-prerelease-specified-mixed-available",
+            "name": "package-prerelease-specified-mixed-available",
             "packages": {
               "a": {
                 "versions": {
@@ -1270,7 +1736,7 @@
             "template": "simple",
             "description": "The user requires a version of `a` with a prerelease specifier and both prerelease and stable releases are available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-prerelease-specified-mixed-available-48b383b8",
+            "prefix": "package-prerelease-specified-mixed-available-c97845e2",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1288,7 +1754,7 @@
             ]
           },
           {
-            "name": "requires-package-multiple-prereleases-kinds",
+            "name": "package-multiple-prereleases-kinds",
             "packages": {
               "a": {
                 "versions": {
@@ -1339,7 +1805,7 @@
             "template": "simple",
             "description": "The user requires `a` which has multiple prereleases available with different labels.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-multiple-prereleases-kinds-91b38a0e",
+            "prefix": "package-multiple-prereleases-kinds-e290bf29",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1355,7 +1821,7 @@
             ]
           },
           {
-            "name": "requires-package-multiple-prereleases-numbers",
+            "name": "package-multiple-prereleases-numbers",
             "packages": {
               "a": {
                 "versions": {
@@ -1406,7 +1872,7 @@
             "template": "simple",
             "description": "The user requires `a` which has multiple alphas available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-package-multiple-prereleases-numbers-4cf7acef",
+            "prefix": "package-multiple-prereleases-numbers-f5948c28",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1422,7 +1888,7 @@
             ]
           },
           {
-            "name": "requires-transitive-package-only-prereleases",
+            "name": "transitive-package-only-prereleases",
             "packages": {
               "a": {
                 "versions": {
@@ -1472,7 +1938,7 @@
             "template": "simple",
             "description": "The user requires any version of package `a` which requires `b` which only has prerelease versions available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-transitive-package-only-prereleases-6e20b294",
+            "prefix": "transitive-package-only-prereleases-44ebef16",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1488,7 +1954,7 @@
             ]
           },
           {
-            "name": "requires-transitive-package-only-prereleases-in-range",
+            "name": "transitive-package-only-prereleases-in-range",
             "packages": {
               "a": {
                 "versions": {
@@ -1543,7 +2009,7 @@
             "template": "simple",
             "description": "The user requires package `a` which has a dependency on a package which only matches prerelease versions but they did not include a prerelease specifier.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-transitive-package-only-prereleases-in-range-848f2c77",
+            "prefix": "transitive-package-only-prereleases-in-range-27759187",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1560,7 +2026,7 @@
             ]
           },
           {
-            "name": "requires-transitive-package-only-prereleases-in-range-opt-in",
+            "name": "transitive-package-only-prereleases-in-range-opt-in",
             "packages": {
               "a": {
                 "versions": {
@@ -1619,7 +2085,7 @@
             "template": "simple",
             "description": "The user requires package `a` which has a dependency on a package which only matches prerelease versions; the user has opted into allowing prereleases in `b` explicitly.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-transitive-package-only-prereleases-in-range-opt-in-1d2fc5a9",
+            "prefix": "transitive-package-only-prereleases-in-range-opt-in-26efb6c5",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1638,7 +2104,7 @@
             ]
           },
           {
-            "name": "requires-transitive-prerelease-and-stable-dependency",
+            "name": "transitive-prerelease-and-stable-dependency",
             "packages": {
               "a": {
                 "versions": {
@@ -1708,7 +2174,7 @@
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-transitive-prerelease-and-stable-dependency-31b546ef",
+            "prefix": "transitive-prerelease-and-stable-dependency-c7ad0310",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1731,7 +2197,7 @@
             ]
           },
           {
-            "name": "requires-transitive-prerelease-and-stable-dependency-opt-in",
+            "name": "transitive-prerelease-and-stable-dependency-opt-in",
             "packages": {
               "a": {
                 "versions": {
@@ -1806,7 +2272,7 @@
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. The user includes an opt-in to prereleases of the transitive dependency.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-transitive-prerelease-and-stable-dependency-opt-in-dd00a87f",
+            "prefix": "transitive-prerelease-and-stable-dependency-opt-in-a05f7cb8",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1832,7 +2298,7 @@
             ]
           },
           {
-            "name": "requires-transitive-prerelease-and-stable-dependency-many-versions",
+            "name": "transitive-prerelease-and-stable-dependency-many-versions",
             "packages": {
               "a": {
                 "versions": {
@@ -2038,7 +2504,7 @@
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. There are many prerelease versions.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-transitive-prerelease-and-stable-dependency-many-versions-3258056f",
+            "prefix": "transitive-prerelease-and-stable-dependency-many-versions-02ae765c",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -2086,7 +2552,7 @@
             ]
           },
           {
-            "name": "requires-transitive-prerelease-and-stable-dependency-many-versions-holes",
+            "name": "transitive-prerelease-and-stable-dependency-many-versions-holes",
             "packages": {
               "a": {
                 "versions": {
@@ -2292,7 +2758,7 @@
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. There are many prerelease versions and some are excluded.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "prefix": "requires-transitive-prerelease-and-stable-dependency-many-versions-holes-293fcbc7",
+            "prefix": "transitive-prerelease-and-stable-dependency-many-versions-holes-ef9ce80f",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -2329,472 +2795,6 @@
               "    \u251c\u2500\u2500 c-2.0.0b7",
               "    \u251c\u2500\u2500 c-2.0.0b8",
               "    \u2514\u2500\u2500 c-2.0.0b9"
-            ]
-          },
-          {
-            "name": "requires-package-does-not-exist",
-            "packages": {},
-            "root": {
-              "requires_python": ">=3.7",
-              "requires": [
-                "a"
-              ]
-            },
-            "expected": {
-              "satisfiable": false,
-              "packages": {},
-              "explanation": null
-            },
-            "environment": {
-              "python": "3.7",
-              "prereleases": false
-            },
-            "template": "simple",
-            "description": "The user requires any version of package `a` which does not exist.",
-            "source": "[PWD]/scenarios/requires-does-not-exist.json",
-            "prefix": "requires-package-does-not-exist-57cd4136",
-            "tree": [
-              "\u251c\u2500\u2500 environment",
-              "\u2502   \u2514\u2500\u2500 python3.7",
-              "\u2514\u2500\u2500 root",
-              "    \u2514\u2500\u2500 requires a",
-              "        \u2514\u2500\u2500 unsatisfied: no versions for package"
-            ]
-          },
-          {
-            "name": "requires-exact-version-does-not-exist",
-            "packages": {
-              "a": {
-                "versions": {
-                  "1.0.0": {
-                    "requires_python": ">=3.7",
-                    "requires": [],
-                    "sdist": true,
-                    "wheel": true,
-                    "wheel_tags": [],
-                    "description": ""
-                  }
-                }
-              }
-            },
-            "root": {
-              "requires_python": ">=3.7",
-              "requires": [
-                "a==2.0.0"
-              ]
-            },
-            "expected": {
-              "satisfiable": false,
-              "packages": {},
-              "explanation": null
-            },
-            "environment": {
-              "python": "3.7",
-              "prereleases": false
-            },
-            "template": "simple",
-            "description": "The user requires an exact version of package `a` but only other versions exist",
-            "source": "[PWD]/scenarios/requires-does-not-exist.json",
-            "prefix": "requires-exact-version-does-not-exist-eaa03067",
-            "tree": [
-              "\u251c\u2500\u2500 environment",
-              "\u2502   \u2514\u2500\u2500 python3.7",
-              "\u251c\u2500\u2500 root",
-              "\u2502   \u2514\u2500\u2500 requires a==2.0.0",
-              "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
-              "\u2514\u2500\u2500 a",
-              "    \u2514\u2500\u2500 a-1.0.0"
-            ]
-          },
-          {
-            "name": "requires-greater-version-does-not-exist",
-            "packages": {
-              "a": {
-                "versions": {
-                  "0.1.0": {
-                    "requires_python": ">=3.7",
-                    "requires": [],
-                    "sdist": true,
-                    "wheel": true,
-                    "wheel_tags": [],
-                    "description": ""
-                  },
-                  "1.0.0": {
-                    "requires_python": ">=3.7",
-                    "requires": [],
-                    "sdist": true,
-                    "wheel": true,
-                    "wheel_tags": [],
-                    "description": ""
-                  }
-                }
-              }
-            },
-            "root": {
-              "requires_python": ">=3.7",
-              "requires": [
-                "a>1.0.0"
-              ]
-            },
-            "expected": {
-              "satisfiable": false,
-              "packages": {},
-              "explanation": null
-            },
-            "environment": {
-              "python": "3.7",
-              "prereleases": false
-            },
-            "template": "simple",
-            "description": "The user requires a version of `a` greater than `1.0.0` but only smaller or equal versions exist",
-            "source": "[PWD]/scenarios/requires-does-not-exist.json",
-            "prefix": "requires-greater-version-does-not-exist-6e8e01df",
-            "tree": [
-              "\u251c\u2500\u2500 environment",
-              "\u2502   \u2514\u2500\u2500 python3.7",
-              "\u251c\u2500\u2500 root",
-              "\u2502   \u2514\u2500\u2500 requires a>1.0.0",
-              "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
-              "\u2514\u2500\u2500 a",
-              "    \u251c\u2500\u2500 a-0.1.0",
-              "    \u2514\u2500\u2500 a-1.0.0"
-            ]
-          },
-          {
-            "name": "requires-less-version-does-not-exist",
-            "packages": {
-              "a": {
-                "versions": {
-                  "2.0.0": {
-                    "requires_python": ">=3.7",
-                    "requires": [],
-                    "sdist": true,
-                    "wheel": true,
-                    "wheel_tags": [],
-                    "description": ""
-                  },
-                  "3.0.0": {
-                    "requires_python": ">=3.7",
-                    "requires": [],
-                    "sdist": true,
-                    "wheel": true,
-                    "wheel_tags": [],
-                    "description": ""
-                  },
-                  "4.0.0": {
-                    "requires_python": ">=3.7",
-                    "requires": [],
-                    "sdist": true,
-                    "wheel": true,
-                    "wheel_tags": [],
-                    "description": ""
-                  }
-                }
-              }
-            },
-            "root": {
-              "requires_python": ">=3.7",
-              "requires": [
-                "a<2.0.0"
-              ]
-            },
-            "expected": {
-              "satisfiable": false,
-              "packages": {},
-              "explanation": null
-            },
-            "environment": {
-              "python": "3.7",
-              "prereleases": false
-            },
-            "template": "simple",
-            "description": "The user requires a version of `a` less than `1.0.0` but only larger versions exist",
-            "source": "[PWD]/scenarios/requires-does-not-exist.json",
-            "prefix": "requires-less-version-does-not-exist-e45cec3c",
-            "tree": [
-              "\u251c\u2500\u2500 environment",
-              "\u2502   \u2514\u2500\u2500 python3.7",
-              "\u251c\u2500\u2500 root",
-              "\u2502   \u2514\u2500\u2500 requires a<2.0.0",
-              "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
-              "\u2514\u2500\u2500 a",
-              "    \u251c\u2500\u2500 a-2.0.0",
-              "    \u251c\u2500\u2500 a-3.0.0",
-              "    \u2514\u2500\u2500 a-4.0.0"
-            ]
-          },
-          {
-            "name": "transitive-requires-package-does-not-exist",
-            "packages": {
-              "a": {
-                "versions": {
-                  "1.0.0": {
-                    "requires_python": ">=3.7",
-                    "requires": [
-                      "b"
-                    ],
-                    "sdist": true,
-                    "wheel": true,
-                    "wheel_tags": [],
-                    "description": ""
-                  }
-                }
-              }
-            },
-            "root": {
-              "requires_python": ">=3.7",
-              "requires": [
-                "a"
-              ]
-            },
-            "expected": {
-              "satisfiable": false,
-              "packages": {},
-              "explanation": null
-            },
-            "environment": {
-              "python": "3.7",
-              "prereleases": false
-            },
-            "template": "simple",
-            "description": "The user requires package `a` but `a` requires package `b` which does not exist",
-            "source": "[PWD]/scenarios/requires-does-not-exist.json",
-            "prefix": "transitive-requires-package-does-not-exist-aca2796a",
-            "tree": [
-              "\u251c\u2500\u2500 environment",
-              "\u2502   \u2514\u2500\u2500 python3.7",
-              "\u251c\u2500\u2500 root",
-              "\u2502   \u2514\u2500\u2500 requires a",
-              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
-              "\u2514\u2500\u2500 a",
-              "    \u2514\u2500\u2500 a-1.0.0",
-              "        \u2514\u2500\u2500 requires b",
-              "            \u2514\u2500\u2500 unsatisfied: no versions for package"
-            ]
-          },
-          {
-            "name": "requires-direct-incompatible-versions",
-            "packages": {
-              "a": {
-                "versions": {
-                  "1.0.0": {
-                    "requires_python": ">=3.7",
-                    "requires": [],
-                    "sdist": true,
-                    "wheel": true,
-                    "wheel_tags": [],
-                    "description": ""
-                  },
-                  "2.0.0": {
-                    "requires_python": ">=3.7",
-                    "requires": [],
-                    "sdist": true,
-                    "wheel": true,
-                    "wheel_tags": [],
-                    "description": ""
-                  }
-                }
-              }
-            },
-            "root": {
-              "requires_python": ">=3.7",
-              "requires": [
-                "a==1.0.0",
-                "a==2.0.0"
-              ]
-            },
-            "expected": {
-              "satisfiable": false,
-              "packages": {},
-              "explanation": null
-            },
-            "environment": {
-              "python": "3.7",
-              "prereleases": false
-            },
-            "template": "simple",
-            "description": "The user requires two incompatible, existing versions of package `a`",
-            "source": "[PWD]/scenarios/requires-incompatible-versions.json",
-            "prefix": "requires-direct-incompatible-versions-063ec9d3",
-            "tree": [
-              "\u251c\u2500\u2500 environment",
-              "\u2502   \u2514\u2500\u2500 python3.7",
-              "\u251c\u2500\u2500 root",
-              "\u2502   \u251c\u2500\u2500 requires a==1.0.0",
-              "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-1.0.0",
-              "\u2502   \u2514\u2500\u2500 requires a==2.0.0",
-              "\u2502       \u2514\u2500\u2500 satisfied by a-2.0.0",
-              "\u2514\u2500\u2500 a",
-              "    \u251c\u2500\u2500 a-1.0.0",
-              "    \u2514\u2500\u2500 a-2.0.0"
-            ]
-          },
-          {
-            "name": "requires-transitive-incompatible-with-root-version",
-            "packages": {
-              "a": {
-                "versions": {
-                  "1.0.0": {
-                    "requires_python": ">=3.7",
-                    "requires": [
-                      "b==2.0.0"
-                    ],
-                    "sdist": true,
-                    "wheel": true,
-                    "wheel_tags": [],
-                    "description": ""
-                  }
-                }
-              },
-              "b": {
-                "versions": {
-                  "1.0.0": {
-                    "requires_python": ">=3.7",
-                    "requires": [],
-                    "sdist": true,
-                    "wheel": true,
-                    "wheel_tags": [],
-                    "description": ""
-                  },
-                  "2.0.0": {
-                    "requires_python": ">=3.7",
-                    "requires": [],
-                    "sdist": true,
-                    "wheel": true,
-                    "wheel_tags": [],
-                    "description": ""
-                  }
-                }
-              }
-            },
-            "root": {
-              "requires_python": ">=3.7",
-              "requires": [
-                "a",
-                "b==1.0.0"
-              ]
-            },
-            "expected": {
-              "satisfiable": false,
-              "packages": {},
-              "explanation": null
-            },
-            "environment": {
-              "python": "3.7",
-              "prereleases": false
-            },
-            "template": "simple",
-            "description": "The user requires packages `a` and `b` but `a` requires a different version of `b`",
-            "source": "[PWD]/scenarios/requires-incompatible-versions.json",
-            "prefix": "requires-transitive-incompatible-with-root-version-638350f3",
-            "tree": [
-              "\u251c\u2500\u2500 environment",
-              "\u2502   \u2514\u2500\u2500 python3.7",
-              "\u251c\u2500\u2500 root",
-              "\u2502   \u251c\u2500\u2500 requires a",
-              "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-1.0.0",
-              "\u2502   \u2514\u2500\u2500 requires b==1.0.0",
-              "\u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
-              "\u251c\u2500\u2500 a",
-              "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u2514\u2500\u2500 requires b==2.0.0",
-              "\u2502           \u2514\u2500\u2500 satisfied by b-2.0.0",
-              "\u2514\u2500\u2500 b",
-              "    \u251c\u2500\u2500 b-1.0.0",
-              "    \u2514\u2500\u2500 b-2.0.0"
-            ]
-          },
-          {
-            "name": "requires-transitive-incompatible-with-transitive",
-            "packages": {
-              "a": {
-                "versions": {
-                  "1.0.0": {
-                    "requires_python": ">=3.7",
-                    "requires": [
-                      "c==1.0.0"
-                    ],
-                    "sdist": true,
-                    "wheel": true,
-                    "wheel_tags": [],
-                    "description": ""
-                  }
-                }
-              },
-              "b": {
-                "versions": {
-                  "1.0.0": {
-                    "requires_python": ">=3.7",
-                    "requires": [
-                      "c==2.0.0"
-                    ],
-                    "sdist": true,
-                    "wheel": true,
-                    "wheel_tags": [],
-                    "description": ""
-                  }
-                }
-              },
-              "c": {
-                "versions": {
-                  "1.0.0": {
-                    "requires_python": ">=3.7",
-                    "requires": [],
-                    "sdist": true,
-                    "wheel": true,
-                    "wheel_tags": [],
-                    "description": ""
-                  },
-                  "2.0.0": {
-                    "requires_python": ">=3.7",
-                    "requires": [],
-                    "sdist": true,
-                    "wheel": true,
-                    "wheel_tags": [],
-                    "description": ""
-                  }
-                }
-              }
-            },
-            "root": {
-              "requires_python": ">=3.7",
-              "requires": [
-                "a",
-                "b"
-              ]
-            },
-            "expected": {
-              "satisfiable": false,
-              "packages": {},
-              "explanation": null
-            },
-            "environment": {
-              "python": "3.7",
-              "prereleases": false
-            },
-            "template": "simple",
-            "description": "The user requires package `a` and `b`; `a` and `b` require different versions of `c`",
-            "source": "[PWD]/scenarios/requires-incompatible-versions.json",
-            "prefix": "requires-transitive-incompatible-with-transitive-9b595175",
-            "tree": [
-              "\u251c\u2500\u2500 environment",
-              "\u2502   \u2514\u2500\u2500 python3.7",
-              "\u251c\u2500\u2500 root",
-              "\u2502   \u251c\u2500\u2500 requires a",
-              "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-1.0.0",
-              "\u2502   \u2514\u2500\u2500 requires b",
-              "\u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
-              "\u251c\u2500\u2500 a",
-              "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u2514\u2500\u2500 requires c==1.0.0",
-              "\u2502           \u2514\u2500\u2500 satisfied by c-1.0.0",
-              "\u251c\u2500\u2500 b",
-              "\u2502   \u2514\u2500\u2500 b-1.0.0",
-              "\u2502       \u2514\u2500\u2500 requires c==2.0.0",
-              "\u2502           \u2514\u2500\u2500 satisfied by c-2.0.0",
-              "\u2514\u2500\u2500 c",
-              "    \u251c\u2500\u2500 c-1.0.0",
-              "    \u2514\u2500\u2500 c-2.0.0"
             ]
           },
           {
