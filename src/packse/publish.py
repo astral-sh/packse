@@ -83,9 +83,7 @@ def publish(
 
     if incomplete:
         s = "" if targets == 1 else "s"
-        raise PublishError(
-            f"Failed to publish {len(targets) - incomplete}/{len(targets)} target{s}"
-        )
+        raise PublishError(f"Failed to publish {incomplete}/{len(targets)} target{s}")
 
     for result in sorted(future.result() for future in futures):
         print(result)

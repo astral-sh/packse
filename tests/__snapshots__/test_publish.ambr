@@ -108,7 +108,7 @@
       Publishing 1 target to https://test.pypi.org/legacy/...
       Publishing 'example-97db95eb'...
       Publish for 'example_97db95eb-0.0.0.tar.gz' already exists.
-      Failed to publish 0/1 targets.
+      Failed to publish 1/1 targets.
   
     ''',
     'stdout': '',
@@ -121,7 +121,7 @@
       Publishing 1 target to https://test.pypi.org/legacy/...
       Publishing 'example-97db95eb'...
       Publish of 'example_97db95eb-0.0.0.tar.gz' failed due to rate limits.
-      Failed to publish 0/1 targets.
+      Failed to publish 1/1 targets.
   
     ''',
     'stdout': '',
@@ -136,7 +136,7 @@
       Publishing example_97db95eb-0.0.0.tar.gz with twine failed:
           <twine error message>
       .
-      Failed to publish 0/1 targets.
+      Failed to publish 1/1 targets.
   
     ''',
     'stdout': '',
