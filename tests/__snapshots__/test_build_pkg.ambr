@@ -20,6 +20,8 @@
         dependencies = []
         requires-python = ">=3.7"
         description = ""
+        
+        [project.optional-dependencies]
   
       ''',
       'build/foo/foo-1.0.0/src/foo/__init__.py': '''
@@ -27,7 +29,7 @@
   
       ''',
       'dist/foo/foo-1.0.0-py3-none-any.whl': 'md5:fa25598ba0f3b049fa9b2e3870df1de7',
-      'dist/foo/foo-1.0.0.tar.gz': 'md5:8cd885b44d20dd9ec139be7a7d603efc',
+      'dist/foo/foo-1.0.0.tar.gz': 'md5:7fbd9e8db2a175a753b1389e450a6cec',
       'tree': '''
         test_build_pkg0
         ├── build
@@ -101,6 +103,8 @@
         dependencies = []
         requires-python = ">=3.7"
         description = ""
+        
+        [project.optional-dependencies]
   
       ''',
       'build/foo/foo-1.0.0/src/foo/__init__.py': '''
@@ -169,13 +173,15 @@
         dependencies = []
         requires-python = ">=3.7"
         description = ""
+        
+        [project.optional-dependencies]
   
       ''',
       'build/foo/foo-1.0.0/src/foo/__init__.py': '''
         __version__ = "1.0.0"
   
       ''',
-      'dist/foo/foo-1.0.0.tar.gz': 'md5:8cd885b44d20dd9ec139be7a7d603efc',
+      'dist/foo/foo-1.0.0.tar.gz': 'md5:7fbd9e8db2a175a753b1389e450a6cec',
       'tree': '''
         test_build_pkg_no_wheel0
         ├── build
@@ -224,6 +230,8 @@
         dependencies = []
         requires-python = ">=3.7"
         description = ""
+        
+        [project.optional-dependencies]
   
       ''',
       'build/foo/foo-1.0.0/src/foo/__init__.py': '''
@@ -232,7 +240,7 @@
       ''',
       'dist/foo/foo-1.0.0-tag1.whl': 'md5:fa25598ba0f3b049fa9b2e3870df1de7',
       'dist/foo/foo-1.0.0-tag2.whl': 'md5:fa25598ba0f3b049fa9b2e3870df1de7',
-      'dist/foo/foo-1.0.0.tar.gz': 'md5:8cd885b44d20dd9ec139be7a7d603efc',
+      'dist/foo/foo-1.0.0.tar.gz': 'md5:7fbd9e8db2a175a753b1389e450a6cec',
       'tree': '''
         test_build_pkg_wheel_tags0
         ├── build

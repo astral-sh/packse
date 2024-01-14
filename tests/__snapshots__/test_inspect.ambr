@@ -1154,7 +1154,7 @@
             ]
           },
           {
-            "name": "existing-extra-required",
+            "name": "extra-required",
             "packages": {
               "a": {
                 "versions": {
@@ -1195,7 +1195,10 @@
             },
             "expected": {
               "satisfiable": true,
-              "packages": {},
+              "packages": {
+                "a": "1.0.0",
+                "b": "1.0.0"
+              },
               "explanation": null
             },
             "environment": {
@@ -1205,7 +1208,7 @@
             "template": "simple",
             "description": "Optional dependencies are requested for the package.",
             "source": "[PWD]/scenarios/extras.json",
-            "version": "6877349a",
+            "version": "76e5355c",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1216,6 +1219,378 @@
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
               "\u2514\u2500\u2500 b",
               "    \u2514\u2500\u2500 b-1.0.0"
+            ]
+          },
+          {
+            "name": "missing-extra",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "extras": {},
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a[extra]"
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "1.0.0"
+              },
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "Optional dependencies are requested for the package, but the extra does not exist.",
+            "source": "[PWD]/scenarios/extras.json",
+            "version": "0997c767",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a[extra]",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0"
+            ]
+          },
+          {
+            "name": "multiple-extras-required",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "extras": {
+                      "extra_b": [
+                        "b"
+                      ],
+                      "extra_c": [
+                        "c"
+                      ]
+                    },
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              },
+              "b": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "extras": {},
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              },
+              "c": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "extras": {},
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a[extra_b,extra_c]"
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "1.0.0",
+                "b": "1.0.0",
+                "c": "1.0.0"
+              },
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "Multiple optional dependencies are requested for the package.",
+            "source": "[PWD]/scenarios/extras.json",
+            "version": "e55f15c4",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a[extra_b,extra_c]",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u2514\u2500\u2500 a-1.0.0",
+              "\u251c\u2500\u2500 b",
+              "\u2502   \u2514\u2500\u2500 b-1.0.0",
+              "\u2514\u2500\u2500 c",
+              "    \u2514\u2500\u2500 c-1.0.0"
+            ]
+          },
+          {
+            "name": "extra-incompatible-with-extra",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "extras": {
+                      "extra_b": [
+                        "b==1.0.0"
+                      ],
+                      "extra_c": [
+                        "b==2.0.0"
+                      ]
+                    },
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              },
+              "b": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "extras": {},
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  },
+                  "2.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "extras": {},
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a[extra_b,extra_c]"
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "Multiple optional dependencies are requested for the package, but they have conflicting requirements with each other.",
+            "source": "[PWD]/scenarios/extras.json",
+            "version": "bf480858",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a[extra_b,extra_c]",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u2514\u2500\u2500 a-1.0.0",
+              "\u2514\u2500\u2500 b",
+              "    \u251c\u2500\u2500 b-1.0.0",
+              "    \u2514\u2500\u2500 b-2.0.0"
+            ]
+          },
+          {
+            "name": "extra-incompatible-with-extra-not-requested",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "extras": {
+                      "extra_b": [
+                        "b==1.0.0"
+                      ],
+                      "extra_c": [
+                        "b==2.0.0"
+                      ]
+                    },
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              },
+              "b": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "extras": {},
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  },
+                  "2.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "extras": {},
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a[extra_c]"
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": {
+                "a": "1.0.0",
+                "b": "2.0.0"
+              },
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "One of two incompatible optional dependencies are requested for the package.",
+            "source": "[PWD]/scenarios/extras.json",
+            "version": "06ed3759",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a[extra_c]",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u2514\u2500\u2500 a-1.0.0",
+              "\u2514\u2500\u2500 b",
+              "    \u251c\u2500\u2500 b-1.0.0",
+              "    \u2514\u2500\u2500 b-2.0.0"
+            ]
+          },
+          {
+            "name": "extra-incompatible-with-root",
+            "packages": {
+              "a": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "extras": {
+                      "extra": [
+                        "b==1.0.0"
+                      ]
+                    },
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              },
+              "b": {
+                "versions": {
+                  "1.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "extras": {},
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  },
+                  "2.0.0": {
+                    "requires_python": ">=3.7",
+                    "requires": [],
+                    "extras": {},
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": ""
+                  }
+                }
+              }
+            },
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                "a[extra]",
+                "b==2.0.0"
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": {},
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.7",
+              "prereleases": false
+            },
+            "template": "simple",
+            "description": "Optional dependencies are requested for the package, but the extra is not compatible with other requested versions.",
+            "source": "[PWD]/scenarios/extras.json",
+            "version": "b3bfe512",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.7",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u251c\u2500\u2500 requires a[extra]",
+              "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2502   \u2514\u2500\u2500 requires b==2.0.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by b-2.0.0",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u2514\u2500\u2500 a-1.0.0",
+              "\u2514\u2500\u2500 b",
+              "    \u251c\u2500\u2500 b-1.0.0",
+              "    \u2514\u2500\u2500 b-2.0.0"
             ]
           },
           {

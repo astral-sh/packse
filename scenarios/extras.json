@@ -1,6 +1,6 @@
 [
     {
-        "name": "existing-extra-required",
+        "name": "extra-required",
         "description": "Optional dependencies are requested for the package.",
         "root": {
             "requires": [
@@ -26,7 +26,183 @@
             }
         },
         "expected": {
-            "satisfiable": true
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0",
+                "b": "1.0.0"
+            }
+        }
+    },
+    {
+        "name": "missing-extra",
+        "description": "Optional dependencies are requested for the package, but the extra does not exist.",
+        "root": {
+            "requires": [
+                "a[extra]"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0"
+            }
+        }
+    },
+    {
+        "name": "multiple-extras-required",
+        "description": "Multiple optional dependencies are requested for the package.",
+        "root": {
+            "requires": [
+                "a[extra_b,extra_c]"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "extras": {
+                            "extra_b": [
+                                "b"
+                            ],
+                            "extra_c": [
+                                "c"
+                            ]
+                        }
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {}
+                }
+            },
+            "c": {
+                "versions": {
+                    "1.0.0": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0",
+                "b": "1.0.0",
+                "c": "1.0.0"
+            }
+        }
+    },
+    {
+        "name": "extra-incompatible-with-extra",
+        "description": "Multiple optional dependencies are requested for the package, but they have conflicting requirements with each other.",
+        "root": {
+            "requires": [
+                "a[extra_b,extra_c]"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "extras": {
+                            "extra_b": [
+                                "b==1.0.0"
+                            ],
+                            "extra_c": [
+                                "b==2.0.0"
+                            ]
+                        }
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {},
+                    "2.0.0": {}
+                }
+            }
+        },
+        "expected": {
+            "description": "Because both `extra_b` and `extra_c` are requested and they require incompatible versions of `b`, `a` cannot be installed.",
+            "satisfiable": false
+        }
+    },
+    {
+        "name": "extra-incompatible-with-extra-not-requested",
+        "description": "One of two incompatible optional dependencies are requested for the package.",
+        "root": {
+            "requires": [
+                "a[extra_c]"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "extras": {
+                            "extra_b": [
+                                "b==1.0.0"
+                            ],
+                            "extra_c": [
+                                "b==2.0.0"
+                            ]
+                        }
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {},
+                    "2.0.0": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "description": "Because the user does not request both extras, it is okay that one is incompatible with the other.",
+            "packages": {
+                "a": "1.0.0",
+                "b": "2.0.0"
+            }
+        }
+    },
+    {
+        "name": "extra-incompatible-with-root",
+        "description": "Optional dependencies are requested for the package, but the extra is not compatible with other requested versions.",
+        "root": {
+            "requires": [
+                "a[extra]",
+                "b==2.0.0"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "extras": {
+                            "extra": [
+                                "b==1.0.0"
+                            ]
+                        }
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {},
+                    "2.0.0": {}
+                }
+            }
+        },
+        "expected": {
+            "description": "Because the user requested `b==2.0.0` but the requested extra requires `b==1.0.0`, the dependencies cannot be satisfied.",
+            "satisfiable": false
         }
     }
 ]

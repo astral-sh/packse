@@ -46,7 +46,12 @@
       excluded-only-compatible-version-d28c9e3c
       dependency-excludes-range-of-compatible-versions-2023222f
       dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208
-      existing-extra-required-6877349a
+      extra-required-76e5355c
+      missing-extra-0997c767
+      multiple-extras-required-e55f15c4
+      extra-incompatible-with-extra-bf480858
+      extra-incompatible-with-extra-not-requested-06ed3759
+      extra-incompatible-with-root-b3bfe512
       direct-incompatible-versions-80d82ee8
       transitive-incompatible-with-root-version-a967e815
       transitive-incompatible-with-transitive-6866d8dc
@@ -99,7 +104,12 @@
           dependency-excludes-range-of-compatible-versions-2023222f
           dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208
       scenarios/extras.json
-          existing-extra-required-6877349a
+          extra-required-76e5355c
+          missing-extra-0997c767
+          multiple-extras-required-e55f15c4
+          extra-incompatible-with-extra-bf480858
+          extra-incompatible-with-extra-not-requested-06ed3759
+          extra-incompatible-with-root-b3bfe512
       scenarios/incompatible-versions.json
           direct-incompatible-versions-80d82ee8
           transitive-incompatible-with-root-version-a967e815
@@ -156,7 +166,12 @@
           dependency-excludes-range-of-compatible-versions
           dependency-excludes-non-contiguous-range-of-compatible-versions
       scenarios/extras.json
-          existing-extra-required
+          extra-required
+          missing-extra
+          multiple-extras-required
+          extra-incompatible-with-extra
+          extra-incompatible-with-extra-not-requested
+          extra-incompatible-with-root
       scenarios/incompatible-versions.json
           direct-incompatible-versions
           transitive-incompatible-with-root-version
@@ -223,7 +238,12 @@
           2023222f
           aece4208
       scenarios/extras.json
-          6877349a
+          76e5355c
+          0997c767
+          e55f15c4
+          bf480858
+          06ed3759
+          b3bfe512
       scenarios/incompatible-versions.json
           80d82ee8
           a967e815
