@@ -85,40 +85,41 @@ def dependency_tree(scenario: Scenario) -> str:
     ):
         versions = packages[package].versions
         if for_requirement:
-            versions = [
-                version
-                for version in versions
+            versions = {
+                version: metadata
+                for version, metadata in versions.items()
                 if for_requirement.specifier.contains(version)
-            ]
+            }
 
             if not versions:
                 yield prefix + last + "unsatisfied: no matching version"
                 return
 
-        pointers = [tee] * (len(versions) - 1) + [last]
-        for pointer, version in zip(pointers, versions):
+        show_versions = []
+        for version, version_metadata in versions.items():
+            show_versions.append(
+                (
+                    version,
+                    version_metadata.requires
+                    + [f"python{version_metadata.requires_python}"],
+                )
+            )
+            extras = version_metadata.extras
+
+            for extra, extra_depends in extras.items():
+                show_versions.append((f"{version}[{extra}]", extra_depends))
+
+        pointers = [tee] * (len(show_versions) - 1) + [last]
+        for pointer, (version, requirements) in zip(pointers, show_versions):
             message = "satisfied by " if for_requirement and package else ""
             yield prefix + pointer + message + f"{package}-{version}"
 
             if not for_requirement:
                 extension = branch if pointer == tee else space
                 yield from render_requirements(
-                    versions[version].requires
-                    + [f"python{versions[version].requires_python}"],
+                    requirements,
                     prefix=prefix + extension,
                 )
-
-                # Display extra requirements
-                extras = versions[version].extras
-                pointers = [tee] * (len(extras) - 1) + [last]
-                extra_prefix = prefix + extension
-                for pointer, (extra, extra_requires) in zip(pointers, extras.items()):
-                    extension = branch if pointer == tee else space
-                    yield prefix + extension + pointer + f"[{extra}]"
-                    yield from render_requirements(
-                        extra_requires,
-                        prefix=extra_prefix + extension,
-                    )
 
     def render_requirements(requirements: list[str], prefix: str = ""):
         for index, requirement in enumerate(requirements):

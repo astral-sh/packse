@@ -52,6 +52,7 @@
       extra-incompatible-with-extra-bf480858
       extra-incompatible-with-extra-not-requested-06ed3759
       extra-incompatible-with-root-b3bfe512
+      extra-does-not-exist-backtrack-49778327
       direct-incompatible-versions-80d82ee8
       transitive-incompatible-with-root-version-a967e815
       transitive-incompatible-with-transitive-6866d8dc
@@ -110,6 +111,7 @@
           extra-incompatible-with-extra-bf480858
           extra-incompatible-with-extra-not-requested-06ed3759
           extra-incompatible-with-root-b3bfe512
+          extra-does-not-exist-backtrack-49778327
       scenarios/incompatible-versions.json
           direct-incompatible-versions-80d82ee8
           transitive-incompatible-with-root-version-a967e815
@@ -172,6 +174,7 @@
           extra-incompatible-with-extra
           extra-incompatible-with-extra-not-requested
           extra-incompatible-with-root
+          extra-does-not-exist-backtrack
       scenarios/incompatible-versions.json
           direct-incompatible-versions
           transitive-incompatible-with-root-version
@@ -244,6 +247,7 @@
           bf480858
           06ed3759
           b3bfe512
+          49778327
       scenarios/incompatible-versions.json
           80d82ee8
           a967e815

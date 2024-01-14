@@ -954,6 +954,91 @@
   dict({
     'exit_code': 0,
     'filesystem': dict({
+      'build/extra-does-not-exist-backtrack-49778327/extra-does-not-exist-backtrack-49778327-0.0.0/pyproject.toml': 'md5:a347a6da54dd15df4de0fc9a06220911',
+      'build/extra-does-not-exist-backtrack-49778327/extra-does-not-exist-backtrack-49778327-0.0.0/src/extra_does_not_exist_backtrack_49778327/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/extra-does-not-exist-backtrack-49778327/extra-does-not-exist-backtrack-a-49778327-1.0.0/pyproject.toml': 'md5:6bd58137b59ba30a7fa7b7a82ba18f70',
+      'build/extra-does-not-exist-backtrack-49778327/extra-does-not-exist-backtrack-a-49778327-1.0.0/src/extra_does_not_exist_backtrack_a_49778327/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/extra-does-not-exist-backtrack-49778327/extra-does-not-exist-backtrack-a-49778327-2.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/extra_does_not_exist_backtrack_a_49778327"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/extra_does_not_exist_backtrack_a_49778327"]
+        
+        [project]
+        name = "extra-does-not-exist-backtrack-a-49778327"
+        version = "2.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/extra-does-not-exist-backtrack-49778327/extra-does-not-exist-backtrack-a-49778327-2.0.0/src/extra_does_not_exist_backtrack_a_49778327/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'build/extra-does-not-exist-backtrack-49778327/extra-does-not-exist-backtrack-a-49778327-3.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/extra_does_not_exist_backtrack_a_49778327"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/extra_does_not_exist_backtrack_a_49778327"]
+        
+        [project]
+        name = "extra-does-not-exist-backtrack-a-49778327"
+        version = "3.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/extra-does-not-exist-backtrack-49778327/extra-does-not-exist-backtrack-a-49778327-3.0.0/src/extra_does_not_exist_backtrack_a_49778327/__init__.py': '''
+        __version__ = "3.0.0"
+  
+      ''',
+      'build/extra-does-not-exist-backtrack-49778327/extra-does-not-exist-backtrack-b-49778327-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/extra_does_not_exist_backtrack_b_49778327"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/extra_does_not_exist_backtrack_b_49778327"]
+        
+        [project]
+        name = "extra-does-not-exist-backtrack-b-49778327"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/extra-does-not-exist-backtrack-49778327/extra-does-not-exist-backtrack-b-49778327-1.0.0/src/extra_does_not_exist_backtrack_b_49778327/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
       'build/extra-incompatible-with-extra-bf480858/extra-incompatible-with-extra-a-bf480858-1.0.0/pyproject.toml': 'md5:da91eb13005c6a813b60dcca2be5baf6',
       'build/extra-incompatible-with-extra-bf480858/extra-incompatible-with-extra-a-bf480858-1.0.0/src/extra_incompatible_with_extra_a_bf480858/__init__.py': '''
         __version__ = "1.0.0"
@@ -1304,6 +1389,15 @@
         __version__ = "0.0.0"
   
       ''',
+      'dist/extra-does-not-exist-backtrack-49778327/extra_does_not_exist_backtrack_49778327-0.0.0.tar.gz': 'md5:c0bea77f09e1527f122332bf21211ad9',
+      'dist/extra-does-not-exist-backtrack-49778327/extra_does_not_exist_backtrack_a_49778327-1.0.0-py3-none-any.whl': 'md5:81dfd1bd73a293651123ffa029b993b7',
+      'dist/extra-does-not-exist-backtrack-49778327/extra_does_not_exist_backtrack_a_49778327-1.0.0.tar.gz': 'md5:4097ee3a5fe016442a4957ca6c714cfe',
+      'dist/extra-does-not-exist-backtrack-49778327/extra_does_not_exist_backtrack_a_49778327-2.0.0-py3-none-any.whl': 'md5:b11c222eb044774cf01672f0539d0db5',
+      'dist/extra-does-not-exist-backtrack-49778327/extra_does_not_exist_backtrack_a_49778327-2.0.0.tar.gz': 'md5:c8bba2bdfc7356f63a31646b5ade4924',
+      'dist/extra-does-not-exist-backtrack-49778327/extra_does_not_exist_backtrack_a_49778327-3.0.0-py3-none-any.whl': 'md5:2898d9cae75fac503d3861feca9ffab6',
+      'dist/extra-does-not-exist-backtrack-49778327/extra_does_not_exist_backtrack_a_49778327-3.0.0.tar.gz': 'md5:d0b85a2c61655da89b1074b96621f314',
+      'dist/extra-does-not-exist-backtrack-49778327/extra_does_not_exist_backtrack_b_49778327-1.0.0-py3-none-any.whl': 'md5:0f8f5a80a2e3b281a418e4609ca8d67a',
+      'dist/extra-does-not-exist-backtrack-49778327/extra_does_not_exist_backtrack_b_49778327-1.0.0.tar.gz': 'md5:41980ae82dfe094f47664f4b5465a93b',
       'dist/extra-incompatible-with-extra-bf480858/extra_incompatible_with_extra_a_bf480858-1.0.0-py3-none-any.whl': 'md5:968c944cd20a0c1a695532d71eb0cbb8',
       'dist/extra-incompatible-with-extra-bf480858/extra_incompatible_with_extra_a_bf480858-1.0.0.tar.gz': 'md5:8d17146f77ee866221735cf768508c2a',
       'dist/extra-incompatible-with-extra-bf480858/extra_incompatible_with_extra_b_bf480858-1.0.0-py3-none-any.whl': 'md5:5f0ff45bb49c1d98c0161d5d1591295f',
@@ -1343,6 +1437,32 @@
       'tree': '''
         test_build_all_scenarios_extra0
         ├── build
+        │   ├── extra-does-not-exist-backtrack-49778327
+        │   │   ├── extra-does-not-exist-backtrack-49778327-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── extra_does_not_exist_backtrack_49778327
+        │   │   │           └── __init__.py
+        │   │   ├── extra-does-not-exist-backtrack-a-49778327-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── extra_does_not_exist_backtrack_a_49778327
+        │   │   │           └── __init__.py
+        │   │   ├── extra-does-not-exist-backtrack-a-49778327-2.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── extra_does_not_exist_backtrack_a_49778327
+        │   │   │           └── __init__.py
+        │   │   ├── extra-does-not-exist-backtrack-a-49778327-3.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── extra_does_not_exist_backtrack_a_49778327
+        │   │   │           └── __init__.py
+        │   │   └── extra-does-not-exist-backtrack-b-49778327-1.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── extra_does_not_exist_backtrack_b_49778327
+        │   │               └── __init__.py
         │   ├── extra-incompatible-with-extra-bf480858
         │   │   ├── extra-incompatible-with-extra-a-bf480858-1.0.0
         │   │   │   ├── pyproject.toml
@@ -1455,6 +1575,16 @@
         │               └── multiple_extras_required_e55f15c4
         │                   └── __init__.py
         └── dist
+            ├── extra-does-not-exist-backtrack-49778327
+            │   ├── extra_does_not_exist_backtrack_49778327-0.0.0.tar.gz
+            │   ├── extra_does_not_exist_backtrack_a_49778327-1.0.0-py3-none-any.whl
+            │   ├── extra_does_not_exist_backtrack_a_49778327-1.0.0.tar.gz
+            │   ├── extra_does_not_exist_backtrack_a_49778327-2.0.0-py3-none-any.whl
+            │   ├── extra_does_not_exist_backtrack_a_49778327-2.0.0.tar.gz
+            │   ├── extra_does_not_exist_backtrack_a_49778327-3.0.0-py3-none-any.whl
+            │   ├── extra_does_not_exist_backtrack_a_49778327-3.0.0.tar.gz
+            │   ├── extra_does_not_exist_backtrack_b_49778327-1.0.0-py3-none-any.whl
+            │   └── extra_does_not_exist_backtrack_b_49778327-1.0.0.tar.gz
             ├── extra-incompatible-with-extra-bf480858
             │   ├── extra_incompatible_with_extra_a_bf480858-1.0.0-py3-none-any.whl
             │   ├── extra_incompatible_with_extra_a_bf480858-1.0.0.tar.gz
@@ -1498,12 +1628,13 @@
                 ├── multiple_extras_required_c_e55f15c4-1.0.0.tar.gz
                 └── multiple_extras_required_e55f15c4-0.0.0.tar.gz
         
-        77 directories, 78 files
+        94 directories, 97 files
   
       ''',
     }),
     'stderr': '<not included>',
     'stdout': '''
+      extra-does-not-exist-backtrack-49778327
       extra-incompatible-with-extra-bf480858
       extra-incompatible-with-extra-not-requested-06ed3759
       extra-incompatible-with-root-b3bfe512
@@ -4900,12 +5031,13 @@
       │   └── python3.7
       ├── root
       │   └── requires a[extra]
-      │       └── satisfied by a-1.0.0
+      │       ├── satisfied by a-1.0.0
+      │       └── satisfied by a-1.0.0[extra]
       ├── a
-      │   └── a-1.0.0
-      │       └── [extra]
-      │           └── requires b
-      │               └── satisfied by b-1.0.0
+      │   ├── a-1.0.0
+      │   └── a-1.0.0[extra]
+      │       └── requires b
+      │           └── satisfied by b-1.0.0
       └── b
           └── b-1.0.0
       
@@ -4923,15 +5055,17 @@
       │   └── python3.7
       ├── root
       │   └── requires a[extra_b,extra_c]
-      │       └── satisfied by a-1.0.0
+      │       ├── satisfied by a-1.0.0
+      │       ├── satisfied by a-1.0.0[extra_b]
+      │       └── satisfied by a-1.0.0[extra_c]
       ├── a
-      │   └── a-1.0.0
-      │   │   ├── [extra_b]
-      │       │   └── requires b
-      │       │       └── satisfied by b-1.0.0
-      │       └── [extra_c]
-      │           └── requires c
-      │               └── satisfied by c-1.0.0
+      │   ├── a-1.0.0
+      │   ├── a-1.0.0[extra_b]
+      │   │   └── requires b
+      │   │       └── satisfied by b-1.0.0
+      │   └── a-1.0.0[extra_c]
+      │       └── requires c
+      │           └── satisfied by c-1.0.0
       ├── b
       │   └── b-1.0.0
       └── c
@@ -4942,15 +5076,17 @@
       │   └── python3.7
       ├── root
       │   └── requires a[extra_b,extra_c]
-      │       └── satisfied by a-1.0.0
+      │       ├── satisfied by a-1.0.0
+      │       ├── satisfied by a-1.0.0[extra_b]
+      │       └── satisfied by a-1.0.0[extra_c]
       ├── a
-      │   └── a-1.0.0
-      │   │   ├── [extra_b]
-      │       │   └── requires b==1.0.0
-      │       │       └── satisfied by b-1.0.0
-      │       └── [extra_c]
-      │           └── requires b==2.0.0
-      │               └── satisfied by b-2.0.0
+      │   ├── a-1.0.0
+      │   ├── a-1.0.0[extra_b]
+      │   │   └── requires b==1.0.0
+      │   │       └── satisfied by b-1.0.0
+      │   └── a-1.0.0[extra_c]
+      │       └── requires b==2.0.0
+      │           └── satisfied by b-2.0.0
       └── b
           ├── b-1.0.0
           └── b-2.0.0
@@ -4960,15 +5096,17 @@
       │   └── python3.7
       ├── root
       │   └── requires a[extra_c]
-      │       └── satisfied by a-1.0.0
+      │       ├── satisfied by a-1.0.0
+      │       ├── satisfied by a-1.0.0[extra_b]
+      │       └── satisfied by a-1.0.0[extra_c]
       ├── a
-      │   └── a-1.0.0
-      │   │   ├── [extra_b]
-      │       │   └── requires b==1.0.0
-      │       │       └── satisfied by b-1.0.0
-      │       └── [extra_c]
-      │           └── requires b==2.0.0
-      │               └── satisfied by b-2.0.0
+      │   ├── a-1.0.0
+      │   ├── a-1.0.0[extra_b]
+      │   │   └── requires b==1.0.0
+      │   │       └── satisfied by b-1.0.0
+      │   └── a-1.0.0[extra_c]
+      │       └── requires b==2.0.0
+      │           └── satisfied by b-2.0.0
       └── b
           ├── b-1.0.0
           └── b-2.0.0
@@ -4978,17 +5116,37 @@
       │   └── python3.7
       ├── root
       │   ├── requires a[extra]
-      │   │   └── satisfied by a-1.0.0
+      │   │   ├── satisfied by a-1.0.0
+      │   │   └── satisfied by a-1.0.0[extra]
       │   └── requires b==2.0.0
       │       └── satisfied by b-2.0.0
       ├── a
-      │   └── a-1.0.0
-      │       └── [extra]
-      │           └── requires b==1.0.0
-      │               └── satisfied by b-1.0.0
+      │   ├── a-1.0.0
+      │   └── a-1.0.0[extra]
+      │       └── requires b==1.0.0
+      │           └── satisfied by b-1.0.0
       └── b
           ├── b-1.0.0
           └── b-2.0.0
+      
+      extra-does-not-exist-backtrack-49778327
+      ├── environment
+      │   └── python3.7
+      ├── root
+      │   └── requires a[extra]
+      │       ├── satisfied by a-1.0.0
+      │       ├── satisfied by a-1.0.0[extra]
+      │       ├── satisfied by a-2.0.0
+      │       └── satisfied by a-3.0.0
+      ├── a
+      │   ├── a-1.0.0
+      │   ├── a-1.0.0[extra]
+      │   │   └── requires b==1.0.0
+      │   │       └── satisfied by b-1.0.0
+      │   ├── a-2.0.0
+      │   └── a-3.0.0
+      └── b
+          └── b-1.0.0
       
   
     ''',
