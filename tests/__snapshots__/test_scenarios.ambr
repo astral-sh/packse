@@ -4903,6 +4903,9 @@
       │       └── satisfied by a-1.0.0
       ├── a
       │   └── a-1.0.0
+      │       └── [extra]
+      │           └── requires b
+      │               └── satisfied by b-1.0.0
       └── b
           └── b-1.0.0
       
@@ -4923,6 +4926,12 @@
       │       └── satisfied by a-1.0.0
       ├── a
       │   └── a-1.0.0
+      │   │   ├── [extra_b]
+      │       │   └── requires b
+      │       │       └── satisfied by b-1.0.0
+      │       └── [extra_c]
+      │           └── requires c
+      │               └── satisfied by c-1.0.0
       ├── b
       │   └── b-1.0.0
       └── c
@@ -4936,6 +4945,12 @@
       │       └── satisfied by a-1.0.0
       ├── a
       │   └── a-1.0.0
+      │   │   ├── [extra_b]
+      │       │   └── requires b==1.0.0
+      │       │       └── satisfied by b-1.0.0
+      │       └── [extra_c]
+      │           └── requires b==2.0.0
+      │               └── satisfied by b-2.0.0
       └── b
           ├── b-1.0.0
           └── b-2.0.0
@@ -4948,6 +4963,12 @@
       │       └── satisfied by a-1.0.0
       ├── a
       │   └── a-1.0.0
+      │   │   ├── [extra_b]
+      │       │   └── requires b==1.0.0
+      │       │       └── satisfied by b-1.0.0
+      │       └── [extra_c]
+      │           └── requires b==2.0.0
+      │               └── satisfied by b-2.0.0
       └── b
           ├── b-1.0.0
           └── b-2.0.0
@@ -4962,6 +4983,9 @@
       │       └── satisfied by b-2.0.0
       ├── a
       │   └── a-1.0.0
+      │       └── [extra]
+      │           └── requires b==1.0.0
+      │               └── satisfied by b-1.0.0
       └── b
           ├── b-1.0.0
           └── b-2.0.0

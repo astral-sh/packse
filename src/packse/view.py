@@ -108,6 +108,18 @@ def dependency_tree(scenario: Scenario) -> str:
                     prefix=prefix + extension,
                 )
 
+                # Display extra requirements
+                extras = versions[version].extras
+                pointers = [tee] * (len(extras) - 1) + [last]
+                extra_prefix = prefix + extension
+                for pointer, (extra, extra_requires) in zip(pointers, extras.items()):
+                    extension = branch if pointer == tee else space
+                    yield prefix + extension + pointer + f"[{extra}]"
+                    yield from render_requirements(
+                        extra_requires,
+                        prefix=extra_prefix + extension,
+                    )
+
     def render_requirements(requirements: list[str], prefix: str = ""):
         for index, requirement in enumerate(requirements):
             # TODO: Consider avoiding parsing the requirement twice
