@@ -204,5 +204,41 @@
             "description": "Because the user requested `b==2.0.0` but the requested extra requires `b==1.0.0`, the dependencies cannot be satisfied.",
             "satisfiable": false
         }
+    },
+    {
+        "name": "extra-does-not-exist-backtrack",
+        "description": "Optional dependencies are requested for the package, the extra is only available on an older version.",
+        "root": {
+            "requires": [
+                "a[extra]"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "extras": {
+                            "extra": [
+                                "b==1.0.0"
+                            ]
+                        }
+                    },
+                    "2.0.0": {},
+                    "3.0.0": {}
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0",
+                "b": "1.0.0"
+            }
+        }
     }
 ]
