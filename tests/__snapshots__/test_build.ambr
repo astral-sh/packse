@@ -17,7 +17,9 @@
         [project]
         name = "example-97db95eb"
         version = "0.0.0"
-        dependencies = ["example-97db95eb-a"]
+        dependencies = [
+            "example-97db95eb-a",
+        ]
         requires-python = ">=3.7"
         description = "This is an example scenario, in which the user depends on a single package `a` which requires `b`."
   
@@ -40,7 +42,9 @@
         [project]
         name = "example-97db95eb-a"
         version = "1.0.0"
-        dependencies = ["example-97db95eb-b>1.0.0"]
+        dependencies = [
+            "example-97db95eb-b>1.0.0",
+        ]
         requires-python = ">=3.7"
         description = ""
   
@@ -109,7 +113,9 @@
         [project]
         name = "example-97db95eb-b"
         version = "3.0.0"
-        dependencies = ["example-97db95eb-c"]
+        dependencies = [
+            "example-97db95eb-c",
+        ]
         requires-python = ">=3.7"
         description = ""
   
@@ -118,15 +124,15 @@
         __version__ = "3.0.0"
   
       ''',
-      'dist/example-97db95eb/example_97db95eb-0.0.0.tar.gz': 'md5:e6d7f51fec17fadbce60923f87baedb9',
+      'dist/example-97db95eb/example_97db95eb-0.0.0.tar.gz': 'md5:554add29a25f5a90c007bb2263458deb',
       'dist/example-97db95eb/example_97db95eb_a-1.0.0-py3-none-any.whl': 'md5:b4d61e7aa5ba73b2d91aaebba560ad51',
-      'dist/example-97db95eb/example_97db95eb_a-1.0.0.tar.gz': 'md5:366ab6f477066ca3c478b638c01dc9a1',
+      'dist/example-97db95eb/example_97db95eb_a-1.0.0.tar.gz': 'md5:7cdf227be6956f55003c2e37f576e0b0',
       'dist/example-97db95eb/example_97db95eb_b-1.0.0-py3-none-any.whl': 'md5:70e2bd7bf120d6237f3ba20d0c406d16',
       'dist/example-97db95eb/example_97db95eb_b-1.0.0.tar.gz': 'md5:e7d797a2de9f12cc78ee65739e1e8e91',
       'dist/example-97db95eb/example_97db95eb_b-2.0.0-py3-none-any.whl': 'md5:1deddaa828b3688f5634b9868de8feba',
       'dist/example-97db95eb/example_97db95eb_b-2.0.0.tar.gz': 'md5:6329ae9ea40f43eac05ba7e2351850d0',
       'dist/example-97db95eb/example_97db95eb_b-3.0.0-py3-none-any.whl': 'md5:e0fbb1009759f814786a94c79537be8b',
-      'dist/example-97db95eb/example_97db95eb_b-3.0.0.tar.gz': 'md5:f32ed7d0dbc7c56982d96cba13ebbb2e',
+      'dist/example-97db95eb/example_97db95eb_b-3.0.0.tar.gz': 'md5:e85067304515ba07a5cbccdc3dafce6e',
       'tree': '''
         test_build_example0
         ├── build
@@ -228,7 +234,9 @@
         [project]
         name = "s97db95eb"
         version = "0.0.0"
-        dependencies = ["s97db95eb-a"]
+        dependencies = [
+            "s97db95eb-a",
+        ]
         requires-python = ">=3.7"
         description = "This is an example scenario, in which the user depends on a single package `a` which requires `b`."
   
@@ -251,7 +259,9 @@
         [project]
         name = "s97db95eb-a"
         version = "1.0.0"
-        dependencies = ["s97db95eb-b>1.0.0"]
+        dependencies = [
+            "s97db95eb-b>1.0.0",
+        ]
         requires-python = ">=3.7"
         description = ""
   
@@ -320,7 +330,9 @@
         [project]
         name = "s97db95eb-b"
         version = "3.0.0"
-        dependencies = ["s97db95eb-c"]
+        dependencies = [
+            "s97db95eb-c",
+        ]
         requires-python = ">=3.7"
         description = ""
   
@@ -329,15 +341,15 @@
         __version__ = "3.0.0"
   
       ''',
-      'dist/s97db95eb/s97db95eb-0.0.0.tar.gz': 'md5:dbed3e42431296964c034c9226ea6786',
+      'dist/s97db95eb/s97db95eb-0.0.0.tar.gz': 'md5:ee2d71bc41e9783ad9e06effecb9cf69',
       'dist/s97db95eb/s97db95eb_a-1.0.0-py3-none-any.whl': 'md5:9ab467472b92ab11152f1b818885139c',
-      'dist/s97db95eb/s97db95eb_a-1.0.0.tar.gz': 'md5:e3fee0771c0c881abc45a829423d9081',
+      'dist/s97db95eb/s97db95eb_a-1.0.0.tar.gz': 'md5:4f7e4b1ee815457c38d871d6656b77c7',
       'dist/s97db95eb/s97db95eb_b-1.0.0-py3-none-any.whl': 'md5:d6b00b6e95fb66f009021e44960ebc02',
       'dist/s97db95eb/s97db95eb_b-1.0.0.tar.gz': 'md5:63c7d767e9550f5798f503dea5be6ea1',
       'dist/s97db95eb/s97db95eb_b-2.0.0-py3-none-any.whl': 'md5:f609f2e9aaeb52331a66771fd8b3673b',
       'dist/s97db95eb/s97db95eb_b-2.0.0.tar.gz': 'md5:a21acc2e829d8dad363d300cb317e39a',
       'dist/s97db95eb/s97db95eb_b-3.0.0-py3-none-any.whl': 'md5:6864af8b68304a052d035fbf38b252c0',
-      'dist/s97db95eb/s97db95eb_b-3.0.0.tar.gz': 'md5:a3eb563713d8879488a49baca8e252bd',
+      'dist/s97db95eb/s97db95eb_b-3.0.0.tar.gz': 'md5:eb7e60508ef7019e3c1a327c1e290828',
       'tree': '''
         test_build_example_short_names0
         ├── build
@@ -408,7 +420,9 @@
         [project]
         name = "example-9fa36ff3"
         version = "0.0.0"
-        dependencies = ["example-9fa36ff3-a"]
+        dependencies = [
+            "example-9fa36ff3-a",
+        ]
         requires-python = ">=3.7"
         description = "This is an example scenario, in which the user depends on a single package `a` which requires `b`."
   
@@ -431,7 +445,9 @@
         [project]
         name = "example-9fa36ff3-a"
         version = "1.0.0"
-        dependencies = ["example-9fa36ff3-b>1.0.0"]
+        dependencies = [
+            "example-9fa36ff3-b>1.0.0",
+        ]
         requires-python = ">=3.7"
         description = ""
   
@@ -500,7 +516,9 @@
         [project]
         name = "example-9fa36ff3-b"
         version = "3.0.0"
-        dependencies = ["example-9fa36ff3-c"]
+        dependencies = [
+            "example-9fa36ff3-c",
+        ]
         requires-python = ">=3.7"
         description = ""
   
@@ -509,15 +527,15 @@
         __version__ = "3.0.0"
   
       ''',
-      'dist/example-9fa36ff3/example_9fa36ff3-0.0.0.tar.gz': 'md5:31792dc1492b2f1971739f8f31f909dc',
+      'dist/example-9fa36ff3/example_9fa36ff3-0.0.0.tar.gz': 'md5:22711540a3914137bad83f1e083c144a',
       'dist/example-9fa36ff3/example_9fa36ff3_a-1.0.0-py3-none-any.whl': 'md5:9006eac8dd7a14b622570c068b33344d',
-      'dist/example-9fa36ff3/example_9fa36ff3_a-1.0.0.tar.gz': 'md5:4febfe87d4cf18c49a40cf5fa8c1d3e9',
+      'dist/example-9fa36ff3/example_9fa36ff3_a-1.0.0.tar.gz': 'md5:071d4f292984dd3bebd6c7cbd76ccd48',
       'dist/example-9fa36ff3/example_9fa36ff3_b-1.0.0-py3-none-any.whl': 'md5:c383da3275f610b595b5ec698f1fc82e',
       'dist/example-9fa36ff3/example_9fa36ff3_b-1.0.0.tar.gz': 'md5:35aaf3d21e1cb43a9581aefd7c771b1f',
       'dist/example-9fa36ff3/example_9fa36ff3_b-2.0.0-py3-none-any.whl': 'md5:2ac250a2dec25d04ae7cd5898da88974',
       'dist/example-9fa36ff3/example_9fa36ff3_b-2.0.0.tar.gz': 'md5:c037f5ec9b3468f716959b9e16a4287a',
       'dist/example-9fa36ff3/example_9fa36ff3_b-3.0.0-py3-none-any.whl': 'md5:0b783def8a3824f96d858ea3c28e1018',
-      'dist/example-9fa36ff3/example_9fa36ff3_b-3.0.0.tar.gz': 'md5:20147a77b322a575c7f00fa87cbb5a74',
+      'dist/example-9fa36ff3/example_9fa36ff3_b-3.0.0.tar.gz': 'md5:0965f99193121e9a94fb2aa79a3273ae',
       'tree': '''
         test_build_example_with_seed0
         ├── build

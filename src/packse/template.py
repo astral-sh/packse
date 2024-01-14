@@ -2,6 +2,8 @@ import json
 import logging
 from pathlib import Path
 from typing import Any
+import chevron_blue
+
 
 import msgspec
 
@@ -35,7 +37,7 @@ def create_from_template(
     for root, _, files in template_path.walk():
         # Determine the new directory path in the destination
         new_root = destination / Path(
-            replace_placeholders(str(root), variables)
+            chevron_blue.render(str(root), variables, no_escape=True)
         ).relative_to(template_path)
 
         if new_root == destination:
@@ -52,25 +54,13 @@ def create_from_template(
             file_path = root / file
 
             # Determine the new file path
-            new_file_path = new_root / replace_placeholders(file, variables)
+            new_file_path = new_root / chevron_blue.render(
+                file, variables, no_escape=True
+            )
             logger.debug("Creating %s", new_file_path.relative_to(destination))
 
             new_file_path.write_text(
-                replace_placeholders(file_path.read_text(), variables)
+                chevron_blue.render(file_path.read_text(), variables, no_escape=True)
             )
 
     return first_root
-
-
-def replace_placeholders(target: str, variables: dict[str, Any]):
-    for key, value in variables.items():
-        target = target.replace(f"{{{{ {key} }}}}", stringify(value))
-    return target
-
-
-def stringify(value: Any) -> str:
-    if isinstance(value, str):
-        return value
-    else:
-        # TOOD(zanieb): Consider inferring the format from the file extension
-        return json.dumps(value)

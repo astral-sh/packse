@@ -343,6 +343,17 @@ setuptools = "*"
 test = ["mock (>=3.0.0)", "pytest"]
 
 [[package]]
+name = "chevron-blue"
+version = "0.2.1"
+description = "A Python implementation of the mustache template language"
+optional = false
+python-versions = ">=3.8,<4.0"
+files = [
+    {file = "chevron_blue-0.2.1-py3-none-any.whl", hash = "sha256:ab9accbb5c5f42ba224821904a4f14642cbc6d117706a8b105723bc80e733dea"},
+    {file = "chevron_blue-0.2.1.tar.gz", hash = "sha256:fec5d54f2a71883c74a6e8266936aeaf2b2427c91dd32dc77e5cc64cdbf1c7d2"},
+]
+
+[[package]]
 name = "cmarkgfm"
 version = "2022.10.27"
 description = "Minimal bindings to GitHub's fork of cmark"
@@ -1755,4 +1766,4 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "52adbb11ea0eb39df656866b18ccf575518455cc56d7c82077384737c01b866d"
+content-hash = "005f41feecfbe0751c152b0f3b3e9ea2d322810d15be9c06c911ea7d36f3cd10"
