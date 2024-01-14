@@ -151,7 +151,7 @@ def _call_inspect(args):
             else:
                 targets.append(target)
 
-    inspect(targets, skip_invalid, short_names=args.short_names)
+    inspect(targets, skip_invalid)
 
 
 def _root_parser():
@@ -412,11 +412,6 @@ def _add_inspect_parser(subparsers):
         "--skip-invalid",
         action="store_true",
         help="Skip invalid scenario files instead of failing.",
-    )
-    parser.add_argument(
-        "--short-names",
-        action="store_true",
-        help="Exclude scenario names from generated packages.",
     )
     _add_shared_arguments(parser)
 

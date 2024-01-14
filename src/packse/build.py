@@ -24,8 +24,9 @@ from packse.scenario import (
     Package,
     PackageMetadata,
     Scenario,
+    format_dependencies,
     load_scenarios,
-    scenario_prefix,
+    scenario_version,
 )
 from packse.template import TemplateConfig, create_from_template, load_template_config
 
@@ -66,16 +67,18 @@ def build_scenario(scenario: Scenario, rm_destination: bool, short_names: bool) 
 
     Returns the scenario's entrypoint package name.
     """
-    prefix = scenario_prefix(scenario, short_names)
+
+    version = scenario_version(scenario)
+    unique_name = f"{scenario.name}-{version}"
 
     work_dir = Path.cwd()
-    build_destination = work_dir / "build" / prefix
-    dist_destination = work_dir / "dist" / prefix
+    build_destination = work_dir / "build" / unique_name
+    dist_destination = work_dir / "dist" / unique_name
     start_time = time.time()
 
     logger.info(
         "Building '%s' in directory '%s'",
-        prefix,
+        unique_name,
         build_destination.relative_to(work_dir),
     )
 
@@ -100,12 +103,13 @@ def build_scenario(scenario: Scenario, rm_destination: bool, short_names: bool) 
             executor.submit(
                 build_scenario_package,
                 scenario=scenario,
-                prefix=prefix,
+                scenario_version=version,
                 name=name,
                 package=package,
                 work_dir=work_dir,
                 build_destination=build_destination,
                 dist_destination=dist_destination,
+                short_names=short_names,
             )
             for name, package in scenario.packages.items()
         ]
@@ -114,12 +118,13 @@ def build_scenario(scenario: Scenario, rm_destination: bool, short_names: bool) 
             executor.submit(
                 build_scenario_package,
                 scenario=scenario,
-                prefix=prefix,
-                name="",
+                scenario_version=version,
+                name=scenario.name,
                 package=make_root_package(scenario),
                 work_dir=work_dir,
                 build_destination=build_destination,
                 dist_destination=dist_destination,
+                short_names=short_names,
             )
         )
 
@@ -130,10 +135,10 @@ def build_scenario(scenario: Scenario, rm_destination: bool, short_names: bool) 
 
     logger.info(
         "Built scenario '%s' in %.2fs",
-        prefix,
+        unique_name,
         time.time() - start_time,
     )
-    return prefix
+    return unique_name
 
 
 def make_root_package(scenario: Scenario) -> Package:
@@ -156,17 +161,17 @@ def make_root_package(scenario: Scenario) -> Package:
 
 def build_scenario_package(
     scenario: Scenario,
-    prefix: str,
+    scenario_version: str,
     name: str,
     package: Package,
     work_dir: Path,
     build_destination: Path,
     dist_destination: Path,
+    short_names: bool,
 ):
-    # Only allow the name to be empty for entrypoint packages
-    assert name or list(package.versions.keys()) == ["0.0.0"]
-
-    package_name = f"{prefix}-{name}" if name else prefix
+    package_name = f"{name}-{scenario_version}"
+    if not short_names and name != scenario.name:
+        package_name = f"{scenario.name}-{package_name}"
 
     # Generate a Python module name
     module_name = package_name.replace("-", "_")
@@ -185,9 +190,12 @@ def build_scenario_package(
                 "package-name": package_name,
                 "module-name": module_name,
                 "version": version,
-                "dependencies": [
-                    f"{prefix}-{spec}" for spec in package_version.requires
-                ],
+                "dependencies": format_dependencies(
+                    scenario.name,
+                    scenario_version,
+                    package_version.requires,
+                    short_names,
+                ),
                 "requires-python": package_version.requires_python,
                 "description": package_version.description,
             },

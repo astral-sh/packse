@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 from packse import __development_base_path__
-from packse.scenario import load_scenario, scenario_prefix
+from packse.scenario import load_scenario, scenario_version
 
 from .common import snapshot_command
 
@@ -63,8 +63,8 @@ def test_build_example_with_seed(snapshot):
 def test_build_example_already_exists(snapshot):
     target = __development_base_path__ / "scenarios" / "example.json"
     scenario = load_scenario(target)
-    prefix = scenario_prefix(scenario, short=False)
-    (Path.cwd() / "build" / prefix).mkdir(parents=True)
+    name = f"{scenario.name}-{scenario_version(scenario)}"
+    (Path.cwd() / "build" / name).mkdir(parents=True)
     assert snapshot_command(["build", target], snapshot_filesystem=True) == snapshot
 
 

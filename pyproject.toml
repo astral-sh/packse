@@ -35,7 +35,7 @@ chevron-blue = "^0.2.1"
 [tool.poetry.group.dev.dependencies]
 syrupy = "^4.6.0"
 pytest = "^7.4.3"
-ruff = "^0.1.7"
+ruff = "^0.1.12"
 psutil = "^5.9.7"
 
 [build-system]

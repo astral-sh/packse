@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 
 import msgspec
+import packaging.requirements
 
 from packse.template import load_template_config
 
@@ -219,11 +220,19 @@ def scenario_version(scenario: Scenario) -> str:
     return hasher.hexdigest()[:8]
 
 
-def scenario_prefix(scenario: Scenario, short: bool) -> str:
-    """
-    Generate a prefix for a scenario.
-    """
-    version = scenario_version(scenario)
-    # Short name are always prefixed with "s" to ensure that the scenario
-    # has an importable Python module (first character cannot be numeric)
-    return f"s{version}" if short else f"{scenario.name}-{version}"
+def format_dependencies(
+    scenario_name: str,
+    scenario_version: str,
+    dependencies: list[str],
+    short_names: bool,
+) -> list[str]:
+    result = []
+    for dependency in dependencies:
+        parsed = packaging.requirements.Requirement(dependency)
+        if short_names:
+            name = f"{parsed.name}-{scenario_version}"
+        else:
+            name = f"{scenario_name}-{parsed.name}-{scenario_version}"
+
+        result.append(dependency.replace(parsed.name, name, 1))
+    return result

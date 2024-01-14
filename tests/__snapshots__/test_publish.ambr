@@ -6,26 +6,26 @@
       Publishing 1 target to https://test.pypi.org/legacy/...
       Publishing 'example-97db95eb'...
       Published 'example_97db95eb-0.0.0.tar.gz'
-      Published 'example_97db95eb_a-1.0.0-py3-none-any.whl'
-      Published 'example_97db95eb_a-1.0.0.tar.gz'
-      Published 'example_97db95eb_b-1.0.0-py3-none-any.whl'
-      Published 'example_97db95eb_b-1.0.0.tar.gz'
-      Published 'example_97db95eb_b-2.0.0-py3-none-any.whl'
-      Published 'example_97db95eb_b-2.0.0.tar.gz'
-      Published 'example_97db95eb_b-3.0.0-py3-none-any.whl'
-      Published 'example_97db95eb_b-3.0.0.tar.gz'
+      Published 'example_a_97db95eb-1.0.0-py3-none-any.whl'
+      Published 'example_a_97db95eb-1.0.0.tar.gz'
+      Published 'example_b_97db95eb-1.0.0-py3-none-any.whl'
+      Published 'example_b_97db95eb-1.0.0.tar.gz'
+      Published 'example_b_97db95eb-2.0.0-py3-none-any.whl'
+      Published 'example_b_97db95eb-2.0.0.tar.gz'
+      Published 'example_b_97db95eb-3.0.0-py3-none-any.whl'
+      Published 'example_b_97db95eb-3.0.0.tar.gz'
   
     ''',
     'stdout': '''
       Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_97db95eb-0.0.0.tar.gz
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_97db95eb_a-1.0.0-py3-none-any.whl
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_97db95eb_a-1.0.0.tar.gz
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_97db95eb_b-1.0.0-py3-none-any.whl
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_97db95eb_b-1.0.0.tar.gz
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_97db95eb_b-2.0.0-py3-none-any.whl
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_97db95eb_b-2.0.0.tar.gz
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_97db95eb_b-3.0.0-py3-none-any.whl
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_97db95eb_b-3.0.0.tar.gz
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_a_97db95eb-1.0.0-py3-none-any.whl
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_a_97db95eb-1.0.0.tar.gz
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_97db95eb-1.0.0-py3-none-any.whl
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_97db95eb-1.0.0.tar.gz
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_97db95eb-2.0.0-py3-none-any.whl
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_97db95eb-2.0.0.tar.gz
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_97db95eb-3.0.0-py3-none-any.whl
+      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_97db95eb-3.0.0.tar.gz
       example-97db95eb
   
     ''',
@@ -53,46 +53,46 @@
           <mock twine logs>
       
       Published 'example_97db95eb-0.0.0.tar.gz'
-      Published example_97db95eb_a-1.0.0-py3-none-any.whl in [TIME]:
+      Published example_a_97db95eb-1.0.0-py3-none-any.whl in [TIME]:
       
           <mock twine logs>
       
-      Published 'example_97db95eb_a-1.0.0-py3-none-any.whl'
-      Published example_97db95eb_a-1.0.0.tar.gz in [TIME]:
+      Published 'example_a_97db95eb-1.0.0-py3-none-any.whl'
+      Published example_a_97db95eb-1.0.0.tar.gz in [TIME]:
       
           <mock twine logs>
       
-      Published 'example_97db95eb_a-1.0.0.tar.gz'
-      Published example_97db95eb_b-1.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_a_97db95eb-1.0.0.tar.gz'
+      Published example_b_97db95eb-1.0.0-py3-none-any.whl in [TIME]:
       
           <mock twine logs>
       
-      Published 'example_97db95eb_b-1.0.0-py3-none-any.whl'
-      Published example_97db95eb_b-1.0.0.tar.gz in [TIME]:
+      Published 'example_b_97db95eb-1.0.0-py3-none-any.whl'
+      Published example_b_97db95eb-1.0.0.tar.gz in [TIME]:
       
           <mock twine logs>
       
-      Published 'example_97db95eb_b-1.0.0.tar.gz'
-      Published example_97db95eb_b-2.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_b_97db95eb-1.0.0.tar.gz'
+      Published example_b_97db95eb-2.0.0-py3-none-any.whl in [TIME]:
       
           <mock twine logs>
       
-      Published 'example_97db95eb_b-2.0.0-py3-none-any.whl'
-      Published example_97db95eb_b-2.0.0.tar.gz in [TIME]:
+      Published 'example_b_97db95eb-2.0.0-py3-none-any.whl'
+      Published example_b_97db95eb-2.0.0.tar.gz in [TIME]:
       
           <mock twine logs>
       
-      Published 'example_97db95eb_b-2.0.0.tar.gz'
-      Published example_97db95eb_b-3.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_b_97db95eb-2.0.0.tar.gz'
+      Published example_b_97db95eb-3.0.0-py3-none-any.whl in [TIME]:
       
           <mock twine logs>
       
-      Published 'example_97db95eb_b-3.0.0-py3-none-any.whl'
-      Published example_97db95eb_b-3.0.0.tar.gz in [TIME]:
+      Published 'example_b_97db95eb-3.0.0-py3-none-any.whl'
+      Published example_b_97db95eb-3.0.0.tar.gz in [TIME]:
       
           <mock twine logs>
       
-      Published 'example_97db95eb_b-3.0.0.tar.gz'
+      Published 'example_b_97db95eb-3.0.0.tar.gz'
   
     ''',
     'stdout': '''
@@ -153,46 +153,46 @@
           <twine happy message>
       
       Published 'example_97db95eb-0.0.0.tar.gz'
-      Published example_97db95eb_a-1.0.0-py3-none-any.whl in [TIME]:
+      Published example_a_97db95eb-1.0.0-py3-none-any.whl in [TIME]:
       
           <twine happy message>
       
-      Published 'example_97db95eb_a-1.0.0-py3-none-any.whl'
-      Published example_97db95eb_a-1.0.0.tar.gz in [TIME]:
+      Published 'example_a_97db95eb-1.0.0-py3-none-any.whl'
+      Published example_a_97db95eb-1.0.0.tar.gz in [TIME]:
       
           <twine happy message>
       
-      Published 'example_97db95eb_a-1.0.0.tar.gz'
-      Published example_97db95eb_b-1.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_a_97db95eb-1.0.0.tar.gz'
+      Published example_b_97db95eb-1.0.0-py3-none-any.whl in [TIME]:
       
           <twine happy message>
       
-      Published 'example_97db95eb_b-1.0.0-py3-none-any.whl'
-      Published example_97db95eb_b-1.0.0.tar.gz in [TIME]:
+      Published 'example_b_97db95eb-1.0.0-py3-none-any.whl'
+      Published example_b_97db95eb-1.0.0.tar.gz in [TIME]:
       
           <twine happy message>
       
-      Published 'example_97db95eb_b-1.0.0.tar.gz'
-      Published example_97db95eb_b-2.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_b_97db95eb-1.0.0.tar.gz'
+      Published example_b_97db95eb-2.0.0-py3-none-any.whl in [TIME]:
       
           <twine happy message>
       
-      Published 'example_97db95eb_b-2.0.0-py3-none-any.whl'
-      Published example_97db95eb_b-2.0.0.tar.gz in [TIME]:
+      Published 'example_b_97db95eb-2.0.0-py3-none-any.whl'
+      Published example_b_97db95eb-2.0.0.tar.gz in [TIME]:
       
           <twine happy message>
       
-      Published 'example_97db95eb_b-2.0.0.tar.gz'
-      Published example_97db95eb_b-3.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_b_97db95eb-2.0.0.tar.gz'
+      Published example_b_97db95eb-3.0.0-py3-none-any.whl in [TIME]:
       
           <twine happy message>
       
-      Published 'example_97db95eb_b-3.0.0-py3-none-any.whl'
-      Published example_97db95eb_b-3.0.0.tar.gz in [TIME]:
+      Published 'example_b_97db95eb-3.0.0-py3-none-any.whl'
+      Published example_b_97db95eb-3.0.0.tar.gz in [TIME]:
       
           <twine happy message>
       
-      Published 'example_97db95eb_b-3.0.0.tar.gz'
+      Published 'example_b_97db95eb-3.0.0.tar.gz'
   
     ''',
     'stdout': '''

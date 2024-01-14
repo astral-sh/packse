@@ -11,7 +11,7 @@ from packse.scenario import (
     Package,
     Scenario,
     load_scenarios,
-    scenario_prefix,
+    scenario_version,
 )
 
 logger = logging.getLogger(__name__)
@@ -35,9 +35,10 @@ def view(targets: list[Path], name: str | None = None, short_names: bool = False
     for scenario in scenarios:
         if (
             name is not None
-            # Allow user to provide the name with or without the prefix
+            # Allow user to provide the name with or without the version / name
             and scenario.name != name
-            and scenario_prefix(scenario, short_names) != name
+            and f"{scenario.name}-{scenario_version(scenario)}" != name
+            and scenario_version(scenario) != name
         ):
             logging.debug("Skipping %s", scenario.name)
             continue
@@ -55,9 +56,11 @@ def view(targets: list[Path], name: str | None = None, short_names: bool = False
 
 
 def view_scenario(scenario: Scenario, short_names: bool):
-    prefix = scenario_prefix(scenario, short_names)
+    name = scenario_version(scenario)
+    if not short_names:
+        name = f"{scenario.name}-{name}"
 
-    print(prefix)
+    print(name)
     print(dependency_tree(scenario))
 
 
