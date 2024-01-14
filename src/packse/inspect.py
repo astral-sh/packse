@@ -10,14 +10,14 @@ from packse.error import FileNotFound, InvalidScenario
 from packse.scenario import (
     Scenario,
     load_scenarios,
-    scenario_prefix,
+    scenario_version,
 )
 from packse.view import dependency_tree
 
 logger = logging.getLogger(__name__)
 
 
-def inspect(targets: list[Path], skip_invalid: bool = False, short_names: bool = False):
+def inspect(targets: list[Path], skip_invalid: bool = False):
     scenarios_by_path: dict[Path, list[Scenario]] = {}
 
     # Validate and collect all targets first
@@ -40,7 +40,7 @@ def inspect(targets: list[Path], skip_invalid: bool = False, short_names: bool =
 
             raw = scenario.dict()
             raw["source"] = str(source)
-            raw["prefix"] = scenario_prefix(scenario, short_names)
+            raw["version"] = scenario_version(scenario)
             raw["tree"] = dependency_tree(scenario).splitlines()
             result["scenarios"].append(raw)
 

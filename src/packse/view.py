@@ -11,7 +11,7 @@ from packse.scenario import (
     Package,
     Scenario,
     load_scenarios,
-    scenario_prefix,
+    scenario_version,
 )
 
 logger = logging.getLogger(__name__)
@@ -35,9 +35,10 @@ def view(targets: list[Path], name: str | None = None, short_names: bool = False
     for scenario in scenarios:
         if (
             name is not None
-            # Allow user to provide the name with or without the prefix
+            # Allow user to provide the name with or without the version / name
             and scenario.name != name
-            and scenario_prefix(scenario, short_names) != name
+            and f"{scenario.name}-{scenario_version(scenario)}" != name
+            and scenario_version(scenario) != name
         ):
             logging.debug("Skipping %s", scenario.name)
             continue
@@ -55,9 +56,11 @@ def view(targets: list[Path], name: str | None = None, short_names: bool = False
 
 
 def view_scenario(scenario: Scenario, short_names: bool):
-    prefix = scenario_prefix(scenario, short_names)
+    name = scenario_version(scenario)
+    if not short_names:
+        name = f"{scenario.name}-{name}"
 
-    print(prefix)
+    print(name)
     print(dependency_tree(scenario))
 
 
@@ -82,26 +85,39 @@ def dependency_tree(scenario: Scenario) -> str:
     ):
         versions = packages[package].versions
         if for_requirement:
-            versions = [
-                version
-                for version in versions
+            versions = {
+                version: metadata
+                for version, metadata in versions.items()
                 if for_requirement.specifier.contains(version)
-            ]
+            }
 
             if not versions:
                 yield prefix + last + "unsatisfied: no matching version"
                 return
 
-        pointers = [tee] * (len(versions) - 1) + [last]
-        for pointer, version in zip(pointers, versions):
+        show_versions = []
+        for version, version_metadata in versions.items():
+            show_versions.append(
+                (
+                    version,
+                    version_metadata.requires
+                    + [f"python{version_metadata.requires_python}"],
+                )
+            )
+            extras = version_metadata.extras
+
+            for extra, extra_depends in extras.items():
+                show_versions.append((f"{version}[{extra}]", extra_depends))
+
+        pointers = [tee] * (len(show_versions) - 1) + [last]
+        for pointer, (version, requirements) in zip(pointers, show_versions):
             message = "satisfied by " if for_requirement and package else ""
             yield prefix + pointer + message + f"{package}-{version}"
 
             if not for_requirement:
                 extension = branch if pointer == tee else space
                 yield from render_requirements(
-                    versions[version].requires
-                    + [f"python{versions[version].requires_python}"],
+                    requirements,
                     prefix=prefix + extension,
                 )
 

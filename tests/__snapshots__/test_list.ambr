@@ -46,6 +46,13 @@
       excluded-only-compatible-version-d28c9e3c
       dependency-excludes-range-of-compatible-versions-2023222f
       dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208
+      extra-required-76e5355c
+      missing-extra-0997c767
+      multiple-extras-required-e55f15c4
+      extra-incompatible-with-extra-bf480858
+      extra-incompatible-with-extra-not-requested-06ed3759
+      extra-incompatible-with-root-b3bfe512
+      extra-does-not-exist-backtrack-49778327
       direct-incompatible-versions-80d82ee8
       transitive-incompatible-with-root-version-a967e815
       transitive-incompatible-with-transitive-6866d8dc
@@ -97,6 +104,14 @@
           excluded-only-compatible-version-d28c9e3c
           dependency-excludes-range-of-compatible-versions-2023222f
           dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208
+      scenarios/extras.json
+          extra-required-76e5355c
+          missing-extra-0997c767
+          multiple-extras-required-e55f15c4
+          extra-incompatible-with-extra-bf480858
+          extra-incompatible-with-extra-not-requested-06ed3759
+          extra-incompatible-with-root-b3bfe512
+          extra-does-not-exist-backtrack-49778327
       scenarios/incompatible-versions.json
           direct-incompatible-versions-80d82ee8
           transitive-incompatible-with-root-version-a967e815
@@ -152,6 +167,14 @@
           excluded-only-compatible-version
           dependency-excludes-range-of-compatible-versions
           dependency-excludes-non-contiguous-range-of-compatible-versions
+      scenarios/extras.json
+          extra-required
+          missing-extra
+          multiple-extras-required
+          extra-incompatible-with-extra
+          extra-incompatible-with-extra-not-requested
+          extra-incompatible-with-root
+          extra-does-not-exist-backtrack
       scenarios/incompatible-versions.json
           direct-incompatible-versions
           transitive-incompatible-with-root-version
@@ -205,51 +228,59 @@
     'stderr': '',
     'stdout': '''
       scenarios/does-not-exist.json
-          s57cd4136
-          seaa03067
-          s6e8e01df
-          se45cec3c
-          saca2796a
+          57cd4136
+          eaa03067
+          6e8e01df
+          e45cec3c
+          aca2796a
       scenarios/example.json
-          s97db95eb
+          97db95eb
       scenarios/excluded.json
-          s7a9ed79c
-          sd28c9e3c
-          s2023222f
-          saece4208
+          7a9ed79c
+          d28c9e3c
+          2023222f
+          aece4208
+      scenarios/extras.json
+          76e5355c
+          0997c767
+          e55f15c4
+          bf480858
+          06ed3759
+          b3bfe512
+          49778327
       scenarios/incompatible-versions.json
-          s80d82ee8
-          sa967e815
-          s6866d8dc
+          80d82ee8
+          a967e815
+          6866d8dc
       scenarios/prereleases.json
-          s9a1b3dda
-          s19673198
-          s51f94da2
-          seebe53a6
-          s9d4725eb
-          s6cc95bc8
-          sc97845e2
-          se290bf29
-          sf5948c28
-          s44ebef16
-          s27759187
-          s26efb6c5
-          sc7ad0310
-          sa05f7cb8
-          s02ae765c
-          sef9ce80f
+          9a1b3dda
+          19673198
+          51f94da2
+          eebe53a6
+          9d4725eb
+          6cc95bc8
+          c97845e2
+          e290bf29
+          f5948c28
+          44ebef16
+          27759187
+          26efb6c5
+          c7ad0310
+          a05f7cb8
+          02ae765c
+          ef9ce80f
       scenarios/requires-python.json
-          s0825b69c
-          sf9296b84
-          sa11d5394
-          s02dc550c
-          sef060cef
-          s1bde0c18
+          0825b69c
+          f9296b84
+          a11d5394
+          02dc550c
+          ef060cef
+          1bde0c18
       scenarios/wheels.json
-          s74e4a459
-          s4f019491
-          s614d801c
-          s737bbfd4
+          74e4a459
+          4f019491
+          614d801c
+          737bbfd4
   
     ''',
   })
