@@ -1,0 +1,32 @@
+[
+    {
+        "name": "existing-extra-required",
+        "description": "Optional dependencies are requested for the package.",
+        "root": {
+            "requires": [
+                "a[extra]"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "extras": {
+                            "extra": [
+                                "b"
+                            ]
+                        }
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true
+        }
+    }
+]

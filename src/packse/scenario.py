@@ -20,6 +20,7 @@ class PackageMetadata(msgspec.Struct):
 
     requires_python: str | None = ">=3.7"
     requires: list[VersionSpec] = []
+    extras: dict[str, list[VersionSpec]] = {}
     sdist: bool = True
     wheel: bool = True
     wheel_tags: list[str] = []
@@ -33,6 +34,10 @@ class PackageMetadata(msgspec.Struct):
         hasher.update((self.requires_python or "").encode())
         for require in self.requires:
             hasher.update(require.encode())
+        for extra_name, depends in self.extras.items():
+            hasher.update(extra_name.encode())
+            for depend in depends:
+                hasher.update(depend.encode())
         hasher.update(self.sdist.to_bytes())
         hasher.update(self.wheel.to_bytes())
         if self.wheel:

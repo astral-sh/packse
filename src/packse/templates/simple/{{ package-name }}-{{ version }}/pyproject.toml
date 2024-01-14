@@ -16,3 +16,9 @@ dependencies = [{{# dependencies }}
 {{/ dependencies }}]
 requires-python = "{{ requires-python }}"
 description = "{{ description }}"
+{{# optional-dependencies }}
+[project.optional-dependencies]
+{{ name }} = [{{# dependencies }}
+    "{{ . }}",
+{{/ dependencies }}]
+{{/ optional-dependencies }}

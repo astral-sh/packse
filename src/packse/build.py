@@ -196,6 +196,15 @@ def build_scenario_package(
                     package_version.requires,
                     short_names,
                 ),
+                "optional-dependencies": [
+                    {
+                        "name": extra,
+                        "dependencies": format_dependencies(
+                            scenario.name, scenario_version, depends, short_names
+                        ),
+                    }
+                    for extra, depends in package_version.extras.items()
+                ],
                 "requires-python": package_version.requires_python,
                 "description": package_version.description,
             },
@@ -338,6 +347,7 @@ def build_package(
             "module-name": module_name,
             "version": version,
             "dependencies": [],
+            "optional-dependencies": [],
             "requires-python": package_version.requires_python,
             "description": package_version.description,
         },
