@@ -24,7 +24,6 @@ from packse.scenario import (
     Package,
     PackageMetadata,
     Scenario,
-    format_dependencies,
     load_scenarios,
     scenario_version,
 )
@@ -190,18 +189,21 @@ def build_scenario_package(
                 "package-name": package_name,
                 "module-name": module_name,
                 "version": version,
-                "dependencies": format_dependencies(
-                    scenario.name,
-                    scenario_version,
-                    package_version.requires,
-                    short_names,
-                ),
+                "dependencies": [
+                    requirement.with_unique_name(
+                        scenario, scenario_version, short_names
+                    )
+                    for requirement in package_version.requires
+                ],
                 "optional-dependencies": [
                     {
                         "name": extra,
-                        "dependencies": format_dependencies(
-                            scenario.name, scenario_version, depends, short_names
-                        ),
+                        "dependencies": [
+                            requirement.with_unique_name(
+                                scenario, scenario_version, short_names
+                            )
+                            for requirement in depends
+                        ],
                     }
                     for extra, depends in package_version.extras.items()
                 ],

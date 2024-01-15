@@ -43,9 +43,9 @@
       transitive-requires-package-does-not-exist-aca2796a
       example-97db95eb
       excluded-only-version-7a9ed79c
-      excluded-only-compatible-version-d28c9e3c
-      dependency-excludes-range-of-compatible-versions-2023222f
-      dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208
+      excluded-only-compatible-version-b6b89642
+      dependency-excludes-range-of-compatible-versions-1cd99bd0
+      dependency-excludes-non-contiguous-range-of-compatible-versions-0fd25b39
       extra-required-76e5355c
       missing-extra-0997c767
       multiple-extras-required-e55f15c4
@@ -68,10 +68,10 @@
       transitive-package-only-prereleases-44ebef16
       transitive-package-only-prereleases-in-range-27759187
       transitive-package-only-prereleases-in-range-opt-in-26efb6c5
-      transitive-prerelease-and-stable-dependency-c7ad0310
-      transitive-prerelease-and-stable-dependency-opt-in-a05f7cb8
-      transitive-prerelease-and-stable-dependency-many-versions-02ae765c
-      transitive-prerelease-and-stable-dependency-many-versions-holes-ef9ce80f
+      transitive-prerelease-and-stable-dependency-f8aeea37
+      transitive-prerelease-and-stable-dependency-opt-in-184fc65f
+      transitive-prerelease-and-stable-dependency-many-versions-7017673e
+      transitive-prerelease-and-stable-dependency-many-versions-holes-aaee5052
       requires-python-version-does-not-exist-0825b69c
       requires-python-version-less-than-current-f9296b84
       requires-python-version-greater-than-current-a11d5394
@@ -101,9 +101,9 @@
           example-97db95eb
       scenarios/excluded.json
           excluded-only-version-7a9ed79c
-          excluded-only-compatible-version-d28c9e3c
-          dependency-excludes-range-of-compatible-versions-2023222f
-          dependency-excludes-non-contiguous-range-of-compatible-versions-aece4208
+          excluded-only-compatible-version-b6b89642
+          dependency-excludes-range-of-compatible-versions-1cd99bd0
+          dependency-excludes-non-contiguous-range-of-compatible-versions-0fd25b39
       scenarios/extras.json
           extra-required-76e5355c
           missing-extra-0997c767
@@ -129,10 +129,10 @@
           transitive-package-only-prereleases-44ebef16
           transitive-package-only-prereleases-in-range-27759187
           transitive-package-only-prereleases-in-range-opt-in-26efb6c5
-          transitive-prerelease-and-stable-dependency-c7ad0310
-          transitive-prerelease-and-stable-dependency-opt-in-a05f7cb8
-          transitive-prerelease-and-stable-dependency-many-versions-02ae765c
-          transitive-prerelease-and-stable-dependency-many-versions-holes-ef9ce80f
+          transitive-prerelease-and-stable-dependency-f8aeea37
+          transitive-prerelease-and-stable-dependency-opt-in-184fc65f
+          transitive-prerelease-and-stable-dependency-many-versions-7017673e
+          transitive-prerelease-and-stable-dependency-many-versions-holes-aaee5052
       scenarios/requires-python.json
           requires-python-version-does-not-exist-0825b69c
           requires-python-version-less-than-current-f9296b84
@@ -237,9 +237,9 @@
           97db95eb
       scenarios/excluded.json
           7a9ed79c
-          d28c9e3c
-          2023222f
-          aece4208
+          b6b89642
+          1cd99bd0
+          0fd25b39
       scenarios/extras.json
           76e5355c
           0997c767
@@ -265,10 +265,10 @@
           44ebef16
           27759187
           26efb6c5
-          c7ad0310
-          a05f7cb8
-          02ae765c
-          ef9ce80f
+          f8aeea37
+          184fc65f
+          7017673e
+          aaee5052
       scenarios/requires-python.json
           0825b69c
           f9296b84

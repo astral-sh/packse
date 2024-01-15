@@ -4,11 +4,10 @@ View package tree for the given scenarios.
 import logging
 from pathlib import Path
 
-from packaging.requirements import Requirement
-
 from packse.error import FileNotFound, InvalidScenario
 from packse.scenario import (
     Package,
+    Requirement,
     Scenario,
     load_scenarios,
     scenario_version,
@@ -101,7 +100,7 @@ def dependency_tree(scenario: Scenario) -> str:
                 (
                     version,
                     version_metadata.requires
-                    + [f"python{version_metadata.requires_python}"],
+                    + [Requirement(f"python{version_metadata.requires_python}")],
                 )
             )
             extras = version_metadata.extras
@@ -121,18 +120,15 @@ def dependency_tree(scenario: Scenario) -> str:
                     prefix=prefix + extension,
                 )
 
-    def render_requirements(requirements: list[str], prefix: str = ""):
+    def render_requirements(requirements: list[Requirement], prefix: str = ""):
         for index, requirement in enumerate(requirements):
-            # TODO: Consider avoiding parsing the requirement twice
-            parsed_requirement = Requirement(requirement)
-
             # Skip display of Python requirements that are satisfied and not complex
             # We do this before the following iteration so the pointers are correct
             if (
-                parsed_requirement.name == "python"
-                and parsed_requirement.specifier.contains(scenario.environment.python)
-                and len(parsed_requirement.specifier) == 1
-                and next(iter(parsed_requirement.specifier)).version
+                requirement.name == "python"
+                and requirement.specifier.contains(scenario.environment.python)
+                and len(requirement.specifier) == 1
+                and next(iter(requirement.specifier)).version
                 == scenario.environment.python
             ):
                 requirements = requirements.copy()
@@ -140,28 +136,24 @@ def dependency_tree(scenario: Scenario) -> str:
 
         pointers = [tee] * (len(requirements) - 1) + [last]
         for pointer, requirement in zip(pointers, sorted(requirements)):
-            parsed_requirement = Requirement(requirement)
-
             # Display `requires-python`
-            if parsed_requirement.name == "python":
+            if requirement.name == "python":
                 suffix = (
                     " (incompatible with environment)"
-                    if not parsed_requirement.specifier.contains(
-                        scenario.environment.python
-                    )
+                    if not requirement.specifier.contains(scenario.environment.python)
                     else ""
                 )
-                yield prefix + pointer + "requires " + requirement + suffix
+                yield prefix + pointer + "requires " + str(requirement) + suffix
                 continue
 
-            yield prefix + pointer + "requires " + requirement
+            yield prefix + pointer + "requires " + str(requirement)
 
-            if parsed_requirement.name in packages:
+            if requirement.name in packages:
                 extension = branch if pointer == tee else space
                 yield from render_versions(
-                    parsed_requirement.name,
+                    requirement.name,
                     prefix=prefix + extension,
-                    for_requirement=parsed_requirement,
+                    for_requirement=requirement,
                 )
             else:
                 yield prefix + space + last + "unsatisfied: no versions for package"

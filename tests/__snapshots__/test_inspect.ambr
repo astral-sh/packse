@@ -691,7 +691,7 @@
               "requires_python": ">=3.7",
               "requires": [
                 "a!=2.0.0",
-                "b>=2.0.0,<3.0.0"
+                "b<3.0.0,>=2.0.0"
               ]
             },
             "expected": {
@@ -706,7 +706,7 @@
             "template": "simple",
             "description": "Only one version of the requested package `a` is compatible, but the user has banned that version.",
             "source": "[PWD]/scenarios/excluded.json",
-            "version": "d28c9e3c",
+            "version": "b6b89642",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -714,7 +714,7 @@
               "\u2502   \u251c\u2500\u2500 requires a!=2.0.0",
               "\u2502   \u2502   \u251c\u2500\u2500 satisfied by a-1.0.0",
               "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-3.0.0",
-              "\u2502   \u2514\u2500\u2500 requires b>=2.0.0,<3.0.0",
+              "\u2502   \u2514\u2500\u2500 requires b<3.0.0,>=2.0.0",
               "\u2502       \u2514\u2500\u2500 satisfied by b-2.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u251c\u2500\u2500 a-1.0.0",
@@ -867,7 +867,7 @@
               "requires_python": ">=3.7",
               "requires": [
                 "a",
-                "b>=2.0.0,<3.0.0",
+                "b<3.0.0,>=2.0.0",
                 "c"
               ]
             },
@@ -883,7 +883,7 @@
             "template": "simple",
             "description": "There is a range of compatible versions for the requested package `a`, but another dependency `c` excludes that range.",
             "source": "[PWD]/scenarios/excluded.json",
-            "version": "2023222f",
+            "version": "1cd99bd0",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -895,7 +895,7 @@
               "\u2502   \u2502   \u251c\u2500\u2500 satisfied by a-2.2.0",
               "\u2502   \u2502   \u251c\u2500\u2500 satisfied by a-2.3.0",
               "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-3.0.0",
-              "\u2502   \u251c\u2500\u2500 requires b>=2.0.0,<3.0.0",
+              "\u2502   \u251c\u2500\u2500 requires b<3.0.0,>=2.0.0",
               "\u2502   \u2502   \u2514\u2500\u2500 satisfied by b-2.0.0",
               "\u2502   \u2514\u2500\u2500 requires c",
               "\u2502       \u251c\u2500\u2500 satisfied by c-1.0.0",
@@ -1080,7 +1080,7 @@
               "requires_python": ">=3.7",
               "requires": [
                 "a",
-                "b>=2.0.0,<3.0.0",
+                "b<3.0.0,>=2.0.0",
                 "c"
               ]
             },
@@ -1096,7 +1096,7 @@
             "template": "simple",
             "description": "There is a non-contiguous range of compatible versions for the requested package `a`, but another dependency `c` excludes the range. This is the same as `dependency-excludes-range-of-compatible-versions` but some of the versions of `a` are incompatible for another reason e.g. dependency on non-existant package `d`.",
             "source": "[PWD]/scenarios/excluded.json",
-            "version": "aece4208",
+            "version": "0fd25b39",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -1109,7 +1109,7 @@
               "\u2502   \u2502   \u251c\u2500\u2500 satisfied by a-2.3.0",
               "\u2502   \u2502   \u251c\u2500\u2500 satisfied by a-2.4.0",
               "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-3.0.0",
-              "\u2502   \u251c\u2500\u2500 requires b>=2.0.0,<3.0.0",
+              "\u2502   \u251c\u2500\u2500 requires b<3.0.0,>=2.0.0",
               "\u2502   \u2502   \u2514\u2500\u2500 satisfied by b-2.0.0",
               "\u2502   \u2514\u2500\u2500 requires c",
               "\u2502       \u251c\u2500\u2500 satisfied by c-1.0.0",
@@ -2781,7 +2781,7 @@
                   "1.0.0": {
                     "requires_python": ">=3.7",
                     "requires": [
-                      "c>=1.0.0,<=3.0.0"
+                      "c<=3.0.0,>=1.0.0"
                     ],
                     "extras": {},
                     "sdist": true,
@@ -2833,7 +2833,7 @@
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "c7ad0310",
+            "version": "f8aeea37",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -2848,7 +2848,7 @@
               "\u2502           \u2514\u2500\u2500 satisfied by c-2.0.0b1",
               "\u251c\u2500\u2500 b",
               "\u2502   \u2514\u2500\u2500 b-1.0.0",
-              "\u2502       \u2514\u2500\u2500 requires c>=1.0.0,<=3.0.0",
+              "\u2502       \u2514\u2500\u2500 requires c<=3.0.0,>=1.0.0",
               "\u2502           \u2514\u2500\u2500 satisfied by c-1.0.0",
               "\u2514\u2500\u2500 c",
               "    \u251c\u2500\u2500 c-1.0.0",
@@ -2878,7 +2878,7 @@
                   "1.0.0": {
                     "requires_python": ">=3.7",
                     "requires": [
-                      "c>=1.0.0,<=3.0.0"
+                      "c<=3.0.0,>=1.0.0"
                     ],
                     "extras": {},
                     "sdist": true,
@@ -2935,7 +2935,7 @@
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. The user includes an opt-in to prereleases of the transitive dependency.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "a05f7cb8",
+            "version": "184fc65f",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -2953,7 +2953,7 @@
               "\u2502           \u2514\u2500\u2500 satisfied by c-2.0.0b1",
               "\u251c\u2500\u2500 b",
               "\u2502   \u2514\u2500\u2500 b-1.0.0",
-              "\u2502       \u2514\u2500\u2500 requires c>=1.0.0,<=3.0.0",
+              "\u2502       \u2514\u2500\u2500 requires c<=3.0.0,>=1.0.0",
               "\u2502           \u2514\u2500\u2500 satisfied by c-1.0.0",
               "\u2514\u2500\u2500 c",
               "    \u251c\u2500\u2500 c-1.0.0",
@@ -2983,7 +2983,7 @@
                   "1.0.0": {
                     "requires_python": ">=3.7",
                     "requires": [
-                      "c>=1.0.0,<=3.0.0"
+                      "c<=3.0.0,>=1.0.0"
                     ],
                     "extras": {},
                     "sdist": true,
@@ -3188,7 +3188,7 @@
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. There are many prerelease versions.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "02ae765c",
+            "version": "7017673e",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -3211,7 +3211,7 @@
               "\u2502           \u2514\u2500\u2500 satisfied by c-2.0.0b9",
               "\u251c\u2500\u2500 b",
               "\u2502   \u2514\u2500\u2500 b-1.0.0",
-              "\u2502       \u2514\u2500\u2500 requires c>=1.0.0,<=3.0.0",
+              "\u2502       \u2514\u2500\u2500 requires c<=3.0.0,>=1.0.0",
               "\u2502           \u2514\u2500\u2500 satisfied by c-1.0.0",
               "\u2514\u2500\u2500 c",
               "    \u251c\u2500\u2500 c-1.0.0",
@@ -3243,7 +3243,7 @@
                   "1.0.0": {
                     "requires_python": ">=3.7",
                     "requires": [
-                      "c>1.0.0,!=2.0.0a5,!=2.0.0a6,!=2.0.0a7,!=2.0.0b1,<2.0.0b5"
+                      "c!=2.0.0a5,!=2.0.0a6,!=2.0.0a7,!=2.0.0b1,<2.0.0b5,>1.0.0"
                     ],
                     "extras": {},
                     "sdist": true,
@@ -3258,7 +3258,7 @@
                   "1.0.0": {
                     "requires_python": ">=3.7",
                     "requires": [
-                      "c>=1.0.0,<=3.0.0"
+                      "c<=3.0.0,>=1.0.0"
                     ],
                     "extras": {},
                     "sdist": true,
@@ -3463,7 +3463,7 @@
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. There are many prerelease versions and some are excluded.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "ef9ce80f",
+            "version": "aaee5052",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
@@ -3474,11 +3474,11 @@
               "\u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u2514\u2500\u2500 requires c>1.0.0,!=2.0.0a5,!=2.0.0a6,!=2.0.0a7,!=2.0.0b1,<2.0.0b5",
+              "\u2502       \u2514\u2500\u2500 requires c!=2.0.0a5,!=2.0.0a6,!=2.0.0a7,!=2.0.0b1,<2.0.0b5,>1.0.0",
               "\u2502           \u2514\u2500\u2500 unsatisfied: no matching version",
               "\u251c\u2500\u2500 b",
               "\u2502   \u2514\u2500\u2500 b-1.0.0",
-              "\u2502       \u2514\u2500\u2500 requires c>=1.0.0,<=3.0.0",
+              "\u2502       \u2514\u2500\u2500 requires c<=3.0.0,>=1.0.0",
               "\u2502           \u2514\u2500\u2500 satisfied by c-1.0.0",
               "\u2514\u2500\u2500 c",
               "    \u251c\u2500\u2500 c-1.0.0",
