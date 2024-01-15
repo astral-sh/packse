@@ -2,15 +2,47 @@ import hashlib
 import json
 import os
 from pathlib import Path
+from typing import Any, Self, Type
 
 import msgspec
 import packaging.requirements
+import packaging.specifiers
 
 from packse.template import load_template_config
 
 type PackageName = str
-type PackageVersion = str
-type VersionSpec = str
+type PackageVersion = (
+    str  # TODO(zanieb): Consider replacing with `packaging.version.Version`
+)
+
+
+class Requirement(packaging.requirements.Requirement):
+    """
+    A wrapper for a standard Python requirement e.g. `foo>=1.0.0`
+    """
+
+    def __lt__(self, other: Any) -> True:
+        """
+        Sort by name for display purposes.
+        """
+        if not isinstance(other, type(self)):
+            return NotImplemented
+        return self.name < other.name
+
+    def with_unique_name(
+        self,
+        scenario: "Scenario",
+        scenario_version: str,
+        short_names: bool,
+    ) -> type[Self]:
+        """
+        Return a copy of self with scenario metadata in the name
+        """
+        new = type(self)(str(self))
+        new.name = self.name + "-" + scenario_version
+        if not short_names:
+            new.name = scenario.name + "-" + new.name
+        return new
 
 
 class PackageMetadata(msgspec.Struct):
@@ -19,8 +51,8 @@ class PackageMetadata(msgspec.Struct):
     """
 
     requires_python: str | None = ">=3.7"
-    requires: list[VersionSpec] = []
-    extras: dict[str, list[VersionSpec]] = {}
+    requires: list[Requirement] = []
+    extras: dict[str, list[Requirement]] = {}
     sdist: bool = True
     wheel: bool = True
     wheel_tags: list[str] = []
@@ -32,12 +64,12 @@ class PackageMetadata(msgspec.Struct):
         """
         hasher = hashlib.new("md5", usedforsecurity=False)
         hasher.update((self.requires_python or "").encode())
-        for require in self.requires:
-            hasher.update(require.encode())
-        for extra_name, depends in self.extras.items():
+        for requirement in self.requires:
+            hasher.update(str(requirement).encode())
+        for extra_name, requirements in self.extras.items():
             hasher.update(extra_name.encode())
-            for depend in depends:
-                hasher.update(depend.encode())
+            for requirement in requirements:
+                hasher.update(str(requirement).encode())
         hasher.update(self.sdist.to_bytes())
         hasher.update(self.wheel.to_bytes())
         if self.wheel:
@@ -46,10 +78,14 @@ class PackageMetadata(msgspec.Struct):
         hasher.update(self.description.encode())
         return hasher.hexdigest()
 
+    def dict(self) -> dict:
+        enc = msgspec.json.Encoder(enc_hook=enc_hook)
+        return json.loads(enc.encode(self))
+
 
 class RootPackageMetadata(msgspec.Struct):
     requires_python: str | None = ">=3.7"
-    requires: list[VersionSpec] = []
+    requires: list[Requirement] = []
 
     def hash(self) -> str:
         """
@@ -57,8 +93,8 @@ class RootPackageMetadata(msgspec.Struct):
         """
         hasher = hashlib.new("md5", usedforsecurity=False)
         hasher.update((self.requires_python or "").encode())
-        for require in self.requires:
-            hasher.update(require.encode())
+        for requirement in self.requires:
+            hasher.update(str(requirement).encode())
         return hasher.hexdigest()
 
 
@@ -186,21 +222,24 @@ class Scenario(msgspec.Struct):
         return hasher.hexdigest()
 
     def dict(self) -> dict:
-        return json.loads(msgspec.json.encode(self))
+        enc = msgspec.json.Encoder(enc_hook=enc_hook)
+        return json.loads(enc.encode(self))
 
 
 def load_scenario(target: Path) -> Scenario:
     """
     Loads a scenario
     """
-    return msgspec.json.decode(target.read_text(), type=Scenario)
+    dec = msgspec.json.Decoder(Scenario, dec_hook=dec_hook)
+    return dec.decode(target.read_text())
 
 
 def load_many_scenarios(target: Path) -> list[Scenario]:
     """
     Loads a file with many scenarios
     """
-    return msgspec.json.decode(target.read_text(), type=list[Scenario])
+    dec = msgspec.json.Decoder(list[Scenario], dec_hook=dec_hook)
+    return dec.decode(target.read_text())
 
 
 def load_scenarios(target: Path) -> list[Scenario]:
@@ -225,19 +264,24 @@ def scenario_version(scenario: Scenario) -> str:
     return hasher.hexdigest()[:8]
 
 
-def format_dependencies(
-    scenario_name: str,
-    scenario_version: str,
-    dependencies: list[str],
-    short_names: bool,
-) -> list[str]:
-    result = []
-    for dependency in dependencies:
-        parsed = packaging.requirements.Requirement(dependency)
-        if short_names:
-            name = f"{parsed.name}-{scenario_version}"
-        else:
-            name = f"{scenario_name}-{parsed.name}-{scenario_version}"
+def dec_hook(type: Type, obj: Any) -> Any:
+    """
+    Custom decoding hook for `Requirement` types.
+    """
+    # `type` here is the value of the custom type annotation being decoded.
+    if type is Requirement:
+        # Convert `obj` (which should be a `str`) to a `Requirement`
+        return Requirement(obj)
+    else:
+        raise NotImplementedError(f"Objects of type {type} are not supported")
 
-        result.append(dependency.replace(parsed.name, name, 1))
-    return result
+
+def enc_hook(obj: Any) -> Any:
+    """
+    Custom encoding hook for `Requirement` types
+    """
+    if isinstance(obj, Requirement):
+        # convert the requirement to a str
+        return str(obj)
+    else:
+        raise NotImplementedError(f"Objects of type {type(obj)} are not supported")
