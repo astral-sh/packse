@@ -50,6 +50,7 @@
         },
         "expected": {
             "satisfiable": true,
+            "explanation": "Missing extras are ignored during resolution.",
             "packages": {
                 "a": "1.0.0"
             }
@@ -129,7 +130,7 @@
             }
         },
         "expected": {
-            "description": "Because both `extra_b` and `extra_c` are requested and they require incompatible versions of `b`, `a` cannot be installed.",
+            "explanation": "Because both `extra_b` and `extra_c` are requested and they require incompatible versions of `b`, `a` cannot be installed.",
             "satisfiable": false
         }
     },
@@ -165,7 +166,7 @@
         },
         "expected": {
             "satisfiable": true,
-            "description": "Because the user does not request both extras, it is okay that one is incompatible with the other.",
+            "explanation": "Because the user does not request both extras, it is okay that one is incompatible with the other.",
             "packages": {
                 "a": "1.0.0",
                 "b": "2.0.0"
@@ -201,7 +202,7 @@
             }
         },
         "expected": {
-            "description": "Because the user requested `b==2.0.0` but the requested extra requires `b==1.0.0`, the dependencies cannot be satisfied.",
+            "explanation": "Because the user requested `b==2.0.0` but the requested extra requires `b==1.0.0`, the dependencies cannot be satisfied.",
             "satisfiable": false
         }
     },
@@ -235,9 +236,9 @@
         },
         "expected": {
             "satisfiable": true,
+            "explanation": "Both `a` and `b` should successfully resolve, but we cannot say which version of `b` should be chosen. Resolvers may backtrack to 1.0.0 or may accept the latest version without the extra.",
             "packages": {
-                "a": "1.0.0",
-                "b": "1.0.0"
+                "a": "1.0.0"
             }
         }
     }
