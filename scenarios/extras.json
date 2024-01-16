@@ -236,9 +236,9 @@
         },
         "expected": {
             "satisfiable": true,
-            "explanation": "Both `a` and `b` should successfully resolve, but we cannot say which version of `b` should be chosen. Resolvers may backtrack to 1.0.0 or may accept the latest version without the extra.",
+            "explanation": "The resolver should not backtrack to `a==1.0.0` because missing extras are allowed during resolution. `b` should not be installed.",
             "packages": {
-                "a": "1.0.0"
+                "a": "3.0.0"
             }
         }
     }

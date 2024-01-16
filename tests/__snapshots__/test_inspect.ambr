@@ -1918,7 +1918,7 @@
             "name": "extra-does-not-exist-backtrack",
             "packages": [
               {
-                "name": "extra-does-not-exist-backtrack-a-0cb0c203",
+                "name": "extra-does-not-exist-backtrack-a-f1877db3",
                 "versions": [
                   {
                     "requires_python": ">=3.7",
@@ -1927,7 +1927,7 @@
                       {
                         "name": "extra",
                         "requires": [
-                          "extra-does-not-exist-backtrack-b-0cb0c203==1.0.0"
+                          "extra-does-not-exist-backtrack-b-f1877db3==1.0.0"
                         ]
                       }
                     ],
@@ -1960,7 +1960,7 @@
                 ]
               },
               {
-                "name": "extra-does-not-exist-backtrack-b-0cb0c203",
+                "name": "extra-does-not-exist-backtrack-b-f1877db3",
                 "versions": [
                   {
                     "requires_python": ">=3.7",
@@ -1979,9 +1979,9 @@
               "requires_python": ">=3.7",
               "requires": [
                 {
-                  "requirement": "extra-does-not-exist-backtrack-a-0cb0c203[extra]",
-                  "name": "extra-does-not-exist-backtrack-a-0cb0c203",
-                  "module_name": "extra_does_not_exist_backtrack_a_0cb0c203"
+                  "requirement": "extra-does-not-exist-backtrack-a-f1877db3[extra]",
+                  "name": "extra-does-not-exist-backtrack-a-f1877db3",
+                  "module_name": "extra_does_not_exist_backtrack_a_f1877db3"
                 }
               ]
             },
@@ -1989,12 +1989,12 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "extra-does-not-exist-backtrack-a-0cb0c203",
-                  "version": "1.0.0",
-                  "module_name": "extra_does_not_exist_backtrack_a_0cb0c203"
+                  "name": "extra-does-not-exist-backtrack-a-f1877db3",
+                  "version": "3.0.0",
+                  "module_name": "extra_does_not_exist_backtrack_a_f1877db3"
                 }
               ],
-              "explanation": "Both `a` and `b` should successfully resolve, but we cannot say which version of `b` should be chosen. Resolvers may backtrack to 1.0.0 or may accept the latest version without the extra."
+              "explanation": "The resolver should not backtrack to `a==1.0.0` because missing extras are allowed during resolution. `b` should not be installed."
             },
             "environment": {
               "python": "3.7",
@@ -2003,7 +2003,7 @@
             "template": "simple",
             "description": "Optional dependencies are requested for the package, the extra is only available on an older version.",
             "source": "[PWD]/scenarios/extras.json",
-            "version": "0cb0c203",
+            "version": "f1877db3",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.7",
