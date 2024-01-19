@@ -4227,6 +4227,16 @@
         __version__ = "3.5.0"
   
       ''',
+      'build/requires-python-version-greater-than-current-resolver-override-b6505624/requires-python-version-greater-than-current-resolver-override-a-b6505624-1.0.0/pyproject.toml': 'md5:945b47ad2d3c9d16ea9fca15e5b6fb09',
+      'build/requires-python-version-greater-than-current-resolver-override-b6505624/requires-python-version-greater-than-current-resolver-override-a-b6505624-1.0.0/src/requires_python_version_greater_than_current_resolver_override_a_b6505624/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-python-version-greater-than-current-resolver-override-b6505624/requires-python-version-greater-than-current-resolver-override-b6505624-0.0.0/pyproject.toml': 'md5:192c5daf47e38a1c547ef73535681b3e',
+      'build/requires-python-version-greater-than-current-resolver-override-b6505624/requires-python-version-greater-than-current-resolver-override-b6505624-0.0.0/src/requires_python_version_greater_than_current_resolver_override_b6505624/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
       'build/requires-python-version-less-than-current-f9296b84/requires-python-version-less-than-current-a-f9296b84-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
@@ -4306,6 +4316,9 @@
       'dist/requires-python-version-greater-than-current-many-02dc550c/requires_python_version_greater_than_current_many_a_02dc550c-3.4.0.tar.gz': 'md5:1e9ec418eb214356e70afa961c82b000',
       'dist/requires-python-version-greater-than-current-many-02dc550c/requires_python_version_greater_than_current_many_a_02dc550c-3.5.0-py3-none-any.whl': 'md5:4079af50b10073db7f3f676140137ad8',
       'dist/requires-python-version-greater-than-current-many-02dc550c/requires_python_version_greater_than_current_many_a_02dc550c-3.5.0.tar.gz': 'md5:98aa154730ebe866249538f9291be696',
+      'dist/requires-python-version-greater-than-current-resolver-override-b6505624/requires_python_version_greater_than_current_resolver_override_a_b6505624-1.0.0-py3-none-any.whl': 'md5:002b4046e8fca65ebed6fe87e60d03fa',
+      'dist/requires-python-version-greater-than-current-resolver-override-b6505624/requires_python_version_greater_than_current_resolver_override_a_b6505624-1.0.0.tar.gz': 'md5:8582c797e57ee499aedf90cc17a59361',
+      'dist/requires-python-version-greater-than-current-resolver-override-b6505624/requires_python_version_greater_than_current_resolver_override_b6505624-0.0.0.tar.gz': 'md5:5db82767c8157e40909e2c20c7985b9a',
       'dist/requires-python-version-less-than-current-f9296b84/requires_python_version_less_than_current_a_f9296b84-1.0.0-py2.py3-none-any.whl': 'md5:8aa6ec4552d2d3838e22df64299087ed',
       'dist/requires-python-version-less-than-current-f9296b84/requires_python_version_less_than_current_a_f9296b84-1.0.0.tar.gz': 'md5:f7d263a6f3cf0b1688776dbd6274877f',
       'dist/requires-python-version-less-than-current-f9296b84/requires_python_version_less_than_current_f9296b84-0.0.0.tar.gz': 'md5:1b598a99cb30deeec7bae819f1c03187',
@@ -4452,6 +4465,17 @@
         │   │       └── src
         │   │           └── requires_python_version_greater_than_current_many_a_02dc550c
         │   │               └── __init__.py
+        │   ├── requires-python-version-greater-than-current-resolver-override-b6505624
+        │   │   ├── requires-python-version-greater-than-current-resolver-override-a-b6505624-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_python_version_greater_than_current_resolver_override_a_b6505624
+        │   │   │           └── __init__.py
+        │   │   └── requires-python-version-greater-than-current-resolver-override-b6505624-0.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_python_version_greater_than_current_resolver_override_b6505624
+        │   │               └── __init__.py
         │   └── requires-python-version-less-than-current-f9296b84
         │       ├── requires-python-version-less-than-current-a-f9296b84-1.0.0
         │       │   ├── pyproject.toml
@@ -4518,12 +4542,16 @@
             │   ├── requires_python_version_greater_than_current_many_a_02dc550c-3.4.0.tar.gz
             │   ├── requires_python_version_greater_than_current_many_a_02dc550c-3.5.0-py3-none-any.whl
             │   └── requires_python_version_greater_than_current_many_a_02dc550c-3.5.0.tar.gz
+            ├── requires-python-version-greater-than-current-resolver-override-b6505624
+            │   ├── requires_python_version_greater_than_current_resolver_override_a_b6505624-1.0.0-py3-none-any.whl
+            │   ├── requires_python_version_greater_than_current_resolver_override_a_b6505624-1.0.0.tar.gz
+            │   └── requires_python_version_greater_than_current_resolver_override_b6505624-0.0.0.tar.gz
             └── requires-python-version-less-than-current-f9296b84
                 ├── requires_python_version_less_than_current_a_f9296b84-1.0.0-py2.py3-none-any.whl
                 ├── requires_python_version_less_than_current_a_f9296b84-1.0.0.tar.gz
                 └── requires_python_version_less_than_current_f9296b84-0.0.0.tar.gz
         
-        101 directories, 110 files
+        109 directories, 117 files
   
       ''',
     }),
@@ -4534,6 +4562,7 @@
       requires-python-version-greater-than-current-backtrack-ef060cef
       requires-python-version-greater-than-current-excluded-1bde0c18
       requires-python-version-greater-than-current-many-02dc550c
+      requires-python-version-greater-than-current-resolver-override-b6505624
       requires-python-version-less-than-current-f9296b84
   
     ''',
@@ -5617,6 +5646,16 @@
           │   └── requires python>=3.11 (incompatible with environment)
           └── a-4.0.0
               └── requires python>=3.12 (incompatible with environment)
+      
+      requires-python-version-greater-than-current-resolver-override-b6505624
+      ├── environment
+      │   └── python3.9
+      ├── root
+      │   └── requires a==1.0.0
+      │       └── satisfied by a-1.0.0
+      └── a
+          └── a-1.0.0
+              └── requires python>=3.10 (incompatible with environment)
       
   
     ''',

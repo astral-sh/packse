@@ -98,6 +98,22 @@ class RootPackageMetadata(msgspec.Struct):
         return hasher.hexdigest()
 
 
+class ResolverOptions(msgspec.Struct):
+    python: str | None
+    """
+    An optional Python version override.
+    """
+
+    def hash(self) -> str:
+        """
+        Return a hash of the contents
+        """
+        hasher = hashlib.new("md5", usedforsecurity=False)
+        if self.python is not None:
+            hasher.update(self.python.encode())
+        return hasher.hexdigest()
+
+
 class EnvironmentMetadata(msgspec.Struct):
     python: str = "3.7"
     """
@@ -196,6 +212,11 @@ class Scenario(msgspec.Struct):
     Metadata about the installation environment.
     """
 
+    resolver_options: ResolverOptions | None = None
+    """
+    Additional options for the package resolver
+    """
+
     template: str = "simple"
     """
     The template to use for scenario packages.
@@ -216,6 +237,8 @@ class Scenario(msgspec.Struct):
         hasher.update(self.root.hash().encode())
         hasher.update(self.environment.hash().encode())
         hasher.update(self.expected.hash().encode())
+        if self.resolver_options is not None:
+            hasher.update(self.resolver_options.hash().encode())
         for name, package in self.packages.items():
             hasher.update(name.encode())
             hasher.update(package.hash().encode())
