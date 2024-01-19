@@ -193,5 +193,35 @@
         "expected": {
             "satisfiable": false
         }
+    },
+    {
+        "name": "requires-python-version-greater-than-current-resolver-override",
+        "description": "The user requires a package which requires a Python version greater than the current version, but they use an alternative Python version for package resolution.",
+        "root": {
+            "requires": [
+                "a==1.0.0"
+            ]
+        },
+        "resolver_options": {
+            "python": "3.11"
+        },
+        "environment": {
+            "python": "3.9"
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires_python": ">=3.10"
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0"
+            }
+        }
     }
 ]

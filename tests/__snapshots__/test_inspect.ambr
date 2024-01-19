@@ -94,6 +94,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
             "source": "[PWD]/scenarios/example.json",
@@ -229,6 +230,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
             "source": "[PROJECT_ROOT]/scenarios/example.json",
@@ -288,6 +290,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires any version of package `a` which does not exist.",
             "source": "[PWD]/scenarios/does-not-exist.json",
@@ -339,6 +342,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires an exact version of package `a` but only other versions exist",
             "source": "[PWD]/scenarios/does-not-exist.json",
@@ -402,6 +406,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires a version of `a` greater than `1.0.0` but only smaller or equal versions exist",
             "source": "[PWD]/scenarios/does-not-exist.json",
@@ -476,6 +481,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires a version of `a` less than `1.0.0` but only larger versions exist",
             "source": "[PWD]/scenarios/does-not-exist.json",
@@ -533,6 +539,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires package `a` but `a` requires package `b` which does not exist",
             "source": "[PWD]/scenarios/does-not-exist.json",
@@ -638,6 +645,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
             "source": "[PWD]/scenarios/example.json",
@@ -700,6 +708,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "Only one version of the requested package is available, but the user has banned that version.",
             "source": "[PWD]/scenarios/excluded.json",
@@ -819,6 +828,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "Only one version of the requested package `a` is compatible, but the user has banned that version.",
             "source": "[PWD]/scenarios/excluded.json",
@@ -1023,6 +1033,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "There is a range of compatible versions for the requested package `a`, but another dependency `c` excludes that range.",
             "source": "[PWD]/scenarios/excluded.json",
@@ -1264,6 +1275,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "There is a non-contiguous range of compatible versions for the requested package `a`, but another dependency `c` excludes the range. This is the same as `dependency-excludes-range-of-compatible-versions` but some of the versions of `a` are incompatible for another reason e.g. dependency on non-existant package `d`.",
             "source": "[PWD]/scenarios/excluded.json",
@@ -1396,6 +1408,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "Optional dependencies are requested for the package.",
             "source": "[PWD]/scenarios/extras.json",
@@ -1461,6 +1474,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "Optional dependencies are requested for the package, but the extra does not exist.",
             "source": "[PWD]/scenarios/extras.json",
@@ -1573,6 +1587,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "Multiple optional dependencies are requested for the package.",
             "source": "[PWD]/scenarios/extras.json",
@@ -1676,6 +1691,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "Multiple optional dependencies are requested for the package, but they have conflicting requirements with each other.",
             "source": "[PWD]/scenarios/extras.json",
@@ -1789,6 +1805,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "One of two incompatible optional dependencies are requested for the package.",
             "source": "[PWD]/scenarios/extras.json",
@@ -1890,6 +1907,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "Optional dependencies are requested for the package, but the extra is not compatible with other requested versions.",
             "source": "[PWD]/scenarios/extras.json",
@@ -2000,6 +2018,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "Optional dependencies are requested for the package, the extra is only available on an older version.",
             "source": "[PWD]/scenarios/extras.json",
@@ -2078,6 +2097,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires two incompatible, existing versions of package `a`",
             "source": "[PWD]/scenarios/incompatible-versions.json",
@@ -2166,6 +2186,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires packages `a` and `b` but `a` requires a different version of `b`",
             "source": "[PWD]/scenarios/incompatible-versions.json",
@@ -2275,6 +2296,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires package `a` and `b`; `a` and `b` require different versions of `c`",
             "source": "[PWD]/scenarios/incompatible-versions.json",
@@ -2345,6 +2367,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires any version of package `a` which only has prerelease versions available.",
             "source": "[PWD]/scenarios/prereleases.json",
@@ -2408,6 +2431,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires a version of package `a` which only matches prerelease versions but they did not include a prerelease specifier.",
             "source": "[PWD]/scenarios/prereleases.json",
@@ -2478,6 +2502,7 @@
               "python": "3.7",
               "prereleases": true
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires a version of package `a` which only matches prerelease versions. They did not include a prerelease specifier for the package, but they opted into prereleases globally.",
             "source": "[PWD]/scenarios/prereleases.json",
@@ -2548,6 +2573,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires any version of package `a` has a prerelease version available and an older non-prerelease version.",
             "source": "[PWD]/scenarios/prereleases.json",
@@ -2628,6 +2654,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires a version of `a` with a prerelease specifier and only stable releases are available.",
             "source": "[PWD]/scenarios/prereleases.json",
@@ -2711,6 +2738,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires a version of `a` with a prerelease specifier and only prerelease releases are available.",
             "source": "[PWD]/scenarios/prereleases.json",
@@ -2804,6 +2832,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires a version of `a` with a prerelease specifier and both prerelease and stable releases are available.",
             "source": "[PWD]/scenarios/prereleases.json",
@@ -2889,6 +2918,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires `a` which has multiple prereleases available with different labels.",
             "source": "[PWD]/scenarios/prereleases.json",
@@ -2972,6 +3002,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires `a` which has multiple alphas available.",
             "source": "[PWD]/scenarios/prereleases.json",
@@ -3057,6 +3088,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires any version of package `a` which requires `b` which only has prerelease versions available.",
             "source": "[PWD]/scenarios/prereleases.json",
@@ -3141,6 +3173,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires package `a` which has a dependency on a package which only matches prerelease versions but they did not include a prerelease specifier.",
             "source": "[PWD]/scenarios/prereleases.json",
@@ -3242,6 +3275,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires package `a` which has a dependency on a package which only matches prerelease versions; the user has opted into allowing prereleases in `b` explicitly.",
             "source": "[PWD]/scenarios/prereleases.json",
@@ -3351,6 +3385,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease",
             "source": "[PWD]/scenarios/prereleases.json",
@@ -3485,6 +3520,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. The user includes an opt-in to prereleases of the transitive dependency.",
             "source": "[PWD]/scenarios/prereleases.json",
@@ -3771,6 +3807,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. There are many prerelease versions.",
             "source": "[PWD]/scenarios/prereleases.json",
@@ -4079,6 +4116,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. There are many prerelease versions and some are excluded.",
             "source": "[PWD]/scenarios/prereleases.json",
@@ -4160,6 +4198,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires a package which requires a Python version that does not exist",
             "source": "[PWD]/scenarios/requires-python.json",
@@ -4214,6 +4253,7 @@
               "python": "3.9",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires a package which requires a Python version less than the current version",
             "source": "[PWD]/scenarios/requires-python.json",
@@ -4268,6 +4308,7 @@
               "python": "3.9",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires a package which requires a Python version greater than the current version",
             "source": "[PWD]/scenarios/requires-python.json",
@@ -4432,6 +4473,7 @@
               "python": "3.9",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires a package which has many versions which all require a Python version greater than the current version",
             "source": "[PWD]/scenarios/requires-python.json",
@@ -4544,6 +4586,7 @@
               "python": "3.9",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires a package where recent versions require a Python version greater than the current version, but an older version is compatible.",
             "source": "[PWD]/scenarios/requires-python.json",
@@ -4636,6 +4679,7 @@
               "python": "3.9",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "The user requires a package where recent versions require a Python version greater than the current version, but an excluded older version is compatible.",
             "source": "[PWD]/scenarios/requires-python.json",
@@ -4658,6 +4702,69 @@
               "        \u2514\u2500\u2500 requires python>=3.12 (incompatible with environment)"
             ],
             "module_name": "requires_python_version_greater_than_current_excluded"
+          },
+          {
+            "name": "requires-python-version-greater-than-current-resolver-override",
+            "packages": [
+              {
+                "name": "requires-python-version-greater-than-current-resolver-override-a-b6505624",
+                "versions": [
+                  {
+                    "requires_python": ">=3.10",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                {
+                  "requirement": "requires-python-version-greater-than-current-resolver-override-a-b6505624==1.0.0",
+                  "name": "requires-python-version-greater-than-current-resolver-override-a-b6505624",
+                  "module_name": "requires_python_version_greater_than_current_resolver_override_a_b6505624"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": [
+                {
+                  "name": "requires-python-version-greater-than-current-resolver-override-a-b6505624",
+                  "version": "1.0.0",
+                  "module_name": "requires_python_version_greater_than_current_resolver_override_a_b6505624"
+                }
+              ],
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.9",
+              "prereleases": false
+            },
+            "resolver_options": {
+              "python": "3.11"
+            },
+            "template": "simple",
+            "description": "The user requires a package which requires a Python version greater than the current version, but they use an alternative Python version for package resolution.",
+            "source": "[PWD]/scenarios/requires-python.json",
+            "version": "b6505624",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.9",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a==1.0.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)"
+            ],
+            "module_name": "requires_python_version_greater_than_current_resolver_override"
           },
           {
             "name": "specific-tag-and-default",
@@ -4700,6 +4807,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "A wheel for a specific platform is available alongside the default.",
             "source": "[PWD]/scenarios/wheels.json",
@@ -4753,6 +4861,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "No source distributions are available, only wheels.",
             "source": "[PWD]/scenarios/wheels.json",
@@ -4806,6 +4915,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "No wheels are available, only source distributions.",
             "source": "[PWD]/scenarios/wheels.json",
@@ -4859,6 +4969,7 @@
               "python": "3.7",
               "prereleases": false
             },
+            "resolver_options": null,
             "template": "simple",
             "description": "No wheels with valid tags are available, just source distributions.",
             "source": "[PWD]/scenarios/wheels.json",
