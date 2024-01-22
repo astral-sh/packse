@@ -72,12 +72,6 @@
       transitive-prerelease-and-stable-dependency-opt-in-184fc65f
       transitive-prerelease-and-stable-dependency-many-versions-7017673e
       transitive-prerelease-and-stable-dependency-many-versions-holes-aaee5052
-      requires-python-version-does-not-exist-0825b69c
-      requires-python-version-less-than-current-f9296b84
-      requires-python-version-greater-than-current-a11d5394
-      requires-python-version-greater-than-current-many-02dc550c
-      requires-python-version-greater-than-current-backtrack-ef060cef
-      requires-python-version-greater-than-current-excluded-1bde0c18
       specific-tag-and-default-74e4a459
       only-wheels-4f019491
       no-wheels-614d801c
@@ -133,13 +127,6 @@
           transitive-prerelease-and-stable-dependency-opt-in-184fc65f
           transitive-prerelease-and-stable-dependency-many-versions-7017673e
           transitive-prerelease-and-stable-dependency-many-versions-holes-aaee5052
-      scenarios/requires-python.json
-          requires-python-version-does-not-exist-0825b69c
-          requires-python-version-less-than-current-f9296b84
-          requires-python-version-greater-than-current-a11d5394
-          requires-python-version-greater-than-current-many-02dc550c
-          requires-python-version-greater-than-current-backtrack-ef060cef
-          requires-python-version-greater-than-current-excluded-1bde0c18
       scenarios/wheels.json
           specific-tag-and-default-74e4a459
           only-wheels-4f019491
@@ -196,13 +183,6 @@
           transitive-prerelease-and-stable-dependency-opt-in
           transitive-prerelease-and-stable-dependency-many-versions
           transitive-prerelease-and-stable-dependency-many-versions-holes
-      scenarios/requires-python.json
-          requires-python-version-does-not-exist
-          requires-python-version-less-than-current
-          requires-python-version-greater-than-current
-          requires-python-version-greater-than-current-many
-          requires-python-version-greater-than-current-backtrack
-          requires-python-version-greater-than-current-excluded
       scenarios/wheels.json
           specific-tag-and-default
           only-wheels
@@ -269,13 +249,6 @@
           184fc65f
           7017673e
           aaee5052
-      scenarios/requires-python.json
-          0825b69c
-          f9296b84
-          a11d5394
-          02dc550c
-          ef060cef
-          1bde0c18
       scenarios/wheels.json
           74e4a459
           4f019491
