@@ -3812,6 +3812,61 @@
   dict({
     'exit_code': 0,
     'filesystem': dict({
+      'build/requires-compatible-python-version-incompatible-override-e94b8bc2/requires-compatible-python-version-incompatible-override-a-e94b8bc2-1.0.0/pyproject.toml': 'md5:31103f8155dacea789137d61c0d02f18',
+      'build/requires-compatible-python-version-incompatible-override-e94b8bc2/requires-compatible-python-version-incompatible-override-a-e94b8bc2-1.0.0/src/requires_compatible_python_version_incompatible_override_a_e94b8bc2/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-compatible-python-version-incompatible-override-e94b8bc2/requires-compatible-python-version-incompatible-override-e94b8bc2-0.0.0/pyproject.toml': 'md5:5a597e6ba4863026a59a3ae336be0f29',
+      'build/requires-compatible-python-version-incompatible-override-e94b8bc2/requires-compatible-python-version-incompatible-override-e94b8bc2-0.0.0/src/requires_compatible_python_version_incompatible_override_e94b8bc2/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-incompatible-python-version-compatible-override-818d78ce/requires-incompatible-python-version-compatible-override-818d78ce-0.0.0/pyproject.toml': 'md5:50cfc18a13b8bf2a1fe77a22c35e0cc7',
+      'build/requires-incompatible-python-version-compatible-override-818d78ce/requires-incompatible-python-version-compatible-override-818d78ce-0.0.0/src/requires_incompatible_python_version_compatible_override_818d78ce/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-incompatible-python-version-compatible-override-818d78ce/requires-incompatible-python-version-compatible-override-a-818d78ce-1.0.0/pyproject.toml': 'md5:986308ca59db0981824f076e2905a197',
+      'build/requires-incompatible-python-version-compatible-override-818d78ce/requires-incompatible-python-version-compatible-override-a-818d78ce-1.0.0/src/requires_incompatible_python_version_compatible_override_a_818d78ce/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e/requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e-0.0.0/pyproject.toml': 'md5:6a26b7a0a30765c313d49b726eaaa40d',
+      'build/requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e/requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e-0.0.0/src/requires_incompatible_python_version_compatible_override_no_compatible_wheels_7d66d27e/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e/requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-7d66d27e-1.0.0/pyproject.toml': 'md5:826c1cd46f60f1efe4044c2f518ccb85',
+      'build/requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e/requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-7d66d27e-1.0.0/src/requires_incompatible_python_version_compatible_override_no_compatible_wheels_a_7d66d27e/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-incompatible-python-version-compatible-override-no-wheels-367303df/requires-incompatible-python-version-compatible-override-no-wheels-367303df-0.0.0/pyproject.toml': 'md5:b0d4a43613c3d56bf66ac0b2460b14ee',
+      'build/requires-incompatible-python-version-compatible-override-no-wheels-367303df/requires-incompatible-python-version-compatible-override-no-wheels-367303df-0.0.0/src/requires_incompatible_python_version_compatible_override_no_wheels_367303df/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-incompatible-python-version-compatible-override-no-wheels-367303df/requires-incompatible-python-version-compatible-override-no-wheels-a-367303df-1.0.0/pyproject.toml': 'md5:df06a344532f0f35c7325d853f906b57',
+      'build/requires-incompatible-python-version-compatible-override-no-wheels-367303df/requires-incompatible-python-version-compatible-override-no-wheels-a-367303df-1.0.0/src/requires_incompatible_python_version_compatible_override_no_wheels_a_367303df/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-incompatible-python-version-compatible-override-other-wheel-47c905cb/requires-incompatible-python-version-compatible-override-other-wheel-47c905cb-0.0.0/pyproject.toml': 'md5:3eca3b6505aea5fd60b72302efcda4e1',
+      'build/requires-incompatible-python-version-compatible-override-other-wheel-47c905cb/requires-incompatible-python-version-compatible-override-other-wheel-47c905cb-0.0.0/src/requires_incompatible_python_version_compatible_override_other_wheel_47c905cb/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-incompatible-python-version-compatible-override-other-wheel-47c905cb/requires-incompatible-python-version-compatible-override-other-wheel-a-47c905cb-1.0.0/pyproject.toml': 'md5:1865a139808093ef4ed590ba2a8498e7',
+      'build/requires-incompatible-python-version-compatible-override-other-wheel-47c905cb/requires-incompatible-python-version-compatible-override-other-wheel-a-47c905cb-1.0.0/src/requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-incompatible-python-version-compatible-override-other-wheel-47c905cb/requires-incompatible-python-version-compatible-override-other-wheel-a-47c905cb-2.0.0/pyproject.toml': 'md5:bbe9c0ff480ffa4022f5a15cc6b3c3cb',
+      'build/requires-incompatible-python-version-compatible-override-other-wheel-47c905cb/requires-incompatible-python-version-compatible-override-other-wheel-a-47c905cb-2.0.0/src/requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
       'build/requires-python-version-does-not-exist-0825b69c/requires-python-version-does-not-exist-0825b69c-0.0.0/pyproject.toml': 'md5:591c9a1bec77f4d497709efb49682b9c',
       'build/requires-python-version-does-not-exist-0825b69c/requires-python-version-does-not-exist-0825b69c-0.0.0/src/requires_python_version_does_not_exist_0825b69c/__init__.py': '''
         __version__ = "0.0.0"
@@ -4227,16 +4282,6 @@
         __version__ = "3.5.0"
   
       ''',
-      'build/requires-python-version-greater-than-current-resolver-override-b6505624/requires-python-version-greater-than-current-resolver-override-a-b6505624-1.0.0/pyproject.toml': 'md5:945b47ad2d3c9d16ea9fca15e5b6fb09',
-      'build/requires-python-version-greater-than-current-resolver-override-b6505624/requires-python-version-greater-than-current-resolver-override-a-b6505624-1.0.0/src/requires_python_version_greater_than_current_resolver_override_a_b6505624/__init__.py': '''
-        __version__ = "1.0.0"
-  
-      ''',
-      'build/requires-python-version-greater-than-current-resolver-override-b6505624/requires-python-version-greater-than-current-resolver-override-b6505624-0.0.0/pyproject.toml': 'md5:192c5daf47e38a1c547ef73535681b3e',
-      'build/requires-python-version-greater-than-current-resolver-override-b6505624/requires-python-version-greater-than-current-resolver-override-b6505624-0.0.0/src/requires_python_version_greater_than_current_resolver_override_b6505624/__init__.py': '''
-        __version__ = "0.0.0"
-  
-      ''',
       'build/requires-python-version-less-than-current-f9296b84/requires-python-version-less-than-current-a-f9296b84-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
@@ -4267,6 +4312,21 @@
         __version__ = "0.0.0"
   
       ''',
+      'dist/requires-compatible-python-version-incompatible-override-e94b8bc2/requires_compatible_python_version_incompatible_override_a_e94b8bc2-1.0.0-py3-none-any.whl': 'md5:db4504d64d8ea6739b066e0bd7b937a1',
+      'dist/requires-compatible-python-version-incompatible-override-e94b8bc2/requires_compatible_python_version_incompatible_override_a_e94b8bc2-1.0.0.tar.gz': 'md5:99910bf52a6c53969b4c747fb8d56c24',
+      'dist/requires-compatible-python-version-incompatible-override-e94b8bc2/requires_compatible_python_version_incompatible_override_e94b8bc2-0.0.0.tar.gz': 'md5:18e08436465a14569e8235456e808c49',
+      'dist/requires-incompatible-python-version-compatible-override-818d78ce/requires_incompatible_python_version_compatible_override_818d78ce-0.0.0.tar.gz': 'md5:388ca17c24277227c378918e4c1f2f51',
+      'dist/requires-incompatible-python-version-compatible-override-818d78ce/requires_incompatible_python_version_compatible_override_a_818d78ce-1.0.0-py3-none-any.whl': 'md5:865c30492ab711a0469d7a978f3e6709',
+      'dist/requires-incompatible-python-version-compatible-override-818d78ce/requires_incompatible_python_version_compatible_override_a_818d78ce-1.0.0.tar.gz': 'md5:cfba891e69c6d32d2d0c9a02236083a9',
+      'dist/requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e/requires_incompatible_python_version_compatible_override_no_compatible_wheels_7d66d27e-0.0.0.tar.gz': 'md5:3ae0d04777d81a076104b136e54c0768',
+      'dist/requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e/requires_incompatible_python_version_compatible_override_no_compatible_wheels_a_7d66d27e-1.0.0-incompatible-tag.whl': 'md5:b9b1aec4c3fe1920609eb33c792faf30',
+      'dist/requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e/requires_incompatible_python_version_compatible_override_no_compatible_wheels_a_7d66d27e-1.0.0.tar.gz': 'md5:09ca52cfc4b2f13311cab695ebdf87e8',
+      'dist/requires-incompatible-python-version-compatible-override-no-wheels-367303df/requires_incompatible_python_version_compatible_override_no_wheels_367303df-0.0.0.tar.gz': 'md5:1ae99f08335f476c1851ff44d327fd88',
+      'dist/requires-incompatible-python-version-compatible-override-no-wheels-367303df/requires_incompatible_python_version_compatible_override_no_wheels_a_367303df-1.0.0.tar.gz': 'md5:adf1a8caf3334b0c39b350d91379d20b',
+      'dist/requires-incompatible-python-version-compatible-override-other-wheel-47c905cb/requires_incompatible_python_version_compatible_override_other_wheel_47c905cb-0.0.0.tar.gz': 'md5:324d0fe9afbcac965e12569d727c7c0b',
+      'dist/requires-incompatible-python-version-compatible-override-other-wheel-47c905cb/requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb-1.0.0.tar.gz': 'md5:327d285734b30e21748d51e8dfa50f39',
+      'dist/requires-incompatible-python-version-compatible-override-other-wheel-47c905cb/requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb-2.0.0-py3-none-any.whl': 'md5:d0549436810c94bed854fd673fafa89b',
+      'dist/requires-incompatible-python-version-compatible-override-other-wheel-47c905cb/requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb-2.0.0.tar.gz': 'md5:d39ebd811282fe49b10e2f51151e66a5',
       'dist/requires-python-version-does-not-exist-0825b69c/requires_python_version_does_not_exist_0825b69c-0.0.0.tar.gz': 'md5:769eeb2f1b0ca51b77d24c8a0209623b',
       'dist/requires-python-version-does-not-exist-0825b69c/requires_python_version_does_not_exist_a_0825b69c-1.0.0--none-any.whl': 'md5:831c2749bad7be86b17a170688777df7',
       'dist/requires-python-version-does-not-exist-0825b69c/requires_python_version_does_not_exist_a_0825b69c-1.0.0.tar.gz': 'md5:e00bbf6bbeb208e4805f4d904d588495',
@@ -4316,15 +4376,72 @@
       'dist/requires-python-version-greater-than-current-many-02dc550c/requires_python_version_greater_than_current_many_a_02dc550c-3.4.0.tar.gz': 'md5:1e9ec418eb214356e70afa961c82b000',
       'dist/requires-python-version-greater-than-current-many-02dc550c/requires_python_version_greater_than_current_many_a_02dc550c-3.5.0-py3-none-any.whl': 'md5:4079af50b10073db7f3f676140137ad8',
       'dist/requires-python-version-greater-than-current-many-02dc550c/requires_python_version_greater_than_current_many_a_02dc550c-3.5.0.tar.gz': 'md5:98aa154730ebe866249538f9291be696',
-      'dist/requires-python-version-greater-than-current-resolver-override-b6505624/requires_python_version_greater_than_current_resolver_override_a_b6505624-1.0.0-py3-none-any.whl': 'md5:002b4046e8fca65ebed6fe87e60d03fa',
-      'dist/requires-python-version-greater-than-current-resolver-override-b6505624/requires_python_version_greater_than_current_resolver_override_a_b6505624-1.0.0.tar.gz': 'md5:8582c797e57ee499aedf90cc17a59361',
-      'dist/requires-python-version-greater-than-current-resolver-override-b6505624/requires_python_version_greater_than_current_resolver_override_b6505624-0.0.0.tar.gz': 'md5:5db82767c8157e40909e2c20c7985b9a',
       'dist/requires-python-version-less-than-current-f9296b84/requires_python_version_less_than_current_a_f9296b84-1.0.0-py2.py3-none-any.whl': 'md5:8aa6ec4552d2d3838e22df64299087ed',
       'dist/requires-python-version-less-than-current-f9296b84/requires_python_version_less_than_current_a_f9296b84-1.0.0.tar.gz': 'md5:f7d263a6f3cf0b1688776dbd6274877f',
       'dist/requires-python-version-less-than-current-f9296b84/requires_python_version_less_than_current_f9296b84-0.0.0.tar.gz': 'md5:1b598a99cb30deeec7bae819f1c03187',
       'tree': '''
         test_build_all_scenarios_requi0
         ├── build
+        │   ├── requires-compatible-python-version-incompatible-override-e94b8bc2
+        │   │   ├── requires-compatible-python-version-incompatible-override-a-e94b8bc2-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_compatible_python_version_incompatible_override_a_e94b8bc2
+        │   │   │           └── __init__.py
+        │   │   └── requires-compatible-python-version-incompatible-override-e94b8bc2-0.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_compatible_python_version_incompatible_override_e94b8bc2
+        │   │               └── __init__.py
+        │   ├── requires-incompatible-python-version-compatible-override-818d78ce
+        │   │   ├── requires-incompatible-python-version-compatible-override-818d78ce-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_incompatible_python_version_compatible_override_818d78ce
+        │   │   │           └── __init__.py
+        │   │   └── requires-incompatible-python-version-compatible-override-a-818d78ce-1.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_incompatible_python_version_compatible_override_a_818d78ce
+        │   │               └── __init__.py
+        │   ├── requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e
+        │   │   ├── requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_incompatible_python_version_compatible_override_no_compatible_wheels_7d66d27e
+        │   │   │           └── __init__.py
+        │   │   └── requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-7d66d27e-1.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_incompatible_python_version_compatible_override_no_compatible_wheels_a_7d66d27e
+        │   │               └── __init__.py
+        │   ├── requires-incompatible-python-version-compatible-override-no-wheels-367303df
+        │   │   ├── requires-incompatible-python-version-compatible-override-no-wheels-367303df-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_incompatible_python_version_compatible_override_no_wheels_367303df
+        │   │   │           └── __init__.py
+        │   │   └── requires-incompatible-python-version-compatible-override-no-wheels-a-367303df-1.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_incompatible_python_version_compatible_override_no_wheels_a_367303df
+        │   │               └── __init__.py
+        │   ├── requires-incompatible-python-version-compatible-override-other-wheel-47c905cb
+        │   │   ├── requires-incompatible-python-version-compatible-override-other-wheel-47c905cb-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_incompatible_python_version_compatible_override_other_wheel_47c905cb
+        │   │   │           └── __init__.py
+        │   │   ├── requires-incompatible-python-version-compatible-override-other-wheel-a-47c905cb-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb
+        │   │   │           └── __init__.py
+        │   │   └── requires-incompatible-python-version-compatible-override-other-wheel-a-47c905cb-2.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb
+        │   │               └── __init__.py
         │   ├── requires-python-version-does-not-exist-0825b69c
         │   │   ├── requires-python-version-does-not-exist-0825b69c-0.0.0
         │   │   │   ├── pyproject.toml
@@ -4465,17 +4582,6 @@
         │   │       └── src
         │   │           └── requires_python_version_greater_than_current_many_a_02dc550c
         │   │               └── __init__.py
-        │   ├── requires-python-version-greater-than-current-resolver-override-b6505624
-        │   │   ├── requires-python-version-greater-than-current-resolver-override-a-b6505624-1.0.0
-        │   │   │   ├── pyproject.toml
-        │   │   │   └── src
-        │   │   │       └── requires_python_version_greater_than_current_resolver_override_a_b6505624
-        │   │   │           └── __init__.py
-        │   │   └── requires-python-version-greater-than-current-resolver-override-b6505624-0.0.0
-        │   │       ├── pyproject.toml
-        │   │       └── src
-        │   │           └── requires_python_version_greater_than_current_resolver_override_b6505624
-        │   │               └── __init__.py
         │   └── requires-python-version-less-than-current-f9296b84
         │       ├── requires-python-version-less-than-current-a-f9296b84-1.0.0
         │       │   ├── pyproject.toml
@@ -4488,6 +4594,26 @@
         │               └── requires_python_version_less_than_current_f9296b84
         │                   └── __init__.py
         └── dist
+            ├── requires-compatible-python-version-incompatible-override-e94b8bc2
+            │   ├── requires_compatible_python_version_incompatible_override_a_e94b8bc2-1.0.0-py3-none-any.whl
+            │   ├── requires_compatible_python_version_incompatible_override_a_e94b8bc2-1.0.0.tar.gz
+            │   └── requires_compatible_python_version_incompatible_override_e94b8bc2-0.0.0.tar.gz
+            ├── requires-incompatible-python-version-compatible-override-818d78ce
+            │   ├── requires_incompatible_python_version_compatible_override_818d78ce-0.0.0.tar.gz
+            │   ├── requires_incompatible_python_version_compatible_override_a_818d78ce-1.0.0-py3-none-any.whl
+            │   └── requires_incompatible_python_version_compatible_override_a_818d78ce-1.0.0.tar.gz
+            ├── requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e
+            │   ├── requires_incompatible_python_version_compatible_override_no_compatible_wheels_7d66d27e-0.0.0.tar.gz
+            │   ├── requires_incompatible_python_version_compatible_override_no_compatible_wheels_a_7d66d27e-1.0.0-incompatible-tag.whl
+            │   └── requires_incompatible_python_version_compatible_override_no_compatible_wheels_a_7d66d27e-1.0.0.tar.gz
+            ├── requires-incompatible-python-version-compatible-override-no-wheels-367303df
+            │   ├── requires_incompatible_python_version_compatible_override_no_wheels_367303df-0.0.0.tar.gz
+            │   └── requires_incompatible_python_version_compatible_override_no_wheels_a_367303df-1.0.0.tar.gz
+            ├── requires-incompatible-python-version-compatible-override-other-wheel-47c905cb
+            │   ├── requires_incompatible_python_version_compatible_override_other_wheel_47c905cb-0.0.0.tar.gz
+            │   ├── requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb-1.0.0.tar.gz
+            │   ├── requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb-2.0.0-py3-none-any.whl
+            │   └── requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb-2.0.0.tar.gz
             ├── requires-python-version-does-not-exist-0825b69c
             │   ├── requires_python_version_does_not_exist_0825b69c-0.0.0.tar.gz
             │   ├── requires_python_version_does_not_exist_a_0825b69c-1.0.0--none-any.whl
@@ -4542,27 +4668,27 @@
             │   ├── requires_python_version_greater_than_current_many_a_02dc550c-3.4.0.tar.gz
             │   ├── requires_python_version_greater_than_current_many_a_02dc550c-3.5.0-py3-none-any.whl
             │   └── requires_python_version_greater_than_current_many_a_02dc550c-3.5.0.tar.gz
-            ├── requires-python-version-greater-than-current-resolver-override-b6505624
-            │   ├── requires_python_version_greater_than_current_resolver_override_a_b6505624-1.0.0-py3-none-any.whl
-            │   ├── requires_python_version_greater_than_current_resolver_override_a_b6505624-1.0.0.tar.gz
-            │   └── requires_python_version_greater_than_current_resolver_override_b6505624-0.0.0.tar.gz
             └── requires-python-version-less-than-current-f9296b84
                 ├── requires_python_version_less_than_current_a_f9296b84-1.0.0-py2.py3-none-any.whl
                 ├── requires_python_version_less_than_current_a_f9296b84-1.0.0.tar.gz
                 └── requires_python_version_less_than_current_f9296b84-0.0.0.tar.gz
         
-        109 directories, 117 files
+        144 directories, 147 files
   
       ''',
     }),
     'stderr': '<not included>',
     'stdout': '''
+      requires-compatible-python-version-incompatible-override-e94b8bc2
+      requires-incompatible-python-version-compatible-override-818d78ce
+      requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e
+      requires-incompatible-python-version-compatible-override-no-wheels-367303df
+      requires-incompatible-python-version-compatible-override-other-wheel-47c905cb
       requires-python-version-does-not-exist-0825b69c
       requires-python-version-greater-than-current-a11d5394
       requires-python-version-greater-than-current-backtrack-ef060cef
       requires-python-version-greater-than-current-excluded-1bde0c18
       requires-python-version-greater-than-current-many-02dc550c
-      requires-python-version-greater-than-current-resolver-override-b6505624
       requires-python-version-less-than-current-f9296b84
   
     ''',
@@ -5647,7 +5773,7 @@
           └── a-4.0.0
               └── requires python>=3.12 (incompatible with environment)
       
-      requires-python-version-greater-than-current-resolver-override-b6505624
+      requires-incompatible-python-version-compatible-override-818d78ce
       ├── environment
       │   └── python3.9
       ├── root
@@ -5656,6 +5782,49 @@
       └── a
           └── a-1.0.0
               └── requires python>=3.10 (incompatible with environment)
+      
+      requires-compatible-python-version-incompatible-override-e94b8bc2
+      ├── environment
+      │   └── python3.11
+      ├── root
+      │   └── requires a==1.0.0
+      │       └── satisfied by a-1.0.0
+      └── a
+          └── a-1.0.0
+              └── requires python>=3.10
+      
+      requires-incompatible-python-version-compatible-override-no-wheels-367303df
+      ├── environment
+      │   └── python3.9
+      ├── root
+      │   └── requires a==1.0.0
+      │       └── satisfied by a-1.0.0
+      └── a
+          └── a-1.0.0
+              └── requires python>=3.10 (incompatible with environment)
+      
+      requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e
+      ├── environment
+      │   └── python3.9
+      ├── root
+      │   └── requires a==1.0.0
+      │       └── satisfied by a-1.0.0
+      └── a
+          └── a-1.0.0
+              └── requires python>=3.10 (incompatible with environment)
+      
+      requires-incompatible-python-version-compatible-override-other-wheel-47c905cb
+      ├── environment
+      │   └── python3.9
+      ├── root
+      │   └── requires a
+      │       ├── satisfied by a-1.0.0
+      │       └── satisfied by a-2.0.0
+      └── a
+          ├── a-1.0.0
+          │   └── requires python>=3.10 (incompatible with environment)
+          └── a-2.0.0
+              └── requires python>=3.12 (incompatible with environment)
       
   
     ''',
