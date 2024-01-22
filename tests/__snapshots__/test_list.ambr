@@ -84,8 +84,8 @@
       requires-incompatible-python-version-compatible-override-no-wheels-367303df
       requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e
       requires-incompatible-python-version-compatible-override-other-wheel-47c905cb
-      requires-python-patch-version-override-no-patch-80284485
-      requires-python-patch-version-override-patch-compatible-2adb78f2
+      requires-python-patch-version-override-no-patch-766c38c5
+      requires-python-patch-version-override-patch-compatible-4cf329ad
       specific-tag-and-default-74e4a459
       only-wheels-4f019491
       no-wheels-614d801c
@@ -154,8 +154,8 @@
           requires-incompatible-python-version-compatible-override-no-wheels-367303df
           requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e
           requires-incompatible-python-version-compatible-override-other-wheel-47c905cb
-          requires-python-patch-version-override-no-patch-80284485
-          requires-python-patch-version-override-patch-compatible-2adb78f2
+          requires-python-patch-version-override-no-patch-766c38c5
+          requires-python-patch-version-override-patch-compatible-4cf329ad
       scenarios/wheels.json
           specific-tag-and-default-74e4a459
           only-wheels-4f019491
@@ -306,8 +306,8 @@
           367303df
           7d66d27e
           47c905cb
-          80284485
-          2adb78f2
+          766c38c5
+          4cf329ad
       scenarios/wheels.json
           74e4a459
           4f019491

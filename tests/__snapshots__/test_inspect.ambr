@@ -5068,7 +5068,7 @@
             "name": "requires-python-patch-version-override-no-patch",
             "packages": [
               {
-                "name": "requires-python-patch-version-override-no-patch-a-80284485",
+                "name": "requires-python-patch-version-override-no-patch-a-766c38c5",
                 "versions": [
                   {
                     "requires_python": ">=3.7.4",
@@ -5087,9 +5087,9 @@
               "requires_python": ">=3.7",
               "requires": [
                 {
-                  "requirement": "requires-python-patch-version-override-no-patch-a-80284485==1.0.0",
-                  "name": "requires-python-patch-version-override-no-patch-a-80284485",
-                  "module_name": "requires_python_patch_version_override_no_patch_a_80284485"
+                  "requirement": "requires-python-patch-version-override-no-patch-a-766c38c5==1.0.0",
+                  "name": "requires-python-patch-version-override-no-patch-a-766c38c5",
+                  "module_name": "requires_python_patch_version_override_no_patch_a_766c38c5"
                 }
               ]
             },
@@ -5099,7 +5099,7 @@
               "explanation": "Since the resolver is asked to solve with 3.7, the minimum compatible Python requirement is treated as 3.7.0."
             },
             "environment": {
-              "python": "3.7.18",
+              "python": "3.7.17",
               "prereleases": false
             },
             "resolver_options": {
@@ -5108,10 +5108,10 @@
             "template": "simple",
             "description": "The user requires a package which requires a Python version with a patch version and the user provides a target version without a patch version.",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "80284485",
+            "version": "766c38c5",
             "tree": [
               "\u251c\u2500\u2500 environment",
-              "\u2502   \u2514\u2500\u2500 python3.7.18",
+              "\u2502   \u2514\u2500\u2500 python3.7.17",
               "\u251c\u2500\u2500 root",
               "\u2502   \u2514\u2500\u2500 requires a==1.0.0",
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
@@ -5125,7 +5125,7 @@
             "name": "requires-python-patch-version-override-patch-compatible",
             "packages": [
               {
-                "name": "requires-python-patch-version-override-patch-compatible-a-2adb78f2",
+                "name": "requires-python-patch-version-override-patch-compatible-a-4cf329ad",
                 "versions": [
                   {
                     "requires_python": ">=3.7.4",
@@ -5144,9 +5144,9 @@
               "requires_python": ">=3.7",
               "requires": [
                 {
-                  "requirement": "requires-python-patch-version-override-patch-compatible-a-2adb78f2==1.0.0",
-                  "name": "requires-python-patch-version-override-patch-compatible-a-2adb78f2",
-                  "module_name": "requires_python_patch_version_override_patch_compatible_a_2adb78f2"
+                  "requirement": "requires-python-patch-version-override-patch-compatible-a-4cf329ad==1.0.0",
+                  "name": "requires-python-patch-version-override-patch-compatible-a-4cf329ad",
+                  "module_name": "requires_python_patch_version_override_patch_compatible_a_4cf329ad"
                 }
               ]
             },
@@ -5154,15 +5154,15 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "requires-python-patch-version-override-patch-compatible-a-2adb78f2",
+                  "name": "requires-python-patch-version-override-patch-compatible-a-4cf329ad",
                   "version": "1.0.0",
-                  "module_name": "requires_python_patch_version_override_patch_compatible_a_2adb78f2"
+                  "module_name": "requires_python_patch_version_override_patch_compatible_a_4cf329ad"
                 }
               ],
               "explanation": null
             },
             "environment": {
-              "python": "3.7.18",
+              "python": "3.7.17",
               "prereleases": false
             },
             "resolver_options": {
@@ -5171,10 +5171,10 @@
             "template": "simple",
             "description": "The user requires a package which requires a Python version with a patch version and the user provides a target version with a compatible patch version.",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "2adb78f2",
+            "version": "4cf329ad",
             "tree": [
               "\u251c\u2500\u2500 environment",
-              "\u2502   \u2514\u2500\u2500 python3.7.18",
+              "\u2502   \u2514\u2500\u2500 python3.7.17",
               "\u251c\u2500\u2500 root",
               "\u2502   \u2514\u2500\u2500 requires a==1.0.0",
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
