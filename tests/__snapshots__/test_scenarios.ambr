@@ -3867,6 +3867,46 @@
         __version__ = "2.0.0"
   
       ''',
+      'build/requires-python-patch-version-override-no-patch-80284485/requires-python-patch-version-override-no-patch-80284485-0.0.0/pyproject.toml': 'md5:f2b605fc8b2ac076939cb5b08049eb1a',
+      'build/requires-python-patch-version-override-no-patch-80284485/requires-python-patch-version-override-no-patch-80284485-0.0.0/src/requires_python_patch_version_override_no_patch_80284485/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-python-patch-version-override-no-patch-80284485/requires-python-patch-version-override-no-patch-a-80284485-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_python_patch_version_override_no_patch_a_80284485"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_python_patch_version_override_no_patch_a_80284485"]
+        
+        [project]
+        name = "requires-python-patch-version-override-no-patch-a-80284485"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.7.4"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/requires-python-patch-version-override-no-patch-80284485/requires-python-patch-version-override-no-patch-a-80284485-1.0.0/src/requires_python_patch_version_override_no_patch_a_80284485/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-python-patch-version-override-patch-compatible-2adb78f2/requires-python-patch-version-override-patch-compatible-2adb78f2-0.0.0/pyproject.toml': 'md5:dcccf43737e5302181333df23f227c6b',
+      'build/requires-python-patch-version-override-patch-compatible-2adb78f2/requires-python-patch-version-override-patch-compatible-2adb78f2-0.0.0/src/requires_python_patch_version_override_patch_compatible_2adb78f2/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-python-patch-version-override-patch-compatible-2adb78f2/requires-python-patch-version-override-patch-compatible-a-2adb78f2-1.0.0/pyproject.toml': 'md5:b5359b7755b591fbc04f77a304d9d1e0',
+      'build/requires-python-patch-version-override-patch-compatible-2adb78f2/requires-python-patch-version-override-patch-compatible-a-2adb78f2-1.0.0/src/requires_python_patch_version_override_patch_compatible_a_2adb78f2/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
       'build/requires-python-version-does-not-exist-0825b69c/requires-python-version-does-not-exist-0825b69c-0.0.0/pyproject.toml': 'md5:591c9a1bec77f4d497709efb49682b9c',
       'build/requires-python-version-does-not-exist-0825b69c/requires-python-version-does-not-exist-0825b69c-0.0.0/src/requires_python_version_does_not_exist_0825b69c/__init__.py': '''
         __version__ = "0.0.0"
@@ -4282,6 +4322,16 @@
         __version__ = "3.5.0"
   
       ''',
+      'build/requires-python-version-greater-than-current-patch-56aa9dc5/requires-python-version-greater-than-current-patch-56aa9dc5-0.0.0/pyproject.toml': 'md5:98b66cf75474fd292c92446d20bdc0f3',
+      'build/requires-python-version-greater-than-current-patch-56aa9dc5/requires-python-version-greater-than-current-patch-56aa9dc5-0.0.0/src/requires_python_version_greater_than_current_patch_56aa9dc5/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/requires-python-version-greater-than-current-patch-56aa9dc5/requires-python-version-greater-than-current-patch-a-56aa9dc5-1.0.0/pyproject.toml': 'md5:1285529bd5ed98b1112aa429f66054a6',
+      'build/requires-python-version-greater-than-current-patch-56aa9dc5/requires-python-version-greater-than-current-patch-a-56aa9dc5-1.0.0/src/requires_python_version_greater_than_current_patch_a_56aa9dc5/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
       'build/requires-python-version-less-than-current-f9296b84/requires-python-version-less-than-current-a-f9296b84-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
@@ -4327,6 +4377,12 @@
       'dist/requires-incompatible-python-version-compatible-override-other-wheel-47c905cb/requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb-1.0.0.tar.gz': 'md5:327d285734b30e21748d51e8dfa50f39',
       'dist/requires-incompatible-python-version-compatible-override-other-wheel-47c905cb/requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb-2.0.0-py3-none-any.whl': 'md5:d0549436810c94bed854fd673fafa89b',
       'dist/requires-incompatible-python-version-compatible-override-other-wheel-47c905cb/requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb-2.0.0.tar.gz': 'md5:d39ebd811282fe49b10e2f51151e66a5',
+      'dist/requires-python-patch-version-override-no-patch-80284485/requires_python_patch_version_override_no_patch_80284485-0.0.0.tar.gz': 'md5:23ed9508dc4e2205369369d38eac4dc9',
+      'dist/requires-python-patch-version-override-no-patch-80284485/requires_python_patch_version_override_no_patch_a_80284485-1.0.0-py3-none-any.whl': 'md5:520ab8cc5e02f382964c0d778fab27c0',
+      'dist/requires-python-patch-version-override-no-patch-80284485/requires_python_patch_version_override_no_patch_a_80284485-1.0.0.tar.gz': 'md5:b2877f46f8dff2807993e6bbf3237d48',
+      'dist/requires-python-patch-version-override-patch-compatible-2adb78f2/requires_python_patch_version_override_patch_compatible_2adb78f2-0.0.0.tar.gz': 'md5:79cb69e98a07d6d0a403329b68db3245',
+      'dist/requires-python-patch-version-override-patch-compatible-2adb78f2/requires_python_patch_version_override_patch_compatible_a_2adb78f2-1.0.0-py3-none-any.whl': 'md5:8244b33c7dbf1ab65a886134d34f768a',
+      'dist/requires-python-patch-version-override-patch-compatible-2adb78f2/requires_python_patch_version_override_patch_compatible_a_2adb78f2-1.0.0.tar.gz': 'md5:51b2b66b49f64876a4fa3d5e2e31a807',
       'dist/requires-python-version-does-not-exist-0825b69c/requires_python_version_does_not_exist_0825b69c-0.0.0.tar.gz': 'md5:769eeb2f1b0ca51b77d24c8a0209623b',
       'dist/requires-python-version-does-not-exist-0825b69c/requires_python_version_does_not_exist_a_0825b69c-1.0.0--none-any.whl': 'md5:831c2749bad7be86b17a170688777df7',
       'dist/requires-python-version-does-not-exist-0825b69c/requires_python_version_does_not_exist_a_0825b69c-1.0.0.tar.gz': 'md5:e00bbf6bbeb208e4805f4d904d588495',
@@ -4376,6 +4432,9 @@
       'dist/requires-python-version-greater-than-current-many-02dc550c/requires_python_version_greater_than_current_many_a_02dc550c-3.4.0.tar.gz': 'md5:1e9ec418eb214356e70afa961c82b000',
       'dist/requires-python-version-greater-than-current-many-02dc550c/requires_python_version_greater_than_current_many_a_02dc550c-3.5.0-py3-none-any.whl': 'md5:4079af50b10073db7f3f676140137ad8',
       'dist/requires-python-version-greater-than-current-many-02dc550c/requires_python_version_greater_than_current_many_a_02dc550c-3.5.0.tar.gz': 'md5:98aa154730ebe866249538f9291be696',
+      'dist/requires-python-version-greater-than-current-patch-56aa9dc5/requires_python_version_greater_than_current_patch_56aa9dc5-0.0.0.tar.gz': 'md5:645fabe103e6428fe6b1966b27a90bb6',
+      'dist/requires-python-version-greater-than-current-patch-56aa9dc5/requires_python_version_greater_than_current_patch_a_56aa9dc5-1.0.0-py3-none-any.whl': 'md5:3214d7a053c5c8ca4475e19b6bf24209',
+      'dist/requires-python-version-greater-than-current-patch-56aa9dc5/requires_python_version_greater_than_current_patch_a_56aa9dc5-1.0.0.tar.gz': 'md5:d456505394558fb4a9eb3f57924b1d59',
       'dist/requires-python-version-less-than-current-f9296b84/requires_python_version_less_than_current_a_f9296b84-1.0.0-py2.py3-none-any.whl': 'md5:8aa6ec4552d2d3838e22df64299087ed',
       'dist/requires-python-version-less-than-current-f9296b84/requires_python_version_less_than_current_a_f9296b84-1.0.0.tar.gz': 'md5:f7d263a6f3cf0b1688776dbd6274877f',
       'dist/requires-python-version-less-than-current-f9296b84/requires_python_version_less_than_current_f9296b84-0.0.0.tar.gz': 'md5:1b598a99cb30deeec7bae819f1c03187',
@@ -4441,6 +4500,28 @@
         │   │       ├── pyproject.toml
         │   │       └── src
         │   │           └── requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb
+        │   │               └── __init__.py
+        │   ├── requires-python-patch-version-override-no-patch-80284485
+        │   │   ├── requires-python-patch-version-override-no-patch-80284485-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_python_patch_version_override_no_patch_80284485
+        │   │   │           └── __init__.py
+        │   │   └── requires-python-patch-version-override-no-patch-a-80284485-1.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_python_patch_version_override_no_patch_a_80284485
+        │   │               └── __init__.py
+        │   ├── requires-python-patch-version-override-patch-compatible-2adb78f2
+        │   │   ├── requires-python-patch-version-override-patch-compatible-2adb78f2-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_python_patch_version_override_patch_compatible_2adb78f2
+        │   │   │           └── __init__.py
+        │   │   └── requires-python-patch-version-override-patch-compatible-a-2adb78f2-1.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_python_patch_version_override_patch_compatible_a_2adb78f2
         │   │               └── __init__.py
         │   ├── requires-python-version-does-not-exist-0825b69c
         │   │   ├── requires-python-version-does-not-exist-0825b69c-0.0.0
@@ -4582,6 +4663,17 @@
         │   │       └── src
         │   │           └── requires_python_version_greater_than_current_many_a_02dc550c
         │   │               └── __init__.py
+        │   ├── requires-python-version-greater-than-current-patch-56aa9dc5
+        │   │   ├── requires-python-version-greater-than-current-patch-56aa9dc5-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_python_version_greater_than_current_patch_56aa9dc5
+        │   │   │           └── __init__.py
+        │   │   └── requires-python-version-greater-than-current-patch-a-56aa9dc5-1.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_python_version_greater_than_current_patch_a_56aa9dc5
+        │   │               └── __init__.py
         │   └── requires-python-version-less-than-current-f9296b84
         │       ├── requires-python-version-less-than-current-a-f9296b84-1.0.0
         │       │   ├── pyproject.toml
@@ -4614,6 +4706,14 @@
             │   ├── requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb-1.0.0.tar.gz
             │   ├── requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb-2.0.0-py3-none-any.whl
             │   └── requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb-2.0.0.tar.gz
+            ├── requires-python-patch-version-override-no-patch-80284485
+            │   ├── requires_python_patch_version_override_no_patch_80284485-0.0.0.tar.gz
+            │   ├── requires_python_patch_version_override_no_patch_a_80284485-1.0.0-py3-none-any.whl
+            │   └── requires_python_patch_version_override_no_patch_a_80284485-1.0.0.tar.gz
+            ├── requires-python-patch-version-override-patch-compatible-2adb78f2
+            │   ├── requires_python_patch_version_override_patch_compatible_2adb78f2-0.0.0.tar.gz
+            │   ├── requires_python_patch_version_override_patch_compatible_a_2adb78f2-1.0.0-py3-none-any.whl
+            │   └── requires_python_patch_version_override_patch_compatible_a_2adb78f2-1.0.0.tar.gz
             ├── requires-python-version-does-not-exist-0825b69c
             │   ├── requires_python_version_does_not_exist_0825b69c-0.0.0.tar.gz
             │   ├── requires_python_version_does_not_exist_a_0825b69c-1.0.0--none-any.whl
@@ -4668,12 +4768,16 @@
             │   ├── requires_python_version_greater_than_current_many_a_02dc550c-3.4.0.tar.gz
             │   ├── requires_python_version_greater_than_current_many_a_02dc550c-3.5.0-py3-none-any.whl
             │   └── requires_python_version_greater_than_current_many_a_02dc550c-3.5.0.tar.gz
+            ├── requires-python-version-greater-than-current-patch-56aa9dc5
+            │   ├── requires_python_version_greater_than_current_patch_56aa9dc5-0.0.0.tar.gz
+            │   ├── requires_python_version_greater_than_current_patch_a_56aa9dc5-1.0.0-py3-none-any.whl
+            │   └── requires_python_version_greater_than_current_patch_a_56aa9dc5-1.0.0.tar.gz
             └── requires-python-version-less-than-current-f9296b84
                 ├── requires_python_version_less_than_current_a_f9296b84-1.0.0-py2.py3-none-any.whl
                 ├── requires_python_version_less_than_current_a_f9296b84-1.0.0.tar.gz
                 └── requires_python_version_less_than_current_f9296b84-0.0.0.tar.gz
         
-        144 directories, 147 files
+        168 directories, 168 files
   
       ''',
     }),
@@ -4684,11 +4788,14 @@
       requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e
       requires-incompatible-python-version-compatible-override-no-wheels-367303df
       requires-incompatible-python-version-compatible-override-other-wheel-47c905cb
+      requires-python-patch-version-override-no-patch-80284485
+      requires-python-patch-version-override-patch-compatible-2adb78f2
       requires-python-version-does-not-exist-0825b69c
       requires-python-version-greater-than-current-a11d5394
       requires-python-version-greater-than-current-backtrack-ef060cef
       requires-python-version-greater-than-current-excluded-1bde0c18
       requires-python-version-greater-than-current-many-02dc550c
+      requires-python-version-greater-than-current-patch-56aa9dc5
       requires-python-version-less-than-current-f9296b84
   
     ''',
@@ -5706,6 +5813,16 @@
           └── a-1.0.0
               └── requires python>=3.10 (incompatible with environment)
       
+      requires-python-version-greater-than-current-patch-56aa9dc5
+      ├── environment
+      │   └── python3.8.0
+      ├── root
+      │   └── requires a==1.0.0
+      │       └── satisfied by a-1.0.0
+      └── a
+          └── a-1.0.0
+              └── requires python>=3.8.2 (incompatible with environment)
+      
       requires-python-version-greater-than-current-many-02dc550c
       ├── environment
       │   └── python3.9
@@ -5825,6 +5942,26 @@
           │   └── requires python>=3.10 (incompatible with environment)
           └── a-2.0.0
               └── requires python>=3.12 (incompatible with environment)
+      
+      requires-python-patch-version-override-no-patch-80284485
+      ├── environment
+      │   └── python3.7.18
+      ├── root
+      │   └── requires a==1.0.0
+      │       └── satisfied by a-1.0.0
+      └── a
+          └── a-1.0.0
+              └── requires python>=3.7.4
+      
+      requires-python-patch-version-override-patch-compatible-2adb78f2
+      ├── environment
+      │   └── python3.7.18
+      ├── root
+      │   └── requires a==1.0.0
+      │       └── satisfied by a-1.0.0
+      └── a
+          └── a-1.0.0
+              └── requires python>=3.7.4
       
   
     ''',
