@@ -78,7 +78,11 @@
       requires-python-version-greater-than-current-many-02dc550c
       requires-python-version-greater-than-current-backtrack-ef060cef
       requires-python-version-greater-than-current-excluded-1bde0c18
-      requires-python-version-greater-than-current-resolver-override-b6505624
+      requires-incompatible-python-version-compatible-override-818d78ce
+      requires-compatible-python-version-incompatible-override-e94b8bc2
+      requires-incompatible-python-version-compatible-override-no-wheels-367303df
+      requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e
+      requires-incompatible-python-version-compatible-override-other-wheel-47c905cb
       specific-tag-and-default-74e4a459
       only-wheels-4f019491
       no-wheels-614d801c
@@ -141,7 +145,11 @@
           requires-python-version-greater-than-current-many-02dc550c
           requires-python-version-greater-than-current-backtrack-ef060cef
           requires-python-version-greater-than-current-excluded-1bde0c18
-          requires-python-version-greater-than-current-resolver-override-b6505624
+          requires-incompatible-python-version-compatible-override-818d78ce
+          requires-compatible-python-version-incompatible-override-e94b8bc2
+          requires-incompatible-python-version-compatible-override-no-wheels-367303df
+          requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e
+          requires-incompatible-python-version-compatible-override-other-wheel-47c905cb
       scenarios/wheels.json
           specific-tag-and-default-74e4a459
           only-wheels-4f019491
@@ -205,7 +213,11 @@
           requires-python-version-greater-than-current-many
           requires-python-version-greater-than-current-backtrack
           requires-python-version-greater-than-current-excluded
-          requires-python-version-greater-than-current-resolver-override
+          requires-incompatible-python-version-compatible-override
+          requires-compatible-python-version-incompatible-override
+          requires-incompatible-python-version-compatible-override-no-wheels
+          requires-incompatible-python-version-compatible-override-no-compatible-wheels
+          requires-incompatible-python-version-compatible-override-other-wheel
       scenarios/wheels.json
           specific-tag-and-default
           only-wheels
@@ -279,7 +291,11 @@
           02dc550c
           ef060cef
           1bde0c18
-          b6505624
+          818d78ce
+          e94b8bc2
+          367303df
+          7d66d27e
+          47c905cb
       scenarios/wheels.json
           74e4a459
           4f019491

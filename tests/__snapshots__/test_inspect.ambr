@@ -4704,10 +4704,10 @@
             "module_name": "requires_python_version_greater_than_current_excluded"
           },
           {
-            "name": "requires-python-version-greater-than-current-resolver-override",
+            "name": "requires-incompatible-python-version-compatible-override",
             "packages": [
               {
-                "name": "requires-python-version-greater-than-current-resolver-override-a-b6505624",
+                "name": "requires-incompatible-python-version-compatible-override-a-818d78ce",
                 "versions": [
                   {
                     "requires_python": ">=3.10",
@@ -4726,9 +4726,9 @@
               "requires_python": ">=3.7",
               "requires": [
                 {
-                  "requirement": "requires-python-version-greater-than-current-resolver-override-a-b6505624==1.0.0",
-                  "name": "requires-python-version-greater-than-current-resolver-override-a-b6505624",
-                  "module_name": "requires_python_version_greater_than_current_resolver_override_a_b6505624"
+                  "requirement": "requires-incompatible-python-version-compatible-override-a-818d78ce==1.0.0",
+                  "name": "requires-incompatible-python-version-compatible-override-a-818d78ce",
+                  "module_name": "requires_incompatible_python_version_compatible_override_a_818d78ce"
                 }
               ]
             },
@@ -4736,9 +4736,9 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "requires-python-version-greater-than-current-resolver-override-a-b6505624",
+                  "name": "requires-incompatible-python-version-compatible-override-a-818d78ce",
                   "version": "1.0.0",
-                  "module_name": "requires_python_version_greater_than_current_resolver_override_a_b6505624"
+                  "module_name": "requires_incompatible_python_version_compatible_override_a_818d78ce"
                 }
               ],
               "explanation": null
@@ -4753,7 +4753,7 @@
             "template": "simple",
             "description": "The user requires a package which requires a Python version greater than the current version, but they use an alternative Python version for package resolution.",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "b6505624",
+            "version": "818d78ce",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.9",
@@ -4764,7 +4764,250 @@
               "    \u2514\u2500\u2500 a-1.0.0",
               "        \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)"
             ],
-            "module_name": "requires_python_version_greater_than_current_resolver_override"
+            "module_name": "requires_incompatible_python_version_compatible_override"
+          },
+          {
+            "name": "requires-compatible-python-version-incompatible-override",
+            "packages": [
+              {
+                "name": "requires-compatible-python-version-incompatible-override-a-e94b8bc2",
+                "versions": [
+                  {
+                    "requires_python": ">=3.10",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                {
+                  "requirement": "requires-compatible-python-version-incompatible-override-a-e94b8bc2==1.0.0",
+                  "name": "requires-compatible-python-version-incompatible-override-a-e94b8bc2",
+                  "module_name": "requires_compatible_python_version_incompatible_override_a_e94b8bc2"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": [],
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.11",
+              "prereleases": false
+            },
+            "resolver_options": {
+              "python": "3.9"
+            },
+            "template": "simple",
+            "description": "The user requires a package which requires a compatible Python version, but they request an incompatible Python version for package resolution.",
+            "source": "[PWD]/scenarios/requires-python.json",
+            "version": "e94b8bc2",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.11",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a==1.0.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.10"
+            ],
+            "module_name": "requires_compatible_python_version_incompatible_override"
+          },
+          {
+            "name": "requires-incompatible-python-version-compatible-override-no-wheels",
+            "packages": [
+              {
+                "name": "requires-incompatible-python-version-compatible-override-no-wheels-a-367303df",
+                "versions": [
+                  {
+                    "requires_python": ">=3.10",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                {
+                  "requirement": "requires-incompatible-python-version-compatible-override-no-wheels-a-367303df==1.0.0",
+                  "name": "requires-incompatible-python-version-compatible-override-no-wheels-a-367303df",
+                  "module_name": "requires_incompatible_python_version_compatible_override_no_wheels_a_367303df"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": [],
+              "explanation": "Since there are no wheels for the package and it is not compatible with the local installation, we cannot build the source distribution to determine its dependencies."
+            },
+            "environment": {
+              "python": "3.9",
+              "prereleases": false
+            },
+            "resolver_options": {
+              "python": "3.11"
+            },
+            "template": "simple",
+            "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There are only source distributions available for the package.",
+            "source": "[PWD]/scenarios/requires-python.json",
+            "version": "367303df",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.9",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a==1.0.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)"
+            ],
+            "module_name": "requires_incompatible_python_version_compatible_override_no_wheels"
+          },
+          {
+            "name": "requires-incompatible-python-version-compatible-override-no-compatible-wheels",
+            "packages": [
+              {
+                "name": "requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-7d66d27e",
+                "versions": [
+                  {
+                    "requires_python": ">=3.10",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [
+                      "incompatible-tag"
+                    ],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                {
+                  "requirement": "requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-7d66d27e==1.0.0",
+                  "name": "requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-7d66d27e",
+                  "module_name": "requires_incompatible_python_version_compatible_override_no_compatible_wheels_a_7d66d27e"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": [],
+              "explanation": "Since there are no compatible wheels for the package and it is not compatible with the local installation, we cannot build the source distribution to determine its dependencies."
+            },
+            "environment": {
+              "python": "3.9",
+              "prereleases": false
+            },
+            "resolver_options": {
+              "python": "3.11"
+            },
+            "template": "simple",
+            "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There is a wheel available for the package, but it does not have a compatible tag.",
+            "source": "[PWD]/scenarios/requires-python.json",
+            "version": "7d66d27e",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.9",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a==1.0.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)"
+            ],
+            "module_name": "requires_incompatible_python_version_compatible_override_no_compatible_wheels"
+          },
+          {
+            "name": "requires-incompatible-python-version-compatible-override-other-wheel",
+            "packages": [
+              {
+                "name": "requires-incompatible-python-version-compatible-override-other-wheel-a-47c905cb",
+                "versions": [
+                  {
+                    "requires_python": ">=3.10",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  },
+                  {
+                    "requires_python": ">=3.12",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "2.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.7",
+              "requires": [
+                {
+                  "requirement": "requires-incompatible-python-version-compatible-override-other-wheel-a-47c905cb",
+                  "name": "requires-incompatible-python-version-compatible-override-other-wheel-a-47c905cb",
+                  "module_name": "requires_incompatible_python_version_compatible_override_other_wheel_a_47c905cb"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": [],
+              "explanation": "Since there are no wheels for the version of the package compatible with the target and it is not compatible with the local installation, we cannot build the source distribution to determine its dependencies. The other version has wheels available, but is not compatible with the target version and cannot be used."
+            },
+            "environment": {
+              "python": "3.9",
+              "prereleases": false
+            },
+            "resolver_options": {
+              "python": "3.11"
+            },
+            "template": "simple",
+            "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There are only source distributions available for the compatible version of the package, but there is an incompatible version with a wheel available.",
+            "source": "[PWD]/scenarios/requires-python.json",
+            "version": "47c905cb",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.9",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-1.0.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-2.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-1.0.0",
+              "    \u2502   \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)",
+              "    \u2514\u2500\u2500 a-2.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.12 (incompatible with environment)"
+            ],
+            "module_name": "requires_incompatible_python_version_compatible_override_other_wheel"
           },
           {
             "name": "specific-tag-and-default",
