@@ -3,186 +3,186 @@
   dict({
     'exit_code': 0,
     'filesystem': dict({
-      'build/example-97db95eb/example-97db95eb-0.0.0/pyproject.toml': '''
+      'build/example-f8a3cb91/example-a-f8a3cb91-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
         
         [tool.hatch.build.targets.wheel]
-        packages = ["src/example_97db95eb"]
+        packages = ["src/example_a_f8a3cb91"]
         
         [tool.hatch.build.targets.sdist]
-        only-include = ["src/example_97db95eb"]
+        only-include = ["src/example_a_f8a3cb91"]
         
         [project]
-        name = "example-97db95eb"
+        name = "example-a-f8a3cb91"
+        version = "1.0.0"
+        dependencies = [
+            "example-b-f8a3cb91>1.0.0",
+        ]
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/example-f8a3cb91/example-a-f8a3cb91-1.0.0/src/example_a_f8a3cb91/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/example-f8a3cb91/example-b-f8a3cb91-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_b_f8a3cb91"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_b_f8a3cb91"]
+        
+        [project]
+        name = "example-b-f8a3cb91"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/example-f8a3cb91/example-b-f8a3cb91-1.0.0/src/example_b_f8a3cb91/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/example-f8a3cb91/example-b-f8a3cb91-2.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_b_f8a3cb91"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_b_f8a3cb91"]
+        
+        [project]
+        name = "example-b-f8a3cb91"
+        version = "2.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/example-f8a3cb91/example-b-f8a3cb91-2.0.0/src/example_b_f8a3cb91/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'build/example-f8a3cb91/example-b-f8a3cb91-3.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_b_f8a3cb91"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_b_f8a3cb91"]
+        
+        [project]
+        name = "example-b-f8a3cb91"
+        version = "3.0.0"
+        dependencies = [
+            "example-c-f8a3cb91",
+        ]
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/example-f8a3cb91/example-b-f8a3cb91-3.0.0/src/example_b_f8a3cb91/__init__.py': '''
+        __version__ = "3.0.0"
+  
+      ''',
+      'build/example-f8a3cb91/example-f8a3cb91-0.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_f8a3cb91"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_f8a3cb91"]
+        
+        [project]
+        name = "example-f8a3cb91"
         version = "0.0.0"
         dependencies = [
-            "example-a-97db95eb",
+            "example-a-f8a3cb91",
         ]
-        requires-python = ">=3.7"
+        requires-python = ">=3.8"
         description = "This is an example scenario, in which the user depends on a single package `a` which requires `b`."
         
         [project.optional-dependencies]
   
       ''',
-      'build/example-97db95eb/example-97db95eb-0.0.0/src/example_97db95eb/__init__.py': '''
+      'build/example-f8a3cb91/example-f8a3cb91-0.0.0/src/example_f8a3cb91/__init__.py': '''
         __version__ = "0.0.0"
   
       ''',
-      'build/example-97db95eb/example-a-97db95eb-1.0.0/pyproject.toml': '''
-        [build-system]
-        requires = ["hatchling"]
-        build-backend = "hatchling.build"
-        
-        [tool.hatch.build.targets.wheel]
-        packages = ["src/example_a_97db95eb"]
-        
-        [tool.hatch.build.targets.sdist]
-        only-include = ["src/example_a_97db95eb"]
-        
-        [project]
-        name = "example-a-97db95eb"
-        version = "1.0.0"
-        dependencies = [
-            "example-b-97db95eb>1.0.0",
-        ]
-        requires-python = ">=3.7"
-        description = ""
-        
-        [project.optional-dependencies]
-  
-      ''',
-      'build/example-97db95eb/example-a-97db95eb-1.0.0/src/example_a_97db95eb/__init__.py': '''
-        __version__ = "1.0.0"
-  
-      ''',
-      'build/example-97db95eb/example-b-97db95eb-1.0.0/pyproject.toml': '''
-        [build-system]
-        requires = ["hatchling"]
-        build-backend = "hatchling.build"
-        
-        [tool.hatch.build.targets.wheel]
-        packages = ["src/example_b_97db95eb"]
-        
-        [tool.hatch.build.targets.sdist]
-        only-include = ["src/example_b_97db95eb"]
-        
-        [project]
-        name = "example-b-97db95eb"
-        version = "1.0.0"
-        dependencies = []
-        requires-python = ">=3.7"
-        description = ""
-        
-        [project.optional-dependencies]
-  
-      ''',
-      'build/example-97db95eb/example-b-97db95eb-1.0.0/src/example_b_97db95eb/__init__.py': '''
-        __version__ = "1.0.0"
-  
-      ''',
-      'build/example-97db95eb/example-b-97db95eb-2.0.0/pyproject.toml': '''
-        [build-system]
-        requires = ["hatchling"]
-        build-backend = "hatchling.build"
-        
-        [tool.hatch.build.targets.wheel]
-        packages = ["src/example_b_97db95eb"]
-        
-        [tool.hatch.build.targets.sdist]
-        only-include = ["src/example_b_97db95eb"]
-        
-        [project]
-        name = "example-b-97db95eb"
-        version = "2.0.0"
-        dependencies = []
-        requires-python = ">=3.7"
-        description = ""
-        
-        [project.optional-dependencies]
-  
-      ''',
-      'build/example-97db95eb/example-b-97db95eb-2.0.0/src/example_b_97db95eb/__init__.py': '''
-        __version__ = "2.0.0"
-  
-      ''',
-      'build/example-97db95eb/example-b-97db95eb-3.0.0/pyproject.toml': '''
-        [build-system]
-        requires = ["hatchling"]
-        build-backend = "hatchling.build"
-        
-        [tool.hatch.build.targets.wheel]
-        packages = ["src/example_b_97db95eb"]
-        
-        [tool.hatch.build.targets.sdist]
-        only-include = ["src/example_b_97db95eb"]
-        
-        [project]
-        name = "example-b-97db95eb"
-        version = "3.0.0"
-        dependencies = [
-            "example-c-97db95eb",
-        ]
-        requires-python = ">=3.7"
-        description = ""
-        
-        [project.optional-dependencies]
-  
-      ''',
-      'build/example-97db95eb/example-b-97db95eb-3.0.0/src/example_b_97db95eb/__init__.py': '''
-        __version__ = "3.0.0"
-  
-      ''',
-      'dist/example-97db95eb/example_97db95eb-0.0.0.tar.gz': 'md5:2c6fa742b5b896e92cb2db7148203b57',
-      'dist/example-97db95eb/example_a_97db95eb-1.0.0-py3-none-any.whl': 'md5:7beb23387bfd276a1868b36d8167ec8c',
-      'dist/example-97db95eb/example_a_97db95eb-1.0.0.tar.gz': 'md5:d99aa8d231fb7ff81ee4fecee0b50b43',
-      'dist/example-97db95eb/example_b_97db95eb-1.0.0-py3-none-any.whl': 'md5:c01584594f7e94373120236b22fa164d',
-      'dist/example-97db95eb/example_b_97db95eb-1.0.0.tar.gz': 'md5:e9fe7a73190913e6e725eb34ad50313f',
-      'dist/example-97db95eb/example_b_97db95eb-2.0.0-py3-none-any.whl': 'md5:472ea56f9bb8677464ab8c6d8bdd96e4',
-      'dist/example-97db95eb/example_b_97db95eb-2.0.0.tar.gz': 'md5:a064dc42c56c63e5b19bfead3db46008',
-      'dist/example-97db95eb/example_b_97db95eb-3.0.0-py3-none-any.whl': 'md5:bba9747927a325168adf9e12a1cbfb30',
-      'dist/example-97db95eb/example_b_97db95eb-3.0.0.tar.gz': 'md5:450a1f20911b7a72fb65500737d9d267',
+      'dist/example-f8a3cb91/example_a_f8a3cb91-1.0.0-py3-none-any.whl': 'md5:c8391f58830135b3a08a34f3db244218',
+      'dist/example-f8a3cb91/example_a_f8a3cb91-1.0.0.tar.gz': 'md5:158f27a095b2f9dc7933ac0df2adf574',
+      'dist/example-f8a3cb91/example_b_f8a3cb91-1.0.0-py3-none-any.whl': 'md5:d3a9e0b925221324f9a5a83781a03452',
+      'dist/example-f8a3cb91/example_b_f8a3cb91-1.0.0.tar.gz': 'md5:97dd53eb1ccf28faf4f1e42615d5df9c',
+      'dist/example-f8a3cb91/example_b_f8a3cb91-2.0.0-py3-none-any.whl': 'md5:98184870c70a235008d5faa1d18ceb47',
+      'dist/example-f8a3cb91/example_b_f8a3cb91-2.0.0.tar.gz': 'md5:645e0ff7f010847a6939abbcffeee77e',
+      'dist/example-f8a3cb91/example_b_f8a3cb91-3.0.0-py3-none-any.whl': 'md5:899030e8a49b89c48ea5172d68fc850b',
+      'dist/example-f8a3cb91/example_b_f8a3cb91-3.0.0.tar.gz': 'md5:091a2d09f26f0b2096a5d957a41df597',
+      'dist/example-f8a3cb91/example_f8a3cb91-0.0.0.tar.gz': 'md5:14fc1a43c305da7cbe4a1aaca5e3b30c',
       'tree': '''
         test_build_example0
         ├── build
-        │   └── example-97db95eb
-        │       ├── example-97db95eb-0.0.0
+        │   └── example-f8a3cb91
+        │       ├── example-a-f8a3cb91-1.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── example_97db95eb
+        │       │       └── example_a_f8a3cb91
         │       │           └── __init__.py
-        │       ├── example-a-97db95eb-1.0.0
+        │       ├── example-b-f8a3cb91-1.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── example_a_97db95eb
+        │       │       └── example_b_f8a3cb91
         │       │           └── __init__.py
-        │       ├── example-b-97db95eb-1.0.0
+        │       ├── example-b-f8a3cb91-2.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── example_b_97db95eb
+        │       │       └── example_b_f8a3cb91
         │       │           └── __init__.py
-        │       ├── example-b-97db95eb-2.0.0
+        │       ├── example-b-f8a3cb91-3.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── example_b_97db95eb
+        │       │       └── example_b_f8a3cb91
         │       │           └── __init__.py
-        │       └── example-b-97db95eb-3.0.0
+        │       └── example-f8a3cb91-0.0.0
         │           ├── pyproject.toml
         │           └── src
-        │               └── example_b_97db95eb
+        │               └── example_f8a3cb91
         │                   └── __init__.py
         └── dist
-            └── example-97db95eb
-                ├── example_97db95eb-0.0.0.tar.gz
-                ├── example_a_97db95eb-1.0.0-py3-none-any.whl
-                ├── example_a_97db95eb-1.0.0.tar.gz
-                ├── example_b_97db95eb-1.0.0-py3-none-any.whl
-                ├── example_b_97db95eb-1.0.0.tar.gz
-                ├── example_b_97db95eb-2.0.0-py3-none-any.whl
-                ├── example_b_97db95eb-2.0.0.tar.gz
-                ├── example_b_97db95eb-3.0.0-py3-none-any.whl
-                └── example_b_97db95eb-3.0.0.tar.gz
+            └── example-f8a3cb91
+                ├── example_a_f8a3cb91-1.0.0-py3-none-any.whl
+                ├── example_a_f8a3cb91-1.0.0.tar.gz
+                ├── example_b_f8a3cb91-1.0.0-py3-none-any.whl
+                ├── example_b_f8a3cb91-1.0.0.tar.gz
+                ├── example_b_f8a3cb91-2.0.0-py3-none-any.whl
+                ├── example_b_f8a3cb91-2.0.0.tar.gz
+                ├── example_b_f8a3cb91-3.0.0-py3-none-any.whl
+                ├── example_b_f8a3cb91-3.0.0.tar.gz
+                └── example_f8a3cb91-0.0.0.tar.gz
         
         19 directories, 19 files
   
@@ -190,7 +190,7 @@
     }),
     'stderr': '<not included>',
     'stdout': '''
-      example-97db95eb
+      example-f8a3cb91
   
     ''',
   })
@@ -202,15 +202,15 @@
       'tree': '''
         test_build_example_already_exi0
         └── build
-            └── example-97db95eb
+            └── example-f8a3cb91
         
         2 directories
   
       ''',
     }),
     'stderr': '''
-      Building 'example-97db95eb' in directory 'build/example-97db95eb'
-      Destination directory '[PWD]/build/example-97db95eb' already exists. Pass `--rm` to allow removal.
+      Building 'example-f8a3cb91' in directory 'build/example-f8a3cb91'
+      Destination directory '[PWD]/build/example-f8a3cb91' already exists. Pass `--rm` to allow removal.
   
     ''',
     'stdout': '',
@@ -221,7 +221,7 @@
     'exit_code': 0,
     'stderr': '<not included>',
     'stdout': '''
-      example-97db95eb
+      example-f8a3cb91
   
     ''',
   })
@@ -230,186 +230,186 @@
   dict({
     'exit_code': 0,
     'filesystem': dict({
-      'build/example-97db95eb/a-97db95eb-1.0.0/pyproject.toml': '''
+      'build/example-f8a3cb91/a-f8a3cb91-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
         
         [tool.hatch.build.targets.wheel]
-        packages = ["src/a_97db95eb"]
+        packages = ["src/a_f8a3cb91"]
         
         [tool.hatch.build.targets.sdist]
-        only-include = ["src/a_97db95eb"]
+        only-include = ["src/a_f8a3cb91"]
         
         [project]
-        name = "a-97db95eb"
+        name = "a-f8a3cb91"
         version = "1.0.0"
         dependencies = [
-            "b-97db95eb>1.0.0",
+            "b-f8a3cb91>1.0.0",
         ]
-        requires-python = ">=3.7"
+        requires-python = ">=3.8"
         description = ""
         
         [project.optional-dependencies]
   
       ''',
-      'build/example-97db95eb/a-97db95eb-1.0.0/src/a_97db95eb/__init__.py': '''
+      'build/example-f8a3cb91/a-f8a3cb91-1.0.0/src/a_f8a3cb91/__init__.py': '''
         __version__ = "1.0.0"
   
       ''',
-      'build/example-97db95eb/b-97db95eb-1.0.0/pyproject.toml': '''
+      'build/example-f8a3cb91/b-f8a3cb91-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
         
         [tool.hatch.build.targets.wheel]
-        packages = ["src/b_97db95eb"]
+        packages = ["src/b_f8a3cb91"]
         
         [tool.hatch.build.targets.sdist]
-        only-include = ["src/b_97db95eb"]
+        only-include = ["src/b_f8a3cb91"]
         
         [project]
-        name = "b-97db95eb"
+        name = "b-f8a3cb91"
         version = "1.0.0"
         dependencies = []
-        requires-python = ">=3.7"
+        requires-python = ">=3.8"
         description = ""
         
         [project.optional-dependencies]
   
       ''',
-      'build/example-97db95eb/b-97db95eb-1.0.0/src/b_97db95eb/__init__.py': '''
+      'build/example-f8a3cb91/b-f8a3cb91-1.0.0/src/b_f8a3cb91/__init__.py': '''
         __version__ = "1.0.0"
   
       ''',
-      'build/example-97db95eb/b-97db95eb-2.0.0/pyproject.toml': '''
+      'build/example-f8a3cb91/b-f8a3cb91-2.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
         
         [tool.hatch.build.targets.wheel]
-        packages = ["src/b_97db95eb"]
+        packages = ["src/b_f8a3cb91"]
         
         [tool.hatch.build.targets.sdist]
-        only-include = ["src/b_97db95eb"]
+        only-include = ["src/b_f8a3cb91"]
         
         [project]
-        name = "b-97db95eb"
+        name = "b-f8a3cb91"
         version = "2.0.0"
         dependencies = []
-        requires-python = ">=3.7"
+        requires-python = ">=3.8"
         description = ""
         
         [project.optional-dependencies]
   
       ''',
-      'build/example-97db95eb/b-97db95eb-2.0.0/src/b_97db95eb/__init__.py': '''
+      'build/example-f8a3cb91/b-f8a3cb91-2.0.0/src/b_f8a3cb91/__init__.py': '''
         __version__ = "2.0.0"
   
       ''',
-      'build/example-97db95eb/b-97db95eb-3.0.0/pyproject.toml': '''
+      'build/example-f8a3cb91/b-f8a3cb91-3.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
         
         [tool.hatch.build.targets.wheel]
-        packages = ["src/b_97db95eb"]
+        packages = ["src/b_f8a3cb91"]
         
         [tool.hatch.build.targets.sdist]
-        only-include = ["src/b_97db95eb"]
+        only-include = ["src/b_f8a3cb91"]
         
         [project]
-        name = "b-97db95eb"
+        name = "b-f8a3cb91"
         version = "3.0.0"
         dependencies = [
-            "c-97db95eb",
+            "c-f8a3cb91",
         ]
-        requires-python = ">=3.7"
+        requires-python = ">=3.8"
         description = ""
         
         [project.optional-dependencies]
   
       ''',
-      'build/example-97db95eb/b-97db95eb-3.0.0/src/b_97db95eb/__init__.py': '''
+      'build/example-f8a3cb91/b-f8a3cb91-3.0.0/src/b_f8a3cb91/__init__.py': '''
         __version__ = "3.0.0"
   
       ''',
-      'build/example-97db95eb/example-97db95eb-0.0.0/pyproject.toml': '''
+      'build/example-f8a3cb91/example-f8a3cb91-0.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
         
         [tool.hatch.build.targets.wheel]
-        packages = ["src/example_97db95eb"]
+        packages = ["src/example_f8a3cb91"]
         
         [tool.hatch.build.targets.sdist]
-        only-include = ["src/example_97db95eb"]
+        only-include = ["src/example_f8a3cb91"]
         
         [project]
-        name = "example-97db95eb"
+        name = "example-f8a3cb91"
         version = "0.0.0"
         dependencies = [
-            "a-97db95eb",
+            "a-f8a3cb91",
         ]
-        requires-python = ">=3.7"
+        requires-python = ">=3.8"
         description = "This is an example scenario, in which the user depends on a single package `a` which requires `b`."
         
         [project.optional-dependencies]
   
       ''',
-      'build/example-97db95eb/example-97db95eb-0.0.0/src/example_97db95eb/__init__.py': '''
+      'build/example-f8a3cb91/example-f8a3cb91-0.0.0/src/example_f8a3cb91/__init__.py': '''
         __version__ = "0.0.0"
   
       ''',
-      'dist/example-97db95eb/a_97db95eb-1.0.0-py3-none-any.whl': 'md5:ce2a3dbca05cb9e001a64ab58f569eeb',
-      'dist/example-97db95eb/a_97db95eb-1.0.0.tar.gz': 'md5:2d4528dddb035159c317aa33f514fd35',
-      'dist/example-97db95eb/b_97db95eb-1.0.0-py3-none-any.whl': 'md5:cafdc6850c3374e9a241eabd23a8c960',
-      'dist/example-97db95eb/b_97db95eb-1.0.0.tar.gz': 'md5:0b536430d72095387ad5fd5cecba0365',
-      'dist/example-97db95eb/b_97db95eb-2.0.0-py3-none-any.whl': 'md5:b35b44badd779509f9396d287b8414a2',
-      'dist/example-97db95eb/b_97db95eb-2.0.0.tar.gz': 'md5:2cbe5f8fbde8bf8e2d9789a8f1d0ed3c',
-      'dist/example-97db95eb/b_97db95eb-3.0.0-py3-none-any.whl': 'md5:f7548b63b2e7eef0b3b79531e05704b3',
-      'dist/example-97db95eb/b_97db95eb-3.0.0.tar.gz': 'md5:55b359591b03bc4c9e28eaaae3d70035',
-      'dist/example-97db95eb/example_97db95eb-0.0.0.tar.gz': 'md5:75c2214bcd6db9786587ed20425fd0ef',
+      'dist/example-f8a3cb91/a_f8a3cb91-1.0.0-py3-none-any.whl': 'md5:e99934821f19318d0fcc0777624420f1',
+      'dist/example-f8a3cb91/a_f8a3cb91-1.0.0.tar.gz': 'md5:085d4200d741087057a6e2da61635b3d',
+      'dist/example-f8a3cb91/b_f8a3cb91-1.0.0-py3-none-any.whl': 'md5:1fcb053b25b135db4a36037593d84b97',
+      'dist/example-f8a3cb91/b_f8a3cb91-1.0.0.tar.gz': 'md5:33fdcef9e4e3c01368be55c8fcb7da85',
+      'dist/example-f8a3cb91/b_f8a3cb91-2.0.0-py3-none-any.whl': 'md5:7bfdbb953b8fb1bec268883b0547b52e',
+      'dist/example-f8a3cb91/b_f8a3cb91-2.0.0.tar.gz': 'md5:0d0d254ed52923e922b0c8f7cbf9bbc4',
+      'dist/example-f8a3cb91/b_f8a3cb91-3.0.0-py3-none-any.whl': 'md5:8426357d010c50f379206a3041d480c2',
+      'dist/example-f8a3cb91/b_f8a3cb91-3.0.0.tar.gz': 'md5:5276ec0c6ea2b0dddd7d17b08d01ce09',
+      'dist/example-f8a3cb91/example_f8a3cb91-0.0.0.tar.gz': 'md5:415a6e6596f5d7f7d800f980c09773ee',
       'tree': '''
         test_build_example_short_names0
         ├── build
-        │   └── example-97db95eb
-        │       ├── a-97db95eb-1.0.0
+        │   └── example-f8a3cb91
+        │       ├── a-f8a3cb91-1.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── a_97db95eb
+        │       │       └── a_f8a3cb91
         │       │           └── __init__.py
-        │       ├── b-97db95eb-1.0.0
+        │       ├── b-f8a3cb91-1.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── b_97db95eb
+        │       │       └── b_f8a3cb91
         │       │           └── __init__.py
-        │       ├── b-97db95eb-2.0.0
+        │       ├── b-f8a3cb91-2.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── b_97db95eb
+        │       │       └── b_f8a3cb91
         │       │           └── __init__.py
-        │       ├── b-97db95eb-3.0.0
+        │       ├── b-f8a3cb91-3.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── b_97db95eb
+        │       │       └── b_f8a3cb91
         │       │           └── __init__.py
-        │       └── example-97db95eb-0.0.0
+        │       └── example-f8a3cb91-0.0.0
         │           ├── pyproject.toml
         │           └── src
-        │               └── example_97db95eb
+        │               └── example_f8a3cb91
         │                   └── __init__.py
         └── dist
-            └── example-97db95eb
-                ├── a_97db95eb-1.0.0-py3-none-any.whl
-                ├── a_97db95eb-1.0.0.tar.gz
-                ├── b_97db95eb-1.0.0-py3-none-any.whl
-                ├── b_97db95eb-1.0.0.tar.gz
-                ├── b_97db95eb-2.0.0-py3-none-any.whl
-                ├── b_97db95eb-2.0.0.tar.gz
-                ├── b_97db95eb-3.0.0-py3-none-any.whl
-                ├── b_97db95eb-3.0.0.tar.gz
-                └── example_97db95eb-0.0.0.tar.gz
+            └── example-f8a3cb91
+                ├── a_f8a3cb91-1.0.0-py3-none-any.whl
+                ├── a_f8a3cb91-1.0.0.tar.gz
+                ├── b_f8a3cb91-1.0.0-py3-none-any.whl
+                ├── b_f8a3cb91-1.0.0.tar.gz
+                ├── b_f8a3cb91-2.0.0-py3-none-any.whl
+                ├── b_f8a3cb91-2.0.0.tar.gz
+                ├── b_f8a3cb91-3.0.0-py3-none-any.whl
+                ├── b_f8a3cb91-3.0.0.tar.gz
+                └── example_f8a3cb91-0.0.0.tar.gz
         
         19 directories, 19 files
   
@@ -417,7 +417,7 @@
     }),
     'stderr': '<not included>',
     'stdout': '''
-      example-97db95eb
+      example-f8a3cb91
   
     ''',
   })
@@ -426,186 +426,186 @@
   dict({
     'exit_code': 0,
     'filesystem': dict({
-      'build/example-9fa36ff3/example-9fa36ff3-0.0.0/pyproject.toml': '''
+      'build/example-c146ef11/example-a-c146ef11-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
         build-backend = "hatchling.build"
         
         [tool.hatch.build.targets.wheel]
-        packages = ["src/example_9fa36ff3"]
+        packages = ["src/example_a_c146ef11"]
         
         [tool.hatch.build.targets.sdist]
-        only-include = ["src/example_9fa36ff3"]
+        only-include = ["src/example_a_c146ef11"]
         
         [project]
-        name = "example-9fa36ff3"
+        name = "example-a-c146ef11"
+        version = "1.0.0"
+        dependencies = [
+            "example-b-c146ef11>1.0.0",
+        ]
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/example-c146ef11/example-a-c146ef11-1.0.0/src/example_a_c146ef11/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/example-c146ef11/example-b-c146ef11-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_b_c146ef11"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_b_c146ef11"]
+        
+        [project]
+        name = "example-b-c146ef11"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/example-c146ef11/example-b-c146ef11-1.0.0/src/example_b_c146ef11/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/example-c146ef11/example-b-c146ef11-2.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_b_c146ef11"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_b_c146ef11"]
+        
+        [project]
+        name = "example-b-c146ef11"
+        version = "2.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/example-c146ef11/example-b-c146ef11-2.0.0/src/example_b_c146ef11/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'build/example-c146ef11/example-b-c146ef11-3.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_b_c146ef11"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_b_c146ef11"]
+        
+        [project]
+        name = "example-b-c146ef11"
+        version = "3.0.0"
+        dependencies = [
+            "example-c-c146ef11",
+        ]
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/example-c146ef11/example-b-c146ef11-3.0.0/src/example_b_c146ef11/__init__.py': '''
+        __version__ = "3.0.0"
+  
+      ''',
+      'build/example-c146ef11/example-c146ef11-0.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_c146ef11"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_c146ef11"]
+        
+        [project]
+        name = "example-c146ef11"
         version = "0.0.0"
         dependencies = [
-            "example-a-9fa36ff3",
+            "example-a-c146ef11",
         ]
-        requires-python = ">=3.7"
+        requires-python = ">=3.8"
         description = "This is an example scenario, in which the user depends on a single package `a` which requires `b`."
         
         [project.optional-dependencies]
   
       ''',
-      'build/example-9fa36ff3/example-9fa36ff3-0.0.0/src/example_9fa36ff3/__init__.py': '''
+      'build/example-c146ef11/example-c146ef11-0.0.0/src/example_c146ef11/__init__.py': '''
         __version__ = "0.0.0"
   
       ''',
-      'build/example-9fa36ff3/example-a-9fa36ff3-1.0.0/pyproject.toml': '''
-        [build-system]
-        requires = ["hatchling"]
-        build-backend = "hatchling.build"
-        
-        [tool.hatch.build.targets.wheel]
-        packages = ["src/example_a_9fa36ff3"]
-        
-        [tool.hatch.build.targets.sdist]
-        only-include = ["src/example_a_9fa36ff3"]
-        
-        [project]
-        name = "example-a-9fa36ff3"
-        version = "1.0.0"
-        dependencies = [
-            "example-b-9fa36ff3>1.0.0",
-        ]
-        requires-python = ">=3.7"
-        description = ""
-        
-        [project.optional-dependencies]
-  
-      ''',
-      'build/example-9fa36ff3/example-a-9fa36ff3-1.0.0/src/example_a_9fa36ff3/__init__.py': '''
-        __version__ = "1.0.0"
-  
-      ''',
-      'build/example-9fa36ff3/example-b-9fa36ff3-1.0.0/pyproject.toml': '''
-        [build-system]
-        requires = ["hatchling"]
-        build-backend = "hatchling.build"
-        
-        [tool.hatch.build.targets.wheel]
-        packages = ["src/example_b_9fa36ff3"]
-        
-        [tool.hatch.build.targets.sdist]
-        only-include = ["src/example_b_9fa36ff3"]
-        
-        [project]
-        name = "example-b-9fa36ff3"
-        version = "1.0.0"
-        dependencies = []
-        requires-python = ">=3.7"
-        description = ""
-        
-        [project.optional-dependencies]
-  
-      ''',
-      'build/example-9fa36ff3/example-b-9fa36ff3-1.0.0/src/example_b_9fa36ff3/__init__.py': '''
-        __version__ = "1.0.0"
-  
-      ''',
-      'build/example-9fa36ff3/example-b-9fa36ff3-2.0.0/pyproject.toml': '''
-        [build-system]
-        requires = ["hatchling"]
-        build-backend = "hatchling.build"
-        
-        [tool.hatch.build.targets.wheel]
-        packages = ["src/example_b_9fa36ff3"]
-        
-        [tool.hatch.build.targets.sdist]
-        only-include = ["src/example_b_9fa36ff3"]
-        
-        [project]
-        name = "example-b-9fa36ff3"
-        version = "2.0.0"
-        dependencies = []
-        requires-python = ">=3.7"
-        description = ""
-        
-        [project.optional-dependencies]
-  
-      ''',
-      'build/example-9fa36ff3/example-b-9fa36ff3-2.0.0/src/example_b_9fa36ff3/__init__.py': '''
-        __version__ = "2.0.0"
-  
-      ''',
-      'build/example-9fa36ff3/example-b-9fa36ff3-3.0.0/pyproject.toml': '''
-        [build-system]
-        requires = ["hatchling"]
-        build-backend = "hatchling.build"
-        
-        [tool.hatch.build.targets.wheel]
-        packages = ["src/example_b_9fa36ff3"]
-        
-        [tool.hatch.build.targets.sdist]
-        only-include = ["src/example_b_9fa36ff3"]
-        
-        [project]
-        name = "example-b-9fa36ff3"
-        version = "3.0.0"
-        dependencies = [
-            "example-c-9fa36ff3",
-        ]
-        requires-python = ">=3.7"
-        description = ""
-        
-        [project.optional-dependencies]
-  
-      ''',
-      'build/example-9fa36ff3/example-b-9fa36ff3-3.0.0/src/example_b_9fa36ff3/__init__.py': '''
-        __version__ = "3.0.0"
-  
-      ''',
-      'dist/example-9fa36ff3/example_9fa36ff3-0.0.0.tar.gz': 'md5:3bd47120b8acc629755f05b76cca2118',
-      'dist/example-9fa36ff3/example_a_9fa36ff3-1.0.0-py3-none-any.whl': 'md5:cb1d6f0089bfdca11ce1432ded413bfb',
-      'dist/example-9fa36ff3/example_a_9fa36ff3-1.0.0.tar.gz': 'md5:6a831f6ff52472e47bc4521ca5bd8b07',
-      'dist/example-9fa36ff3/example_b_9fa36ff3-1.0.0-py3-none-any.whl': 'md5:7a20119eb627a993cac9985599f9c997',
-      'dist/example-9fa36ff3/example_b_9fa36ff3-1.0.0.tar.gz': 'md5:c5efdf929646138e8edf0d5ab0aba6ef',
-      'dist/example-9fa36ff3/example_b_9fa36ff3-2.0.0-py3-none-any.whl': 'md5:e9b2ebf087fd8bf947c40719bee7292d',
-      'dist/example-9fa36ff3/example_b_9fa36ff3-2.0.0.tar.gz': 'md5:53609ed5e0bd86894336138df79d7dcf',
-      'dist/example-9fa36ff3/example_b_9fa36ff3-3.0.0-py3-none-any.whl': 'md5:0b6fec83f9f65b3f647eb7c01fb05551',
-      'dist/example-9fa36ff3/example_b_9fa36ff3-3.0.0.tar.gz': 'md5:3a384983e56888a07245bb9289c08ac0',
+      'dist/example-c146ef11/example_a_c146ef11-1.0.0-py3-none-any.whl': 'md5:3c39ae7c2e14e8bba6007003f6b35a4b',
+      'dist/example-c146ef11/example_a_c146ef11-1.0.0.tar.gz': 'md5:c93ce6cc9855cb289fbd1cc80d4f083c',
+      'dist/example-c146ef11/example_b_c146ef11-1.0.0-py3-none-any.whl': 'md5:c69a2d44acae1f562caad0375d0bf591',
+      'dist/example-c146ef11/example_b_c146ef11-1.0.0.tar.gz': 'md5:1a017dd9f42f3e2940e4afa223fe5c1a',
+      'dist/example-c146ef11/example_b_c146ef11-2.0.0-py3-none-any.whl': 'md5:1fb23260d6ac6c8907e522477bc78101',
+      'dist/example-c146ef11/example_b_c146ef11-2.0.0.tar.gz': 'md5:2dbf7872243dd809f163d65fc50157c8',
+      'dist/example-c146ef11/example_b_c146ef11-3.0.0-py3-none-any.whl': 'md5:af71fad23f02f5a518548169cd7f6be9',
+      'dist/example-c146ef11/example_b_c146ef11-3.0.0.tar.gz': 'md5:ea0966043ed06d298b1b47c608736427',
+      'dist/example-c146ef11/example_c146ef11-0.0.0.tar.gz': 'md5:f491c662aa789dcc1e5c48be8ede2e4d',
       'tree': '''
         test_build_example_with_seed0
         ├── build
-        │   └── example-9fa36ff3
-        │       ├── example-9fa36ff3-0.0.0
+        │   └── example-c146ef11
+        │       ├── example-a-c146ef11-1.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── example_9fa36ff3
+        │       │       └── example_a_c146ef11
         │       │           └── __init__.py
-        │       ├── example-a-9fa36ff3-1.0.0
+        │       ├── example-b-c146ef11-1.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── example_a_9fa36ff3
+        │       │       └── example_b_c146ef11
         │       │           └── __init__.py
-        │       ├── example-b-9fa36ff3-1.0.0
+        │       ├── example-b-c146ef11-2.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── example_b_9fa36ff3
+        │       │       └── example_b_c146ef11
         │       │           └── __init__.py
-        │       ├── example-b-9fa36ff3-2.0.0
+        │       ├── example-b-c146ef11-3.0.0
         │       │   ├── pyproject.toml
         │       │   └── src
-        │       │       └── example_b_9fa36ff3
+        │       │       └── example_b_c146ef11
         │       │           └── __init__.py
-        │       └── example-b-9fa36ff3-3.0.0
+        │       └── example-c146ef11-0.0.0
         │           ├── pyproject.toml
         │           └── src
-        │               └── example_b_9fa36ff3
+        │               └── example_c146ef11
         │                   └── __init__.py
         └── dist
-            └── example-9fa36ff3
-                ├── example_9fa36ff3-0.0.0.tar.gz
-                ├── example_a_9fa36ff3-1.0.0-py3-none-any.whl
-                ├── example_a_9fa36ff3-1.0.0.tar.gz
-                ├── example_b_9fa36ff3-1.0.0-py3-none-any.whl
-                ├── example_b_9fa36ff3-1.0.0.tar.gz
-                ├── example_b_9fa36ff3-2.0.0-py3-none-any.whl
-                ├── example_b_9fa36ff3-2.0.0.tar.gz
-                ├── example_b_9fa36ff3-3.0.0-py3-none-any.whl
-                └── example_b_9fa36ff3-3.0.0.tar.gz
+            └── example-c146ef11
+                ├── example_a_c146ef11-1.0.0-py3-none-any.whl
+                ├── example_a_c146ef11-1.0.0.tar.gz
+                ├── example_b_c146ef11-1.0.0-py3-none-any.whl
+                ├── example_b_c146ef11-1.0.0.tar.gz
+                ├── example_b_c146ef11-2.0.0-py3-none-any.whl
+                ├── example_b_c146ef11-2.0.0.tar.gz
+                ├── example_b_c146ef11-3.0.0-py3-none-any.whl
+                ├── example_b_c146ef11-3.0.0.tar.gz
+                └── example_c146ef11-0.0.0.tar.gz
         
         19 directories, 19 files
   
@@ -613,7 +613,7 @@
     }),
     'stderr': '<not included>',
     'stdout': '''
-      example-9fa36ff3
+      example-c146ef11
   
     ''',
   })

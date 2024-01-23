@@ -5,7 +5,7 @@
     'stderr': '',
     'stdout': '''
       scenarios/example.json
-          example-97db95eb
+          example-f8a3cb91
   
     ''',
   })
@@ -26,7 +26,7 @@
     'stderr': '',
     'stdout': '''
       [PROJECT_ROOT]/scenarios/example.json
-          example-97db95eb
+          example-f8a3cb91
   
     ''',
   })
@@ -36,60 +36,60 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      requires-package-does-not-exist-57cd4136
-      requires-exact-version-does-not-exist-eaa03067
-      requires-greater-version-does-not-exist-6e8e01df
-      requires-less-version-does-not-exist-e45cec3c
-      transitive-requires-package-does-not-exist-aca2796a
-      example-97db95eb
-      excluded-only-version-7a9ed79c
-      excluded-only-compatible-version-b6b89642
-      dependency-excludes-range-of-compatible-versions-1cd99bd0
-      dependency-excludes-non-contiguous-range-of-compatible-versions-0fd25b39
-      extra-required-76e5355c
-      missing-extra-06e7489c
-      multiple-extras-required-e55f15c4
-      extra-incompatible-with-extra-492741b0
-      extra-incompatible-with-extra-not-requested-f0b0089a
-      extra-incompatible-with-root-9d588075
-      extra-does-not-exist-backtrack-f1877db3
-      direct-incompatible-versions-80d82ee8
-      transitive-incompatible-with-root-version-a967e815
-      transitive-incompatible-with-transitive-6866d8dc
-      package-only-prereleases-9a1b3dda
-      package-only-prereleases-in-range-19673198
-      requires-package-only-prereleases-in-range-global-opt-in-51f94da2
-      requires-package-prerelease-and-final-any-eebe53a6
-      package-prerelease-specified-only-final-available-9d4725eb
-      package-prerelease-specified-only-prerelease-available-6cc95bc8
-      package-prerelease-specified-mixed-available-c97845e2
-      package-multiple-prereleases-kinds-e290bf29
-      package-multiple-prereleases-numbers-f5948c28
-      transitive-package-only-prereleases-44ebef16
-      transitive-package-only-prereleases-in-range-27759187
-      transitive-package-only-prereleases-in-range-opt-in-26efb6c5
-      transitive-prerelease-and-stable-dependency-f8aeea37
-      transitive-prerelease-and-stable-dependency-opt-in-184fc65f
-      transitive-prerelease-and-stable-dependency-many-versions-7017673e
-      transitive-prerelease-and-stable-dependency-many-versions-holes-aaee5052
-      requires-python-version-does-not-exist-0825b69c
-      requires-python-version-less-than-current-f9296b84
-      requires-python-version-greater-than-current-a11d5394
-      requires-python-version-greater-than-current-patch-56aa9dc5
-      requires-python-version-greater-than-current-many-02dc550c
-      requires-python-version-greater-than-current-backtrack-ef060cef
-      requires-python-version-greater-than-current-excluded-1bde0c18
-      requires-incompatible-python-version-compatible-override-818d78ce
-      requires-compatible-python-version-incompatible-override-e94b8bc2
-      requires-incompatible-python-version-compatible-override-no-wheels-367303df
-      requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e
-      requires-incompatible-python-version-compatible-override-other-wheel-47c905cb
-      requires-python-patch-version-override-no-patch-766c38c5
-      requires-python-patch-version-override-patch-compatible-4cf329ad
-      specific-tag-and-default-74e4a459
-      only-wheels-4f019491
-      no-wheels-614d801c
-      no-wheels-with-matching-platform-737bbfd4
+      requires-package-does-not-exist-3cb60d4c
+      requires-exact-version-does-not-exist-e7132fc5
+      requires-greater-version-does-not-exist-0e488e8f
+      requires-less-version-does-not-exist-1a4076bc
+      transitive-requires-package-does-not-exist-22a72022
+      example-f8a3cb91
+      excluded-only-version-2bc4455f
+      excluded-only-compatible-version-5b90a629
+      dependency-excludes-range-of-compatible-versions-e59e1cd1
+      dependency-excludes-non-contiguous-range-of-compatible-versions-ed41451f
+      extra-required-c9be513b
+      missing-extra-79fd9a92
+      multiple-extras-required-14317535
+      extra-incompatible-with-extra-afa38951
+      extra-incompatible-with-extra-not-requested-5c305dd9
+      extra-incompatible-with-root-743dac5a
+      extra-does-not-exist-backtrack-a35e4442
+      direct-incompatible-versions-f75c56e2
+      transitive-incompatible-with-root-version-812a0fda
+      transitive-incompatible-with-transitive-74531fe0
+      package-only-prereleases-e2dbc237
+      package-only-prereleases-in-range-4e199000
+      requires-package-only-prereleases-in-range-global-opt-in-af391f9c
+      requires-package-prerelease-and-final-any-81dbab9d
+      package-prerelease-specified-only-final-available-2ee8f3f9
+      package-prerelease-specified-only-prerelease-available-dd6b1e32
+      package-prerelease-specified-mixed-available-794fce4d
+      package-multiple-prereleases-kinds-256d4e16
+      package-multiple-prereleases-numbers-ac82d3fb
+      transitive-package-only-prereleases-9da8532e
+      transitive-package-only-prereleases-in-range-c41a54fc
+      transitive-package-only-prereleases-in-range-opt-in-96f98f65
+      transitive-prerelease-and-stable-dependency-3d5eb91f
+      transitive-prerelease-and-stable-dependency-opt-in-6192ec57
+      transitive-prerelease-and-stable-dependency-many-versions-bcd0f988
+      transitive-prerelease-and-stable-dependency-many-versions-holes-5cee052e
+      requires-python-version-does-not-exist-d004e577
+      requires-python-version-less-than-current-5e520203
+      requires-python-version-greater-than-current-62394505
+      requires-python-version-greater-than-current-patch-dcd76825
+      requires-python-version-greater-than-current-many-fd1f719c
+      requires-python-version-greater-than-current-backtrack-b2677f9a
+      requires-python-version-greater-than-current-excluded-34ee1c3e
+      requires-incompatible-python-version-compatible-override-006fed96
+      requires-compatible-python-version-incompatible-override-8c1b0389
+      requires-incompatible-python-version-compatible-override-no-wheels-b8ee1c03
+      requires-incompatible-python-version-compatible-override-no-compatible-wheels-bbf0da53
+      requires-incompatible-python-version-compatible-override-other-wheel-08a4e843
+      requires-python-patch-version-override-no-patch-2e1edfd6
+      requires-python-patch-version-override-patch-compatible-844899bd
+      specific-tag-and-default-ce63fb65
+      only-wheels-08df4319
+      no-wheels-0a9090ba
+      no-wheels-with-matching-platform-b595b358
   
     ''',
   })
@@ -100,67 +100,67 @@
     'stderr': '',
     'stdout': '''
       scenarios/does-not-exist.json
-          requires-package-does-not-exist-57cd4136
-          requires-exact-version-does-not-exist-eaa03067
-          requires-greater-version-does-not-exist-6e8e01df
-          requires-less-version-does-not-exist-e45cec3c
-          transitive-requires-package-does-not-exist-aca2796a
+          requires-package-does-not-exist-3cb60d4c
+          requires-exact-version-does-not-exist-e7132fc5
+          requires-greater-version-does-not-exist-0e488e8f
+          requires-less-version-does-not-exist-1a4076bc
+          transitive-requires-package-does-not-exist-22a72022
       scenarios/example.json
-          example-97db95eb
+          example-f8a3cb91
       scenarios/excluded.json
-          excluded-only-version-7a9ed79c
-          excluded-only-compatible-version-b6b89642
-          dependency-excludes-range-of-compatible-versions-1cd99bd0
-          dependency-excludes-non-contiguous-range-of-compatible-versions-0fd25b39
+          excluded-only-version-2bc4455f
+          excluded-only-compatible-version-5b90a629
+          dependency-excludes-range-of-compatible-versions-e59e1cd1
+          dependency-excludes-non-contiguous-range-of-compatible-versions-ed41451f
       scenarios/extras.json
-          extra-required-76e5355c
-          missing-extra-06e7489c
-          multiple-extras-required-e55f15c4
-          extra-incompatible-with-extra-492741b0
-          extra-incompatible-with-extra-not-requested-f0b0089a
-          extra-incompatible-with-root-9d588075
-          extra-does-not-exist-backtrack-f1877db3
+          extra-required-c9be513b
+          missing-extra-79fd9a92
+          multiple-extras-required-14317535
+          extra-incompatible-with-extra-afa38951
+          extra-incompatible-with-extra-not-requested-5c305dd9
+          extra-incompatible-with-root-743dac5a
+          extra-does-not-exist-backtrack-a35e4442
       scenarios/incompatible-versions.json
-          direct-incompatible-versions-80d82ee8
-          transitive-incompatible-with-root-version-a967e815
-          transitive-incompatible-with-transitive-6866d8dc
+          direct-incompatible-versions-f75c56e2
+          transitive-incompatible-with-root-version-812a0fda
+          transitive-incompatible-with-transitive-74531fe0
       scenarios/prereleases.json
-          package-only-prereleases-9a1b3dda
-          package-only-prereleases-in-range-19673198
-          requires-package-only-prereleases-in-range-global-opt-in-51f94da2
-          requires-package-prerelease-and-final-any-eebe53a6
-          package-prerelease-specified-only-final-available-9d4725eb
-          package-prerelease-specified-only-prerelease-available-6cc95bc8
-          package-prerelease-specified-mixed-available-c97845e2
-          package-multiple-prereleases-kinds-e290bf29
-          package-multiple-prereleases-numbers-f5948c28
-          transitive-package-only-prereleases-44ebef16
-          transitive-package-only-prereleases-in-range-27759187
-          transitive-package-only-prereleases-in-range-opt-in-26efb6c5
-          transitive-prerelease-and-stable-dependency-f8aeea37
-          transitive-prerelease-and-stable-dependency-opt-in-184fc65f
-          transitive-prerelease-and-stable-dependency-many-versions-7017673e
-          transitive-prerelease-and-stable-dependency-many-versions-holes-aaee5052
+          package-only-prereleases-e2dbc237
+          package-only-prereleases-in-range-4e199000
+          requires-package-only-prereleases-in-range-global-opt-in-af391f9c
+          requires-package-prerelease-and-final-any-81dbab9d
+          package-prerelease-specified-only-final-available-2ee8f3f9
+          package-prerelease-specified-only-prerelease-available-dd6b1e32
+          package-prerelease-specified-mixed-available-794fce4d
+          package-multiple-prereleases-kinds-256d4e16
+          package-multiple-prereleases-numbers-ac82d3fb
+          transitive-package-only-prereleases-9da8532e
+          transitive-package-only-prereleases-in-range-c41a54fc
+          transitive-package-only-prereleases-in-range-opt-in-96f98f65
+          transitive-prerelease-and-stable-dependency-3d5eb91f
+          transitive-prerelease-and-stable-dependency-opt-in-6192ec57
+          transitive-prerelease-and-stable-dependency-many-versions-bcd0f988
+          transitive-prerelease-and-stable-dependency-many-versions-holes-5cee052e
       scenarios/requires-python.json
-          requires-python-version-does-not-exist-0825b69c
-          requires-python-version-less-than-current-f9296b84
-          requires-python-version-greater-than-current-a11d5394
-          requires-python-version-greater-than-current-patch-56aa9dc5
-          requires-python-version-greater-than-current-many-02dc550c
-          requires-python-version-greater-than-current-backtrack-ef060cef
-          requires-python-version-greater-than-current-excluded-1bde0c18
-          requires-incompatible-python-version-compatible-override-818d78ce
-          requires-compatible-python-version-incompatible-override-e94b8bc2
-          requires-incompatible-python-version-compatible-override-no-wheels-367303df
-          requires-incompatible-python-version-compatible-override-no-compatible-wheels-7d66d27e
-          requires-incompatible-python-version-compatible-override-other-wheel-47c905cb
-          requires-python-patch-version-override-no-patch-766c38c5
-          requires-python-patch-version-override-patch-compatible-4cf329ad
+          requires-python-version-does-not-exist-d004e577
+          requires-python-version-less-than-current-5e520203
+          requires-python-version-greater-than-current-62394505
+          requires-python-version-greater-than-current-patch-dcd76825
+          requires-python-version-greater-than-current-many-fd1f719c
+          requires-python-version-greater-than-current-backtrack-b2677f9a
+          requires-python-version-greater-than-current-excluded-34ee1c3e
+          requires-incompatible-python-version-compatible-override-006fed96
+          requires-compatible-python-version-incompatible-override-8c1b0389
+          requires-incompatible-python-version-compatible-override-no-wheels-b8ee1c03
+          requires-incompatible-python-version-compatible-override-no-compatible-wheels-bbf0da53
+          requires-incompatible-python-version-compatible-override-other-wheel-08a4e843
+          requires-python-patch-version-override-no-patch-2e1edfd6
+          requires-python-patch-version-override-patch-compatible-844899bd
       scenarios/wheels.json
-          specific-tag-and-default-74e4a459
-          only-wheels-4f019491
-          no-wheels-614d801c
-          no-wheels-with-matching-platform-737bbfd4
+          specific-tag-and-default-ce63fb65
+          only-wheels-08df4319
+          no-wheels-0a9090ba
+          no-wheels-with-matching-platform-b595b358
   
     ''',
   })
@@ -252,67 +252,67 @@
     'stderr': '',
     'stdout': '''
       scenarios/does-not-exist.json
-          57cd4136
-          eaa03067
-          6e8e01df
-          e45cec3c
-          aca2796a
+          3cb60d4c
+          e7132fc5
+          0e488e8f
+          1a4076bc
+          22a72022
       scenarios/example.json
-          97db95eb
+          f8a3cb91
       scenarios/excluded.json
-          7a9ed79c
-          b6b89642
-          1cd99bd0
-          0fd25b39
+          2bc4455f
+          5b90a629
+          e59e1cd1
+          ed41451f
       scenarios/extras.json
-          76e5355c
-          06e7489c
-          e55f15c4
-          492741b0
-          f0b0089a
-          9d588075
-          f1877db3
+          c9be513b
+          79fd9a92
+          14317535
+          afa38951
+          5c305dd9
+          743dac5a
+          a35e4442
       scenarios/incompatible-versions.json
-          80d82ee8
-          a967e815
-          6866d8dc
+          f75c56e2
+          812a0fda
+          74531fe0
       scenarios/prereleases.json
-          9a1b3dda
-          19673198
-          51f94da2
-          eebe53a6
-          9d4725eb
-          6cc95bc8
-          c97845e2
-          e290bf29
-          f5948c28
-          44ebef16
-          27759187
-          26efb6c5
-          f8aeea37
-          184fc65f
-          7017673e
-          aaee5052
+          e2dbc237
+          4e199000
+          af391f9c
+          81dbab9d
+          2ee8f3f9
+          dd6b1e32
+          794fce4d
+          256d4e16
+          ac82d3fb
+          9da8532e
+          c41a54fc
+          96f98f65
+          3d5eb91f
+          6192ec57
+          bcd0f988
+          5cee052e
       scenarios/requires-python.json
-          0825b69c
-          f9296b84
-          a11d5394
-          56aa9dc5
-          02dc550c
-          ef060cef
-          1bde0c18
-          818d78ce
-          e94b8bc2
-          367303df
-          7d66d27e
-          47c905cb
-          766c38c5
-          4cf329ad
+          d004e577
+          5e520203
+          62394505
+          dcd76825
+          fd1f719c
+          b2677f9a
+          34ee1c3e
+          006fed96
+          8c1b0389
+          b8ee1c03
+          bbf0da53
+          08a4e843
+          2e1edfd6
+          844899bd
       scenarios/wheels.json
-          74e4a459
-          4f019491
-          614d801c
-          737bbfd4
+          ce63fb65
+          08df4319
+          0a9090ba
+          b595b358
   
     ''',
   })

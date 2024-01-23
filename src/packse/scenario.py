@@ -50,7 +50,7 @@ class PackageMetadata(msgspec.Struct):
     Metadata for a single version of a package.
     """
 
-    requires_python: str | None = ">=3.7"
+    requires_python: str | None = ">=3.8"
     requires: list[Requirement] = []
     extras: dict[str, list[Requirement]] = {}
     sdist: bool = True
@@ -84,7 +84,7 @@ class PackageMetadata(msgspec.Struct):
 
 
 class RootPackageMetadata(msgspec.Struct):
-    requires_python: str | None = ">=3.7"
+    requires_python: str | None = ">=3.8"
     requires: list[Requirement] = []
 
     def hash(self) -> str:
@@ -115,7 +115,7 @@ class ResolverOptions(msgspec.Struct):
 
 
 class EnvironmentMetadata(msgspec.Struct):
-    python: str = "3.7"
+    python: str = "3.8"
     """
     The Python version being used.
     """

@@ -18,7 +18,7 @@
         name = "foo"
         version = "1.0.0"
         dependencies = []
-        requires-python = ">=3.7"
+        requires-python = ">=3.8"
         description = ""
         
         [project.optional-dependencies]
@@ -28,8 +28,8 @@
         __version__ = "1.0.0"
   
       ''',
-      'dist/foo/foo-1.0.0-py3-none-any.whl': 'md5:fa25598ba0f3b049fa9b2e3870df1de7',
-      'dist/foo/foo-1.0.0.tar.gz': 'md5:7fbd9e8db2a175a753b1389e450a6cec',
+      'dist/foo/foo-1.0.0-py3-none-any.whl': 'md5:d185c7ccef96f6a64414eb61db294897',
+      'dist/foo/foo-1.0.0.tar.gz': 'md5:bd183e51585849bfeab448cbd6b3f24d',
       'tree': '''
         test_build_pkg0
         ├── build
@@ -101,7 +101,7 @@
         name = "foo"
         version = "1.0.0"
         dependencies = []
-        requires-python = ">=3.7"
+        requires-python = ">=3.8"
         description = ""
         
         [project.optional-dependencies]
@@ -111,7 +111,7 @@
         __version__ = "1.0.0"
   
       ''',
-      'dist/foo/foo-1.0.0-py3-none-any.whl': 'md5:fa25598ba0f3b049fa9b2e3870df1de7',
+      'dist/foo/foo-1.0.0-py3-none-any.whl': 'md5:d185c7ccef96f6a64414eb61db294897',
       'tree': '''
         test_build_pkg_no_sdist0
         ├── build
@@ -171,7 +171,7 @@
         name = "foo"
         version = "1.0.0"
         dependencies = []
-        requires-python = ">=3.7"
+        requires-python = ">=3.8"
         description = ""
         
         [project.optional-dependencies]
@@ -181,7 +181,7 @@
         __version__ = "1.0.0"
   
       ''',
-      'dist/foo/foo-1.0.0.tar.gz': 'md5:7fbd9e8db2a175a753b1389e450a6cec',
+      'dist/foo/foo-1.0.0.tar.gz': 'md5:bd183e51585849bfeab448cbd6b3f24d',
       'tree': '''
         test_build_pkg_no_wheel0
         ├── build
@@ -228,7 +228,7 @@
         name = "foo"
         version = "1.0.0"
         dependencies = []
-        requires-python = ">=3.7"
+        requires-python = ">=3.8"
         description = ""
         
         [project.optional-dependencies]
@@ -238,9 +238,9 @@
         __version__ = "1.0.0"
   
       ''',
-      'dist/foo/foo-1.0.0-tag1.whl': 'md5:fa25598ba0f3b049fa9b2e3870df1de7',
-      'dist/foo/foo-1.0.0-tag2.whl': 'md5:fa25598ba0f3b049fa9b2e3870df1de7',
-      'dist/foo/foo-1.0.0.tar.gz': 'md5:7fbd9e8db2a175a753b1389e450a6cec',
+      'dist/foo/foo-1.0.0-tag1.whl': 'md5:d185c7ccef96f6a64414eb61db294897',
+      'dist/foo/foo-1.0.0-tag2.whl': 'md5:d185c7ccef96f6a64414eb61db294897',
+      'dist/foo/foo-1.0.0.tar.gz': 'md5:bd183e51585849bfeab448cbd6b3f24d',
       'tree': '''
         test_build_pkg_wheel_tags0
         ├── build
