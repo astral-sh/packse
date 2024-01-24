@@ -4329,10 +4329,10 @@
             "name": "requires-python-version-greater-than-current-patch",
             "packages": [
               {
-                "name": "requires-python-version-greater-than-current-patch-a-dcd76825",
+                "name": "requires-python-version-greater-than-current-patch-a-7b98f5af",
                 "versions": [
                   {
-                    "requires_python": ">=3.8.2",
+                    "requires_python": ">=3.8.14",
                     "requires": [],
                     "extras": [],
                     "sdist": true,
@@ -4348,9 +4348,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-python-version-greater-than-current-patch-a-dcd76825==1.0.0",
-                  "name": "requires-python-version-greater-than-current-patch-a-dcd76825",
-                  "module_name": "requires_python_version_greater_than_current_patch_a_dcd76825"
+                  "requirement": "requires-python-version-greater-than-current-patch-a-7b98f5af==1.0.0",
+                  "name": "requires-python-version-greater-than-current-patch-a-7b98f5af",
+                  "module_name": "requires_python_version_greater_than_current_patch_a_7b98f5af"
                 }
               ]
             },
@@ -4360,23 +4360,23 @@
               "explanation": null
             },
             "environment": {
-              "python": "3.8.0",
+              "python": "3.8.12",
               "prereleases": false
             },
             "resolver_options": null,
             "template": "simple",
             "description": "The user requires a package which requires a Python version with a patch version greater than the current patch version",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "dcd76825",
+            "version": "7b98f5af",
             "tree": [
               "\u251c\u2500\u2500 environment",
-              "\u2502   \u2514\u2500\u2500 python3.8.0",
+              "\u2502   \u2514\u2500\u2500 python3.8.12",
               "\u251c\u2500\u2500 root",
               "\u2502   \u2514\u2500\u2500 requires a==1.0.0",
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
               "\u2514\u2500\u2500 a",
               "    \u2514\u2500\u2500 a-1.0.0",
-              "        \u2514\u2500\u2500 requires python>=3.8.2 (incompatible with environment)"
+              "        \u2514\u2500\u2500 requires python>=3.8.14 (incompatible with environment)"
             ],
             "module_name": "requires_python_version_greater_than_current_patch"
           },
