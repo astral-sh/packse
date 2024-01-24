@@ -4939,7 +4939,7 @@
             "name": "requires-incompatible-python-version-compatible-override-no-compatible-wheels",
             "packages": [
               {
-                "name": "requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-bbf0da53",
+                "name": "requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-ec319103",
                 "versions": [
                   {
                     "requires_python": ">=3.10",
@@ -4948,7 +4948,7 @@
                     "sdist": true,
                     "wheel": true,
                     "wheel_tags": [
-                      "incompatible-tag"
+                      "incompatible_tag"
                     ],
                     "description": "",
                     "version": "1.0.0"
@@ -4960,9 +4960,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-bbf0da53==1.0.0",
-                  "name": "requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-bbf0da53",
-                  "module_name": "requires_incompatible_python_version_compatible_override_no_compatible_wheels_a_bbf0da53"
+                  "requirement": "requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-ec319103==1.0.0",
+                  "name": "requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-ec319103",
+                  "module_name": "requires_incompatible_python_version_compatible_override_no_compatible_wheels_a_ec319103"
                 }
               ]
             },
@@ -4981,7 +4981,7 @@
             "template": "simple",
             "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There is a wheel available for the package, but it does not have a compatible tag.",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "bbf0da53",
+            "version": "ec319103",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.9",
