@@ -324,7 +324,7 @@
                     "1.0.0": {
                         "requires_python": ">=3.10",
                         "wheel_tags": [
-                            "incompatible_tag"
+                            "foo-none-any"
                         ]
                     }
                 }
