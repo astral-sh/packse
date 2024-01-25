@@ -77,13 +77,13 @@
             ]
         },
         "environment": {
-            "python": "3.8.0"
+            "python": "3.8.12"
         },
         "packages": {
             "a": {
                 "versions": {
                     "1.0.0": {
-                        "requires_python": ">=3.8.2"
+                        "requires_python": ">=3.8.14"
                     }
                 }
             }
