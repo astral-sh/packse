@@ -117,7 +117,14 @@ class ResolverOptions(msgspec.Struct):
 class EnvironmentMetadata(msgspec.Struct):
     python: str = "3.8"
     """
-    The Python version being used.
+    The active Python version.
+    """
+
+    additional_python: list[str] = []
+    """
+    Additional Python versions available on the system.
+
+    By default, only the active Python version is available.
     """
 
     prereleases: bool = False
@@ -131,6 +138,8 @@ class EnvironmentMetadata(msgspec.Struct):
         """
         hasher = hashlib.new("md5", usedforsecurity=False)
         hasher.update(self.python.encode())
+        for additional_python in self.additional_python:
+            hasher.update(additional_python.encode())
         return hasher.hexdigest()
 
 
