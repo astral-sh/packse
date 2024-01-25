@@ -4984,6 +4984,67 @@
             "module_name": "requires_incompatible_python_version_compatible_override_no_wheels"
           },
           {
+            "name": "requires-incompatible-python-version-compatible-override-no-wheels-available-system",
+            "packages": [
+              {
+                "name": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-ae5b2665",
+                "versions": [
+                  {
+                    "requires_python": ">=3.10",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-ae5b2665==1.0.0",
+                  "name": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-ae5b2665",
+                  "module_name": "requires_incompatible_python_version_compatible_override_no_wheels_available_system_a_ae5b2665"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": [],
+              "explanation": "Since there is a compatible Python version available on the system, it should be used to build the source distributions."
+            },
+            "environment": {
+              "python": "3.9",
+              "additional_python": [
+                "3.11"
+              ],
+              "prereleases": false
+            },
+            "resolver_options": {
+              "python": "3.11"
+            },
+            "template": "simple",
+            "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There are only source distributions available for the package. The user has a compatible Python version installed elsewhere on their system.",
+            "source": "[PWD]/scenarios/requires-python.json",
+            "version": "ae5b2665",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u251c\u2500\u2500 python3.11",
+              "\u2502   \u2514\u2500\u2500 python3.9 (active)",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a==1.0.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0",
+              "        \u2514\u2500\u2500 requires python>=3.10 (incompatible with environment)"
+            ],
+            "module_name": "requires_incompatible_python_version_compatible_override_no_wheels_available_system"
+          },
+          {
             "name": "requires-incompatible-python-version-compatible-override-no-compatible-wheels",
             "packages": [
               {
