@@ -162,7 +162,16 @@ def dependency_tree(scenario: Scenario) -> str:
     pointer = tee
     buffer += pointer + "environment\n"
     prefix = branch
-    buffer += prefix + last + f"python{scenario.environment.python}\n"
+    if scenario.environment.additional_python:
+        python_versions = scenario.environment.additional_python + [
+            scenario.environment.python
+        ]
+        pointers = [tee] * (len(python_versions) - 1) + [last]
+        for pointer, version in zip(pointers, sorted(python_versions)):
+            active = " (active)" if version == scenario.environment.python else ""
+            buffer += prefix + pointer + f"python{version}" + active + "\n"
+    else:
+        buffer += prefix + last + f"python{scenario.environment.python}\n"
 
     # Print the root package first
     pointer = tee if scenario.packages else last
