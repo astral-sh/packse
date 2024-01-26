@@ -4987,7 +4987,7 @@
             "name": "requires-incompatible-python-version-compatible-override-no-wheels-available-system",
             "packages": [
               {
-                "name": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-ae5b2665",
+                "name": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-23e00318",
                 "versions": [
                   {
                     "requires_python": ">=3.10",
@@ -5006,15 +5006,21 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-ae5b2665==1.0.0",
-                  "name": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-ae5b2665",
-                  "module_name": "requires_incompatible_python_version_compatible_override_no_wheels_available_system_a_ae5b2665"
+                  "requirement": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-23e00318==1.0.0",
+                  "name": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-23e00318",
+                  "module_name": "requires_incompatible_python_version_compatible_override_no_wheels_available_system_a_23e00318"
                 }
               ]
             },
             "expected": {
               "satisfiable": true,
-              "packages": [],
+              "packages": [
+                {
+                  "name": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-23e00318",
+                  "version": "1.0.0",
+                  "module_name": "requires_incompatible_python_version_compatible_override_no_wheels_available_system_a_23e00318"
+                }
+              ],
               "explanation": "Since there is a compatible Python version available on the system, it should be used to build the source distributions."
             },
             "environment": {
@@ -5030,7 +5036,7 @@
             "template": "simple",
             "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There are only source distributions available for the package. The user has a compatible Python version installed elsewhere on their system.",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "ae5b2665",
+            "version": "23e00318",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u251c\u2500\u2500 python3.11",

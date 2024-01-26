@@ -333,7 +333,10 @@
         },
         "expected": {
             "satisfiable": true,
-            "explanation": "Since there is a compatible Python version available on the system, it should be used to build the source distributions."
+            "explanation": "Since there is a compatible Python version available on the system, it should be used to build the source distributions.",
+            "packages": {
+                "a": "1.0.0"
+            }
         }
     },
     {
