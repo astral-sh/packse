@@ -99,9 +99,14 @@ class RootPackageMetadata(msgspec.Struct):
 
 
 class ResolverOptions(msgspec.Struct):
-    python: str | None
+    python: str | None = None
     """
     An optional Python version override.
+    """
+
+    prereleases: bool = False
+    """
+    If selection of prereleases should be enabled for all packages.
     """
 
     def hash(self) -> str:
@@ -111,6 +116,8 @@ class ResolverOptions(msgspec.Struct):
         hasher = hashlib.new("md5", usedforsecurity=False)
         if self.python is not None:
             hasher.update(self.python.encode())
+        if self.prereleases is not None:
+            hasher.update(self.prereleases.to_bytes())
         return hasher.hexdigest()
 
 
@@ -125,11 +132,6 @@ class EnvironmentMetadata(msgspec.Struct):
     Additional Python versions available on the system.
 
     By default, only the active Python version is available.
-    """
-
-    prereleases: bool = False
-    """
-    If selection of prereleases should be enabled for all packages.
     """
 
     def hash(self) -> str:
