@@ -109,6 +109,20 @@ class ResolverOptions(msgspec.Struct):
     If selection of prereleases should be enabled for all packages.
     """
 
+    no_build: list[str] = []
+    """
+    Packages should be built from source distributions.
+
+    Pre-built binaries are required for the given packages.
+    """
+
+    no_binary: list[str] = []
+    """
+    Pre-built binaries should not be allowed for the given packages.
+
+    A source distribution is required to build the packages.
+    """
+
     def hash(self) -> str:
         """
         Return a hash of the contents
@@ -118,6 +132,11 @@ class ResolverOptions(msgspec.Struct):
             hasher.update(self.python.encode())
         if self.prereleases is not None:
             hasher.update(self.prereleases.to_bytes())
+        for no_binary in self.no_binary:
+            hasher.update(no_binary.encode())
+        for no_build in self.no_build:
+            hasher.update(no_build.encode())
+
         return hasher.hexdigest()
 
 
