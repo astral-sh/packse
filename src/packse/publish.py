@@ -94,14 +94,15 @@ def publish(
     for target in targets:
         yankfile = target.with_suffix(".yanked")
         if yankfile.exists():
-            url = (
-                index_url.replace("/legacy/", "/")
-                + f"manage/project/{target.name}/release"
-            )
             print()
             print(f"{target.name} has versions that must be yanked:")
-            for version in yankfile.read_text().splitlines():
-                print(f"\t{version}: {url}/{version}/#yank_version-modal")
+            for package_version in yankfile.read_text().splitlines():
+                package, version = package_version.rsplit("-", 1)
+                url = (
+                    index_url.replace("/legacy/", "/")
+                    + f"manage/project/{package}/release/{version}/#yank_version-modal"
+                )
+                print(f"\t{package_version}: {url}")
 
 
 def publish_package_distributions(

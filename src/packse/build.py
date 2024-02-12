@@ -235,7 +235,7 @@ def build_scenario_package(
 
         if package_version.yanked:
             with dist_destination.with_suffix(".yanked").open("a+") as yanked:
-                yanked.write(version)
+                yanked.write(f"{package_name}-{version}")
                 yanked.write("\n")
             logger.info("Marked %s-%s as yanked", package_name, version)
 
