@@ -67,7 +67,7 @@
     },
     {
         "name": "no-wheels-with-matching-platform",
-        "description": "No wheels with valid tags are available, just source distributions.",
+        "description": "No wheels with matching platform tags are available, just source distributions.",
         "root": {
             "requires": [
                 "a"
@@ -78,7 +78,7 @@
                 "versions": {
                     "1.0.0": {
                         "wheel_tags": [
-                            "unknown-unknown-unknown"
+                            "py3-macosx_10_0_ppc64-none"
                         ]
                     }
                 }
@@ -90,7 +90,7 @@
     },
     {
         "name": "no-sdist-no-wheels-with-matching-platform",
-        "description": "No wheels with matching tags are available, nor are any source distributions available",
+        "description": "No wheels with matching platform tags are available, nor are any source distributions available",
         "root": {
             "requires": [
                 "a"
@@ -101,7 +101,7 @@
                 "versions": {
                     "1.0.0": {
                         "wheel_tags": [
-                            "unknown-unknown-unknown"
+                            "py3-macosx_10_0_ppc64-none"
                         ],
                         "sdist": false
                     }
