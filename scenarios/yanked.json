@@ -17,11 +17,8 @@
             }
         },
         "expected": {
-            "satisfiable": true,
-            "packages": {
-                "a": "1.0.0"
-            },
-            "explanation": "Since there are only yanked versions of `a` available, it should be installed even though the user did not ask for the yanked version directly."
+            "satisfiable": false,
+            "explanation": "Yanked versions should not be installed, even if they are the only one available."
         }
     },
     {
@@ -48,7 +45,7 @@
         }
     },
     {
-        "name": "requires-package-yanked-and-final-any",
+        "name": "requires-package-yanked-and-unyanked-any",
         "description": "The user requires any version of package `a` has a yanked version available and an older unyanked version.",
         "root": {
             "requires": [
@@ -130,12 +127,8 @@
             }
         },
         "expected": {
-            "satisfiable": true,
-            "packages": {
-                "a": "0.1.0",
-                "b": "1.0.1"
-            },
-            "explanation": "Since there are only yanked versions of `b` available, it should be selected even though the user did not opt-in to it."
+            "satisfiable": false,
+            "explanation": "Yanked versions should not be installed, even if they are the only one available."
         }
     },
     {
@@ -167,7 +160,7 @@
         },
         "expected": {
             "satisfiable": false,
-            "explanation": "Since there are unyanked versions of `b` available, the yanked version should not be selected without explicit opt-in. The available version is excluded by the range requested by the user."
+            "explanation": "Yanked versions should not be installed, even if they are the only valid version in a range."
         }
     },
     {
@@ -204,7 +197,7 @@
                 "a": "0.1.0",
                 "b": "1.0.0"
             },
-            "explanation": "Since the user included a dependency on `b` with a yanked specifier, a yanked version can be selected."
+            "explanation": "Since the user included a dependency on `b` with an exact specifier, the yanked version can be selected."
         }
     },
     {
@@ -246,7 +239,7 @@
         },
         "expected": {
             "satisfiable": false,
-            "explanation": "Since the user did not explicitly opt-in to the yanked version, it cannot be used."
+            "explanation": "Since the user did not explicitly select the yanked version, it cannot be used."
         }
     },
     {
@@ -294,7 +287,7 @@
                 "b": "1.0.0",
                 "c": "2.0.0"
             },
-            "explanation": "Since the user explicitly opted-in to a yanked version for `c`, it can be installed."
+            "explanation": "Since the user explicitly selected the yanked version of `c`, it can be installed."
         }
     }
 ]

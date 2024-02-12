@@ -6272,15 +6272,9 @@
               ]
             },
             "expected": {
-              "satisfiable": true,
-              "packages": [
-                {
-                  "name": "package-only-yanked-a-e3de7eb4",
-                  "version": "1.0.0",
-                  "module_name": "package_only_yanked_a_e3de7eb4"
-                }
-              ],
-              "explanation": "Since there are only yanked versions of `a` available, it should be installed even though the user did not ask for the yanked version directly."
+              "satisfiable": false,
+              "packages": [],
+              "explanation": "Yanked versions should not be installed, even if they are the only one available."
             },
             "environment": {
               "python": "3.8",
@@ -6380,10 +6374,10 @@
             "module_name": "package_only_yanked_in_range"
           },
           {
-            "name": "requires-package-yanked-and-final-any",
+            "name": "requires-package-yanked-and-unyanked-any",
             "packages": [
               {
-                "name": "requires-package-yanked-and-final-any-a-20543e89",
+                "name": "requires-package-yanked-and-unyanked-any-a-93eac6d7",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -6414,9 +6408,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-package-yanked-and-final-any-a-20543e89",
-                  "name": "requires-package-yanked-and-final-any-a-20543e89",
-                  "module_name": "requires_package_yanked_and_final_any_a_20543e89"
+                  "requirement": "requires-package-yanked-and-unyanked-any-a-93eac6d7",
+                  "name": "requires-package-yanked-and-unyanked-any-a-93eac6d7",
+                  "module_name": "requires_package_yanked_and_unyanked_any_a_93eac6d7"
                 }
               ]
             },
@@ -6424,9 +6418,9 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "requires-package-yanked-and-final-any-a-20543e89",
+                  "name": "requires-package-yanked-and-unyanked-any-a-93eac6d7",
                   "version": "0.1.0",
-                  "module_name": "requires_package_yanked_and_final_any_a_20543e89"
+                  "module_name": "requires_package_yanked_and_unyanked_any_a_93eac6d7"
                 }
               ],
               "explanation": "The unyanked version should be selected."
@@ -6444,7 +6438,7 @@
             "template": "simple",
             "description": "The user requires any version of package `a` has a yanked version available and an older unyanked version.",
             "source": "[PWD]/scenarios/yanked.json",
-            "version": "20543e89",
+            "version": "93eac6d7",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -6455,7 +6449,7 @@
               "    \u251c\u2500\u2500 a-0.1.0",
               "    \u2514\u2500\u2500 a-1.0.0 (yanked)"
             ],
-            "module_name": "requires_package_yanked_and_final_any"
+            "module_name": "requires_package_yanked_and_unyanked_any"
           },
           {
             "name": "package-yanked-specified-mixed-available",
@@ -6609,20 +6603,9 @@
               ]
             },
             "expected": {
-              "satisfiable": true,
-              "packages": [
-                {
-                  "name": "transitive-package-only-yanked-a-9ec30fe2",
-                  "version": "0.1.0",
-                  "module_name": "transitive_package_only_yanked_a_9ec30fe2"
-                },
-                {
-                  "name": "transitive-package-only-yanked-b-9ec30fe2",
-                  "version": "1.0.1",
-                  "module_name": "transitive_package_only_yanked_b_9ec30fe2"
-                }
-              ],
-              "explanation": "Since there are only yanked versions of `b` available, it should be selected even though the user did not opt-in to it."
+              "satisfiable": false,
+              "packages": [],
+              "explanation": "Yanked versions should not be installed, even if they are the only one available."
             },
             "environment": {
               "python": "3.8",
@@ -6715,7 +6698,7 @@
             "expected": {
               "satisfiable": false,
               "packages": [],
-              "explanation": "Since there are unyanked versions of `b` available, the yanked version should not be selected without explicit opt-in. The available version is excluded by the range requested by the user."
+              "explanation": "Yanked versions should not be installed, even if they are the only valid version in a range."
             },
             "environment": {
               "python": "3.8",
@@ -6825,7 +6808,7 @@
                   "module_name": "transitive_package_only_yanked_in_range_opt_in_b_1bbd5d1b"
                 }
               ],
-              "explanation": "Since the user included a dependency on `b` with a yanked specifier, a yanked version can be selected."
+              "explanation": "Since the user included a dependency on `b` with an exact specifier, the yanked version can be selected."
             },
             "environment": {
               "python": "3.8",
@@ -6944,7 +6927,7 @@
             "expected": {
               "satisfiable": false,
               "packages": [],
-              "explanation": "Since the user did not explicitly opt-in to the yanked version, it cannot be used."
+              "explanation": "Since the user did not explicitly select the yanked version, it cannot be used."
             },
             "environment": {
               "python": "3.8",
@@ -7088,7 +7071,7 @@
                   "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_c_f0760ee9"
                 }
               ],
-              "explanation": "Since the user explicitly opted-in to a yanked version for `c`, it can be installed."
+              "explanation": "Since the user explicitly selected the yanked version of `c`, it can be installed."
             },
             "environment": {
               "python": "3.8",
