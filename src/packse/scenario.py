@@ -269,11 +269,15 @@ class Scenario(msgspec.Struct):
         hasher.update(self.template.encode())
         hasher.update(self.root.hash().encode())
         hasher.update(self.environment.hash().encode())
-        hasher.update(self.expected.hash().encode())
-        hasher.update(self.resolver_options.hash().encode())
+
         for name, package in self.packages.items():
             hasher.update(name.encode())
             hasher.update(package.hash().encode())
+
+        # Note, the following are excluded because a re-publish is not needed on change
+        # - resolver_options
+        # - expected
+
         return hasher.hexdigest()
 
     def dict(self) -> dict:
