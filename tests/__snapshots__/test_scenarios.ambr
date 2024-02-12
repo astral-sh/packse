@@ -5925,14 +5925,14 @@
   
       ''',
       'dist/package-only-yanked-e3de7eb4.yanked': '''
-        1.0.0
+        package-only-yanked-a-e3de7eb4-1.0.0
   
       ''',
       'dist/package-only-yanked-e3de7eb4/package_only_yanked_a_e3de7eb4-1.0.0-py3-none-any.whl': 'md5:4caff761680bc4cb2c181c298353d7fe',
       'dist/package-only-yanked-e3de7eb4/package_only_yanked_a_e3de7eb4-1.0.0.tar.gz': 'md5:751e94a2264f8269c32b59818d80b25b',
       'dist/package-only-yanked-e3de7eb4/package_only_yanked_e3de7eb4-0.0.0.tar.gz': 'md5:babec2d2f3638e04f761506b28d46412',
       'dist/package-only-yanked-in-range-84b3720e.yanked': '''
-        1.0.0
+        package-only-yanked-in-range-a-84b3720e-1.0.0
   
       ''',
       'dist/package-only-yanked-in-range-84b3720e/package_only_yanked_in_range_84b3720e-0.0.0.tar.gz': 'md5:617557f1abc2084af685c68ad615edbd',
@@ -5941,8 +5941,8 @@
       'dist/package-only-yanked-in-range-84b3720e/package_only_yanked_in_range_a_84b3720e-1.0.0-py3-none-any.whl': 'md5:f795ce2c59d32c959854e20a83a76f69',
       'dist/package-only-yanked-in-range-84b3720e/package_only_yanked_in_range_a_84b3720e-1.0.0.tar.gz': 'md5:9e5f80d25a62f20fbfc2e649e87c686c',
       'dist/package-yanked-specified-mixed-available-3325916e.yanked': '''
-        0.2.0
-        1.0.0
+        package-yanked-specified-mixed-available-a-3325916e-0.2.0
+        package-yanked-specified-mixed-available-a-3325916e-1.0.0
   
       ''',
       'dist/package-yanked-specified-mixed-available-3325916e/package_yanked_specified_mixed_available_3325916e-0.0.0.tar.gz': 'md5:0b439c44ca69cc3ec7e69c249a27d77d',
@@ -5955,7 +5955,7 @@
       'dist/package-yanked-specified-mixed-available-3325916e/package_yanked_specified_mixed_available_a_3325916e-1.0.0-py3-none-any.whl': 'md5:e4f20742b6e501d350569dc6ad0e9070',
       'dist/package-yanked-specified-mixed-available-3325916e/package_yanked_specified_mixed_available_a_3325916e-1.0.0.tar.gz': 'md5:6eca0c5729b49d3fd5fba2290119c1f3',
       'dist/requires-package-yanked-and-final-any-20543e89.yanked': '''
-        1.0.0
+        requires-package-yanked-and-final-any-a-20543e89-1.0.0
   
       ''',
       'dist/requires-package-yanked-and-final-any-20543e89/requires_package_yanked_and_final_any_20543e89-0.0.0.tar.gz': 'md5:c061ade66b1577073f208a3fc5d69b1c',
@@ -5964,7 +5964,7 @@
       'dist/requires-package-yanked-and-final-any-20543e89/requires_package_yanked_and_final_any_a_20543e89-1.0.0-py3-none-any.whl': 'md5:e34172865200f8111ab23b58259fcd43',
       'dist/requires-package-yanked-and-final-any-20543e89/requires_package_yanked_and_final_any_a_20543e89-1.0.0.tar.gz': 'md5:84b92461640c0fea1d082a2c5db04ed7',
       'dist/transitive-package-only-yanked-9ec30fe2.yanked': '''
-        1.0.0
+        transitive-package-only-yanked-b-9ec30fe2-1.0.0
   
       ''',
       'dist/transitive-package-only-yanked-9ec30fe2/transitive_package_only_yanked_9ec30fe2-0.0.0.tar.gz': 'md5:14f5c1424f4f386e7d5eea2c02220c53',
@@ -5973,7 +5973,7 @@
       'dist/transitive-package-only-yanked-9ec30fe2/transitive_package_only_yanked_b_9ec30fe2-1.0.0-py3-none-any.whl': 'md5:d6761e59b91a95c3d82181ad66142269',
       'dist/transitive-package-only-yanked-9ec30fe2/transitive_package_only_yanked_b_9ec30fe2-1.0.0.tar.gz': 'md5:4477c3f9b5272eb35ca44211e4143209',
       'dist/transitive-package-only-yanked-in-range-872d714e.yanked': '''
-        1.0.0
+        transitive-package-only-yanked-in-range-b-872d714e-1.0.0
   
       ''',
       'dist/transitive-package-only-yanked-in-range-872d714e/transitive_package_only_yanked_in_range_872d714e-0.0.0.tar.gz': 'md5:6f6122cc2a58c2ce6b1cb51fae461f02',
@@ -5984,7 +5984,7 @@
       'dist/transitive-package-only-yanked-in-range-872d714e/transitive_package_only_yanked_in_range_b_872d714e-1.0.0-py3-none-any.whl': 'md5:b17e771211ffa033520ada3afbb25c29',
       'dist/transitive-package-only-yanked-in-range-872d714e/transitive_package_only_yanked_in_range_b_872d714e-1.0.0.tar.gz': 'md5:33491e958c078cac1635127fefa40df3',
       'dist/transitive-package-only-yanked-in-range-opt-in-1bbd5d1b.yanked': '''
-        1.0.0
+        transitive-package-only-yanked-in-range-opt-in-b-1bbd5d1b-1.0.0
   
       ''',
       'dist/transitive-package-only-yanked-in-range-opt-in-1bbd5d1b/transitive_package_only_yanked_in_range_opt_in_1bbd5d1b-0.0.0.tar.gz': 'md5:cb3f9dcede898087e8e5cae65ce6a0a7',
@@ -5995,7 +5995,7 @@
       'dist/transitive-package-only-yanked-in-range-opt-in-1bbd5d1b/transitive_package_only_yanked_in_range_opt_in_b_1bbd5d1b-1.0.0-py3-none-any.whl': 'md5:17af97b57c721156de021db854b8931b',
       'dist/transitive-package-only-yanked-in-range-opt-in-1bbd5d1b/transitive_package_only_yanked_in_range_opt_in_b_1bbd5d1b-1.0.0.tar.gz': 'md5:6a6e409fa7e1ab8a946eaaee78167716',
       'dist/transitive-yanked-and-unyanked-dependency-eb1ba5f5.yanked': '''
-        2.0.0
+        transitive-yanked-and-unyanked-dependency-c-eb1ba5f5-2.0.0
   
       ''',
       'dist/transitive-yanked-and-unyanked-dependency-eb1ba5f5/transitive_yanked_and_unyanked_dependency_a_eb1ba5f5-1.0.0-py3-none-any.whl': 'md5:4b995eef3c19120777ba9406e9395992',
@@ -6008,7 +6008,7 @@
       'dist/transitive-yanked-and-unyanked-dependency-eb1ba5f5/transitive_yanked_and_unyanked_dependency_c_eb1ba5f5-2.0.0.tar.gz': 'md5:bb153c370cc46d4ff766458adee632d9',
       'dist/transitive-yanked-and-unyanked-dependency-eb1ba5f5/transitive_yanked_and_unyanked_dependency_eb1ba5f5-0.0.0.tar.gz': 'md5:4d1a0d3b9580a4b508be05f7b866e1ed',
       'dist/transitive-yanked-and-unyanked-dependency-opt-in-f0760ee9.yanked': '''
-        2.0.0
+        transitive-yanked-and-unyanked-dependency-opt-in-c-f0760ee9-2.0.0
   
       ''',
       'dist/transitive-yanked-and-unyanked-dependency-opt-in-f0760ee9/transitive_yanked_and_unyanked_dependency_opt_in_a_f0760ee9-1.0.0-py3-none-any.whl': 'md5:6bd63c578b484bf56f9911841ab304bb',
