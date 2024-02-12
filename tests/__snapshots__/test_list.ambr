@@ -91,6 +91,7 @@
       only-wheels-a874f41e
       no-wheels-0278f343
       no-wheels-with-matching-platform-0c9f8397
+      no-sdist-no-wheels-with-matching-platform-e8c8850f
       no-wheels-no-build-662cbd94
       only-wheels-no-binary-dd137625
       no-build-9ff1e173
@@ -176,6 +177,7 @@
           only-wheels-a874f41e
           no-wheels-0278f343
           no-wheels-with-matching-platform-0c9f8397
+          no-sdist-no-wheels-with-matching-platform-e8c8850f
           no-wheels-no-build-662cbd94
           only-wheels-no-binary-dd137625
           no-build-9ff1e173
@@ -262,6 +264,7 @@
           only-wheels
           no-wheels
           no-wheels-with-matching-platform
+          no-sdist-no-wheels-with-matching-platform
           no-wheels-no-build
           only-wheels-no-binary
           no-build
@@ -358,6 +361,7 @@
           a874f41e
           0278f343
           0c9f8397
+          e8c8850f
           662cbd94
           dd137625
           9ff1e173

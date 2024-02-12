@@ -5934,6 +5934,66 @@
             "module_name": "no_wheels_with_matching_platform"
           },
           {
+            "name": "no-sdist-no-wheels-with-matching-platform",
+            "packages": [
+              {
+                "name": "no-sdist-no-wheels-with-matching-platform-a-e8c8850f",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": false,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "no-sdist-no-wheels-with-matching-platform-a-e8c8850f",
+                  "name": "no-sdist-no-wheels-with-matching-platform-a-e8c8850f",
+                  "module_name": "no_sdist_no_wheels_with_matching_platform_a_e8c8850f"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": [],
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
+            "template": "simple",
+            "description": "No wheels with matching tags are available, nor are any source distributions available",
+            "source": "[PWD]/scenarios/wheels.json",
+            "version": "e8c8850f",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0"
+            ],
+            "module_name": "no_sdist_no_wheels_with_matching_platform"
+          },
+          {
             "name": "no-wheels-no-build",
             "packages": [
               {
