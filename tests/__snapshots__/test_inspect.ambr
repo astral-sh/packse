@@ -10,12 +10,12 @@
             "name": "example",
             "packages": [
               {
-                "name": "example-a-f8a3cb91",
+                "name": "example-a-4e1dd5f5",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "example-b-f8a3cb91>1.0.0"
+                      "example-b-4e1dd5f5>1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -28,7 +28,7 @@
                 ]
               },
               {
-                "name": "example-b-f8a3cb91",
+                "name": "example-b-4e1dd5f5",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -55,7 +55,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "example-c-f8a3cb91"
+                      "example-c-4e1dd5f5"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -72,9 +72,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "example-a-f8a3cb91",
-                  "name": "example-a-f8a3cb91",
-                  "module_name": "example_a_f8a3cb91"
+                  "requirement": "example-a-4e1dd5f5",
+                  "name": "example-a-4e1dd5f5",
+                  "module_name": "example_a_4e1dd5f5"
                 }
               ]
             },
@@ -82,14 +82,14 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "example-a-f8a3cb91",
+                  "name": "example-a-4e1dd5f5",
                   "version": "1.0.0",
-                  "module_name": "example_a_f8a3cb91"
+                  "module_name": "example_a_4e1dd5f5"
                 },
                 {
-                  "name": "example-b-f8a3cb91",
+                  "name": "example-b-4e1dd5f5",
                   "version": "3.0.0",
-                  "module_name": "example_b_f8a3cb91"
+                  "module_name": "example_b_4e1dd5f5"
                 }
               ],
               "explanation": "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
@@ -98,11 +98,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
             "source": "[PWD]/scenarios/example.json",
-            "version": "f8a3cb91",
+            "version": "4e1dd5f5",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -150,12 +155,12 @@
             "name": "example",
             "packages": [
               {
-                "name": "example-a-f8a3cb91",
+                "name": "example-a-4e1dd5f5",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "example-b-f8a3cb91>1.0.0"
+                      "example-b-4e1dd5f5>1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -168,7 +173,7 @@
                 ]
               },
               {
-                "name": "example-b-f8a3cb91",
+                "name": "example-b-4e1dd5f5",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -195,7 +200,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "example-c-f8a3cb91"
+                      "example-c-4e1dd5f5"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -212,9 +217,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "example-a-f8a3cb91",
-                  "name": "example-a-f8a3cb91",
-                  "module_name": "example_a_f8a3cb91"
+                  "requirement": "example-a-4e1dd5f5",
+                  "name": "example-a-4e1dd5f5",
+                  "module_name": "example_a_4e1dd5f5"
                 }
               ]
             },
@@ -222,14 +227,14 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "example-a-f8a3cb91",
+                  "name": "example-a-4e1dd5f5",
                   "version": "1.0.0",
-                  "module_name": "example_a_f8a3cb91"
+                  "module_name": "example_a_4e1dd5f5"
                 },
                 {
-                  "name": "example-b-f8a3cb91",
+                  "name": "example-b-4e1dd5f5",
                   "version": "3.0.0",
-                  "module_name": "example_b_f8a3cb91"
+                  "module_name": "example_b_4e1dd5f5"
                 }
               ],
               "explanation": "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
@@ -238,11 +243,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
             "source": "[PROJECT_ROOT]/scenarios/example.json",
-            "version": "f8a3cb91",
+            "version": "4e1dd5f5",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -283,9 +293,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-package-does-not-exist-a-3cb60d4c",
-                  "name": "requires-package-does-not-exist-a-3cb60d4c",
-                  "module_name": "requires_package_does_not_exist_a_3cb60d4c"
+                  "requirement": "requires-package-does-not-exist-a-59b602d1",
+                  "name": "requires-package-does-not-exist-a-59b602d1",
+                  "module_name": "requires_package_does_not_exist_a_59b602d1"
                 }
               ]
             },
@@ -298,11 +308,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires any version of package `a` which does not exist.",
             "source": "[PWD]/scenarios/does-not-exist.json",
-            "version": "3cb60d4c",
+            "version": "59b602d1",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -316,7 +331,7 @@
             "name": "requires-exact-version-does-not-exist",
             "packages": [
               {
-                "name": "requires-exact-version-does-not-exist-a-e7132fc5",
+                "name": "requires-exact-version-does-not-exist-a-b669f1bd",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -336,9 +351,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-exact-version-does-not-exist-a-e7132fc5==2.0.0",
-                  "name": "requires-exact-version-does-not-exist-a-e7132fc5",
-                  "module_name": "requires_exact_version_does_not_exist_a_e7132fc5"
+                  "requirement": "requires-exact-version-does-not-exist-a-b669f1bd==2.0.0",
+                  "name": "requires-exact-version-does-not-exist-a-b669f1bd",
+                  "module_name": "requires_exact_version_does_not_exist_a_b669f1bd"
                 }
               ]
             },
@@ -351,11 +366,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires an exact version of package `a` but only other versions exist",
             "source": "[PWD]/scenarios/does-not-exist.json",
-            "version": "e7132fc5",
+            "version": "b669f1bd",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -371,7 +391,7 @@
             "name": "requires-greater-version-does-not-exist",
             "packages": [
               {
-                "name": "requires-greater-version-does-not-exist-a-0e488e8f",
+                "name": "requires-greater-version-does-not-exist-a-131bb166",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -402,9 +422,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-greater-version-does-not-exist-a-0e488e8f>1.0.0",
-                  "name": "requires-greater-version-does-not-exist-a-0e488e8f",
-                  "module_name": "requires_greater_version_does_not_exist_a_0e488e8f"
+                  "requirement": "requires-greater-version-does-not-exist-a-131bb166>1.0.0",
+                  "name": "requires-greater-version-does-not-exist-a-131bb166",
+                  "module_name": "requires_greater_version_does_not_exist_a_131bb166"
                 }
               ]
             },
@@ -417,11 +437,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires a version of `a` greater than `1.0.0` but only smaller or equal versions exist",
             "source": "[PWD]/scenarios/does-not-exist.json",
-            "version": "0e488e8f",
+            "version": "131bb166",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -438,7 +463,7 @@
             "name": "requires-less-version-does-not-exist",
             "packages": [
               {
-                "name": "requires-less-version-does-not-exist-a-1a4076bc",
+                "name": "requires-less-version-does-not-exist-a-8a97d57f",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -480,9 +505,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-less-version-does-not-exist-a-1a4076bc<2.0.0",
-                  "name": "requires-less-version-does-not-exist-a-1a4076bc",
-                  "module_name": "requires_less_version_does_not_exist_a_1a4076bc"
+                  "requirement": "requires-less-version-does-not-exist-a-8a97d57f<2.0.0",
+                  "name": "requires-less-version-does-not-exist-a-8a97d57f",
+                  "module_name": "requires_less_version_does_not_exist_a_8a97d57f"
                 }
               ]
             },
@@ -495,11 +520,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires a version of `a` less than `1.0.0` but only larger versions exist",
             "source": "[PWD]/scenarios/does-not-exist.json",
-            "version": "1a4076bc",
+            "version": "8a97d57f",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -517,12 +547,12 @@
             "name": "transitive-requires-package-does-not-exist",
             "packages": [
               {
-                "name": "transitive-requires-package-does-not-exist-a-22a72022",
+                "name": "transitive-requires-package-does-not-exist-a-4fb623d5",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-requires-package-does-not-exist-b-22a72022"
+                      "transitive-requires-package-does-not-exist-b-4fb623d5"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -539,9 +569,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "transitive-requires-package-does-not-exist-a-22a72022",
-                  "name": "transitive-requires-package-does-not-exist-a-22a72022",
-                  "module_name": "transitive_requires_package_does_not_exist_a_22a72022"
+                  "requirement": "transitive-requires-package-does-not-exist-a-4fb623d5",
+                  "name": "transitive-requires-package-does-not-exist-a-4fb623d5",
+                  "module_name": "transitive_requires_package_does_not_exist_a_4fb623d5"
                 }
               ]
             },
@@ -554,11 +584,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires package `a` but `a` requires package `b` which does not exist",
             "source": "[PWD]/scenarios/does-not-exist.json",
-            "version": "22a72022",
+            "version": "4fb623d5",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -576,12 +611,12 @@
             "name": "example",
             "packages": [
               {
-                "name": "example-a-f8a3cb91",
+                "name": "example-a-4e1dd5f5",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "example-b-f8a3cb91>1.0.0"
+                      "example-b-4e1dd5f5>1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -594,7 +629,7 @@
                 ]
               },
               {
-                "name": "example-b-f8a3cb91",
+                "name": "example-b-4e1dd5f5",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -621,7 +656,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "example-c-f8a3cb91"
+                      "example-c-4e1dd5f5"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -638,9 +673,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "example-a-f8a3cb91",
-                  "name": "example-a-f8a3cb91",
-                  "module_name": "example_a_f8a3cb91"
+                  "requirement": "example-a-4e1dd5f5",
+                  "name": "example-a-4e1dd5f5",
+                  "module_name": "example_a_4e1dd5f5"
                 }
               ]
             },
@@ -648,14 +683,14 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "example-a-f8a3cb91",
+                  "name": "example-a-4e1dd5f5",
                   "version": "1.0.0",
-                  "module_name": "example_a_f8a3cb91"
+                  "module_name": "example_a_4e1dd5f5"
                 },
                 {
-                  "name": "example-b-f8a3cb91",
+                  "name": "example-b-4e1dd5f5",
                   "version": "3.0.0",
-                  "module_name": "example_b_f8a3cb91"
+                  "module_name": "example_b_4e1dd5f5"
                 }
               ],
               "explanation": "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
@@ -664,11 +699,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
             "source": "[PWD]/scenarios/example.json",
-            "version": "f8a3cb91",
+            "version": "4e1dd5f5",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -693,7 +733,7 @@
             "name": "excluded-only-version",
             "packages": [
               {
-                "name": "excluded-only-version-a-2bc4455f",
+                "name": "excluded-only-version-a-6ccf4dcb",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -713,9 +753,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "excluded-only-version-a-2bc4455f!=1.0.0",
-                  "name": "excluded-only-version-a-2bc4455f",
-                  "module_name": "excluded_only_version_a_2bc4455f"
+                  "requirement": "excluded-only-version-a-6ccf4dcb!=1.0.0",
+                  "name": "excluded-only-version-a-6ccf4dcb",
+                  "module_name": "excluded_only_version_a_6ccf4dcb"
                 }
               ]
             },
@@ -728,11 +768,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "Only one version of the requested package is available, but the user has banned that version.",
             "source": "[PWD]/scenarios/excluded.json",
-            "version": "2bc4455f",
+            "version": "6ccf4dcb",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -748,12 +793,12 @@
             "name": "excluded-only-compatible-version",
             "packages": [
               {
-                "name": "excluded-only-compatible-version-a-5b90a629",
+                "name": "excluded-only-compatible-version-a-efdc998d",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "excluded-only-compatible-version-b-5b90a629==1.0.0"
+                      "excluded-only-compatible-version-b-efdc998d==1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -766,7 +811,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "excluded-only-compatible-version-b-5b90a629==2.0.0"
+                      "excluded-only-compatible-version-b-efdc998d==2.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -779,7 +824,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "excluded-only-compatible-version-b-5b90a629==3.0.0"
+                      "excluded-only-compatible-version-b-efdc998d==3.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -792,7 +837,7 @@
                 ]
               },
               {
-                "name": "excluded-only-compatible-version-b-5b90a629",
+                "name": "excluded-only-compatible-version-b-efdc998d",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -834,14 +879,14 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "excluded-only-compatible-version-a-5b90a629!=2.0.0",
-                  "name": "excluded-only-compatible-version-a-5b90a629",
-                  "module_name": "excluded_only_compatible_version_a_5b90a629"
+                  "requirement": "excluded-only-compatible-version-a-efdc998d!=2.0.0",
+                  "name": "excluded-only-compatible-version-a-efdc998d",
+                  "module_name": "excluded_only_compatible_version_a_efdc998d"
                 },
                 {
-                  "requirement": "excluded-only-compatible-version-b-5b90a629<3.0.0,>=2.0.0",
-                  "name": "excluded-only-compatible-version-b-5b90a629",
-                  "module_name": "excluded_only_compatible_version_b_5b90a629"
+                  "requirement": "excluded-only-compatible-version-b-efdc998d<3.0.0,>=2.0.0",
+                  "name": "excluded-only-compatible-version-b-efdc998d",
+                  "module_name": "excluded_only_compatible_version_b_efdc998d"
                 }
               ]
             },
@@ -854,11 +899,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "Only one version of the requested package `a` is compatible, but the user has banned that version.",
             "source": "[PWD]/scenarios/excluded.json",
-            "version": "5b90a629",
+            "version": "efdc998d",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -889,12 +939,12 @@
             "name": "dependency-excludes-range-of-compatible-versions",
             "packages": [
               {
-                "name": "dependency-excludes-range-of-compatible-versions-a-e59e1cd1",
+                "name": "dependency-excludes-range-of-compatible-versions-a-09c4bb3a",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "dependency-excludes-range-of-compatible-versions-b-e59e1cd1==1.0.0"
+                      "dependency-excludes-range-of-compatible-versions-b-09c4bb3a==1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -907,7 +957,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "dependency-excludes-range-of-compatible-versions-b-e59e1cd1==2.0.0"
+                      "dependency-excludes-range-of-compatible-versions-b-09c4bb3a==2.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -920,7 +970,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "dependency-excludes-range-of-compatible-versions-b-e59e1cd1==2.0.0"
+                      "dependency-excludes-range-of-compatible-versions-b-09c4bb3a==2.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -933,7 +983,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "dependency-excludes-range-of-compatible-versions-b-e59e1cd1==2.0.0"
+                      "dependency-excludes-range-of-compatible-versions-b-09c4bb3a==2.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -946,7 +996,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "dependency-excludes-range-of-compatible-versions-b-e59e1cd1==2.0.0"
+                      "dependency-excludes-range-of-compatible-versions-b-09c4bb3a==2.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -959,7 +1009,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "dependency-excludes-range-of-compatible-versions-b-e59e1cd1==3.0.0"
+                      "dependency-excludes-range-of-compatible-versions-b-09c4bb3a==3.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -972,7 +1022,7 @@
                 ]
               },
               {
-                "name": "dependency-excludes-range-of-compatible-versions-b-e59e1cd1",
+                "name": "dependency-excludes-range-of-compatible-versions-b-09c4bb3a",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -1010,12 +1060,12 @@
                 ]
               },
               {
-                "name": "dependency-excludes-range-of-compatible-versions-c-e59e1cd1",
+                "name": "dependency-excludes-range-of-compatible-versions-c-09c4bb3a",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "dependency-excludes-range-of-compatible-versions-a-e59e1cd1<2.0.0"
+                      "dependency-excludes-range-of-compatible-versions-a-09c4bb3a<2.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -1028,7 +1078,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "dependency-excludes-range-of-compatible-versions-a-e59e1cd1>=3.0.0"
+                      "dependency-excludes-range-of-compatible-versions-a-09c4bb3a>=3.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -1045,19 +1095,19 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "dependency-excludes-range-of-compatible-versions-a-e59e1cd1",
-                  "name": "dependency-excludes-range-of-compatible-versions-a-e59e1cd1",
-                  "module_name": "dependency_excludes_range_of_compatible_versions_a_e59e1cd1"
+                  "requirement": "dependency-excludes-range-of-compatible-versions-a-09c4bb3a",
+                  "name": "dependency-excludes-range-of-compatible-versions-a-09c4bb3a",
+                  "module_name": "dependency_excludes_range_of_compatible_versions_a_09c4bb3a"
                 },
                 {
-                  "requirement": "dependency-excludes-range-of-compatible-versions-b-e59e1cd1<3.0.0,>=2.0.0",
-                  "name": "dependency-excludes-range-of-compatible-versions-b-e59e1cd1",
-                  "module_name": "dependency_excludes_range_of_compatible_versions_b_e59e1cd1"
+                  "requirement": "dependency-excludes-range-of-compatible-versions-b-09c4bb3a<3.0.0,>=2.0.0",
+                  "name": "dependency-excludes-range-of-compatible-versions-b-09c4bb3a",
+                  "module_name": "dependency_excludes_range_of_compatible_versions_b_09c4bb3a"
                 },
                 {
-                  "requirement": "dependency-excludes-range-of-compatible-versions-c-e59e1cd1",
-                  "name": "dependency-excludes-range-of-compatible-versions-c-e59e1cd1",
-                  "module_name": "dependency_excludes_range_of_compatible_versions_c_e59e1cd1"
+                  "requirement": "dependency-excludes-range-of-compatible-versions-c-09c4bb3a",
+                  "name": "dependency-excludes-range-of-compatible-versions-c-09c4bb3a",
+                  "module_name": "dependency_excludes_range_of_compatible_versions_c_09c4bb3a"
                 }
               ]
             },
@@ -1070,11 +1120,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "There is a range of compatible versions for the requested package `a`, but another dependency `c` excludes that range.",
             "source": "[PWD]/scenarios/excluded.json",
-            "version": "e59e1cd1",
+            "version": "09c4bb3a",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -1128,12 +1183,12 @@
             "name": "dependency-excludes-non-contiguous-range-of-compatible-versions",
             "packages": [
               {
-                "name": "dependency-excludes-non-contiguous-range-of-compatible-versions-a-ed41451f",
+                "name": "dependency-excludes-non-contiguous-range-of-compatible-versions-a-b844d640",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "dependency-excludes-non-contiguous-range-of-compatible-versions-b-ed41451f==1.0.0"
+                      "dependency-excludes-non-contiguous-range-of-compatible-versions-b-b844d640==1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -1146,7 +1201,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "dependency-excludes-non-contiguous-range-of-compatible-versions-b-ed41451f==2.0.0"
+                      "dependency-excludes-non-contiguous-range-of-compatible-versions-b-b844d640==2.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -1159,8 +1214,8 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "dependency-excludes-non-contiguous-range-of-compatible-versions-b-ed41451f==2.0.0",
-                      "dependency-excludes-non-contiguous-range-of-compatible-versions-d-ed41451f"
+                      "dependency-excludes-non-contiguous-range-of-compatible-versions-b-b844d640==2.0.0",
+                      "dependency-excludes-non-contiguous-range-of-compatible-versions-d-b844d640"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -1173,7 +1228,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "dependency-excludes-non-contiguous-range-of-compatible-versions-b-ed41451f==2.0.0"
+                      "dependency-excludes-non-contiguous-range-of-compatible-versions-b-b844d640==2.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -1186,8 +1241,8 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "dependency-excludes-non-contiguous-range-of-compatible-versions-b-ed41451f==2.0.0",
-                      "dependency-excludes-non-contiguous-range-of-compatible-versions-d-ed41451f"
+                      "dependency-excludes-non-contiguous-range-of-compatible-versions-b-b844d640==2.0.0",
+                      "dependency-excludes-non-contiguous-range-of-compatible-versions-d-b844d640"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -1200,7 +1255,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "dependency-excludes-non-contiguous-range-of-compatible-versions-b-ed41451f==2.0.0"
+                      "dependency-excludes-non-contiguous-range-of-compatible-versions-b-b844d640==2.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -1213,7 +1268,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "dependency-excludes-non-contiguous-range-of-compatible-versions-b-ed41451f==3.0.0"
+                      "dependency-excludes-non-contiguous-range-of-compatible-versions-b-b844d640==3.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -1226,7 +1281,7 @@
                 ]
               },
               {
-                "name": "dependency-excludes-non-contiguous-range-of-compatible-versions-b-ed41451f",
+                "name": "dependency-excludes-non-contiguous-range-of-compatible-versions-b-b844d640",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -1264,12 +1319,12 @@
                 ]
               },
               {
-                "name": "dependency-excludes-non-contiguous-range-of-compatible-versions-c-ed41451f",
+                "name": "dependency-excludes-non-contiguous-range-of-compatible-versions-c-b844d640",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "dependency-excludes-non-contiguous-range-of-compatible-versions-a-ed41451f<2.0.0"
+                      "dependency-excludes-non-contiguous-range-of-compatible-versions-a-b844d640<2.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -1282,7 +1337,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "dependency-excludes-non-contiguous-range-of-compatible-versions-a-ed41451f>=3.0.0"
+                      "dependency-excludes-non-contiguous-range-of-compatible-versions-a-b844d640>=3.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -1299,19 +1354,19 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "dependency-excludes-non-contiguous-range-of-compatible-versions-a-ed41451f",
-                  "name": "dependency-excludes-non-contiguous-range-of-compatible-versions-a-ed41451f",
-                  "module_name": "dependency_excludes_non_contiguous_range_of_compatible_versions_a_ed41451f"
+                  "requirement": "dependency-excludes-non-contiguous-range-of-compatible-versions-a-b844d640",
+                  "name": "dependency-excludes-non-contiguous-range-of-compatible-versions-a-b844d640",
+                  "module_name": "dependency_excludes_non_contiguous_range_of_compatible_versions_a_b844d640"
                 },
                 {
-                  "requirement": "dependency-excludes-non-contiguous-range-of-compatible-versions-b-ed41451f<3.0.0,>=2.0.0",
-                  "name": "dependency-excludes-non-contiguous-range-of-compatible-versions-b-ed41451f",
-                  "module_name": "dependency_excludes_non_contiguous_range_of_compatible_versions_b_ed41451f"
+                  "requirement": "dependency-excludes-non-contiguous-range-of-compatible-versions-b-b844d640<3.0.0,>=2.0.0",
+                  "name": "dependency-excludes-non-contiguous-range-of-compatible-versions-b-b844d640",
+                  "module_name": "dependency_excludes_non_contiguous_range_of_compatible_versions_b_b844d640"
                 },
                 {
-                  "requirement": "dependency-excludes-non-contiguous-range-of-compatible-versions-c-ed41451f",
-                  "name": "dependency-excludes-non-contiguous-range-of-compatible-versions-c-ed41451f",
-                  "module_name": "dependency_excludes_non_contiguous_range_of_compatible_versions_c_ed41451f"
+                  "requirement": "dependency-excludes-non-contiguous-range-of-compatible-versions-c-b844d640",
+                  "name": "dependency-excludes-non-contiguous-range-of-compatible-versions-c-b844d640",
+                  "module_name": "dependency_excludes_non_contiguous_range_of_compatible_versions_c_b844d640"
                 }
               ]
             },
@@ -1324,11 +1379,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "There is a non-contiguous range of compatible versions for the requested package `a`, but another dependency `c` excludes the range. This is the same as `dependency-excludes-range-of-compatible-versions` but some of the versions of `a` are incompatible for another reason e.g. dependency on non-existant package `d`.",
             "source": "[PWD]/scenarios/excluded.json",
-            "version": "ed41451f",
+            "version": "b844d640",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -1390,7 +1450,7 @@
             "name": "extra-required",
             "packages": [
               {
-                "name": "extra-required-a-c9be513b",
+                "name": "extra-required-a-1cb4bc58",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -1399,7 +1459,7 @@
                       {
                         "name": "extra",
                         "requires": [
-                          "extra-required-b-c9be513b"
+                          "extra-required-b-1cb4bc58"
                         ]
                       }
                     ],
@@ -1413,7 +1473,7 @@
                 ]
               },
               {
-                "name": "extra-required-b-c9be513b",
+                "name": "extra-required-b-1cb4bc58",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -1433,9 +1493,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "extra-required-a-c9be513b[extra]",
-                  "name": "extra-required-a-c9be513b",
-                  "module_name": "extra_required_a_c9be513b"
+                  "requirement": "extra-required-a-1cb4bc58[extra]",
+                  "name": "extra-required-a-1cb4bc58",
+                  "module_name": "extra_required_a_1cb4bc58"
                 }
               ]
             },
@@ -1443,14 +1503,14 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "extra-required-a-c9be513b",
+                  "name": "extra-required-a-1cb4bc58",
                   "version": "1.0.0",
-                  "module_name": "extra_required_a_c9be513b"
+                  "module_name": "extra_required_a_1cb4bc58"
                 },
                 {
-                  "name": "extra-required-b-c9be513b",
+                  "name": "extra-required-b-1cb4bc58",
                   "version": "1.0.0",
-                  "module_name": "extra_required_b_c9be513b"
+                  "module_name": "extra_required_b_1cb4bc58"
                 }
               ],
               "explanation": null
@@ -1459,11 +1519,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "Optional dependencies are requested for the package.",
             "source": "[PWD]/scenarios/extras.json",
-            "version": "c9be513b",
+            "version": "1cb4bc58",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -1485,7 +1550,7 @@
             "name": "missing-extra",
             "packages": [
               {
-                "name": "missing-extra-a-79fd9a92",
+                "name": "missing-extra-a-38288d21",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -1505,9 +1570,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "missing-extra-a-79fd9a92[extra]",
-                  "name": "missing-extra-a-79fd9a92",
-                  "module_name": "missing_extra_a_79fd9a92"
+                  "requirement": "missing-extra-a-38288d21[extra]",
+                  "name": "missing-extra-a-38288d21",
+                  "module_name": "missing_extra_a_38288d21"
                 }
               ]
             },
@@ -1515,9 +1580,9 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "missing-extra-a-79fd9a92",
+                  "name": "missing-extra-a-38288d21",
                   "version": "1.0.0",
-                  "module_name": "missing_extra_a_79fd9a92"
+                  "module_name": "missing_extra_a_38288d21"
                 }
               ],
               "explanation": "Missing extras are ignored during resolution."
@@ -1526,11 +1591,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "Optional dependencies are requested for the package, but the extra does not exist.",
             "source": "[PWD]/scenarios/extras.json",
-            "version": "79fd9a92",
+            "version": "38288d21",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -1546,7 +1616,7 @@
             "name": "multiple-extras-required",
             "packages": [
               {
-                "name": "multiple-extras-required-a-14317535",
+                "name": "multiple-extras-required-a-5e665482",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -1555,13 +1625,13 @@
                       {
                         "name": "extra_b",
                         "requires": [
-                          "multiple-extras-required-b-14317535"
+                          "multiple-extras-required-b-5e665482"
                         ]
                       },
                       {
                         "name": "extra_c",
                         "requires": [
-                          "multiple-extras-required-c-14317535"
+                          "multiple-extras-required-c-5e665482"
                         ]
                       }
                     ],
@@ -1575,7 +1645,7 @@
                 ]
               },
               {
-                "name": "multiple-extras-required-b-14317535",
+                "name": "multiple-extras-required-b-5e665482",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -1591,7 +1661,7 @@
                 ]
               },
               {
-                "name": "multiple-extras-required-c-14317535",
+                "name": "multiple-extras-required-c-5e665482",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -1611,9 +1681,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "multiple-extras-required-a-14317535[extra_b,extra_c]",
-                  "name": "multiple-extras-required-a-14317535",
-                  "module_name": "multiple_extras_required_a_14317535"
+                  "requirement": "multiple-extras-required-a-5e665482[extra_b,extra_c]",
+                  "name": "multiple-extras-required-a-5e665482",
+                  "module_name": "multiple_extras_required_a_5e665482"
                 }
               ]
             },
@@ -1621,19 +1691,19 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "multiple-extras-required-a-14317535",
+                  "name": "multiple-extras-required-a-5e665482",
                   "version": "1.0.0",
-                  "module_name": "multiple_extras_required_a_14317535"
+                  "module_name": "multiple_extras_required_a_5e665482"
                 },
                 {
-                  "name": "multiple-extras-required-b-14317535",
+                  "name": "multiple-extras-required-b-5e665482",
                   "version": "1.0.0",
-                  "module_name": "multiple_extras_required_b_14317535"
+                  "module_name": "multiple_extras_required_b_5e665482"
                 },
                 {
-                  "name": "multiple-extras-required-c-14317535",
+                  "name": "multiple-extras-required-c-5e665482",
                   "version": "1.0.0",
-                  "module_name": "multiple_extras_required_c_14317535"
+                  "module_name": "multiple_extras_required_c_5e665482"
                 }
               ],
               "explanation": null
@@ -1642,11 +1712,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "Multiple optional dependencies are requested for the package.",
             "source": "[PWD]/scenarios/extras.json",
-            "version": "14317535",
+            "version": "5e665482",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -1674,7 +1749,7 @@
             "name": "extra-incompatible-with-extra",
             "packages": [
               {
-                "name": "extra-incompatible-with-extra-a-afa38951",
+                "name": "extra-incompatible-with-extra-a-aed30d57",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -1683,13 +1758,13 @@
                       {
                         "name": "extra_b",
                         "requires": [
-                          "extra-incompatible-with-extra-b-afa38951==1.0.0"
+                          "extra-incompatible-with-extra-b-aed30d57==1.0.0"
                         ]
                       },
                       {
                         "name": "extra_c",
                         "requires": [
-                          "extra-incompatible-with-extra-b-afa38951==2.0.0"
+                          "extra-incompatible-with-extra-b-aed30d57==2.0.0"
                         ]
                       }
                     ],
@@ -1703,7 +1778,7 @@
                 ]
               },
               {
-                "name": "extra-incompatible-with-extra-b-afa38951",
+                "name": "extra-incompatible-with-extra-b-aed30d57",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -1734,9 +1809,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "extra-incompatible-with-extra-a-afa38951[extra_b,extra_c]",
-                  "name": "extra-incompatible-with-extra-a-afa38951",
-                  "module_name": "extra_incompatible_with_extra_a_afa38951"
+                  "requirement": "extra-incompatible-with-extra-a-aed30d57[extra_b,extra_c]",
+                  "name": "extra-incompatible-with-extra-a-aed30d57",
+                  "module_name": "extra_incompatible_with_extra_a_aed30d57"
                 }
               ]
             },
@@ -1749,11 +1824,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "Multiple optional dependencies are requested for the package, but they have conflicting requirements with each other.",
             "source": "[PWD]/scenarios/extras.json",
-            "version": "afa38951",
+            "version": "aed30d57",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -1780,7 +1860,7 @@
             "name": "extra-incompatible-with-extra-not-requested",
             "packages": [
               {
-                "name": "extra-incompatible-with-extra-not-requested-a-5c305dd9",
+                "name": "extra-incompatible-with-extra-not-requested-a-a79dc56c",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -1789,13 +1869,13 @@
                       {
                         "name": "extra_b",
                         "requires": [
-                          "extra-incompatible-with-extra-not-requested-b-5c305dd9==1.0.0"
+                          "extra-incompatible-with-extra-not-requested-b-a79dc56c==1.0.0"
                         ]
                       },
                       {
                         "name": "extra_c",
                         "requires": [
-                          "extra-incompatible-with-extra-not-requested-b-5c305dd9==2.0.0"
+                          "extra-incompatible-with-extra-not-requested-b-a79dc56c==2.0.0"
                         ]
                       }
                     ],
@@ -1809,7 +1889,7 @@
                 ]
               },
               {
-                "name": "extra-incompatible-with-extra-not-requested-b-5c305dd9",
+                "name": "extra-incompatible-with-extra-not-requested-b-a79dc56c",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -1840,9 +1920,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "extra-incompatible-with-extra-not-requested-a-5c305dd9[extra_c]",
-                  "name": "extra-incompatible-with-extra-not-requested-a-5c305dd9",
-                  "module_name": "extra_incompatible_with_extra_not_requested_a_5c305dd9"
+                  "requirement": "extra-incompatible-with-extra-not-requested-a-a79dc56c[extra_c]",
+                  "name": "extra-incompatible-with-extra-not-requested-a-a79dc56c",
+                  "module_name": "extra_incompatible_with_extra_not_requested_a_a79dc56c"
                 }
               ]
             },
@@ -1850,14 +1930,14 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "extra-incompatible-with-extra-not-requested-a-5c305dd9",
+                  "name": "extra-incompatible-with-extra-not-requested-a-a79dc56c",
                   "version": "1.0.0",
-                  "module_name": "extra_incompatible_with_extra_not_requested_a_5c305dd9"
+                  "module_name": "extra_incompatible_with_extra_not_requested_a_a79dc56c"
                 },
                 {
-                  "name": "extra-incompatible-with-extra-not-requested-b-5c305dd9",
+                  "name": "extra-incompatible-with-extra-not-requested-b-a79dc56c",
                   "version": "2.0.0",
-                  "module_name": "extra_incompatible_with_extra_not_requested_b_5c305dd9"
+                  "module_name": "extra_incompatible_with_extra_not_requested_b_a79dc56c"
                 }
               ],
               "explanation": "Because the user does not request both extras, it is okay that one is incompatible with the other."
@@ -1866,11 +1946,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "One of two incompatible optional dependencies are requested for the package.",
             "source": "[PWD]/scenarios/extras.json",
-            "version": "5c305dd9",
+            "version": "a79dc56c",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -1897,7 +1982,7 @@
             "name": "extra-incompatible-with-root",
             "packages": [
               {
-                "name": "extra-incompatible-with-root-a-743dac5a",
+                "name": "extra-incompatible-with-root-a-aceb2c7f",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -1906,7 +1991,7 @@
                       {
                         "name": "extra",
                         "requires": [
-                          "extra-incompatible-with-root-b-743dac5a==1.0.0"
+                          "extra-incompatible-with-root-b-aceb2c7f==1.0.0"
                         ]
                       }
                     ],
@@ -1920,7 +2005,7 @@
                 ]
               },
               {
-                "name": "extra-incompatible-with-root-b-743dac5a",
+                "name": "extra-incompatible-with-root-b-aceb2c7f",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -1951,14 +2036,14 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "extra-incompatible-with-root-a-743dac5a[extra]",
-                  "name": "extra-incompatible-with-root-a-743dac5a",
-                  "module_name": "extra_incompatible_with_root_a_743dac5a"
+                  "requirement": "extra-incompatible-with-root-a-aceb2c7f[extra]",
+                  "name": "extra-incompatible-with-root-a-aceb2c7f",
+                  "module_name": "extra_incompatible_with_root_a_aceb2c7f"
                 },
                 {
-                  "requirement": "extra-incompatible-with-root-b-743dac5a==2.0.0",
-                  "name": "extra-incompatible-with-root-b-743dac5a",
-                  "module_name": "extra_incompatible_with_root_b_743dac5a"
+                  "requirement": "extra-incompatible-with-root-b-aceb2c7f==2.0.0",
+                  "name": "extra-incompatible-with-root-b-aceb2c7f",
+                  "module_name": "extra_incompatible_with_root_b_aceb2c7f"
                 }
               ]
             },
@@ -1971,11 +2056,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "Optional dependencies are requested for the package, but the extra is not compatible with other requested versions.",
             "source": "[PWD]/scenarios/extras.json",
-            "version": "743dac5a",
+            "version": "aceb2c7f",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -2000,7 +2090,7 @@
             "name": "extra-does-not-exist-backtrack",
             "packages": [
               {
-                "name": "extra-does-not-exist-backtrack-a-a35e4442",
+                "name": "extra-does-not-exist-backtrack-a-86676f88",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -2009,7 +2099,7 @@
                       {
                         "name": "extra",
                         "requires": [
-                          "extra-does-not-exist-backtrack-b-a35e4442==1.0.0"
+                          "extra-does-not-exist-backtrack-b-86676f88==1.0.0"
                         ]
                       }
                     ],
@@ -2045,7 +2135,7 @@
                 ]
               },
               {
-                "name": "extra-does-not-exist-backtrack-b-a35e4442",
+                "name": "extra-does-not-exist-backtrack-b-86676f88",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -2065,9 +2155,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "extra-does-not-exist-backtrack-a-a35e4442[extra]",
-                  "name": "extra-does-not-exist-backtrack-a-a35e4442",
-                  "module_name": "extra_does_not_exist_backtrack_a_a35e4442"
+                  "requirement": "extra-does-not-exist-backtrack-a-86676f88[extra]",
+                  "name": "extra-does-not-exist-backtrack-a-86676f88",
+                  "module_name": "extra_does_not_exist_backtrack_a_86676f88"
                 }
               ]
             },
@@ -2075,9 +2165,9 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "extra-does-not-exist-backtrack-a-a35e4442",
+                  "name": "extra-does-not-exist-backtrack-a-86676f88",
                   "version": "3.0.0",
-                  "module_name": "extra_does_not_exist_backtrack_a_a35e4442"
+                  "module_name": "extra_does_not_exist_backtrack_a_86676f88"
                 }
               ],
               "explanation": "The resolver should not backtrack to `a==1.0.0` because missing extras are allowed during resolution. `b` should not be installed."
@@ -2086,11 +2176,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "Optional dependencies are requested for the package, the extra is only available on an older version.",
             "source": "[PWD]/scenarios/extras.json",
-            "version": "a35e4442",
+            "version": "86676f88",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -2116,7 +2211,7 @@
             "name": "direct-incompatible-versions",
             "packages": [
               {
-                "name": "direct-incompatible-versions-a-f75c56e2",
+                "name": "direct-incompatible-versions-a-55cc4ef6",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -2147,14 +2242,14 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "direct-incompatible-versions-a-f75c56e2==1.0.0",
-                  "name": "direct-incompatible-versions-a-f75c56e2",
-                  "module_name": "direct_incompatible_versions_a_f75c56e2"
+                  "requirement": "direct-incompatible-versions-a-55cc4ef6==1.0.0",
+                  "name": "direct-incompatible-versions-a-55cc4ef6",
+                  "module_name": "direct_incompatible_versions_a_55cc4ef6"
                 },
                 {
-                  "requirement": "direct-incompatible-versions-a-f75c56e2==2.0.0",
-                  "name": "direct-incompatible-versions-a-f75c56e2",
-                  "module_name": "direct_incompatible_versions_a_f75c56e2"
+                  "requirement": "direct-incompatible-versions-a-55cc4ef6==2.0.0",
+                  "name": "direct-incompatible-versions-a-55cc4ef6",
+                  "module_name": "direct_incompatible_versions_a_55cc4ef6"
                 }
               ]
             },
@@ -2167,11 +2262,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires two incompatible, existing versions of package `a`",
             "source": "[PWD]/scenarios/incompatible-versions.json",
-            "version": "f75c56e2",
+            "version": "55cc4ef6",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -2190,12 +2290,12 @@
             "name": "transitive-incompatible-with-root-version",
             "packages": [
               {
-                "name": "transitive-incompatible-with-root-version-a-812a0fda",
+                "name": "transitive-incompatible-with-root-version-a-877a9556",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-incompatible-with-root-version-b-812a0fda==2.0.0"
+                      "transitive-incompatible-with-root-version-b-877a9556==2.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -2208,7 +2308,7 @@
                 ]
               },
               {
-                "name": "transitive-incompatible-with-root-version-b-812a0fda",
+                "name": "transitive-incompatible-with-root-version-b-877a9556",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -2239,14 +2339,14 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "transitive-incompatible-with-root-version-a-812a0fda",
-                  "name": "transitive-incompatible-with-root-version-a-812a0fda",
-                  "module_name": "transitive_incompatible_with_root_version_a_812a0fda"
+                  "requirement": "transitive-incompatible-with-root-version-a-877a9556",
+                  "name": "transitive-incompatible-with-root-version-a-877a9556",
+                  "module_name": "transitive_incompatible_with_root_version_a_877a9556"
                 },
                 {
-                  "requirement": "transitive-incompatible-with-root-version-b-812a0fda==1.0.0",
-                  "name": "transitive-incompatible-with-root-version-b-812a0fda",
-                  "module_name": "transitive_incompatible_with_root_version_b_812a0fda"
+                  "requirement": "transitive-incompatible-with-root-version-b-877a9556==1.0.0",
+                  "name": "transitive-incompatible-with-root-version-b-877a9556",
+                  "module_name": "transitive_incompatible_with_root_version_b_877a9556"
                 }
               ]
             },
@@ -2259,11 +2359,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires packages `a` and `b` but `a` requires a different version of `b`",
             "source": "[PWD]/scenarios/incompatible-versions.json",
-            "version": "812a0fda",
+            "version": "877a9556",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -2286,12 +2391,12 @@
             "name": "transitive-incompatible-with-transitive",
             "packages": [
               {
-                "name": "transitive-incompatible-with-transitive-a-74531fe0",
+                "name": "transitive-incompatible-with-transitive-a-1b2fe1a4",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-incompatible-with-transitive-c-74531fe0==1.0.0"
+                      "transitive-incompatible-with-transitive-c-1b2fe1a4==1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -2304,12 +2409,12 @@
                 ]
               },
               {
-                "name": "transitive-incompatible-with-transitive-b-74531fe0",
+                "name": "transitive-incompatible-with-transitive-b-1b2fe1a4",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-incompatible-with-transitive-c-74531fe0==2.0.0"
+                      "transitive-incompatible-with-transitive-c-1b2fe1a4==2.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -2322,7 +2427,7 @@
                 ]
               },
               {
-                "name": "transitive-incompatible-with-transitive-c-74531fe0",
+                "name": "transitive-incompatible-with-transitive-c-1b2fe1a4",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -2353,14 +2458,14 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "transitive-incompatible-with-transitive-a-74531fe0",
-                  "name": "transitive-incompatible-with-transitive-a-74531fe0",
-                  "module_name": "transitive_incompatible_with_transitive_a_74531fe0"
+                  "requirement": "transitive-incompatible-with-transitive-a-1b2fe1a4",
+                  "name": "transitive-incompatible-with-transitive-a-1b2fe1a4",
+                  "module_name": "transitive_incompatible_with_transitive_a_1b2fe1a4"
                 },
                 {
-                  "requirement": "transitive-incompatible-with-transitive-b-74531fe0",
-                  "name": "transitive-incompatible-with-transitive-b-74531fe0",
-                  "module_name": "transitive_incompatible_with_transitive_b_74531fe0"
+                  "requirement": "transitive-incompatible-with-transitive-b-1b2fe1a4",
+                  "name": "transitive-incompatible-with-transitive-b-1b2fe1a4",
+                  "module_name": "transitive_incompatible_with_transitive_b_1b2fe1a4"
                 }
               ]
             },
@@ -2373,11 +2478,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires package `a` and `b`; `a` and `b` require different versions of `c`",
             "source": "[PWD]/scenarios/incompatible-versions.json",
-            "version": "74531fe0",
+            "version": "1b2fe1a4",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -2404,7 +2514,7 @@
             "name": "package-only-prereleases",
             "packages": [
               {
-                "name": "package-only-prereleases-a-e2dbc237",
+                "name": "package-only-prereleases-a-5242f6f2",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -2424,9 +2534,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "package-only-prereleases-a-e2dbc237",
-                  "name": "package-only-prereleases-a-e2dbc237",
-                  "module_name": "package_only_prereleases_a_e2dbc237"
+                  "requirement": "package-only-prereleases-a-5242f6f2",
+                  "name": "package-only-prereleases-a-5242f6f2",
+                  "module_name": "package_only_prereleases_a_5242f6f2"
                 }
               ]
             },
@@ -2434,9 +2544,9 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "package-only-prereleases-a-e2dbc237",
+                  "name": "package-only-prereleases-a-5242f6f2",
                   "version": "1.0.0a1",
-                  "module_name": "package_only_prereleases_a_e2dbc237"
+                  "module_name": "package_only_prereleases_a_5242f6f2"
                 }
               ],
               "explanation": "Since there are only prerelease versions of `a` available, it should be installed even though the user did not include a prerelease specifier."
@@ -2445,11 +2555,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires any version of package `a` which only has prerelease versions available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "e2dbc237",
+            "version": "5242f6f2",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -2465,7 +2580,7 @@
             "name": "package-only-prereleases-in-range",
             "packages": [
               {
-                "name": "package-only-prereleases-in-range-a-4e199000",
+                "name": "package-only-prereleases-in-range-a-e930d467",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -2496,9 +2611,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "package-only-prereleases-in-range-a-4e199000>0.1.0",
-                  "name": "package-only-prereleases-in-range-a-4e199000",
-                  "module_name": "package_only_prereleases_in_range_a_4e199000"
+                  "requirement": "package-only-prereleases-in-range-a-e930d467>0.1.0",
+                  "name": "package-only-prereleases-in-range-a-e930d467",
+                  "module_name": "package_only_prereleases_in_range_a_e930d467"
                 }
               ]
             },
@@ -2511,11 +2626,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires a version of package `a` which only matches prerelease versions but they did not include a prerelease specifier.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "4e199000",
+            "version": "e930d467",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -2610,7 +2730,7 @@
             "name": "requires-package-prerelease-and-final-any",
             "packages": [
               {
-                "name": "requires-package-prerelease-and-final-any-a-81dbab9d",
+                "name": "requires-package-prerelease-and-final-any-a-ba9ac285",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -2641,9 +2761,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-package-prerelease-and-final-any-a-81dbab9d",
-                  "name": "requires-package-prerelease-and-final-any-a-81dbab9d",
-                  "module_name": "requires_package_prerelease_and_final_any_a_81dbab9d"
+                  "requirement": "requires-package-prerelease-and-final-any-a-ba9ac285",
+                  "name": "requires-package-prerelease-and-final-any-a-ba9ac285",
+                  "module_name": "requires_package_prerelease_and_final_any_a_ba9ac285"
                 }
               ]
             },
@@ -2651,9 +2771,9 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "requires-package-prerelease-and-final-any-a-81dbab9d",
+                  "name": "requires-package-prerelease-and-final-any-a-ba9ac285",
                   "version": "0.1.0",
-                  "module_name": "requires_package_prerelease_and_final_any_a_81dbab9d"
+                  "module_name": "requires_package_prerelease_and_final_any_a_ba9ac285"
                 }
               ],
               "explanation": "Since the user did not provide a prerelease specifier, the older stable version should be selected."
@@ -2662,11 +2782,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires any version of package `a` has a prerelease version available and an older non-prerelease version.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "81dbab9d",
+            "version": "ba9ac285",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -2683,7 +2808,7 @@
             "name": "package-prerelease-specified-only-final-available",
             "packages": [
               {
-                "name": "package-prerelease-specified-only-final-available-a-2ee8f3f9",
+                "name": "package-prerelease-specified-only-final-available-a-858741d0",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -2725,9 +2850,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "package-prerelease-specified-only-final-available-a-2ee8f3f9>=0.1.0a1",
-                  "name": "package-prerelease-specified-only-final-available-a-2ee8f3f9",
-                  "module_name": "package_prerelease_specified_only_final_available_a_2ee8f3f9"
+                  "requirement": "package-prerelease-specified-only-final-available-a-858741d0>=0.1.0a1",
+                  "name": "package-prerelease-specified-only-final-available-a-858741d0",
+                  "module_name": "package_prerelease_specified_only_final_available_a_858741d0"
                 }
               ]
             },
@@ -2735,9 +2860,9 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "package-prerelease-specified-only-final-available-a-2ee8f3f9",
+                  "name": "package-prerelease-specified-only-final-available-a-858741d0",
                   "version": "0.3.0",
-                  "module_name": "package_prerelease_specified_only_final_available_a_2ee8f3f9"
+                  "module_name": "package_prerelease_specified_only_final_available_a_858741d0"
                 }
               ],
               "explanation": "The latest stable version should be selected."
@@ -2746,11 +2871,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires a version of `a` with a prerelease specifier and only stable releases are available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "2ee8f3f9",
+            "version": "858741d0",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -2770,7 +2900,7 @@
             "name": "package-prerelease-specified-only-prerelease-available",
             "packages": [
               {
-                "name": "package-prerelease-specified-only-prerelease-available-a-dd6b1e32",
+                "name": "package-prerelease-specified-only-prerelease-available-a-e20f232e",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -2812,9 +2942,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "package-prerelease-specified-only-prerelease-available-a-dd6b1e32>=0.1.0a1",
-                  "name": "package-prerelease-specified-only-prerelease-available-a-dd6b1e32",
-                  "module_name": "package_prerelease_specified_only_prerelease_available_a_dd6b1e32"
+                  "requirement": "package-prerelease-specified-only-prerelease-available-a-e20f232e>=0.1.0a1",
+                  "name": "package-prerelease-specified-only-prerelease-available-a-e20f232e",
+                  "module_name": "package_prerelease_specified_only_prerelease_available_a_e20f232e"
                 }
               ]
             },
@@ -2822,9 +2952,9 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "package-prerelease-specified-only-prerelease-available-a-dd6b1e32",
+                  "name": "package-prerelease-specified-only-prerelease-available-a-e20f232e",
                   "version": "0.3.0a1",
-                  "module_name": "package_prerelease_specified_only_prerelease_available_a_dd6b1e32"
+                  "module_name": "package_prerelease_specified_only_prerelease_available_a_e20f232e"
                 }
               ],
               "explanation": "The latest prerelease version should be selected."
@@ -2833,11 +2963,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires a version of `a` with a prerelease specifier and only prerelease releases are available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "dd6b1e32",
+            "version": "e20f232e",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -2857,7 +2992,7 @@
             "name": "package-prerelease-specified-mixed-available",
             "packages": [
               {
-                "name": "package-prerelease-specified-mixed-available-a-794fce4d",
+                "name": "package-prerelease-specified-mixed-available-a-f4731006",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -2910,9 +3045,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "package-prerelease-specified-mixed-available-a-794fce4d>=0.1.0a1",
-                  "name": "package-prerelease-specified-mixed-available-a-794fce4d",
-                  "module_name": "package_prerelease_specified_mixed_available_a_794fce4d"
+                  "requirement": "package-prerelease-specified-mixed-available-a-f4731006>=0.1.0a1",
+                  "name": "package-prerelease-specified-mixed-available-a-f4731006",
+                  "module_name": "package_prerelease_specified_mixed_available_a_f4731006"
                 }
               ]
             },
@@ -2920,9 +3055,9 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "package-prerelease-specified-mixed-available-a-794fce4d",
+                  "name": "package-prerelease-specified-mixed-available-a-f4731006",
                   "version": "1.0.0a1",
-                  "module_name": "package_prerelease_specified_mixed_available_a_794fce4d"
+                  "module_name": "package_prerelease_specified_mixed_available_a_f4731006"
                 }
               ],
               "explanation": "Since the user provided a prerelease specifier, the latest prerelease version should be selected."
@@ -2931,11 +3066,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires a version of `a` with a prerelease specifier and both prerelease and stable releases are available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "794fce4d",
+            "version": "f4731006",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -2957,7 +3097,7 @@
             "name": "package-multiple-prereleases-kinds",
             "packages": [
               {
-                "name": "package-multiple-prereleases-kinds-a-256d4e16",
+                "name": "package-multiple-prereleases-kinds-a-f1ac9637",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -2999,9 +3139,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "package-multiple-prereleases-kinds-a-256d4e16>=1.0.0a1",
-                  "name": "package-multiple-prereleases-kinds-a-256d4e16",
-                  "module_name": "package_multiple_prereleases_kinds_a_256d4e16"
+                  "requirement": "package-multiple-prereleases-kinds-a-f1ac9637>=1.0.0a1",
+                  "name": "package-multiple-prereleases-kinds-a-f1ac9637",
+                  "module_name": "package_multiple_prereleases_kinds_a_f1ac9637"
                 }
               ]
             },
@@ -3009,9 +3149,9 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "package-multiple-prereleases-kinds-a-256d4e16",
+                  "name": "package-multiple-prereleases-kinds-a-f1ac9637",
                   "version": "1.0.0rc1",
-                  "module_name": "package_multiple_prereleases_kinds_a_256d4e16"
+                  "module_name": "package_multiple_prereleases_kinds_a_f1ac9637"
                 }
               ],
               "explanation": "Release candidates should be the highest precedence prerelease kind."
@@ -3020,11 +3160,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires `a` which has multiple prereleases available with different labels.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "256d4e16",
+            "version": "f1ac9637",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -3044,7 +3189,7 @@
             "name": "package-multiple-prereleases-numbers",
             "packages": [
               {
-                "name": "package-multiple-prereleases-numbers-a-ac82d3fb",
+                "name": "package-multiple-prereleases-numbers-a-dd14a9a9",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -3086,9 +3231,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "package-multiple-prereleases-numbers-a-ac82d3fb>=1.0.0a1",
-                  "name": "package-multiple-prereleases-numbers-a-ac82d3fb",
-                  "module_name": "package_multiple_prereleases_numbers_a_ac82d3fb"
+                  "requirement": "package-multiple-prereleases-numbers-a-dd14a9a9>=1.0.0a1",
+                  "name": "package-multiple-prereleases-numbers-a-dd14a9a9",
+                  "module_name": "package_multiple_prereleases_numbers_a_dd14a9a9"
                 }
               ]
             },
@@ -3096,9 +3241,9 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "package-multiple-prereleases-numbers-a-ac82d3fb",
+                  "name": "package-multiple-prereleases-numbers-a-dd14a9a9",
                   "version": "1.0.0a3",
-                  "module_name": "package_multiple_prereleases_numbers_a_ac82d3fb"
+                  "module_name": "package_multiple_prereleases_numbers_a_dd14a9a9"
                 }
               ],
               "explanation": "The latest alpha version should be selected."
@@ -3107,11 +3252,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires `a` which has multiple alphas available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "ac82d3fb",
+            "version": "dd14a9a9",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -3131,12 +3281,12 @@
             "name": "transitive-package-only-prereleases",
             "packages": [
               {
-                "name": "transitive-package-only-prereleases-a-9da8532e",
+                "name": "transitive-package-only-prereleases-a-98ba7c0a",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-package-only-prereleases-b-9da8532e"
+                      "transitive-package-only-prereleases-b-98ba7c0a"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -3149,7 +3299,7 @@
                 ]
               },
               {
-                "name": "transitive-package-only-prereleases-b-9da8532e",
+                "name": "transitive-package-only-prereleases-b-98ba7c0a",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -3169,9 +3319,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "transitive-package-only-prereleases-a-9da8532e",
-                  "name": "transitive-package-only-prereleases-a-9da8532e",
-                  "module_name": "transitive_package_only_prereleases_a_9da8532e"
+                  "requirement": "transitive-package-only-prereleases-a-98ba7c0a",
+                  "name": "transitive-package-only-prereleases-a-98ba7c0a",
+                  "module_name": "transitive_package_only_prereleases_a_98ba7c0a"
                 }
               ]
             },
@@ -3179,14 +3329,14 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "transitive-package-only-prereleases-a-9da8532e",
+                  "name": "transitive-package-only-prereleases-a-98ba7c0a",
                   "version": "0.1.0",
-                  "module_name": "transitive_package_only_prereleases_a_9da8532e"
+                  "module_name": "transitive_package_only_prereleases_a_98ba7c0a"
                 },
                 {
-                  "name": "transitive-package-only-prereleases-b-9da8532e",
+                  "name": "transitive-package-only-prereleases-b-98ba7c0a",
                   "version": "1.0.0a1",
-                  "module_name": "transitive_package_only_prereleases_b_9da8532e"
+                  "module_name": "transitive_package_only_prereleases_b_98ba7c0a"
                 }
               ],
               "explanation": "Since there are only prerelease versions of `b` available, it should be selected even though the user did not opt-in to prereleases."
@@ -3195,11 +3345,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires any version of package `a` which requires `b` which only has prerelease versions available.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "9da8532e",
+            "version": "98ba7c0a",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -3219,12 +3374,12 @@
             "name": "transitive-package-only-prereleases-in-range",
             "packages": [
               {
-                "name": "transitive-package-only-prereleases-in-range-a-c41a54fc",
+                "name": "transitive-package-only-prereleases-in-range-a-bf7c6cd6",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-package-only-prereleases-in-range-b-c41a54fc>0.1"
+                      "transitive-package-only-prereleases-in-range-b-bf7c6cd6>0.1"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -3237,7 +3392,7 @@
                 ]
               },
               {
-                "name": "transitive-package-only-prereleases-in-range-b-c41a54fc",
+                "name": "transitive-package-only-prereleases-in-range-b-bf7c6cd6",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -3268,9 +3423,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "transitive-package-only-prereleases-in-range-a-c41a54fc",
-                  "name": "transitive-package-only-prereleases-in-range-a-c41a54fc",
-                  "module_name": "transitive_package_only_prereleases_in_range_a_c41a54fc"
+                  "requirement": "transitive-package-only-prereleases-in-range-a-bf7c6cd6",
+                  "name": "transitive-package-only-prereleases-in-range-a-bf7c6cd6",
+                  "module_name": "transitive_package_only_prereleases_in_range_a_bf7c6cd6"
                 }
               ]
             },
@@ -3283,11 +3438,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires package `a` which has a dependency on a package which only matches prerelease versions but they did not include a prerelease specifier.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "c41a54fc",
+            "version": "bf7c6cd6",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -3308,12 +3468,12 @@
             "name": "transitive-package-only-prereleases-in-range-opt-in",
             "packages": [
               {
-                "name": "transitive-package-only-prereleases-in-range-opt-in-a-96f98f65",
+                "name": "transitive-package-only-prereleases-in-range-opt-in-a-d4ce77eb",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-package-only-prereleases-in-range-opt-in-b-96f98f65>0.1"
+                      "transitive-package-only-prereleases-in-range-opt-in-b-d4ce77eb>0.1"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -3326,7 +3486,7 @@
                 ]
               },
               {
-                "name": "transitive-package-only-prereleases-in-range-opt-in-b-96f98f65",
+                "name": "transitive-package-only-prereleases-in-range-opt-in-b-d4ce77eb",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -3357,14 +3517,14 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "transitive-package-only-prereleases-in-range-opt-in-a-96f98f65",
-                  "name": "transitive-package-only-prereleases-in-range-opt-in-a-96f98f65",
-                  "module_name": "transitive_package_only_prereleases_in_range_opt_in_a_96f98f65"
+                  "requirement": "transitive-package-only-prereleases-in-range-opt-in-a-d4ce77eb",
+                  "name": "transitive-package-only-prereleases-in-range-opt-in-a-d4ce77eb",
+                  "module_name": "transitive_package_only_prereleases_in_range_opt_in_a_d4ce77eb"
                 },
                 {
-                  "requirement": "transitive-package-only-prereleases-in-range-opt-in-b-96f98f65>0.0.0a1",
-                  "name": "transitive-package-only-prereleases-in-range-opt-in-b-96f98f65",
-                  "module_name": "transitive_package_only_prereleases_in_range_opt_in_b_96f98f65"
+                  "requirement": "transitive-package-only-prereleases-in-range-opt-in-b-d4ce77eb>0.0.0a1",
+                  "name": "transitive-package-only-prereleases-in-range-opt-in-b-d4ce77eb",
+                  "module_name": "transitive_package_only_prereleases_in_range_opt_in_b_d4ce77eb"
                 }
               ]
             },
@@ -3372,14 +3532,14 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "transitive-package-only-prereleases-in-range-opt-in-a-96f98f65",
+                  "name": "transitive-package-only-prereleases-in-range-opt-in-a-d4ce77eb",
                   "version": "0.1.0",
-                  "module_name": "transitive_package_only_prereleases_in_range_opt_in_a_96f98f65"
+                  "module_name": "transitive_package_only_prereleases_in_range_opt_in_a_d4ce77eb"
                 },
                 {
-                  "name": "transitive-package-only-prereleases-in-range-opt-in-b-96f98f65",
+                  "name": "transitive-package-only-prereleases-in-range-opt-in-b-d4ce77eb",
                   "version": "1.0.0a1",
-                  "module_name": "transitive_package_only_prereleases_in_range_opt_in_b_96f98f65"
+                  "module_name": "transitive_package_only_prereleases_in_range_opt_in_b_d4ce77eb"
                 }
               ],
               "explanation": "Since the user included a dependency on `b` with a prerelease specifier, a prerelease version can be selected."
@@ -3388,11 +3548,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires package `a` which has a dependency on a package which only matches prerelease versions; the user has opted into allowing prereleases in `b` explicitly.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "96f98f65",
+            "version": "d4ce77eb",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -3415,12 +3580,12 @@
             "name": "transitive-prerelease-and-stable-dependency",
             "packages": [
               {
-                "name": "transitive-prerelease-and-stable-dependency-a-3d5eb91f",
+                "name": "transitive-prerelease-and-stable-dependency-a-154e5106",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-prerelease-and-stable-dependency-c-3d5eb91f==2.0.0b1"
+                      "transitive-prerelease-and-stable-dependency-c-154e5106==2.0.0b1"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -3433,12 +3598,12 @@
                 ]
               },
               {
-                "name": "transitive-prerelease-and-stable-dependency-b-3d5eb91f",
+                "name": "transitive-prerelease-and-stable-dependency-b-154e5106",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-prerelease-and-stable-dependency-c-3d5eb91f<=3.0.0,>=1.0.0"
+                      "transitive-prerelease-and-stable-dependency-c-154e5106<=3.0.0,>=1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -3451,7 +3616,7 @@
                 ]
               },
               {
-                "name": "transitive-prerelease-and-stable-dependency-c-3d5eb91f",
+                "name": "transitive-prerelease-and-stable-dependency-c-154e5106",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -3482,14 +3647,14 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "transitive-prerelease-and-stable-dependency-a-3d5eb91f",
-                  "name": "transitive-prerelease-and-stable-dependency-a-3d5eb91f",
-                  "module_name": "transitive_prerelease_and_stable_dependency_a_3d5eb91f"
+                  "requirement": "transitive-prerelease-and-stable-dependency-a-154e5106",
+                  "name": "transitive-prerelease-and-stable-dependency-a-154e5106",
+                  "module_name": "transitive_prerelease_and_stable_dependency_a_154e5106"
                 },
                 {
-                  "requirement": "transitive-prerelease-and-stable-dependency-b-3d5eb91f",
-                  "name": "transitive-prerelease-and-stable-dependency-b-3d5eb91f",
-                  "module_name": "transitive_prerelease_and_stable_dependency_b_3d5eb91f"
+                  "requirement": "transitive-prerelease-and-stable-dependency-b-154e5106",
+                  "name": "transitive-prerelease-and-stable-dependency-b-154e5106",
+                  "module_name": "transitive_prerelease_and_stable_dependency_b_154e5106"
                 }
               ]
             },
@@ -3502,11 +3667,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "3d5eb91f",
+            "version": "154e5106",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -3533,12 +3703,12 @@
             "name": "transitive-prerelease-and-stable-dependency-opt-in",
             "packages": [
               {
-                "name": "transitive-prerelease-and-stable-dependency-opt-in-a-6192ec57",
+                "name": "transitive-prerelease-and-stable-dependency-opt-in-a-0dafb526",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-prerelease-and-stable-dependency-opt-in-c-6192ec57==2.0.0b1"
+                      "transitive-prerelease-and-stable-dependency-opt-in-c-0dafb526==2.0.0b1"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -3551,12 +3721,12 @@
                 ]
               },
               {
-                "name": "transitive-prerelease-and-stable-dependency-opt-in-b-6192ec57",
+                "name": "transitive-prerelease-and-stable-dependency-opt-in-b-0dafb526",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-prerelease-and-stable-dependency-opt-in-c-6192ec57<=3.0.0,>=1.0.0"
+                      "transitive-prerelease-and-stable-dependency-opt-in-c-0dafb526<=3.0.0,>=1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -3569,7 +3739,7 @@
                 ]
               },
               {
-                "name": "transitive-prerelease-and-stable-dependency-opt-in-c-6192ec57",
+                "name": "transitive-prerelease-and-stable-dependency-opt-in-c-0dafb526",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -3600,19 +3770,19 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "transitive-prerelease-and-stable-dependency-opt-in-a-6192ec57",
-                  "name": "transitive-prerelease-and-stable-dependency-opt-in-a-6192ec57",
-                  "module_name": "transitive_prerelease_and_stable_dependency_opt_in_a_6192ec57"
+                  "requirement": "transitive-prerelease-and-stable-dependency-opt-in-a-0dafb526",
+                  "name": "transitive-prerelease-and-stable-dependency-opt-in-a-0dafb526",
+                  "module_name": "transitive_prerelease_and_stable_dependency_opt_in_a_0dafb526"
                 },
                 {
-                  "requirement": "transitive-prerelease-and-stable-dependency-opt-in-b-6192ec57",
-                  "name": "transitive-prerelease-and-stable-dependency-opt-in-b-6192ec57",
-                  "module_name": "transitive_prerelease_and_stable_dependency_opt_in_b_6192ec57"
+                  "requirement": "transitive-prerelease-and-stable-dependency-opt-in-b-0dafb526",
+                  "name": "transitive-prerelease-and-stable-dependency-opt-in-b-0dafb526",
+                  "module_name": "transitive_prerelease_and_stable_dependency_opt_in_b_0dafb526"
                 },
                 {
-                  "requirement": "transitive-prerelease-and-stable-dependency-opt-in-c-6192ec57>=0.0.0a1",
-                  "name": "transitive-prerelease-and-stable-dependency-opt-in-c-6192ec57",
-                  "module_name": "transitive_prerelease_and_stable_dependency_opt_in_c_6192ec57"
+                  "requirement": "transitive-prerelease-and-stable-dependency-opt-in-c-0dafb526>=0.0.0a1",
+                  "name": "transitive-prerelease-and-stable-dependency-opt-in-c-0dafb526",
+                  "module_name": "transitive_prerelease_and_stable_dependency_opt_in_c_0dafb526"
                 }
               ]
             },
@@ -3620,19 +3790,19 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "transitive-prerelease-and-stable-dependency-opt-in-a-6192ec57",
+                  "name": "transitive-prerelease-and-stable-dependency-opt-in-a-0dafb526",
                   "version": "1.0.0",
-                  "module_name": "transitive_prerelease_and_stable_dependency_opt_in_a_6192ec57"
+                  "module_name": "transitive_prerelease_and_stable_dependency_opt_in_a_0dafb526"
                 },
                 {
-                  "name": "transitive-prerelease-and-stable-dependency-opt-in-b-6192ec57",
+                  "name": "transitive-prerelease-and-stable-dependency-opt-in-b-0dafb526",
                   "version": "1.0.0",
-                  "module_name": "transitive_prerelease_and_stable_dependency_opt_in_b_6192ec57"
+                  "module_name": "transitive_prerelease_and_stable_dependency_opt_in_b_0dafb526"
                 },
                 {
-                  "name": "transitive-prerelease-and-stable-dependency-opt-in-c-6192ec57",
+                  "name": "transitive-prerelease-and-stable-dependency-opt-in-c-0dafb526",
                   "version": "2.0.0b1",
-                  "module_name": "transitive_prerelease_and_stable_dependency_opt_in_c_6192ec57"
+                  "module_name": "transitive_prerelease_and_stable_dependency_opt_in_c_0dafb526"
                 }
               ],
               "explanation": "Since the user explicitly opted-in to a prerelease for `c`, it can be installed."
@@ -3641,11 +3811,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. The user includes an opt-in to prereleases of the transitive dependency.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "6192ec57",
+            "version": "0dafb526",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -3675,12 +3850,12 @@
             "name": "transitive-prerelease-and-stable-dependency-many-versions",
             "packages": [
               {
-                "name": "transitive-prerelease-and-stable-dependency-many-versions-a-bcd0f988",
+                "name": "transitive-prerelease-and-stable-dependency-many-versions-a-5500cb63",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-prerelease-and-stable-dependency-many-versions-c-bcd0f988>=2.0.0b1"
+                      "transitive-prerelease-and-stable-dependency-many-versions-c-5500cb63>=2.0.0b1"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -3693,12 +3868,12 @@
                 ]
               },
               {
-                "name": "transitive-prerelease-and-stable-dependency-many-versions-b-bcd0f988",
+                "name": "transitive-prerelease-and-stable-dependency-many-versions-b-5500cb63",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-prerelease-and-stable-dependency-many-versions-c-bcd0f988<=3.0.0,>=1.0.0"
+                      "transitive-prerelease-and-stable-dependency-many-versions-c-5500cb63<=3.0.0,>=1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -3711,7 +3886,7 @@
                 ]
               },
               {
-                "name": "transitive-prerelease-and-stable-dependency-many-versions-c-bcd0f988",
+                "name": "transitive-prerelease-and-stable-dependency-many-versions-c-5500cb63",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -3929,14 +4104,14 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "transitive-prerelease-and-stable-dependency-many-versions-a-bcd0f988",
-                  "name": "transitive-prerelease-and-stable-dependency-many-versions-a-bcd0f988",
-                  "module_name": "transitive_prerelease_and_stable_dependency_many_versions_a_bcd0f988"
+                  "requirement": "transitive-prerelease-and-stable-dependency-many-versions-a-5500cb63",
+                  "name": "transitive-prerelease-and-stable-dependency-many-versions-a-5500cb63",
+                  "module_name": "transitive_prerelease_and_stable_dependency_many_versions_a_5500cb63"
                 },
                 {
-                  "requirement": "transitive-prerelease-and-stable-dependency-many-versions-b-bcd0f988",
-                  "name": "transitive-prerelease-and-stable-dependency-many-versions-b-bcd0f988",
-                  "module_name": "transitive_prerelease_and_stable_dependency_many_versions_b_bcd0f988"
+                  "requirement": "transitive-prerelease-and-stable-dependency-many-versions-b-5500cb63",
+                  "name": "transitive-prerelease-and-stable-dependency-many-versions-b-5500cb63",
+                  "module_name": "transitive_prerelease_and_stable_dependency_many_versions_b_5500cb63"
                 }
               ]
             },
@@ -3949,11 +4124,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. There are many prerelease versions.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "bcd0f988",
+            "version": "5500cb63",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -4005,12 +4185,12 @@
             "name": "transitive-prerelease-and-stable-dependency-many-versions-holes",
             "packages": [
               {
-                "name": "transitive-prerelease-and-stable-dependency-many-versions-holes-a-5cee052e",
+                "name": "transitive-prerelease-and-stable-dependency-many-versions-holes-a-085aec8c",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-prerelease-and-stable-dependency-many-versions-holes-c-5cee052e!=2.0.0a5,!=2.0.0a6,!=2.0.0a7,!=2.0.0b1,<2.0.0b5,>1.0.0"
+                      "transitive-prerelease-and-stable-dependency-many-versions-holes-c-085aec8c!=2.0.0a5,!=2.0.0a6,!=2.0.0a7,!=2.0.0b1,<2.0.0b5,>1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -4023,12 +4203,12 @@
                 ]
               },
               {
-                "name": "transitive-prerelease-and-stable-dependency-many-versions-holes-b-5cee052e",
+                "name": "transitive-prerelease-and-stable-dependency-many-versions-holes-b-085aec8c",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-prerelease-and-stable-dependency-many-versions-holes-c-5cee052e<=3.0.0,>=1.0.0"
+                      "transitive-prerelease-and-stable-dependency-many-versions-holes-c-085aec8c<=3.0.0,>=1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -4041,7 +4221,7 @@
                 ]
               },
               {
-                "name": "transitive-prerelease-and-stable-dependency-many-versions-holes-c-5cee052e",
+                "name": "transitive-prerelease-and-stable-dependency-many-versions-holes-c-085aec8c",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -4259,14 +4439,14 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "transitive-prerelease-and-stable-dependency-many-versions-holes-a-5cee052e",
-                  "name": "transitive-prerelease-and-stable-dependency-many-versions-holes-a-5cee052e",
-                  "module_name": "transitive_prerelease_and_stable_dependency_many_versions_holes_a_5cee052e"
+                  "requirement": "transitive-prerelease-and-stable-dependency-many-versions-holes-a-085aec8c",
+                  "name": "transitive-prerelease-and-stable-dependency-many-versions-holes-a-085aec8c",
+                  "module_name": "transitive_prerelease_and_stable_dependency_many_versions_holes_a_085aec8c"
                 },
                 {
-                  "requirement": "transitive-prerelease-and-stable-dependency-many-versions-holes-b-5cee052e",
-                  "name": "transitive-prerelease-and-stable-dependency-many-versions-holes-b-5cee052e",
-                  "module_name": "transitive_prerelease_and_stable_dependency_many_versions_holes_b_5cee052e"
+                  "requirement": "transitive-prerelease-and-stable-dependency-many-versions-holes-b-085aec8c",
+                  "name": "transitive-prerelease-and-stable-dependency-many-versions-holes-b-085aec8c",
+                  "module_name": "transitive_prerelease_and_stable_dependency_many_versions_holes_b_085aec8c"
                 }
               ]
             },
@@ -4279,11 +4459,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "A transitive dependency has both a prerelease and a stable selector, but can only be satisfied by a prerelease. There are many prerelease versions and some are excluded.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "5cee052e",
+            "version": "085aec8c",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -4327,7 +4512,7 @@
             "name": "requires-python-version-does-not-exist",
             "packages": [
               {
-                "name": "requires-python-version-does-not-exist-a-d004e577",
+                "name": "requires-python-version-does-not-exist-a-1d794d6f",
                 "versions": [
                   {
                     "requires_python": ">=4.0",
@@ -4347,9 +4532,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-python-version-does-not-exist-a-d004e577==1.0.0",
-                  "name": "requires-python-version-does-not-exist-a-d004e577",
-                  "module_name": "requires_python_version_does_not_exist_a_d004e577"
+                  "requirement": "requires-python-version-does-not-exist-a-1d794d6f==1.0.0",
+                  "name": "requires-python-version-does-not-exist-a-1d794d6f",
+                  "module_name": "requires_python_version_does_not_exist_a_1d794d6f"
                 }
               ]
             },
@@ -4362,11 +4547,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires a package which requires a Python version that does not exist",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "d004e577",
+            "version": "1d794d6f",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -4383,7 +4573,7 @@
             "name": "requires-python-version-less-than-current",
             "packages": [
               {
-                "name": "requires-python-version-less-than-current-a-5e520203",
+                "name": "requires-python-version-less-than-current-a-720aae3a",
                 "versions": [
                   {
                     "requires_python": "<=3.8",
@@ -4403,9 +4593,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-python-version-less-than-current-a-5e520203==1.0.0",
-                  "name": "requires-python-version-less-than-current-a-5e520203",
-                  "module_name": "requires_python_version_less_than_current_a_5e520203"
+                  "requirement": "requires-python-version-less-than-current-a-720aae3a==1.0.0",
+                  "name": "requires-python-version-less-than-current-a-720aae3a",
+                  "module_name": "requires_python_version_less_than_current_a_720aae3a"
                 }
               ]
             },
@@ -4418,11 +4608,16 @@
               "python": "3.9",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires a package which requires a Python version less than the current version",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "5e520203",
+            "version": "720aae3a",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.9",
@@ -4439,7 +4634,7 @@
             "name": "requires-python-version-greater-than-current",
             "packages": [
               {
-                "name": "requires-python-version-greater-than-current-a-62394505",
+                "name": "requires-python-version-greater-than-current-a-d42e8e13",
                 "versions": [
                   {
                     "requires_python": ">=3.10",
@@ -4459,9 +4654,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-python-version-greater-than-current-a-62394505==1.0.0",
-                  "name": "requires-python-version-greater-than-current-a-62394505",
-                  "module_name": "requires_python_version_greater_than_current_a_62394505"
+                  "requirement": "requires-python-version-greater-than-current-a-d42e8e13==1.0.0",
+                  "name": "requires-python-version-greater-than-current-a-d42e8e13",
+                  "module_name": "requires_python_version_greater_than_current_a_d42e8e13"
                 }
               ]
             },
@@ -4474,11 +4669,16 @@
               "python": "3.9",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires a package which requires a Python version greater than the current version",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "62394505",
+            "version": "d42e8e13",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.9",
@@ -4495,7 +4695,7 @@
             "name": "requires-python-version-greater-than-current-patch",
             "packages": [
               {
-                "name": "requires-python-version-greater-than-current-patch-a-7b98f5af",
+                "name": "requires-python-version-greater-than-current-patch-a-02015be3",
                 "versions": [
                   {
                     "requires_python": ">=3.8.14",
@@ -4515,9 +4715,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-python-version-greater-than-current-patch-a-7b98f5af==1.0.0",
-                  "name": "requires-python-version-greater-than-current-patch-a-7b98f5af",
-                  "module_name": "requires_python_version_greater_than_current_patch_a_7b98f5af"
+                  "requirement": "requires-python-version-greater-than-current-patch-a-02015be3==1.0.0",
+                  "name": "requires-python-version-greater-than-current-patch-a-02015be3",
+                  "module_name": "requires_python_version_greater_than_current_patch_a_02015be3"
                 }
               ]
             },
@@ -4530,11 +4730,16 @@
               "python": "3.8.12",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires a package which requires a Python version with a patch version greater than the current patch version",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "7b98f5af",
+            "version": "02015be3",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8.12",
@@ -4551,7 +4756,7 @@
             "name": "requires-python-version-greater-than-current-many",
             "packages": [
               {
-                "name": "requires-python-version-greater-than-current-many-a-fd1f719c",
+                "name": "requires-python-version-greater-than-current-many-a-de00a3ad",
                 "versions": [
                   {
                     "requires_python": ">=3.10",
@@ -4692,9 +4897,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-python-version-greater-than-current-many-a-fd1f719c==1.0.0",
-                  "name": "requires-python-version-greater-than-current-many-a-fd1f719c",
-                  "module_name": "requires_python_version_greater_than_current_many_a_fd1f719c"
+                  "requirement": "requires-python-version-greater-than-current-many-a-de00a3ad==1.0.0",
+                  "name": "requires-python-version-greater-than-current-many-a-de00a3ad",
+                  "module_name": "requires_python_version_greater_than_current_many_a_de00a3ad"
                 }
               ]
             },
@@ -4707,11 +4912,16 @@
               "python": "3.9",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires a package which has many versions which all require a Python version greater than the current version",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "fd1f719c",
+            "version": "de00a3ad",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.9",
@@ -4750,7 +4960,7 @@
             "name": "requires-python-version-greater-than-current-backtrack",
             "packages": [
               {
-                "name": "requires-python-version-greater-than-current-backtrack-a-b2677f9a",
+                "name": "requires-python-version-greater-than-current-backtrack-a-57765d8d",
                 "versions": [
                   {
                     "requires_python": ">=3.9",
@@ -4803,9 +5013,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-python-version-greater-than-current-backtrack-a-b2677f9a",
-                  "name": "requires-python-version-greater-than-current-backtrack-a-b2677f9a",
-                  "module_name": "requires_python_version_greater_than_current_backtrack_a_b2677f9a"
+                  "requirement": "requires-python-version-greater-than-current-backtrack-a-57765d8d",
+                  "name": "requires-python-version-greater-than-current-backtrack-a-57765d8d",
+                  "module_name": "requires_python_version_greater_than_current_backtrack_a_57765d8d"
                 }
               ]
             },
@@ -4813,9 +5023,9 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "requires-python-version-greater-than-current-backtrack-a-b2677f9a",
+                  "name": "requires-python-version-greater-than-current-backtrack-a-57765d8d",
                   "version": "1.0.0",
-                  "module_name": "requires_python_version_greater_than_current_backtrack_a_b2677f9a"
+                  "module_name": "requires_python_version_greater_than_current_backtrack_a_57765d8d"
                 }
               ],
               "explanation": null
@@ -4824,11 +5034,16 @@
               "python": "3.9",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires a package where recent versions require a Python version greater than the current version, but an older version is compatible.",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "b2677f9a",
+            "version": "57765d8d",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.9",
@@ -4853,7 +5068,7 @@
             "name": "requires-python-version-greater-than-current-excluded",
             "packages": [
               {
-                "name": "requires-python-version-greater-than-current-excluded-a-34ee1c3e",
+                "name": "requires-python-version-greater-than-current-excluded-a-2b1e1fd5",
                 "versions": [
                   {
                     "requires_python": ">=3.9",
@@ -4906,9 +5121,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-python-version-greater-than-current-excluded-a-34ee1c3e>=2.0.0",
-                  "name": "requires-python-version-greater-than-current-excluded-a-34ee1c3e",
-                  "module_name": "requires_python_version_greater_than_current_excluded_a_34ee1c3e"
+                  "requirement": "requires-python-version-greater-than-current-excluded-a-2b1e1fd5>=2.0.0",
+                  "name": "requires-python-version-greater-than-current-excluded-a-2b1e1fd5",
+                  "module_name": "requires_python_version_greater_than_current_excluded_a_2b1e1fd5"
                 }
               ]
             },
@@ -4921,11 +5136,16 @@
               "python": "3.9",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires a package where recent versions require a Python version greater than the current version, but an excluded older version is compatible.",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "34ee1c3e",
+            "version": "2b1e1fd5",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.9",
@@ -5474,7 +5694,7 @@
             "name": "specific-tag-and-default",
             "packages": [
               {
-                "name": "specific-tag-and-default-a-ce63fb65",
+                "name": "specific-tag-and-default-a-5b682e2a",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -5497,9 +5717,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "specific-tag-and-default-a-ce63fb65",
-                  "name": "specific-tag-and-default-a-ce63fb65",
-                  "module_name": "specific_tag_and_default_a_ce63fb65"
+                  "requirement": "specific-tag-and-default-a-5b682e2a",
+                  "name": "specific-tag-and-default-a-5b682e2a",
+                  "module_name": "specific_tag_and_default_a_5b682e2a"
                 }
               ]
             },
@@ -5512,11 +5732,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "A wheel for a specific platform is available alongside the default.",
             "source": "[PWD]/scenarios/wheels.json",
-            "version": "ce63fb65",
+            "version": "5b682e2a",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -5532,7 +5757,7 @@
             "name": "only-wheels",
             "packages": [
               {
-                "name": "only-wheels-a-08df4319",
+                "name": "only-wheels-a-98862763",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -5552,9 +5777,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "only-wheels-a-08df4319",
-                  "name": "only-wheels-a-08df4319",
-                  "module_name": "only_wheels_a_08df4319"
+                  "requirement": "only-wheels-a-98862763",
+                  "name": "only-wheels-a-98862763",
+                  "module_name": "only_wheels_a_98862763"
                 }
               ]
             },
@@ -5567,11 +5792,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "No source distributions are available, only wheels.",
             "source": "[PWD]/scenarios/wheels.json",
-            "version": "08df4319",
+            "version": "98862763",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -5587,7 +5817,7 @@
             "name": "no-wheels",
             "packages": [
               {
-                "name": "no-wheels-a-0a9090ba",
+                "name": "no-wheels-a-2d607b8c",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -5607,9 +5837,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "no-wheels-a-0a9090ba",
-                  "name": "no-wheels-a-0a9090ba",
-                  "module_name": "no_wheels_a_0a9090ba"
+                  "requirement": "no-wheels-a-2d607b8c",
+                  "name": "no-wheels-a-2d607b8c",
+                  "module_name": "no_wheels_a_2d607b8c"
                 }
               ]
             },
@@ -5622,11 +5852,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "No wheels are available, only source distributions.",
             "source": "[PWD]/scenarios/wheels.json",
-            "version": "0a9090ba",
+            "version": "2d607b8c",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -5642,7 +5877,7 @@
             "name": "no-wheels-with-matching-platform",
             "packages": [
               {
-                "name": "no-wheels-with-matching-platform-a-b595b358",
+                "name": "no-wheels-with-matching-platform-a-4767b9e9",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -5662,9 +5897,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "no-wheels-with-matching-platform-a-b595b358",
-                  "name": "no-wheels-with-matching-platform-a-b595b358",
-                  "module_name": "no_wheels_with_matching_platform_a_b595b358"
+                  "requirement": "no-wheels-with-matching-platform-a-4767b9e9",
+                  "name": "no-wheels-with-matching-platform-a-4767b9e9",
+                  "module_name": "no_wheels_with_matching_platform_a_4767b9e9"
                 }
               ]
             },
@@ -5677,11 +5912,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "No wheels with valid tags are available, just source distributions.",
             "source": "[PWD]/scenarios/wheels.json",
-            "version": "b595b358",
+            "version": "4767b9e9",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -5945,7 +6185,7 @@
             "name": "package-only-yanked",
             "packages": [
               {
-                "name": "package-only-yanked-a-5f5d3a41",
+                "name": "package-only-yanked-a-f1dc9083",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -5965,9 +6205,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "package-only-yanked-a-5f5d3a41",
-                  "name": "package-only-yanked-a-5f5d3a41",
-                  "module_name": "package_only_yanked_a_5f5d3a41"
+                  "requirement": "package-only-yanked-a-f1dc9083",
+                  "name": "package-only-yanked-a-f1dc9083",
+                  "module_name": "package_only_yanked_a_f1dc9083"
                 }
               ]
             },
@@ -5975,9 +6215,9 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "package-only-yanked-a-5f5d3a41",
+                  "name": "package-only-yanked-a-f1dc9083",
                   "version": "1.0.0",
-                  "module_name": "package_only_yanked_a_5f5d3a41"
+                  "module_name": "package_only_yanked_a_f1dc9083"
                 }
               ],
               "explanation": "Since there are only yanked versions of `a` available, it should be installed even though the user did not ask for the yanked version directly."
@@ -5986,11 +6226,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires any version of package `a` which only has yanked versions available.",
             "source": "[PWD]/scenarios/yanked.json",
-            "version": "5f5d3a41",
+            "version": "f1dc9083",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -6006,7 +6251,7 @@
             "name": "package-only-yanked-in-range",
             "packages": [
               {
-                "name": "package-only-yanked-in-range-a-ef8ee676",
+                "name": "package-only-yanked-in-range-a-c41e8442",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -6037,9 +6282,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "package-only-yanked-in-range-a-ef8ee676>0.1.0",
-                  "name": "package-only-yanked-in-range-a-ef8ee676",
-                  "module_name": "package_only_yanked_in_range_a_ef8ee676"
+                  "requirement": "package-only-yanked-in-range-a-c41e8442>0.1.0",
+                  "name": "package-only-yanked-in-range-a-c41e8442",
+                  "module_name": "package_only_yanked_in_range_a_c41e8442"
                 }
               ]
             },
@@ -6052,11 +6297,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires a version of package `a` which only matches yanked versions.",
             "source": "[PWD]/scenarios/yanked.json",
-            "version": "ef8ee676",
+            "version": "c41e8442",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -6073,7 +6323,7 @@
             "name": "requires-package-yanked-and-final-any",
             "packages": [
               {
-                "name": "requires-package-yanked-and-final-any-a-d555e202",
+                "name": "requires-package-yanked-and-final-any-a-e055b322",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -6104,9 +6354,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-package-yanked-and-final-any-a-d555e202",
-                  "name": "requires-package-yanked-and-final-any-a-d555e202",
-                  "module_name": "requires_package_yanked_and_final_any_a_d555e202"
+                  "requirement": "requires-package-yanked-and-final-any-a-e055b322",
+                  "name": "requires-package-yanked-and-final-any-a-e055b322",
+                  "module_name": "requires_package_yanked_and_final_any_a_e055b322"
                 }
               ]
             },
@@ -6114,9 +6364,9 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "requires-package-yanked-and-final-any-a-d555e202",
+                  "name": "requires-package-yanked-and-final-any-a-e055b322",
                   "version": "0.1.0",
-                  "module_name": "requires_package_yanked_and_final_any_a_d555e202"
+                  "module_name": "requires_package_yanked_and_final_any_a_e055b322"
                 }
               ],
               "explanation": "The unyanked version should be selected."
@@ -6125,11 +6375,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires any version of package `a` has a yanked version available and an older unyanked version.",
             "source": "[PWD]/scenarios/yanked.json",
-            "version": "d555e202",
+            "version": "e055b322",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -6146,7 +6401,7 @@
             "name": "package-yanked-specified-mixed-available",
             "packages": [
               {
-                "name": "package-yanked-specified-mixed-available-a-0dcba00a",
+                "name": "package-yanked-specified-mixed-available-a-662d9d10",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -6199,9 +6454,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "package-yanked-specified-mixed-available-a-0dcba00a>=0.1.0",
-                  "name": "package-yanked-specified-mixed-available-a-0dcba00a",
-                  "module_name": "package_yanked_specified_mixed_available_a_0dcba00a"
+                  "requirement": "package-yanked-specified-mixed-available-a-662d9d10>=0.1.0",
+                  "name": "package-yanked-specified-mixed-available-a-662d9d10",
+                  "module_name": "package_yanked_specified_mixed_available_a_662d9d10"
                 }
               ]
             },
@@ -6209,9 +6464,9 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "package-yanked-specified-mixed-available-a-0dcba00a",
+                  "name": "package-yanked-specified-mixed-available-a-662d9d10",
                   "version": "0.3.0",
-                  "module_name": "package_yanked_specified_mixed_available_a_0dcba00a"
+                  "module_name": "package_yanked_specified_mixed_available_a_662d9d10"
                 }
               ],
               "explanation": "The latest unyanked version should be selected."
@@ -6220,11 +6475,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires any version of `a` and both yanked and unyanked releases are available.",
             "source": "[PWD]/scenarios/yanked.json",
-            "version": "0dcba00a",
+            "version": "662d9d10",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -6244,12 +6504,12 @@
             "name": "transitive-package-only-yanked",
             "packages": [
               {
-                "name": "transitive-package-only-yanked-a-bc0f1edb",
+                "name": "transitive-package-only-yanked-a-3d5f021c",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-package-only-yanked-b-bc0f1edb"
+                      "transitive-package-only-yanked-b-3d5f021c"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -6262,7 +6522,7 @@
                 ]
               },
               {
-                "name": "transitive-package-only-yanked-b-bc0f1edb",
+                "name": "transitive-package-only-yanked-b-3d5f021c",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -6282,9 +6542,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "transitive-package-only-yanked-a-bc0f1edb",
-                  "name": "transitive-package-only-yanked-a-bc0f1edb",
-                  "module_name": "transitive_package_only_yanked_a_bc0f1edb"
+                  "requirement": "transitive-package-only-yanked-a-3d5f021c",
+                  "name": "transitive-package-only-yanked-a-3d5f021c",
+                  "module_name": "transitive_package_only_yanked_a_3d5f021c"
                 }
               ]
             },
@@ -6292,14 +6552,14 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "transitive-package-only-yanked-a-bc0f1edb",
+                  "name": "transitive-package-only-yanked-a-3d5f021c",
                   "version": "0.1.0",
-                  "module_name": "transitive_package_only_yanked_a_bc0f1edb"
+                  "module_name": "transitive_package_only_yanked_a_3d5f021c"
                 },
                 {
-                  "name": "transitive-package-only-yanked-b-bc0f1edb",
+                  "name": "transitive-package-only-yanked-b-3d5f021c",
                   "version": "1.0.1",
-                  "module_name": "transitive_package_only_yanked_b_bc0f1edb"
+                  "module_name": "transitive_package_only_yanked_b_3d5f021c"
                 }
               ],
               "explanation": "Since there are only yanked versions of `b` available, it should be selected even though the user did not opt-in to it."
@@ -6308,11 +6568,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires any version of package `a` which requires `b` which only has yanked versions available.",
             "source": "[PWD]/scenarios/yanked.json",
-            "version": "bc0f1edb",
+            "version": "3d5f021c",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -6332,12 +6597,12 @@
             "name": "transitive-package-only-yanked-in-range",
             "packages": [
               {
-                "name": "transitive-package-only-yanked-in-range-a-9b00baf6",
+                "name": "transitive-package-only-yanked-in-range-a-03f5a281",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-package-only-yanked-in-range-b-9b00baf6>0.1"
+                      "transitive-package-only-yanked-in-range-b-03f5a281>0.1"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -6350,7 +6615,7 @@
                 ]
               },
               {
-                "name": "transitive-package-only-yanked-in-range-b-9b00baf6",
+                "name": "transitive-package-only-yanked-in-range-b-03f5a281",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -6381,9 +6646,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "transitive-package-only-yanked-in-range-a-9b00baf6",
-                  "name": "transitive-package-only-yanked-in-range-a-9b00baf6",
-                  "module_name": "transitive_package_only_yanked_in_range_a_9b00baf6"
+                  "requirement": "transitive-package-only-yanked-in-range-a-03f5a281",
+                  "name": "transitive-package-only-yanked-in-range-a-03f5a281",
+                  "module_name": "transitive_package_only_yanked_in_range_a_03f5a281"
                 }
               ]
             },
@@ -6396,11 +6661,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires package `a` which has a dependency on a package which only matches yanked versions.",
             "source": "[PWD]/scenarios/yanked.json",
-            "version": "9b00baf6",
+            "version": "03f5a281",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -6421,12 +6691,12 @@
             "name": "transitive-package-only-yanked-in-range-opt-in",
             "packages": [
               {
-                "name": "transitive-package-only-yanked-in-range-opt-in-a-15ceca78",
+                "name": "transitive-package-only-yanked-in-range-opt-in-a-c53d8db6",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-package-only-yanked-in-range-opt-in-b-15ceca78>0.1"
+                      "transitive-package-only-yanked-in-range-opt-in-b-c53d8db6>0.1"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -6439,7 +6709,7 @@
                 ]
               },
               {
-                "name": "transitive-package-only-yanked-in-range-opt-in-b-15ceca78",
+                "name": "transitive-package-only-yanked-in-range-opt-in-b-c53d8db6",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -6470,14 +6740,14 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "transitive-package-only-yanked-in-range-opt-in-a-15ceca78",
-                  "name": "transitive-package-only-yanked-in-range-opt-in-a-15ceca78",
-                  "module_name": "transitive_package_only_yanked_in_range_opt_in_a_15ceca78"
+                  "requirement": "transitive-package-only-yanked-in-range-opt-in-a-c53d8db6",
+                  "name": "transitive-package-only-yanked-in-range-opt-in-a-c53d8db6",
+                  "module_name": "transitive_package_only_yanked_in_range_opt_in_a_c53d8db6"
                 },
                 {
-                  "requirement": "transitive-package-only-yanked-in-range-opt-in-b-15ceca78==1.0.0",
-                  "name": "transitive-package-only-yanked-in-range-opt-in-b-15ceca78",
-                  "module_name": "transitive_package_only_yanked_in_range_opt_in_b_15ceca78"
+                  "requirement": "transitive-package-only-yanked-in-range-opt-in-b-c53d8db6==1.0.0",
+                  "name": "transitive-package-only-yanked-in-range-opt-in-b-c53d8db6",
+                  "module_name": "transitive_package_only_yanked_in_range_opt_in_b_c53d8db6"
                 }
               ]
             },
@@ -6485,14 +6755,14 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "transitive-package-only-yanked-in-range-opt-in-a-15ceca78",
+                  "name": "transitive-package-only-yanked-in-range-opt-in-a-c53d8db6",
                   "version": "0.1.0",
-                  "module_name": "transitive_package_only_yanked_in_range_opt_in_a_15ceca78"
+                  "module_name": "transitive_package_only_yanked_in_range_opt_in_a_c53d8db6"
                 },
                 {
-                  "name": "transitive-package-only-yanked-in-range-opt-in-b-15ceca78",
+                  "name": "transitive-package-only-yanked-in-range-opt-in-b-c53d8db6",
                   "version": "1.0.0",
-                  "module_name": "transitive_package_only_yanked_in_range_opt_in_b_15ceca78"
+                  "module_name": "transitive_package_only_yanked_in_range_opt_in_b_c53d8db6"
                 }
               ],
               "explanation": "Since the user included a dependency on `b` with a yanked specifier, a yanked version can be selected."
@@ -6501,11 +6771,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "The user requires package `a` which has a dependency on a package which only matches yanked versions; the user has opted into allowing the yanked version of `b` explicitly.",
             "source": "[PWD]/scenarios/yanked.json",
-            "version": "15ceca78",
+            "version": "c53d8db6",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -6528,12 +6803,12 @@
             "name": "transitive-yanked-and-unyanked-dependency",
             "packages": [
               {
-                "name": "transitive-yanked-and-unyanked-dependency-a-17d6f9ae",
+                "name": "transitive-yanked-and-unyanked-dependency-a-9f2cab62",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-yanked-and-unyanked-dependency-c-17d6f9ae==2.0.0"
+                      "transitive-yanked-and-unyanked-dependency-c-9f2cab62==2.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -6546,12 +6821,12 @@
                 ]
               },
               {
-                "name": "transitive-yanked-and-unyanked-dependency-b-17d6f9ae",
+                "name": "transitive-yanked-and-unyanked-dependency-b-9f2cab62",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-yanked-and-unyanked-dependency-c-17d6f9ae<=3.0.0,>=1.0.0"
+                      "transitive-yanked-and-unyanked-dependency-c-9f2cab62<=3.0.0,>=1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -6564,7 +6839,7 @@
                 ]
               },
               {
-                "name": "transitive-yanked-and-unyanked-dependency-c-17d6f9ae",
+                "name": "transitive-yanked-and-unyanked-dependency-c-9f2cab62",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -6595,14 +6870,14 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "transitive-yanked-and-unyanked-dependency-a-17d6f9ae",
-                  "name": "transitive-yanked-and-unyanked-dependency-a-17d6f9ae",
-                  "module_name": "transitive_yanked_and_unyanked_dependency_a_17d6f9ae"
+                  "requirement": "transitive-yanked-and-unyanked-dependency-a-9f2cab62",
+                  "name": "transitive-yanked-and-unyanked-dependency-a-9f2cab62",
+                  "module_name": "transitive_yanked_and_unyanked_dependency_a_9f2cab62"
                 },
                 {
-                  "requirement": "transitive-yanked-and-unyanked-dependency-b-17d6f9ae",
-                  "name": "transitive-yanked-and-unyanked-dependency-b-17d6f9ae",
-                  "module_name": "transitive_yanked_and_unyanked_dependency_b_17d6f9ae"
+                  "requirement": "transitive-yanked-and-unyanked-dependency-b-9f2cab62",
+                  "name": "transitive-yanked-and-unyanked-dependency-b-9f2cab62",
+                  "module_name": "transitive_yanked_and_unyanked_dependency_b_9f2cab62"
                 }
               ]
             },
@@ -6615,11 +6890,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "A transitive dependency has both a yanked and an unyanked version, but can only be satisfied by a yanked version",
             "source": "[PWD]/scenarios/yanked.json",
-            "version": "17d6f9ae",
+            "version": "9f2cab62",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -6646,12 +6926,12 @@
             "name": "transitive-yanked-and-unyanked-dependency-opt-in",
             "packages": [
               {
-                "name": "transitive-yanked-and-unyanked-dependency-opt-in-a-5c3bdfe0",
+                "name": "transitive-yanked-and-unyanked-dependency-opt-in-a-2764a77f",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0==2.0.0"
+                      "transitive-yanked-and-unyanked-dependency-opt-in-c-2764a77f==2.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -6664,12 +6944,12 @@
                 ]
               },
               {
-                "name": "transitive-yanked-and-unyanked-dependency-opt-in-b-5c3bdfe0",
+                "name": "transitive-yanked-and-unyanked-dependency-opt-in-b-2764a77f",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0<=3.0.0,>=1.0.0"
+                      "transitive-yanked-and-unyanked-dependency-opt-in-c-2764a77f<=3.0.0,>=1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -6682,7 +6962,7 @@
                 ]
               },
               {
-                "name": "transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0",
+                "name": "transitive-yanked-and-unyanked-dependency-opt-in-c-2764a77f",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -6713,19 +6993,19 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "transitive-yanked-and-unyanked-dependency-opt-in-a-5c3bdfe0",
-                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-a-5c3bdfe0",
-                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_a_5c3bdfe0"
+                  "requirement": "transitive-yanked-and-unyanked-dependency-opt-in-a-2764a77f",
+                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-a-2764a77f",
+                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_a_2764a77f"
                 },
                 {
-                  "requirement": "transitive-yanked-and-unyanked-dependency-opt-in-b-5c3bdfe0",
-                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-b-5c3bdfe0",
-                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_b_5c3bdfe0"
+                  "requirement": "transitive-yanked-and-unyanked-dependency-opt-in-b-2764a77f",
+                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-b-2764a77f",
+                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_b_2764a77f"
                 },
                 {
-                  "requirement": "transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0==2.0.0",
-                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0",
-                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0"
+                  "requirement": "transitive-yanked-and-unyanked-dependency-opt-in-c-2764a77f==2.0.0",
+                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-c-2764a77f",
+                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_c_2764a77f"
                 }
               ]
             },
@@ -6733,19 +7013,19 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-a-5c3bdfe0",
+                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-a-2764a77f",
                   "version": "1.0.0",
-                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_a_5c3bdfe0"
+                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_a_2764a77f"
                 },
                 {
-                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-b-5c3bdfe0",
+                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-b-2764a77f",
                   "version": "1.0.0",
-                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_b_5c3bdfe0"
+                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_b_2764a77f"
                 },
                 {
-                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0",
+                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-c-2764a77f",
                   "version": "2.0.0",
-                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0"
+                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_c_2764a77f"
                 }
               ],
               "explanation": "Since the user explicitly opted-in to a yanked version for `c`, it can be installed."
@@ -6754,11 +7034,16 @@
               "python": "3.8",
               "additional_python": []
             },
-            "resolver_options": null,
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
             "template": "simple",
             "description": "A transitive dependency has both a yanked and an unyanked version, but can only be satisfied by a yanked. The user includes an opt-in to the yanked version of the transitive dependency.",
             "source": "[PWD]/scenarios/yanked.json",
-            "version": "5c3bdfe0",
+            "version": "2764a77f",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
