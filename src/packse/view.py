@@ -88,6 +88,7 @@ def dependency_tree(scenario: Scenario) -> str:
                 version: metadata
                 for version, metadata in versions.items()
                 if for_requirement.specifier.contains(version)
+                if not metadata.yanked
             }
 
             if not versions:
@@ -95,23 +96,25 @@ def dependency_tree(scenario: Scenario) -> str:
                 return
 
         show_versions = []
-        for version, version_metadata in versions.items():
+        for version, metadata in versions.items():
             show_versions.append(
                 (
                     version,
-                    version_metadata.requires
-                    + [Requirement(f"python{version_metadata.requires_python}")],
+                    metadata.requires
+                    + [Requirement(f"python{metadata.requires_python}")],
+                    metadata,
                 )
             )
-            extras = version_metadata.extras
+            extras = metadata.extras
 
             for extra, extra_depends in extras.items():
-                show_versions.append((f"{version}[{extra}]", extra_depends))
+                show_versions.append((f"{version}[{extra}]", extra_depends, metadata))
 
         pointers = [tee] * (len(show_versions) - 1) + [last]
-        for pointer, (version, requirements) in zip(pointers, show_versions):
+        for pointer, (version, requirements, metadata) in zip(pointers, show_versions):
             message = "satisfied by " if for_requirement and package else ""
-            yield prefix + pointer + message + f"{package}-{version}"
+            yanked = " (yanked)" if metadata.yanked else ""
+            yield prefix + pointer + message + f"{package}-{version}" + yanked
 
             if not for_requirement:
                 extension = branch if pointer == tee else space

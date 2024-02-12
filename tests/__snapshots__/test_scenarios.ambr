@@ -5321,6 +5321,938 @@
     ''',
   })
 # ---
+# name: test_build_all_scenarios[yanked]
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'build/package-only-yanked-5f5d3a41/package-only-yanked-5f5d3a41-0.0.0/pyproject.toml': 'md5:a00bb8ebd25081df92db0f481c84a30c',
+      'build/package-only-yanked-5f5d3a41/package-only-yanked-5f5d3a41-0.0.0/src/package_only_yanked_5f5d3a41/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/package-only-yanked-5f5d3a41/package-only-yanked-a-5f5d3a41-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_only_yanked_a_5f5d3a41"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_only_yanked_a_5f5d3a41"]
+        
+        [project]
+        name = "package-only-yanked-a-5f5d3a41"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-only-yanked-5f5d3a41/package-only-yanked-a-5f5d3a41-1.0.0/src/package_only_yanked_a_5f5d3a41/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/package-only-yanked-in-range-ef8ee676/package-only-yanked-in-range-a-ef8ee676-0.1.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_only_yanked_in_range_a_ef8ee676"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_only_yanked_in_range_a_ef8ee676"]
+        
+        [project]
+        name = "package-only-yanked-in-range-a-ef8ee676"
+        version = "0.1.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-only-yanked-in-range-ef8ee676/package-only-yanked-in-range-a-ef8ee676-0.1.0/src/package_only_yanked_in_range_a_ef8ee676/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/package-only-yanked-in-range-ef8ee676/package-only-yanked-in-range-a-ef8ee676-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_only_yanked_in_range_a_ef8ee676"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_only_yanked_in_range_a_ef8ee676"]
+        
+        [project]
+        name = "package-only-yanked-in-range-a-ef8ee676"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-only-yanked-in-range-ef8ee676/package-only-yanked-in-range-a-ef8ee676-1.0.0/src/package_only_yanked_in_range_a_ef8ee676/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/package-only-yanked-in-range-ef8ee676/package-only-yanked-in-range-ef8ee676-0.0.0/pyproject.toml': 'md5:cb2a74e1a1766738a926ebc788d02c02',
+      'build/package-only-yanked-in-range-ef8ee676/package-only-yanked-in-range-ef8ee676-0.0.0/src/package_only_yanked_in_range_ef8ee676/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/package-yanked-specified-mixed-available-0dcba00a/package-yanked-specified-mixed-available-0dcba00a-0.0.0/pyproject.toml': 'md5:3f7e5f99764a4bb1b433bb615572097c',
+      'build/package-yanked-specified-mixed-available-0dcba00a/package-yanked-specified-mixed-available-0dcba00a-0.0.0/src/package_yanked_specified_mixed_available_0dcba00a/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/package-yanked-specified-mixed-available-0dcba00a/package-yanked-specified-mixed-available-a-0dcba00a-0.1.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_yanked_specified_mixed_available_a_0dcba00a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_yanked_specified_mixed_available_a_0dcba00a"]
+        
+        [project]
+        name = "package-yanked-specified-mixed-available-a-0dcba00a"
+        version = "0.1.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-yanked-specified-mixed-available-0dcba00a/package-yanked-specified-mixed-available-a-0dcba00a-0.1.0/src/package_yanked_specified_mixed_available_a_0dcba00a/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/package-yanked-specified-mixed-available-0dcba00a/package-yanked-specified-mixed-available-a-0dcba00a-0.2.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_yanked_specified_mixed_available_a_0dcba00a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_yanked_specified_mixed_available_a_0dcba00a"]
+        
+        [project]
+        name = "package-yanked-specified-mixed-available-a-0dcba00a"
+        version = "0.2.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-yanked-specified-mixed-available-0dcba00a/package-yanked-specified-mixed-available-a-0dcba00a-0.2.0/src/package_yanked_specified_mixed_available_a_0dcba00a/__init__.py': '''
+        __version__ = "0.2.0"
+  
+      ''',
+      'build/package-yanked-specified-mixed-available-0dcba00a/package-yanked-specified-mixed-available-a-0dcba00a-0.3.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_yanked_specified_mixed_available_a_0dcba00a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_yanked_specified_mixed_available_a_0dcba00a"]
+        
+        [project]
+        name = "package-yanked-specified-mixed-available-a-0dcba00a"
+        version = "0.3.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-yanked-specified-mixed-available-0dcba00a/package-yanked-specified-mixed-available-a-0dcba00a-0.3.0/src/package_yanked_specified_mixed_available_a_0dcba00a/__init__.py': '''
+        __version__ = "0.3.0"
+  
+      ''',
+      'build/package-yanked-specified-mixed-available-0dcba00a/package-yanked-specified-mixed-available-a-0dcba00a-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_yanked_specified_mixed_available_a_0dcba00a"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_yanked_specified_mixed_available_a_0dcba00a"]
+        
+        [project]
+        name = "package-yanked-specified-mixed-available-a-0dcba00a"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-yanked-specified-mixed-available-0dcba00a/package-yanked-specified-mixed-available-a-0dcba00a-1.0.0/src/package_yanked_specified_mixed_available_a_0dcba00a/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-package-yanked-and-final-any-d555e202/requires-package-yanked-and-final-any-a-d555e202-0.1.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_yanked_and_final_any_a_d555e202"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_yanked_and_final_any_a_d555e202"]
+        
+        [project]
+        name = "requires-package-yanked-and-final-any-a-d555e202"
+        version = "0.1.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/requires-package-yanked-and-final-any-d555e202/requires-package-yanked-and-final-any-a-d555e202-0.1.0/src/requires_package_yanked_and_final_any_a_d555e202/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/requires-package-yanked-and-final-any-d555e202/requires-package-yanked-and-final-any-a-d555e202-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/requires_package_yanked_and_final_any_a_d555e202"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/requires_package_yanked_and_final_any_a_d555e202"]
+        
+        [project]
+        name = "requires-package-yanked-and-final-any-a-d555e202"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/requires-package-yanked-and-final-any-d555e202/requires-package-yanked-and-final-any-a-d555e202-1.0.0/src/requires_package_yanked_and_final_any_a_d555e202/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/requires-package-yanked-and-final-any-d555e202/requires-package-yanked-and-final-any-d555e202-0.0.0/pyproject.toml': 'md5:f535c2eb39697ad7757e50a3a8fe4922',
+      'build/requires-package-yanked-and-final-any-d555e202/requires-package-yanked-and-final-any-d555e202-0.0.0/src/requires_package_yanked_and_final_any_d555e202/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/transitive-package-only-yanked-bc0f1edb/transitive-package-only-yanked-a-bc0f1edb-0.1.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/transitive_package_only_yanked_a_bc0f1edb"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/transitive_package_only_yanked_a_bc0f1edb"]
+        
+        [project]
+        name = "transitive-package-only-yanked-a-bc0f1edb"
+        version = "0.1.0"
+        dependencies = [
+            "transitive-package-only-yanked-b-bc0f1edb",
+        ]
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/transitive-package-only-yanked-bc0f1edb/transitive-package-only-yanked-a-bc0f1edb-0.1.0/src/transitive_package_only_yanked_a_bc0f1edb/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/transitive-package-only-yanked-bc0f1edb/transitive-package-only-yanked-b-bc0f1edb-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/transitive_package_only_yanked_b_bc0f1edb"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/transitive_package_only_yanked_b_bc0f1edb"]
+        
+        [project]
+        name = "transitive-package-only-yanked-b-bc0f1edb"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/transitive-package-only-yanked-bc0f1edb/transitive-package-only-yanked-b-bc0f1edb-1.0.0/src/transitive_package_only_yanked_b_bc0f1edb/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/transitive-package-only-yanked-bc0f1edb/transitive-package-only-yanked-bc0f1edb-0.0.0/pyproject.toml': 'md5:476ac7a7ae4098fe6b1e7814797e3567',
+      'build/transitive-package-only-yanked-bc0f1edb/transitive-package-only-yanked-bc0f1edb-0.0.0/src/transitive_package_only_yanked_bc0f1edb/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/transitive-package-only-yanked-in-range-9b00baf6/transitive-package-only-yanked-in-range-9b00baf6-0.0.0/pyproject.toml': 'md5:b694de2ba4ac16fc6eadffc8e5c00f27',
+      'build/transitive-package-only-yanked-in-range-9b00baf6/transitive-package-only-yanked-in-range-9b00baf6-0.0.0/src/transitive_package_only_yanked_in_range_9b00baf6/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/transitive-package-only-yanked-in-range-9b00baf6/transitive-package-only-yanked-in-range-a-9b00baf6-0.1.0/pyproject.toml': 'md5:546dbaaf467d15eaf02bec9c2df063c2',
+      'build/transitive-package-only-yanked-in-range-9b00baf6/transitive-package-only-yanked-in-range-a-9b00baf6-0.1.0/src/transitive_package_only_yanked_in_range_a_9b00baf6/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/transitive-package-only-yanked-in-range-9b00baf6/transitive-package-only-yanked-in-range-b-9b00baf6-0.1.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/transitive_package_only_yanked_in_range_b_9b00baf6"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/transitive_package_only_yanked_in_range_b_9b00baf6"]
+        
+        [project]
+        name = "transitive-package-only-yanked-in-range-b-9b00baf6"
+        version = "0.1.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/transitive-package-only-yanked-in-range-9b00baf6/transitive-package-only-yanked-in-range-b-9b00baf6-0.1.0/src/transitive_package_only_yanked_in_range_b_9b00baf6/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/transitive-package-only-yanked-in-range-9b00baf6/transitive-package-only-yanked-in-range-b-9b00baf6-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/transitive_package_only_yanked_in_range_b_9b00baf6"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/transitive_package_only_yanked_in_range_b_9b00baf6"]
+        
+        [project]
+        name = "transitive-package-only-yanked-in-range-b-9b00baf6"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/transitive-package-only-yanked-in-range-9b00baf6/transitive-package-only-yanked-in-range-b-9b00baf6-1.0.0/src/transitive_package_only_yanked_in_range_b_9b00baf6/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/transitive-package-only-yanked-in-range-opt-in-15ceca78/transitive-package-only-yanked-in-range-opt-in-15ceca78-0.0.0/pyproject.toml': 'md5:92a74ca84d328dba48807139f8fae614',
+      'build/transitive-package-only-yanked-in-range-opt-in-15ceca78/transitive-package-only-yanked-in-range-opt-in-15ceca78-0.0.0/src/transitive_package_only_yanked_in_range_opt_in_15ceca78/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/transitive-package-only-yanked-in-range-opt-in-15ceca78/transitive-package-only-yanked-in-range-opt-in-a-15ceca78-0.1.0/pyproject.toml': 'md5:a999bb994130dc670cd21a90195853d8',
+      'build/transitive-package-only-yanked-in-range-opt-in-15ceca78/transitive-package-only-yanked-in-range-opt-in-a-15ceca78-0.1.0/src/transitive_package_only_yanked_in_range_opt_in_a_15ceca78/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/transitive-package-only-yanked-in-range-opt-in-15ceca78/transitive-package-only-yanked-in-range-opt-in-b-15ceca78-0.1.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/transitive_package_only_yanked_in_range_opt_in_b_15ceca78"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/transitive_package_only_yanked_in_range_opt_in_b_15ceca78"]
+        
+        [project]
+        name = "transitive-package-only-yanked-in-range-opt-in-b-15ceca78"
+        version = "0.1.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/transitive-package-only-yanked-in-range-opt-in-15ceca78/transitive-package-only-yanked-in-range-opt-in-b-15ceca78-0.1.0/src/transitive_package_only_yanked_in_range_opt_in_b_15ceca78/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/transitive-package-only-yanked-in-range-opt-in-15ceca78/transitive-package-only-yanked-in-range-opt-in-b-15ceca78-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/transitive_package_only_yanked_in_range_opt_in_b_15ceca78"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/transitive_package_only_yanked_in_range_opt_in_b_15ceca78"]
+        
+        [project]
+        name = "transitive-package-only-yanked-in-range-opt-in-b-15ceca78"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/transitive-package-only-yanked-in-range-opt-in-15ceca78/transitive-package-only-yanked-in-range-opt-in-b-15ceca78-1.0.0/src/transitive_package_only_yanked_in_range_opt_in_b_15ceca78/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive-yanked-and-unyanked-dependency-17d6f9ae-0.0.0/pyproject.toml': 'md5:80a67603f5423e88d80b87de4310f72b',
+      'build/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive-yanked-and-unyanked-dependency-17d6f9ae-0.0.0/src/transitive_yanked_and_unyanked_dependency_17d6f9ae/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive-yanked-and-unyanked-dependency-a-17d6f9ae-1.0.0/pyproject.toml': 'md5:00b8ddc213a69eecb8faa8fded4011b2',
+      'build/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive-yanked-and-unyanked-dependency-a-17d6f9ae-1.0.0/src/transitive_yanked_and_unyanked_dependency_a_17d6f9ae/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive-yanked-and-unyanked-dependency-b-17d6f9ae-1.0.0/pyproject.toml': 'md5:b4f6abfd049ed5efffbbd25be4f6f968',
+      'build/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive-yanked-and-unyanked-dependency-b-17d6f9ae-1.0.0/src/transitive_yanked_and_unyanked_dependency_b_17d6f9ae/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive-yanked-and-unyanked-dependency-c-17d6f9ae-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/transitive_yanked_and_unyanked_dependency_c_17d6f9ae"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/transitive_yanked_and_unyanked_dependency_c_17d6f9ae"]
+        
+        [project]
+        name = "transitive-yanked-and-unyanked-dependency-c-17d6f9ae"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive-yanked-and-unyanked-dependency-c-17d6f9ae-1.0.0/src/transitive_yanked_and_unyanked_dependency_c_17d6f9ae/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive-yanked-and-unyanked-dependency-c-17d6f9ae-2.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/transitive_yanked_and_unyanked_dependency_c_17d6f9ae"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/transitive_yanked_and_unyanked_dependency_c_17d6f9ae"]
+        
+        [project]
+        name = "transitive-yanked-and-unyanked-dependency-c-17d6f9ae"
+        version = "2.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive-yanked-and-unyanked-dependency-c-17d6f9ae-2.0.0/src/transitive_yanked_and_unyanked_dependency_c_17d6f9ae/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'build/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0-0.0.0/pyproject.toml': 'md5:6a070674aa06ebb64ffb7c55f3d5bd8d',
+      'build/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0-0.0.0/src/transitive_yanked_and_unyanked_dependency_opt_in_5c3bdfe0/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive-yanked-and-unyanked-dependency-opt-in-a-5c3bdfe0-1.0.0/pyproject.toml': 'md5:3fac084a0afcafbe1d2fdc19b6ccfd7b',
+      'build/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive-yanked-and-unyanked-dependency-opt-in-a-5c3bdfe0-1.0.0/src/transitive_yanked_and_unyanked_dependency_opt_in_a_5c3bdfe0/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive-yanked-and-unyanked-dependency-opt-in-b-5c3bdfe0-1.0.0/pyproject.toml': 'md5:1b697700c129c30258743c41b3569c87',
+      'build/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive-yanked-and-unyanked-dependency-opt-in-b-5c3bdfe0-1.0.0/src/transitive_yanked_and_unyanked_dependency_opt_in_b_5c3bdfe0/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0"]
+        
+        [project]
+        name = "transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0-1.0.0/src/transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0-2.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0"]
+        
+        [project]
+        name = "transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0"
+        version = "2.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0-2.0.0/src/transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'dist/package-only-yanked-5f5d3a41.yanked': '''
+        1.0.0
+  
+      ''',
+      'dist/package-only-yanked-5f5d3a41/package_only_yanked_5f5d3a41-0.0.0.tar.gz': 'md5:9fee8bd5d4c0044e7136fbc177119ecf',
+      'dist/package-only-yanked-5f5d3a41/package_only_yanked_a_5f5d3a41-1.0.0-py3-none-any.whl': 'md5:ff5a32640f7c8ffbe4e50c2e71a182dc',
+      'dist/package-only-yanked-5f5d3a41/package_only_yanked_a_5f5d3a41-1.0.0.tar.gz': 'md5:0869b015232c502bde3dc99ebeac37d3',
+      'dist/package-only-yanked-in-range-ef8ee676.yanked': '''
+        1.0.0
+  
+      ''',
+      'dist/package-only-yanked-in-range-ef8ee676/package_only_yanked_in_range_a_ef8ee676-0.1.0-py3-none-any.whl': 'md5:0f4e513dc081d611a115dfb16c239d39',
+      'dist/package-only-yanked-in-range-ef8ee676/package_only_yanked_in_range_a_ef8ee676-0.1.0.tar.gz': 'md5:ab11f315eeaf47dde2e782f0a8763e6e',
+      'dist/package-only-yanked-in-range-ef8ee676/package_only_yanked_in_range_a_ef8ee676-1.0.0-py3-none-any.whl': 'md5:3a32c551b8d4b6c6fd7866f397f3e59e',
+      'dist/package-only-yanked-in-range-ef8ee676/package_only_yanked_in_range_a_ef8ee676-1.0.0.tar.gz': 'md5:4ea3818df33049a21533f262971f6b2d',
+      'dist/package-only-yanked-in-range-ef8ee676/package_only_yanked_in_range_ef8ee676-0.0.0.tar.gz': 'md5:f1c03d1957543fbc3af6850c6f6a9951',
+      'dist/package-yanked-specified-mixed-available-0dcba00a.yanked': '''
+        0.2.0
+        1.0.0
+  
+      ''',
+      'dist/package-yanked-specified-mixed-available-0dcba00a/package_yanked_specified_mixed_available_0dcba00a-0.0.0.tar.gz': 'md5:d0ef64c70a9655193b62ce869dd9c56b',
+      'dist/package-yanked-specified-mixed-available-0dcba00a/package_yanked_specified_mixed_available_a_0dcba00a-0.1.0-py3-none-any.whl': 'md5:682e5866aaaf372c6486f15076153798',
+      'dist/package-yanked-specified-mixed-available-0dcba00a/package_yanked_specified_mixed_available_a_0dcba00a-0.1.0.tar.gz': 'md5:cf48d9b0694987d1cd1dbaabfd6bb69b',
+      'dist/package-yanked-specified-mixed-available-0dcba00a/package_yanked_specified_mixed_available_a_0dcba00a-0.2.0-py3-none-any.whl': 'md5:e3724a84eccf26d5e263f9f1e90ded1e',
+      'dist/package-yanked-specified-mixed-available-0dcba00a/package_yanked_specified_mixed_available_a_0dcba00a-0.2.0.tar.gz': 'md5:7376a5eb36036834a7e0ac51afae0809',
+      'dist/package-yanked-specified-mixed-available-0dcba00a/package_yanked_specified_mixed_available_a_0dcba00a-0.3.0-py3-none-any.whl': 'md5:59078d3323179e7246c19909b57e1ef3',
+      'dist/package-yanked-specified-mixed-available-0dcba00a/package_yanked_specified_mixed_available_a_0dcba00a-0.3.0.tar.gz': 'md5:9ce3a7c9d0ebed0bbc33c3734a4798ad',
+      'dist/package-yanked-specified-mixed-available-0dcba00a/package_yanked_specified_mixed_available_a_0dcba00a-1.0.0-py3-none-any.whl': 'md5:3702158b197ca0334c14221f40f3a5d5',
+      'dist/package-yanked-specified-mixed-available-0dcba00a/package_yanked_specified_mixed_available_a_0dcba00a-1.0.0.tar.gz': 'md5:380e059b3db1c746e8865c5dbeb8fdcd',
+      'dist/requires-package-yanked-and-final-any-d555e202.yanked': '''
+        1.0.0
+  
+      ''',
+      'dist/requires-package-yanked-and-final-any-d555e202/requires_package_yanked_and_final_any_a_d555e202-0.1.0-py3-none-any.whl': 'md5:af332f7255ed00952b8abcc743075d75',
+      'dist/requires-package-yanked-and-final-any-d555e202/requires_package_yanked_and_final_any_a_d555e202-0.1.0.tar.gz': 'md5:7b1558ecb0f7c8e2b703d245eb556e0c',
+      'dist/requires-package-yanked-and-final-any-d555e202/requires_package_yanked_and_final_any_a_d555e202-1.0.0-py3-none-any.whl': 'md5:ded9bc55b6e07ce35f25b6879e9c0690',
+      'dist/requires-package-yanked-and-final-any-d555e202/requires_package_yanked_and_final_any_a_d555e202-1.0.0.tar.gz': 'md5:e7e7dc10ab31ad3267a28407561f03d2',
+      'dist/requires-package-yanked-and-final-any-d555e202/requires_package_yanked_and_final_any_d555e202-0.0.0.tar.gz': 'md5:ea55a44e8aefc503916705646a2b32fc',
+      'dist/transitive-package-only-yanked-bc0f1edb.yanked': '''
+        1.0.0
+  
+      ''',
+      'dist/transitive-package-only-yanked-bc0f1edb/transitive_package_only_yanked_a_bc0f1edb-0.1.0-py3-none-any.whl': 'md5:69bf5f3556152e5cad713d938ef0eca7',
+      'dist/transitive-package-only-yanked-bc0f1edb/transitive_package_only_yanked_a_bc0f1edb-0.1.0.tar.gz': 'md5:6188c9a4e74b41ff7d6b2a8d6542d552',
+      'dist/transitive-package-only-yanked-bc0f1edb/transitive_package_only_yanked_b_bc0f1edb-1.0.0-py3-none-any.whl': 'md5:2d79f67e875a37dc874ff75aa7218ea6',
+      'dist/transitive-package-only-yanked-bc0f1edb/transitive_package_only_yanked_b_bc0f1edb-1.0.0.tar.gz': 'md5:73479506add5df4bacd5e714403257d6',
+      'dist/transitive-package-only-yanked-bc0f1edb/transitive_package_only_yanked_bc0f1edb-0.0.0.tar.gz': 'md5:e5a6bc51265dc9c9edd39b9fb5ae82d0',
+      'dist/transitive-package-only-yanked-in-range-9b00baf6.yanked': '''
+        1.0.0
+  
+      ''',
+      'dist/transitive-package-only-yanked-in-range-9b00baf6/transitive_package_only_yanked_in_range_9b00baf6-0.0.0.tar.gz': 'md5:dbf7f03c62c0fbc127cedfcec469adf8',
+      'dist/transitive-package-only-yanked-in-range-9b00baf6/transitive_package_only_yanked_in_range_a_9b00baf6-0.1.0-py3-none-any.whl': 'md5:e7ea75a5be767f1626568fd6a5e4747e',
+      'dist/transitive-package-only-yanked-in-range-9b00baf6/transitive_package_only_yanked_in_range_a_9b00baf6-0.1.0.tar.gz': 'md5:9459a71a1813fbc8c273e608757f5162',
+      'dist/transitive-package-only-yanked-in-range-9b00baf6/transitive_package_only_yanked_in_range_b_9b00baf6-0.1.0-py3-none-any.whl': 'md5:e8d191f2eb8abebfb2ca5fe00a6d4089',
+      'dist/transitive-package-only-yanked-in-range-9b00baf6/transitive_package_only_yanked_in_range_b_9b00baf6-0.1.0.tar.gz': 'md5:bb1170d9caef3b65e43b2ed9bfda58c3',
+      'dist/transitive-package-only-yanked-in-range-9b00baf6/transitive_package_only_yanked_in_range_b_9b00baf6-1.0.0-py3-none-any.whl': 'md5:c7b8388dd56901cf71d669061177ed47',
+      'dist/transitive-package-only-yanked-in-range-9b00baf6/transitive_package_only_yanked_in_range_b_9b00baf6-1.0.0.tar.gz': 'md5:00bd36f5181715b5d6348b0364fe6d6f',
+      'dist/transitive-package-only-yanked-in-range-opt-in-15ceca78.yanked': '''
+        1.0.0
+  
+      ''',
+      'dist/transitive-package-only-yanked-in-range-opt-in-15ceca78/transitive_package_only_yanked_in_range_opt_in_15ceca78-0.0.0.tar.gz': 'md5:3fc38a7f3c638baa26583a96cc0785c9',
+      'dist/transitive-package-only-yanked-in-range-opt-in-15ceca78/transitive_package_only_yanked_in_range_opt_in_a_15ceca78-0.1.0-py3-none-any.whl': 'md5:0f5372c7461121d62d0e3ec6627be2ef',
+      'dist/transitive-package-only-yanked-in-range-opt-in-15ceca78/transitive_package_only_yanked_in_range_opt_in_a_15ceca78-0.1.0.tar.gz': 'md5:9c407b2785c304a4853b1f3935a22b72',
+      'dist/transitive-package-only-yanked-in-range-opt-in-15ceca78/transitive_package_only_yanked_in_range_opt_in_b_15ceca78-0.1.0-py3-none-any.whl': 'md5:703dfc7ea2e661d31e988b1a885b81ff',
+      'dist/transitive-package-only-yanked-in-range-opt-in-15ceca78/transitive_package_only_yanked_in_range_opt_in_b_15ceca78-0.1.0.tar.gz': 'md5:ba200cbda1b47f528e62313d1d297326',
+      'dist/transitive-package-only-yanked-in-range-opt-in-15ceca78/transitive_package_only_yanked_in_range_opt_in_b_15ceca78-1.0.0-py3-none-any.whl': 'md5:d4cc8aaa7801758e40f36a248bc49fa6',
+      'dist/transitive-package-only-yanked-in-range-opt-in-15ceca78/transitive_package_only_yanked_in_range_opt_in_b_15ceca78-1.0.0.tar.gz': 'md5:dee663b1ea9e97e6d90d20686859cd7e',
+      'dist/transitive-yanked-and-unyanked-dependency-17d6f9ae.yanked': '''
+        2.0.0
+  
+      ''',
+      'dist/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive_yanked_and_unyanked_dependency_17d6f9ae-0.0.0.tar.gz': 'md5:7038bdfe8eb5e2bf05d3702842b04c02',
+      'dist/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive_yanked_and_unyanked_dependency_a_17d6f9ae-1.0.0-py3-none-any.whl': 'md5:bb080f7bcd9b4e8bf1becbe34af27180',
+      'dist/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive_yanked_and_unyanked_dependency_a_17d6f9ae-1.0.0.tar.gz': 'md5:8b6f8e2389532ce1c94db9c9867c9305',
+      'dist/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive_yanked_and_unyanked_dependency_b_17d6f9ae-1.0.0-py3-none-any.whl': 'md5:272be474f02166cbc808d207ad630bd3',
+      'dist/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive_yanked_and_unyanked_dependency_b_17d6f9ae-1.0.0.tar.gz': 'md5:73bdb625d195036a032c2cea527e1abd',
+      'dist/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive_yanked_and_unyanked_dependency_c_17d6f9ae-1.0.0-py3-none-any.whl': 'md5:7199938f507e1475ffbc2047e66a5db1',
+      'dist/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive_yanked_and_unyanked_dependency_c_17d6f9ae-1.0.0.tar.gz': 'md5:967ee0b9b03f74ae0805d7a3b43dd1dc',
+      'dist/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive_yanked_and_unyanked_dependency_c_17d6f9ae-2.0.0-py3-none-any.whl': 'md5:a2f2f25ca095fd83319cf9069b269146',
+      'dist/transitive-yanked-and-unyanked-dependency-17d6f9ae/transitive_yanked_and_unyanked_dependency_c_17d6f9ae-2.0.0.tar.gz': 'md5:624388614a73266c911d167ca9a3d63e',
+      'dist/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0.yanked': '''
+        2.0.0
+  
+      ''',
+      'dist/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive_yanked_and_unyanked_dependency_opt_in_5c3bdfe0-0.0.0.tar.gz': 'md5:6392c76d65515f319f8b2a76fd2fbc24',
+      'dist/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive_yanked_and_unyanked_dependency_opt_in_a_5c3bdfe0-1.0.0-py3-none-any.whl': 'md5:0144594cb1cdc24130f51094f30ef45a',
+      'dist/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive_yanked_and_unyanked_dependency_opt_in_a_5c3bdfe0-1.0.0.tar.gz': 'md5:843732b0da2e0961184b306c873f34e0',
+      'dist/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive_yanked_and_unyanked_dependency_opt_in_b_5c3bdfe0-1.0.0-py3-none-any.whl': 'md5:1d56fe35b57223f1aaf73cb21aedfa65',
+      'dist/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive_yanked_and_unyanked_dependency_opt_in_b_5c3bdfe0-1.0.0.tar.gz': 'md5:fb8a7c75df89623773a288aaef859fdf',
+      'dist/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0-1.0.0-py3-none-any.whl': 'md5:acd0b60f4ca57887635a9c783f45566c',
+      'dist/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0-1.0.0.tar.gz': 'md5:db284433b04eaa2e014df884e0aff417',
+      'dist/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0-2.0.0-py3-none-any.whl': 'md5:65df244fa46cff8e755ae140a3422304',
+      'dist/transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0/transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0-2.0.0.tar.gz': 'md5:5c9e30d2a5cdf04da3a6e743fda2f78e',
+      'tree': '''
+        test_build_all_scenarios_yanke0
+        ├── build
+        │   ├── package-only-yanked-5f5d3a41
+        │   │   ├── package-only-yanked-5f5d3a41-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_only_yanked_5f5d3a41
+        │   │   │           └── __init__.py
+        │   │   └── package-only-yanked-a-5f5d3a41-1.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── package_only_yanked_a_5f5d3a41
+        │   │               └── __init__.py
+        │   ├── package-only-yanked-in-range-ef8ee676
+        │   │   ├── package-only-yanked-in-range-a-ef8ee676-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_only_yanked_in_range_a_ef8ee676
+        │   │   │           └── __init__.py
+        │   │   ├── package-only-yanked-in-range-a-ef8ee676-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_only_yanked_in_range_a_ef8ee676
+        │   │   │           └── __init__.py
+        │   │   └── package-only-yanked-in-range-ef8ee676-0.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── package_only_yanked_in_range_ef8ee676
+        │   │               └── __init__.py
+        │   ├── package-yanked-specified-mixed-available-0dcba00a
+        │   │   ├── package-yanked-specified-mixed-available-0dcba00a-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_yanked_specified_mixed_available_0dcba00a
+        │   │   │           └── __init__.py
+        │   │   ├── package-yanked-specified-mixed-available-a-0dcba00a-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_yanked_specified_mixed_available_a_0dcba00a
+        │   │   │           └── __init__.py
+        │   │   ├── package-yanked-specified-mixed-available-a-0dcba00a-0.2.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_yanked_specified_mixed_available_a_0dcba00a
+        │   │   │           └── __init__.py
+        │   │   ├── package-yanked-specified-mixed-available-a-0dcba00a-0.3.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_yanked_specified_mixed_available_a_0dcba00a
+        │   │   │           └── __init__.py
+        │   │   └── package-yanked-specified-mixed-available-a-0dcba00a-1.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── package_yanked_specified_mixed_available_a_0dcba00a
+        │   │               └── __init__.py
+        │   ├── requires-package-yanked-and-final-any-d555e202
+        │   │   ├── requires-package-yanked-and-final-any-a-d555e202-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_yanked_and_final_any_a_d555e202
+        │   │   │           └── __init__.py
+        │   │   ├── requires-package-yanked-and-final-any-a-d555e202-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── requires_package_yanked_and_final_any_a_d555e202
+        │   │   │           └── __init__.py
+        │   │   └── requires-package-yanked-and-final-any-d555e202-0.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── requires_package_yanked_and_final_any_d555e202
+        │   │               └── __init__.py
+        │   ├── transitive-package-only-yanked-bc0f1edb
+        │   │   ├── transitive-package-only-yanked-a-bc0f1edb-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── transitive_package_only_yanked_a_bc0f1edb
+        │   │   │           └── __init__.py
+        │   │   ├── transitive-package-only-yanked-b-bc0f1edb-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── transitive_package_only_yanked_b_bc0f1edb
+        │   │   │           └── __init__.py
+        │   │   └── transitive-package-only-yanked-bc0f1edb-0.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── transitive_package_only_yanked_bc0f1edb
+        │   │               └── __init__.py
+        │   ├── transitive-package-only-yanked-in-range-9b00baf6
+        │   │   ├── transitive-package-only-yanked-in-range-9b00baf6-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── transitive_package_only_yanked_in_range_9b00baf6
+        │   │   │           └── __init__.py
+        │   │   ├── transitive-package-only-yanked-in-range-a-9b00baf6-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── transitive_package_only_yanked_in_range_a_9b00baf6
+        │   │   │           └── __init__.py
+        │   │   ├── transitive-package-only-yanked-in-range-b-9b00baf6-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── transitive_package_only_yanked_in_range_b_9b00baf6
+        │   │   │           └── __init__.py
+        │   │   └── transitive-package-only-yanked-in-range-b-9b00baf6-1.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── transitive_package_only_yanked_in_range_b_9b00baf6
+        │   │               └── __init__.py
+        │   ├── transitive-package-only-yanked-in-range-opt-in-15ceca78
+        │   │   ├── transitive-package-only-yanked-in-range-opt-in-15ceca78-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── transitive_package_only_yanked_in_range_opt_in_15ceca78
+        │   │   │           └── __init__.py
+        │   │   ├── transitive-package-only-yanked-in-range-opt-in-a-15ceca78-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── transitive_package_only_yanked_in_range_opt_in_a_15ceca78
+        │   │   │           └── __init__.py
+        │   │   ├── transitive-package-only-yanked-in-range-opt-in-b-15ceca78-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── transitive_package_only_yanked_in_range_opt_in_b_15ceca78
+        │   │   │           └── __init__.py
+        │   │   └── transitive-package-only-yanked-in-range-opt-in-b-15ceca78-1.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── transitive_package_only_yanked_in_range_opt_in_b_15ceca78
+        │   │               └── __init__.py
+        │   ├── transitive-yanked-and-unyanked-dependency-17d6f9ae
+        │   │   ├── transitive-yanked-and-unyanked-dependency-17d6f9ae-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── transitive_yanked_and_unyanked_dependency_17d6f9ae
+        │   │   │           └── __init__.py
+        │   │   ├── transitive-yanked-and-unyanked-dependency-a-17d6f9ae-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── transitive_yanked_and_unyanked_dependency_a_17d6f9ae
+        │   │   │           └── __init__.py
+        │   │   ├── transitive-yanked-and-unyanked-dependency-b-17d6f9ae-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── transitive_yanked_and_unyanked_dependency_b_17d6f9ae
+        │   │   │           └── __init__.py
+        │   │   ├── transitive-yanked-and-unyanked-dependency-c-17d6f9ae-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── transitive_yanked_and_unyanked_dependency_c_17d6f9ae
+        │   │   │           └── __init__.py
+        │   │   └── transitive-yanked-and-unyanked-dependency-c-17d6f9ae-2.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── transitive_yanked_and_unyanked_dependency_c_17d6f9ae
+        │   │               └── __init__.py
+        │   └── transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0
+        │       ├── transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0-0.0.0
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── transitive_yanked_and_unyanked_dependency_opt_in_5c3bdfe0
+        │       │           └── __init__.py
+        │       ├── transitive-yanked-and-unyanked-dependency-opt-in-a-5c3bdfe0-1.0.0
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── transitive_yanked_and_unyanked_dependency_opt_in_a_5c3bdfe0
+        │       │           └── __init__.py
+        │       ├── transitive-yanked-and-unyanked-dependency-opt-in-b-5c3bdfe0-1.0.0
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── transitive_yanked_and_unyanked_dependency_opt_in_b_5c3bdfe0
+        │       │           └── __init__.py
+        │       ├── transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0-1.0.0
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0
+        │       │           └── __init__.py
+        │       └── transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0-2.0.0
+        │           ├── pyproject.toml
+        │           └── src
+        │               └── transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0
+        │                   └── __init__.py
+        └── dist
+            ├── package-only-yanked-5f5d3a41
+            │   ├── package_only_yanked_5f5d3a41-0.0.0.tar.gz
+            │   ├── package_only_yanked_a_5f5d3a41-1.0.0-py3-none-any.whl
+            │   └── package_only_yanked_a_5f5d3a41-1.0.0.tar.gz
+            ├── package-only-yanked-5f5d3a41.yanked
+            ├── package-only-yanked-in-range-ef8ee676
+            │   ├── package_only_yanked_in_range_a_ef8ee676-0.1.0-py3-none-any.whl
+            │   ├── package_only_yanked_in_range_a_ef8ee676-0.1.0.tar.gz
+            │   ├── package_only_yanked_in_range_a_ef8ee676-1.0.0-py3-none-any.whl
+            │   ├── package_only_yanked_in_range_a_ef8ee676-1.0.0.tar.gz
+            │   └── package_only_yanked_in_range_ef8ee676-0.0.0.tar.gz
+            ├── package-only-yanked-in-range-ef8ee676.yanked
+            ├── package-yanked-specified-mixed-available-0dcba00a
+            │   ├── package_yanked_specified_mixed_available_0dcba00a-0.0.0.tar.gz
+            │   ├── package_yanked_specified_mixed_available_a_0dcba00a-0.1.0-py3-none-any.whl
+            │   ├── package_yanked_specified_mixed_available_a_0dcba00a-0.1.0.tar.gz
+            │   ├── package_yanked_specified_mixed_available_a_0dcba00a-0.2.0-py3-none-any.whl
+            │   ├── package_yanked_specified_mixed_available_a_0dcba00a-0.2.0.tar.gz
+            │   ├── package_yanked_specified_mixed_available_a_0dcba00a-0.3.0-py3-none-any.whl
+            │   ├── package_yanked_specified_mixed_available_a_0dcba00a-0.3.0.tar.gz
+            │   ├── package_yanked_specified_mixed_available_a_0dcba00a-1.0.0-py3-none-any.whl
+            │   └── package_yanked_specified_mixed_available_a_0dcba00a-1.0.0.tar.gz
+            ├── package-yanked-specified-mixed-available-0dcba00a.yanked
+            ├── requires-package-yanked-and-final-any-d555e202
+            │   ├── requires_package_yanked_and_final_any_a_d555e202-0.1.0-py3-none-any.whl
+            │   ├── requires_package_yanked_and_final_any_a_d555e202-0.1.0.tar.gz
+            │   ├── requires_package_yanked_and_final_any_a_d555e202-1.0.0-py3-none-any.whl
+            │   ├── requires_package_yanked_and_final_any_a_d555e202-1.0.0.tar.gz
+            │   └── requires_package_yanked_and_final_any_d555e202-0.0.0.tar.gz
+            ├── requires-package-yanked-and-final-any-d555e202.yanked
+            ├── transitive-package-only-yanked-bc0f1edb
+            │   ├── transitive_package_only_yanked_a_bc0f1edb-0.1.0-py3-none-any.whl
+            │   ├── transitive_package_only_yanked_a_bc0f1edb-0.1.0.tar.gz
+            │   ├── transitive_package_only_yanked_b_bc0f1edb-1.0.0-py3-none-any.whl
+            │   ├── transitive_package_only_yanked_b_bc0f1edb-1.0.0.tar.gz
+            │   └── transitive_package_only_yanked_bc0f1edb-0.0.0.tar.gz
+            ├── transitive-package-only-yanked-bc0f1edb.yanked
+            ├── transitive-package-only-yanked-in-range-9b00baf6
+            │   ├── transitive_package_only_yanked_in_range_9b00baf6-0.0.0.tar.gz
+            │   ├── transitive_package_only_yanked_in_range_a_9b00baf6-0.1.0-py3-none-any.whl
+            │   ├── transitive_package_only_yanked_in_range_a_9b00baf6-0.1.0.tar.gz
+            │   ├── transitive_package_only_yanked_in_range_b_9b00baf6-0.1.0-py3-none-any.whl
+            │   ├── transitive_package_only_yanked_in_range_b_9b00baf6-0.1.0.tar.gz
+            │   ├── transitive_package_only_yanked_in_range_b_9b00baf6-1.0.0-py3-none-any.whl
+            │   └── transitive_package_only_yanked_in_range_b_9b00baf6-1.0.0.tar.gz
+            ├── transitive-package-only-yanked-in-range-9b00baf6.yanked
+            ├── transitive-package-only-yanked-in-range-opt-in-15ceca78
+            │   ├── transitive_package_only_yanked_in_range_opt_in_15ceca78-0.0.0.tar.gz
+            │   ├── transitive_package_only_yanked_in_range_opt_in_a_15ceca78-0.1.0-py3-none-any.whl
+            │   ├── transitive_package_only_yanked_in_range_opt_in_a_15ceca78-0.1.0.tar.gz
+            │   ├── transitive_package_only_yanked_in_range_opt_in_b_15ceca78-0.1.0-py3-none-any.whl
+            │   ├── transitive_package_only_yanked_in_range_opt_in_b_15ceca78-0.1.0.tar.gz
+            │   ├── transitive_package_only_yanked_in_range_opt_in_b_15ceca78-1.0.0-py3-none-any.whl
+            │   └── transitive_package_only_yanked_in_range_opt_in_b_15ceca78-1.0.0.tar.gz
+            ├── transitive-package-only-yanked-in-range-opt-in-15ceca78.yanked
+            ├── transitive-yanked-and-unyanked-dependency-17d6f9ae
+            │   ├── transitive_yanked_and_unyanked_dependency_17d6f9ae-0.0.0.tar.gz
+            │   ├── transitive_yanked_and_unyanked_dependency_a_17d6f9ae-1.0.0-py3-none-any.whl
+            │   ├── transitive_yanked_and_unyanked_dependency_a_17d6f9ae-1.0.0.tar.gz
+            │   ├── transitive_yanked_and_unyanked_dependency_b_17d6f9ae-1.0.0-py3-none-any.whl
+            │   ├── transitive_yanked_and_unyanked_dependency_b_17d6f9ae-1.0.0.tar.gz
+            │   ├── transitive_yanked_and_unyanked_dependency_c_17d6f9ae-1.0.0-py3-none-any.whl
+            │   ├── transitive_yanked_and_unyanked_dependency_c_17d6f9ae-1.0.0.tar.gz
+            │   ├── transitive_yanked_and_unyanked_dependency_c_17d6f9ae-2.0.0-py3-none-any.whl
+            │   └── transitive_yanked_and_unyanked_dependency_c_17d6f9ae-2.0.0.tar.gz
+            ├── transitive-yanked-and-unyanked-dependency-17d6f9ae.yanked
+            ├── transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0
+            │   ├── transitive_yanked_and_unyanked_dependency_opt_in_5c3bdfe0-0.0.0.tar.gz
+            │   ├── transitive_yanked_and_unyanked_dependency_opt_in_a_5c3bdfe0-1.0.0-py3-none-any.whl
+            │   ├── transitive_yanked_and_unyanked_dependency_opt_in_a_5c3bdfe0-1.0.0.tar.gz
+            │   ├── transitive_yanked_and_unyanked_dependency_opt_in_b_5c3bdfe0-1.0.0-py3-none-any.whl
+            │   ├── transitive_yanked_and_unyanked_dependency_opt_in_b_5c3bdfe0-1.0.0.tar.gz
+            │   ├── transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0-1.0.0-py3-none-any.whl
+            │   ├── transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0-1.0.0.tar.gz
+            │   ├── transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0-2.0.0-py3-none-any.whl
+            │   └── transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0-2.0.0.tar.gz
+            └── transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0.yanked
+        
+        122 directories, 136 files
+  
+      ''',
+    }),
+    'stderr': '<not included>',
+    'stdout': '''
+      package-only-yanked-5f5d3a41
+      package-only-yanked-in-range-ef8ee676
+      package-yanked-specified-mixed-available-0dcba00a
+      requires-package-yanked-and-final-any-d555e202
+      transitive-package-only-yanked-bc0f1edb
+      transitive-package-only-yanked-in-range-9b00baf6
+      transitive-package-only-yanked-in-range-opt-in-15ceca78
+      transitive-yanked-and-unyanked-dependency-17d6f9ae
+      transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0
+  
+    ''',
+  })
+# ---
 # name: test_view_all_scenarios[does-not-exist]
   dict({
     'exit_code': 0,
@@ -6325,6 +7257,150 @@
       │       └── satisfied by a-1.0.0
       └── a
           └── a-1.0.0
+      
+  
+    ''',
+  })
+# ---
+# name: test_view_all_scenarios[yanked]
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'tree': '''
+        test_view_all_scenarios_yanked0
+        
+        0 directories
+  
+      ''',
+    }),
+    'stderr': '',
+    'stdout': '''
+      package-only-yanked-5f5d3a41
+      ├── environment
+      │   └── python3.8
+      ├── root
+      │   └── requires a
+      │       └── unsatisfied: no matching version
+      └── a
+          └── a-1.0.0 (yanked)
+      
+      package-only-yanked-in-range-ef8ee676
+      ├── environment
+      │   └── python3.8
+      ├── root
+      │   └── requires a>0.1.0
+      │       └── unsatisfied: no matching version
+      └── a
+          ├── a-0.1.0
+          └── a-1.0.0 (yanked)
+      
+      requires-package-yanked-and-final-any-d555e202
+      ├── environment
+      │   └── python3.8
+      ├── root
+      │   └── requires a
+      │       └── satisfied by a-0.1.0
+      └── a
+          ├── a-0.1.0
+          └── a-1.0.0 (yanked)
+      
+      package-yanked-specified-mixed-available-0dcba00a
+      ├── environment
+      │   └── python3.8
+      ├── root
+      │   └── requires a>=0.1.0
+      │       ├── satisfied by a-0.1.0
+      │       └── satisfied by a-0.3.0
+      └── a
+          ├── a-0.1.0
+          ├── a-0.2.0 (yanked)
+          ├── a-0.3.0
+          └── a-1.0.0 (yanked)
+      
+      transitive-package-only-yanked-bc0f1edb
+      ├── environment
+      │   └── python3.8
+      ├── root
+      │   └── requires a
+      │       └── satisfied by a-0.1.0
+      ├── a
+      │   └── a-0.1.0
+      │       └── requires b
+      │           └── unsatisfied: no matching version
+      └── b
+          └── b-1.0.0 (yanked)
+      
+      transitive-package-only-yanked-in-range-9b00baf6
+      ├── environment
+      │   └── python3.8
+      ├── root
+      │   └── requires a
+      │       └── satisfied by a-0.1.0
+      ├── a
+      │   └── a-0.1.0
+      │       └── requires b>0.1
+      │           └── unsatisfied: no matching version
+      └── b
+          ├── b-0.1.0
+          └── b-1.0.0 (yanked)
+      
+      transitive-package-only-yanked-in-range-opt-in-15ceca78
+      ├── environment
+      │   └── python3.8
+      ├── root
+      │   ├── requires a
+      │   │   └── satisfied by a-0.1.0
+      │   └── requires b==1.0.0
+      │       └── unsatisfied: no matching version
+      ├── a
+      │   └── a-0.1.0
+      │       └── requires b>0.1
+      │           └── unsatisfied: no matching version
+      └── b
+          ├── b-0.1.0
+          └── b-1.0.0 (yanked)
+      
+      transitive-yanked-and-unyanked-dependency-17d6f9ae
+      ├── environment
+      │   └── python3.8
+      ├── root
+      │   ├── requires a
+      │   │   └── satisfied by a-1.0.0
+      │   └── requires b
+      │       └── satisfied by b-1.0.0
+      ├── a
+      │   └── a-1.0.0
+      │       └── requires c==2.0.0
+      │           └── unsatisfied: no matching version
+      ├── b
+      │   └── b-1.0.0
+      │       └── requires c<=3.0.0,>=1.0.0
+      │           └── satisfied by c-1.0.0
+      └── c
+          ├── c-1.0.0
+          └── c-2.0.0 (yanked)
+      
+      transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0
+      ├── environment
+      │   └── python3.8
+      ├── root
+      │   ├── requires a
+      │   │   └── satisfied by a-1.0.0
+      │   ├── requires b
+      │   │   └── satisfied by b-1.0.0
+      │   └── requires c==2.0.0
+      │       └── unsatisfied: no matching version
+      ├── a
+      │   └── a-1.0.0
+      │       └── requires c==2.0.0
+      │           └── unsatisfied: no matching version
+      ├── b
+      │   └── b-1.0.0
+      │       └── requires c<=3.0.0,>=1.0.0
+      │           └── satisfied by c-1.0.0
+      └── c
+          ├── c-1.0.0
+          └── c-2.0.0 (yanked)
       
   
     ''',

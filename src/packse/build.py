@@ -233,6 +233,12 @@ def build_scenario_package(
             logger.debug("Linked distribution to %s", shared_path.relative_to(work_dir))
             shared_path.hardlink_to(dist)
 
+        if package_version.yanked:
+            with dist_destination.with_suffix(".yanked").open("a+") as yanked:
+                yanked.write(version)
+                yanked.write("\n")
+            logger.info("Marked %s-%s as yanked", package_name, version)
+
 
 def build_package_distributions(
     template_config: TemplateConfig, package_version: PackageMetadata, target: Path

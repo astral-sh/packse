@@ -91,10 +91,22 @@
       only-wheels-08df4319
       no-wheels-0a9090ba
       no-wheels-with-matching-platform-b595b358
+<<<<<<< HEAD
       no-wheels-no-build-d5567080
       only-wheels-no-binary-3850ba71
       no-build-e0451b4c
       no-binary-5036ee47
+=======
+      package-only-yanked-5f5d3a41
+      package-only-yanked-in-range-ef8ee676
+      requires-package-yanked-and-final-any-d555e202
+      package-yanked-specified-mixed-available-0dcba00a
+      transitive-package-only-yanked-bc0f1edb
+      transitive-package-only-yanked-in-range-9b00baf6
+      transitive-package-only-yanked-in-range-opt-in-15ceca78
+      transitive-yanked-and-unyanked-dependency-17d6f9ae
+      transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0
+>>>>>>> 348b8d5 (Add yanked package support)
   
     ''',
   })
@@ -167,10 +179,23 @@
           only-wheels-08df4319
           no-wheels-0a9090ba
           no-wheels-with-matching-platform-b595b358
+<<<<<<< HEAD
           no-wheels-no-build-d5567080
           only-wheels-no-binary-3850ba71
           no-build-e0451b4c
           no-binary-5036ee47
+=======
+      scenarios/yanked.json
+          package-only-yanked-5f5d3a41
+          package-only-yanked-in-range-ef8ee676
+          requires-package-yanked-and-final-any-d555e202
+          package-yanked-specified-mixed-available-0dcba00a
+          transitive-package-only-yanked-bc0f1edb
+          transitive-package-only-yanked-in-range-9b00baf6
+          transitive-package-only-yanked-in-range-opt-in-15ceca78
+          transitive-yanked-and-unyanked-dependency-17d6f9ae
+          transitive-yanked-and-unyanked-dependency-opt-in-5c3bdfe0
+>>>>>>> 348b8d5 (Add yanked package support)
   
     ''',
   })
@@ -243,10 +268,23 @@
           only-wheels
           no-wheels
           no-wheels-with-matching-platform
+<<<<<<< HEAD
           no-wheels-no-build
           only-wheels-no-binary
           no-build
           no-binary
+=======
+      scenarios/yanked.json
+          package-only-yanked
+          package-only-yanked-in-range
+          requires-package-yanked-and-final-any
+          package-yanked-specified-mixed-available
+          transitive-package-only-yanked
+          transitive-package-only-yanked-in-range
+          transitive-package-only-yanked-in-range-opt-in
+          transitive-yanked-and-unyanked-dependency
+          transitive-yanked-and-unyanked-dependency-opt-in
+>>>>>>> 348b8d5 (Add yanked package support)
   
     ''',
   })
@@ -329,10 +367,23 @@
           08df4319
           0a9090ba
           b595b358
+<<<<<<< HEAD
           d5567080
           3850ba71
           e0451b4c
           5036ee47
+=======
+      scenarios/yanked.json
+          5f5d3a41
+          ef8ee676
+          d555e202
+          0dcba00a
+          bc0f1edb
+          9b00baf6
+          15ceca78
+          17d6f9ae
+          5c3bdfe0
+>>>>>>> 348b8d5 (Add yanked package support)
   
     ''',
   })
