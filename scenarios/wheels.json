@@ -78,7 +78,7 @@
                 "versions": {
                     "1.0.0": {
                         "wheel_tags": [
-                            "unknown-tag"
+                            "unknown-unknown-unknown"
                         ]
                     }
                 }
@@ -101,7 +101,7 @@
                 "versions": {
                     "1.0.0": {
                         "wheel_tags": [
-                            "unknown-tag"
+                            "unknown-unknown-unknown"
                         ],
                         "sdist": false
                     }

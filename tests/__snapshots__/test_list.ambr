@@ -90,8 +90,8 @@
       specific-tag-and-default-8f7a81f1
       only-wheels-a874f41e
       no-wheels-0278f343
-      no-wheels-with-matching-platform-6c3da201
-      no-sdist-no-wheels-with-matching-platform-b823ef84
+      no-wheels-with-matching-platform-2733e862
+      no-sdist-no-wheels-with-matching-platform-ff676544
       no-wheels-no-build-662cbd94
       only-wheels-no-binary-dd137625
       no-build-9ff1e173
@@ -176,8 +176,8 @@
           specific-tag-and-default-8f7a81f1
           only-wheels-a874f41e
           no-wheels-0278f343
-          no-wheels-with-matching-platform-6c3da201
-          no-sdist-no-wheels-with-matching-platform-b823ef84
+          no-wheels-with-matching-platform-2733e862
+          no-sdist-no-wheels-with-matching-platform-ff676544
           no-wheels-no-build-662cbd94
           only-wheels-no-binary-dd137625
           no-build-9ff1e173
@@ -360,8 +360,8 @@
           8f7a81f1
           a874f41e
           0278f343
-          6c3da201
-          b823ef84
+          2733e862
+          ff676544
           662cbd94
           dd137625
           9ff1e173
