@@ -45,7 +45,7 @@ class Requirement(packaging.requirements.Requirement):
         return new
 
 
-class PackageMetadata(msgspec.Struct):
+class PackageMetadata(msgspec.Struct, forbid_unknown_fields=True):
     """
     Metadata for a single version of a package.
     """
@@ -86,7 +86,7 @@ class PackageMetadata(msgspec.Struct):
         return json.loads(enc.encode(self))
 
 
-class RootPackageMetadata(msgspec.Struct):
+class RootPackageMetadata(msgspec.Struct, forbid_unknown_fields=True):
     requires_python: str | None = ">=3.8"
     requires: list[Requirement] = []
 
@@ -101,7 +101,7 @@ class RootPackageMetadata(msgspec.Struct):
         return hasher.hexdigest()
 
 
-class ResolverOptions(msgspec.Struct):
+class ResolverOptions(msgspec.Struct, forbid_unknown_fields=True):
     python: str | None = None
     """
     An optional Python version override.
@@ -143,7 +143,7 @@ class ResolverOptions(msgspec.Struct):
         return hasher.hexdigest()
 
 
-class EnvironmentMetadata(msgspec.Struct):
+class EnvironmentMetadata(msgspec.Struct, forbid_unknown_fields=True):
     python: str = "3.8"
     """
     The active Python version.
@@ -167,7 +167,7 @@ class EnvironmentMetadata(msgspec.Struct):
         return hasher.hexdigest()
 
 
-class Package(msgspec.Struct):
+class Package(msgspec.Struct, forbid_unknown_fields=True):
     versions: dict[PackageVersion, PackageMetadata]
 
     def hash(self) -> str:
@@ -181,7 +181,7 @@ class Package(msgspec.Struct):
         return hasher.hexdigest()
 
 
-class Expected(msgspec.Struct):
+class Expected(msgspec.Struct, forbid_unknown_fields=True):
     """
     The expected outcome of a scenario.
     """
@@ -217,7 +217,7 @@ class Expected(msgspec.Struct):
         return hasher.hexdigest()
 
 
-class Scenario(msgspec.Struct):
+class Scenario(msgspec.Struct, forbid_unknown_fields=True):
     name: str
     """
     The name of the scenario.
