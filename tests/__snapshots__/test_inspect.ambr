@@ -5877,7 +5877,7 @@
             "name": "no-wheels-with-matching-platform",
             "packages": [
               {
-                "name": "no-wheels-with-matching-platform-a-0c9f8397",
+                "name": "no-wheels-with-matching-platform-a-6c3da201",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -5886,7 +5886,9 @@
                     "sdist": true,
                     "wheel": true,
                     "yanked": false,
-                    "wheel_tags": [],
+                    "wheel_tags": [
+                      "unknown-tag"
+                    ],
                     "description": "",
                     "version": "1.0.0"
                   }
@@ -5897,9 +5899,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "no-wheels-with-matching-platform-a-0c9f8397",
-                  "name": "no-wheels-with-matching-platform-a-0c9f8397",
-                  "module_name": "no_wheels_with_matching_platform_a_0c9f8397"
+                  "requirement": "no-wheels-with-matching-platform-a-6c3da201",
+                  "name": "no-wheels-with-matching-platform-a-6c3da201",
+                  "module_name": "no_wheels_with_matching_platform_a_6c3da201"
                 }
               ]
             },
@@ -5921,7 +5923,7 @@
             "template": "simple",
             "description": "No wheels with valid tags are available, just source distributions.",
             "source": "[PWD]/scenarios/wheels.json",
-            "version": "0c9f8397",
+            "version": "6c3da201",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -5937,7 +5939,7 @@
             "name": "no-sdist-no-wheels-with-matching-platform",
             "packages": [
               {
-                "name": "no-sdist-no-wheels-with-matching-platform-a-e8c8850f",
+                "name": "no-sdist-no-wheels-with-matching-platform-a-b823ef84",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -5946,7 +5948,9 @@
                     "sdist": false,
                     "wheel": true,
                     "yanked": false,
-                    "wheel_tags": [],
+                    "wheel_tags": [
+                      "unknown-tag"
+                    ],
                     "description": "",
                     "version": "1.0.0"
                   }
@@ -5957,9 +5961,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "no-sdist-no-wheels-with-matching-platform-a-e8c8850f",
-                  "name": "no-sdist-no-wheels-with-matching-platform-a-e8c8850f",
-                  "module_name": "no_sdist_no_wheels_with_matching_platform_a_e8c8850f"
+                  "requirement": "no-sdist-no-wheels-with-matching-platform-a-b823ef84",
+                  "name": "no-sdist-no-wheels-with-matching-platform-a-b823ef84",
+                  "module_name": "no_sdist_no_wheels_with_matching_platform_a_b823ef84"
                 }
               ]
             },
@@ -5981,7 +5985,7 @@
             "template": "simple",
             "description": "No wheels with matching tags are available, nor are any source distributions available",
             "source": "[PWD]/scenarios/wheels.json",
-            "version": "e8c8850f",
+            "version": "b823ef84",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
