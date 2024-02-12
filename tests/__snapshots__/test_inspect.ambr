@@ -5998,6 +5998,130 @@
             "module_name": "no_sdist_no_wheels_with_matching_platform"
           },
           {
+            "name": "no-sdist-no-wheels-with-matching-python",
+            "packages": [
+              {
+                "name": "no-sdist-no-wheels-with-matching-python-a-40fe677d",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": false,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [
+                      "jy27-none-any"
+                    ],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "no-sdist-no-wheels-with-matching-python-a-40fe677d",
+                  "name": "no-sdist-no-wheels-with-matching-python-a-40fe677d",
+                  "module_name": "no_sdist_no_wheels_with_matching_python_a_40fe677d"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": [],
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
+            "template": "simple",
+            "description": "No wheels with matching Python tags are available, nor are any source distributions available",
+            "source": "[PWD]/scenarios/wheels.json",
+            "version": "40fe677d",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0"
+            ],
+            "module_name": "no_sdist_no_wheels_with_matching_python"
+          },
+          {
+            "name": "no-sdist-no-wheels-with-matching-abi",
+            "packages": [
+              {
+                "name": "no-sdist-no-wheels-with-matching-abi-a-8727a9b9",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": false,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [
+                      "py3-MMMMMM-any"
+                    ],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "no-sdist-no-wheels-with-matching-abi-a-8727a9b9",
+                  "name": "no-sdist-no-wheels-with-matching-abi-a-8727a9b9",
+                  "module_name": "no_sdist_no_wheels_with_matching_abi_a_8727a9b9"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": [],
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
+            "template": "simple",
+            "description": "No wheels with matching ABI tags are available, nor are any source distributions available",
+            "source": "[PWD]/scenarios/wheels.json",
+            "version": "8727a9b9",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0"
+            ],
+            "module_name": "no_sdist_no_wheels_with_matching_abi"
+          },
+          {
             "name": "no-wheels-no-build",
             "packages": [
               {

@@ -92,6 +92,8 @@
       no-wheels-0278f343
       no-wheels-with-matching-platform-f1a1f15c
       no-sdist-no-wheels-with-matching-platform-af6bcec1
+      no-sdist-no-wheels-with-matching-python-40fe677d
+      no-sdist-no-wheels-with-matching-abi-8727a9b9
       no-wheels-no-build-662cbd94
       only-wheels-no-binary-dd137625
       no-build-9ff1e173
@@ -178,6 +180,8 @@
           no-wheels-0278f343
           no-wheels-with-matching-platform-f1a1f15c
           no-sdist-no-wheels-with-matching-platform-af6bcec1
+          no-sdist-no-wheels-with-matching-python-40fe677d
+          no-sdist-no-wheels-with-matching-abi-8727a9b9
           no-wheels-no-build-662cbd94
           only-wheels-no-binary-dd137625
           no-build-9ff1e173
@@ -265,6 +269,8 @@
           no-wheels
           no-wheels-with-matching-platform
           no-sdist-no-wheels-with-matching-platform
+          no-sdist-no-wheels-with-matching-python
+          no-sdist-no-wheels-with-matching-abi
           no-wheels-no-build
           only-wheels-no-binary
           no-build
@@ -362,6 +368,8 @@
           0278f343
           f1a1f15c
           af6bcec1
+          40fe677d
+          8727a9b9
           662cbd94
           dd137625
           9ff1e173
