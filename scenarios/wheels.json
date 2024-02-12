@@ -87,5 +87,107 @@
         "expected": {
             "satisfiable": true
         }
+    },
+    {
+        "name": "no-wheels-no-build",
+        "description": "No wheels are available, only source distributions but the user has disabled builds.",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "resolver_options": {
+            "no_build": [
+                "a"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "wheel": false
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": false
+        }
+    },
+    {
+        "name": "only-wheels-no-binary",
+        "description": "No source distributions are available, only wheels but the user has disabled using pre-built binaries.",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "resolver_options": {
+            "no_binary": [
+                "a"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "sdist": false
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": false
+        }
+    },
+    {
+        "name": "no-build",
+        "description": "Both wheels and source distributions are available, and the user has disabled builds.",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "resolver_options": {
+            "no_build": [
+                "a"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "explanation": "The wheel should be used for install"
+        }
+    },
+    {
+        "name": "no-binary",
+        "description": "Both wheels and source distributions are available, and the user has disabled binaries.",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "resolver_options": {
+            "no_binary": [
+                "a"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "explanation": "The source distribution should be used for install"
+        }
     }
 ]

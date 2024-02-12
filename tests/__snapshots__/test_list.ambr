@@ -91,6 +91,10 @@
       only-wheels-08df4319
       no-wheels-0a9090ba
       no-wheels-with-matching-platform-b595b358
+      no-wheels-no-build-d5567080
+      only-wheels-no-binary-3850ba71
+      no-build-e0451b4c
+      no-binary-5036ee47
   
     ''',
   })
@@ -163,6 +167,10 @@
           only-wheels-08df4319
           no-wheels-0a9090ba
           no-wheels-with-matching-platform-b595b358
+          no-wheels-no-build-d5567080
+          only-wheels-no-binary-3850ba71
+          no-build-e0451b4c
+          no-binary-5036ee47
   
     ''',
   })
@@ -235,6 +243,10 @@
           only-wheels
           no-wheels
           no-wheels-with-matching-platform
+          no-wheels-no-build
+          only-wheels-no-binary
+          no-build
+          no-binary
   
     ''',
   })
@@ -317,6 +329,10 @@
           08df4319
           0a9090ba
           b595b358
+          d5567080
+          3850ba71
+          e0451b4c
+          5036ee47
   
     ''',
   })

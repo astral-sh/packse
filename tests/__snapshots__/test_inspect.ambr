@@ -2504,7 +2504,9 @@
             },
             "resolver_options": {
               "python": null,
-              "prereleases": true
+              "prereleases": true,
+              "no_build": [],
+              "no_binary": []
             },
             "template": "simple",
             "description": "The user requires a version of package `a` which only matches prerelease versions. They did not include a prerelease specifier for the package, but they opted into prereleases globally.",
@@ -4807,7 +4809,9 @@
             },
             "resolver_options": {
               "python": "3.11",
-              "prereleases": false
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
             },
             "template": "simple",
             "description": "The user requires a package which requires a Python version greater than the current version, but they use an alternative Python version for package resolution.",
@@ -4865,7 +4869,9 @@
             },
             "resolver_options": {
               "python": "3.9",
-              "prereleases": false
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
             },
             "template": "simple",
             "description": "The user requires a package which requires a compatible Python version, but they request an incompatible Python version for package resolution.",
@@ -4923,7 +4929,9 @@
             },
             "resolver_options": {
               "python": "3.11",
-              "prereleases": false
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
             },
             "template": "simple",
             "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There are only source distributions available for the package.",
@@ -4989,7 +4997,9 @@
             },
             "resolver_options": {
               "python": "3.11",
-              "prereleases": false
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
             },
             "template": "simple",
             "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There are only source distributions available for the package. The user has a compatible Python version installed elsewhere on their system.",
@@ -5050,7 +5060,9 @@
             },
             "resolver_options": {
               "python": "3.11",
-              "prereleases": false
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
             },
             "template": "simple",
             "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There is a wheel available for the package, but it does not have a compatible tag.",
@@ -5118,7 +5130,9 @@
             },
             "resolver_options": {
               "python": "3.11",
-              "prereleases": false
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
             },
             "template": "simple",
             "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There are only source distributions available for the compatible version of the package, but there is an incompatible version with a wheel available.",
@@ -5179,7 +5193,9 @@
             },
             "resolver_options": {
               "python": "3.8",
-              "prereleases": false
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
             },
             "template": "simple",
             "description": "The user requires a package which requires a Python version with a patch version and the user provides a target version without a patch version.",
@@ -5243,7 +5259,9 @@
             },
             "resolver_options": {
               "python": "3.8.0",
-              "prereleases": false
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
             },
             "template": "simple",
             "description": "The user requires a package which requires a Python version with a patch version and the user provides a target version with a compatible patch version.",
@@ -5479,6 +5497,250 @@
               "    \u2514\u2500\u2500 a-1.0.0"
             ],
             "module_name": "no_wheels_with_matching_platform"
+          },
+          {
+            "name": "no-wheels-no-build",
+            "packages": [
+              {
+                "name": "no-wheels-no-build-a-d5567080",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "no-wheels-no-build-a-d5567080",
+                  "name": "no-wheels-no-build-a-d5567080",
+                  "module_name": "no_wheels_no_build_a_d5567080"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": [],
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [
+                "a"
+              ],
+              "no_binary": []
+            },
+            "template": "simple",
+            "description": "No wheels are available, only source distributions but the user has disabled builds.",
+            "source": "[PWD]/scenarios/wheels.json",
+            "version": "d5567080",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0"
+            ],
+            "module_name": "no_wheels_no_build"
+          },
+          {
+            "name": "only-wheels-no-binary",
+            "packages": [
+              {
+                "name": "only-wheels-no-binary-a-3850ba71",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": false,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "only-wheels-no-binary-a-3850ba71",
+                  "name": "only-wheels-no-binary-a-3850ba71",
+                  "module_name": "only_wheels_no_binary_a_3850ba71"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": [],
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": [
+                "a"
+              ]
+            },
+            "template": "simple",
+            "description": "No source distributions are available, only wheels but the user has disabled using pre-built binaries.",
+            "source": "[PWD]/scenarios/wheels.json",
+            "version": "3850ba71",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0"
+            ],
+            "module_name": "only_wheels_no_binary"
+          },
+          {
+            "name": "no-build",
+            "packages": [
+              {
+                "name": "no-build-a-e0451b4c",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "no-build-a-e0451b4c",
+                  "name": "no-build-a-e0451b4c",
+                  "module_name": "no_build_a_e0451b4c"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": [],
+              "explanation": "The wheel should be used for install"
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [
+                "a"
+              ],
+              "no_binary": []
+            },
+            "template": "simple",
+            "description": "Both wheels and source distributions are available, and the user has disabled builds.",
+            "source": "[PWD]/scenarios/wheels.json",
+            "version": "e0451b4c",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0"
+            ],
+            "module_name": "no_build"
+          },
+          {
+            "name": "no-binary",
+            "packages": [
+              {
+                "name": "no-binary-a-5036ee47",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "no-binary-a-5036ee47",
+                  "name": "no-binary-a-5036ee47",
+                  "module_name": "no_binary_a_5036ee47"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": [],
+              "explanation": "The source distribution should be used for install"
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": [
+                "a"
+              ]
+            },
+            "template": "simple",
+            "description": "Both wheels and source distributions are available, and the user has disabled binaries.",
+            "source": "[PWD]/scenarios/wheels.json",
+            "version": "5036ee47",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0"
+            ],
+            "module_name": "no_binary"
           }
         ]
       }
