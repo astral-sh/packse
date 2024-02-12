@@ -46,7 +46,7 @@
     {
         "name": "requires-package-only-prereleases-in-range-global-opt-in",
         "description": "The user requires a version of package `a` which only matches prerelease versions. They did not include a prerelease specifier for the package, but they opted into prereleases globally.",
-        "environment": {
+        "resolver_options": {
             "prereleases": true
         },
         "root": {

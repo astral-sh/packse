@@ -92,8 +92,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -229,8 +228,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -290,8 +288,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -343,8 +340,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -408,8 +404,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -484,8 +479,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -543,8 +537,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -650,8 +643,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -714,8 +706,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -835,8 +826,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -1041,8 +1031,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -1284,8 +1273,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -1418,8 +1406,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -1485,8 +1472,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -1599,8 +1585,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -1704,8 +1689,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -1819,8 +1803,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -1922,8 +1905,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -2034,8 +2016,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -2114,8 +2095,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -2204,8 +2184,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -2315,8 +2294,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -2387,8 +2365,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -2452,8 +2429,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -2476,7 +2452,7 @@
             "name": "requires-package-only-prereleases-in-range-global-opt-in",
             "packages": [
               {
-                "name": "requires-package-only-prereleases-in-range-global-opt-in-a-af391f9c",
+                "name": "requires-package-only-prereleases-in-range-global-opt-in-a-ebc4dbde",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -2505,9 +2481,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-package-only-prereleases-in-range-global-opt-in-a-af391f9c>0.1.0",
-                  "name": "requires-package-only-prereleases-in-range-global-opt-in-a-af391f9c",
-                  "module_name": "requires_package_only_prereleases_in_range_global_opt_in_a_af391f9c"
+                  "requirement": "requires-package-only-prereleases-in-range-global-opt-in-a-ebc4dbde>0.1.0",
+                  "name": "requires-package-only-prereleases-in-range-global-opt-in-a-ebc4dbde",
+                  "module_name": "requires_package_only_prereleases_in_range_global_opt_in_a_ebc4dbde"
                 }
               ]
             },
@@ -2515,23 +2491,25 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "requires-package-only-prereleases-in-range-global-opt-in-a-af391f9c",
+                  "name": "requires-package-only-prereleases-in-range-global-opt-in-a-ebc4dbde",
                   "version": "1.0.0a1",
-                  "module_name": "requires_package_only_prereleases_in_range_global_opt_in_a_af391f9c"
+                  "module_name": "requires_package_only_prereleases_in_range_global_opt_in_a_ebc4dbde"
                 }
               ],
               "explanation": null
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
+              "additional_python": []
+            },
+            "resolver_options": {
+              "python": null,
               "prereleases": true
             },
-            "resolver_options": null,
             "template": "simple",
             "description": "The user requires a version of package `a` which only matches prerelease versions. They did not include a prerelease specifier for the package, but they opted into prereleases globally.",
             "source": "[PWD]/scenarios/prereleases.json",
-            "version": "af391f9c",
+            "version": "ebc4dbde",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -2596,8 +2574,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -2678,8 +2655,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -2763,8 +2739,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -2858,8 +2833,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -2945,8 +2919,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -3030,8 +3003,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -3117,8 +3089,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -3203,8 +3174,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -3306,8 +3276,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -3417,8 +3386,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -3553,8 +3521,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -3841,8 +3808,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -4151,8 +4117,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -4234,8 +4199,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -4290,8 +4254,7 @@
             },
             "environment": {
               "python": "3.9",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -4346,8 +4309,7 @@
             },
             "environment": {
               "python": "3.9",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -4402,8 +4364,7 @@
             },
             "environment": {
               "python": "3.8.12",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -4568,8 +4529,7 @@
             },
             "environment": {
               "python": "3.9",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -4682,8 +4642,7 @@
             },
             "environment": {
               "python": "3.9",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -4776,8 +4735,7 @@
             },
             "environment": {
               "python": "3.9",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -4807,7 +4765,7 @@
             "name": "requires-incompatible-python-version-compatible-override",
             "packages": [
               {
-                "name": "requires-incompatible-python-version-compatible-override-a-006fed96",
+                "name": "requires-incompatible-python-version-compatible-override-a-df9d2d06",
                 "versions": [
                   {
                     "requires_python": ">=3.10",
@@ -4826,9 +4784,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-incompatible-python-version-compatible-override-a-006fed96==1.0.0",
-                  "name": "requires-incompatible-python-version-compatible-override-a-006fed96",
-                  "module_name": "requires_incompatible_python_version_compatible_override_a_006fed96"
+                  "requirement": "requires-incompatible-python-version-compatible-override-a-df9d2d06==1.0.0",
+                  "name": "requires-incompatible-python-version-compatible-override-a-df9d2d06",
+                  "module_name": "requires_incompatible_python_version_compatible_override_a_df9d2d06"
                 }
               ]
             },
@@ -4836,25 +4794,25 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "requires-incompatible-python-version-compatible-override-a-006fed96",
+                  "name": "requires-incompatible-python-version-compatible-override-a-df9d2d06",
                   "version": "1.0.0",
-                  "module_name": "requires_incompatible_python_version_compatible_override_a_006fed96"
+                  "module_name": "requires_incompatible_python_version_compatible_override_a_df9d2d06"
                 }
               ],
               "explanation": null
             },
             "environment": {
               "python": "3.9",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": {
-              "python": "3.11"
+              "python": "3.11",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a package which requires a Python version greater than the current version, but they use an alternative Python version for package resolution.",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "006fed96",
+            "version": "df9d2d06",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.9",
@@ -4871,7 +4829,7 @@
             "name": "requires-compatible-python-version-incompatible-override",
             "packages": [
               {
-                "name": "requires-compatible-python-version-incompatible-override-a-8c1b0389",
+                "name": "requires-compatible-python-version-incompatible-override-a-ad14da8a",
                 "versions": [
                   {
                     "requires_python": ">=3.10",
@@ -4890,9 +4848,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-compatible-python-version-incompatible-override-a-8c1b0389==1.0.0",
-                  "name": "requires-compatible-python-version-incompatible-override-a-8c1b0389",
-                  "module_name": "requires_compatible_python_version_incompatible_override_a_8c1b0389"
+                  "requirement": "requires-compatible-python-version-incompatible-override-a-ad14da8a==1.0.0",
+                  "name": "requires-compatible-python-version-incompatible-override-a-ad14da8a",
+                  "module_name": "requires_compatible_python_version_incompatible_override_a_ad14da8a"
                 }
               ]
             },
@@ -4903,16 +4861,16 @@
             },
             "environment": {
               "python": "3.11",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": {
-              "python": "3.9"
+              "python": "3.9",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a package which requires a compatible Python version, but they request an incompatible Python version for package resolution.",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "8c1b0389",
+            "version": "ad14da8a",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.11",
@@ -4929,7 +4887,7 @@
             "name": "requires-incompatible-python-version-compatible-override-no-wheels",
             "packages": [
               {
-                "name": "requires-incompatible-python-version-compatible-override-no-wheels-a-b8ee1c03",
+                "name": "requires-incompatible-python-version-compatible-override-no-wheels-a-8efa8294",
                 "versions": [
                   {
                     "requires_python": ">=3.10",
@@ -4948,9 +4906,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-incompatible-python-version-compatible-override-no-wheels-a-b8ee1c03==1.0.0",
-                  "name": "requires-incompatible-python-version-compatible-override-no-wheels-a-b8ee1c03",
-                  "module_name": "requires_incompatible_python_version_compatible_override_no_wheels_a_b8ee1c03"
+                  "requirement": "requires-incompatible-python-version-compatible-override-no-wheels-a-8efa8294==1.0.0",
+                  "name": "requires-incompatible-python-version-compatible-override-no-wheels-a-8efa8294",
+                  "module_name": "requires_incompatible_python_version_compatible_override_no_wheels_a_8efa8294"
                 }
               ]
             },
@@ -4961,16 +4919,16 @@
             },
             "environment": {
               "python": "3.9",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": {
-              "python": "3.11"
+              "python": "3.11",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There are only source distributions available for the package.",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "b8ee1c03",
+            "version": "8efa8294",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.9",
@@ -4987,7 +4945,7 @@
             "name": "requires-incompatible-python-version-compatible-override-no-wheels-available-system",
             "packages": [
               {
-                "name": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-23e00318",
+                "name": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-6b12f58c",
                 "versions": [
                   {
                     "requires_python": ">=3.10",
@@ -5006,9 +4964,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-23e00318==1.0.0",
-                  "name": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-23e00318",
-                  "module_name": "requires_incompatible_python_version_compatible_override_no_wheels_available_system_a_23e00318"
+                  "requirement": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-6b12f58c==1.0.0",
+                  "name": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-6b12f58c",
+                  "module_name": "requires_incompatible_python_version_compatible_override_no_wheels_available_system_a_6b12f58c"
                 }
               ]
             },
@@ -5016,9 +4974,9 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-23e00318",
+                  "name": "requires-incompatible-python-version-compatible-override-no-wheels-available-system-a-6b12f58c",
                   "version": "1.0.0",
-                  "module_name": "requires_incompatible_python_version_compatible_override_no_wheels_available_system_a_23e00318"
+                  "module_name": "requires_incompatible_python_version_compatible_override_no_wheels_available_system_a_6b12f58c"
                 }
               ],
               "explanation": "Since there is a compatible Python version available on the system, it should be used to build the source distributions."
@@ -5027,16 +4985,16 @@
               "python": "3.9",
               "additional_python": [
                 "3.11"
-              ],
-              "prereleases": false
+              ]
             },
             "resolver_options": {
-              "python": "3.11"
+              "python": "3.11",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There are only source distributions available for the package. The user has a compatible Python version installed elsewhere on their system.",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "23e00318",
+            "version": "6b12f58c",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u251c\u2500\u2500 python3.11",
@@ -5054,7 +5012,7 @@
             "name": "requires-incompatible-python-version-compatible-override-no-compatible-wheels",
             "packages": [
               {
-                "name": "requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-c0ea406a",
+                "name": "requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-27672836",
                 "versions": [
                   {
                     "requires_python": ">=3.10",
@@ -5075,9 +5033,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-c0ea406a==1.0.0",
-                  "name": "requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-c0ea406a",
-                  "module_name": "requires_incompatible_python_version_compatible_override_no_compatible_wheels_a_c0ea406a"
+                  "requirement": "requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-27672836==1.0.0",
+                  "name": "requires-incompatible-python-version-compatible-override-no-compatible-wheels-a-27672836",
+                  "module_name": "requires_incompatible_python_version_compatible_override_no_compatible_wheels_a_27672836"
                 }
               ]
             },
@@ -5088,16 +5046,16 @@
             },
             "environment": {
               "python": "3.9",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": {
-              "python": "3.11"
+              "python": "3.11",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There is a wheel available for the package, but it does not have a compatible tag.",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "c0ea406a",
+            "version": "27672836",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.9",
@@ -5114,7 +5072,7 @@
             "name": "requires-incompatible-python-version-compatible-override-other-wheel",
             "packages": [
               {
-                "name": "requires-incompatible-python-version-compatible-override-other-wheel-a-08a4e843",
+                "name": "requires-incompatible-python-version-compatible-override-other-wheel-a-6413f0ea",
                 "versions": [
                   {
                     "requires_python": ">=3.10",
@@ -5143,9 +5101,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-incompatible-python-version-compatible-override-other-wheel-a-08a4e843",
-                  "name": "requires-incompatible-python-version-compatible-override-other-wheel-a-08a4e843",
-                  "module_name": "requires_incompatible_python_version_compatible_override_other_wheel_a_08a4e843"
+                  "requirement": "requires-incompatible-python-version-compatible-override-other-wheel-a-6413f0ea",
+                  "name": "requires-incompatible-python-version-compatible-override-other-wheel-a-6413f0ea",
+                  "module_name": "requires_incompatible_python_version_compatible_override_other_wheel_a_6413f0ea"
                 }
               ]
             },
@@ -5156,16 +5114,16 @@
             },
             "environment": {
               "python": "3.9",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": {
-              "python": "3.11"
+              "python": "3.11",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There are only source distributions available for the compatible version of the package, but there is an incompatible version with a wheel available.",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "08a4e843",
+            "version": "6413f0ea",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.9",
@@ -5185,7 +5143,7 @@
             "name": "requires-python-patch-version-override-no-patch",
             "packages": [
               {
-                "name": "requires-python-patch-version-override-no-patch-a-2e1edfd6",
+                "name": "requires-python-patch-version-override-no-patch-a-6e610048",
                 "versions": [
                   {
                     "requires_python": ">=3.8.4",
@@ -5204,9 +5162,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-python-patch-version-override-no-patch-a-2e1edfd6==1.0.0",
-                  "name": "requires-python-patch-version-override-no-patch-a-2e1edfd6",
-                  "module_name": "requires_python_patch_version_override_no_patch_a_2e1edfd6"
+                  "requirement": "requires-python-patch-version-override-no-patch-a-6e610048==1.0.0",
+                  "name": "requires-python-patch-version-override-no-patch-a-6e610048",
+                  "module_name": "requires_python_patch_version_override_no_patch_a_6e610048"
                 }
               ]
             },
@@ -5217,16 +5175,16 @@
             },
             "environment": {
               "python": "3.8.18",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": {
-              "python": "3.8"
+              "python": "3.8",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a package which requires a Python version with a patch version and the user provides a target version without a patch version.",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "2e1edfd6",
+            "version": "6e610048",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8.18",
@@ -5243,7 +5201,7 @@
             "name": "requires-python-patch-version-override-patch-compatible",
             "packages": [
               {
-                "name": "requires-python-patch-version-override-patch-compatible-a-844899bd",
+                "name": "requires-python-patch-version-override-patch-compatible-a-070b52ec",
                 "versions": [
                   {
                     "requires_python": ">=3.8.0",
@@ -5262,9 +5220,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "requires-python-patch-version-override-patch-compatible-a-844899bd==1.0.0",
-                  "name": "requires-python-patch-version-override-patch-compatible-a-844899bd",
-                  "module_name": "requires_python_patch_version_override_patch_compatible_a_844899bd"
+                  "requirement": "requires-python-patch-version-override-patch-compatible-a-070b52ec==1.0.0",
+                  "name": "requires-python-patch-version-override-patch-compatible-a-070b52ec",
+                  "module_name": "requires_python_patch_version_override_patch_compatible_a_070b52ec"
                 }
               ]
             },
@@ -5272,25 +5230,25 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "requires-python-patch-version-override-patch-compatible-a-844899bd",
+                  "name": "requires-python-patch-version-override-patch-compatible-a-070b52ec",
                   "version": "1.0.0",
-                  "module_name": "requires_python_patch_version_override_patch_compatible_a_844899bd"
+                  "module_name": "requires_python_patch_version_override_patch_compatible_a_070b52ec"
                 }
               ],
               "explanation": null
             },
             "environment": {
               "python": "3.8.18",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": {
-              "python": "3.8.0"
+              "python": "3.8.0",
+              "prereleases": false
             },
             "template": "simple",
             "description": "The user requires a package which requires a Python version with a patch version and the user provides a target version with a compatible patch version.",
             "source": "[PWD]/scenarios/requires-python.json",
-            "version": "844899bd",
+            "version": "070b52ec",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8.18",
@@ -5342,8 +5300,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -5397,8 +5354,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -5452,8 +5408,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
@@ -5507,8 +5462,7 @@
             },
             "environment": {
               "python": "3.8",
-              "additional_python": [],
-              "prereleases": false
+              "additional_python": []
             },
             "resolver_options": null,
             "template": "simple",
