@@ -98,7 +98,7 @@
       no-binary-10e961b8
       package-only-yanked-e3de7eb4
       package-only-yanked-in-range-84b3720e
-      requires-package-yanked-and-final-any-20543e89
+      requires-package-yanked-and-unyanked-any-93eac6d7
       package-yanked-specified-mixed-available-3325916e
       transitive-package-only-yanked-9ec30fe2
       transitive-package-only-yanked-in-range-872d714e
@@ -185,7 +185,7 @@
       scenarios/yanked.json
           package-only-yanked-e3de7eb4
           package-only-yanked-in-range-84b3720e
-          requires-package-yanked-and-final-any-20543e89
+          requires-package-yanked-and-unyanked-any-93eac6d7
           package-yanked-specified-mixed-available-3325916e
           transitive-package-only-yanked-9ec30fe2
           transitive-package-only-yanked-in-range-872d714e
@@ -272,7 +272,7 @@
       scenarios/yanked.json
           package-only-yanked
           package-only-yanked-in-range
-          requires-package-yanked-and-final-any
+          requires-package-yanked-and-unyanked-any
           package-yanked-specified-mixed-available
           transitive-package-only-yanked
           transitive-package-only-yanked-in-range
@@ -369,7 +369,7 @@
       scenarios/yanked.json
           e3de7eb4
           84b3720e
-          20543e89
+          93eac6d7
           3325916e
           9ec30fe2
           872d714e
