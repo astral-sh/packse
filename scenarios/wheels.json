@@ -78,7 +78,7 @@
                 "versions": {
                     "1.0.0": {
                         "wheel_tags": [
-                            "py3-macosx_10_0_ppc64-none"
+                            "py3-any-macosx_10_0_ppc64"
                         ]
                     }
                 }
@@ -101,7 +101,7 @@
                 "versions": {
                     "1.0.0": {
                         "wheel_tags": [
-                            "py3-macosx_10_0_ppc64-none"
+                            "py3-any-macosx_10_0_ppc64"
                         ],
                         "sdist": false
                     }
