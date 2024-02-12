@@ -4,7 +4,7 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      example-f8a3cb91
+      example-8597e52a
       ├── environment
       │   └── python3.8
       ├── root
@@ -35,7 +35,7 @@
       
       This is an example scenario, in which the user depends on a single package `a` which requires `b`.
       
-      example-f8a3cb91
+      example-8597e52a
       ├── environment
       │   └── python3.8
       ├── root
@@ -62,7 +62,7 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      f8a3cb91
+      8597e52a
       ├── environment
       │   └── python3.8
       ├── root
