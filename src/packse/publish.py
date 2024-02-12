@@ -45,6 +45,9 @@ def publish(
     ):
         raise PublishNoCredentials()
 
+    # Skip yanked markers
+    targets = [target for target in targets if not str(target).endswith(".yanked")]
+
     for target in targets:
         if not target.is_dir():
             raise InvalidPublishTarget(target, reason="Not a directory.")
@@ -87,6 +90,18 @@ def publish(
 
     for result in sorted(future.result() for future in futures):
         print(result)
+
+    for target in targets:
+        yankfile = target.with_suffix(".yanked")
+        if yankfile.exists():
+            url = (
+                index_url.replace("/legacy/", "/")
+                + f"manage/project/{target.name}/release"
+            )
+            print()
+            print(f"{target.name} has versions that must be yanked:")
+            for version in yankfile.read_text().splitlines():
+                print(f"\t{version}: {url}/{version}/#yank_version-modal")
 
 
 def publish_package_distributions(

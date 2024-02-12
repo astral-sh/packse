@@ -55,6 +55,7 @@ class PackageMetadata(msgspec.Struct):
     extras: dict[str, list[Requirement]] = {}
     sdist: bool = True
     wheel: bool = True
+    yanked: bool = False
     wheel_tags: list[str] = []
     description: str = ""
 
@@ -72,6 +73,8 @@ class PackageMetadata(msgspec.Struct):
                 hasher.update(str(requirement).encode())
         hasher.update(self.sdist.to_bytes())
         hasher.update(self.wheel.to_bytes())
+        if self.yanked:
+            hasher.update(self.yanked.to_bytes())
         if self.wheel:
             for wheel_tag in self.wheel_tags:
                 hasher.update(wheel_tag.encode())

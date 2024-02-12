@@ -20,6 +20,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -35,6 +36,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -45,6 +47,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -57,6 +60,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.0.0"
@@ -156,6 +160,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -171,6 +176,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -181,6 +187,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -193,6 +200,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.0.0"
@@ -316,6 +324,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -370,6 +379,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.1.0"
@@ -380,6 +390,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -435,6 +446,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -445,6 +457,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.0.0"
@@ -455,6 +468,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "4.0.0"
@@ -513,6 +527,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -571,6 +586,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -586,6 +602,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -596,6 +613,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -608,6 +626,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.0.0"
@@ -682,6 +701,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -738,6 +758,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -750,6 +771,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -762,6 +784,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.0.0"
@@ -777,6 +800,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -787,6 +811,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -797,6 +822,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.0.0"
@@ -873,6 +899,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -885,6 +912,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -897,6 +925,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.1.0"
@@ -909,6 +938,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.2.0"
@@ -921,6 +951,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.3.0"
@@ -933,6 +964,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.0.0"
@@ -948,6 +980,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -958,6 +991,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -968,6 +1002,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.0.0"
@@ -985,6 +1020,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -997,6 +1033,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -1101,6 +1138,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -1113,6 +1151,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -1126,6 +1165,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.1.0"
@@ -1138,6 +1178,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.2.0"
@@ -1151,6 +1192,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.3.0"
@@ -1163,6 +1205,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.4.0"
@@ -1175,6 +1218,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.0.0"
@@ -1190,6 +1234,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -1200,6 +1245,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -1210,6 +1256,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.0.0"
@@ -1227,6 +1274,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -1239,6 +1287,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -1356,6 +1405,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -1371,6 +1421,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -1442,6 +1493,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -1515,6 +1567,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -1530,6 +1583,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -1545,6 +1599,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -1640,6 +1695,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -1655,6 +1711,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -1665,6 +1722,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -1743,6 +1801,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -1758,6 +1817,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -1768,6 +1828,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -1851,6 +1912,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -1866,6 +1928,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -1876,6 +1939,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -1951,6 +2015,7 @@
                     ],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -1961,6 +2026,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -1971,6 +2037,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.0.0"
@@ -1986,6 +2053,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -2056,6 +2124,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -2066,6 +2135,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -2130,6 +2200,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -2145,6 +2216,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -2155,6 +2227,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -2223,6 +2296,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -2240,6 +2314,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -2255,6 +2330,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -2265,6 +2341,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -2335,6 +2412,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0a1"
@@ -2395,6 +2473,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.1.0"
@@ -2405,6 +2484,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0a1"
@@ -2460,6 +2540,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.1.0"
@@ -2470,6 +2551,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0a1"
@@ -2536,6 +2618,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.1.0"
@@ -2546,6 +2629,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0a1"
@@ -2607,6 +2691,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.1.0"
@@ -2617,6 +2702,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.2.0"
@@ -2627,6 +2713,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.3.0"
@@ -2691,6 +2778,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.1.0a1"
@@ -2701,6 +2789,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.2.0a1"
@@ -2711,6 +2800,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.3.0a1"
@@ -2775,6 +2865,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.1.0"
@@ -2785,6 +2876,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.2.0a1"
@@ -2795,6 +2887,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.3.0"
@@ -2805,6 +2898,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0a1"
@@ -2871,6 +2965,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0a1"
@@ -2881,6 +2976,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0b1"
@@ -2891,6 +2987,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0rc1"
@@ -2955,6 +3052,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0a1"
@@ -2965,6 +3063,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0a2"
@@ -2975,6 +3074,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0a3"
@@ -3041,6 +3141,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.1.0"
@@ -3056,6 +3157,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0a1"
@@ -3127,6 +3229,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.1.0"
@@ -3142,6 +3245,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.1.0"
@@ -3152,6 +3256,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0a1"
@@ -3213,6 +3318,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.1.0"
@@ -3228,6 +3334,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "0.1.0"
@@ -3238,6 +3345,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0a1"
@@ -3317,6 +3425,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -3334,6 +3443,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -3349,6 +3459,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -3359,6 +3470,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b1"
@@ -3431,6 +3543,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -3448,6 +3561,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -3463,6 +3577,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -3473,6 +3588,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b1"
@@ -3569,6 +3685,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -3586,6 +3703,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -3601,6 +3719,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -3611,6 +3730,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a1"
@@ -3621,6 +3741,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a2"
@@ -3631,6 +3752,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a3"
@@ -3641,6 +3763,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a4"
@@ -3651,6 +3774,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a5"
@@ -3661,6 +3785,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a6"
@@ -3671,6 +3796,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a7"
@@ -3681,6 +3807,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a8"
@@ -3691,6 +3818,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a9"
@@ -3701,6 +3829,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b1"
@@ -3711,6 +3840,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b2"
@@ -3721,6 +3851,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b3"
@@ -3731,6 +3862,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b4"
@@ -3741,6 +3873,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b5"
@@ -3751,6 +3884,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b6"
@@ -3761,6 +3895,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b7"
@@ -3771,6 +3906,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b8"
@@ -3781,6 +3917,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b9"
@@ -3878,6 +4015,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -3895,6 +4033,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -3910,6 +4049,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -3920,6 +4060,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a1"
@@ -3930,6 +4071,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a2"
@@ -3940,6 +4082,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a3"
@@ -3950,6 +4093,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a4"
@@ -3960,6 +4104,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a5"
@@ -3970,6 +4115,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a6"
@@ -3980,6 +4126,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a7"
@@ -3990,6 +4137,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a8"
@@ -4000,6 +4148,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0a9"
@@ -4010,6 +4159,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b1"
@@ -4020,6 +4170,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b2"
@@ -4030,6 +4181,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b3"
@@ -4040,6 +4192,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b4"
@@ -4050,6 +4203,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b5"
@@ -4060,6 +4214,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b6"
@@ -4070,6 +4225,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b7"
@@ -4080,6 +4236,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b8"
@@ -4090,6 +4247,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0b9"
@@ -4177,6 +4335,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -4232,6 +4391,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -4287,6 +4447,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -4342,6 +4503,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -4397,6 +4559,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -4407,6 +4570,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.1.0"
@@ -4417,6 +4581,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.2.0"
@@ -4427,6 +4592,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.3.0"
@@ -4437,6 +4603,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.4.0"
@@ -4447,6 +4614,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.5.0"
@@ -4457,6 +4625,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.0.0"
@@ -4467,6 +4636,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.1.0"
@@ -4477,6 +4647,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.2.0"
@@ -4487,6 +4658,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.3.0"
@@ -4497,6 +4669,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.4.0"
@@ -4507,6 +4680,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.5.0"
@@ -4584,6 +4758,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -4594,6 +4769,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -4604,6 +4780,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.0.0"
@@ -4614,6 +4791,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "4.0.0"
@@ -4683,6 +4861,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -4693,6 +4872,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -4703,6 +4883,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "3.0.0"
@@ -4713,6 +4894,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "4.0.0"
@@ -4775,6 +4957,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -4841,6 +5024,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -4901,6 +5085,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": false,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -4961,6 +5146,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": false,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -5030,6 +5216,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [
                       "foo-none-any"
                     ],
@@ -5092,6 +5279,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": false,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -5102,6 +5290,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "2.0.0"
@@ -5165,6 +5354,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -5225,6 +5415,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -5291,6 +5482,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [
                       "cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64",
                       "py3-none-any"
@@ -5348,6 +5540,7 @@
                     "extras": [],
                     "sdist": false,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -5402,6 +5595,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": false,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -5456,6 +5650,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -5510,6 +5705,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": false,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -5571,6 +5767,7 @@
                     "extras": [],
                     "sdist": false,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -5632,6 +5829,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -5693,6 +5891,7 @@
                     "extras": [],
                     "sdist": true,
                     "wheel": true,
+                    "yanked": false,
                     "wheel_tags": [],
                     "description": "",
                     "version": "1.0.0"
@@ -5741,6 +5940,848 @@
               "    \u2514\u2500\u2500 a-1.0.0"
             ],
             "module_name": "no_binary"
+          },
+          {
+            "name": "package-only-yanked",
+            "packages": [
+              {
+                "name": "package-only-yanked-a-5f5d3a41",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": true,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "package-only-yanked-a-5f5d3a41",
+                  "name": "package-only-yanked-a-5f5d3a41",
+                  "module_name": "package_only_yanked_a_5f5d3a41"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": [
+                {
+                  "name": "package-only-yanked-a-5f5d3a41",
+                  "version": "1.0.0",
+                  "module_name": "package_only_yanked_a_5f5d3a41"
+                }
+              ],
+              "explanation": "Since there are only yanked versions of `a` available, it should be installed even though the user did not ask for the yanked version directly."
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": null,
+            "template": "simple",
+            "description": "The user requires any version of package `a` which only has yanked versions available.",
+            "source": "[PWD]/scenarios/yanked.json",
+            "version": "5f5d3a41",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2514\u2500\u2500 a",
+              "    \u2514\u2500\u2500 a-1.0.0 (yanked)"
+            ],
+            "module_name": "package_only_yanked"
+          },
+          {
+            "name": "package-only-yanked-in-range",
+            "packages": [
+              {
+                "name": "package-only-yanked-in-range-a-ef8ee676",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.1.0"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": true,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "package-only-yanked-in-range-a-ef8ee676>0.1.0",
+                  "name": "package-only-yanked-in-range-a-ef8ee676",
+                  "module_name": "package_only_yanked_in_range_a_ef8ee676"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": [],
+              "explanation": "Since there are other versions of `a` available, yanked versions should not be selected without explicit opt-in."
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": null,
+            "template": "simple",
+            "description": "The user requires a version of package `a` which only matches yanked versions.",
+            "source": "[PWD]/scenarios/yanked.json",
+            "version": "ef8ee676",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a>0.1.0",
+              "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-0.1.0",
+              "    \u2514\u2500\u2500 a-1.0.0 (yanked)"
+            ],
+            "module_name": "package_only_yanked_in_range"
+          },
+          {
+            "name": "requires-package-yanked-and-final-any",
+            "packages": [
+              {
+                "name": "requires-package-yanked-and-final-any-a-d555e202",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.1.0"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": true,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "requires-package-yanked-and-final-any-a-d555e202",
+                  "name": "requires-package-yanked-and-final-any-a-d555e202",
+                  "module_name": "requires_package_yanked_and_final_any_a_d555e202"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": [
+                {
+                  "name": "requires-package-yanked-and-final-any-a-d555e202",
+                  "version": "0.1.0",
+                  "module_name": "requires_package_yanked_and_final_any_a_d555e202"
+                }
+              ],
+              "explanation": "The unyanked version should be selected."
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": null,
+            "template": "simple",
+            "description": "The user requires any version of package `a` has a yanked version available and an older unyanked version.",
+            "source": "[PWD]/scenarios/yanked.json",
+            "version": "d555e202",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-0.1.0",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-0.1.0",
+              "    \u2514\u2500\u2500 a-1.0.0 (yanked)"
+            ],
+            "module_name": "requires_package_yanked_and_final_any"
+          },
+          {
+            "name": "package-yanked-specified-mixed-available",
+            "packages": [
+              {
+                "name": "package-yanked-specified-mixed-available-a-0dcba00a",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.1.0"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": true,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.2.0"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.3.0"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": true,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "package-yanked-specified-mixed-available-a-0dcba00a>=0.1.0",
+                  "name": "package-yanked-specified-mixed-available-a-0dcba00a",
+                  "module_name": "package_yanked_specified_mixed_available_a_0dcba00a"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": [
+                {
+                  "name": "package-yanked-specified-mixed-available-a-0dcba00a",
+                  "version": "0.3.0",
+                  "module_name": "package_yanked_specified_mixed_available_a_0dcba00a"
+                }
+              ],
+              "explanation": "The latest unyanked version should be selected."
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": null,
+            "template": "simple",
+            "description": "The user requires any version of `a` and both yanked and unyanked releases are available.",
+            "source": "[PWD]/scenarios/yanked.json",
+            "version": "0dcba00a",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a>=0.1.0",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-0.1.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-0.3.0",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-0.1.0",
+              "    \u251c\u2500\u2500 a-0.2.0 (yanked)",
+              "    \u251c\u2500\u2500 a-0.3.0",
+              "    \u2514\u2500\u2500 a-1.0.0 (yanked)"
+            ],
+            "module_name": "package_yanked_specified_mixed_available"
+          },
+          {
+            "name": "transitive-package-only-yanked",
+            "packages": [
+              {
+                "name": "transitive-package-only-yanked-a-bc0f1edb",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [
+                      "transitive-package-only-yanked-b-bc0f1edb"
+                    ],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.1.0"
+                  }
+                ]
+              },
+              {
+                "name": "transitive-package-only-yanked-b-bc0f1edb",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": true,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "transitive-package-only-yanked-a-bc0f1edb",
+                  "name": "transitive-package-only-yanked-a-bc0f1edb",
+                  "module_name": "transitive_package_only_yanked_a_bc0f1edb"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": [
+                {
+                  "name": "transitive-package-only-yanked-a-bc0f1edb",
+                  "version": "0.1.0",
+                  "module_name": "transitive_package_only_yanked_a_bc0f1edb"
+                },
+                {
+                  "name": "transitive-package-only-yanked-b-bc0f1edb",
+                  "version": "1.0.1",
+                  "module_name": "transitive_package_only_yanked_b_bc0f1edb"
+                }
+              ],
+              "explanation": "Since there are only yanked versions of `b` available, it should be selected even though the user did not opt-in to it."
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": null,
+            "template": "simple",
+            "description": "The user requires any version of package `a` which requires `b` which only has yanked versions available.",
+            "source": "[PWD]/scenarios/yanked.json",
+            "version": "bc0f1edb",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-0.1.0",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u2514\u2500\u2500 a-0.1.0",
+              "\u2502       \u2514\u2500\u2500 requires b",
+              "\u2502           \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2514\u2500\u2500 b",
+              "    \u2514\u2500\u2500 b-1.0.0 (yanked)"
+            ],
+            "module_name": "transitive_package_only_yanked"
+          },
+          {
+            "name": "transitive-package-only-yanked-in-range",
+            "packages": [
+              {
+                "name": "transitive-package-only-yanked-in-range-a-9b00baf6",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [
+                      "transitive-package-only-yanked-in-range-b-9b00baf6>0.1"
+                    ],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.1.0"
+                  }
+                ]
+              },
+              {
+                "name": "transitive-package-only-yanked-in-range-b-9b00baf6",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.1.0"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": true,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "transitive-package-only-yanked-in-range-a-9b00baf6",
+                  "name": "transitive-package-only-yanked-in-range-a-9b00baf6",
+                  "module_name": "transitive_package_only_yanked_in_range_a_9b00baf6"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": [],
+              "explanation": "Since there are unyanked versions of `b` available, the yanked version should not be selected without explicit opt-in. The available version is excluded by the range requested by the user."
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": null,
+            "template": "simple",
+            "description": "The user requires package `a` which has a dependency on a package which only matches yanked versions.",
+            "source": "[PWD]/scenarios/yanked.json",
+            "version": "9b00baf6",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-0.1.0",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u2514\u2500\u2500 a-0.1.0",
+              "\u2502       \u2514\u2500\u2500 requires b>0.1",
+              "\u2502           \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2514\u2500\u2500 b",
+              "    \u251c\u2500\u2500 b-0.1.0",
+              "    \u2514\u2500\u2500 b-1.0.0 (yanked)"
+            ],
+            "module_name": "transitive_package_only_yanked_in_range"
+          },
+          {
+            "name": "transitive-package-only-yanked-in-range-opt-in",
+            "packages": [
+              {
+                "name": "transitive-package-only-yanked-in-range-opt-in-a-15ceca78",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [
+                      "transitive-package-only-yanked-in-range-opt-in-b-15ceca78>0.1"
+                    ],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.1.0"
+                  }
+                ]
+              },
+              {
+                "name": "transitive-package-only-yanked-in-range-opt-in-b-15ceca78",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.1.0"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": true,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "transitive-package-only-yanked-in-range-opt-in-a-15ceca78",
+                  "name": "transitive-package-only-yanked-in-range-opt-in-a-15ceca78",
+                  "module_name": "transitive_package_only_yanked_in_range_opt_in_a_15ceca78"
+                },
+                {
+                  "requirement": "transitive-package-only-yanked-in-range-opt-in-b-15ceca78==1.0.0",
+                  "name": "transitive-package-only-yanked-in-range-opt-in-b-15ceca78",
+                  "module_name": "transitive_package_only_yanked_in_range_opt_in_b_15ceca78"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": [
+                {
+                  "name": "transitive-package-only-yanked-in-range-opt-in-a-15ceca78",
+                  "version": "0.1.0",
+                  "module_name": "transitive_package_only_yanked_in_range_opt_in_a_15ceca78"
+                },
+                {
+                  "name": "transitive-package-only-yanked-in-range-opt-in-b-15ceca78",
+                  "version": "1.0.0",
+                  "module_name": "transitive_package_only_yanked_in_range_opt_in_b_15ceca78"
+                }
+              ],
+              "explanation": "Since the user included a dependency on `b` with a yanked specifier, a yanked version can be selected."
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": null,
+            "template": "simple",
+            "description": "The user requires package `a` which has a dependency on a package which only matches yanked versions; the user has opted into allowing the yanked version of `b` explicitly.",
+            "source": "[PWD]/scenarios/yanked.json",
+            "version": "15ceca78",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u251c\u2500\u2500 requires a",
+              "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-0.1.0",
+              "\u2502   \u2514\u2500\u2500 requires b==1.0.0",
+              "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u2514\u2500\u2500 a-0.1.0",
+              "\u2502       \u2514\u2500\u2500 requires b>0.1",
+              "\u2502           \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2514\u2500\u2500 b",
+              "    \u251c\u2500\u2500 b-0.1.0",
+              "    \u2514\u2500\u2500 b-1.0.0 (yanked)"
+            ],
+            "module_name": "transitive_package_only_yanked_in_range_opt_in"
+          },
+          {
+            "name": "transitive-yanked-and-unyanked-dependency",
+            "packages": [
+              {
+                "name": "transitive-yanked-and-unyanked-dependency-a-17d6f9ae",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [
+                      "transitive-yanked-and-unyanked-dependency-c-17d6f9ae==2.0.0"
+                    ],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              },
+              {
+                "name": "transitive-yanked-and-unyanked-dependency-b-17d6f9ae",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [
+                      "transitive-yanked-and-unyanked-dependency-c-17d6f9ae<=3.0.0,>=1.0.0"
+                    ],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              },
+              {
+                "name": "transitive-yanked-and-unyanked-dependency-c-17d6f9ae",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": true,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "2.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "transitive-yanked-and-unyanked-dependency-a-17d6f9ae",
+                  "name": "transitive-yanked-and-unyanked-dependency-a-17d6f9ae",
+                  "module_name": "transitive_yanked_and_unyanked_dependency_a_17d6f9ae"
+                },
+                {
+                  "requirement": "transitive-yanked-and-unyanked-dependency-b-17d6f9ae",
+                  "name": "transitive-yanked-and-unyanked-dependency-b-17d6f9ae",
+                  "module_name": "transitive_yanked_and_unyanked_dependency_b_17d6f9ae"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": false,
+              "packages": [],
+              "explanation": "Since the user did not explicitly opt-in to the yanked version, it cannot be used."
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": null,
+            "template": "simple",
+            "description": "A transitive dependency has both a yanked and an unyanked version, but can only be satisfied by a yanked version",
+            "source": "[PWD]/scenarios/yanked.json",
+            "version": "17d6f9ae",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u251c\u2500\u2500 requires a",
+              "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2502   \u2514\u2500\u2500 requires b",
+              "\u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u2514\u2500\u2500 a-1.0.0",
+              "\u2502       \u2514\u2500\u2500 requires c==2.0.0",
+              "\u2502           \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u251c\u2500\u2500 b",
+              "\u2502   \u2514\u2500\u2500 b-1.0.0",
+              "\u2502       \u2514\u2500\u2500 requires c<=3.0.0,>=1.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by c-1.0.0",
+              "\u2514\u2500\u2500 c",
+              "    \u251c\u2500\u2500 c-1.0.0",
+              "    \u2514\u2500\u2500 c-2.0.0 (yanked)"
+            ],
+            "module_name": "transitive_yanked_and_unyanked_dependency"
+          },
+          {
+            "name": "transitive-yanked-and-unyanked-dependency-opt-in",
+            "packages": [
+              {
+                "name": "transitive-yanked-and-unyanked-dependency-opt-in-a-5c3bdfe0",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [
+                      "transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0==2.0.0"
+                    ],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              },
+              {
+                "name": "transitive-yanked-and-unyanked-dependency-opt-in-b-5c3bdfe0",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [
+                      "transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0<=3.0.0,>=1.0.0"
+                    ],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              },
+              {
+                "name": "transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": true,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "2.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "transitive-yanked-and-unyanked-dependency-opt-in-a-5c3bdfe0",
+                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-a-5c3bdfe0",
+                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_a_5c3bdfe0"
+                },
+                {
+                  "requirement": "transitive-yanked-and-unyanked-dependency-opt-in-b-5c3bdfe0",
+                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-b-5c3bdfe0",
+                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_b_5c3bdfe0"
+                },
+                {
+                  "requirement": "transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0==2.0.0",
+                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0",
+                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": [
+                {
+                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-a-5c3bdfe0",
+                  "version": "1.0.0",
+                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_a_5c3bdfe0"
+                },
+                {
+                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-b-5c3bdfe0",
+                  "version": "1.0.0",
+                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_b_5c3bdfe0"
+                },
+                {
+                  "name": "transitive-yanked-and-unyanked-dependency-opt-in-c-5c3bdfe0",
+                  "version": "2.0.0",
+                  "module_name": "transitive_yanked_and_unyanked_dependency_opt_in_c_5c3bdfe0"
+                }
+              ],
+              "explanation": "Since the user explicitly opted-in to a yanked version for `c`, it can be installed."
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": null,
+            "template": "simple",
+            "description": "A transitive dependency has both a yanked and an unyanked version, but can only be satisfied by a yanked. The user includes an opt-in to the yanked version of the transitive dependency.",
+            "source": "[PWD]/scenarios/yanked.json",
+            "version": "5c3bdfe0",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u251c\u2500\u2500 requires a",
+              "\u2502   \u2502   \u2514\u2500\u2500 satisfied by a-1.0.0",
+              "\u2502   \u251c\u2500\u2500 requires b",
+              "\u2502   \u2502   \u2514\u2500\u2500 satisfied by b-1.0.0",
+              "\u2502   \u2514\u2500\u2500 requires c==2.0.0",
+              "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u2514\u2500\u2500 a-1.0.0",
+              "\u2502       \u2514\u2500\u2500 requires c==2.0.0",
+              "\u2502           \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u251c\u2500\u2500 b",
+              "\u2502   \u2514\u2500\u2500 b-1.0.0",
+              "\u2502       \u2514\u2500\u2500 requires c<=3.0.0,>=1.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by c-1.0.0",
+              "\u2514\u2500\u2500 c",
+              "    \u251c\u2500\u2500 c-1.0.0",
+              "    \u2514\u2500\u2500 c-2.0.0 (yanked)"
+            ],
+            "module_name": "transitive_yanked_and_unyanked_dependency_opt_in"
           }
         ]
       }

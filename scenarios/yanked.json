@@ -1,0 +1,300 @@
+[
+    {
+        "name": "package-only-yanked",
+        "description": "The user requires any version of package `a` which only has yanked versions available.",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "yanked": true
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0"
+            },
+            "explanation": "Since there are only yanked versions of `a` available, it should be installed even though the user did not ask for the yanked version directly."
+        }
+    },
+    {
+        "name": "package-only-yanked-in-range",
+        "description": "The user requires a version of package `a` which only matches yanked versions.",
+        "root": {
+            "requires": [
+                "a>0.1.0"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {},
+                    "1.0.0": {
+                        "yanked": true
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": false,
+            "explanation": "Since there are other versions of `a` available, yanked versions should not be selected without explicit opt-in."
+        }
+    },
+    {
+        "name": "requires-package-yanked-and-final-any",
+        "description": "The user requires any version of package `a` has a yanked version available and an older unyanked version.",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {},
+                    "1.0.0": {
+                        "yanked": true
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "0.1.0"
+            },
+            "explanation": "The unyanked version should be selected."
+        }
+    },
+    {
+        "name": "package-yanked-specified-mixed-available",
+        "description": "The user requires any version of `a` and both yanked and unyanked releases are available.",
+        "root": {
+            "requires": [
+                "a>=0.1.0"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {},
+                    "0.2.0": {
+                        "yanked": true
+                    },
+                    "0.3.0": {},
+                    "1.0.0": {
+                        "yanked": true
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "0.3.0"
+            },
+            "explanation": "The latest unyanked version should be selected."
+        }
+    },
+    {
+        "name": "transitive-package-only-yanked",
+        "description": "The user requires any version of package `a` which requires `b` which only has yanked versions available.",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {
+                        "requires": [
+                            "b"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {
+                        "yanked": true
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "0.1.0",
+                "b": "1.0.1"
+            },
+            "explanation": "Since there are only yanked versions of `b` available, it should be selected even though the user did not opt-in to it."
+        }
+    },
+    {
+        "name": "transitive-package-only-yanked-in-range",
+        "description": "The user requires package `a` which has a dependency on a package which only matches yanked versions.",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {
+                        "requires": [
+                            "b>0.1"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "0.1.0": {},
+                    "1.0.0": {
+                        "yanked": true
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": false,
+            "explanation": "Since there are unyanked versions of `b` available, the yanked version should not be selected without explicit opt-in. The available version is excluded by the range requested by the user."
+        }
+    },
+    {
+        "name": "transitive-package-only-yanked-in-range-opt-in",
+        "description": "The user requires package `a` which has a dependency on a package which only matches yanked versions; the user has opted into allowing the yanked version of `b` explicitly.",
+        "root": {
+            "requires": [
+                "a",
+                "b==1.0.0"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {
+                        "requires": [
+                            "b>0.1"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "0.1.0": {},
+                    "1.0.0": {
+                        "yanked": true
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "0.1.0",
+                "b": "1.0.0"
+            },
+            "explanation": "Since the user included a dependency on `b` with a yanked specifier, a yanked version can be selected."
+        }
+    },
+    {
+        "name": "transitive-yanked-and-unyanked-dependency",
+        "description": "A transitive dependency has both a yanked and an unyanked version, but can only be satisfied by a yanked version",
+        "root": {
+            "requires": [
+                "a",
+                "b"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "c==2.0.0"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "c>=1.0.0,<=3.0.0"
+                        ]
+                    }
+                }
+            },
+            "c": {
+                "versions": {
+                    "1.0.0": {},
+                    "2.0.0": {
+                        "yanked": true
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": false,
+            "explanation": "Since the user did not explicitly opt-in to the yanked version, it cannot be used."
+        }
+    },
+    {
+        "name": "transitive-yanked-and-unyanked-dependency-opt-in",
+        "description": "A transitive dependency has both a yanked and an unyanked version, but can only be satisfied by a yanked. The user includes an opt-in to the yanked version of the transitive dependency.",
+        "root": {
+            "requires": [
+                "a",
+                "b",
+                "c==2.0.0"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "c==2.0.0"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "c>=1.0.0,<=3.0.0"
+                        ]
+                    }
+                }
+            },
+            "c": {
+                "versions": {
+                    "1.0.0": {},
+                    "2.0.0": {
+                        "yanked": true
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0",
+                "b": "1.0.0",
+                "c": "2.0.0"
+            },
+            "explanation": "Since the user explicitly opted-in to a yanked version for `c`, it can be installed."
+        }
+    }
+]
