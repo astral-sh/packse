@@ -19,7 +19,6 @@ on:
     # PyPI has a 60 minute rate limit for project creation.
     - cron: "*/90 * * * *"
 
-
 permissions:
   contents: read
 
@@ -118,7 +117,7 @@ jobs:
       - name: Build scenarios
         if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         run: |
-          poetry run packse build --short-names $SCENARIOS
+          poetry run packse build --skip-root --short-names $SCENARIOS
 
       - name: Publish scenarios [local]
         if: github.ref != 'refs/heads/main'

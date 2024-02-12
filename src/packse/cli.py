@@ -67,7 +67,12 @@ def entrypoint():
 
 
 def _call_build(args):
-    build(args.targets, rm_destination=args.rm, short_names=args.short_names)
+    build(
+        args.targets,
+        rm_destination=args.rm,
+        short_names=args.short_names,
+        skip_root=args.skip_root,
+    )
 
 
 def _call_build_package(args):
@@ -180,6 +185,11 @@ def _add_build_parser(subparsers):
         "--short-names",
         action="store_true",
         help="Exclude scenario names from generated packages.",
+    )
+    parser.add_argument(
+        "--skip-root",
+        action="store_true",
+        help='Do not build a "root" package for the scenario.',
     )
     _add_shared_arguments(parser)
 
