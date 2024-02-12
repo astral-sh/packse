@@ -77,7 +77,7 @@
             "a": {
                 "versions": {
                     "1.0.0": {
-                        "wheel-tags": [
+                        "wheel_tags": [
                             "unknown-tag"
                         ]
                     }
@@ -100,7 +100,7 @@
             "a": {
                 "versions": {
                     "1.0.0": {
-                        "wheel-tags": [
+                        "wheel_tags": [
                             "unknown-tag"
                         ],
                         "sdist": false
