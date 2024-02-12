@@ -4936,6 +4936,36 @@
         __version__ = "1.0.0"
   
       ''',
+      'build/no-sdist-no-wheels-with-matching-platform-e8c8850f/no-sdist-no-wheels-with-matching-platform-a-e8c8850f-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/no_sdist_no_wheels_with_matching_platform_a_e8c8850f"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/no_sdist_no_wheels_with_matching_platform_a_e8c8850f"]
+        
+        [project]
+        name = "no-sdist-no-wheels-with-matching-platform-a-e8c8850f"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/no-sdist-no-wheels-with-matching-platform-e8c8850f/no-sdist-no-wheels-with-matching-platform-a-e8c8850f-1.0.0/src/no_sdist_no_wheels_with_matching_platform_a_e8c8850f/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/no-sdist-no-wheels-with-matching-platform-e8c8850f/no-sdist-no-wheels-with-matching-platform-e8c8850f-0.0.0/pyproject.toml': 'md5:cb26fe30a740eead8831b9b42893a4bb',
+      'build/no-sdist-no-wheels-with-matching-platform-e8c8850f/no-sdist-no-wheels-with-matching-platform-e8c8850f-0.0.0/src/no_sdist_no_wheels_with_matching_platform_e8c8850f/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
       'build/no-wheels-0278f343/no-wheels-0278f343-0.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
@@ -5166,6 +5196,8 @@
       'dist/no-build-9ff1e173/no_build_9ff1e173-0.0.0.tar.gz': 'md5:58d83b069d07b08996bfaccfdbbff5b8',
       'dist/no-build-9ff1e173/no_build_a_9ff1e173-1.0.0-py3-none-any.whl': 'md5:9843af67f16b025592cea586a586f5aa',
       'dist/no-build-9ff1e173/no_build_a_9ff1e173-1.0.0.tar.gz': 'md5:0378fe1f863650f2d88c92307249e000',
+      'dist/no-sdist-no-wheels-with-matching-platform-e8c8850f/no_sdist_no_wheels_with_matching_platform_a_e8c8850f-1.0.0-py3-none-any.whl': 'md5:66eb17dd8f2cf6fadbc1ad185b6f088d',
+      'dist/no-sdist-no-wheels-with-matching-platform-e8c8850f/no_sdist_no_wheels_with_matching_platform_e8c8850f-0.0.0.tar.gz': 'md5:1f6407dd562363b378ed4602425a4d1f',
       'dist/no-wheels-0278f343/no_wheels_0278f343-0.0.0.tar.gz': 'md5:ec0291c77232fc587510858aad04698b',
       'dist/no-wheels-0278f343/no_wheels_a_0278f343-1.0.0.tar.gz': 'md5:8090c9aa9144d992ca8bca108142f27a',
       'dist/no-wheels-no-build-662cbd94/no_wheels_no_build_662cbd94-0.0.0.tar.gz': 'md5:cbd7b7cbbe510a22d85b82d0ddda64ba',
@@ -5205,6 +5237,17 @@
         │   │       ├── pyproject.toml
         │   │       └── src
         │   │           └── no_build_a_9ff1e173
+        │   │               └── __init__.py
+        │   ├── no-sdist-no-wheels-with-matching-platform-e8c8850f
+        │   │   ├── no-sdist-no-wheels-with-matching-platform-a-e8c8850f-1.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── no_sdist_no_wheels_with_matching_platform_a_e8c8850f
+        │   │   │           └── __init__.py
+        │   │   └── no-sdist-no-wheels-with-matching-platform-e8c8850f-0.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── no_sdist_no_wheels_with_matching_platform_e8c8850f
         │   │               └── __init__.py
         │   ├── no-wheels-0278f343
         │   │   ├── no-wheels-0278f343-0.0.0
@@ -5281,6 +5324,9 @@
             │   ├── no_build_9ff1e173-0.0.0.tar.gz
             │   ├── no_build_a_9ff1e173-1.0.0-py3-none-any.whl
             │   └── no_build_a_9ff1e173-1.0.0.tar.gz
+            ├── no-sdist-no-wheels-with-matching-platform-e8c8850f
+            │   ├── no_sdist_no_wheels_with_matching_platform_a_e8c8850f-1.0.0-py3-none-any.whl
+            │   └── no_sdist_no_wheels_with_matching_platform_e8c8850f-0.0.0.tar.gz
             ├── no-wheels-0278f343
             │   ├── no_wheels_0278f343-0.0.0.tar.gz
             │   └── no_wheels_a_0278f343-1.0.0.tar.gz
@@ -5303,7 +5349,7 @@
                 ├── specific_tag_and_default_a_8f7a81f1-1.0.0-py3-none-any.whl
                 └── specific_tag_and_default_a_8f7a81f1-1.0.0.tar.gz
         
-        66 directories, 53 files
+        74 directories, 59 files
   
       ''',
     }),
@@ -5311,6 +5357,7 @@
     'stdout': '''
       no-binary-10e961b8
       no-build-9ff1e173
+      no-sdist-no-wheels-with-matching-platform-e8c8850f
       no-wheels-0278f343
       no-wheels-no-build-662cbd94
       no-wheels-with-matching-platform-0c9f8397
@@ -7214,6 +7261,15 @@
           └── a-1.0.0
       
       no-wheels-with-matching-platform-0c9f8397
+      ├── environment
+      │   └── python3.8
+      ├── root
+      │   └── requires a
+      │       └── satisfied by a-1.0.0
+      └── a
+          └── a-1.0.0
+      
+      no-sdist-no-wheels-with-matching-platform-e8c8850f
       ├── environment
       │   └── python3.8
       ├── root

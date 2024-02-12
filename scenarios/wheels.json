@@ -89,6 +89,30 @@
         }
     },
     {
+        "name": "no-sdist-no-wheels-with-matching-platform",
+        "description": "No wheels with matching tags are available, nor are any source distributions available",
+        "root": {
+            "requires": [
+                "a"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "wheel-tags": [
+                            "unknown-tag"
+                        ],
+                        "sdist": false
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": false
+        }
+    },
+    {
         "name": "no-wheels-no-build",
         "description": "No wheels are available, only source distributions but the user has disabled builds.",
         "root": {
