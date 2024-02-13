@@ -101,7 +101,7 @@
                 "versions": {
                     "1.0.0": {
                         "wheel_tags": [
-                            "py3-any-macosx_10_0_ppc64"
+                            "py3-none-macosx_10_0_ppc64"
                         ],
                         "sdist": false
                     }
