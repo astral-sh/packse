@@ -49,6 +49,7 @@
       extra-required-c1e0ed38
       missing-extra-de25a6db
       multiple-extras-required-502cbb59
+      all-extras-required-4cf56e90
       extra-incompatible-with-extra-a5547b80
       extra-incompatible-with-extra-not-requested-8bb31c23
       extra-incompatible-with-root-aca6971b
@@ -133,6 +134,7 @@
           extra-required-c1e0ed38
           missing-extra-de25a6db
           multiple-extras-required-502cbb59
+          all-extras-required-4cf56e90
           extra-incompatible-with-extra-a5547b80
           extra-incompatible-with-extra-not-requested-8bb31c23
           extra-incompatible-with-root-aca6971b
@@ -222,6 +224,7 @@
           extra-required
           missing-extra
           multiple-extras-required
+          all-extras-required
           extra-incompatible-with-extra
           extra-incompatible-with-extra-not-requested
           extra-incompatible-with-root
@@ -321,6 +324,7 @@
           c1e0ed38
           de25a6db
           502cbb59
+          4cf56e90
           a5547b80
           8bb31c23
           aca6971b
