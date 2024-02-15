@@ -1746,6 +1746,158 @@
             "module_name": "multiple_extras_required"
           },
           {
+            "name": "all-extras-required",
+            "packages": [
+              {
+                "name": "all-extras-required-a-4cf56e90",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [
+                      {
+                        "name": "all",
+                        "requires": [
+                          "all-extras-required-a-4cf56e90[extra_b]",
+                          "all-extras-required-a-4cf56e90[extra_c]"
+                        ]
+                      },
+                      {
+                        "name": "extra_b",
+                        "requires": [
+                          "all-extras-required-b-4cf56e90"
+                        ]
+                      },
+                      {
+                        "name": "extra_c",
+                        "requires": [
+                          "all-extras-required-c-4cf56e90"
+                        ]
+                      }
+                    ],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              },
+              {
+                "name": "all-extras-required-b-4cf56e90",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              },
+              {
+                "name": "all-extras-required-c-4cf56e90",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "1.0.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "all-extras-required-a-4cf56e90[all]",
+                  "name": "all-extras-required-a-4cf56e90",
+                  "module_name": "all_extras_required_a_4cf56e90"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": [
+                {
+                  "name": "all-extras-required-a-4cf56e90",
+                  "version": "1.0.0",
+                  "module_name": "all_extras_required_a_4cf56e90"
+                },
+                {
+                  "name": "all-extras-required-b-4cf56e90",
+                  "version": "1.0.0",
+                  "module_name": "all_extras_required_b_4cf56e90"
+                },
+                {
+                  "name": "all-extras-required-c-4cf56e90",
+                  "version": "1.0.0",
+                  "module_name": "all_extras_required_c_4cf56e90"
+                }
+              ],
+              "explanation": null
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
+            "template": "simple",
+            "description": "Multiple optional dependencies are requested for the via an 'all' extra.",
+            "source": "[PWD]/scenarios/extras.json",
+            "version": "4cf56e90",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a[all]",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-1.0.0",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-1.0.0[all]",
+              "\u2502       \u251c\u2500\u2500 satisfied by a-1.0.0[extra_b]",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0[extra_c]",
+              "\u251c\u2500\u2500 a",
+              "\u2502   \u251c\u2500\u2500 a-1.0.0",
+              "\u2502   \u251c\u2500\u2500 a-1.0.0[all]",
+              "\u2502   \u2502   \u251c\u2500\u2500 requires a[extra_b]",
+              "\u2502   \u2502   \u2502   \u251c\u2500\u2500 satisfied by a-1.0.0",
+              "\u2502   \u2502   \u2502   \u251c\u2500\u2500 satisfied by a-1.0.0[all]",
+              "\u2502   \u2502   \u2502   \u251c\u2500\u2500 satisfied by a-1.0.0[extra_b]",
+              "\u2502   \u2502   \u2502   \u2514\u2500\u2500 satisfied by a-1.0.0[extra_c]",
+              "\u2502   \u2502   \u2514\u2500\u2500 requires a[extra_c]",
+              "\u2502   \u2502       \u251c\u2500\u2500 satisfied by a-1.0.0",
+              "\u2502   \u2502       \u251c\u2500\u2500 satisfied by a-1.0.0[all]",
+              "\u2502   \u2502       \u251c\u2500\u2500 satisfied by a-1.0.0[extra_b]",
+              "\u2502   \u2502       \u2514\u2500\u2500 satisfied by a-1.0.0[extra_c]",
+              "\u2502   \u251c\u2500\u2500 a-1.0.0[extra_b]",
+              "\u2502   \u2502   \u2514\u2500\u2500 requires b",
+              "\u2502   \u2502       \u2514\u2500\u2500 satisfied by b-1.0.0",
+              "\u2502   \u2514\u2500\u2500 a-1.0.0[extra_c]",
+              "\u2502       \u2514\u2500\u2500 requires c",
+              "\u2502           \u2514\u2500\u2500 satisfied by c-1.0.0",
+              "\u251c\u2500\u2500 b",
+              "\u2502   \u2514\u2500\u2500 b-1.0.0",
+              "\u2514\u2500\u2500 c",
+              "    \u2514\u2500\u2500 c-1.0.0"
+            ],
+            "module_name": "all_extras_required"
+          },
+          {
             "name": "extra-incompatible-with-extra",
             "packages": [
               {
