@@ -6,6 +6,10 @@ env:
   PY_COLORS: 1
   POETRY_VERSION: "1.6.1"
 
+permissions:
+  id-token: write # Needed for AWS CodeArtifact OIDC
+  contents: read
+
 on:
   pull_request:
     types: [opened, reopened, synchronize]
@@ -18,9 +22,6 @@ on:
     # This ensures that after rate limits are encountered, we attempt to publish again.
     # PyPI has a 60 minute rate limit for project creation.
     - cron: "*/90 * * * *"
-
-permissions:
-  contents: read
 
 jobs:
   publish-packages:
@@ -130,6 +131,22 @@ jobs:
 
           # Shutdown the index server
           poetry run packse index down
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: us-east-2
+          role-to-assume: arn:aws:iam::590183856360:role/PublishGitHubPackseIsolated
+          role-session-name: PacksePublishPackage
+          role-duration-seconds: 900
+
+      - name: Publish scenarios [AWS CodeArtifact]
+        env:
+          PACKSE_PUBLISH_USERNAME: "aws"
+        run: |
+          export PACKSE_PUBLISH_PASSWORD=$(aws codeartifact get-authorization-token --domain astral --domain-owner 590183856360 --region us-east-2 --query authorizationToken --output text)
+          export INDEX_URL=$(aws codeartifact get-repository-endpoint --domain astral --domain-owner 590183856360 --repository astral-isolated --region us-east-2 --format pypi --query repositoryEndpoint --output text)
+          poetry run packse publish --index-url "$INDEX_URL" --skip-existing dist/*
 
       - name: Publish scenarios [test pypi]
         if: github.ref == 'refs/heads/main' && (steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure')
