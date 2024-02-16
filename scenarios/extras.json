@@ -101,7 +101,7 @@
     },
     {
         "name": "all-extras-required",
-        "description": "Multiple optional dependencies are requested for the via an 'all' extra.",
+        "description": "Multiple optional dependencies are requested for the package via an 'all' extra.",
         "root": {
             "requires": [
                 "a[all]"
