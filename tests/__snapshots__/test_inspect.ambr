@@ -1859,7 +1859,7 @@
               "no_binary": []
             },
             "template": "simple",
-            "description": "Multiple optional dependencies are requested for the via an 'all' extra.",
+            "description": "Multiple optional dependencies are requested for the package via an 'all' extra.",
             "source": "[PWD]/scenarios/extras.json",
             "version": "4cf56e90",
             "tree": [
