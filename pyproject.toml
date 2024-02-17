@@ -1,23 +1,27 @@
-[project]
-name = "packse"
-version = "0.0.0"
-dependencies = []
-authors = [
-    { name = "Zanie", email = "contact@zanie.dev" },
-]
-description = ''
-readme = "README.md"
-requires-python = ">=3.12"
-license = "MIT"
-keywords = []
-
 [tool.poetry]
 name = "packse"
 version = "0.0.0"
 description = ""
 authors = ["Zanie <contact@zanie.dev>"]
-license = "MIT"
 readme = "README.md"
+keywords = [
+  "uv", "packse", "requirements", "packaging", "testing"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "License :: OSI Approved :: MIT License",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Quality Assurance",
+  "Topic :: Software Development :: Testing",
+  "Topic :: Software Development :: Libraries",
+]
+
 
 [tool.poetry.scripts]
 packse = "packse.cli:entrypoint"
