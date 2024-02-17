@@ -18,7 +18,7 @@
         name = "foo"
         version = "1.0.0"
         dependencies = []
-        requires-python = ">=3.8"
+        requires-python = ""
         description = ""
         
         [project.optional-dependencies]
@@ -28,8 +28,8 @@
         __version__ = "1.0.0"
   
       ''',
-      'dist/foo/foo-1.0.0-py3-none-any.whl': 'md5:d185c7ccef96f6a64414eb61db294897',
-      'dist/foo/foo-1.0.0.tar.gz': 'md5:bd183e51585849bfeab448cbd6b3f24d',
+      'dist/foo/foo-1.0.0-py2.py3-none-any.whl': 'md5:35dcd5267ac6e12eda451fa49d303371',
+      'dist/foo/foo-1.0.0.tar.gz': 'md5:2e595000082563556e12d7c783827197',
       'tree': '''
         test_build_pkg0
         ├── build
@@ -41,7 +41,7 @@
         │                   └── __init__.py
         └── dist
             └── foo
-                ├── foo-1.0.0-py3-none-any.whl
+                ├── foo-1.0.0-py2.py3-none-any.whl
                 └── foo-1.0.0.tar.gz
         
         7 directories, 4 files
@@ -51,7 +51,7 @@
     'stderr': '''
       Generated project for 'foo-1.0.0'in [TIME]
       Built package 'foo-1.0.0' in [TIME]
-      Linked distribution to dist/foo/foo-1.0.0-py3-none-any.whl
+      Linked distribution to dist/foo/foo-1.0.0-py2.py3-none-any.whl
       Linked distribution to dist/foo/foo-1.0.0.tar.gz
       Done in [TIME]
   
@@ -73,8 +73,9 @@
   dict({
     'exit_code': 2,
     'stderr': '''
-      usage: packse build-pkg [-h] [-t WHEEL_TAG] [--no-wheel] [--no-sdist] [--rm]
-                              [-v] [-q]
+      usage: packse build-pkg [-h] [-t WHEEL_TAG] [--no-wheel]
+                              [--requires-python REQUIRES_PYTHON] [--no-sdist]
+                              [--rm] [-v] [-q]
                               name version
       packse build-pkg: error: the following arguments are required: name, version
   
@@ -101,7 +102,7 @@
         name = "foo"
         version = "1.0.0"
         dependencies = []
-        requires-python = ">=3.8"
+        requires-python = ""
         description = ""
         
         [project.optional-dependencies]
@@ -111,7 +112,7 @@
         __version__ = "1.0.0"
   
       ''',
-      'dist/foo/foo-1.0.0-py3-none-any.whl': 'md5:d185c7ccef96f6a64414eb61db294897',
+      'dist/foo/foo-1.0.0-py2.py3-none-any.whl': 'md5:35dcd5267ac6e12eda451fa49d303371',
       'tree': '''
         test_build_pkg_no_sdist0
         ├── build
@@ -123,7 +124,7 @@
         │                   └── __init__.py
         └── dist
             └── foo
-                └── foo-1.0.0-py3-none-any.whl
+                └── foo-1.0.0-py2.py3-none-any.whl
         
         7 directories, 3 files
   
@@ -132,7 +133,7 @@
     'stderr': '''
       Generated project for 'foo-1.0.0'in [TIME]
       Built package 'foo-1.0.0' in [TIME]
-      Linked distribution to dist/foo/foo-1.0.0-py3-none-any.whl
+      Linked distribution to dist/foo/foo-1.0.0-py2.py3-none-any.whl
       Done in [TIME]
   
     ''',
@@ -143,8 +144,9 @@
   dict({
     'exit_code': 2,
     'stderr': '''
-      usage: packse build-pkg [-h] [-t WHEEL_TAG] [--no-wheel] [--no-sdist] [--rm]
-                              [-v] [-q]
+      usage: packse build-pkg [-h] [-t WHEEL_TAG] [--no-wheel]
+                              [--requires-python REQUIRES_PYTHON] [--no-sdist]
+                              [--rm] [-v] [-q]
                               name version
       packse build-pkg: error: the following arguments are required: version
   
@@ -171,7 +173,7 @@
         name = "foo"
         version = "1.0.0"
         dependencies = []
-        requires-python = ">=3.8"
+        requires-python = ""
         description = ""
         
         [project.optional-dependencies]
@@ -181,7 +183,7 @@
         __version__ = "1.0.0"
   
       ''',
-      'dist/foo/foo-1.0.0.tar.gz': 'md5:bd183e51585849bfeab448cbd6b3f24d',
+      'dist/foo/foo-1.0.0.tar.gz': 'md5:2e595000082563556e12d7c783827197',
       'tree': '''
         test_build_pkg_no_wheel0
         ├── build
@@ -228,7 +230,7 @@
         name = "foo"
         version = "1.0.0"
         dependencies = []
-        requires-python = ">=3.8"
+        requires-python = ""
         description = ""
         
         [project.optional-dependencies]
@@ -238,9 +240,9 @@
         __version__ = "1.0.0"
   
       ''',
-      'dist/foo/foo-1.0.0-tag1.whl': 'md5:d185c7ccef96f6a64414eb61db294897',
-      'dist/foo/foo-1.0.0-tag2.whl': 'md5:d185c7ccef96f6a64414eb61db294897',
-      'dist/foo/foo-1.0.0.tar.gz': 'md5:bd183e51585849bfeab448cbd6b3f24d',
+      'dist/foo/foo-1.0.0-py2.tag1.whl': 'md5:35dcd5267ac6e12eda451fa49d303371',
+      'dist/foo/foo-1.0.0-py2.tag2.whl': 'md5:35dcd5267ac6e12eda451fa49d303371',
+      'dist/foo/foo-1.0.0.tar.gz': 'md5:2e595000082563556e12d7c783827197',
       'tree': '''
         test_build_pkg_wheel_tags0
         ├── build
@@ -252,8 +254,8 @@
         │                   └── __init__.py
         └── dist
             └── foo
-                ├── foo-1.0.0-tag1.whl
-                ├── foo-1.0.0-tag2.whl
+                ├── foo-1.0.0-py2.tag1.whl
+                ├── foo-1.0.0-py2.tag2.whl
                 └── foo-1.0.0.tar.gz
         
         7 directories, 5 files
@@ -263,8 +265,8 @@
     'stderr': '''
       Generated project for 'foo-1.0.0'in [TIME]
       Built package 'foo-1.0.0' in [TIME]
-      Linked distribution to dist/foo/foo-1.0.0-tag1.whl
-      Linked distribution to dist/foo/foo-1.0.0-tag2.whl
+      Linked distribution to dist/foo/foo-1.0.0-py2.tag1.whl
+      Linked distribution to dist/foo/foo-1.0.0-py2.tag2.whl
       Linked distribution to dist/foo/foo-1.0.0.tar.gz
       Done in [TIME]
   
