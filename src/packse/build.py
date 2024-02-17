@@ -312,6 +312,7 @@ def build_package(
     version: str,
     no_wheel: bool,
     no_sdist: bool,
+    requires_python: str | None,
     wheel_tags: list[str],
     rm_destination: bool,
 ):
@@ -346,7 +347,10 @@ def build_package(
     dist_destination.mkdir(parents=True)
     package_name = name
     package_version = PackageMetadata(
-        sdist=not no_sdist, wheel=not no_wheel, wheel_tags=wheel_tags
+        sdist=not no_sdist,
+        wheel=not no_wheel,
+        wheel_tags=wheel_tags,
+        requires_python=requires_python,
     )
     module_name = package_name.replace("-", "_")
 

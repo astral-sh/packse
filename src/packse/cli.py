@@ -77,7 +77,13 @@ def _call_build(args):
 
 def _call_build_package(args):
     build_package(
-        args.name, args.version, args.no_wheel, args.no_sdist, args.wheel_tag, args.rm
+        args.name,
+        args.version,
+        args.no_wheel,
+        args.no_sdist,
+        args.requires_python,
+        args.wheel_tag,
+        args.rm,
     )
 
 
@@ -218,6 +224,12 @@ def _add_build_package_parser(subparsers):
         "--no-wheel",
         action="store_true",
         help="Disable building wheels",
+    )
+    parser.add_argument(
+        "--requires-python",
+        type=str,
+        default=None,
+        help="The package Python requirement",
     )
     parser.add_argument(
         "--no-sdist",
