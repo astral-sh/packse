@@ -346,11 +346,11 @@ def build_package(
 
     dist_destination.mkdir(parents=True)
     package_name = name
+    extra = {}
+    if requires_python is not None:
+        extra["requires_python"] = requires_python
     package_version = PackageMetadata(
-        sdist=not no_sdist,
-        wheel=not no_wheel,
-        wheel_tags=wheel_tags,
-        requires_python=requires_python,
+        sdist=not no_sdist, wheel=not no_wheel, wheel_tags=wheel_tags, **extra
     )
     module_name = package_name.replace("-", "_")
 
