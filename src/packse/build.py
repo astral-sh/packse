@@ -47,11 +47,20 @@ def build(
         if not target.exists():
             raise FileNotFound(target)
 
-        try:
-            logger.debug("Loading %s", target)
-            scenarios.extend(load_scenarios(target))
-        except Exception as exc:
-            raise InvalidScenario(target, reason=str(exc)) from exc
+        if target.is_dir():
+            for target in target.glob("*.json"):
+                try:
+                    logger.debug("Loading %s", target)
+                    scenarios.extend(load_scenarios(target))
+                except Exception as exc:
+                    invalid = InvalidScenario(target, reason=str(exc))
+                    print(f"Skipping file: {invalid}")
+        else:
+            try:
+                logger.debug("Loading %s", target)
+                scenarios.extend(load_scenarios(target))
+            except Exception as exc:
+                raise InvalidScenario(target, reason=str(exc)) from exc
 
     # Then build each one
     with ThreadPoolExecutor(thread_name_prefix="packse-scenario-") as executor:
