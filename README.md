@@ -145,6 +145,8 @@ Packse will watch for changes to scenarios, and publish new versions on each cha
 Note when developing, it is often useful to use the `--no-hash` flag to avoid having to determine the latest
 hash for the scenario.
 
+By default, the `serve` index will fallback to PyPI for missing packages. To test in isolation, use the `--offline` flag.
+
 ### Running a package index
 
 A local package index can be controlled with the `index` command. For example, to start a local package index:

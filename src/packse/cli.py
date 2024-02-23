@@ -100,6 +100,7 @@ def _call_serve(args):
         storage_path=args.storage_path,
         short_names=args.short_names,
         no_hash=args.no_hash,
+        offline=args.offline,
     )
 
 
@@ -363,7 +364,11 @@ def _add_serve_parser(subparsers):
         action="store_true",
         help="Exclude scenario version hashes from generated packages.",
     )
-
+    parser.add_argument(
+        "--offline",
+        action="store_true",
+        help="Run the index servers without fallback acccess to the real PyPI.",
+    )
     _add_shared_arguments(parser)
 
 

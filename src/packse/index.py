@@ -305,19 +305,22 @@ def add_build_requirements(
     Pushes package build requirements to an index that does not allow fallback to PyPI.
     """
     build_directory = __development_base_path__ / "vendor" / "build"
-    logger.debug("Uploading build packages to index %s", to_index)
-    subprocess.check_output(
-        [
-            "devpi",
-            "upload",
-            "--clientdir",
-            str(client_storage),
-            "--from-dir",
-            str(build_directory.resolve()),
-            "--index",
-            to_index,
-        ]
-    )
+    if build_directory.exists():
+        logger.debug("Uploading build packages to index %s", to_index)
+        subprocess.check_output(
+            [
+                "devpi",
+                "upload",
+                "--clientdir",
+                str(client_storage),
+                "--from-dir",
+                str(build_directory.resolve()),
+                "--index",
+                to_index,
+            ]
+        )
+    else:
+        logger.warning("No vendored build dependencies found at %s" % build_directory)
 
 
 def create_mirror_index(
