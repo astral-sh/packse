@@ -11,6 +11,7 @@ from packse.error import RequiresExtra
 try:
     import watchfiles
 except ImportError:
+    watchfiles = None
     pass
 
 
@@ -27,9 +28,7 @@ def serve(
     if not shutil.which("pypi-server"):
         raise RequiresExtra("serve command", "serve")
 
-    try:
-        import watchfiles
-    except ImportError:
+    if watchfiles is None:
         raise RequiresExtra("serve command", "serve")
 
     if not targets:
