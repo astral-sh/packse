@@ -25,7 +25,7 @@ from packse.scenario import (
     PackageMetadata,
     Scenario,
     load_scenarios,
-    scenario_version,
+    scenario_hash,
 )
 from packse.template import TemplateConfig, create_from_template, load_template_config
 
@@ -36,6 +36,7 @@ def build(
     targets: list[Path],
     rm_destination: bool,
     short_names: bool,
+    no_hash: bool,
     skip_root: bool,
     work_dir: Path | None = None,
 ):
@@ -70,6 +71,7 @@ def build(
                 scenario,
                 rm_destination,
                 short_names,
+                no_hash,
                 skip_root,
                 work_dir,
             )
@@ -87,6 +89,7 @@ def build_scenario(
     scenario: Scenario,
     rm_destination: bool,
     short_names: bool,
+    no_hash: bool,
     skip_root: bool,
     work_dir: Path,
 ) -> str:
@@ -96,16 +99,18 @@ def build_scenario(
     Returns the scenario's entrypoint package name.
     """
 
-    version = scenario_version(scenario)
-    unique_name = f"{scenario.name}-{version}"
+    hash = scenario_hash(scenario)
+    name = scenario.name
+    if not no_hash:
+        name = f"{name}-{hash}"
 
-    build_destination = work_dir / "build" / unique_name
-    dist_destination = work_dir / "dist" / unique_name
+    build_destination = work_dir / "build" / name
+    dist_destination = work_dir / "dist" / name
     start_time = time.time()
 
     logger.info(
         "Building '%s' in directory '%s'",
-        unique_name,
+        name,
         build_destination.relative_to(work_dir),
     )
 
@@ -130,13 +135,14 @@ def build_scenario(
             executor.submit(
                 build_scenario_package,
                 scenario=scenario,
-                scenario_version=version,
+                scenario_version=hash,
                 name=name,
                 package=package,
                 work_dir=work_dir,
                 build_destination=build_destination,
                 dist_destination=dist_destination,
                 short_names=short_names,
+                no_hash=no_hash,
             )
             for name, package in scenario.packages.items()
         ]
@@ -146,13 +152,14 @@ def build_scenario(
                 executor.submit(
                     build_scenario_package,
                     scenario=scenario,
-                    scenario_version=version,
+                    scenario_version=hash,
                     name=scenario.name,
                     package=make_root_package(scenario),
                     work_dir=work_dir,
                     build_destination=build_destination,
                     dist_destination=dist_destination,
                     short_names=short_names,
+                    no_hash=no_hash,
                 )
             )
 
@@ -163,10 +170,10 @@ def build_scenario(
 
     logger.info(
         "Built scenario '%s' in %.2fs",
-        unique_name,
+        name,
         time.time() - start_time,
     )
-    return unique_name
+    return name
 
 
 def make_root_package(scenario: Scenario) -> Package:
@@ -196,8 +203,11 @@ def build_scenario_package(
     build_destination: Path,
     dist_destination: Path,
     short_names: bool,
+    no_hash: bool,
 ):
-    package_name = f"{name}-{scenario_version}"
+    package_name = name
+    if not no_hash:
+        package_name = f"{package_name}-{scenario_version}"
     if not short_names and name != scenario.name:
         package_name = f"{scenario.name}-{package_name}"
 
@@ -220,7 +230,7 @@ def build_scenario_package(
                 "version": version,
                 "dependencies": [
                     requirement.with_unique_name(
-                        scenario, scenario_version, short_names
+                        scenario, scenario_version, short_names, no_hash
                     )
                     for requirement in package_version.requires
                 ],
@@ -229,7 +239,7 @@ def build_scenario_package(
                         "name": extra,
                         "dependencies": [
                             requirement.with_unique_name(
-                                scenario, scenario_version, short_names
+                                scenario, scenario_version, short_names, no_hash
                             )
                             for requirement in depends
                         ],

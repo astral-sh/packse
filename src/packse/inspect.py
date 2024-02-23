@@ -11,7 +11,7 @@ from packse.scenario import (
     Requirement,
     Scenario,
     load_scenarios,
-    scenario_version,
+    scenario_hash,
 )
 from packse.view import dependency_tree
 
@@ -41,7 +41,7 @@ def inspect(targets: list[Path], skip_invalid: bool = False, short_names: bool =
 
             raw = scenario.dict()
             raw["source"] = str(source)
-            raw["version"] = scenario_version(scenario)
+            raw["version"] = scenario_hash(scenario)
             raw["tree"] = dependency_tree(scenario).splitlines()
             result["scenarios"].append(raw)
 

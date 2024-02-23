@@ -23,6 +23,7 @@ def serve(
     host: str = "localhost",
     port: int = 3141,
     short_names: bool = False,
+    no_hash: bool = False,
     storage_path: Path | None = None,
 ):
     if not shutil.which("pypi-server"):
@@ -41,17 +42,18 @@ def serve(
             rm_destination=True,
             skip_root=False,
             short_names=short_names,
+            no_hash=no_hash,
             work_dir=storage_path,
         )
 
     with ThreadPoolExecutor(
         thread_name_prefix="packse-serve-", max_workers=2
     ) as executor:
-        executor.submit(rebuild_on_change, targets, short_names, storage_path)
+        executor.submit(rebuild_on_change, targets, short_names, no_hash, storage_path)
         executor.submit(serve_packages, host, port, storage_path)
 
 
-def rebuild_on_change(targets, short_names, storage_path):
+def rebuild_on_change(targets, short_names, no_hash, storage_path):
     for changes in watchfiles.watch(*targets):
         targets = [path for kind, path in changes if kind != watchfiles.Change.deleted]
         targets = [Path(target) for target in targets if Path(target).is_file()]
@@ -61,6 +63,7 @@ def rebuild_on_change(targets, short_names, storage_path):
             rm_destination=True,
             skip_root=False,
             short_names=short_names,
+            no_hash=no_hash,
             work_dir=storage_path,
         )
 
