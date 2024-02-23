@@ -118,7 +118,7 @@ def index_up(
 
             all_index_url = f"{server_url}/{all_index}"
             local_index_url = f"{server_url}/{local_index}"
-            logger.info("Indexes available at %s/<index-name>", server_url)
+            logger.info("Indexes available at %s/<index-name>/+simple", server_url)
 
             logger.debug(
                 "To use `devpi` commands, include `--clientdir %s`", client_storage
