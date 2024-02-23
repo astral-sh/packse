@@ -170,7 +170,7 @@ When installing packages, you can choose the index to use by passing the `--inde
 e.g. with `pip`:
 
 ```bash
-pip install --index-url http://127.0.0.1:3141/packages/local example-0611cb74
+pip install --index-url http://127.0.0.1:3141/packages/local/+simple example-0611cb74
 ```
 
 To stop the index, use `packse index down`:
