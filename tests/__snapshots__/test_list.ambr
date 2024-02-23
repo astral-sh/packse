@@ -73,6 +73,10 @@
       transitive-prerelease-and-stable-dependency-opt-in-0778b0eb
       transitive-prerelease-and-stable-dependency-many-versions-cc6a6eac
       transitive-prerelease-and-stable-dependency-many-versions-holes-041e36bc
+      package-only-prereleases-boundary-edcef999
+      package-prereleases-boundary-6d600873
+      package-prereleases-global-boundary-cf1b8081
+      package-prereleases-specifier-boundary-357b9636
       requires-python-version-does-not-exist-4486c0e5
       requires-python-version-less-than-current-d4ea58de
       requires-python-version-greater-than-current-741c8854
@@ -160,6 +164,10 @@
           transitive-prerelease-and-stable-dependency-opt-in-0778b0eb
           transitive-prerelease-and-stable-dependency-many-versions-cc6a6eac
           transitive-prerelease-and-stable-dependency-many-versions-holes-041e36bc
+          package-only-prereleases-boundary-edcef999
+          package-prereleases-boundary-6d600873
+          package-prereleases-global-boundary-cf1b8081
+          package-prereleases-specifier-boundary-357b9636
       scenarios/requires-python.json
           requires-python-version-does-not-exist-4486c0e5
           requires-python-version-less-than-current-d4ea58de
@@ -250,6 +258,10 @@
           transitive-prerelease-and-stable-dependency-opt-in
           transitive-prerelease-and-stable-dependency-many-versions
           transitive-prerelease-and-stable-dependency-many-versions-holes
+          package-only-prereleases-boundary
+          package-prereleases-boundary
+          package-prereleases-global-boundary
+          package-prereleases-specifier-boundary
       scenarios/requires-python.json
           requires-python-version-does-not-exist
           requires-python-version-less-than-current
@@ -350,6 +362,10 @@
           0778b0eb
           cc6a6eac
           041e36bc
+          edcef999
+          6d600873
+          cf1b8081
+          357b9636
       scenarios/requires-python.json
           4486c0e5
           d4ea58de

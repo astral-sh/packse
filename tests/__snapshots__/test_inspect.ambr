@@ -4661,6 +4661,402 @@
             "module_name": "transitive_prerelease_and_stable_dependency_many_versions_holes"
           },
           {
+            "name": "package-only-prereleases-boundary",
+            "packages": [
+              {
+                "name": "package-only-prereleases-boundary-a-edcef999",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.1.0a1"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.2.0a1"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.3.0a1"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "package-only-prereleases-boundary-a-edcef999<0.2.0",
+                  "name": "package-only-prereleases-boundary-a-edcef999",
+                  "module_name": "package_only_prereleases_boundary_a_edcef999"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": [
+                {
+                  "name": "package-only-prereleases-boundary-a-edcef999",
+                  "version": "0.1.0a1",
+                  "module_name": "package_only_prereleases_boundary_a_edcef999"
+                }
+              ],
+              "explanation": "Since there are only prerelease versions of `a` available, a prerelease is allowed. Since the user did not explictly request a pre-release, pre-releases at the boundary should not be selected."
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
+            "template": "simple",
+            "description": "The user requires a non-prerelease version of `a` which only has prerelease versions available. There are pre-releases on the boundary of their range.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "version": "edcef999",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a<0.2.0",
+              "\u2502       \u2514\u2500\u2500 unsatisfied: no matching version",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-0.1.0a1",
+              "    \u251c\u2500\u2500 a-0.2.0a1",
+              "    \u2514\u2500\u2500 a-0.3.0a1"
+            ],
+            "module_name": "package_only_prereleases_boundary"
+          },
+          {
+            "name": "package-prereleases-boundary",
+            "packages": [
+              {
+                "name": "package-prereleases-boundary-a-6d600873",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.1.0"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.2.0a1"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.3.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "package-prereleases-boundary-a-6d600873<0.2.0",
+                  "name": "package-prereleases-boundary-a-6d600873",
+                  "module_name": "package_prereleases_boundary_a_6d600873"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": [
+                {
+                  "name": "package-prereleases-boundary-a-6d600873",
+                  "version": "0.1.0",
+                  "module_name": "package_prereleases_boundary_a_6d600873"
+                }
+              ],
+              "explanation": "Since the user did not use a pre-release specifier, pre-releases at the boundary should not be selected even though pre-releases are allowed."
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": {
+              "python": null,
+              "prereleases": true,
+              "no_build": [],
+              "no_binary": []
+            },
+            "template": "simple",
+            "description": "The user requires a non-prerelease version of `a` but has enabled pre-releases. There are pre-releases on the boundary of their range.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "version": "6d600873",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a<0.2.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-0.1.0",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-0.1.0",
+              "    \u251c\u2500\u2500 a-0.2.0a1",
+              "    \u2514\u2500\u2500 a-0.3.0"
+            ],
+            "module_name": "package_prereleases_boundary"
+          },
+          {
+            "name": "package-prereleases-global-boundary",
+            "packages": [
+              {
+                "name": "package-prereleases-global-boundary-a-cf1b8081",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.1.0"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.2.0a1"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.3.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "package-prereleases-global-boundary-a-cf1b8081<0.2.0",
+                  "name": "package-prereleases-global-boundary-a-cf1b8081",
+                  "module_name": "package_prereleases_global_boundary_a_cf1b8081"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": [
+                {
+                  "name": "package-prereleases-global-boundary-a-cf1b8081",
+                  "version": "0.1.0",
+                  "module_name": "package_prereleases_global_boundary_a_cf1b8081"
+                }
+              ],
+              "explanation": "Since the user did not use a pre-release specifier, pre-releases at the boundary should not be selected even though pre-releases are allowed."
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": {
+              "python": null,
+              "prereleases": true,
+              "no_build": [],
+              "no_binary": []
+            },
+            "template": "simple",
+            "description": "The user requires a non-prerelease version of `a` but has enabled pre-releases. There are pre-releases on the boundary of their range.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "version": "cf1b8081",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a<0.2.0",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-0.1.0",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-0.1.0",
+              "    \u251c\u2500\u2500 a-0.2.0a1",
+              "    \u2514\u2500\u2500 a-0.3.0"
+            ],
+            "module_name": "package_prereleases_global_boundary"
+          },
+          {
+            "name": "package-prereleases-specifier-boundary",
+            "packages": [
+              {
+                "name": "package-prereleases-specifier-boundary-a-357b9636",
+                "versions": [
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.1.0"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.2.0"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.2.0a1"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.2.0a2"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.2.0a3"
+                  },
+                  {
+                    "requires_python": ">=3.8",
+                    "requires": [],
+                    "extras": [],
+                    "sdist": true,
+                    "wheel": true,
+                    "yanked": false,
+                    "wheel_tags": [],
+                    "description": "",
+                    "version": "0.3.0"
+                  }
+                ]
+              }
+            ],
+            "root": {
+              "requires_python": ">=3.8",
+              "requires": [
+                {
+                  "requirement": "package-prereleases-specifier-boundary-a-357b9636<0.2.0a2",
+                  "name": "package-prereleases-specifier-boundary-a-357b9636",
+                  "module_name": "package_prereleases_specifier_boundary_a_357b9636"
+                }
+              ]
+            },
+            "expected": {
+              "satisfiable": true,
+              "packages": [
+                {
+                  "name": "package-prereleases-specifier-boundary-a-357b9636",
+                  "version": "0.2.0a1",
+                  "module_name": "package_prereleases_specifier_boundary_a_357b9636"
+                }
+              ],
+              "explanation": "Since the user used a pre-release specifier, pre-releases at the boundary should be selected."
+            },
+            "environment": {
+              "python": "3.8",
+              "additional_python": []
+            },
+            "resolver_options": {
+              "python": null,
+              "prereleases": false,
+              "no_build": [],
+              "no_binary": []
+            },
+            "template": "simple",
+            "description": "The user requires a prerelease version of `a`. There are pre-releases on the boundary of their range.",
+            "source": "[PWD]/scenarios/prereleases.json",
+            "version": "357b9636",
+            "tree": [
+              "\u251c\u2500\u2500 environment",
+              "\u2502   \u2514\u2500\u2500 python3.8",
+              "\u251c\u2500\u2500 root",
+              "\u2502   \u2514\u2500\u2500 requires a<0.2.0a2",
+              "\u2502       \u2514\u2500\u2500 satisfied by a-0.1.0",
+              "\u2514\u2500\u2500 a",
+              "    \u251c\u2500\u2500 a-0.1.0",
+              "    \u251c\u2500\u2500 a-0.2.0",
+              "    \u251c\u2500\u2500 a-0.2.0a1",
+              "    \u251c\u2500\u2500 a-0.2.0a2",
+              "    \u251c\u2500\u2500 a-0.2.0a3",
+              "    \u2514\u2500\u2500 a-0.3.0"
+            ],
+            "module_name": "package_prereleases_specifier_boundary"
+          },
+          {
             "name": "requires-python-version-does-not-exist",
             "packages": [
               {

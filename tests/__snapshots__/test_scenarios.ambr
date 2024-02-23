@@ -2246,6 +2246,86 @@
         __version__ = "1.0.0a1"
   
       ''',
+      'build/package-only-prereleases-boundary-edcef999/package-only-prereleases-boundary-a-edcef999-0.1.0a1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_only_prereleases_boundary_a_edcef999"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_only_prereleases_boundary_a_edcef999"]
+        
+        [project]
+        name = "package-only-prereleases-boundary-a-edcef999"
+        version = "0.1.0a1"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-only-prereleases-boundary-edcef999/package-only-prereleases-boundary-a-edcef999-0.1.0a1/src/package_only_prereleases_boundary_a_edcef999/__init__.py': '''
+        __version__ = "0.1.0a1"
+  
+      ''',
+      'build/package-only-prereleases-boundary-edcef999/package-only-prereleases-boundary-a-edcef999-0.2.0a1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_only_prereleases_boundary_a_edcef999"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_only_prereleases_boundary_a_edcef999"]
+        
+        [project]
+        name = "package-only-prereleases-boundary-a-edcef999"
+        version = "0.2.0a1"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-only-prereleases-boundary-edcef999/package-only-prereleases-boundary-a-edcef999-0.2.0a1/src/package_only_prereleases_boundary_a_edcef999/__init__.py': '''
+        __version__ = "0.2.0a1"
+  
+      ''',
+      'build/package-only-prereleases-boundary-edcef999/package-only-prereleases-boundary-a-edcef999-0.3.0a1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_only_prereleases_boundary_a_edcef999"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_only_prereleases_boundary_a_edcef999"]
+        
+        [project]
+        name = "package-only-prereleases-boundary-a-edcef999"
+        version = "0.3.0a1"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-only-prereleases-boundary-edcef999/package-only-prereleases-boundary-a-edcef999-0.3.0a1/src/package_only_prereleases_boundary_a_edcef999/__init__.py': '''
+        __version__ = "0.3.0a1"
+  
+      ''',
+      'build/package-only-prereleases-boundary-edcef999/package-only-prereleases-boundary-edcef999-0.0.0/pyproject.toml': 'md5:24531046f4676ae68e41589689e59359',
+      'build/package-only-prereleases-boundary-edcef999/package-only-prereleases-boundary-edcef999-0.0.0/src/package_only_prereleases_boundary_edcef999/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
       'build/package-only-prereleases-in-range-1017748b/package-only-prereleases-in-range-1017748b-0.0.0/pyproject.toml': 'md5:421c631c0435670770f479debabbe9dc',
       'build/package-only-prereleases-in-range-1017748b/package-only-prereleases-in-range-1017748b-0.0.0/src/package_only_prereleases_in_range_1017748b/__init__.py': '''
         __version__ = "0.0.0"
@@ -2504,6 +2584,321 @@
       'build/package-prerelease-specified-only-prerelease-available-48d4bba0/package-prerelease-specified-only-prerelease-available-a-48d4bba0-0.3.0a1/pyproject.toml': 'md5:a0f95e638d88e04ecec3986d5c7d3a30',
       'build/package-prerelease-specified-only-prerelease-available-48d4bba0/package-prerelease-specified-only-prerelease-available-a-48d4bba0-0.3.0a1/src/package_prerelease_specified_only_prerelease_available_a_48d4bba0/__init__.py': '''
         __version__ = "0.3.0a1"
+  
+      ''',
+      'build/package-prereleases-boundary-6d600873/package-prereleases-boundary-6d600873-0.0.0/pyproject.toml': 'md5:dfc3829c5fff77fde01b691b713242de',
+      'build/package-prereleases-boundary-6d600873/package-prereleases-boundary-6d600873-0.0.0/src/package_prereleases_boundary_6d600873/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/package-prereleases-boundary-6d600873/package-prereleases-boundary-a-6d600873-0.1.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_prereleases_boundary_a_6d600873"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_prereleases_boundary_a_6d600873"]
+        
+        [project]
+        name = "package-prereleases-boundary-a-6d600873"
+        version = "0.1.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-prereleases-boundary-6d600873/package-prereleases-boundary-a-6d600873-0.1.0/src/package_prereleases_boundary_a_6d600873/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/package-prereleases-boundary-6d600873/package-prereleases-boundary-a-6d600873-0.2.0a1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_prereleases_boundary_a_6d600873"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_prereleases_boundary_a_6d600873"]
+        
+        [project]
+        name = "package-prereleases-boundary-a-6d600873"
+        version = "0.2.0a1"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-prereleases-boundary-6d600873/package-prereleases-boundary-a-6d600873-0.2.0a1/src/package_prereleases_boundary_a_6d600873/__init__.py': '''
+        __version__ = "0.2.0a1"
+  
+      ''',
+      'build/package-prereleases-boundary-6d600873/package-prereleases-boundary-a-6d600873-0.3.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_prereleases_boundary_a_6d600873"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_prereleases_boundary_a_6d600873"]
+        
+        [project]
+        name = "package-prereleases-boundary-a-6d600873"
+        version = "0.3.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-prereleases-boundary-6d600873/package-prereleases-boundary-a-6d600873-0.3.0/src/package_prereleases_boundary_a_6d600873/__init__.py': '''
+        __version__ = "0.3.0"
+  
+      ''',
+      'build/package-prereleases-global-boundary-cf1b8081/package-prereleases-global-boundary-a-cf1b8081-0.1.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_prereleases_global_boundary_a_cf1b8081"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_prereleases_global_boundary_a_cf1b8081"]
+        
+        [project]
+        name = "package-prereleases-global-boundary-a-cf1b8081"
+        version = "0.1.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-prereleases-global-boundary-cf1b8081/package-prereleases-global-boundary-a-cf1b8081-0.1.0/src/package_prereleases_global_boundary_a_cf1b8081/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/package-prereleases-global-boundary-cf1b8081/package-prereleases-global-boundary-a-cf1b8081-0.2.0a1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_prereleases_global_boundary_a_cf1b8081"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_prereleases_global_boundary_a_cf1b8081"]
+        
+        [project]
+        name = "package-prereleases-global-boundary-a-cf1b8081"
+        version = "0.2.0a1"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-prereleases-global-boundary-cf1b8081/package-prereleases-global-boundary-a-cf1b8081-0.2.0a1/src/package_prereleases_global_boundary_a_cf1b8081/__init__.py': '''
+        __version__ = "0.2.0a1"
+  
+      ''',
+      'build/package-prereleases-global-boundary-cf1b8081/package-prereleases-global-boundary-a-cf1b8081-0.3.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_prereleases_global_boundary_a_cf1b8081"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_prereleases_global_boundary_a_cf1b8081"]
+        
+        [project]
+        name = "package-prereleases-global-boundary-a-cf1b8081"
+        version = "0.3.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-prereleases-global-boundary-cf1b8081/package-prereleases-global-boundary-a-cf1b8081-0.3.0/src/package_prereleases_global_boundary_a_cf1b8081/__init__.py': '''
+        __version__ = "0.3.0"
+  
+      ''',
+      'build/package-prereleases-global-boundary-cf1b8081/package-prereleases-global-boundary-cf1b8081-0.0.0/pyproject.toml': 'md5:6ce57e4269ea60a9421045e613867040',
+      'build/package-prereleases-global-boundary-cf1b8081/package-prereleases-global-boundary-cf1b8081-0.0.0/src/package_prereleases_global_boundary_cf1b8081/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/package-prereleases-specifier-boundary-357b9636/package-prereleases-specifier-boundary-357b9636-0.0.0/pyproject.toml': 'md5:a1e6410a73a1d722b0e93f1586c22ff9',
+      'build/package-prereleases-specifier-boundary-357b9636/package-prereleases-specifier-boundary-357b9636-0.0.0/src/package_prereleases_specifier_boundary_357b9636/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/package-prereleases-specifier-boundary-357b9636/package-prereleases-specifier-boundary-a-357b9636-0.1.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_prereleases_specifier_boundary_a_357b9636"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_prereleases_specifier_boundary_a_357b9636"]
+        
+        [project]
+        name = "package-prereleases-specifier-boundary-a-357b9636"
+        version = "0.1.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-prereleases-specifier-boundary-357b9636/package-prereleases-specifier-boundary-a-357b9636-0.1.0/src/package_prereleases_specifier_boundary_a_357b9636/__init__.py': '''
+        __version__ = "0.1.0"
+  
+      ''',
+      'build/package-prereleases-specifier-boundary-357b9636/package-prereleases-specifier-boundary-a-357b9636-0.2.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_prereleases_specifier_boundary_a_357b9636"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_prereleases_specifier_boundary_a_357b9636"]
+        
+        [project]
+        name = "package-prereleases-specifier-boundary-a-357b9636"
+        version = "0.2.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-prereleases-specifier-boundary-357b9636/package-prereleases-specifier-boundary-a-357b9636-0.2.0/src/package_prereleases_specifier_boundary_a_357b9636/__init__.py': '''
+        __version__ = "0.2.0"
+  
+      ''',
+      'build/package-prereleases-specifier-boundary-357b9636/package-prereleases-specifier-boundary-a-357b9636-0.2.0a1/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_prereleases_specifier_boundary_a_357b9636"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_prereleases_specifier_boundary_a_357b9636"]
+        
+        [project]
+        name = "package-prereleases-specifier-boundary-a-357b9636"
+        version = "0.2.0a1"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-prereleases-specifier-boundary-357b9636/package-prereleases-specifier-boundary-a-357b9636-0.2.0a1/src/package_prereleases_specifier_boundary_a_357b9636/__init__.py': '''
+        __version__ = "0.2.0a1"
+  
+      ''',
+      'build/package-prereleases-specifier-boundary-357b9636/package-prereleases-specifier-boundary-a-357b9636-0.2.0a2/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_prereleases_specifier_boundary_a_357b9636"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_prereleases_specifier_boundary_a_357b9636"]
+        
+        [project]
+        name = "package-prereleases-specifier-boundary-a-357b9636"
+        version = "0.2.0a2"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-prereleases-specifier-boundary-357b9636/package-prereleases-specifier-boundary-a-357b9636-0.2.0a2/src/package_prereleases_specifier_boundary_a_357b9636/__init__.py': '''
+        __version__ = "0.2.0a2"
+  
+      ''',
+      'build/package-prereleases-specifier-boundary-357b9636/package-prereleases-specifier-boundary-a-357b9636-0.2.0a3/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_prereleases_specifier_boundary_a_357b9636"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_prereleases_specifier_boundary_a_357b9636"]
+        
+        [project]
+        name = "package-prereleases-specifier-boundary-a-357b9636"
+        version = "0.2.0a3"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-prereleases-specifier-boundary-357b9636/package-prereleases-specifier-boundary-a-357b9636-0.2.0a3/src/package_prereleases_specifier_boundary_a_357b9636/__init__.py': '''
+        __version__ = "0.2.0a3"
+  
+      ''',
+      'build/package-prereleases-specifier-boundary-357b9636/package-prereleases-specifier-boundary-a-357b9636-0.3.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/package_prereleases_specifier_boundary_a_357b9636"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/package_prereleases_specifier_boundary_a_357b9636"]
+        
+        [project]
+        name = "package-prereleases-specifier-boundary-a-357b9636"
+        version = "0.3.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/package-prereleases-specifier-boundary-357b9636/package-prereleases-specifier-boundary-a-357b9636-0.3.0/src/package_prereleases_specifier_boundary_a_357b9636/__init__.py': '''
+        __version__ = "0.3.0"
   
       ''',
       'build/requires-package-only-prereleases-in-range-global-opt-in-95140069/requires-package-only-prereleases-in-range-global-opt-in-95140069-0.0.0/pyproject.toml': 'md5:470bfef085b985006944ed31a53ed73e',
@@ -3018,6 +3413,13 @@
       'dist/package-only-prereleases-472fcc7e/package_only_prereleases_472fcc7e-0.0.0.tar.gz': 'md5:40c23ac159560ac93adf76e8bb4419a6',
       'dist/package-only-prereleases-472fcc7e/package_only_prereleases_a_472fcc7e-1.0.0a1-py3-none-any.whl': 'md5:4ef215b092537b4a573a252c567e3f43',
       'dist/package-only-prereleases-472fcc7e/package_only_prereleases_a_472fcc7e-1.0.0a1.tar.gz': 'md5:73cd67e63faf18161bf1cd24f4dbffd0',
+      'dist/package-only-prereleases-boundary-edcef999/package_only_prereleases_boundary_a_edcef999-0.1.0a1-py3-none-any.whl': 'md5:63bf04b8ead011dc7cf79d8a8319b6e9',
+      'dist/package-only-prereleases-boundary-edcef999/package_only_prereleases_boundary_a_edcef999-0.1.0a1.tar.gz': 'md5:11678351bf7778e23a7b77022561ccd9',
+      'dist/package-only-prereleases-boundary-edcef999/package_only_prereleases_boundary_a_edcef999-0.2.0a1-py3-none-any.whl': 'md5:5b129e1148330ec930a9b327e86e7674',
+      'dist/package-only-prereleases-boundary-edcef999/package_only_prereleases_boundary_a_edcef999-0.2.0a1.tar.gz': 'md5:015d91b5c117f97d1007df56b0fa9776',
+      'dist/package-only-prereleases-boundary-edcef999/package_only_prereleases_boundary_a_edcef999-0.3.0a1-py3-none-any.whl': 'md5:8c69a297ecb6ffde9f616369b2537264',
+      'dist/package-only-prereleases-boundary-edcef999/package_only_prereleases_boundary_a_edcef999-0.3.0a1.tar.gz': 'md5:bd01e831e500142901b8b3d7ec6b1794',
+      'dist/package-only-prereleases-boundary-edcef999/package_only_prereleases_boundary_edcef999-0.0.0.tar.gz': 'md5:bbe5ab3d6c1a411c10c878a4e8511902',
       'dist/package-only-prereleases-in-range-1017748b/package_only_prereleases_in_range_1017748b-0.0.0.tar.gz': 'md5:6eee7c75893fdb192e17493abcb380f1',
       'dist/package-only-prereleases-in-range-1017748b/package_only_prereleases_in_range_a_1017748b-0.1.0-py3-none-any.whl': 'md5:0fa48da5c0f72384c96fd3fdbe47611a',
       'dist/package-only-prereleases-in-range-1017748b/package_only_prereleases_in_range_a_1017748b-0.1.0.tar.gz': 'md5:6af759bfa1d1fbca686707971de97fc2',
@@ -3046,6 +3448,33 @@
       'dist/package-prerelease-specified-only-prerelease-available-48d4bba0/package_prerelease_specified_only_prerelease_available_a_48d4bba0-0.2.0a1.tar.gz': 'md5:9312777b1e0bc74c992a0d41cb8d65a5',
       'dist/package-prerelease-specified-only-prerelease-available-48d4bba0/package_prerelease_specified_only_prerelease_available_a_48d4bba0-0.3.0a1-py3-none-any.whl': 'md5:a4fb11b62aad022a9f1304c3ab4932a5',
       'dist/package-prerelease-specified-only-prerelease-available-48d4bba0/package_prerelease_specified_only_prerelease_available_a_48d4bba0-0.3.0a1.tar.gz': 'md5:029175fed978dbecbd7efdd52187dd09',
+      'dist/package-prereleases-boundary-6d600873/package_prereleases_boundary_6d600873-0.0.0.tar.gz': 'md5:cf15f73f17ae2e37823cd49fef6fd92d',
+      'dist/package-prereleases-boundary-6d600873/package_prereleases_boundary_a_6d600873-0.1.0-py3-none-any.whl': 'md5:b7270ccffde8174af5e78257c4c7fd2b',
+      'dist/package-prereleases-boundary-6d600873/package_prereleases_boundary_a_6d600873-0.1.0.tar.gz': 'md5:250b496b6bed4f04e35eac983745a7e6',
+      'dist/package-prereleases-boundary-6d600873/package_prereleases_boundary_a_6d600873-0.2.0a1-py3-none-any.whl': 'md5:229d065812847d8f361540ec61a75346',
+      'dist/package-prereleases-boundary-6d600873/package_prereleases_boundary_a_6d600873-0.2.0a1.tar.gz': 'md5:c91de493cd909ee7cdb708a0e24816f9',
+      'dist/package-prereleases-boundary-6d600873/package_prereleases_boundary_a_6d600873-0.3.0-py3-none-any.whl': 'md5:56139eb466760ee9848fc084cf097b83',
+      'dist/package-prereleases-boundary-6d600873/package_prereleases_boundary_a_6d600873-0.3.0.tar.gz': 'md5:51a750e51e6c6debfdb2093d8eb10b25',
+      'dist/package-prereleases-global-boundary-cf1b8081/package_prereleases_global_boundary_a_cf1b8081-0.1.0-py3-none-any.whl': 'md5:82b361cbd527528d0dfa4f67cad2e30a',
+      'dist/package-prereleases-global-boundary-cf1b8081/package_prereleases_global_boundary_a_cf1b8081-0.1.0.tar.gz': 'md5:39a990e1de8c8cccdda6f722c816d816',
+      'dist/package-prereleases-global-boundary-cf1b8081/package_prereleases_global_boundary_a_cf1b8081-0.2.0a1-py3-none-any.whl': 'md5:204b3c6fbca219511a50dd8a19c788d7',
+      'dist/package-prereleases-global-boundary-cf1b8081/package_prereleases_global_boundary_a_cf1b8081-0.2.0a1.tar.gz': 'md5:49477f97b95b3ae393ee336f1650571e',
+      'dist/package-prereleases-global-boundary-cf1b8081/package_prereleases_global_boundary_a_cf1b8081-0.3.0-py3-none-any.whl': 'md5:97bb68bad52376ab0827303d9196fef1',
+      'dist/package-prereleases-global-boundary-cf1b8081/package_prereleases_global_boundary_a_cf1b8081-0.3.0.tar.gz': 'md5:1d11c13256877c956291666e90c95b9b',
+      'dist/package-prereleases-global-boundary-cf1b8081/package_prereleases_global_boundary_cf1b8081-0.0.0.tar.gz': 'md5:048864e03b6c1235174b4bbee89c49c7',
+      'dist/package-prereleases-specifier-boundary-357b9636/package_prereleases_specifier_boundary_357b9636-0.0.0.tar.gz': 'md5:845cd029de7776394acb81ee37213abc',
+      'dist/package-prereleases-specifier-boundary-357b9636/package_prereleases_specifier_boundary_a_357b9636-0.1.0-py3-none-any.whl': 'md5:27632f3498e0d08966f7d6b02f3d5ab8',
+      'dist/package-prereleases-specifier-boundary-357b9636/package_prereleases_specifier_boundary_a_357b9636-0.1.0.tar.gz': 'md5:41a7dfa2b3beb1c5a353c7d5b6beb957',
+      'dist/package-prereleases-specifier-boundary-357b9636/package_prereleases_specifier_boundary_a_357b9636-0.2.0-py3-none-any.whl': 'md5:2dda439c2edf09d9f9a4763d66669a02',
+      'dist/package-prereleases-specifier-boundary-357b9636/package_prereleases_specifier_boundary_a_357b9636-0.2.0.tar.gz': 'md5:92773dc7e33885399a5951e5b377380b',
+      'dist/package-prereleases-specifier-boundary-357b9636/package_prereleases_specifier_boundary_a_357b9636-0.2.0a1-py3-none-any.whl': 'md5:c46db2c723e36d20b19c8ab6bdf3fe92',
+      'dist/package-prereleases-specifier-boundary-357b9636/package_prereleases_specifier_boundary_a_357b9636-0.2.0a1.tar.gz': 'md5:fcd3a50bc46b4804a5cd68e2b1b437cb',
+      'dist/package-prereleases-specifier-boundary-357b9636/package_prereleases_specifier_boundary_a_357b9636-0.2.0a2-py3-none-any.whl': 'md5:9c148992e414839989f720c0480e3000',
+      'dist/package-prereleases-specifier-boundary-357b9636/package_prereleases_specifier_boundary_a_357b9636-0.2.0a2.tar.gz': 'md5:5cc9de4016e0a251f3066d7d51354ad0',
+      'dist/package-prereleases-specifier-boundary-357b9636/package_prereleases_specifier_boundary_a_357b9636-0.2.0a3-py3-none-any.whl': 'md5:fabdf23abbdb476a95fbd76bc45c9b3e',
+      'dist/package-prereleases-specifier-boundary-357b9636/package_prereleases_specifier_boundary_a_357b9636-0.2.0a3.tar.gz': 'md5:cdf6ffaed894bb63bd0e2b3280947b9e',
+      'dist/package-prereleases-specifier-boundary-357b9636/package_prereleases_specifier_boundary_a_357b9636-0.3.0-py3-none-any.whl': 'md5:3a980ef0878f52ec0db706fed9647b05',
+      'dist/package-prereleases-specifier-boundary-357b9636/package_prereleases_specifier_boundary_a_357b9636-0.3.0.tar.gz': 'md5:ffb5bdcb67677de135e61fc49c96230b',
       'dist/requires-package-only-prereleases-in-range-global-opt-in-95140069/requires_package_only_prereleases_in_range_global_opt_in_95140069-0.0.0.tar.gz': 'md5:d2a087dc19d8c175d11305ae69bea3c6',
       'dist/requires-package-only-prereleases-in-range-global-opt-in-95140069/requires_package_only_prereleases_in_range_global_opt_in_a_95140069-0.1.0-py3-none-any.whl': 'md5:8f1197d6abb5cf4f901de3555d74b0a6',
       'dist/requires-package-only-prereleases-in-range-global-opt-in-95140069/requires_package_only_prereleases_in_range_global_opt_in_a_95140069-0.1.0.tar.gz': 'md5:41d97badefd439b83aacdf1da6c86fe1',
@@ -3235,6 +3664,27 @@
         │   │       └── src
         │   │           └── package_only_prereleases_a_472fcc7e
         │   │               └── __init__.py
+        │   ├── package-only-prereleases-boundary-edcef999
+        │   │   ├── package-only-prereleases-boundary-a-edcef999-0.1.0a1
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_only_prereleases_boundary_a_edcef999
+        │   │   │           └── __init__.py
+        │   │   ├── package-only-prereleases-boundary-a-edcef999-0.2.0a1
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_only_prereleases_boundary_a_edcef999
+        │   │   │           └── __init__.py
+        │   │   ├── package-only-prereleases-boundary-a-edcef999-0.3.0a1
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_only_prereleases_boundary_a_edcef999
+        │   │   │           └── __init__.py
+        │   │   └── package-only-prereleases-boundary-edcef999-0.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── package_only_prereleases_boundary_edcef999
+        │   │               └── __init__.py
         │   ├── package-only-prereleases-in-range-1017748b
         │   │   ├── package-only-prereleases-in-range-1017748b-0.0.0
         │   │   │   ├── pyproject.toml
@@ -3318,6 +3768,84 @@
         │   │       ├── pyproject.toml
         │   │       └── src
         │   │           └── package_prerelease_specified_only_prerelease_available_a_48d4bba0
+        │   │               └── __init__.py
+        │   ├── package-prereleases-boundary-6d600873
+        │   │   ├── package-prereleases-boundary-6d600873-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_prereleases_boundary_6d600873
+        │   │   │           └── __init__.py
+        │   │   ├── package-prereleases-boundary-a-6d600873-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_prereleases_boundary_a_6d600873
+        │   │   │           └── __init__.py
+        │   │   ├── package-prereleases-boundary-a-6d600873-0.2.0a1
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_prereleases_boundary_a_6d600873
+        │   │   │           └── __init__.py
+        │   │   └── package-prereleases-boundary-a-6d600873-0.3.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── package_prereleases_boundary_a_6d600873
+        │   │               └── __init__.py
+        │   ├── package-prereleases-global-boundary-cf1b8081
+        │   │   ├── package-prereleases-global-boundary-a-cf1b8081-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_prereleases_global_boundary_a_cf1b8081
+        │   │   │           └── __init__.py
+        │   │   ├── package-prereleases-global-boundary-a-cf1b8081-0.2.0a1
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_prereleases_global_boundary_a_cf1b8081
+        │   │   │           └── __init__.py
+        │   │   ├── package-prereleases-global-boundary-a-cf1b8081-0.3.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_prereleases_global_boundary_a_cf1b8081
+        │   │   │           └── __init__.py
+        │   │   └── package-prereleases-global-boundary-cf1b8081-0.0.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── package_prereleases_global_boundary_cf1b8081
+        │   │               └── __init__.py
+        │   ├── package-prereleases-specifier-boundary-357b9636
+        │   │   ├── package-prereleases-specifier-boundary-357b9636-0.0.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_prereleases_specifier_boundary_357b9636
+        │   │   │           └── __init__.py
+        │   │   ├── package-prereleases-specifier-boundary-a-357b9636-0.1.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_prereleases_specifier_boundary_a_357b9636
+        │   │   │           └── __init__.py
+        │   │   ├── package-prereleases-specifier-boundary-a-357b9636-0.2.0
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_prereleases_specifier_boundary_a_357b9636
+        │   │   │           └── __init__.py
+        │   │   ├── package-prereleases-specifier-boundary-a-357b9636-0.2.0a1
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_prereleases_specifier_boundary_a_357b9636
+        │   │   │           └── __init__.py
+        │   │   ├── package-prereleases-specifier-boundary-a-357b9636-0.2.0a2
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_prereleases_specifier_boundary_a_357b9636
+        │   │   │           └── __init__.py
+        │   │   ├── package-prereleases-specifier-boundary-a-357b9636-0.2.0a3
+        │   │   │   ├── pyproject.toml
+        │   │   │   └── src
+        │   │   │       └── package_prereleases_specifier_boundary_a_357b9636
+        │   │   │           └── __init__.py
+        │   │   └── package-prereleases-specifier-boundary-a-357b9636-0.3.0
+        │   │       ├── pyproject.toml
+        │   │       └── src
+        │   │           └── package_prereleases_specifier_boundary_a_357b9636
         │   │               └── __init__.py
         │   ├── requires-package-only-prereleases-in-range-global-opt-in-95140069
         │   │   ├── requires-package-only-prereleases-in-range-global-opt-in-95140069-0.0.0
@@ -3704,6 +4232,14 @@
             │   ├── package_only_prereleases_472fcc7e-0.0.0.tar.gz
             │   ├── package_only_prereleases_a_472fcc7e-1.0.0a1-py3-none-any.whl
             │   └── package_only_prereleases_a_472fcc7e-1.0.0a1.tar.gz
+            ├── package-only-prereleases-boundary-edcef999
+            │   ├── package_only_prereleases_boundary_a_edcef999-0.1.0a1-py3-none-any.whl
+            │   ├── package_only_prereleases_boundary_a_edcef999-0.1.0a1.tar.gz
+            │   ├── package_only_prereleases_boundary_a_edcef999-0.2.0a1-py3-none-any.whl
+            │   ├── package_only_prereleases_boundary_a_edcef999-0.2.0a1.tar.gz
+            │   ├── package_only_prereleases_boundary_a_edcef999-0.3.0a1-py3-none-any.whl
+            │   ├── package_only_prereleases_boundary_a_edcef999-0.3.0a1.tar.gz
+            │   └── package_only_prereleases_boundary_edcef999-0.0.0.tar.gz
             ├── package-only-prereleases-in-range-1017748b
             │   ├── package_only_prereleases_in_range_1017748b-0.0.0.tar.gz
             │   ├── package_only_prereleases_in_range_a_1017748b-0.1.0-py3-none-any.whl
@@ -3736,6 +4272,36 @@
             │   ├── package_prerelease_specified_only_prerelease_available_a_48d4bba0-0.2.0a1.tar.gz
             │   ├── package_prerelease_specified_only_prerelease_available_a_48d4bba0-0.3.0a1-py3-none-any.whl
             │   └── package_prerelease_specified_only_prerelease_available_a_48d4bba0-0.3.0a1.tar.gz
+            ├── package-prereleases-boundary-6d600873
+            │   ├── package_prereleases_boundary_6d600873-0.0.0.tar.gz
+            │   ├── package_prereleases_boundary_a_6d600873-0.1.0-py3-none-any.whl
+            │   ├── package_prereleases_boundary_a_6d600873-0.1.0.tar.gz
+            │   ├── package_prereleases_boundary_a_6d600873-0.2.0a1-py3-none-any.whl
+            │   ├── package_prereleases_boundary_a_6d600873-0.2.0a1.tar.gz
+            │   ├── package_prereleases_boundary_a_6d600873-0.3.0-py3-none-any.whl
+            │   └── package_prereleases_boundary_a_6d600873-0.3.0.tar.gz
+            ├── package-prereleases-global-boundary-cf1b8081
+            │   ├── package_prereleases_global_boundary_a_cf1b8081-0.1.0-py3-none-any.whl
+            │   ├── package_prereleases_global_boundary_a_cf1b8081-0.1.0.tar.gz
+            │   ├── package_prereleases_global_boundary_a_cf1b8081-0.2.0a1-py3-none-any.whl
+            │   ├── package_prereleases_global_boundary_a_cf1b8081-0.2.0a1.tar.gz
+            │   ├── package_prereleases_global_boundary_a_cf1b8081-0.3.0-py3-none-any.whl
+            │   ├── package_prereleases_global_boundary_a_cf1b8081-0.3.0.tar.gz
+            │   └── package_prereleases_global_boundary_cf1b8081-0.0.0.tar.gz
+            ├── package-prereleases-specifier-boundary-357b9636
+            │   ├── package_prereleases_specifier_boundary_357b9636-0.0.0.tar.gz
+            │   ├── package_prereleases_specifier_boundary_a_357b9636-0.1.0-py3-none-any.whl
+            │   ├── package_prereleases_specifier_boundary_a_357b9636-0.1.0.tar.gz
+            │   ├── package_prereleases_specifier_boundary_a_357b9636-0.2.0-py3-none-any.whl
+            │   ├── package_prereleases_specifier_boundary_a_357b9636-0.2.0.tar.gz
+            │   ├── package_prereleases_specifier_boundary_a_357b9636-0.2.0a1-py3-none-any.whl
+            │   ├── package_prereleases_specifier_boundary_a_357b9636-0.2.0a1.tar.gz
+            │   ├── package_prereleases_specifier_boundary_a_357b9636-0.2.0a2-py3-none-any.whl
+            │   ├── package_prereleases_specifier_boundary_a_357b9636-0.2.0a2.tar.gz
+            │   ├── package_prereleases_specifier_boundary_a_357b9636-0.2.0a3-py3-none-any.whl
+            │   ├── package_prereleases_specifier_boundary_a_357b9636-0.2.0a3.tar.gz
+            │   ├── package_prereleases_specifier_boundary_a_357b9636-0.3.0-py3-none-any.whl
+            │   └── package_prereleases_specifier_boundary_a_357b9636-0.3.0.tar.gz
             ├── requires-package-only-prereleases-in-range-global-opt-in-95140069
             │   ├── requires_package_only_prereleases_in_range_global_opt_in_95140069-0.0.0.tar.gz
             │   ├── requires_package_only_prereleases_in_range_global_opt_in_a_95140069-0.1.0-py3-none-any.whl
@@ -3879,7 +4445,7 @@
                 ├── transitive_prerelease_and_stable_dependency_opt_in_c_0778b0eb-2.0.0b1-py3-none-any.whl
                 └── transitive_prerelease_and_stable_dependency_opt_in_c_0778b0eb-2.0.0b1.tar.gz
         
-        325 directories, 372 files
+        390 directories, 444 files
   
       ''',
     }),
@@ -3888,10 +4454,14 @@
       package-multiple-prereleases-kinds-72919cf7
       package-multiple-prereleases-numbers-cecdb92d
       package-only-prereleases-472fcc7e
+      package-only-prereleases-boundary-edcef999
       package-only-prereleases-in-range-1017748b
       package-prerelease-specified-mixed-available-2b1193a7
       package-prerelease-specified-only-final-available-6f8bea9f
       package-prerelease-specified-only-prerelease-available-48d4bba0
+      package-prereleases-boundary-6d600873
+      package-prereleases-global-boundary-cf1b8081
+      package-prereleases-specifier-boundary-357b9636
       requires-package-only-prereleases-in-range-global-opt-in-95140069
       requires-package-prerelease-and-final-any-909975d8
       transitive-package-only-prereleases-e3c94488
@@ -7231,6 +7801,53 @@
           ├── c-2.0.0b7
           ├── c-2.0.0b8
           └── c-2.0.0b9
+      
+      package-only-prereleases-boundary-edcef999
+      ├── environment
+      │   └── python3.8
+      ├── root
+      │   └── requires a<0.2.0
+      │       └── unsatisfied: no matching version
+      └── a
+          ├── a-0.1.0a1
+          ├── a-0.2.0a1
+          └── a-0.3.0a1
+      
+      package-prereleases-boundary-6d600873
+      ├── environment
+      │   └── python3.8
+      ├── root
+      │   └── requires a<0.2.0
+      │       └── satisfied by a-0.1.0
+      └── a
+          ├── a-0.1.0
+          ├── a-0.2.0a1
+          └── a-0.3.0
+      
+      package-prereleases-global-boundary-cf1b8081
+      ├── environment
+      │   └── python3.8
+      ├── root
+      │   └── requires a<0.2.0
+      │       └── satisfied by a-0.1.0
+      └── a
+          ├── a-0.1.0
+          ├── a-0.2.0a1
+          └── a-0.3.0
+      
+      package-prereleases-specifier-boundary-357b9636
+      ├── environment
+      │   └── python3.8
+      ├── root
+      │   └── requires a<0.2.0a2
+      │       └── satisfied by a-0.1.0
+      └── a
+          ├── a-0.1.0
+          ├── a-0.2.0
+          ├── a-0.2.0a1
+          ├── a-0.2.0a2
+          ├── a-0.2.0a3
+          └── a-0.3.0
       
   
     ''',
