@@ -33,7 +33,7 @@ twine = "^4.0.2"
 hatchling = "^1.20.0"
 devpi = "^2.2.0"
 devpi-server = {git = "https://github.com/zanieb/devpi", rev = "22f71acb8f08a59a098e7ad434cf388a1193fc24", subdirectory = "server"}
-waitress = {git = "https://github.com/zanieb/waitress", rev = "d6d764bcc970e1e50486153588eda8a92cf5b5e4"}
+waitress = "^3.0.0"
 chevron-blue = "^0.2.1"
 
 [tool.poetry.group.dev.dependencies]

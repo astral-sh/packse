@@ -28,7 +28,7 @@
         __version__ = "1.0.0"
   
       ''',
-      'dist/foo/foo-1.0.0-py3-none-any.whl': 'md5:d185c7ccef96f6a64414eb61db294897',
+      'dist/foo/foo-1.0.0-py3-none-any.whl': 'md5:80be08b501ed397bb67c604755b17414',
       'dist/foo/foo-1.0.0.tar.gz': 'md5:bd183e51585849bfeab448cbd6b3f24d',
       'tree': '''
         test_build_pkg0
@@ -112,7 +112,7 @@
         __version__ = "1.0.0"
   
       ''',
-      'dist/foo/foo-1.0.0-py3-none-any.whl': 'md5:d185c7ccef96f6a64414eb61db294897',
+      'dist/foo/foo-1.0.0-py3-none-any.whl': 'md5:80be08b501ed397bb67c604755b17414',
       'tree': '''
         test_build_pkg_no_sdist0
         ├── build
@@ -240,8 +240,8 @@
         __version__ = "1.0.0"
   
       ''',
-      'dist/foo/foo-1.0.0-tag1.whl': 'md5:d185c7ccef96f6a64414eb61db294897',
-      'dist/foo/foo-1.0.0-tag2.whl': 'md5:d185c7ccef96f6a64414eb61db294897',
+      'dist/foo/foo-1.0.0-tag1.whl': 'md5:80be08b501ed397bb67c604755b17414',
+      'dist/foo/foo-1.0.0-tag2.whl': 'md5:80be08b501ed397bb67c604755b17414',
       'dist/foo/foo-1.0.0.tar.gz': 'md5:bd183e51585849bfeab448cbd6b3f24d',
       'tree': '''
         test_build_pkg_wheel_tags0
