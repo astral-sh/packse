@@ -2,7 +2,7 @@ import logging
 import shutil
 import subprocess
 import sys
-from concurrent.futures import ThreadPoolExecutor
+import threading
 from pathlib import Path
 
 from packse import __development_base_path__
@@ -57,11 +57,20 @@ def serve(
     else:
         logger.warning("No vendored build dependencies found at %s" % build_directory)
 
-    with ThreadPoolExecutor(
-        thread_name_prefix="packse-serve-", max_workers=2
-    ) as executor:
-        executor.submit(rebuild_on_change, targets, short_names, no_hash, storage_path)
-        executor.submit(serve_packages, host, port, storage_path, offline)
+    rebuild = threading.Thread(
+        target=rebuild_on_change,
+        args=(targets, short_names, no_hash, storage_path),
+        daemon=True,
+    )
+    serve = threading.Thread(
+        target=serve_packages, args=(host, port, storage_path, offline)
+    )
+    rebuild.start()
+
+    try:
+        serve.start()
+    finally:
+        serve.join()
 
 
 def rebuild_on_change(
