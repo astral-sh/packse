@@ -64,7 +64,9 @@ def serve(
         executor.submit(serve_packages, host, port, storage_path, offline)
 
 
-def rebuild_on_change(targets, short_names, no_hash, storage_path):
+def rebuild_on_change(
+    targets: list[Path], short_names: bool, no_hash: bool, storage_path: Path
+) -> None:
     for changes in watchfiles.watch(*targets):
         targets = [path for kind, path in changes if kind != watchfiles.Change.deleted]
         targets = [Path(target) for target in targets if Path(target).is_file()]
@@ -79,7 +81,7 @@ def rebuild_on_change(targets, short_names, no_hash, storage_path):
         )
 
 
-def serve_packages(host, port, storage_path, offline):
+def serve_packages(host: str, port: int, storage_path: Path, offline: bool):
     command = [
         "pypi-server",
         "run",
@@ -92,6 +94,7 @@ def serve_packages(host, port, storage_path, offline):
     ]
     if offline:
         command.append("--disable-fallback")
+
     subprocess.run(
         command,
         stdout=sys.stdout,
