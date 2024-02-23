@@ -34,12 +34,15 @@ class Requirement(packaging.requirements.Requirement):
         scenario: "Scenario",
         scenario_version: str,
         short_names: bool,
+        no_hash: bool,
     ) -> type[Self]:
         """
         Return a copy of self with scenario metadata in the name
         """
         new = type(self)(str(self))
-        new.name = self.name + "-" + scenario_version
+        new.name = self.name
+        if not no_hash:
+            new.name += "-" + scenario_version
         if not short_names:
             new.name = scenario.name + "-" + new.name
         return new
@@ -311,7 +314,7 @@ def load_scenarios(target: Path) -> list[Scenario]:
         return [load_scenario(target)]
 
 
-def scenario_version(scenario: Scenario) -> str:
+def scenario_hash(scenario: Scenario) -> str:
     """
     Generate a unique version for a scenario based on its contents.
     """

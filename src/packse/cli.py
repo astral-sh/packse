@@ -71,6 +71,7 @@ def _call_build(args):
         args.targets,
         rm_destination=args.rm,
         short_names=args.short_names,
+        no_hash=args.no_hash,
         skip_root=args.skip_root,
     )
 
@@ -92,7 +93,15 @@ def _call_view(args):
 
 
 def _call_serve(args):
-    serve(args.targets)
+    serve(
+        args.targets,
+        host=args.host,
+        port=args.port,
+        storage_path=args.storage_path,
+        short_names=args.short_names,
+        no_hash=args.no_hash,
+        offline=args.offline,
+    )
 
 
 def _call_index_up(args):
@@ -191,6 +200,11 @@ def _add_build_parser(subparsers):
         "--short-names",
         action="store_true",
         help="Exclude scenario names from generated packages.",
+    )
+    parser.add_argument(
+        "--no-hash",
+        action="store_true",
+        help="Exclude scenario version hashes from generated packages.",
     )
     parser.add_argument(
         "--skip-root",
@@ -322,7 +336,39 @@ def _add_serve_parser(subparsers):
         nargs="*",
         help="The scenarios to serve",
     )
-
+    parser.add_argument(
+        "--host",
+        type=str,
+        default="localhost",
+        help="The host to bind the package index to.",
+    )
+    parser.add_argument(
+        "--port",
+        type=int,
+        default=3141,
+        help="The port to bind the package index to.",
+    )
+    parser.add_argument(
+        "--storage-path",
+        type=Path,
+        default=".",
+        help="The path to store served builds at.",
+    )
+    parser.add_argument(
+        "--short-names",
+        action="store_true",
+        help="Exclude scenario names from generated packages.",
+    )
+    parser.add_argument(
+        "--no-hash",
+        action="store_true",
+        help="Exclude scenario version hashes from generated packages.",
+    )
+    parser.add_argument(
+        "--offline",
+        action="store_true",
+        help="Run the index servers without fallback acccess to the real PyPI.",
+    )
     _add_shared_arguments(parser)
 
 

@@ -9,7 +9,7 @@ from packse.error import FileNotFound, InvalidScenario
 from packse.scenario import (
     Scenario,
     load_scenarios,
-    scenario_version,
+    scenario_hash,
 )
 
 logger = logging.getLogger(__name__)
@@ -48,7 +48,7 @@ def list(
             if no_versions:
                 name = scenario.name
             else:
-                name = scenario_version(scenario)
+                name = scenario_hash(scenario)
                 if not short_names:
                     name = f"{scenario.name}-{name}"
 

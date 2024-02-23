@@ -11,14 +11,19 @@ from packse.scenario import (
     Requirement,
     Scenario,
     load_scenarios,
-    scenario_version,
+    scenario_hash,
 )
 from packse.view import dependency_tree
 
 logger = logging.getLogger(__name__)
 
 
-def inspect(targets: list[Path], skip_invalid: bool = False, short_names: bool = False):
+def inspect(
+    targets: list[Path],
+    skip_invalid: bool = False,
+    short_names: bool = False,
+    no_hash: bool = False,
+):
     scenarios_by_path: dict[Path, list[Scenario]] = {}
 
     # Validate and collect all targets first
@@ -41,7 +46,7 @@ def inspect(targets: list[Path], skip_invalid: bool = False, short_names: bool =
 
             raw = scenario.dict()
             raw["source"] = str(source)
-            raw["version"] = scenario_version(scenario)
+            raw["version"] = scenario_hash(scenario)
             raw["tree"] = dependency_tree(scenario).splitlines()
             result["scenarios"].append(raw)
 
@@ -50,7 +55,10 @@ def inspect(targets: list[Path], skip_invalid: bool = False, short_names: bool =
                 {
                     "name": str(
                         Requirement(name).with_unique_name(
-                            scenario, raw["version"], short_names
+                            scenario,
+                            raw["version"],
+                            short_names,
+                            no_hash=no_hash,
                         )
                     ),
                     "versions": [
@@ -60,7 +68,10 @@ def inspect(targets: list[Path], skip_invalid: bool = False, short_names: bool =
                             "requires": [
                                 str(
                                     requirement.with_unique_name(
-                                        scenario, raw["version"], short_names
+                                        scenario,
+                                        raw["version"],
+                                        short_names,
+                                        no_hash=no_hash,
                                     )
                                 )
                                 for requirement in package_metadata.requires
@@ -71,7 +82,10 @@ def inspect(targets: list[Path], skip_invalid: bool = False, short_names: bool =
                                     "requires": [
                                         str(
                                             requirement.with_unique_name(
-                                                scenario, raw["version"], short_names
+                                                scenario,
+                                                raw["version"],
+                                                short_names,
+                                                no_hash=no_hash,
                                             )
                                         )
                                         for requirement in extra_requires
@@ -89,7 +103,10 @@ def inspect(targets: list[Path], skip_invalid: bool = False, short_names: bool =
                 {
                     "name": str(
                         Requirement(name).with_unique_name(
-                            scenario, raw["version"], short_names
+                            scenario,
+                            raw["version"],
+                            short_names,
+                            no_hash=no_hash,
                         )
                     ),
                     "version": version,
@@ -103,7 +120,12 @@ def inspect(targets: list[Path], skip_invalid: bool = False, short_names: bool =
                     "module_name": requirement.name.replace("-", "_"),
                 }
                 for requirement in (
-                    requirement.with_unique_name(scenario, raw["version"], short_names)
+                    requirement.with_unique_name(
+                        scenario,
+                        raw["version"],
+                        short_names,
+                        no_hash=no_hash,
+                    )
                     for requirement in scenario.root.requires
                 )
             ]

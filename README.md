@@ -11,7 +11,7 @@ poetry install
 ```
 Once installed, the `packse` command-line interface will be available.
 
-Depending on your Poetry configuration, you may need to use `poetry run packse` instead or activate Poetry's 
+Depending on your Poetry configuration, you may need to use `poetry run packse` instead or activate Poetry's
 virtual environment.
 
 ## Usage
@@ -32,7 +32,7 @@ A list of available scenarios can be printed with the `list` command:
 packse list
 ```
 
-By default, packse will search for scenarios in the current tree. You may also pass a file to read 
+By default, packse will search for scenarios in the current tree. You may also pass a file to read
 from:
 
 ```bash
@@ -111,8 +111,9 @@ The `build/` directory will contain sources for all of the packages in the scena
 The `dist/` directory will contain built distributions for all of the packages in the scenario.
 
 When a scenario is built, it is given a unique identifier based on a hash of the scenario contents and the project
-templates used to generate the packages. Each package and requirement in the scenario will be prefixed with the 
-identifier.
+templates used to generate the packages. Each package and requirement in the scenario will be prefixed with the
+identifier. The unique identifier can be excluded using the `--no-hash` argument, however, this will prevent
+publishing multiple times to a registry that does not allow overwrites.
 
 The `PACKSE_VERSION_SEED` environment variable can be used to override the seed used to generate the unique
 identifier, allowing versions to differ based on information outside of packse.
@@ -131,6 +132,21 @@ Credentials must be provided via the `PACKSE_PYPI_PASSWORD` environment variable
 used to set a username if not using an API token. If using a server which does not require authentication, the
 `--anonymous` flag can be passed.
 
+### Developing scenarios
+
+The `serve` command can be used to build and publish scenarios to a local package index.
+
+```bash
+packse serve scenarios
+```
+
+Packse will watch for changes to scenarios, and publish new versions on each change.
+
+Note when developing, it is often useful to use the `--no-hash` flag to avoid having to determine the latest
+hash for the scenario.
+
+By default, the `serve` index will fallback to PyPI for missing packages. To test in isolation, use the `--offline` flag.
+
 ### Running a package index
 
 A local package index can be controlled with the `index` command. For example, to start a local package index:
@@ -139,7 +155,7 @@ A local package index can be controlled with the `index` command. For example, t
 packse index up
 ```
 
-The `--bg` flag can be passed to run the index in the background. 
+The `--bg` flag can be passed to run the index in the background.
 When running an index in the background, state will be stored in the `~/.packse` directory. The `PACKSE_STORAGE_PATH`
 environment variable or the `--storage-path` option can be used to change the storage path.
 
@@ -189,6 +205,5 @@ with additional generated information such as the root package name and the tree
 
 ### Writing new scenarios
 
-Scenario files may contain one or more scenarios written in JSON.
-
-**Documentation not yet written; the scenario schema is under development.**
+Scenario files may contain one or more scenarios written in JSON. See the existing scenarios for examples and
+the `Scenario` type for details on the supported schema.
