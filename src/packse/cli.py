@@ -92,7 +92,7 @@ def _call_view(args):
 
 
 def _call_serve(args):
-    serve(args.targets)
+    serve(args.targets, host=args.host, port=args.port, storage_path=args.storage_path)
 
 
 def _call_index_up(args):
@@ -321,6 +321,24 @@ def _add_serve_parser(subparsers):
         type=Path,
         nargs="*",
         help="The scenarios to serve",
+    )
+    parser.add_argument(
+        "--host",
+        type=str,
+        default="localhost",
+        help="The host to bind the package index to.",
+    )
+    parser.add_argument(
+        "--port",
+        type=int,
+        default=3141,
+        help="The port to bind the package index to.",
+    )
+    parser.add_argument(
+        "--storage-path",
+        type=Path,
+        default=".",
+        help="The path to store served builds at.",
     )
 
     _add_shared_arguments(parser)

@@ -11,7 +11,7 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 
 from packse import __development_base_path__
-from packse.error import ServeAddressInUse, ServeAlreadyRunning
+from packse.error import RequiresExtra, ServeAddressInUse, ServeAlreadyRunning
 
 logger = logging.getLogger(__name__)
 
@@ -25,6 +25,9 @@ def index_up(
     offline: bool = False,
     all: bool = False,
 ):
+    if not shutil.which("devpi"):
+        raise RequiresExtra("index commands", "index")
+
     server_url = f"http://{host}:{port}"
 
     if background:
@@ -142,6 +145,9 @@ def index_up(
 
 
 def index_down(storage_path: Path | None) -> bool:
+    if not shutil.which("devpi"):
+        raise RequiresExtra("index commands", "index")
+
     storage_path = get_storage_directory(storage_path, create=False)
 
     if not storage_path.exists():

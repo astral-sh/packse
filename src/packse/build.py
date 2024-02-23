@@ -33,10 +33,15 @@ logger = logging.getLogger(__name__)
 
 
 def build(
-    targets: list[Path], rm_destination: bool, short_names: bool, skip_root: bool
+    targets: list[Path],
+    rm_destination: bool,
+    short_names: bool,
+    skip_root: bool,
+    work_dir: Path | None = None,
 ):
     # Validate and collect all targets first
     scenarios = []
+    work_dir = work_dir or Path.cwd()
 
     for target in targets:
         if not target.exists():
@@ -52,7 +57,12 @@ def build(
     with ThreadPoolExecutor(thread_name_prefix="packse-scenario-") as executor:
         futures = [
             executor.submit(
-                build_scenario, scenario, rm_destination, short_names, skip_root
+                build_scenario,
+                scenario,
+                rm_destination,
+                short_names,
+                skip_root,
+                work_dir,
             )
             for scenario in scenarios
         ]
@@ -65,7 +75,11 @@ def build(
 
 
 def build_scenario(
-    scenario: Scenario, rm_destination: bool, short_names: bool, skip_root: bool
+    scenario: Scenario,
+    rm_destination: bool,
+    short_names: bool,
+    skip_root: bool,
+    work_dir: Path,
 ) -> str:
     """
     Build the scenario defined at the given path.
@@ -76,7 +90,6 @@ def build_scenario(
     version = scenario_version(scenario)
     unique_name = f"{scenario.name}-{version}"
 
-    work_dir = Path.cwd()
     build_destination = work_dir / "build" / unique_name
     dist_destination = work_dir / "dist" / unique_name
     start_time = time.time()

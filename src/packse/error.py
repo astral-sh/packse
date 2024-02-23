@@ -10,6 +10,12 @@ class UserError(PackseError):
     """It's the user's fault :)"""
 
 
+class RequiresExtra(UserError):
+    def __init__(self, feature: str, extra: str) -> None:
+        message = f"Using {feature} requires installation with extra {extra!r}"
+        super().__init__(message)
+
+
 class DestinationAlreadyExists(UserError):
     def __init__(self, destination: Path) -> None:
         message = f"Destination directory '{destination}' already exists"
