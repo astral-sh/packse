@@ -57,6 +57,9 @@
       direct-incompatible-versions-c0e7adfa
       transitive-incompatible-with-root-version-a13da883
       transitive-incompatible-with-transitive-ec82e315
+      package-with-local-satisfies-constraint-without-local-6733baed
+      local-version-is-used-when-no-wheels-and-no-sdist-available-2cf1f032
+      wat-ee64f6e7
       package-only-prereleases-472fcc7e
       package-only-prereleases-in-range-1017748b
       requires-package-only-prereleases-in-range-global-opt-in-95140069
@@ -147,6 +150,10 @@
           direct-incompatible-versions-c0e7adfa
           transitive-incompatible-with-root-version-a13da883
           transitive-incompatible-with-transitive-ec82e315
+      scenarios/local.json
+          package-with-local-satisfies-constraint-without-local-6733baed
+          local-version-is-used-when-no-wheels-and-no-sdist-available-2cf1f032
+          wat-ee64f6e7
       scenarios/prereleases.json
           package-only-prereleases-472fcc7e
           package-only-prereleases-in-range-1017748b
@@ -241,6 +248,10 @@
           direct-incompatible-versions
           transitive-incompatible-with-root-version
           transitive-incompatible-with-transitive
+      scenarios/local.json
+          package-with-local-satisfies-constraint-without-local
+          local-version-is-used-when-no-wheels-and-no-sdist-available
+          wat
       scenarios/prereleases.json
           package-only-prereleases
           package-only-prereleases-in-range
@@ -345,6 +356,10 @@
           c0e7adfa
           a13da883
           ec82e315
+      scenarios/local.json
+          6733baed
+          2cf1f032
+          ee64f6e7
       scenarios/prereleases.json
           472fcc7e
           1017748b

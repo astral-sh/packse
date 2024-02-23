@@ -632,7 +632,8 @@
   dict({
     'exit_code': 2,
     'stderr': '''
-      usage: packse build [-h] [--rm] [--short-names] [--skip-root] [-v] [-q]
+      usage: packse build [-h] [--rm] [--short-names] [--no-hash] [--skip-root] [-v]
+                          [-q]
                           targets [targets ...]
       packse build: error: the following arguments are required: targets
   
