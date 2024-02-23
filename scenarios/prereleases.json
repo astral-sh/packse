@@ -516,5 +516,114 @@
             "satisfiable": false,
             "explanation": "Since the user did not explicitly opt-in to a prerelease, it cannot be selected."
         }
+    },
+    {
+        "name": "package-only-prereleases-boundary",
+        "description": "The user requires a non-prerelease version of `a` which only has prerelease versions available. There are pre-releases on the boundary of their range.",
+        "root": {
+            "requires": [
+                "a<0.2.0"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0a1": {},
+                    "0.2.0a1": {},
+                    "0.3.0a1": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "0.1.0a1"
+            },
+            "explanation": "Since there are only prerelease versions of `a` available, a prerelease is allowed. Since the user did not explictly request a pre-release, pre-releases at the boundary should not be selected."
+        }
+    },
+    {
+        "name": "package-prereleases-boundary",
+        "description": "The user requires a non-prerelease version of `a` but has enabled pre-releases. There are pre-releases on the boundary of their range.",
+        "root": {
+            "requires": [
+                "a<0.2.0"
+            ]
+        },
+        "resolver_options": {
+            "prereleases": true
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {},
+                    "0.2.0a1": {},
+                    "0.3.0": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "0.1.0"
+            },
+            "explanation": "Since the user did not use a pre-release specifier, pre-releases at the boundary should not be selected even though pre-releases are allowed."
+        }
+    },
+    {
+        "name": "package-prereleases-global-boundary",
+        "description": "The user requires a non-prerelease version of `a` but has enabled pre-releases. There are pre-releases on the boundary of their range.",
+        "root": {
+            "requires": [
+                "a<0.2.0"
+            ]
+        },
+        "resolver_options": {
+            "prereleases": true
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {},
+                    "0.2.0a1": {},
+                    "0.3.0": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "0.1.0"
+            },
+            "explanation": "Since the user did not use a pre-release specifier, pre-releases at the boundary should not be selected even though pre-releases are allowed."
+        }
+    },
+    {
+        "name": "package-prereleases-specifier-boundary",
+        "description": "The user requires a prerelease version of `a`. There are pre-releases on the boundary of their range.",
+        "root": {
+            "requires": [
+                "a<0.2.0a2"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {},
+                    "0.2.0": {},
+                    "0.2.0a1": {},
+                    "0.2.0a2": {},
+                    "0.2.0a3": {},
+                    "0.3.0": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "0.2.0a1"
+            },
+            "explanation": "Since the user used a pre-release specifier, pre-releases at the boundary should be selected."
+        }
     }
 ]
