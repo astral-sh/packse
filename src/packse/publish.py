@@ -207,7 +207,7 @@ def publish_package_distribution(
         raise PublishError(f"Publish of {target.name} timed out.")
     except subprocess.CalledProcessError as exc:
         output = exc.output.decode()
-        if "File already exists" in output:
+        if "File already exists" in output or "409 Conflict" in output:
             raise PublishAlreadyExists(target.name)
         if "HTTPError: 429 Too Many Requests" in output:
             raise PublishRateLimit(target.name)
