@@ -97,7 +97,8 @@ class ServeThreadError(ServeError):
 
 class ServeCommandError(ServeError):
     def __init__(self, message: str, stderr: str) -> None:
-        message = f"{message}:\n\n{stderr}"
+        if stderr.strip():
+            message += f":\n\n{stderr}"
         super().__init__(message)
 
 

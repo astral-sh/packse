@@ -7805,13 +7805,11 @@
 # ---
 # name: test_inspect_target_does_not_exist
   dict({
-    'exit_code': 0,
-    'stderr': '',
-    'stdout': '''
-      {
-        "scenarios": []
-      }
+    'exit_code': 1,
+    'stderr': '''
+      File 'foo' not found.
   
     ''',
+    'stdout': '',
   })
 # ---

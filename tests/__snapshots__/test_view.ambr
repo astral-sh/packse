@@ -120,7 +120,7 @@
   dict({
     'exit_code': 1,
     'stderr': '''
-      File at 'foo' is not a valid scenario: [Errno 21] Is a directory: 'foo'.
+      File 'foo' not found.
   
     ''',
     'stdout': '',

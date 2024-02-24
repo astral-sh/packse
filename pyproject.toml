@@ -32,6 +32,8 @@ msgspec = "^0.18.4"
 twine = "^4.0.2"
 hatchling = "^1.20.0"
 chevron-blue = "^0.2.1"
+pypiserver = "^2.0.1"
+setuptools = "^69.1.1"
 
 [tool.poetry.group.serve.dependencies]
 pypiserver = "^2.0.1"

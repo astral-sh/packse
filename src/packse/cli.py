@@ -11,6 +11,7 @@ from packse.error import (
     PublishError,
     ServeError,
     UserError,
+    ServeCommandError,
 )
 from packse.index import index_down, index_up
 from packse.inspect import inspect
@@ -50,6 +51,9 @@ def entrypoint():
         exit(1)
     except PublishError as exc:
         print(f"{exc}.", file=sys.stderr)
+        exit(1)
+    except ServeCommandError as exc:
+        print(f"{exc}", file=sys.stderr)
         exit(1)
     except ServeError as exc:
         print(f"{exc}.", file=sys.stderr)

@@ -172,7 +172,26 @@ def start_index_server(
         ) as server_output:
             line = ""
             lines = []
-            while "Serving on" not in line:
+
+            # Watch for startup
+            # TODO: Use a healthceck instead?
+            while "Serving on" not in line and "Listening on" not in line:
+                try:
+                    server_process.wait(0)
+                except subprocess.TimeoutExpired:
+                    pass
+                else:
+                    # The process stopped already
+                    if (
+                        logger.getEffectiveLevel() > logging.DEBUG
+                        and server_output.seekable()
+                    ):
+                        server_output.seek(0)
+                    err_output = (
+                        "\n".join(lines) + server_output.read().decode().strip()
+                    )
+                    raise ServeCommandError("Failed to start server!", err_output)
+
                 line = server_output.readline().decode()
                 if logger.getEffectiveLevel() <= logging.DEBUG:
                     print(line, end="")
@@ -181,17 +200,6 @@ def start_index_server(
                     lines.append(line)
                 if "Address already in use" in line:
                     raise ServeAddressInUse(server_url)
-
-                # Problematic start
-                if "usage: pypi-server run" in line:
-                    if (
-                        logger.getEffectiveLevel() > logging.DEBUG
-                        and server_output.seekable()
-                    ):
-                        server_output.seek(0)
-                    err_output = "\n".join(lines) + server_output.read().decode()
-
-                    raise ServeCommandError("Failed to start server!", err_output)
 
         # Server started!
         write_server_pid(server_process.pid)
