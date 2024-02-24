@@ -127,7 +127,7 @@ jobs:
           index_url=$(poetry run packse index up --bg --offline)
 
           # Publish the packages
-          poetry run packse publish --anonymous --index-url "$index_url" dist/*
+          poetry run packse publish --anonymous --index-url "$index_url" --dist-dir "./published" dist/*
 
           # Shutdown the index server
           poetry run packse index down
