@@ -134,7 +134,7 @@ used to set a username if not using an API token. If using a server which does n
 
 ### Running a package index
 
-_Requires installation with the `index` extra, e.g. `poetry install --with index`_
+_Requires installation with the `index` extra_
 
 A local package index can be controlled with the `index` command. For example, to start a local package index:
 
@@ -170,7 +170,7 @@ packse index down
 
 ### Serving scenarios
 
-_Requires installation with the `serve` extra, e.g. `poetry install --with serve`_
+_Requires installation with the `serve` extra_
 
 The `serve` command can be used to host, build, and publish scenarios in one step.
 
