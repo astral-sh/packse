@@ -92,7 +92,7 @@ jobs:
       - name: Install packages
         if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         run: |
-          poetry install --with index
+          poetry install --extras index
 
       - name: Collect scenarios
         if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
