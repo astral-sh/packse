@@ -9,9 +9,9 @@ from packse.error import (
     BuildError,
     DestinationAlreadyExists,
     PublishError,
+    ServeCommandError,
     ServeError,
     UserError,
-    ServeCommandError,
 )
 from packse.index import index_down, index_up
 from packse.inspect import inspect

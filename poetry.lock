@@ -4,7 +4,7 @@
 name = "anyio"
 version = "4.3.0"
 description = "High level compatibility layer for multiple asynchronous event loop implementations"
-optional = false
+optional = true
 python-versions = ">=3.8"
 files = [
     {file = "anyio-4.3.0-py3-none-any.whl", hash = "sha256:048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8"},
@@ -555,7 +555,7 @@ files = [
 name = "pip"
 version = "24.0"
 description = "The PyPA recommended tool for installing Python packages."
-optional = false
+optional = true
 python-versions = ">=3.7"
 files = [
     {file = "pip-24.0-py3-none-any.whl", hash = "sha256:ba0d021a166865d2265246961bec0152ff124de910c5cc39f1156ce3fa7c69dc"},
@@ -649,7 +649,7 @@ windows-terminal = ["colorama (>=0.4.6)"]
 name = "pypiserver"
 version = "2.0.1"
 description = "A minimal PyPI server for use with pip/easy_install."
-optional = false
+optional = true
 python-versions = ">=3.6"
 files = [
     {file = "pypiserver-2.0.1-py2.py3-none-any.whl", hash = "sha256:1dd98fb99d2da4199fb44c7284e57d69a9f7fda2c6c8dc01975c151c592677bf"},
@@ -841,7 +841,7 @@ testing-integration = ["build[virtualenv] (>=1.0.3)", "filelock (>=3.4.0)", "jar
 name = "sniffio"
 version = "1.3.0"
 description = "Sniff out which async library your code is running under"
-optional = false
+optional = true
 python-versions = ">=3.7"
 files = [
     {file = "sniffio-1.3.0-py3-none-any.whl", hash = "sha256:eecefdce1e5bbfb7ad2eeaabf7c1eeb404d7757c379bd1f7e5cce9d8bf425384"},
@@ -916,7 +916,7 @@ zstd = ["zstandard (>=0.18.0)"]
 name = "watchfiles"
 version = "0.21.0"
 description = "Simple, modern and high performance file watching and code reload in python."
-optional = false
+optional = true
 python-versions = ">=3.8"
 files = [
     {file = "watchfiles-0.21.0-cp310-cp310-macosx_10_7_x86_64.whl", hash = "sha256:27b4035013f1ea49c6c0b42d983133b136637a527e48c132d368eb19bf1ac6aa"},
@@ -1014,7 +1014,11 @@ files = [
 docs = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "sphinx (<7.2.5)", "sphinx (>=3.5)", "sphinx-lint"]
 testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ignore-flaky", "pytest-mypy (>=0.9.1)", "pytest-ruff"]
 
+[extras]
+index = ["pypiserver"]
+serve = ["pypiserver", "watchfiles"]
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "38b9ebd549a1e68c85c3aae6cec79632cd1d74569567d4a6bfb9fbb3bc71bd57"
+content-hash = "4596665ba9919a9b9d4133a93e3ae674198d7d52103c97846ecac4a1419fc013"
