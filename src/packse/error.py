@@ -79,6 +79,12 @@ class PublishRateLimit(PublishError):
         super().__init__(message)
 
 
+class PublishConnectionError(PublishError):
+    def __init__(self, package: str) -> None:
+        message = f"Publish of '{package}' failed due to a connection error"
+        super().__init__(message)
+
+
 class InvalidPublishTarget(UserError):
     def __init__(self, path: Path, reason: str) -> None:
         message = f"Publish target at '{path}' is not a valid: {reason}"

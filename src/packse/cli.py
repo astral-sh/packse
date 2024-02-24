@@ -132,7 +132,6 @@ def _call_publish(args):
         index_url=args.index_url,
         dry_run=args.dry_run,
         skip_existing=args.skip_existing,
-        retry_on_rate_limit=args.retry,
         anonymous=args.anonymous,
         workers=args.workers,
     )
@@ -282,11 +281,6 @@ def _add_publish_parser(subparsers):
         "--skip-existing",
         action="store_true",
         help="Skip existing distributions instead of failing.",
-    )
-    parser.add_argument(
-        "--retry",
-        action="store_true",
-        help="Retry when rate limits are encountered instead of failing. Note retries must be very long to succeed.",
     )
     parser.add_argument(
         "--workers",

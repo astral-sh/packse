@@ -11,7 +11,7 @@
             "a": {
                 "versions": {
                     "1.0.0": {
-                        "requires_python": ">=4.0"
+                        "requires_python": ">=3.30"
                     }
                 }
             }

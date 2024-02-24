@@ -14,6 +14,7 @@ from pathlib import Path
 from packse.error import (
     InvalidPublishTarget,
     PublishAlreadyExists,
+    PublishConnectionError,
     PublishError,
     PublishNoCredentials,
     PublishRateLimit,
@@ -27,7 +28,7 @@ logger = logging.getLogger(__name__)
 # At the time of writing, rate limits enforce a maximum of 20 new projects / hour.
 # Generally, retries aren't going to help.
 MAX_ATTEMPTS = 3
-RETRY_TIME = 60 * 2  # Start with two minutes
+RETRY_TIME = 1  # Start with one second
 RETRY_BACKOFF_FACTOR = 1.5
 
 
@@ -36,10 +37,11 @@ def publish(
     index_url: str,
     skip_existing: bool,
     dry_run: bool,
-    retry_on_rate_limit: bool,
     workers: int,
     anonymous: bool,
 ):
+    start_time = time.time()
+
     if not anonymous and not (
         "TWINE_PASSWORD" in os.environ or "PACKSE_PUBLISH_PASSWORD" in os.environ
     ):
@@ -68,7 +70,6 @@ def publish(
                 index_url,
                 skip_existing=skip_existing,
                 dry_run=dry_run,
-                retry_on_rate_limit=retry_on_rate_limit,
                 anonymous=anonymous,
             )
             for target in targets
@@ -88,8 +89,10 @@ def publish(
         s = "" if targets == 1 else "s"
         raise PublishError(f"Failed to publish {incomplete}/{len(targets)} target{s}")
 
-    for result in sorted(future.result() for future in futures):
-        print(result)
+    total_files = 0
+    for name, files in sorted(future.result() for future in futures):
+        print(name)
+        total_files += files
 
     for target in targets:
         yankfile = target.with_suffix(".yanked")
@@ -104,6 +107,13 @@ def publish(
                 )
                 print(f"\t{package_version}: {url}")
 
+    logger.info(
+        "Published %s targets (%s new files) in %.2fs",
+        len(futures),
+        total_files,
+        time.time() - start_time,
+    )
+
 
 def publish_package_distributions(
     target: Path,
@@ -111,22 +121,23 @@ def publish_package_distributions(
     skip_existing: bool,
     dry_run: bool,
     anonymous: bool,
-    retry_on_rate_limit: bool,
-) -> str:
+) -> tuple[str, int]:
     """
     Publish a directory of package distribution files.
     """
+    files = 0
     for distfile in sorted(target.iterdir()):
-        publish_package_distribution_with_retries(
+        if publish_package_distribution_with_retries(
             distfile,
             index_url,
             skip_existing=skip_existing,
             dry_run=dry_run,
             anonymous=anonymous,
-            max_attempts=MAX_ATTEMPTS if retry_on_rate_limit else 1,
-        )
+            max_attempts=MAX_ATTEMPTS,
+        ):
+            files += 1
 
-    return target.name
+    return (target.name, files)
 
 
 def publish_package_distribution_with_retries(
@@ -136,7 +147,7 @@ def publish_package_distribution_with_retries(
     dry_run: bool,
     anonymous: bool,
     max_attempts: int,
-):
+) -> bool:
     """
     Publish a package distribution file with retries and error handling.
     """
@@ -153,18 +164,21 @@ def publish_package_distribution_with_retries(
             if not skip_existing:
                 raise
             logger.info("Skipped '%s': already published.", target.name)
-        except PublishRateLimit:
+            return False
+        except PublishConnectionError:
             if attempts >= max_attempts:
                 raise
             logger.warning(
-                "Encountered rate limit publishing '%s', retrying in ~%d minutes",
+                "Encountered connection error publishing '%s', retrying in %ds",
                 target.name,
-                retry_time // 60,
+                retry_time,
             )
             time.sleep(retry_time)
         else:
             logger.info("Published '%s'", target.name)
             break
+
+    return True
 
 
 def publish_package_distribution(
@@ -211,6 +225,8 @@ def publish_package_distribution(
             raise PublishAlreadyExists(target.name)
         if "HTTPError: 429 Too Many Requests" in output:
             raise PublishRateLimit(target.name)
+        if "ConnectionError" in output:
+            raise PublishConnectionError(target.name)
         raise PublishToolError(
             f"Publishing {target.name} with twine failed",
             output,

@@ -14,6 +14,7 @@
       Published 'example_b_8597e52a-2.0.0.tar.gz'
       Published 'example_b_8597e52a-3.0.0-py3-none-any.whl'
       Published 'example_b_8597e52a-3.0.0.tar.gz'
+      Published 1 targets (9 new files) in [TIME]
   
     ''',
     'stdout': '''
@@ -93,6 +94,7 @@
           <mock twine logs>
       
       Published 'example_b_8597e52a-3.0.0.tar.gz'
+      Published 1 targets (9 new files) in [TIME]
   
     ''',
     'stdout': '''
@@ -193,6 +195,7 @@
           <twine happy message>
       
       Published 'example_b_8597e52a-3.0.0.tar.gz'
+      Published 1 targets (9 new files) in [TIME]
   
     ''',
     'stdout': '''

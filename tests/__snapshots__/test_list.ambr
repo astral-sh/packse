@@ -77,7 +77,7 @@
       package-prereleases-boundary-6d600873
       package-prereleases-global-boundary-cf1b8081
       package-prereleases-specifier-boundary-357b9636
-      requires-python-version-does-not-exist-4486c0e5
+      requires-python-version-does-not-exist-1601081f
       requires-python-version-less-than-current-d4ea58de
       requires-python-version-greater-than-current-741c8854
       requires-python-version-greater-than-current-patch-0044ac94
@@ -169,7 +169,7 @@
           package-prereleases-global-boundary-cf1b8081
           package-prereleases-specifier-boundary-357b9636
       scenarios/requires-python.json
-          requires-python-version-does-not-exist-4486c0e5
+          requires-python-version-does-not-exist-1601081f
           requires-python-version-less-than-current-d4ea58de
           requires-python-version-greater-than-current-741c8854
           requires-python-version-greater-than-current-patch-0044ac94
@@ -367,7 +367,7 @@
           cf1b8081
           357b9636
       scenarios/requires-python.json
-          4486c0e5
+          1601081f
           d4ea58de
           741c8854
           0044ac94
