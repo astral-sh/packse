@@ -53,7 +53,7 @@ jobs:
 
       - name: Install packages
         run: |
-          poetry install
+          poetry install --all-extras
 
       - name: Run tests
         run: |

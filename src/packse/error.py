@@ -79,6 +79,12 @@ class PublishRateLimit(PublishError):
         super().__init__(message)
 
 
+class PublishConnectionError(PublishError):
+    def __init__(self, package: str) -> None:
+        message = f"Publish of '{package}' failed due to a connection error"
+        super().__init__(message)
+
+
 class InvalidPublishTarget(UserError):
     def __init__(self, path: Path, reason: str) -> None:
         message = f"Publish target at '{path}' is not a valid: {reason}"
@@ -90,6 +96,18 @@ class ServeError(PackseError):
         super().__init__(message)
 
 
+class ServeThreadError(ServeError):
+    def __init__(self, message: str) -> None:
+        super().__init__(message)
+
+
+class ServeCommandError(ServeError):
+    def __init__(self, message: str, stderr: str) -> None:
+        if stderr.strip():
+            message += f":\n\n{stderr}"
+        super().__init__(message)
+
+
 class ServeAddressInUse(ServeError):
     def __init__(self, url: str) -> None:
         message = f"Address '{url}' already in use"
@@ -98,5 +116,5 @@ class ServeAddressInUse(ServeError):
 
 class ServeAlreadyRunning(ServeError):
     def __init__(self) -> None:
-        message = "Server is already running."
+        message = "Server is already running"
         super().__init__(message)

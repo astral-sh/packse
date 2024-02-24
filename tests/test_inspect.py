@@ -5,7 +5,11 @@ from .common import snapshot_command
 
 
 def test_inspect_no_target_finds_all_valid_scenarios(snapshot):
-    assert snapshot_command(["inspect"]) == snapshot
+    assert (
+        # Just assert it succeeds, we don't want to include all these targets in the snap
+        snapshot_command(["inspect"], snapshot_stdout=False, snapshot_stderr=False)
+        == snapshot
+    )
 
 
 def test_inspect_target_does_not_exist(snapshot):

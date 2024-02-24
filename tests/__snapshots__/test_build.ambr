@@ -209,7 +209,7 @@
       ''',
     }),
     'stderr': '''
-      Building 'example-8597e52a' in directory 'build/example-8597e52a'
+      Building 'example-8597e52a' in directory '[PWD]/build/example-8597e52a'
       Destination directory '[PWD]/build/example-8597e52a' already exists. Pass `--rm` to allow removal.
   
     ''',
