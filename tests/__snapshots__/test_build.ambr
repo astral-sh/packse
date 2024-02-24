@@ -210,7 +210,7 @@
     }),
     'stderr': '''
       Building 'example-8597e52a' in directory '[PWD]/build/example-8597e52a'
-      Destination directory '[PWD]/build/example-8597e52a' already exists. Pass `--rm` to allow removal.
+      Destination directory '[PWD]/build/example-8597e52a' already exists. Pass `--force` to allow removal.
   
     ''',
     'stdout': '',
@@ -218,12 +218,9 @@
 # ---
 # name: test_build_example_already_exists_with_rm_flag
   dict({
-    'exit_code': 0,
+    'exit_code': 2,
     'stderr': '<not included>',
-    'stdout': '''
-      example-8597e52a
-  
-    ''',
+    'stdout': '',
   })
 # ---
 # name: test_build_example_short_names
@@ -632,8 +629,8 @@
   dict({
     'exit_code': 2,
     'stderr': '''
-      usage: packse build [-h] [--rm] [--short-names] [--no-hash] [--skip-root] [-v]
-                          [-q]
+      usage: packse build [-h] [--force] [--short-names] [--no-hash] [--skip-root]
+                          [-v] [-q]
                           targets [targets ...]
       packse build: error: the following arguments are required: targets
   
