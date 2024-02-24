@@ -1,9 +1,10 @@
 # serializer version: 1
 # name: test_index_down
   dict({
-    'exit_code': 1,
+    'exit_code': 0,
     'stderr': '''
-      Server looks shutdown already.
+      Stopping server with pid [PID]...
+      Stopped server!
   
     ''',
     'stdout': '',

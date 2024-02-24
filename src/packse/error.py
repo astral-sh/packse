@@ -110,5 +110,5 @@ class ServeAddressInUse(ServeError):
 
 class ServeAlreadyRunning(ServeError):
     def __init__(self) -> None:
-        message = "Server is already running."
+        message = "Server is already running"
         super().__init__(message)

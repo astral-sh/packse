@@ -9,6 +9,7 @@ import sys
 import time
 from contextlib import contextmanager, nullcontext
 from pathlib import Path
+from typing import Generator
 
 from packse import __development_base_path__
 from packse.error import (
@@ -86,9 +87,6 @@ def index_up(
 
 
 def index_down() -> bool:
-    if not shutil.which("devpi"):
-        raise RequiresExtra("index commands", "index")
-
     state_path = get_packse_state_path(create=False)
 
     if not state_path.exists():
@@ -123,7 +121,7 @@ def index_down() -> bool:
             while is_running(pid):
                 time.sleep(0.1)
 
-        reset_pidfile(state_path)
+        reset_pidfile()
         logger.info("Stopped server!")
         return True
     else:
@@ -138,7 +136,7 @@ def start_index_server(
     port: int,
     server_log_path: Path | None,
     offline: bool,
-) -> subprocess.Popen:
+) -> Generator[subprocess.Popen, None, None]:
     server_url = f"http://{host}:{port}"
     dist_dir.mkdir(parents=True, exist_ok=True)
 
