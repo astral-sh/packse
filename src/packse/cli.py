@@ -13,6 +13,7 @@ from packse.error import (
     ServeError,
     UserError,
 )
+from packse.fetch import fetch
 from packse.index import index_down, index_up
 from packse.inspect import inspect
 from packse.list import list
@@ -41,7 +42,7 @@ def entrypoint():
     try:
         args.call(args)
     except DestinationAlreadyExists as exc:
-        print(f"{exc}. Pass `--rm` to allow removal.", file=sys.stderr)
+        print(f"{exc}. Pass `--force` to allow removal.", file=sys.stderr)
         exit(1)
     except UserError as exc:
         print(f"{exc}.", file=sys.stderr)
@@ -73,7 +74,7 @@ def entrypoint():
 def _call_build(args):
     build(
         args.targets,
-        rm_destination=args.rm,
+        rm_destination=args.force,
         short_names=args.short_names,
         no_hash=args.no_hash,
         skip_root=args.skip_root,
@@ -88,7 +89,7 @@ def _call_build_package(args):
         args.no_sdist,
         args.requires_python,
         args.wheel_tag,
-        args.rm,
+        args.force,
     )
 
 
@@ -134,6 +135,14 @@ def _call_publish(args):
         skip_existing=args.skip_existing,
         anonymous=args.anonymous,
         workers=args.workers,
+    )
+
+
+def _call_fetch(args):
+    fetch(
+        args.dest,
+        ref=args.ref,
+        force=args.force,
     )
 
 
@@ -195,9 +204,9 @@ def _add_build_parser(subparsers):
         help="The scenario to build",
     )
     parser.add_argument(
-        "--rm",
+        "--force",
         action="store_true",
-        help="Allow removal of existing build directory",
+        help="Overwrite existing builds",
     )
     parser.add_argument(
         "--short-names",
@@ -254,9 +263,9 @@ def _add_build_package_parser(subparsers):
         help="Disable building source distributions",
     )
     parser.add_argument(
-        "--rm",
+        "--force",
         action="store_true",
-        help="Allow removal of existing build directory",
+        help="Replace existing builds",
     )
     _add_shared_arguments(parser)
 
@@ -498,6 +507,31 @@ def _add_shared_arguments(parser):
     )
 
 
+def _add_fetch_parser(subparsers):
+    parser = subparsers.add_parser(
+        "fetch", help="Fetch built-in scenarios from the packse repository"
+    )
+    parser.set_defaults(call=_call_fetch)
+    parser.add_argument(
+        "--dest",
+        type=Path,
+        help="Where to place the fetched scenarios",
+    )
+    parser.add_argument(
+        "--ref",
+        type=str,
+        default=None,
+        help="The reference to fetch",
+    )
+    parser.add_argument(
+        "-f",
+        "--force",
+        action="store_true",
+        help="Allow replacement of existing destination directory",
+    )
+    _add_shared_arguments(parser)
+
+
 def get_parser() -> argparse.ArgumentParser:
     parser = _root_parser()
     subparsers = parser.add_subparsers(title="commands")
@@ -508,6 +542,7 @@ def get_parser() -> argparse.ArgumentParser:
     _add_list_parser(subparsers)
     _add_inspect_parser(subparsers)
     _add_serve_parser(subparsers)
+    _add_fetch_parser(subparsers)
     _add_index_parser(subparsers)
 
     return parser

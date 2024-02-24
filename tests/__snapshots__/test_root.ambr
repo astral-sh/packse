@@ -5,7 +5,8 @@
     'stderr': '',
     'stdout': '''
       usage: packse [-h] [-v] [-q]
-                    {build,build-pkg,view,publish,list,inspect,serve,index} ...
+                    {build,build-pkg,view,publish,list,inspect,serve,fetch,index}
+                    ...
       
       Utilities for working example packaging scenarios
       
@@ -15,7 +16,7 @@
         -q, --quiet           Disable logging
       
       commands:
-        {build,build-pkg,view,publish,list,inspect,serve,index}
+        {build,build-pkg,view,publish,list,inspect,serve,fetch,index}
           build               Build packages for a scenario
           build-pkg           Build a single package
           view                View a scenario
@@ -23,6 +24,7 @@
           list                List scenarios at the given paths
           inspect             Inspect scenarios at the given paths
           serve               Serve scenarios on a temporary local package index
+          fetch               Fetch built-in scenarios from the packse repository
           index               Run a local package index
   
     ''',
@@ -34,7 +36,8 @@
     'stderr': '',
     'stdout': '''
       usage: packse [-h] [-v] [-q]
-                    {build,build-pkg,view,publish,list,inspect,serve,index} ...
+                    {build,build-pkg,view,publish,list,inspect,serve,fetch,index}
+                    ...
       
       Utilities for working example packaging scenarios
       
@@ -44,7 +47,7 @@
         -q, --quiet           Disable logging
       
       commands:
-        {build,build-pkg,view,publish,list,inspect,serve,index}
+        {build,build-pkg,view,publish,list,inspect,serve,fetch,index}
           build               Build packages for a scenario
           build-pkg           Build a single package
           view                View a scenario
@@ -52,6 +55,7 @@
           list                List scenarios at the given paths
           inspect             Inspect scenarios at the given paths
           serve               Serve scenarios on a temporary local package index
+          fetch               Fetch built-in scenarios from the packse repository
           index               Run a local package index
   
     ''',
@@ -63,7 +67,8 @@
     'stderr': '',
     'stdout': '''
       usage: packse [-h] [-v] [-q]
-                    {build,build-pkg,view,publish,list,inspect,serve,index} ...
+                    {build,build-pkg,view,publish,list,inspect,serve,fetch,index}
+                    ...
       
       Utilities for working example packaging scenarios
       
@@ -73,7 +78,7 @@
         -q, --quiet           Disable logging
       
       commands:
-        {build,build-pkg,view,publish,list,inspect,serve,index}
+        {build,build-pkg,view,publish,list,inspect,serve,fetch,index}
           build               Build packages for a scenario
           build-pkg           Build a single package
           view                View a scenario
@@ -81,6 +86,7 @@
           list                List scenarios at the given paths
           inspect             Inspect scenarios at the given paths
           serve               Serve scenarios on a temporary local package index
+          fetch               Fetch built-in scenarios from the packse repository
           index               Run a local package index
   
     ''',

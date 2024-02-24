@@ -5,7 +5,10 @@ from .common import snapshot_command
 
 
 def test_view_no_target(snapshot):
-    assert snapshot_command(["view"]) == snapshot
+    assert (
+        snapshot_command(["view"], snapshot_stderr=False, snapshot_stdout=False)
+        == snapshot
+    )
 
 
 def test_view_target_does_not_exist(snapshot):

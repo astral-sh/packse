@@ -1,0 +1,216 @@
+# serializer version: 1
+# name: test_fetch
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'scenarios/does-not-exist.json': 'md5:9fae2b375228989d804897b6074d280f',
+      'scenarios/example.json': 'md5:62d99e0a2370199b8d826738e579fbbf',
+      'scenarios/excluded.json': 'md5:2b3d094be8433b84c0c54458f402a132',
+      'scenarios/extras.json': 'md5:c06482eae069dedbf9c657e119b2f8a8',
+      'scenarios/incompatible-versions.json': 'md5:b385322b218df131ed398eeba6c00c42',
+      'scenarios/prereleases.json': 'md5:438f0472a289a51165dcbefdb26a3a69',
+      'scenarios/requires-python.json': 'md5:2e849d71f835c731194141cce344bb13',
+      'scenarios/wheels.json': 'md5:e5d512e65fdcb1e3c325e6986081208a',
+      'scenarios/yanked.json': 'md5:ec3778cc2c784054c6b13bdb9b475f6e',
+      'tree': '''
+        test_fetch0
+        └── scenarios
+            ├── does-not-exist.json
+            ├── example.json
+            ├── excluded.json
+            ├── extras.json
+            ├── incompatible-versions.json
+            ├── prereleases.json
+            ├── requires-python.json
+            ├── wheels.json
+            └── yanked.json
+        
+        1 directories, 9 files
+  
+      ''',
+    }),
+    'stderr': '''
+      Cloning repository https://github.com/zanieb/packse
+      Checking out directory 'scenarios' at ref df20b898fdf1fd242cc19acc2a3148d72aa4d89f
+      Found does-not-exist.json
+      Found example.json
+      Found excluded.json
+      Found extras.json
+      Found incompatible-versions.json
+      Found prereleases.json
+      Found requires-python.json
+      Found wheels.json
+      Found yanked.json
+      Copying files into '[PWD]/scenarios'
+      Fetched 9 files in [TIME]
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_fetch_dest
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'foo/does-not-exist.json': 'md5:9fae2b375228989d804897b6074d280f',
+      'foo/example.json': 'md5:62d99e0a2370199b8d826738e579fbbf',
+      'foo/excluded.json': 'md5:2b3d094be8433b84c0c54458f402a132',
+      'foo/extras.json': 'md5:c06482eae069dedbf9c657e119b2f8a8',
+      'foo/incompatible-versions.json': 'md5:b385322b218df131ed398eeba6c00c42',
+      'foo/prereleases.json': 'md5:438f0472a289a51165dcbefdb26a3a69',
+      'foo/requires-python.json': 'md5:2e849d71f835c731194141cce344bb13',
+      'foo/wheels.json': 'md5:e5d512e65fdcb1e3c325e6986081208a',
+      'foo/yanked.json': 'md5:ec3778cc2c784054c6b13bdb9b475f6e',
+      'tree': '''
+        test_fetch_dest0
+        └── foo
+            ├── does-not-exist.json
+            ├── example.json
+            ├── excluded.json
+            ├── extras.json
+            ├── incompatible-versions.json
+            ├── prereleases.json
+            ├── requires-python.json
+            ├── wheels.json
+            └── yanked.json
+        
+        1 directories, 9 files
+  
+      ''',
+    }),
+    'stderr': '''
+      Cloning repository https://github.com/zanieb/packse
+      Checking out directory 'scenarios' at ref df20b898fdf1fd242cc19acc2a3148d72aa4d89f
+      Found does-not-exist.json
+      Found example.json
+      Found excluded.json
+      Found extras.json
+      Found incompatible-versions.json
+      Found prereleases.json
+      Found requires-python.json
+      Found wheels.json
+      Found yanked.json
+      Copying files into 'foo'
+      Fetched 9 files in [TIME]
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_fetch_dest_exists
+  dict({
+    'exit_code': 1,
+    'filesystem': dict({
+      'tree': '''
+        test_fetch_dest_exists0
+        └── foo
+        
+        1 directories
+  
+      ''',
+    }),
+    'stderr': '''
+      Destination directory 'foo' already exists. Pass `--force` to allow removal.
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_fetch_dest_exists_force
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'foo/does-not-exist.json': 'md5:9fae2b375228989d804897b6074d280f',
+      'foo/example.json': 'md5:62d99e0a2370199b8d826738e579fbbf',
+      'foo/excluded.json': 'md5:2b3d094be8433b84c0c54458f402a132',
+      'foo/extras.json': 'md5:c06482eae069dedbf9c657e119b2f8a8',
+      'foo/incompatible-versions.json': 'md5:b385322b218df131ed398eeba6c00c42',
+      'foo/prereleases.json': 'md5:438f0472a289a51165dcbefdb26a3a69',
+      'foo/requires-python.json': 'md5:2e849d71f835c731194141cce344bb13',
+      'foo/wheels.json': 'md5:e5d512e65fdcb1e3c325e6986081208a',
+      'foo/yanked.json': 'md5:ec3778cc2c784054c6b13bdb9b475f6e',
+      'tree': '''
+        test_fetch_dest_exists_force0
+        └── foo
+            ├── does-not-exist.json
+            ├── example.json
+            ├── excluded.json
+            ├── extras.json
+            ├── incompatible-versions.json
+            ├── prereleases.json
+            ├── requires-python.json
+            ├── wheels.json
+            └── yanked.json
+        
+        1 directories, 9 files
+  
+      ''',
+    }),
+    'stderr': '''
+      Cloning repository https://github.com/zanieb/packse
+      Checking out directory 'scenarios' at ref df20b898fdf1fd242cc19acc2a3148d72aa4d89f
+      Found does-not-exist.json
+      Found example.json
+      Found excluded.json
+      Found extras.json
+      Found incompatible-versions.json
+      Found prereleases.json
+      Found requires-python.json
+      Found wheels.json
+      Found yanked.json
+      Copying files into 'foo'
+      Fetched 9 files in [TIME]
+  
+    ''',
+    'stdout': '',
+  })
+# ---
+# name: test_fetch_tag
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'scenarios/does-not-exist.json': 'md5:9fae2b375228989d804897b6074d280f',
+      'scenarios/example.json': 'md5:62d99e0a2370199b8d826738e579fbbf',
+      'scenarios/excluded.json': 'md5:2b3d094be8433b84c0c54458f402a132',
+      'scenarios/extras.json': 'md5:c06482eae069dedbf9c657e119b2f8a8',
+      'scenarios/incompatible-versions.json': 'md5:b385322b218df131ed398eeba6c00c42',
+      'scenarios/prereleases.json': 'md5:438f0472a289a51165dcbefdb26a3a69',
+      'scenarios/requires-python.json': 'md5:2e849d71f835c731194141cce344bb13',
+      'scenarios/wheels.json': 'md5:e5d512e65fdcb1e3c325e6986081208a',
+      'scenarios/yanked.json': 'md5:ec3778cc2c784054c6b13bdb9b475f6e',
+      'tree': '''
+        test_fetch_tag0
+        └── scenarios
+            ├── does-not-exist.json
+            ├── example.json
+            ├── excluded.json
+            ├── extras.json
+            ├── incompatible-versions.json
+            ├── prereleases.json
+            ├── requires-python.json
+            ├── wheels.json
+            └── yanked.json
+        
+        1 directories, 9 files
+  
+      ''',
+    }),
+    'stderr': '''
+      Cloning repository https://github.com/zanieb/packse
+      Checking out directory 'scenarios' at ref 0.1.0
+      Found does-not-exist.json
+      Found example.json
+      Found excluded.json
+      Found extras.json
+      Found incompatible-versions.json
+      Found prereleases.json
+      Found requires-python.json
+      Found wheels.json
+      Found yanked.json
+      Copying files into '[PWD]/scenarios'
+      Fetched 9 files in [TIME]
+  
+    ''',
+    'stdout': '',
+  })
+# ---

@@ -75,7 +75,7 @@
     'stderr': '''
       usage: packse build-pkg [-h] [-t WHEEL_TAG] [--no-wheel]
                               [--requires-python REQUIRES_PYTHON] [--no-sdist]
-                              [--rm] [-v] [-q]
+                              [--force] [-v] [-q]
                               name version
       packse build-pkg: error: the following arguments are required: name, version
   
@@ -146,7 +146,7 @@
     'stderr': '''
       usage: packse build-pkg [-h] [-t WHEEL_TAG] [--no-wheel]
                               [--requires-python REQUIRES_PYTHON] [--no-sdist]
-                              [--rm] [-v] [-q]
+                              [--force] [-v] [-q]
                               name version
       packse build-pkg: error: the following arguments are required: version
   
