@@ -134,6 +134,8 @@ used to set a username if not using an API token. If using a server which does n
 
 ### Developing scenarios
 
+_Requires installation with the `serve` extra, e.g. `poetry install --with serve`_
+
 The `serve` command can be used to build and publish scenarios to a local package index.
 
 ```bash
@@ -148,6 +150,8 @@ hash for the scenario.
 By default, the `serve` index will fallback to PyPI for missing packages. To test in isolation, use the `--offline` flag.
 
 ### Running a package index
+
+_Requires installation with the `index` extra, e.g. `poetry install --with index`_
 
 A local package index can be controlled with the `index` command. For example, to start a local package index:
 
@@ -197,6 +201,17 @@ For example, with `pip`:
 ```bash
 pip install -i https://test.pypi.org/simple/ example-cd797223
 ```
+
+### Registry backends
+
+Packse supports hosting a local index with two Python package registry backends:
+
+- `devpi`: Using `packse index up`
+- `pypiserver`: Using `packse serve`
+
+At some point, these commands may be unified to use a configurable, consistent backend. The reason for using multiple
+backends is historical, although the backends provide different behavior. Notably, `devpi` supports the JSON Simple
+API while `pypiserver` only supports the HTML Simple API.
 
 ### Exporting scenarios
 
