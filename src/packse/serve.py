@@ -1,5 +1,5 @@
+import importlib
 import logging
-import shutil
 import threading
 from pathlib import Path
 
@@ -27,7 +27,11 @@ def serve(
     no_hash: bool = False,
     offline: bool = False,
 ):
-    if not shutil.which("pypi-server") or watchfiles is None:
+    try:
+        importlib.import_module("pypiserver")
+    except ImportError:
+        raise RequiresExtra("index commands", "index")
+    if watchfiles is None:
         raise RequiresExtra("serve command", "serve")
 
     dist_dir = Path(dist_dir)

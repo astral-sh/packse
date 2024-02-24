@@ -1,9 +1,11 @@
 import errno
+import importlib
 import logging
 import os
 import shutil
 import signal
 import subprocess
+import sys
 import time
 from contextlib import contextmanager, nullcontext
 from pathlib import Path
@@ -27,7 +29,9 @@ def index_up(
     reset: bool = False,
     offline: bool = False,
 ):
-    if not shutil.which("pypi-server"):
+    try:
+        importlib.import_module("pypiserver")
+    except ImportError:
         raise RequiresExtra("index commands", "index")
 
     if not dist_dir:
@@ -139,7 +143,9 @@ def start_index_server(
     dist_dir.mkdir(parents=True, exist_ok=True)
 
     command = [
-        "pypi-server",
+        sys.executable,
+        "-m",
+        "pypiserver",
         "run",
         "--host",
         host,
