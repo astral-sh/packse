@@ -193,17 +193,6 @@ For example, with `pip`:
 pip install -i https://test.pypi.org/simple/ example-cd797223
 ```
 
-### Registry backends
-
-Packse supports hosting a local index with two Python package registry backends:
-
-- `devpi`: Using `packse index up`
-- `pypiserver`: Using `packse serve`
-
-At some point, these commands may be unified to use a configurable, consistent backend. The reason for using multiple
-backends is historical, although the backends provide different behavior. Notably, `devpi` supports the JSON Simple
-API while `pypiserver` only supports the HTML Simple API.
-
 ### Exporting scenarios
 
 Scenario information can be exported with the `packse inspect`. This creates a JSON representation of the scenarios
