@@ -90,6 +90,17 @@ class ServeError(PackseError):
         super().__init__(message)
 
 
+class ServeThreadError(ServeError):
+    def __init__(self, message: str) -> None:
+        super().__init__(message)
+
+
+class ServeCommandError(ServeError):
+    def __init__(self, message: str, stderr: str) -> None:
+        message = f"{message}:\n\n{stderr}"
+        super().__init__(message)
+
+
 class ServeAddressInUse(ServeError):
     def __init__(self, url: str) -> None:
         message = f"Address '{url}' already in use"

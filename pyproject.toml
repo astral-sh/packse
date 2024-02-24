@@ -38,9 +38,7 @@ pypiserver = "^2.0.1"
 watchfiles = "^0.21.0"
 
 [tool.poetry.group.index.dependencies]
-devpi = "^2.2.0"
-devpi-server = {git = "https://github.com/zanieb/devpi", rev = "22f71acb8f08a59a098e7ad434cf388a1193fc24", subdirectory = "server"}
-waitress = "^3.0.0"
+pypiserver = "^2.0.1"
 
 [tool.poetry.group.dev.dependencies]
 syrupy = "^4.6.0"

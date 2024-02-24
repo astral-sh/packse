@@ -38,11 +38,15 @@ def build(
     short_names: bool,
     no_hash: bool,
     skip_root: bool,
-    work_dir: Path | None = None,
+    dist_dir: Path | None = None,
+    build_dir: Path | None = None,
 ):
+    start_time = time.time()
+
     # Validate and collect all targets first
     scenarios = []
-    work_dir = work_dir or Path.cwd()
+    dist_dir = dist_dir or (Path.cwd() / "dist")
+    build_dir = build_dir or (Path.cwd() / "build")
 
     for target in targets:
         if not target.exists():
@@ -73,7 +77,8 @@ def build(
                 short_names,
                 no_hash,
                 skip_root,
-                work_dir,
+                build_dir,
+                dist_dir,
             )
             for scenario in scenarios
         ]
@@ -84,6 +89,12 @@ def build(
     for result in sorted(results):
         print(result)
 
+    logger.info(
+        "Built %s scenarios in %.2fs",
+        len(results),
+        time.time() - start_time,
+    )
+
 
 def build_scenario(
     scenario: Scenario,
@@ -91,7 +102,8 @@ def build_scenario(
     short_names: bool,
     no_hash: bool,
     skip_root: bool,
-    work_dir: Path,
+    build_dir: Path,
+    dist_dir: Path,
 ) -> str:
     """
     Build the scenario defined at the given path.
@@ -104,14 +116,14 @@ def build_scenario(
     if not no_hash:
         name = f"{name}-{hash}"
 
-    build_destination = work_dir / "build" / name
-    dist_destination = work_dir / "dist" / name
+    build_destination = build_dir / name
+    dist_destination = dist_dir / name
     start_time = time.time()
 
     logger.info(
         "Building '%s' in directory '%s'",
         name,
-        build_destination.relative_to(work_dir),
+        build_destination,
     )
 
     if build_destination.exists():
@@ -138,7 +150,6 @@ def build_scenario(
                 scenario_version=hash,
                 name=name,
                 package=package,
-                work_dir=work_dir,
                 build_destination=build_destination,
                 dist_destination=dist_destination,
                 short_names=short_names,
@@ -155,7 +166,6 @@ def build_scenario(
                     scenario_version=hash,
                     name=scenario.name,
                     package=make_root_package(scenario),
-                    work_dir=work_dir,
                     build_destination=build_destination,
                     dist_destination=dist_destination,
                     short_names=short_names,
@@ -199,7 +209,6 @@ def build_scenario_package(
     scenario_version: str,
     name: str,
     package: Package,
-    work_dir: Path,
     build_destination: Path,
     dist_destination: Path,
     short_names: bool,
@@ -262,7 +271,7 @@ def build_scenario_package(
             template_config, package_version, package_destination
         ):
             shared_path = dist_destination / dist.name
-            logger.debug("Linked distribution to %s", shared_path.relative_to(work_dir))
+            logger.debug("Linked distribution to %s", shared_path)
             shared_path.hardlink_to(dist)
 
         if package_version.yanked:

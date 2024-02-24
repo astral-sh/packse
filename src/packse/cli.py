@@ -97,7 +97,8 @@ def _call_serve(args):
         args.targets,
         host=args.host,
         port=args.port,
-        storage_path=args.storage_path,
+        dist_dir=args.dist_dir,
+        build_dir=args.build_dir,
         short_names=args.short_names,
         no_hash=args.no_hash,
         offline=args.offline,
@@ -109,15 +110,14 @@ def _call_index_up(args):
         host=args.host,
         port=args.port,
         reset=args.reset,
-        storage_path=args.storage_path,
+        dist_dir=args.dist_dir,
         background=args.bg,
         offline=args.offline,
-        all=args.all,
     )
 
 
 def _call_index_down(args):
-    success = index_down(storage_path=args.storage_path)
+    success = index_down()
     if not success:
         exit(1)
 
@@ -349,10 +349,16 @@ def _add_serve_parser(subparsers):
         help="The port to bind the package index to.",
     )
     parser.add_argument(
-        "--storage-path",
+        "--dist-dir",
         type=Path,
-        default=".",
-        help="The path to store served builds at.",
+        default="./dist",
+        help="The directory to store and serve builds from.",
+    )
+    parser.add_argument(
+        "--build-dir",
+        type=Path,
+        default="./build",
+        help="The direcotry to store intermediate build artifacts in.",
     )
     parser.add_argument(
         "--short-names",
@@ -397,10 +403,10 @@ def _add_index_parser(subparsers):
         help="Reset the server's state on start.",
     )
     up.add_argument(
-        "--storage-path",
+        "--dist-dir",
         type=Path,
-        default=None,
-        help="The path to store server data at. Defaults to '~/.packse' if in the background, otherwise a temporary directory is used.",
+        default="./dist",
+        help="The directory to serve builds from.",
     )
     up.add_argument(
         "--bg",
@@ -410,22 +416,11 @@ def _add_index_parser(subparsers):
     up.add_argument(
         "--offline",
         action="store_true",
-        help="Run the all index servers without acccess to the real PyPI.",
-    )
-    up.add_argument(
-        "--all",
-        action="store_true",
-        help="Output the index server URL that allows fallback to the real PyPI.",
+        help="Run the index server without acccess to the real PyPI.",
     )
     up.set_defaults(call=_call_index_up)
 
     down = subparsers.add_parser("down", help="Stop a running package index server.")
-    down.add_argument(
-        "--storage-path",
-        type=Path,
-        default=None,
-        help="The path used to store server data.",
-    )
     down.set_defaults(call=_call_index_down)
 
     _add_shared_arguments(parser)

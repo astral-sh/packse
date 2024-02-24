@@ -1,13 +1,11 @@
 import logging
 import shutil
-import subprocess
-import sys
 import threading
 from pathlib import Path
 
-from packse import __development_base_path__
 from packse.build import build
-from packse.error import RequiresExtra
+from packse.error import RequiresExtra, ServeThreadError
+from packse.index import add_vendored_build_deps, start_index_server
 
 try:
     import watchfiles
@@ -21,22 +19,57 @@ logger = logging.getLogger(__name__)
 
 def serve(
     targets: list[Path],
-    storage_path: Path,
+    build_dir: Path,
+    dist_dir: Path,
     host: str = "localhost",
     port: int = 3141,
     short_names: bool = False,
     no_hash: bool = False,
     offline: bool = False,
 ):
-    if not shutil.which("pypi-server"):
+    if not shutil.which("pypi-server") or watchfiles is None:
         raise RequiresExtra("serve command", "serve")
 
-    if watchfiles is None:
-        raise RequiresExtra("serve command", "serve")
+    dist_dir = Path(dist_dir)
+    build_dir = Path(build_dir)
 
+    build_ready = threading.Event()
+    rebuild = threading.Thread(
+        target=build_scenarios,
+        args=(targets, short_names, no_hash, dist_dir, build_dir, build_ready),
+        name="serve-build-scenarios",
+        daemon=True,
+    )
+    serve = threading.Thread(
+        target=serve_packages,
+        args=(host, port, dist_dir, offline),
+        name="serve-package-index",
+    )
+    rebuild.start()
+
+    # Wait up to 60 seconds for the build to complete
+    for _ in range(60):
+        if build_ready.wait(1):
+            break
+        if not rebuild.is_alive():
+            raise ServeThreadError("Build thread failed.")
+
+    try:
+        serve.start()
+    finally:
+        serve.join()
+
+
+def build_scenarios(
+    targets: list[Path],
+    short_names: bool,
+    no_hash: bool,
+    dist_dir: Path,
+    build_dir: Path,
+    ready: threading.Event,
+) -> None:
     if not targets:
         print("Warning: No targets provided, automatic rebuilds not enabled.")
-
     else:
         print("Performing initial build...")
         build(
@@ -45,37 +78,12 @@ def serve(
             skip_root=False,
             short_names=short_names,
             no_hash=no_hash,
-            work_dir=storage_path,
+            dist_dir=dist_dir,
+            build_dir=build_dir,
         )
 
-    build_directory = __development_base_path__ / "vendor" / "build"
-    if build_directory.exists():
-        logger.debug("Copying vendored build dependencies...")
-        shutil.copytree(
-            build_directory, storage_path / "dist" / "build", dirs_exist_ok=True
-        )
-    else:
-        logger.warning("No vendored build dependencies found at %s" % build_directory)
+    ready.set()
 
-    rebuild = threading.Thread(
-        target=rebuild_on_change,
-        args=(targets, short_names, no_hash, storage_path),
-        daemon=True,
-    )
-    serve = threading.Thread(
-        target=serve_packages, args=(host, port, storage_path, offline)
-    )
-    rebuild.start()
-
-    try:
-        serve.start()
-    finally:
-        serve.join()
-
-
-def rebuild_on_change(
-    targets: list[Path], short_names: bool, no_hash: bool, storage_path: Path
-) -> None:
     for changes in watchfiles.watch(*targets):
         targets = [path for kind, path in changes if kind != watchfiles.Change.deleted]
         targets = [Path(target) for target in targets if Path(target).is_file()]
@@ -86,26 +94,28 @@ def rebuild_on_change(
             skip_root=False,
             short_names=short_names,
             no_hash=no_hash,
-            work_dir=storage_path,
+            dist_dir=dist_dir,
+            build_dir=build_dir,
         )
 
 
-def serve_packages(host: str, port: int, storage_path: Path, offline: bool):
-    command = [
-        "pypi-server",
-        "run",
-        "--host",
-        host,
-        "--port",
-        str(port),
-        str(storage_path / "dist"),
-        "-v",
-    ]
-    if offline:
-        command.append("--disable-fallback")
+def serve_packages(host: str, port: int, dist_dir: Path, offline: bool):
+    index_url = f"http://{host}:{port}"
+    index_note = "offline index" if offline else "local index with PyPI fallback"
 
-    subprocess.run(
-        command,
-        stdout=sys.stdout,
-        stderr=sys.stderr,
-    )
+    logger.info("Starting %s at %s", index_note, index_url)
+    with start_index_server(
+        dist_dir=dist_dir, host=host, port=port, offline=offline, server_log_path=None
+    ) as process:
+        debug = logger.getEffectiveLevel() <= logging.DEBUG
+        if not debug:
+            logger.info("Hiding server output, use `-v` to stream server logs")
+
+        add_vendored_build_deps(dist_dir, offline)
+
+        logger.info("Ready! [Stop with Ctrl-C]")
+        line = ""
+        while True:
+            line = process.stdout.readline().decode()
+            if debug:
+                print(line, end="")

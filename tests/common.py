@@ -28,7 +28,9 @@ def snapshot_command(
     snapshot_stdout: bool = True,
     extra_filters: list[tuple[str, str]] | None = None,
     interrupt_after: float = None,
+    env: dict[str, str] = None,
 ) -> dict:
+    env = env or {}
     # By default, filter out absolute references to the working directory
     filters = [
         (re.escape(str(Path(sys.executable).parent)), "[PYTHON_BINDIR]"),
@@ -43,12 +45,13 @@ def snapshot_command(
         filters += extra_filters
 
     killed = False
+    env = {**os.environ, **env}
     process = subprocess.Popen(
         ["packse"] + command,
         cwd=working_directory,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
-        env=os.environ,
+        env=env,
     )
     try:
         stdout, stderr = process.communicate(timeout=interrupt_after)

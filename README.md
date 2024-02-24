@@ -132,23 +132,6 @@ Credentials must be provided via the `PACKSE_PYPI_PASSWORD` environment variable
 used to set a username if not using an API token. If using a server which does not require authentication, the
 `--anonymous` flag can be passed.
 
-### Developing scenarios
-
-_Requires installation with the `serve` extra, e.g. `poetry install --with serve`_
-
-The `serve` command can be used to build and publish scenarios to a local package index.
-
-```bash
-packse serve scenarios
-```
-
-Packse will watch for changes to scenarios, and publish new versions on each change.
-
-Note when developing, it is often useful to use the `--no-hash` flag to avoid having to determine the latest
-hash for the scenario.
-
-By default, the `serve` index will fallback to PyPI for missing packages. To test in isolation, use the `--offline` flag.
-
 ### Running a package index
 
 _Requires installation with the `index` extra, e.g. `poetry install --with index`_
@@ -160,37 +143,45 @@ packse index up
 ```
 
 The `--bg` flag can be passed to run the index in the background.
-When running an index in the background, state will be stored in the `~/.packse` directory. The `PACKSE_STORAGE_PATH`
-environment variable or the `--storage-path` option can be used to change the storage path.
+When running an index in the background, state will be stored in the `~/.packse` directory. The `PACKSE_STATE_PATH`
+environment variable can be used to change the state path.
 
-The following package indexes are available:
-
-- `packages/local`: which only allows locally published packages to be installed
-- `packages/pypi`: which mirrors the production PyPI index
-- `packages/test-pypi`: which mirrors the test PyPI index
-- `packages/all`: which includes all of the listed indexes, with priority following the list order above
-
-When installing packages, you can choose the index to use by passing the `--index-url` flag to the installer
-e.g. with `pip`:
+Packages can be installed by passing the `--index-url` flag to the installer e.g. with `pip`:
 
 ```bash
-pip install --index-url http://127.0.0.1:3141/packages/local/+simple example-0611cb74
+pip install --index-url http://127.0.0.1:3141 example-0611cb74
 ```
 
-To stop the index, use `packse index down`:
+Packages can be published to the index by providing the `--index-url` and `--anonymous` flags to the `publish` command:
+
+```bash
+packse publish dist/example-cd797223 --index-url http://localhost:3141 --anonymous
+```
+
+Packages can also be published to the index by placing their distributions in the configured `--dist-dir`. This defaults
+to `./dist` which is also the default location used in `packse build`.
+
+By default, the  index will fallback to PyPI for missing packages. To test in isolation, use the `--offline` flag.
+
+To stop an index running in the background use `packse index down`:
 ```
 packse index down
 ```
 
-Packages can be published to the local index by providing the `--index-url` flag to the `publish` command:
+### Serving scenarios
+
+_Requires installation with the `serve` extra, e.g. `poetry install --with serve`_
+
+The `serve` command can be used to host, build, and publish scenarios in one step.
 
 ```bash
-packse publish dist/example-cd797223 --index-url http://localhost:3141/packages/local --anonymous
+packse serve scenarios
 ```
 
-When publishing scenario packages, you should always use the `packages/local` package index; or they will not be
-available when installing from `packages/all`.
+Packse will watch for changes to the `scenarios` directory, and publish new versions on each change.
 
+Note when developing, it is often useful to use the `--no-hash` flag to avoid having to determine the latest
+hash for the scenario.
 
 ### Testing scenarios
 

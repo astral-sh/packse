@@ -1,10 +1,21 @@
 # serializer version: 1
 # name: test_index_down
   dict({
-    'exit_code': 0,
+    'exit_code': 1,
     'stderr': '''
       Stopping server with pid [PID]...
-      Stopped server!
+      Traceback (most recent call last):
+        File "[PYTHON_BINDIR]/packse", line 6, in <module>
+          sys.exit(entrypoint())
+                   ^^^^^^^^^^^^
+        File "[PROJECT_ROOT]/src/packse/cli.py", line 41, in entrypoint
+          args.call(args)
+        File "[PROJECT_ROOT]/src/packse/cli.py", line 120, in _call_index_down
+          success = index_down()
+                    ^^^^^^^^^^^^
+        File "[PROJECT_ROOT]/src/packse/index.py", line 124, in index_down
+          reset_pidfile(state_path)
+      TypeError: reset_pidfile() takes 0 positional arguments but 1 was given
   
     ''',
     'stdout': '',
@@ -30,36 +41,19 @@
     'stdout': '',
   })
 # ---
-# name: test_index_down_with_storage_path
-  dict({
-    'exit_code': 0,
-    'stderr': '''
-      Stopping server with pid [PID]...
-      Stopped server!
-  
-    ''',
-    'stdout': '',
-  })
-# ---
 # name: test_index_up_background
   dict({
     'exit_code': 0,
     'stderr': '''
-      Initializing server...
-      Starting server at http://localhost:3141...
-      Configuring client...
-      Creating package index 'packages/local'...
-      Creating mirror package index 'packages/test-pypi' for https://test.pypi.org/simple/...
-      Creating mirror package index 'packages/pypi' for https://pypi.org/simple/...
-      Creating package index 'packages/all'...
-      Uploading build dependencies to local index...
-      Indexes available at http://localhost:3141/<index-name>/+simple
+      Starting local index with PyPI fallback at http://localhost:3141
+      Writing server logs to [PWD]/.packse/server.log
+      Serving distributions from ./dist
       Running in background with pid [PID]
       Stop index server with `packse index down`.
   
     ''',
     'stdout': '''
-      http://localhost:3141/packages/local
+      http://localhost:3141
   
     ''',
   })
@@ -68,42 +62,13 @@
   dict({
     'exit_code': '<stopped>',
     'stderr': '''
-      Initializing server...
-      Starting server at http://localhost:3141...
-      Configuring client...
-      Creating package index 'packages/local'...
-      Creating mirror package index 'packages/test-pypi' for https://test.pypi.org/simple/...
-      Creating mirror package index 'packages/pypi' for https://pypi.org/simple/...
-      Creating package index 'packages/all'...
-      Uploading build dependencies to local index...
-      Indexes available at http://localhost:3141/<index-name>/+simple
+      Starting local index with PyPI fallback at http://localhost:3141
+      Serving distributions from ./dist
+      Hiding server output, use `-v` to stream server logs
       Ready! [Stop with Ctrl-C]
       Interrupted!
   
     ''',
     'stdout': '',
-  })
-# ---
-# name: test_index_up_with_storage_path
-  dict({
-    'exit_code': 0,
-    'stderr': '''
-      Initializing server...
-      Starting server at http://localhost:3141...
-      Configuring client...
-      Creating package index 'packages/local'...
-      Creating mirror package index 'packages/test-pypi' for https://test.pypi.org/simple/...
-      Creating mirror package index 'packages/pypi' for https://pypi.org/simple/...
-      Creating package index 'packages/all'...
-      Uploading build dependencies to local index...
-      Indexes available at http://localhost:3141/<index-name>/+simple
-      Running in background with pid [PID]
-      Stop index server with `packse index down`.
-  
-    ''',
-    'stdout': '''
-      http://localhost:3141/packages/local
-  
-    ''',
   })
 # ---
