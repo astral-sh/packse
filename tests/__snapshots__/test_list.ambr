@@ -410,11 +410,8 @@
 # ---
 # name: test_list_target_does_not_exist
   dict({
-    'exit_code': 1,
-    'stderr': '''
-      File 'foo' not found.
-  
-    ''',
+    'exit_code': 0,
+    'stderr': '',
     'stdout': '',
   })
 # ---

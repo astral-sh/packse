@@ -13,7 +13,7 @@
         File "[PROJECT_ROOT]/src/packse/cli.py", line 120, in _call_index_down
           success = index_down()
                     ^^^^^^^^^^^^
-        File "[PROJECT_ROOT]/src/packse/index.py", line 124, in index_down
+        File "[PROJECT_ROOT]/src/packse/index.py", line 122, in index_down
           reset_pidfile(state_path)
       TypeError: reset_pidfile() takes 0 positional arguments but 1 was given
   
