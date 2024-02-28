@@ -38,7 +38,6 @@ def fetch(
                 "git",
                 "clone",
                 "-n",
-                "--depth=1",
                 "--filter=tree:0",
                 repo_url,
                 "repo",
