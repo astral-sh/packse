@@ -32,15 +32,6 @@
     'stderr': '''
       Cloning repository https://github.com/astral-sh/packse
       Checking out directory 'scenarios' at ref df20b898fdf1fd242cc19acc2a3148d72aa4d89f
-      Found does-not-exist.json
-      Found example.json
-      Found excluded.json
-      Found extras.json
-      Found incompatible-versions.json
-      Found prereleases.json
-      Found requires-python.json
-      Found wheels.json
-      Found yanked.json
       Copying files into '[PWD]/scenarios'
       Fetched 9 files in [TIME]
   
@@ -81,15 +72,6 @@
     'stderr': '''
       Cloning repository https://github.com/astral-sh/packse
       Checking out directory 'scenarios' at ref df20b898fdf1fd242cc19acc2a3148d72aa4d89f
-      Found does-not-exist.json
-      Found example.json
-      Found excluded.json
-      Found extras.json
-      Found incompatible-versions.json
-      Found prereleases.json
-      Found requires-python.json
-      Found wheels.json
-      Found yanked.json
       Copying files into 'foo'
       Fetched 9 files in [TIME]
   
@@ -149,15 +131,6 @@
     'stderr': '''
       Cloning repository https://github.com/astral-sh/packse
       Checking out directory 'scenarios' at ref df20b898fdf1fd242cc19acc2a3148d72aa4d89f
-      Found does-not-exist.json
-      Found example.json
-      Found excluded.json
-      Found extras.json
-      Found incompatible-versions.json
-      Found prereleases.json
-      Found requires-python.json
-      Found wheels.json
-      Found yanked.json
       Copying files into 'foo'
       Fetched 9 files in [TIME]
   
@@ -198,15 +171,6 @@
     'stderr': '''
       Cloning repository https://github.com/astral-sh/packse
       Checking out directory 'scenarios' at ref 0.1.0
-      Found does-not-exist.json
-      Found example.json
-      Found excluded.json
-      Found extras.json
-      Found incompatible-versions.json
-      Found prereleases.json
-      Found requires-python.json
-      Found wheels.json
-      Found yanked.json
       Copying files into '[PWD]/scenarios'
       Fetched 9 files in [TIME]
   
