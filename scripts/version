@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""""
+"""
 Simple utility for generating version strings based on the information in the git index.
 
 Supports three modes: parts, local, and dev.
