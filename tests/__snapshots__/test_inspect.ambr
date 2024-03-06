@@ -10,12 +10,12 @@
             "name": "example",
             "packages": [
               {
-                "name": "example-a-8597e52a",
+                "name": "example-a-961b4c22",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "example-b-8597e52a>1.0.0"
+                      "example-b-961b4c22>1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -28,7 +28,7 @@
                 ]
               },
               {
-                "name": "example-b-8597e52a",
+                "name": "example-b-961b4c22",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -55,7 +55,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "example-c-8597e52a"
+                      "example-c-961b4c22"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -72,9 +72,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "example-a-8597e52a",
-                  "name": "example-a-8597e52a",
-                  "module_name": "example_a_8597e52a"
+                  "requirement": "example-a-961b4c22",
+                  "name": "example-a-961b4c22",
+                  "module_name": "example_a_961b4c22"
                 }
               ]
             },
@@ -82,14 +82,14 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "example-a-8597e52a",
+                  "name": "example-a-961b4c22",
                   "version": "1.0.0",
-                  "module_name": "example_a_8597e52a"
+                  "module_name": "example_a_961b4c22"
                 },
                 {
-                  "name": "example-b-8597e52a",
+                  "name": "example-b-961b4c22",
                   "version": "3.0.0",
-                  "module_name": "example_b_8597e52a"
+                  "module_name": "example_b_961b4c22"
                 }
               ],
               "explanation": "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
@@ -104,10 +104,10 @@
               "no_build": [],
               "no_binary": []
             },
-            "template": "simple",
+            "template": "package",
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
             "source": "[PWD]/scenarios/example.json",
-            "version": "8597e52a",
+            "version": "961b4c22",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
@@ -155,12 +155,12 @@
             "name": "example",
             "packages": [
               {
-                "name": "example-a-8597e52a",
+                "name": "example-a-961b4c22",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "example-b-8597e52a>1.0.0"
+                      "example-b-961b4c22>1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -173,7 +173,7 @@
                 ]
               },
               {
-                "name": "example-b-8597e52a",
+                "name": "example-b-961b4c22",
                 "versions": [
                   {
                     "requires_python": ">=3.8",
@@ -200,7 +200,7 @@
                   {
                     "requires_python": ">=3.8",
                     "requires": [
-                      "example-c-8597e52a"
+                      "example-c-961b4c22"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -217,9 +217,9 @@
               "requires_python": ">=3.8",
               "requires": [
                 {
-                  "requirement": "example-a-8597e52a",
-                  "name": "example-a-8597e52a",
-                  "module_name": "example_a_8597e52a"
+                  "requirement": "example-a-961b4c22",
+                  "name": "example-a-961b4c22",
+                  "module_name": "example_a_961b4c22"
                 }
               ]
             },
@@ -227,14 +227,14 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "example-a-8597e52a",
+                  "name": "example-a-961b4c22",
                   "version": "1.0.0",
-                  "module_name": "example_a_8597e52a"
+                  "module_name": "example_a_961b4c22"
                 },
                 {
-                  "name": "example-b-8597e52a",
+                  "name": "example-b-961b4c22",
                   "version": "3.0.0",
-                  "module_name": "example_b_8597e52a"
+                  "module_name": "example_b_961b4c22"
                 }
               ],
               "explanation": "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
@@ -249,10 +249,10 @@
               "no_build": [],
               "no_binary": []
             },
-            "template": "simple",
+            "template": "package",
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
             "source": "[PROJECT_ROOT]/scenarios/example.json",
-            "version": "8597e52a",
+            "version": "961b4c22",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.8",
