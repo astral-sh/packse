@@ -17,12 +17,6 @@ on:
     branches:
       - main
 
-  # schedule:
-    # Run every 90 minutes; will only do work if the last job succeeded.
-    # This ensures that after rate limits are encountered, we attempt to publish again.
-    # PyPI has a 60 minute rate limit for project creation.
-    # - cron: "*/90 * * * *"
-
 jobs:
   publish-packages:
     name: python-${{ matrix.python-version }}, ${{ matrix.os }}
@@ -132,27 +126,15 @@ jobs:
           # Shutdown the index server
           poetry run packse index down
 
-      - name: Configure AWS credentials
-        if: github.ref == 'refs/heads/main' && (steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure')
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-region: us-east-2
-          role-to-assume: arn:aws:iam::590183856360:role/PublishGitHubPackseIsolated
-          role-session-name: PacksePublishPackage
-          role-duration-seconds: 900
-
-      - name: Publish scenarios [aws]
-        if: github.ref == 'refs/heads/main' && (steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure')
-        env:
-          PACKSE_PUBLISH_USERNAME: "aws"
+      - name: Publish scenarios [gh pages]
+        # if: github.ref == 'refs/heads/main' && (steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure')
         run: |
-          export PACKSE_PUBLISH_PASSWORD=$(aws codeartifact get-authorization-token --domain astral --domain-owner 590183856360 --region us-east-2 --query authorizationToken --output text)
-          export INDEX_URL=$(aws codeartifact get-repository-endpoint --domain astral --domain-owner 590183856360 --repository astral-isolated --region us-east-2 --format pypi --query repositoryEndpoint --output text)
-          poetry run packse publish --index-url "$INDEX_URL" --skip-existing dist/* vendor/build
-
-      - name: Publish scenarios [test pypi]
-        if: github.ref == 'refs/heads/main' && (steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure')
-        env:
-          PACKSE_PUBLISH_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
-        run: |
-          poetry run packse publish --skip-existing dist/*
+          commit=$(./scripts/version parts | jq ".short_hash")
+          poetry run packse index build --no-hash
+          git fetch https://github.com/astral-sh/packse refs/heads/gh-pages
+          git checkout gh-pages
+          mkdir "$commit"
+          cp -r index/* "./$commit"
+          git add "$commit"
+          git commit -m "Publish scenarios for $commit"
+          git push
