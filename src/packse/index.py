@@ -316,6 +316,7 @@ def build_index(
     targets: list[Path],
     no_hash: bool,
     short_names: bool,
+    dist_dir: Path | None,
 ):
     out_path = Path("./index")
     if out_path.exists():
@@ -323,16 +324,18 @@ def build_index(
 
     with tempfile.TemporaryDirectory() as tmpdir:
         tmpdir = Path(tmpdir)
-        logger.info("Building distributions...")
-        build(
-            targets,
-            rm_destination=True,
-            skip_root=False,
-            short_names=short_names,
-            no_hash=no_hash,
-            dist_dir=tmpdir / "dist",
-            build_dir=tmpdir / "build",
-        )
+        if not dist_dir:
+            logger.info("Building distributions...")
+            build(
+                targets,
+                rm_destination=True,
+                skip_root=False,
+                short_names=short_names,
+                no_hash=no_hash,
+                dist_dir=tmpdir / "dist",
+                build_dir=tmpdir / "build",
+            )
+            dist_dir = tmpdir / "dist"
 
         out_path.mkdir()
         (out_path / "files").mkdir()
@@ -344,8 +347,7 @@ def build_index(
                 package["dists"] = []
                 for version in package["versions"]:
                     for file in Path(
-                        tmpdir
-                        / "dist"
+                        dist_dir
                         / (
                             scenario["name"]
                             if no_hash

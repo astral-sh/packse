@@ -130,7 +130,7 @@ jobs:
         # if: github.ref == 'refs/heads/main' && (steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure')
         run: |
           commit=$(./scripts/version parts | jq ".short_hash")
-          poetry run packse index build --no-hash
+          poetry run packse index build --no-hash --dist-dir ./dist
           git fetch https://github.com/astral-sh/packse refs/heads/gh-pages
           git checkout gh-pages
           mkdir "$commit"

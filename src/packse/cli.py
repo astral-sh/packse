@@ -133,6 +133,7 @@ def _call_index_build(args):
         args.targets,
         short_names=args.short_names,
         no_hash=args.no_hash,
+        dist_dir=args.dist_dir,
     )
 
 
@@ -459,6 +460,12 @@ def _add_index_parser(subparsers):
         "--no-hash",
         action="store_true",
         help="Exclude scenario version hashes from generated packages.",
+    )
+    build.add_argument(
+        "--dist-dir",
+        type=Path,
+        default=None,
+        help="An existing distribution directory to use. If provided, the scenarios will not be rebuilt.",
     )
     build.set_defaults(call=_call_index_build)
 
