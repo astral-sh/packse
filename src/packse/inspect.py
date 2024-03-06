@@ -136,4 +136,4 @@ def inspect(
 
             raw["module_name"] = raw["name"].replace("-", "_")
 
-    print(json.dumps(result, indent=2))
+    return result

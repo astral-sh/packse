@@ -395,13 +395,13 @@ def build_package(
     )
     module_name = package_name.replace("-", "_")
 
-    template_config = load_template_config("simple")
+    template_config = load_template_config("package")
 
     logger.debug("Generating project for '%s-%s'", package_name, version)
 
     package_destination = create_from_template(
         build_destination,
-        template_name="simple",
+        template_name="package",
         variables={
             "package-name": package_name,
             "module-name": module_name,
