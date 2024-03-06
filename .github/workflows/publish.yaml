@@ -129,12 +129,18 @@ jobs:
       - name: Publish scenarios [gh pages]
         # if: github.ref == 'refs/heads/main' && (steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure')
         run: |
-          commit=$(./scripts/version parts | jq ".short_hash")
-          poetry run packse index build --no-hash --dist-dir ./dist
-          git fetch https://github.com/astral-sh/packse refs/heads/gh-pages
+          commit=$(./scripts/version parts | jq -r ".short_hash")
+          poetry run packse index build --no-hash --dist-dir ./dist $SCENARIOS
+
+          git fetch origin gh-pages
+          git branch gh-pages FETCH_HEAD
           git checkout gh-pages
+
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
           mkdir "$commit"
           cp -r index/* "./$commit"
           git add "$commit"
           git commit -m "Publish scenarios for $commit"
-          git push
+          git push --set-upstream origin gh-pages
