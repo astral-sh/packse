@@ -8,7 +8,7 @@ env:
 
 permissions:
   id-token: write # Needed for AWS CodeArtifact OIDC
-  contents: read
+  contents: write # Needed for GH pages updates
 
 on:
   pull_request:
@@ -16,12 +16,6 @@ on:
   push:
     branches:
       - main
-
-  # schedule:
-    # Run every 90 minutes; will only do work if the last job succeeded.
-    # This ensures that after rate limits are encountered, we attempt to publish again.
-    # PyPI has a 60 minute rate limit for project creation.
-    # - cron: "*/90 * * * *"
 
 jobs:
   publish-packages:
@@ -42,60 +36,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Only runs during the scheduled job
-      # The rest of the workflow will be skipped during scheduled runs unless the last run failed
-      - name: Check status of last workflow run
-        id: check_last_run
-        if: github.event.schedule
-        run: |
-          WORKFLOW_ID=$( \
-            curl \
-              --silent \
-              --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-              --header 'content-type: application/json' \
-              ${{ github.api_url }}/repos/${{ github.repository }}/actions/runs/${{ github.run_id }} \
-            | jq -r .workflow_id \
-          )
-
-          CONCLUSION=$( \
-            curl \
-              --silent \
-              --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-              --header 'content-type: application/json' \
-              "${{ github.api_url }}/repos/${{ github.repository }}/actions/workflows/$WORKFLOW_ID/runs?per_page=1&status=completed&branch=main" \
-            | jq -r .workflow_runs[0].conclusion \
-          )
-
-          echo "conclusion=$CONCLUSION"
-          echo "conclusion=$CONCLUSION" >> $GITHUB_OUTPUT
-
-          # Implementation based on https://github.com/MercymeIlya/last-workflow-status
-
       - name: Set up Poetry
-        if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         run: |
           pipx install poetry==${{ env.POETRY_VERSION }}
 
       - name: Set up Python ${{ matrix.python-version }}
-        if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
           cache: poetry
 
       - name: Install zsh
-        if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         run: |
           sudo apt-get update
           sudo apt-get install zsh
 
       - name: Install packages
-        if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         run: |
           poetry install --extras index
 
       - name: Collect scenarios
-        if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         run: |
           scenarios=(scenarios/**/*.json)
 
@@ -111,14 +71,12 @@ jobs:
         shell: zsh {0}
 
       - name: View scenarios
-        if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         run: |
           poetry run packse view $SCENARIOS
 
       - name: Build scenarios
-        if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         run: |
-          poetry run packse build --skip-root --short-names $SCENARIOS
+          poetry run packse build --skip-root --no-hash $SCENARIOS
 
       - name: Publish scenarios [local]
         if: github.ref != 'refs/heads/main'
@@ -132,27 +90,21 @@ jobs:
           # Shutdown the index server
           poetry run packse index down
 
-      - name: Configure AWS credentials
-        if: github.ref == 'refs/heads/main' && (steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure')
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-region: us-east-2
-          role-to-assume: arn:aws:iam::590183856360:role/PublishGitHubPackseIsolated
-          role-session-name: PacksePublishPackage
-          role-duration-seconds: 900
-
-      - name: Publish scenarios [aws]
-        if: github.ref == 'refs/heads/main' && (steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure')
-        env:
-          PACKSE_PUBLISH_USERNAME: "aws"
+      - name: Publish scenarios [gh pages]
+        if: github.ref == 'refs/heads/main'
         run: |
-          export PACKSE_PUBLISH_PASSWORD=$(aws codeartifact get-authorization-token --domain astral --domain-owner 590183856360 --region us-east-2 --query authorizationToken --output text)
-          export INDEX_URL=$(aws codeartifact get-repository-endpoint --domain astral --domain-owner 590183856360 --repository astral-isolated --region us-east-2 --format pypi --query repositoryEndpoint --output text)
-          poetry run packse publish --index-url "$INDEX_URL" --skip-existing dist/* vendor/build
+          commit=$(./scripts/version parts | jq -r ".short_hash")
+          poetry run packse index build --no-hash --dist-dir ./dist $SCENARIOS
 
-      - name: Publish scenarios [test pypi]
-        if: github.ref == 'refs/heads/main' && (steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure')
-        env:
-          PACKSE_PUBLISH_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
-        run: |
-          poetry run packse publish --skip-existing dist/*
+          git fetch origin gh-pages
+          git branch gh-pages FETCH_HEAD
+          git checkout gh-pages
+
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+          mkdir "$commit"
+          cp -r index/* "./$commit"
+          git add "$commit"
+          git commit -m "Publish scenarios for $commit"
+          git push --set-upstream origin gh-pages

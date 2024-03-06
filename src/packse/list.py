@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 def list(
     targets: list[Path],
-    no_versions: bool = False,
+    no_hash: bool = False,
     skip_invalid: bool = False,
     no_sources: bool = False,
     short_names: bool = False,
@@ -45,7 +45,7 @@ def list(
         for scenario in scenarios:
             scenario = cast(Scenario, scenario)
 
-            if no_versions:
+            if no_hash:
                 name = scenario.name
             else:
                 name = scenario_hash(scenario)

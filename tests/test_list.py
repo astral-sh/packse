@@ -11,9 +11,9 @@ def test_list_no_target_finds_all_valid_scenarios(snapshot):
     )
 
 
-def test_list_no_versions(snapshot):
+def test_list_no_hash(snapshot):
     target = __development_base_path__ / "scenarios" / "example.json"
-    assert snapshot_command(["list", str(target), "--no-versions"]) == snapshot
+    assert snapshot_command(["list", str(target), "--no-hash"]) == snapshot
 
 
 def test_list_short_names(snapshot):

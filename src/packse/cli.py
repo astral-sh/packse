@@ -133,6 +133,7 @@ def _call_index_build(args):
         args.targets,
         short_names=args.short_names,
         no_hash=args.no_hash,
+        dist_dir=args.dist_dir,
     )
 
 
@@ -171,7 +172,7 @@ def _call_list(args):
 
     list(
         targets,
-        args.no_versions,
+        args.no_hash,
         skip_invalid,
         args.no_sources,
         short_names=args.short_names,
@@ -460,6 +461,12 @@ def _add_index_parser(subparsers):
         action="store_true",
         help="Exclude scenario version hashes from generated packages.",
     )
+    build.add_argument(
+        "--dist-dir",
+        type=Path,
+        default=None,
+        help="An existing distribution directory to use. If provided, the scenarios will not be rebuilt.",
+    )
     build.set_defaults(call=_call_index_build)
 
     _add_shared_arguments(parser)
@@ -478,9 +485,9 @@ def _add_list_parser(subparsers):
         help="The scenario files to load",
     )
     parser.add_argument(
-        "--no-versions",
+        "--no-hash",
         action="store_true",
-        help="Do not include in the scenario versions in the displayed names.",
+        help="Do not include in the scenario version hashes in the displayed names.",
     )
     parser.add_argument(
         "--skip-invalid",

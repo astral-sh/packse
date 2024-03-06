@@ -20,6 +20,17 @@
     ''',
   })
 # ---
+# name: test_list_no_hash
+  dict({
+    'exit_code': 0,
+    'stderr': '',
+    'stdout': '''
+      scenarios/example.json
+          example
+  
+    ''',
+  })
+# ---
 # name: test_list_no_sources
   dict({
     'exit_code': 0,
@@ -35,17 +46,6 @@
     'exit_code': 0,
     'stderr': '<not included>',
     'stdout': '<not included>',
-  })
-# ---
-# name: test_list_no_versions
-  dict({
-    'exit_code': 0,
-    'stderr': '',
-    'stdout': '''
-      scenarios/example.json
-          example
-  
-    ''',
   })
 # ---
 # name: test_list_one_target_does_not_exist

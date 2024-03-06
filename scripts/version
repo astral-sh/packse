@@ -8,8 +8,13 @@ parts
     Display all available version parts.
     Format: {timestamp: str, short_hash: str, closest_tag: str, distance: int}
 
-    $ version parts
-    {'timestamp': '1663305183', 'short_hash': '440f9b6', 'closest_tag': '0.0.0', 'distance': 50}
+    $ version parts | jq
+    {
+        "timestamp": "1709759768",
+        "closest_tag": "0.2.0",
+        "distance": 4,
+        "short_hash": "4e2b423"
+    }
 
 local
     Generate a PEP 440 compliant local version tag.
@@ -86,7 +91,9 @@ if __name__ == "__main__":
     parts = get_version_parts()
 
     if mode == "parts":
-        print(parts)
+        import json
+
+        print(json.dumps(parts))
 
     elif mode == "local":
         print("{closest_tag}+{distance}.{short_hash}".format(**parts))
