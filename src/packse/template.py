@@ -1,10 +1,10 @@
 import logging
+import re
 from pathlib import Path
 from typing import Any
 
 import chevron_blue
 import msgspec
-import re
 
 from packse.templates import __templates_path__
 

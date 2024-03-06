@@ -1,7 +1,7 @@
 import argparse
+import json
 import logging
 import sys
-import json
 from pathlib import Path
 from subprocess import CalledProcessError
 
@@ -15,7 +15,7 @@ from packse.error import (
     UserError,
 )
 from packse.fetch import fetch
-from packse.index import index_down, index_up, build_index
+from packse.index import build_index, index_down, index_up
 from packse.inspect import inspect
 from packse.list import list
 from packse.publish import publish
