@@ -3,6 +3,9 @@ name: Release
 env:
   POETRY_VERSION: "1.6.1"
 
+permissions:
+  contents: write # Needed for GH pages updates
+
 on:
   push:
     tags:
