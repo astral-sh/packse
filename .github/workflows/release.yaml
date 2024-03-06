@@ -54,6 +54,10 @@ jobs:
         run: |
           pip install poetry==${{ env.POETRY_VERSION }}
 
+      - name: Install packages
+        run: |
+          poetry install --all-extras
+
       - name: Publish scenarios to GitHub Pages
         run: |
           poetry run packse index build --no-hash scenarios/*.json
