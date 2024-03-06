@@ -11,7 +11,7 @@ on:
       - "[0-9]+.[0-9]+[ab][0-9]+"
 
 jobs:
-  release:
+  release-package:
     name: Release to PyPI
     runs-on: ubuntu-latest
 
@@ -38,3 +38,25 @@ jobs:
         run: |
           poetry version "${GITHUB_REF#refs/*/}"
           poetry publish --build
+
+  release-scenarios:
+    name: Publish scenarios
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Publish scenarios to GitHub Pages
+        run: |
+          poetry run packse index build --no-hash scenarios/*.json
+
+          git fetch origin gh-pages
+          git branch gh-pages FETCH_HEAD
+          git checkout gh-pages
+
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+          mkdir "${GITHUB_REF#refs/*/}"
+          cp -r index/* "${GITHUB_REF#refs/*/}"
+          git add "${GITHUB_REF#refs/*/}"
+          git commit -m "Publish scenarios for $commit"
+          git push --set-upstream origin gh-pages
