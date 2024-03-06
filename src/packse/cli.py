@@ -172,7 +172,7 @@ def _call_list(args):
 
     list(
         targets,
-        args.no_versions,
+        args.no_hash,
         skip_invalid,
         args.no_sources,
         short_names=args.short_names,
@@ -485,9 +485,9 @@ def _add_list_parser(subparsers):
         help="The scenario files to load",
     )
     parser.add_argument(
-        "--no-versions",
+        "--no-hash",
         action="store_true",
-        help="Do not include in the scenario versions in the displayed names.",
+        help="Do not include in the scenario version hashes in the displayed names.",
     )
     parser.add_argument(
         "--skip-invalid",

@@ -8,7 +8,7 @@ env:
 
 permissions:
   id-token: write # Needed for AWS CodeArtifact OIDC
-  contents: read
+  contents: write # Needed for GH pages updates
 
 on:
   pull_request:
@@ -112,7 +112,7 @@ jobs:
       - name: Build scenarios
         if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         run: |
-          poetry run packse build --skip-root --short-names $SCENARIOS
+          poetry run packse build --skip-root --no-hash $SCENARIOS
 
       - name: Publish scenarios [local]
         if: github.ref != 'refs/heads/main'
