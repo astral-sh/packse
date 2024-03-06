@@ -36,60 +36,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Only runs during the scheduled job
-      # The rest of the workflow will be skipped during scheduled runs unless the last run failed
-      - name: Check status of last workflow run
-        id: check_last_run
-        if: github.event.schedule
-        run: |
-          WORKFLOW_ID=$( \
-            curl \
-              --silent \
-              --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-              --header 'content-type: application/json' \
-              ${{ github.api_url }}/repos/${{ github.repository }}/actions/runs/${{ github.run_id }} \
-            | jq -r .workflow_id \
-          )
-
-          CONCLUSION=$( \
-            curl \
-              --silent \
-              --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-              --header 'content-type: application/json' \
-              "${{ github.api_url }}/repos/${{ github.repository }}/actions/workflows/$WORKFLOW_ID/runs?per_page=1&status=completed&branch=main" \
-            | jq -r .workflow_runs[0].conclusion \
-          )
-
-          echo "conclusion=$CONCLUSION"
-          echo "conclusion=$CONCLUSION" >> $GITHUB_OUTPUT
-
-          # Implementation based on https://github.com/MercymeIlya/last-workflow-status
-
       - name: Set up Poetry
-        if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         run: |
           pipx install poetry==${{ env.POETRY_VERSION }}
 
       - name: Set up Python ${{ matrix.python-version }}
-        if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
           cache: poetry
 
       - name: Install zsh
-        if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         run: |
           sudo apt-get update
           sudo apt-get install zsh
 
       - name: Install packages
-        if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         run: |
           poetry install --extras index
 
       - name: Collect scenarios
-        if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         run: |
           scenarios=(scenarios/**/*.json)
 
@@ -105,12 +71,10 @@ jobs:
         shell: zsh {0}
 
       - name: View scenarios
-        if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         run: |
           poetry run packse view $SCENARIOS
 
       - name: Build scenarios
-        if: steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure'
         run: |
           poetry run packse build --skip-root --no-hash $SCENARIOS
 
@@ -127,7 +91,7 @@ jobs:
           poetry run packse index down
 
       - name: Publish scenarios [gh pages]
-        # if: github.ref == 'refs/heads/main' && (steps.check_last_run.outcome == 'skipped' || steps.check_last_run.outputs.conclusion == 'failure')
+        if: github.ref == 'refs/heads/main'
         run: |
           commit=$(./scripts/version parts | jq -r ".short_hash")
           poetry run packse index build --no-hash --dist-dir ./dist $SCENARIOS
