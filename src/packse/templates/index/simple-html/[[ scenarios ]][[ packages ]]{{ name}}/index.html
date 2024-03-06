@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="pypi:repository-version" content="1.1" />
+  </head>
+  <body>
+    <h1>Links for {{ name }}</h1>
+    {{#dists}}
+    <a
+      href="../../files/{{file}}#sha256={{sha256}}"
+      {{#yanked}}
+      data-yanked="Yanked for testing"
+      {{/yanked}}
+    >
+      {{file}}
+    </a>
+    <br />
+    {{/dists}}
+  </body>
+</html>

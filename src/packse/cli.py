@@ -1,4 +1,5 @@
 import argparse
+import json
 import logging
 import sys
 from pathlib import Path
@@ -14,7 +15,7 @@ from packse.error import (
     UserError,
 )
 from packse.fetch import fetch
-from packse.index import index_down, index_up
+from packse.index import build_index, index_down, index_up
 from packse.inspect import inspect
 from packse.list import list
 from packse.publish import publish
@@ -127,6 +128,14 @@ def _call_index_down(args):
         exit(1)
 
 
+def _call_index_build(args):
+    build_index(
+        args.targets,
+        short_names=args.short_names,
+        no_hash=args.no_hash,
+    )
+
+
 def _call_publish(args):
     publish(
         args.targets,
@@ -183,7 +192,11 @@ def _call_inspect(args):
             else:
                 targets.append(target)
 
-    inspect(targets, skip_invalid, short_names=args.short_names)
+    print(
+        json.dumps(
+            inspect(targets, skip_invalid, short_names=args.short_names), indent=2
+        )
+    )
 
 
 def _root_parser():
@@ -365,7 +378,7 @@ def _add_serve_parser(subparsers):
         "--build-dir",
         type=Path,
         default="./build",
-        help="The direcotry to store intermediate build artifacts in.",
+        help="The directory to store intermediate build artifacts in.",
     )
     parser.add_argument(
         "--short-names",
@@ -430,9 +443,29 @@ def _add_index_parser(subparsers):
     down = subparsers.add_parser("down", help="Stop a running package index server.")
     down.set_defaults(call=_call_index_down)
 
+    build = subparsers.add_parser("build", help="Build a static package index server.")
+    build.add_argument(
+        "targets",
+        type=Path,
+        nargs="*",
+        help="The scenario files to load",
+    )
+    build.add_argument(
+        "--short-names",
+        action="store_true",
+        help="Exclude scenario names from generated packages.",
+    )
+    build.add_argument(
+        "--no-hash",
+        action="store_true",
+        help="Exclude scenario version hashes from generated packages.",
+    )
+    build.set_defaults(call=_call_index_build)
+
     _add_shared_arguments(parser)
     _add_shared_arguments(up)
     _add_shared_arguments(down)
+    _add_shared_arguments(build)
 
 
 def _add_list_parser(subparsers):

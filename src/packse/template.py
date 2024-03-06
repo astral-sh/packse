@@ -1,4 +1,5 @@
 import logging
+import re
 from pathlib import Path
 from typing import Any
 
@@ -33,32 +34,58 @@ def create_from_template(
     template_path = __templates_path__ / template_name
     first_root = None
     for root, _, files in template_path.walk():
-        # Determine the new directory path in the destination
-        new_root = destination / Path(
-            chevron_blue.render(str(root), variables, no_escape=True)
-        ).relative_to(template_path)
+        for loop_root, scope in parse_loop(root, variables):
+            # Determine the new directory path in the destination
+            new_root = destination / Path(
+                chevron_blue.render(str(loop_root), scope, no_escape=True)
+            ).relative_to(template_path)
 
-        if new_root == destination:
-            continue
+            if new_root == destination:
+                continue
 
-        if not first_root:
-            first_root = new_root
+            if not first_root:
+                first_root = new_root
 
-        # Create the new directory
-        logger.debug("Creating %s", new_root.relative_to(destination))
-        new_root.mkdir()
+            # Create the new directory
+            logger.debug("Creating %s", new_root.relative_to(destination))
+            new_root.mkdir()
 
-        for file in files:
-            file_path = root / file
+            for file in files:
+                file_path = root / file
 
-            # Determine the new file path
-            new_file_path = new_root / chevron_blue.render(
-                file, variables, no_escape=True
-            )
-            logger.debug("Creating %s", new_file_path.relative_to(destination))
+                # Determine the new file path
+                new_file_path = new_root / chevron_blue.render(
+                    file, scope, no_escape=True
+                )
+                logger.debug("Creating %s", new_file_path.relative_to(destination))
 
-            new_file_path.write_text(
-                chevron_blue.render(file_path.read_text(), variables, no_escape=True)
-            )
+                new_file_path.write_text(
+                    chevron_blue.render(file_path.read_text(), scope, no_escape=True)
+                )
 
     return first_root
+
+
+def parse_loop(path: Path, variables: dict[str, Any]):
+    # This implementatation is pretty dubious and certain to fail on edge-cases
+    scope = variables
+    scopes = []
+    matches = re.findall(r"\[\[(.*?)\]\]", str(path))
+    if not matches:
+        return [(path, variables)]
+
+    scopes = variables[matches[0].strip()]
+    for match in matches[1:]:
+        match: str = match.strip()
+        scopes = [scope[match] for scope in scopes if match in scope]
+
+    results = []
+    for scope in scopes:
+        for inner in scope:
+            results.append(
+                (
+                    Path(re.sub(r"\[\[(.*?)\]\]", "", str(path))),
+                    inner,
+                )
+            )
+    return results

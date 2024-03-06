@@ -253,7 +253,7 @@ class Scenario(msgspec.Struct, forbid_unknown_fields=True):
     Additional options for the package resolver
     """
 
-    template: str = "simple"
+    template: str = "package"
     """
     The template to use for scenario packages.
     """

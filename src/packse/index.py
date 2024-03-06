@@ -1,4 +1,5 @@
 import errno
+import hashlib
 import importlib
 import logging
 import os
@@ -6,18 +7,22 @@ import shutil
 import signal
 import subprocess
 import sys
+import tempfile
 import time
 from contextlib import contextmanager, nullcontext
 from pathlib import Path
 from typing import Generator
 
 from packse import __development_base_path__
+from packse.build import build
 from packse.error import (
     RequiresExtra,
     ServeAddressInUse,
     ServeAlreadyRunning,
     ServeCommandError,
 )
+from packse.inspect import inspect
+from packse.template import create_from_template
 
 logger = logging.getLogger(__name__)
 
@@ -291,3 +296,84 @@ def is_running(pid):
         if err.errno == errno.ESRCH:
             return False
     return True
+
+
+def sha256_file(path: Path):
+    h = hashlib.sha256()
+
+    with open(path, "rb") as file:
+        while True:
+            # Reading is buffered, so we can read smaller chunks.
+            chunk = file.read(h.block_size)
+            if not chunk:
+                break
+            h.update(chunk)
+
+    return h.hexdigest()
+
+
+def build_index(
+    targets: list[Path],
+    no_hash: bool,
+    short_names: bool,
+):
+    out_path = Path("./index")
+    if out_path.exists():
+        shutil.rmtree(out_path)
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmpdir = Path(tmpdir)
+        logger.info("Building distributions...")
+        build(
+            targets,
+            rm_destination=True,
+            skip_root=False,
+            short_names=short_names,
+            no_hash=no_hash,
+            dist_dir=tmpdir / "dist",
+            build_dir=tmpdir / "build",
+        )
+
+        out_path.mkdir()
+        (out_path / "files").mkdir()
+
+        variables = inspect(targets, short_names=short_names, no_hash=no_hash)
+        for scenario in variables["scenarios"]:
+            for package in scenario["packages"]:
+                # Create a new distributions section
+                package["dists"] = []
+                for version in package["versions"]:
+                    for file in Path(
+                        tmpdir
+                        / "dist"
+                        / (
+                            scenario["name"]
+                            if no_hash
+                            else f"{scenario['name']}-{scenario['version']}"
+                        )
+                    ).iterdir():
+                        if package["name"].replace("-", "_") + "-" + version[
+                            "version"
+                        ] not in str(file):
+                            continue
+
+                        # Include all the version information to start
+                        dist = version.copy()
+                        # Then add a sha256
+                        dist["sha256"] = sha256_file(file)
+                        dist["file"] = file.name
+                        package["dists"].append(dist)
+                        logger.info(
+                            "Found distribution %s",
+                            file.name,
+                        )
+                        file.rename(out_path / "files" / file.name)
+
+        logger.info("Populating template...")
+        create_from_template(
+            out_path,
+            "index",
+            variables=variables,
+        )
+
+    logger.info("Built static index at ./%s", out_path)
