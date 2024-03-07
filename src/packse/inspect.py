@@ -37,13 +37,20 @@ def inspect(
                     scenarios_by_path[target] = load_scenarios(target)
                 except Exception as exc:
                     invalid = InvalidScenario(target, reason=str(exc))
-                    print(f"Skipping file: {invalid}")
+                    if skip_invalid:
+                        print(f"Skipping file: {invalid}")
+                    else:
+                        raise invalid
         else:
             try:
                 logger.debug("Loading %s", target)
                 scenarios_by_path[target] = load_scenarios(target)
             except Exception as exc:
-                raise InvalidScenario(target, reason=str(exc)) from exc
+                invalid = InvalidScenario(target, reason=str(exc))
+                if skip_invalid:
+                    print(f"Skipping file: {invalid}")
+                else:
+                    raise invalid
 
     # Collect a JSON-compatible representation for each scenario
     result = {"scenarios": []}
