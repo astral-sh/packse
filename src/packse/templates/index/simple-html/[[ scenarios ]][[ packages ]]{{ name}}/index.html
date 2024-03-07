@@ -11,6 +11,9 @@
       {{#yanked}}
       data-yanked="Yanked for testing"
       {{/yanked}}
+      {{#requires_python}}
+      data-requires-python="{{.}}"
+      {{/requires_python}}
     >
       {{file}}
     </a>
