@@ -30,11 +30,19 @@ def inspect(
         if not target.exists():
             raise FileNotFound(target)
 
-        try:
-            logger.debug("Loading %s", target)
-            scenarios_by_path[target] = load_scenarios(target)
-        except Exception as exc:
-            if not skip_invalid:
+        if target.is_dir():
+            for target in target.glob("*.json"):
+                try:
+                    logger.debug("Loading %s", target)
+                    scenarios_by_path[target] = load_scenarios(target)
+                except Exception as exc:
+                    invalid = InvalidScenario(target, reason=str(exc))
+                    print(f"Skipping file: {invalid}")
+        else:
+            try:
+                logger.debug("Loading %s", target)
+                scenarios_by_path[target] = load_scenarios(target)
+            except Exception as exc:
                 raise InvalidScenario(target, reason=str(exc)) from exc
 
     # Collect a JSON-compatible representation for each scenario
