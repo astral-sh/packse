@@ -1,6 +1,6 @@
 [
     {
-        "name": "requires-python-version-does-not-exist",
+        "name": "python-version-does-not-exist",
         "description": "The user requires a package which requires a Python version that does not exist",
         "root": {
             "requires": [
@@ -21,7 +21,7 @@
         }
     },
     {
-        "name": "requires-python-version-less-than-current",
+        "name": "python-less-than-current",
         "description": "The user requires a package which requires a Python version less than the current version",
         "root": {
             "requires": [
@@ -45,7 +45,7 @@
         }
     },
     {
-        "name": "requires-python-version-greater-than-current",
+        "name": "python-greater-than-current",
         "description": "The user requires a package which requires a Python version greater than the current version",
         "root": {
             "requires": [
@@ -69,7 +69,7 @@
         }
     },
     {
-        "name": "requires-python-version-greater-than-current-patch",
+        "name": "python-greater-than-current-patch",
         "description": "The user requires a package which requires a Python version with a patch version greater than the current patch version",
         "root": {
             "requires": [
@@ -93,7 +93,7 @@
         }
     },
     {
-        "name": "requires-python-version-greater-than-current-many",
+        "name": "python-greater-than-current-many",
         "description": "The user requires a package which has many versions which all require a Python version greater than the current version",
         "root": {
             "requires": [
@@ -150,7 +150,7 @@
         }
     },
     {
-        "name": "requires-python-version-greater-than-current-backtrack",
+        "name": "python-greater-than-current-backtrack",
         "description": "The user requires a package where recent versions require a Python version greater than the current version, but an older version is compatible.",
         "root": {
             "requires": [
@@ -186,7 +186,7 @@
         }
     },
     {
-        "name": "requires-python-version-greater-than-current-excluded",
+        "name": "python-greater-than-current-excluded",
         "description": "The user requires a package where recent versions require a Python version greater than the current version, but an excluded older version is compatible.",
         "root": {
             "requires": [
@@ -219,7 +219,7 @@
         }
     },
     {
-        "name": "requires-incompatible-python-version-compatible-override",
+        "name": "incompatible-python-compatible-override",
         "description": "The user requires a package which requires a Python version greater than the current version, but they use an alternative Python version for package resolution.",
         "root": {
             "requires": [
@@ -249,7 +249,7 @@
         }
     },
     {
-        "name": "requires-compatible-python-version-incompatible-override",
+        "name": "compatible-python-incompatible-override",
         "description": "The user requires a package which requires a compatible Python version, but they request an incompatible Python version for package resolution.",
         "root": {
             "requires": [
@@ -276,7 +276,7 @@
         }
     },
     {
-        "name": "requires-incompatible-python-version-compatible-override-no-wheels",
+        "name": "incompatible-python-compatible-override-unavailable-no-wheels",
         "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There are only source distributions available for the package.",
         "root": {
             "requires": [
@@ -305,7 +305,7 @@
         }
     },
     {
-        "name": "requires-incompatible-python-version-compatible-override-no-wheels-available-system",
+        "name": "incompatible-python-compatible-override-available-no-wheels",
         "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There are only source distributions available for the package. The user has a compatible Python version installed elsewhere on their system.",
         "root": {
             "requires": [
@@ -340,7 +340,7 @@
         }
     },
     {
-        "name": "requires-incompatible-python-version-compatible-override-no-compatible-wheels",
+        "name": "incompatible-python-compatible-override-no-compatible-wheels",
         "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There is a wheel available for the package, but it does not have a compatible tag.",
         "root": {
             "requires": [
@@ -371,7 +371,7 @@
         }
     },
     {
-        "name": "requires-incompatible-python-version-compatible-override-other-wheel",
+        "name": "incompatible-python-compatible-override-other-wheel",
         "description": "The user requires a package which requires a incompatible Python version, but they request a compatible Python version for package resolution. There are only source distributions available for the compatible version of the package, but there is an incompatible version with a wheel available.",
         "root": {
             "requires": [
@@ -403,7 +403,7 @@
         }
     },
     {
-        "name": "requires-python-patch-version-override-no-patch",
+        "name": "python-patch-override-no-patch",
         "description": "The user requires a package which requires a Python version with a patch version and the user provides a target version without a patch version.",
         "root": {
             "requires": [
@@ -431,7 +431,7 @@
         }
     },
     {
-        "name": "requires-python-patch-version-override-patch-compatible",
+        "name": "python-patch-override-patch-compatible",
         "description": "The user requires a package which requires a Python version with a patch version and the user provides a target version with a compatible patch version.",
         "root": {
             "requires": [
