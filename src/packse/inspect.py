@@ -49,6 +49,29 @@ def inspect(
             raw["tree"] = dependency_tree(scenario).splitlines()
             result["scenarios"].append(raw)
 
+            raw["resolver_options"]["no_build"] = [
+                str(
+                    Requirement(name).with_unique_name(
+                        scenario,
+                        raw["version"],
+                        short_names,
+                        no_hash=no_hash,
+                    )
+                )
+                for name in raw["resolver_options"]["no_build"]
+            ]
+            raw["resolver_options"]["no_binary"] = [
+                str(
+                    Requirement(name).with_unique_name(
+                        scenario,
+                        raw["version"],
+                        short_names,
+                        no_hash=no_hash,
+                    )
+                )
+                for name in raw["resolver_options"]["no_binary"]
+            ]
+
             # Convert dictionaries to lists for easier templating
             raw["packages"] = [
                 {
