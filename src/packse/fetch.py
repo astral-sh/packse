@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 def fetch(
     dest: Path | None = None,
     ref: str | None = None,
-    repo_url: str = "https://github.com/zanieb/packse",
+    repo_url: str = "https://github.com/astral-sh/packse",
     repo_subdir: str = "scenarios",
     force: bool = False,
 ):
@@ -50,6 +50,12 @@ def fetch(
         logger.info("Checking out directory '%s' at ref %s", repo_subdir, ref)
         subprocess.check_call(
             ["git", "sparse-checkout", "set", "--no-cone", repo_subdir],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.STDOUT,
+            cwd=Path(tmpdir) / "repo",
+        )
+        subprocess.check_call(
+            ["git", "fetch", "origin", ref],
             stdout=subprocess.DEVNULL,
             stderr=subprocess.STDOUT,
             cwd=Path(tmpdir) / "repo",
