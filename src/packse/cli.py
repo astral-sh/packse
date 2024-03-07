@@ -195,7 +195,13 @@ def _call_inspect(args):
 
     print(
         json.dumps(
-            inspect(targets, skip_invalid, short_names=args.short_names), indent=2
+            inspect(
+                targets,
+                skip_invalid,
+                short_names=args.short_names,
+                no_hash=args.no_hash,
+            ),
+            indent=2,
         )
     )
 
@@ -527,6 +533,11 @@ def _add_inspect_parser(subparsers):
         "--short-names",
         action="store_true",
         help="Exclude scenario names from generated packages.",
+    )
+    parser.add_argument(
+        "--no-hash",
+        action="store_true",
+        help="Do not include in the scenario version hashes in the displayed names.",
     )
     _add_shared_arguments(parser)
 

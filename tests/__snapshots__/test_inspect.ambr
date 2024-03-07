@@ -149,6 +149,7 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
+      Skipping file: File at '[PWD]/test.json' is not a valid scenario: Input data was truncated
       {
         "scenarios": [
           {
