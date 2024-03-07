@@ -30,7 +30,7 @@
       ''',
     }),
     'stderr': '''
-      Cloning repository https://github.com/zanieb/packse
+      Cloning repository https://github.com/astral-sh/packse
       Checking out directory 'scenarios' at ref df20b898fdf1fd242cc19acc2a3148d72aa4d89f
       Found does-not-exist.json
       Found example.json
@@ -79,7 +79,7 @@
       ''',
     }),
     'stderr': '''
-      Cloning repository https://github.com/zanieb/packse
+      Cloning repository https://github.com/astral-sh/packse
       Checking out directory 'scenarios' at ref df20b898fdf1fd242cc19acc2a3148d72aa4d89f
       Found does-not-exist.json
       Found example.json
@@ -147,7 +147,7 @@
       ''',
     }),
     'stderr': '''
-      Cloning repository https://github.com/zanieb/packse
+      Cloning repository https://github.com/astral-sh/packse
       Checking out directory 'scenarios' at ref df20b898fdf1fd242cc19acc2a3148d72aa4d89f
       Found does-not-exist.json
       Found example.json
@@ -196,7 +196,7 @@
       ''',
     }),
     'stderr': '''
-      Cloning repository https://github.com/zanieb/packse
+      Cloning repository https://github.com/astral-sh/packse
       Checking out directory 'scenarios' at ref 0.1.0
       Found does-not-exist.json
       Found example.json
