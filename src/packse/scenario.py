@@ -7,6 +7,7 @@ from typing import Any, Self, Type
 import msgspec
 import packaging.requirements
 import packaging.specifiers
+from packaging.markers import Marker
 
 from packse.template import load_template_config
 
@@ -15,11 +16,62 @@ type PackageVersion = (
     str  # TODO(zanieb): Consider replacing with `packaging.version.Version`
 )
 
+def _parse_extras(requirement_string: str) -> tuple[str, set[str]]:
+    """
+    Parse extras from a requirement string, handling .none extras separately.
+
+    Extracts extras from the requirement string, removes any .none
+    extras, and returns the new requirement string, the set of valid extras,
+    and the set of .none extras. This allows .none extras to be included in the
+    final extras set without causing errors during PEP 508 validation.
+    """
+
+    if "[" in requirement_string:
+        i = requirement_string.find("[")
+        j = requirement_string.find("]", i)
+        if j != -1:
+            extras_str = requirement_string[i+1:j]
+            extras = set(e.strip() for e in extras_str.split(","))
+            none_extras = set(e for e in extras if e.startswith("."))
+            extras -= none_extras
+            requirement_string = requirement_string[:i] + "[" + ",".join(extras) + "]" + requirement_string[j+1:]
+        else:
+            none_extras = set()
+            extras = set()
+    else:
+        none_extras = set()
+        extras = set()
+
+    return requirement_string, extras, none_extras
 
 class Requirement(packaging.requirements.Requirement):
     """
     A wrapper for a standard Python requirement e.g. `foo>=1.0.0`
     """
+
+    def __init__(self, requirement_string: str) -> None:
+        """
+        Overrides the __init__ method from the packaging
+        library to provide custom handling of .none extras.
+        https://github.com/pypa/packaging/blob/main/src/packaging/requirements.py
+        """
+                
+        requirement_string, extras, none_extras = _parse_extras(requirement_string)
+
+        try:
+            req = packaging.requirements.Requirement(requirement_string)
+        except packaging.requirements.InvalidRequirement as e:
+            raise packaging.requirements.InvalidRequirement(str(e)) from e
+
+        self.name: str = req.name
+        self.url: str | None = req.url or None
+        self.extras: set[str] = set(req.extras) | extras | none_extras
+        self.specifier: packaging.specifiers.SpecifierSet = packaging.specifiers.SpecifierSet(str(req.specifier))
+        self.marker: Marker | None = None
+
+        if req.marker is not None:
+            self.marker = Marker.__new__(Marker)
+            self.marker._markers = packaging.requirements._normalize_extra_values(req.marker)
 
     def __lt__(self, other: Any) -> True:
         """
