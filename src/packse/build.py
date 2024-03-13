@@ -6,14 +6,12 @@ import shutil
 import subprocess
 import textwrap
 import time
-import re
 from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import wait as wait_for_futures
 from pathlib import Path
 from typing import Generator
 
 import packaging.version
-
 from packaging.requirements import Requirement
 
 from packse.error import (
