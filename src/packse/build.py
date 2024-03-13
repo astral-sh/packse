@@ -6,12 +6,15 @@ import shutil
 import subprocess
 import textwrap
 import time
+import re
 from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import wait as wait_for_futures
 from pathlib import Path
 from typing import Generator
 
 import packaging.version
+
+from packaging.requirements import Requirement
 
 from packse.error import (
     BuildError,
@@ -203,6 +206,12 @@ def make_root_package(scenario: Scenario) -> Package:
         }
     )
 
+def remove_invalid_extras(dependency: Requirement) -> Requirement:
+    valid_extras = [extra for extra in dependency.extras if not extra.startswith('.')]
+    if valid_extras:
+        return Requirement(f"{dependency.name}[{','.join(valid_extras)}]")
+    else:
+        return Requirement(dependency.name)
 
 def build_scenario_package(
     scenario: Scenario,
@@ -238,8 +247,10 @@ def build_scenario_package(
                 "module-name": module_name,
                 "version": version,
                 "dependencies": [
-                    requirement.with_unique_name(
-                        scenario, scenario_version, short_names, no_hash
+                    remove_invalid_extras(
+                        requirement.with_unique_name(
+                            scenario, scenario_version, short_names, no_hash
+                        )
                     )
                     for requirement in package_version.requires
                 ],
@@ -247,8 +258,10 @@ def build_scenario_package(
                     {
                         "name": extra,
                         "dependencies": [
-                            requirement.with_unique_name(
-                                scenario, scenario_version, short_names, no_hash
+                            remove_invalid_extras(
+                                requirement.with_unique_name(
+                                    scenario, scenario_version, short_names, no_hash
+                                )
                             )
                             for requirement in depends
                         ],
