@@ -204,12 +204,14 @@ def make_root_package(scenario: Scenario) -> Package:
         }
     )
 
+
 def remove_invalid_extras(dependency: Requirement) -> Requirement:
-    valid_extras = [extra for extra in dependency.extras if not extra.startswith('.')]
+    valid_extras = [extra for extra in dependency.extras if not extra.startswith(".")]
     if valid_extras:
         return Requirement(f"{dependency.name}[{','.join(valid_extras)}]")
     else:
         return Requirement(dependency.name)
+
 
 def build_scenario_package(
     scenario: Scenario,
@@ -265,6 +267,7 @@ def build_scenario_package(
                         ],
                     }
                     for extra, depends in package_version.extras.items()
+                    if not extra.startswith(".")
                 ],
                 "requires-python": package_version.requires_python,
                 "description": package_version.description,
