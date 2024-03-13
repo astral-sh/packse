@@ -206,11 +206,21 @@ def make_root_package(scenario: Scenario) -> Package:
 
 
 def remove_invalid_extras(dependency: Requirement) -> Requirement:
+    if not dependency.extras:
+        return dependency
+
     valid_extras = [extra for extra in dependency.extras if not extra.startswith(".")]
     if valid_extras:
-        return Requirement(f"{dependency.name}[{','.join(valid_extras)}]")
+        extras_str = ",".join(valid_extras)
+        url = dependency.url if dependency.url else ""
+        marker = f";{dependency.marker}" if dependency.marker else ""
+        return Requirement(
+            f"{dependency.name}{dependency.specifier}[{extras_str}]{url}{marker}"
+        )
     else:
-        return Requirement(dependency.name)
+        url = dependency.url if dependency.url else ""
+        marker = f";{dependency.marker}" if dependency.marker else ""
+        return Requirement(f"{dependency.name}{dependency.specifier}{url}{marker}")
 
 
 def build_scenario_package(
