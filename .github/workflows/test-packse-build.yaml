@@ -1,4 +1,4 @@
-name: Test
+name: Test Packse Build
 
 env:
   # Enable colored output for pytest
@@ -53,8 +53,8 @@ jobs:
 
       - name: Install packages
         run: |
-          poetry install --all-extras
+          poetry install --all-extras --compile
 
-      - name: Run tests
+      - name: Run packse build
         run: |
-          poetry run -- pytest tests
+          packse build --force scenarios/
