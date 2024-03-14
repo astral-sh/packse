@@ -3,6 +3,11 @@
   dict({
     'exit_code': 0,
     'filesystem': dict({
+      'build/foo/foo-1.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
+  
+      ''',
       'build/foo/foo-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
@@ -29,12 +34,13 @@
   
       ''',
       'dist/foo/foo-1.0.0-py3-none-any.whl': 'md5:80be08b501ed397bb67c604755b17414',
-      'dist/foo/foo-1.0.0.tar.gz': 'md5:bd183e51585849bfeab448cbd6b3f24d',
+      'dist/foo/foo-1.0.0.tar.gz': 'md5:2d7ae4b5428eac91e982582578e28f01',
       'tree': '''
         test_build_pkg0
         ├── build
         │   └── foo
         │       └── foo-1.0.0
+        │           ├── .gitignore
         │           ├── pyproject.toml
         │           └── src
         │               └── foo
@@ -44,7 +50,7 @@
                 ├── foo-1.0.0-py3-none-any.whl
                 └── foo-1.0.0.tar.gz
         
-        7 directories, 4 files
+        7 directories, 5 files
   
       ''',
     }),
@@ -87,6 +93,11 @@
   dict({
     'exit_code': 0,
     'filesystem': dict({
+      'build/foo/foo-1.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
+  
+      ''',
       'build/foo/foo-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
@@ -118,6 +129,7 @@
         ├── build
         │   └── foo
         │       └── foo-1.0.0
+        │           ├── .gitignore
         │           ├── pyproject.toml
         │           └── src
         │               └── foo
@@ -126,7 +138,7 @@
             └── foo
                 └── foo-1.0.0-py3-none-any.whl
         
-        7 directories, 3 files
+        7 directories, 4 files
   
       ''',
     }),
@@ -158,6 +170,11 @@
   dict({
     'exit_code': 0,
     'filesystem': dict({
+      'build/foo/foo-1.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
+  
+      ''',
       'build/foo/foo-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
@@ -183,12 +200,13 @@
         __version__ = "1.0.0"
   
       ''',
-      'dist/foo/foo-1.0.0.tar.gz': 'md5:bd183e51585849bfeab448cbd6b3f24d',
+      'dist/foo/foo-1.0.0.tar.gz': 'md5:2d7ae4b5428eac91e982582578e28f01',
       'tree': '''
         test_build_pkg_no_wheel0
         ├── build
         │   └── foo
         │       └── foo-1.0.0
+        │           ├── .gitignore
         │           ├── pyproject.toml
         │           └── src
         │               └── foo
@@ -197,7 +215,7 @@
             └── foo
                 └── foo-1.0.0.tar.gz
         
-        7 directories, 3 files
+        7 directories, 4 files
   
       ''',
     }),
@@ -215,6 +233,11 @@
   dict({
     'exit_code': 0,
     'filesystem': dict({
+      'build/foo/foo-1.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
+  
+      ''',
       'build/foo/foo-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
@@ -242,12 +265,13 @@
       ''',
       'dist/foo/foo-1.0.0-tag1.whl': 'md5:80be08b501ed397bb67c604755b17414',
       'dist/foo/foo-1.0.0-tag2.whl': 'md5:80be08b501ed397bb67c604755b17414',
-      'dist/foo/foo-1.0.0.tar.gz': 'md5:bd183e51585849bfeab448cbd6b3f24d',
+      'dist/foo/foo-1.0.0.tar.gz': 'md5:2d7ae4b5428eac91e982582578e28f01',
       'tree': '''
         test_build_pkg_wheel_tags0
         ├── build
         │   └── foo
         │       └── foo-1.0.0
+        │           ├── .gitignore
         │           ├── pyproject.toml
         │           └── src
         │               └── foo
@@ -258,7 +282,7 @@
                 ├── foo-1.0.0-tag2.whl
                 └── foo-1.0.0.tar.gz
         
-        7 directories, 5 files
+        7 directories, 6 files
   
       ''',
     }),
