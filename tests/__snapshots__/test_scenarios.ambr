@@ -3,6 +3,11 @@
   dict({
     'exit_code': 0,
     'filesystem': dict({
+      'build/example-961b4c22/example-961b4c22-0.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
+  
+      ''',
       'build/example-961b4c22/example-961b4c22-0.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
@@ -28,6 +33,11 @@
       ''',
       'build/example-961b4c22/example-961b4c22-0.0.0/src/example_961b4c22/__init__.py': '''
         __version__ = "0.0.0"
+  
+      ''',
+      'build/example-961b4c22/example-a-961b4c22-1.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
   
       ''',
       'build/example-961b4c22/example-a-961b4c22-1.0.0/pyproject.toml': '''
@@ -57,6 +67,11 @@
         __version__ = "1.0.0"
   
       ''',
+      'build/example-961b4c22/example-b-961b4c22-1.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
+  
+      ''',
       'build/example-961b4c22/example-b-961b4c22-1.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
@@ -82,6 +97,11 @@
         __version__ = "1.0.0"
   
       ''',
+      'build/example-961b4c22/example-b-961b4c22-2.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
+  
+      ''',
       'build/example-961b4c22/example-b-961b4c22-2.0.0/pyproject.toml': '''
         [build-system]
         requires = ["hatchling"]
@@ -105,6 +125,11 @@
       ''',
       'build/example-961b4c22/example-b-961b4c22-2.0.0/src/example_b_961b4c22/__init__.py': '''
         __version__ = "2.0.0"
+  
+      ''',
+      'build/example-961b4c22/example-b-961b4c22-3.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
   
       ''',
       'build/example-961b4c22/example-b-961b4c22-3.0.0/pyproject.toml': '''
@@ -134,40 +159,45 @@
         __version__ = "3.0.0"
   
       ''',
-      'dist/example-961b4c22/example_961b4c22-0.0.0.tar.gz': 'md5:03b9fd81d4e0fa8a3838a8344095e29e',
+      'dist/example-961b4c22/example_961b4c22-0.0.0.tar.gz': 'md5:b611ffebb5420e975d316bad3edbd96d',
       'dist/example-961b4c22/example_a_961b4c22-1.0.0-py3-none-any.whl': 'md5:b08225196dab082ef56cfd200be09e0c',
-      'dist/example-961b4c22/example_a_961b4c22-1.0.0.tar.gz': 'md5:49c4a2f7ea4f4584e0e1bff1632a5394',
+      'dist/example-961b4c22/example_a_961b4c22-1.0.0.tar.gz': 'md5:22d0d850cb89cd02e3d445e2675f4f37',
       'dist/example-961b4c22/example_b_961b4c22-1.0.0-py3-none-any.whl': 'md5:d5671062b6263efec113c4a48722e3f8',
-      'dist/example-961b4c22/example_b_961b4c22-1.0.0.tar.gz': 'md5:9a9693889a19a2d9157f53442590ebbf',
+      'dist/example-961b4c22/example_b_961b4c22-1.0.0.tar.gz': 'md5:1a5b78e5effdddfb166da60f3765542e',
       'dist/example-961b4c22/example_b_961b4c22-2.0.0-py3-none-any.whl': 'md5:1af716031481e9892c3043c65b315688',
-      'dist/example-961b4c22/example_b_961b4c22-2.0.0.tar.gz': 'md5:724c8ca1a41684ace5b3c090161859b9',
+      'dist/example-961b4c22/example_b_961b4c22-2.0.0.tar.gz': 'md5:d6ef5021da7cd4275188bd8d086d5229',
       'dist/example-961b4c22/example_b_961b4c22-3.0.0-py3-none-any.whl': 'md5:9d6c858ff25fa695b68a09914fd5f0de',
-      'dist/example-961b4c22/example_b_961b4c22-3.0.0.tar.gz': 'md5:79a5fdf95f587838a8d3e6af685f2379',
+      'dist/example-961b4c22/example_b_961b4c22-3.0.0.tar.gz': 'md5:b2224e17f62a7262cdc3ab23f9050263',
       'tree': '''
         test_build_test_scenarios_exam0
         ├── build
         │   └── example-961b4c22
         │       ├── example-961b4c22-0.0.0
+        │       │   ├── .gitignore
         │       │   ├── pyproject.toml
         │       │   └── src
         │       │       └── example_961b4c22
         │       │           └── __init__.py
         │       ├── example-a-961b4c22-1.0.0
+        │       │   ├── .gitignore
         │       │   ├── pyproject.toml
         │       │   └── src
         │       │       └── example_a_961b4c22
         │       │           └── __init__.py
         │       ├── example-b-961b4c22-1.0.0
+        │       │   ├── .gitignore
         │       │   ├── pyproject.toml
         │       │   └── src
         │       │       └── example_b_961b4c22
         │       │           └── __init__.py
         │       ├── example-b-961b4c22-2.0.0
+        │       │   ├── .gitignore
         │       │   ├── pyproject.toml
         │       │   └── src
         │       │       └── example_b_961b4c22
         │       │           └── __init__.py
         │       └── example-b-961b4c22-3.0.0
+        │           ├── .gitignore
         │           ├── pyproject.toml
         │           └── src
         │               └── example_b_961b4c22
@@ -184,7 +214,7 @@
                 ├── example_b_961b4c22-3.0.0-py3-none-any.whl
                 └── example_b_961b4c22-3.0.0.tar.gz
         
-        19 directories, 19 files
+        19 directories, 24 files
   
       ''',
     }),
