@@ -53,7 +53,7 @@ jobs:
 
       - name: Install packages
         run: |
-          poetry install --extras index
+          poetry install --extras index --compile
 
       - name: Collect scenarios
         run: |
