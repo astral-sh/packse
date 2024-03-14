@@ -1,3 +1,4 @@
+import fnmatch
 import logging
 import re
 from pathlib import Path
@@ -33,7 +34,11 @@ def create_from_template(
 ) -> Path:
     template_path = __templates_path__ / template_name
     first_root = None
+    ignore_files = ["*.pyc"]
     for root, _, files in template_path.walk():
+        for ignore in ignore_files:
+            files = [file for file in files if not fnmatch.fnmatch(file, ignore)]
+
         for loop_root, scope in parse_loop(root, variables):
             # Determine the new directory path in the destination
             new_root = destination / Path(
