@@ -49,12 +49,13 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-          cache: poetry
 
       - name: Install packages
         run: |
-          poetry install --all-extras --compile
+          poetry env use python3
+          poetry install --compile
 
       - name: Run packse build
         run: |
+          poetry env use python3
           packse build --force scenarios/
