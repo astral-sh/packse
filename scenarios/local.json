@@ -19,7 +19,7 @@
             "packages": {
                 "a": "1.2.3+foo"
             },
-            "explanation": "The verison '1.2.3+foo' satisfies the constraint '==1.2.3'."
+            "explanation": "The version '1.2.3+foo' satisfies the constraint '==1.2.3'."
         }
     },
     {
@@ -48,7 +48,7 @@
             "packages": {
                 "a": "1.2.3"
             },
-            "explanation": "The verison '1.2.3' with an sdist satisfies the constraint '==1.2.3'."
+            "explanation": "The version '1.2.3' with an sdist satisfies the constraint '==1.2.3'."
         }
     },
     {
@@ -77,7 +77,7 @@
             "packages": {
                 "a": "1.2.3+foo"
             },
-            "explanation": "The verison '1.2.3+foo' satisfies the constraint '==1.2.3'."
+            "explanation": "The version '1.2.3+foo' satisfies the constraint '==1.2.3'."
         }
     },
     {
@@ -147,12 +147,138 @@
                 "a": "1.0.0",
                 "b": "2.0.0+foo"
             },
-            "explanation": "The verison '2.0.0+foo' satisfies both ==2.0.0 and ==2.0.0+foo."
+            "explanation": "The version '2.0.0+foo' satisfies both ==2.0.0 and ==2.0.0+foo."
+        }
+    },
+    {
+        "name": "local-transitive-greater-than",
+        "description": "A transitive constraint on a local version should not match an exclusive ordered operator.",
+        "root": {
+            "requires": [
+                "a",
+                "b==2.0.0+foo"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "b>2.0.0"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "2.0.0+foo": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": false
+        }
+    },
+    {
+        "name": "local-transitive-greater-than-or-equal",
+        "description": "A transitive constraint on a local version should match an inclusive ordered operator.",
+        "root": {
+            "requires": [
+                "a",
+                "b==2.0.0+foo"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "b>=2.0.0"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "2.0.0+foo": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0",
+                "b": "2.0.0+foo"
+            },
+            "explanation": "The version '2.0.0+foo' satisfies both >=2.0.0 and ==2.0.0+foo."
+        }
+    },
+    {
+        "name": "local-transitive-less-than",
+        "description": "A transitive constraint on a local version should not match an exclusive ordered operator.",
+        "root": {
+            "requires": [
+                "a",
+                "b==2.0.0+foo"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "b<2.0.0"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "2.0.0+foo": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": false
+        }
+    },
+    {
+        "name": "local-transitive-less-than-or-equal",
+        "description": "A transitive constraint on a local version should match an inclusive ordered operator.",
+        "root": {
+            "requires": [
+                "a",
+                "b==2.0.0+foo"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "b<=2.0.0"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "2.0.0+foo": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0",
+                "b": "2.0.0+foo"
+            },
+            "explanation": "The version '2.0.0+foo' satisfies both <=2.0.0 and ==2.0.0+foo."
         }
     },
     {
         "name": "local-transitive-confounding",
-        "description": "A transitive dependency has both a non-local and local version published, but the non-local version is unuable.",
+        "description": "A transitive dependency has both a non-local and local version published, but the non-local version is unusable.",
         "root": {
             "requires": [
                 "a"
@@ -185,7 +311,161 @@
             "packages": {
                 "a": "2.0.0+foo"
             },
-            "explanation": "The verison '1.2.3+foo' satisfies the constraint '==1.2.3'."
+            "explanation": "The version '1.2.3+foo' satisfies the constraint '==1.2.3'."
+        }
+    },
+    {
+        "name": "local-transitive-conflicting",
+        "description": "A dependency depends on a conflicting local version of a direct dependency.",
+        "root": {
+            "requires": [
+                "a",
+                "b==2.0.0+foo"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": [
+                            "b==2.0.0+bar"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "2.0.0+foo": {},
+                    "2.0.0+bar": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": false
+        }
+    },
+    {
+        "name": "local-transitive-backtrack",
+        "description": "A dependency depends on a conflicting local version of a direct dependency, but we can backtrack to a compatible version.",
+        "root": {
+            "requires": [
+                "a",
+                "b==2.0.0+foo"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                   "1.0.0": {
+                        "requires": [
+                            "b==2.0.0"
+                        ]
+                    },
+                    "2.0.0": {
+                        "requires": [
+                            "b==2.0.0+bar"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "2.0.0+foo": {},
+                    "2.0.0+bar": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0",
+                "b": "2.0.0+foo"
+            },
+            "explanation": "Backtracking to '1.0.0' gives us compatible local versions of b."
+        }
+    },
+    {
+        "name": "local-greater-than",
+        "description": "A local version should be excluded in exclusive ordered comparisons.",
+        "root": {
+            "requires": [
+                "a>1.2.3"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.2.3+foo": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": false
+        }
+    },
+    {
+        "name": "local-greater-than-or-equal",
+        "description": "A local version should be included in inclusive ordered comparisons.",
+        "root": {
+            "requires": [
+                "a>=1.2.3"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.2.3+foo": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.2.3+foo"
+            },
+            "explanation": "The version '1.2.3+foo' satisfies the constraint '>=1.2.3'."
+        }
+    },
+    {
+        "name": "local-less-than",
+        "description": "A local version should be excluded in exclusive ordered comparisons.",
+        "root": {
+            "requires": [
+                "a<1.2.3"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.2.3+foo": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": false
+        }
+    },
+    {
+        "name": "local-less-than-or-equal",
+        "description": "A local version should be included in inclusive ordered comparisons.",
+        "root": {
+            "requires": [
+                "a<=1.2.3"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.2.3+foo": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.2.3+foo"
+            },
+            "explanation": "The version '1.2.3+foo' satisfies the constraint '<=1.2.3'."
         }
     }
 ]
