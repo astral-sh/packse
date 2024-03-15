@@ -167,5 +167,64 @@
         "expected": {
             "satisfiable": false
         }
+    },
+    {
+        "name": "post-equal-not-available",
+        "description": "An equal version constraint should not match a post-release version if the post-release version is not available.",
+        "root": {
+            "requires": ["a==1.2.3.post0"]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.2.3": {},
+                    "1.2.3.post1": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": false
+        }
+    },
+    {
+        "name": "post-equal-available",
+        "description": "An equal version constraint should match a post-release version if the post-release version is available.",
+        "root": {
+            "requires": ["a==1.2.3.post0"]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.2.3": {},
+                    "1.2.3.post0": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.2.3.post0"
+            },
+            "explanation": "The version '1.2.3.post0' satisfies the constraint '==1.2.3.post0'."
+        }
+    },
+    {
+        "name": "post-greater-than-post-not-available",
+        "description": "A greater-than version constraint should not match a post-release version if the post-release version is not available.",
+        "root": {
+            "requires": ["a>1.2.3.post2"]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.2.3": {},
+                    "1.2.3.post0": {},
+                    "1.2.3.post1": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": false
+        }
     }
 ]
