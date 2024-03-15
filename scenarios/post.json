@@ -3,9 +3,7 @@
         "name": "post-simple",
         "description": "A simple version constraint should not match a post-release version.",
         "root": {
-            "requires": [
-                "a==1.2.3"
-            ]
+            "requires": ["a==1.2.3"]
         },
         "packages": {
             "a": {
@@ -22,9 +20,7 @@
         "name": "post-greater-than-or-equal",
         "description": "A greater-than-or-equal version constraint should match a post-release version.",
         "root": {
-            "requires": [
-                "a>=1.2.3"
-            ]
+            "requires": ["a>=1.2.3"]
         },
         "packages": {
             "a": {
@@ -45,9 +41,7 @@
         "name": "post-greater-than",
         "description": "A greater-than version constraint should not match a post-release version.",
         "root": {
-            "requires": [
-                "a>1.2.3"
-            ]
+            "requires": ["a>1.2.3"]
         },
         "packages": {
             "a": {
@@ -64,9 +58,7 @@
         "name": "post-greater-than-post",
         "description": "A greater-than version constraint should match a post-release version if the constraint is itself a post-release version.",
         "root": {
-            "requires": [
-                "a>1.2.3.post0"
-            ]
+            "requires": ["a>1.2.3.post0"]
         },
         "packages": {
             "a": {
@@ -88,9 +80,7 @@
         "name": "post-greater-than-or-equal-post",
         "description": "A greater-than-or-equal version constraint should match a post-release version if the constraint is itself a post-release version.",
         "root": {
-            "requires": [
-                "a>=1.2.3.post0"
-            ]
+            "requires": ["a>=1.2.3.post0"]
         },
         "packages": {
             "a": {
@@ -112,9 +102,7 @@
         "name": "post-less-than-or-equal",
         "description": "A less-than-or-equal version constraint should not match a post-release version.",
         "root": {
-            "requires": [
-                "a<=1.2.3"
-            ]
+            "requires": ["a<=1.2.3"]
         },
         "packages": {
             "a": {
@@ -131,9 +119,7 @@
         "name": "post-less-than",
         "description": "A less-than version constraint should not match a post-release version.",
         "root": {
-            "requires": [
-                "a<1.2.3"
-            ]
+            "requires": ["a<1.2.3"]
         },
         "packages": {
             "a": {
@@ -150,9 +136,7 @@
         "name": "post-local-greater-than",
         "description": "A greater-than version constraint should not match a post-release version with a local version identifier.",
         "root": {
-            "requires": [
-                "a>1.2.3"
-            ]
+            "requires": ["a>1.2.3"]
         },
         "packages": {
             "a": {
@@ -170,25 +154,18 @@
         "name": "post-local-greater-than-post",
         "description": "A greater-than version constraint should not match a post-release version with a local version identifier.",
         "root": {
-            "requires": [
-                "a>1.2.3.post0"
-            ]
+            "requires": ["a>1.2.3.post1"]
         },
         "packages": {
             "a": {
                 "versions": {
-                    "1.2.3.post0": {},
-                    "1.2.3.post0+local": {},
-                    "1.2.3.post1": {}
+                    "1.2.3.post1": {},
+                    "1.2.3.post1+local": {}
                 }
             }
         },
         "expected": {
-            "satisfiable": true,
-            "packages": {
-                "a": "1.2.3.post1"
-            },
-            "explanation": "The version '1.2.3.post1' satisfies the constraint '>1.2.3.post0'."
+            "satisfiable": false
         }
     }
 ]
