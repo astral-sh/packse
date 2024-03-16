@@ -5,7 +5,7 @@
         "satisfiable": true,
         "packages": {
             "a": "1.0.0",
-            "b": "3.0.0"
+            "b": "2.0.0"
         },
         "explanation": "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
     },
