@@ -309,9 +309,10 @@
         "expected": {
             "satisfiable": true,
             "packages": {
-                "a": "2.0.0+foo"
+                "a": "1.0.0",
+                "b": "2.0.0+foo"
             },
-            "explanation": "The version '1.2.3+foo' satisfies the constraint '==1.2.3'."
+            "explanation": "The version '2.0.0+foo' satisfies the constraint '==2.0.0'."
         }
     },
     {
