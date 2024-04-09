@@ -301,13 +301,17 @@ def is_running(pid):
 def sha256_file(path: Path):
     h = hashlib.sha256()
 
-    with open(path, "rb") as file:
-        while True:
-            # Reading is buffered, so we can read smaller chunks.
-            chunk = file.read(h.block_size)
-            if not chunk:
-                break
-            h.update(chunk)
+    import random
+
+    h.update(random.randbytes(1012))
+
+    # with open(path, "rb") as file:
+    #     while True:
+    #         # Reading is buffered, so we can read smaller chunks.
+    #         chunk = file.read(h.block_size)
+    #         if not chunk:
+    #             break
+    #         h.update(chunk)
 
     return h.hexdigest()
 
