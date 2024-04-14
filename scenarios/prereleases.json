@@ -170,6 +170,58 @@
         }
     },
     {
+        "name": "package-exclusive-ordered-comparison-prerelease-specified-mixed-available",
+        "description": "The user requires a version of `a` with an exclusive ordered comparison prerelease specifier and both prerelease and stable releases are available.",
+        "root": {
+            "requires": [
+                "a>0.1.0a1"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {},
+                    "0.2.0a1": {},
+                    "0.3.0": {},
+                    "1.0.0a1": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "1.0.0a1"
+            },
+            "explanation": "Since the user provided a prerelease specifier, the latest prerelease version should be selected, even though an exclusive ordered comparison was used."
+        }
+    },
+    {
+        "name": "package-not-equal-prerelease-specified-mixed-available",
+        "description": "The user requires a version of `a` which is not a specific prerelease version, and both prerelease and stable releases are available.",
+        "root": {
+            "requires": [
+                "a!=0.2.0a1"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "0.1.0": {},
+                    "0.2.0a1": {},
+                    "0.3.0": {},
+                    "1.0.0a1": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "packages": {
+                "a": "0.3.0"
+            },
+            "explanation": "Even though a prerelease specifier was given, it was '!=', which does not imply prereleases should be selected, therefore the latest final release should be chosen."
+        }
+    },
+    {
         "name": "package-multiple-prereleases-kinds",
         "description": "The user requires `a` which has multiple prereleases available with different labels.",
         "root": {
