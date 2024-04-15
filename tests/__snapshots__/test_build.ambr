@@ -23,7 +23,7 @@
         name = "example-961b4c22"
         version = "0.0.0"
         dependencies = [
-            "example-a-961b4c22",
+            '''example-a-961b4c22''',
         ]
         requires-python = ">=3.8"
         description = "This is an example scenario, in which the user depends on a single package `a` which requires `b`."
@@ -55,7 +55,7 @@
         name = "example-a-961b4c22"
         version = "1.0.0"
         dependencies = [
-            "example-b-961b4c22>1.0.0",
+            '''example-b-961b4c22>1.0.0''',
         ]
         requires-python = ">=3.8"
         description = ""
@@ -147,7 +147,7 @@
         name = "example-b-961b4c22"
         version = "3.0.0"
         dependencies = [
-            "example-c-961b4c22",
+            '''example-c-961b4c22''',
         ]
         requires-python = ">=3.8"
         description = ""
@@ -159,15 +159,15 @@
         __version__ = "3.0.0"
   
       ''',
-      'dist/example-961b4c22/example_961b4c22-0.0.0.tar.gz': 'md5:b611ffebb5420e975d316bad3edbd96d',
+      'dist/example-961b4c22/example_961b4c22-0.0.0.tar.gz': 'md5:50500dbebf471373976c812752281082',
       'dist/example-961b4c22/example_a_961b4c22-1.0.0-py3-none-any.whl': 'md5:b08225196dab082ef56cfd200be09e0c',
-      'dist/example-961b4c22/example_a_961b4c22-1.0.0.tar.gz': 'md5:22d0d850cb89cd02e3d445e2675f4f37',
+      'dist/example-961b4c22/example_a_961b4c22-1.0.0.tar.gz': 'md5:d5b206e5473bbc4625cfd2a0635c14ee',
       'dist/example-961b4c22/example_b_961b4c22-1.0.0-py3-none-any.whl': 'md5:d5671062b6263efec113c4a48722e3f8',
       'dist/example-961b4c22/example_b_961b4c22-1.0.0.tar.gz': 'md5:1a5b78e5effdddfb166da60f3765542e',
       'dist/example-961b4c22/example_b_961b4c22-2.0.0-py3-none-any.whl': 'md5:1af716031481e9892c3043c65b315688',
       'dist/example-961b4c22/example_b_961b4c22-2.0.0.tar.gz': 'md5:d6ef5021da7cd4275188bd8d086d5229',
       'dist/example-961b4c22/example_b_961b4c22-3.0.0-py3-none-any.whl': 'md5:9d6c858ff25fa695b68a09914fd5f0de',
-      'dist/example-961b4c22/example_b_961b4c22-3.0.0.tar.gz': 'md5:b2224e17f62a7262cdc3ab23f9050263',
+      'dist/example-961b4c22/example_b_961b4c22-3.0.0.tar.gz': 'md5:f97684a46574b1d9d4209fb639a5c660',
       'tree': '''
         test_build_example0
         ├── build
@@ -277,7 +277,7 @@
         name = "a-961b4c22"
         version = "1.0.0"
         dependencies = [
-            "b-961b4c22>1.0.0",
+            '''b-961b4c22>1.0.0''',
         ]
         requires-python = ">=3.8"
         description = ""
@@ -369,7 +369,7 @@
         name = "b-961b4c22"
         version = "3.0.0"
         dependencies = [
-            "c-961b4c22",
+            '''c-961b4c22''',
         ]
         requires-python = ">=3.8"
         description = ""
@@ -401,7 +401,7 @@
         name = "example-961b4c22"
         version = "0.0.0"
         dependencies = [
-            "a-961b4c22",
+            '''a-961b4c22''',
         ]
         requires-python = ">=3.8"
         description = "This is an example scenario, in which the user depends on a single package `a` which requires `b`."
@@ -414,14 +414,14 @@
   
       ''',
       'dist/example-961b4c22/a_961b4c22-1.0.0-py3-none-any.whl': 'md5:71835d4655093021b26881ed536d6a3c',
-      'dist/example-961b4c22/a_961b4c22-1.0.0.tar.gz': 'md5:1c1f6e1b056e41ab8bc6ed2fb2977fdd',
+      'dist/example-961b4c22/a_961b4c22-1.0.0.tar.gz': 'md5:5e4419947505c407666321769ae37b6f',
       'dist/example-961b4c22/b_961b4c22-1.0.0-py3-none-any.whl': 'md5:87a6833860657a740cfc3dd6c33ed6c0',
       'dist/example-961b4c22/b_961b4c22-1.0.0.tar.gz': 'md5:9ba9d4c05c2cfc71d316a724bcee9941',
       'dist/example-961b4c22/b_961b4c22-2.0.0-py3-none-any.whl': 'md5:827509625d3d713b04592c1e81650507',
       'dist/example-961b4c22/b_961b4c22-2.0.0.tar.gz': 'md5:3f0d5cc2ca6029de28220d81a67fdcd6',
       'dist/example-961b4c22/b_961b4c22-3.0.0-py3-none-any.whl': 'md5:03b775c2e2c672d972ab6c9780508b31',
-      'dist/example-961b4c22/b_961b4c22-3.0.0.tar.gz': 'md5:9e7d2ec9f653ba7020083b56238ac662',
-      'dist/example-961b4c22/example_961b4c22-0.0.0.tar.gz': 'md5:b84e751c19d8caef102d72227f147d6c',
+      'dist/example-961b4c22/b_961b4c22-3.0.0.tar.gz': 'md5:9319bd71ba7767b4c445e5642af84f41',
+      'dist/example-961b4c22/example_961b4c22-0.0.0.tar.gz': 'md5:7c52a2c4677494a1f90f5017f85273e4',
       'tree': '''
         test_build_example_short_names0
         ├── build
@@ -503,7 +503,7 @@
         name = "example-7661fdb8"
         version = "0.0.0"
         dependencies = [
-            "example-a-7661fdb8",
+            '''example-a-7661fdb8''',
         ]
         requires-python = ">=3.8"
         description = "This is an example scenario, in which the user depends on a single package `a` which requires `b`."
@@ -535,7 +535,7 @@
         name = "example-a-7661fdb8"
         version = "1.0.0"
         dependencies = [
-            "example-b-7661fdb8>1.0.0",
+            '''example-b-7661fdb8>1.0.0''',
         ]
         requires-python = ">=3.8"
         description = ""
@@ -627,7 +627,7 @@
         name = "example-b-7661fdb8"
         version = "3.0.0"
         dependencies = [
-            "example-c-7661fdb8",
+            '''example-c-7661fdb8''',
         ]
         requires-python = ">=3.8"
         description = ""
@@ -639,15 +639,15 @@
         __version__ = "3.0.0"
   
       ''',
-      'dist/example-7661fdb8/example_7661fdb8-0.0.0.tar.gz': 'md5:3c881fdc059082d6997d7f18fa307e5e',
+      'dist/example-7661fdb8/example_7661fdb8-0.0.0.tar.gz': 'md5:a7d08c4c6d67ea155e60aa4dca1d4f02',
       'dist/example-7661fdb8/example_a_7661fdb8-1.0.0-py3-none-any.whl': 'md5:2bffa37b533d8bd7305ef4c35f2e1eaa',
-      'dist/example-7661fdb8/example_a_7661fdb8-1.0.0.tar.gz': 'md5:e0e715fecea500bc47807b8ec4a40d95',
+      'dist/example-7661fdb8/example_a_7661fdb8-1.0.0.tar.gz': 'md5:72ff3160331e769af9ca18f8e5556521',
       'dist/example-7661fdb8/example_b_7661fdb8-1.0.0-py3-none-any.whl': 'md5:e28d01bec9f17c084c41faae02beb5b2',
       'dist/example-7661fdb8/example_b_7661fdb8-1.0.0.tar.gz': 'md5:30555584f112a9476b36fa69b588a32b',
       'dist/example-7661fdb8/example_b_7661fdb8-2.0.0-py3-none-any.whl': 'md5:0382ed0f92262b84e41d8a172d117484',
       'dist/example-7661fdb8/example_b_7661fdb8-2.0.0.tar.gz': 'md5:b87e755e31b565d48830d77ae95ae803',
       'dist/example-7661fdb8/example_b_7661fdb8-3.0.0-py3-none-any.whl': 'md5:00ec1e77f1d74ba49814a30ac3b92e99',
-      'dist/example-7661fdb8/example_b_7661fdb8-3.0.0.tar.gz': 'md5:2d6fa63090e8fb75ecfb76eb8c7caa94',
+      'dist/example-7661fdb8/example_b_7661fdb8-3.0.0.tar.gz': 'md5:14aa3376162ccb7d9c6bb5156cd8fe10',
       'tree': '''
         test_build_example_with_seed0
         ├── build
