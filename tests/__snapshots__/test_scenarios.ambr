@@ -23,7 +23,7 @@
         name = "example-961b4c22"
         version = "0.0.0"
         dependencies = [
-            "example-a-961b4c22",
+            '''example-a-961b4c22''',
         ]
         requires-python = ">=3.8"
         description = "This is an example scenario, in which the user depends on a single package `a` which requires `b`."
@@ -55,7 +55,7 @@
         name = "example-a-961b4c22"
         version = "1.0.0"
         dependencies = [
-            "example-b-961b4c22>1.0.0",
+            '''example-b-961b4c22>1.0.0''',
         ]
         requires-python = ">=3.8"
         description = ""
@@ -147,7 +147,7 @@
         name = "example-b-961b4c22"
         version = "3.0.0"
         dependencies = [
-            "example-c-961b4c22",
+            '''example-c-961b4c22''',
         ]
         requires-python = ">=3.8"
         description = ""
@@ -159,15 +159,15 @@
         __version__ = "3.0.0"
   
       ''',
-      'dist/example-961b4c22/example_961b4c22-0.0.0.tar.gz': 'md5:b611ffebb5420e975d316bad3edbd96d',
+      'dist/example-961b4c22/example_961b4c22-0.0.0.tar.gz': 'md5:50500dbebf471373976c812752281082',
       'dist/example-961b4c22/example_a_961b4c22-1.0.0-py3-none-any.whl': 'md5:b08225196dab082ef56cfd200be09e0c',
-      'dist/example-961b4c22/example_a_961b4c22-1.0.0.tar.gz': 'md5:22d0d850cb89cd02e3d445e2675f4f37',
+      'dist/example-961b4c22/example_a_961b4c22-1.0.0.tar.gz': 'md5:d5b206e5473bbc4625cfd2a0635c14ee',
       'dist/example-961b4c22/example_b_961b4c22-1.0.0-py3-none-any.whl': 'md5:d5671062b6263efec113c4a48722e3f8',
       'dist/example-961b4c22/example_b_961b4c22-1.0.0.tar.gz': 'md5:1a5b78e5effdddfb166da60f3765542e',
       'dist/example-961b4c22/example_b_961b4c22-2.0.0-py3-none-any.whl': 'md5:1af716031481e9892c3043c65b315688',
       'dist/example-961b4c22/example_b_961b4c22-2.0.0.tar.gz': 'md5:d6ef5021da7cd4275188bd8d086d5229',
       'dist/example-961b4c22/example_b_961b4c22-3.0.0-py3-none-any.whl': 'md5:9d6c858ff25fa695b68a09914fd5f0de',
-      'dist/example-961b4c22/example_b_961b4c22-3.0.0.tar.gz': 'md5:b2224e17f62a7262cdc3ab23f9050263',
+      'dist/example-961b4c22/example_b_961b4c22-3.0.0.tar.gz': 'md5:f97684a46574b1d9d4209fb639a5c660',
       'tree': '''
         test_build_test_scenarios_exam0
         ├── build
