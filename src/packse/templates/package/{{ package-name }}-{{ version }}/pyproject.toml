@@ -12,7 +12,7 @@ only-include = ["src/{{ module-name }}"]
 name = "{{ package-name }}"
 version = "{{ version }}"
 dependencies = [{{# dependencies }}
-    "{{ . }}",
+    '''{{ . }}''',
 {{/ dependencies }}]
 requires-python = "{{ requires-python }}"
 description = "{{ description }}"
