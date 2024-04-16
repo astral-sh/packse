@@ -31,7 +31,7 @@ def inspect(
             raise FileNotFound(target)
 
         if target.is_dir():
-            for target in target.glob("*.json"):
+            for target in target.glob("*.(json|yaml|toml)"):
                 try:
                     logger.debug("Loading %s", target)
                     scenarios_by_path[target] = load_scenarios(target)

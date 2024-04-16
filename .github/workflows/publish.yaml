@@ -57,7 +57,7 @@ jobs:
 
       - name: Collect scenarios
         run: |
-          scenarios=(scenarios/**/*.json)
+          scenarios=(scenarios/**/*.(json|yaml|toml))
 
           # Display for debug
           for scenario in $scenarios

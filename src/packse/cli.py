@@ -160,13 +160,13 @@ def _call_list(args):
     skip_invalid = args.skip_invalid
     if not args.targets:
         skip_invalid = True
-        targets = Path.cwd().glob("**/*.json")
+        targets = Path.cwd().glob("**/*.(json|yaml|toml)")
     else:
         targets = []
         for target in args.targets:
             # Expand any directories to json files within
             if target.is_dir():
-                targets.extend(target.glob("**/*.json"))
+                targets.extend(target.glob("**/*.(json|yaml|toml)"))
             else:
                 targets.append(target)
 
@@ -183,13 +183,13 @@ def _call_inspect(args):
     skip_invalid = args.skip_invalid
     if not args.targets:
         skip_invalid = True
-        targets = Path.cwd().glob("**/*.json")
+        targets = Path.cwd().glob("**/*.(json|yaml|toml)")
     else:
         targets = []
         for target in args.targets:
-            # Expand any directories to json files within
+            # Expand any directories to scenario files within
             if target.is_dir():
-                targets.extend(target.glob("**/*.json"))
+                targets.extend(target.glob("**/*.(json|yaml|toml)"))
             else:
                 targets.append(target)
 

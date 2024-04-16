@@ -1,5 +1,5 @@
 # serializer version: 1
-# name: test_build_test_scenarios[example]
+# name: test_build_test_scenarios[example0]
   dict({
     'exit_code': 0,
     'filesystem': dict({
@@ -225,7 +225,415 @@
     ''',
   })
 # ---
-# name: test_view_test_scenarios[example]
+# name: test_build_test_scenarios[example1]
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'build/example-toml-4a4ede4d/example-toml-4a4ede4d-0.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
+  
+      ''',
+      'build/example-toml-4a4ede4d/example-toml-4a4ede4d-0.0.0/pyproject.toml': 'md5:09873097a1bbbb1e6090f438bd379150',
+      'build/example-toml-4a4ede4d/example-toml-4a4ede4d-0.0.0/src/example_toml_4a4ede4d/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/example-toml-4a4ede4d/example-toml-a-4a4ede4d-1.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
+  
+      ''',
+      'build/example-toml-4a4ede4d/example-toml-a-4a4ede4d-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_toml_a_4a4ede4d"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_toml_a_4a4ede4d"]
+        
+        [project]
+        name = "example-toml-a-4a4ede4d"
+        version = "1.0.0"
+        dependencies = [
+            '''example-toml-b-4a4ede4d>1.0.0''',
+        ]
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/example-toml-4a4ede4d/example-toml-a-4a4ede4d-1.0.0/src/example_toml_a_4a4ede4d/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/example-toml-4a4ede4d/example-toml-b-4a4ede4d-1.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
+  
+      ''',
+      'build/example-toml-4a4ede4d/example-toml-b-4a4ede4d-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_toml_b_4a4ede4d"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_toml_b_4a4ede4d"]
+        
+        [project]
+        name = "example-toml-b-4a4ede4d"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/example-toml-4a4ede4d/example-toml-b-4a4ede4d-1.0.0/src/example_toml_b_4a4ede4d/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/example-toml-4a4ede4d/example-toml-b-4a4ede4d-2.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
+  
+      ''',
+      'build/example-toml-4a4ede4d/example-toml-b-4a4ede4d-2.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_toml_b_4a4ede4d"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_toml_b_4a4ede4d"]
+        
+        [project]
+        name = "example-toml-b-4a4ede4d"
+        version = "2.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/example-toml-4a4ede4d/example-toml-b-4a4ede4d-2.0.0/src/example_toml_b_4a4ede4d/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'build/example-toml-4a4ede4d/example-toml-b-4a4ede4d-3.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
+  
+      ''',
+      'build/example-toml-4a4ede4d/example-toml-b-4a4ede4d-3.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_toml_b_4a4ede4d"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_toml_b_4a4ede4d"]
+        
+        [project]
+        name = "example-toml-b-4a4ede4d"
+        version = "3.0.0"
+        dependencies = [
+            '''example-toml-c-4a4ede4d''',
+        ]
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/example-toml-4a4ede4d/example-toml-b-4a4ede4d-3.0.0/src/example_toml_b_4a4ede4d/__init__.py': '''
+        __version__ = "3.0.0"
+  
+      ''',
+      'dist/example-toml-4a4ede4d/example_toml_4a4ede4d-0.0.0.tar.gz': 'md5:1f276537bcbf0be4b70ce8b713bf18a0',
+      'dist/example-toml-4a4ede4d/example_toml_a_4a4ede4d-1.0.0-py3-none-any.whl': 'md5:f79d086336d205c960e26ea13bbe2d01',
+      'dist/example-toml-4a4ede4d/example_toml_a_4a4ede4d-1.0.0.tar.gz': 'md5:764b05f0e614c4a70576ca1d1ea3892c',
+      'dist/example-toml-4a4ede4d/example_toml_b_4a4ede4d-1.0.0-py3-none-any.whl': 'md5:1c56e586db3b49bc418a73a6e71aa725',
+      'dist/example-toml-4a4ede4d/example_toml_b_4a4ede4d-1.0.0.tar.gz': 'md5:a917472b63fe11f466c0adfbe68f082c',
+      'dist/example-toml-4a4ede4d/example_toml_b_4a4ede4d-2.0.0-py3-none-any.whl': 'md5:046f5ff1261d5507c030ca555eda4119',
+      'dist/example-toml-4a4ede4d/example_toml_b_4a4ede4d-2.0.0.tar.gz': 'md5:544b4f86e34cbc2bf2b09bac44554db5',
+      'dist/example-toml-4a4ede4d/example_toml_b_4a4ede4d-3.0.0-py3-none-any.whl': 'md5:ab3216e8426d1a9992e88e9f1a8e6614',
+      'dist/example-toml-4a4ede4d/example_toml_b_4a4ede4d-3.0.0.tar.gz': 'md5:43048cc9f4f37ea21564ed90684d3ff3',
+      'tree': '''
+        test_build_test_scenarios_exam1
+        ├── build
+        │   └── example-toml-4a4ede4d
+        │       ├── example-toml-4a4ede4d-0.0.0
+        │       │   ├── .gitignore
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── example_toml_4a4ede4d
+        │       │           └── __init__.py
+        │       ├── example-toml-a-4a4ede4d-1.0.0
+        │       │   ├── .gitignore
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── example_toml_a_4a4ede4d
+        │       │           └── __init__.py
+        │       ├── example-toml-b-4a4ede4d-1.0.0
+        │       │   ├── .gitignore
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── example_toml_b_4a4ede4d
+        │       │           └── __init__.py
+        │       ├── example-toml-b-4a4ede4d-2.0.0
+        │       │   ├── .gitignore
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── example_toml_b_4a4ede4d
+        │       │           └── __init__.py
+        │       └── example-toml-b-4a4ede4d-3.0.0
+        │           ├── .gitignore
+        │           ├── pyproject.toml
+        │           └── src
+        │               └── example_toml_b_4a4ede4d
+        │                   └── __init__.py
+        └── dist
+            └── example-toml-4a4ede4d
+                ├── example_toml_4a4ede4d-0.0.0.tar.gz
+                ├── example_toml_a_4a4ede4d-1.0.0-py3-none-any.whl
+                ├── example_toml_a_4a4ede4d-1.0.0.tar.gz
+                ├── example_toml_b_4a4ede4d-1.0.0-py3-none-any.whl
+                ├── example_toml_b_4a4ede4d-1.0.0.tar.gz
+                ├── example_toml_b_4a4ede4d-2.0.0-py3-none-any.whl
+                ├── example_toml_b_4a4ede4d-2.0.0.tar.gz
+                ├── example_toml_b_4a4ede4d-3.0.0-py3-none-any.whl
+                └── example_toml_b_4a4ede4d-3.0.0.tar.gz
+        
+        19 directories, 24 files
+  
+      ''',
+    }),
+    'stderr': '<not included>',
+    'stdout': '''
+      example-toml-4a4ede4d
+  
+    ''',
+  })
+# ---
+# name: test_build_test_scenarios[example2]
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'build/example-yaml-4692130b/example-yaml-4692130b-0.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
+  
+      ''',
+      'build/example-yaml-4692130b/example-yaml-4692130b-0.0.0/pyproject.toml': 'md5:e1c599a778fbaf29f0217f69bae5f263',
+      'build/example-yaml-4692130b/example-yaml-4692130b-0.0.0/src/example_yaml_4692130b/__init__.py': '''
+        __version__ = "0.0.0"
+  
+      ''',
+      'build/example-yaml-4692130b/example-yaml-a-4692130b-1.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
+  
+      ''',
+      'build/example-yaml-4692130b/example-yaml-a-4692130b-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_yaml_a_4692130b"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_yaml_a_4692130b"]
+        
+        [project]
+        name = "example-yaml-a-4692130b"
+        version = "1.0.0"
+        dependencies = [
+            '''example-yaml-b-4692130b>1.0.0''',
+        ]
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/example-yaml-4692130b/example-yaml-a-4692130b-1.0.0/src/example_yaml_a_4692130b/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/example-yaml-4692130b/example-yaml-b-4692130b-1.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
+  
+      ''',
+      'build/example-yaml-4692130b/example-yaml-b-4692130b-1.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_yaml_b_4692130b"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_yaml_b_4692130b"]
+        
+        [project]
+        name = "example-yaml-b-4692130b"
+        version = "1.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/example-yaml-4692130b/example-yaml-b-4692130b-1.0.0/src/example_yaml_b_4692130b/__init__.py': '''
+        __version__ = "1.0.0"
+  
+      ''',
+      'build/example-yaml-4692130b/example-yaml-b-4692130b-2.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
+  
+      ''',
+      'build/example-yaml-4692130b/example-yaml-b-4692130b-2.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_yaml_b_4692130b"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_yaml_b_4692130b"]
+        
+        [project]
+        name = "example-yaml-b-4692130b"
+        version = "2.0.0"
+        dependencies = []
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/example-yaml-4692130b/example-yaml-b-4692130b-2.0.0/src/example_yaml_b_4692130b/__init__.py': '''
+        __version__ = "2.0.0"
+  
+      ''',
+      'build/example-yaml-4692130b/example-yaml-b-4692130b-3.0.0/.gitignore': '''
+        __pycache__
+        *.pyc
+  
+      ''',
+      'build/example-yaml-4692130b/example-yaml-b-4692130b-3.0.0/pyproject.toml': '''
+        [build-system]
+        requires = ["hatchling"]
+        build-backend = "hatchling.build"
+        
+        [tool.hatch.build.targets.wheel]
+        packages = ["src/example_yaml_b_4692130b"]
+        
+        [tool.hatch.build.targets.sdist]
+        only-include = ["src/example_yaml_b_4692130b"]
+        
+        [project]
+        name = "example-yaml-b-4692130b"
+        version = "3.0.0"
+        dependencies = [
+            '''example-yaml-c-4692130b''',
+        ]
+        requires-python = ">=3.8"
+        description = ""
+        
+        [project.optional-dependencies]
+  
+      ''',
+      'build/example-yaml-4692130b/example-yaml-b-4692130b-3.0.0/src/example_yaml_b_4692130b/__init__.py': '''
+        __version__ = "3.0.0"
+  
+      ''',
+      'dist/example-yaml-4692130b/example_yaml_4692130b-0.0.0.tar.gz': 'md5:1f27fb4954cf95d3df2816e0a3df68c3',
+      'dist/example-yaml-4692130b/example_yaml_a_4692130b-1.0.0-py3-none-any.whl': 'md5:28315840a7506c6077ab74c589437c07',
+      'dist/example-yaml-4692130b/example_yaml_a_4692130b-1.0.0.tar.gz': 'md5:26e8387f05600e41417bb463cbf0b168',
+      'dist/example-yaml-4692130b/example_yaml_b_4692130b-1.0.0-py3-none-any.whl': 'md5:d67abed60ef9014f50aea61f14f9a820',
+      'dist/example-yaml-4692130b/example_yaml_b_4692130b-1.0.0.tar.gz': 'md5:01c9e292760272b477f4a02ba22e1fff',
+      'dist/example-yaml-4692130b/example_yaml_b_4692130b-2.0.0-py3-none-any.whl': 'md5:9ab50662b3a10df3781df269b7ba241b',
+      'dist/example-yaml-4692130b/example_yaml_b_4692130b-2.0.0.tar.gz': 'md5:26cb998c37a2f1742c15030298ee5b86',
+      'dist/example-yaml-4692130b/example_yaml_b_4692130b-3.0.0-py3-none-any.whl': 'md5:9f737cd9adbcf989b2586a3d08f85414',
+      'dist/example-yaml-4692130b/example_yaml_b_4692130b-3.0.0.tar.gz': 'md5:f0e0f437f038780e3439d0963eea4033',
+      'tree': '''
+        test_build_test_scenarios_exam2
+        ├── build
+        │   └── example-yaml-4692130b
+        │       ├── example-yaml-4692130b-0.0.0
+        │       │   ├── .gitignore
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── example_yaml_4692130b
+        │       │           └── __init__.py
+        │       ├── example-yaml-a-4692130b-1.0.0
+        │       │   ├── .gitignore
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── example_yaml_a_4692130b
+        │       │           └── __init__.py
+        │       ├── example-yaml-b-4692130b-1.0.0
+        │       │   ├── .gitignore
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── example_yaml_b_4692130b
+        │       │           └── __init__.py
+        │       ├── example-yaml-b-4692130b-2.0.0
+        │       │   ├── .gitignore
+        │       │   ├── pyproject.toml
+        │       │   └── src
+        │       │       └── example_yaml_b_4692130b
+        │       │           └── __init__.py
+        │       └── example-yaml-b-4692130b-3.0.0
+        │           ├── .gitignore
+        │           ├── pyproject.toml
+        │           └── src
+        │               └── example_yaml_b_4692130b
+        │                   └── __init__.py
+        └── dist
+            └── example-yaml-4692130b
+                ├── example_yaml_4692130b-0.0.0.tar.gz
+                ├── example_yaml_a_4692130b-1.0.0-py3-none-any.whl
+                ├── example_yaml_a_4692130b-1.0.0.tar.gz
+                ├── example_yaml_b_4692130b-1.0.0-py3-none-any.whl
+                ├── example_yaml_b_4692130b-1.0.0.tar.gz
+                ├── example_yaml_b_4692130b-2.0.0-py3-none-any.whl
+                ├── example_yaml_b_4692130b-2.0.0.tar.gz
+                ├── example_yaml_b_4692130b-3.0.0-py3-none-any.whl
+                └── example_yaml_b_4692130b-3.0.0.tar.gz
+        
+        19 directories, 24 files
+  
+      ''',
+    }),
+    'stderr': '<not included>',
+    'stdout': '''
+      example-yaml-4692130b
+  
+    ''',
+  })
+# ---
+# name: test_view_test_scenarios[example0]
   dict({
     'exit_code': 0,
     'filesystem': dict({
@@ -239,6 +647,76 @@
     'stderr': '',
     'stdout': '''
       example-961b4c22
+      ├── environment
+      │   └── python3.8
+      ├── root
+      │   └── requires a
+      │       └── satisfied by a-1.0.0
+      ├── a
+      │   └── a-1.0.0
+      │       └── requires b>1.0.0
+      │           ├── satisfied by b-2.0.0
+      │           └── satisfied by b-3.0.0
+      └── b
+          ├── b-1.0.0
+          ├── b-2.0.0
+          └── b-3.0.0
+              └── requires c
+                  └── unsatisfied: no versions for package
+      
+  
+    ''',
+  })
+# ---
+# name: test_view_test_scenarios[example1]
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'tree': '''
+        test_view_test_scenarios_examp1
+        
+        0 directories
+  
+      ''',
+    }),
+    'stderr': '',
+    'stdout': '''
+      example-toml-4a4ede4d
+      ├── environment
+      │   └── python3.8
+      ├── root
+      │   └── requires a
+      │       └── satisfied by a-1.0.0
+      ├── a
+      │   └── a-1.0.0
+      │       └── requires b>1.0.0
+      │           ├── satisfied by b-2.0.0
+      │           └── satisfied by b-3.0.0
+      └── b
+          ├── b-1.0.0
+          ├── b-2.0.0
+          └── b-3.0.0
+              └── requires c
+                  └── unsatisfied: no versions for package
+      
+  
+    ''',
+  })
+# ---
+# name: test_view_test_scenarios[example2]
+  dict({
+    'exit_code': 0,
+    'filesystem': dict({
+      'tree': '''
+        test_view_test_scenarios_examp2
+        
+        0 directories
+  
+      ''',
+    }),
+    'stderr': '',
+    'stdout': '''
+      example-yaml-4692130b
       ├── environment
       │   └── python3.8
       ├── root

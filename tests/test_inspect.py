@@ -18,21 +18,21 @@ def test_inspect_target_does_not_exist(snapshot):
 
 @pytest.mark.usefixtures("tmpcwd")
 def test_inspect_one_target_does_not_exist(snapshot):
-    target = __development_base_path__ / "scenarios" / "example.json"
+    target = __development_base_path__ / "scenarios" / "examples" / "example.json"
     assert snapshot_command(["inspect", str(target), "foo"]) == snapshot
 
 
 def test_inspect_invalid_target(snapshot, tmpcwd):
     bad_target = tmpcwd / "test.json"
     bad_target.touch()
-    good_target = __development_base_path__ / "scenarios" / "example.json"
+    good_target = __development_base_path__ / "scenarios" / "examples" / "example.json"
     assert snapshot_command(["inspect", str(bad_target), str(good_target)]) == snapshot
 
 
 def test_inspect_invalid_target_skip_invalid(snapshot, tmpcwd):
     bad_target = tmpcwd / "test.json"
     bad_target.touch()
-    good_target = __development_base_path__ / "scenarios" / "example.json"
+    good_target = __development_base_path__ / "scenarios" / "examples" / "example.json"
     assert (
         snapshot_command(
             ["inspect", str(bad_target), str(good_target), "--skip-invalid"]
@@ -41,6 +41,16 @@ def test_inspect_invalid_target_skip_invalid(snapshot, tmpcwd):
     )
 
 
-def test_inspect(snapshot):
-    target = __development_base_path__ / "scenarios" / "example.json"
+def test_inspect_json(snapshot):
+    target = __development_base_path__ / "scenarios" / "examples" / "example.json"
+    assert snapshot_command(["inspect", str(target)]) == snapshot
+
+
+def test_inspect_toml(snapshot):
+    target = __development_base_path__ / "scenarios" / "examples" / "example.toml"
+    assert snapshot_command(["inspect", str(target)]) == snapshot
+
+
+def test_inspect_yaml(snapshot):
+    target = __development_base_path__ / "scenarios" / "examples" / "example.yaml"
     assert snapshot_command(["inspect", str(target)]) == snapshot

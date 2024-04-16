@@ -288,27 +288,45 @@ class Scenario(msgspec.Struct, forbid_unknown_fields=True):
         return json.loads(enc.encode(self))
 
 
+def _load(target: Path, type: Type):
+    if target.suffix == ".json":
+        return msgspec.json.decode(target.read_text(), type=type, dec_hook=dec_hook)
+    elif target.suffix == ".toml":
+        return msgspec.toml.decode(target.read_text(), type=type, dec_hook=dec_hook)
+    elif target.suffix == ".yaml":
+        return msgspec.yaml.decode(target.read_text(), type=type, dec_hook=dec_hook)
+    else:
+        raise ValueError(f"Unknown file type {target.suffix!r}")
+
+
 def load_scenario(target: Path) -> Scenario:
     """
     Loads a scenario
     """
-    dec = msgspec.json.Decoder(Scenario, dec_hook=dec_hook)
-    return dec.decode(target.read_text())
+    return _load(target, type=Scenario)
 
 
 def load_many_scenarios(target: Path) -> list[Scenario]:
     """
     Loads a file with many scenarios
     """
-    dec = msgspec.json.Decoder(list[Scenario], dec_hook=dec_hook)
-    return dec.decode(target.read_text())
+    return _load(target, type=list[Scenario])
+
+
+def has_many_scenarios(target: Path) -> bool:
+    # Guess if the file contains one or many scenario
+    if target.suffix == ".json":
+        with target.open() as buffer:
+            return buffer.readline().lstrip().startswith("[")
+    elif target.suffix == ".toml":
+        return False  # Top-level arrays are not supported by TOML
+    elif target.suffix == ".yaml":
+        with target.open() as buffer:
+            return buffer.readline().lstrip().startswith("-")
 
 
 def load_scenarios(target: Path) -> list[Scenario]:
-    # Guess if the file contains one or many scenario
-    with target.open() as buffer:
-        many = buffer.readline().lstrip().startswith("[")
-    if many:
+    if has_many_scenarios(target):
         return load_many_scenarios(target)
     else:
         return [load_scenario(target)]

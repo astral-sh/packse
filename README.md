@@ -20,7 +20,7 @@ virtual environment.
 
 A scenario is a JSON description of a dependency tree.
 
-See [`scenarios/example.json`](./scenarios/example.json)
+See [`scenarios/examples/`](./scenarios/examples/)
 
 Each scenario file can contain one or more scenarios.
 
@@ -36,7 +36,7 @@ By default, packse will search for scenarios in the current tree. You may also p
 from:
 
 ```bash
-packse list scenarios/example.json
+packse list scenarios/examples/example.json
 ```
 
 Each scenario will be listed with its unique identifier e.g. `example-cd797223`. This is the name of the package
@@ -45,7 +45,7 @@ that can be installed to run the scenario once it is built and published.
 Each `packse` command supports reading multiple scenario files. For example, with `list`:
 
 ```bash
-packse list scenarios/example.json scenarios/requires-does-not-exist.json
+packse list scenarios/examples/example.json scenarios/requires-does-not-exist.json
 ```
 
 ### Viewing scenarios
@@ -53,7 +53,7 @@ packse list scenarios/example.json scenarios/requires-does-not-exist.json
 The dependency tree of a scenario can be previewed using the `view` command:
 
 ```
-$ packse view scenarios/example.json
+$ packse view scenarios/examples/example.json
 example-89cac9f1
 ├── root
 │   └── requires a
@@ -75,7 +75,7 @@ Note the `view` command will view all scenarios in a file by default. A single s
 the `--name` option:
 
 ```
-$ packse view scenarios/example.json --name example
+$ packse view scenarios/examples/example.json --name example
 example
 
 This is an example scenario, in which the user depends on a single package `a` which requires `b`
