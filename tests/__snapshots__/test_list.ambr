@@ -14,7 +14,7 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      [PROJECT_ROOT]/scenarios/example.json
+      [PROJECT_ROOT]/scenarios/examples/example.json
           example-961b4c22
   
     ''',
@@ -25,7 +25,7 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      scenarios/example.json
+      scenarios/examples/example.json
           example
   
     ''',
@@ -63,7 +63,7 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      scenarios/example.json
+      scenarios/examples/example.json
           961b4c22
   
     ''',

@@ -15,7 +15,7 @@ from .common import snapshot_command
 
 @pytest.fixture(scope="module")
 def scenario_dist() -> Generator[Path, None, None]:
-    target = __development_base_path__ / "scenarios" / "example.json"
+    target = __development_base_path__ / "scenarios" / "examples" / "example.json"
 
     with tempfile.TemporaryDirectory() as tmpdir:
         subprocess.check_call(
@@ -143,7 +143,7 @@ def test_publish_example_twine_fails_with_rate_limit(
     mock_twine.set_error(
         """
 Uploading distributions to https://test.pypi.org/legacy/
-Uploading 
+Uploading
 requires_transitive_incompatible_with_root_version_5c1b7dc1_c-1.0.0-py3-none-any
 .whl
 25l
@@ -152,9 +152,9 @@ requires_transitive_incompatible_with_root_version_5c1b7dc1_c-1.0.0-py3-none-any
 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.1/4.1 kB • 00:00 • ?
 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.1/4.1 kB • 00:00 • ?
 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.1/4.1 kB • 00:00 • ?
-25hWARNING  Error during upload. Retry with the --verbose option for more details. 
-ERROR    HTTPError: 429 Too Many Requests from https://test.pypi.org/legacy/    
-            Too many new projects created   
+25hWARNING  Error during upload. Retry with the --verbose option for more details.
+ERROR    HTTPError: 429 Too Many Requests from https://test.pypi.org/legacy/
+            Too many new projects created
         """
     )
 
@@ -176,9 +176,9 @@ def test_publish_example_twine_fails_with_already_exists(
 Uploading distributions to https://test.pypi.org/legacy/
 Uploading example_9e723676_a-1.0.0.tar.gz
 100% ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 kB • 00:00 • ?
-WARNING  Error during upload. Retry with the --verbose option for more details.                                              
-ERROR    HTTPError: 400 Bad Request from https://test.pypi.org/legacy/                                                       
-         File already exists. See https://test.pypi.org/help/#file-name-reuse for more information.  
+WARNING  Error during upload. Retry with the --verbose option for more details.
+ERROR    HTTPError: 400 Bad Request from https://test.pypi.org/legacy/
+         File already exists. See https://test.pypi.org/help/#file-name-reuse for more information.
         """
     )
 

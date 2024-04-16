@@ -1,0 +1,23 @@
+name = "example-toml"
+description = "This is an example scenario written in TOML, in which the user depends on a single package `a` which requires `b`."
+
+[expected]
+satisfiable = true
+explanation = "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
+
+  [expected.packages]
+  a = "1.0.0"
+  b = "2.0.0"
+
+[root]
+requires = [ "a" ]
+
+[packages.a.versions."1.0.0"]
+requires = [ "b>1.0.0" ]
+
+[packages.b.versions]
+"1.0.0" = { }
+"2.0.0" = { }
+
+  [packages.b.versions."3.0.0"]
+  requires = [ "c" ]
