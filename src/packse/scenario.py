@@ -1,8 +1,9 @@
 import hashlib
+import itertools
 import json
 import os
 from pathlib import Path
-from typing import Any, Self, Type
+from typing import Any, Iterator, Self, Type
 
 import msgspec
 import packaging.requirements
@@ -330,6 +331,12 @@ def load_scenarios(target: Path) -> list[Scenario]:
         return load_many_scenarios(target)
     else:
         return [load_scenario(target)]
+
+
+def find_scenario_files(target: Path) -> Iterator[Path]:
+    return itertools.chain(
+        target.glob("**/*.json"), target.glob("**/*.yaml"), target.glob("**/*.toml")
+    )
 
 
 def scenario_hash(scenario: Scenario) -> str:

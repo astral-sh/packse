@@ -19,6 +19,7 @@ from packse.index import build_index, index_down, index_up
 from packse.inspect import inspect
 from packse.list import list
 from packse.publish import publish
+from packse.scenario import find_scenario_files
 from packse.serve import serve
 from packse.view import view
 
@@ -160,13 +161,13 @@ def _call_list(args):
     skip_invalid = args.skip_invalid
     if not args.targets:
         skip_invalid = True
-        targets = Path.cwd().glob("**/*.(json|yaml|toml)")
+        targets = find_scenario_files(Path.cwd())
     else:
         targets = []
         for target in args.targets:
             # Expand any directories to json files within
             if target.is_dir():
-                targets.extend(target.glob("**/*.(json|yaml|toml)"))
+                targets.extend(find_scenario_files(target))
             else:
                 targets.append(target)
 
@@ -183,13 +184,13 @@ def _call_inspect(args):
     skip_invalid = args.skip_invalid
     if not args.targets:
         skip_invalid = True
-        targets = Path.cwd().glob("**/*.(json|yaml|toml)")
+        targets = find_scenario_files(Path.cwd())
     else:
         targets = []
         for target in args.targets:
             # Expand any directories to scenario files within
             if target.is_dir():
-                targets.extend(target.glob("**/*.(json|yaml|toml)"))
+                targets.extend(find_scenario_files(target))
             else:
                 targets.append(target)
 

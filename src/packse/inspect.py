@@ -9,6 +9,7 @@ from packse.error import FileNotFound, InvalidScenario
 from packse.scenario import (
     Requirement,
     Scenario,
+    find_scenario_files,
     load_scenarios,
     scenario_hash,
 )
@@ -31,7 +32,7 @@ def inspect(
             raise FileNotFound(target)
 
         if target.is_dir():
-            for target in target.glob("*.(json|yaml|toml)"):
+            for target in find_scenario_files(target):
                 try:
                     logger.debug("Loading %s", target)
                     scenarios_by_path[target] = load_scenarios(target)
