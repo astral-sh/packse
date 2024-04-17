@@ -24,6 +24,7 @@ from packse.scenario import (
     Package,
     PackageMetadata,
     Scenario,
+    find_scenario_files,
     load_scenarios,
     scenario_hash,
 )
@@ -53,7 +54,7 @@ def build(
             raise FileNotFound(target)
 
         if target.is_dir():
-            for target in target.glob("*.(json|yaml|toml)"):
+            for target in find_scenario_files(target):
                 try:
                     logger.debug("Loading %s", target)
                     scenarios.extend(load_scenarios(target))
