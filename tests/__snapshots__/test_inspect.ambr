@@ -113,7 +113,8 @@
               "python": null,
               "prereleases": false,
               "no_build": [],
-              "no_binary": []
+              "no_binary": [],
+              "universal": false
             },
             "template": "package",
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
@@ -248,7 +249,8 @@
               "python": null,
               "prereleases": false,
               "no_build": [],
-              "no_binary": []
+              "no_binary": [],
+              "universal": false
             },
             "template": "package",
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
@@ -410,7 +412,8 @@
               "python": null,
               "prereleases": false,
               "no_build": [],
-              "no_binary": []
+              "no_binary": [],
+              "universal": false
             },
             "template": "package",
             "description": "This is an example scenario written in TOML, in which the user depends on a single package `a` which requires `b`.",
@@ -545,7 +548,8 @@
               "python": null,
               "prereleases": false,
               "no_build": [],
-              "no_binary": []
+              "no_binary": [],
+              "universal": false
             },
             "template": "package",
             "description": "This is an example scenario written in YAML, in which the user depends on a single package `a` which requires `b`.",
