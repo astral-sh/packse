@@ -63,7 +63,7 @@ jobs:
 
       - name: Publish scenarios to GitHub Pages
         run: |
-          poetry run packse index build --no-hash scenarios/*.json
+          poetry run packse index build --no-hash scenarios/
 
           git fetch origin gh-pages
           git branch gh-pages FETCH_HEAD
