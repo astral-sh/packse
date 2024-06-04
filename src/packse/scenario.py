@@ -130,6 +130,15 @@ class ResolverOptions(msgspec.Struct, forbid_unknown_fields=True):
     A source distribution is required to build the packages.
     """
 
+    universal: bool = False
+    """
+    If resolution should operate in "universal" mode.
+
+    In universal mode, a resolution can contain multiple versions of
+    the same packages, but where different versions must be guarded by
+    non-overlapping marker expressions.
+    """
+
     def hash(self) -> str:
         """
         Return a hash of the contents
