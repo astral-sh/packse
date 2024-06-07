@@ -4,7 +4,6 @@ env:
   # Enable colored output
   # https://github.com/actions/runner/issues/241
   PY_COLORS: 1
-  POETRY_VERSION: "1.8.3"
 
 permissions:
   id-token: write # Needed for AWS CodeArtifact OIDC
@@ -36,15 +35,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Poetry
+      - name: Set up uv
         run: |
-          pipx install poetry==${{ env.POETRY_VERSION }}
+          curl -LsSf https://astral.sh/uv/install.sh | sh
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-          cache: poetry
 
       - name: Install zsh
         run: |
@@ -53,7 +51,7 @@ jobs:
 
       - name: Install packages
         run: |
-          poetry install --extras index
+          uv sync --extra index
 
       - name: Collect scenarios
         run: |
@@ -72,29 +70,29 @@ jobs:
 
       - name: View scenarios
         run: |
-          poetry run packse view $SCENARIOS
+          uv run -- packse view $SCENARIOS
 
       - name: Build scenarios
         run: |
-          poetry run packse build --skip-root --no-hash $SCENARIOS
+          uv run -- packse build --skip-root --no-hash $SCENARIOS
 
       - name: Publish scenarios [local]
         if: github.ref != 'refs/heads/main'
         run: |
           # Start the local index server, do not allow packages from PyPI
-          index_url=$(poetry run packse index up --bg --offline --dist-dir "./published")
+          index_url=$(uv run -- packse index up --bg --offline --dist-dir "./published")
 
           # Publish the packages
-          poetry run packse publish --anonymous --index-url "$index_url" dist/*
+          uv run -- packse publish --anonymous --index-url "$index_url" dist/*
 
           # Shutdown the index server
-          poetry run packse index down
+          uv run -- packse index down
 
       - name: Publish scenarios [gh pages]
         if: github.ref == 'refs/heads/main'
         run: |
           commit=$(./scripts/version parts | jq -r ".short_hash")
-          poetry run packse index build --no-hash --dist-dir ./dist $SCENARIOS
+          uv run -- packse index build --no-hash --dist-dir ./dist $SCENARIOS
 
           git fetch origin gh-pages
           git branch gh-pages FETCH_HEAD
