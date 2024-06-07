@@ -4,7 +4,7 @@ env:
   # Enable colored output
   # https://github.com/actions/runner/issues/241
   PY_COLORS: 1
-  POETRY_VERSION: "1.6.1"
+  POETRY_VERSION: "1.8.3"
 
 permissions:
   id-token: write # Needed for AWS CodeArtifact OIDC

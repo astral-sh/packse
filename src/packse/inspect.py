@@ -1,6 +1,7 @@
 """
 Get details for all scenarios.
 """
+
 import logging
 from pathlib import Path
 from typing import cast
