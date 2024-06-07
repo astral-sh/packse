@@ -23,19 +23,6 @@ classifiers = [
 ]
 requires-python = ">=3.12"
 
-[project.dependencies]
-# Identical to [tool.poetry.dependencies]
-python = "^3.12"
-msgspec = "^0.18.4"
-twine = "^4.0.2"
-hatchling = "^1.20.0"
-chevron-blue = "^0.2.1"
-setuptools = "^69.1.1"
-pypiserver = { version ="^2.0.1", optional = true}
-watchfiles = { version = "^0.21.0",  optional = true}
-pyyaml = "^6.0.1"
-
-
 [project.scripts]
 packse = "packse.cli:entrypoint"
 
