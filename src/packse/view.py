@@ -1,6 +1,7 @@
 """
 View package tree for the given scenarios.
 """
+
 import logging
 from pathlib import Path
 
