@@ -41,20 +41,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Poetry
+      - name: Set up uv
         run: |
-          pipx install poetry==${{ env.POETRY_VERSION }}
+          curl -LsSf https://astral.sh/uv/install.sh | sh
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-          cache: poetry
 
       - name: Install packages
         run: |
-          poetry install --all-extras
+          uv sync --all-extras --dev
 
       - name: Run tests
         run: |
-          poetry run -- pytest tests
+          uv run -- pytest tests

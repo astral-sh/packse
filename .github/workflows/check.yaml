@@ -29,29 +29,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Poetry
+      - name: Set up uv
         run: |
-          pipx install poetry==${{ env.POETRY_VERSION }}
+          curl -LsSf https://astral.sh/uv/install.sh | sh
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
         with:
           python-version: "${{ matrix.python-version }}"
-          cache: poetry
-
-      - name: Install packages
-        run: |
-          poetry install
 
       - name: Check Python lint
         run: |
-          poetry run -- ruff check . --config pyproject.toml
+          uv tool run -- ruff check . --config pyproject.toml
 
       - name: Check Python formatting
         run: |
-          poetry run -- ruff format --check .  --config pyproject.toml
+          uv tool run -- ruff format --check .  --config pyproject.toml
 
       - name: Check packaging
         run: |
+          pipx install poetry
           poetry check
           poetry lock --check

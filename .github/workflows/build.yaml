@@ -37,9 +37,9 @@ jobs:
         with:
           python-version: "${{ env.PYTHON_VERSION }}"
 
-      - name: Set up Poetry
+      - name: Set up uv
         run: |
-          pip install poetry==${{ env.POETRY_VERSION }}
+          curl -LsSf https://astral.sh/uv/install.sh | sh
 
       - name: Publish to Test PyPI
         id: build
