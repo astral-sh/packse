@@ -5,7 +5,7 @@ env:
   # https://github.com/pytest-dev/pytest/issues/7443
   # https://github.com/actions/runner/issues/241
   PY_COLORS: 1
-  POETRY_VERSION: "1.6.1"
+  POETRY_VERSION: "1.8.3"
 
 on:
   pull_request:
