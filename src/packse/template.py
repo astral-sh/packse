@@ -72,7 +72,7 @@ def create_from_template(
 
 
 def parse_loop(path: Path, variables: dict[str, Any]):
-    # This implementatation is pretty dubious and certain to fail on edge-cases
+    # This implementation is pretty dubious and certain to fail on edge-cases
     scope = variables
     scopes = []
     matches = re.findall(r"\[\[(.*?)\]\]", str(path))

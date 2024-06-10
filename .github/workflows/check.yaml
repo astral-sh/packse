@@ -55,3 +55,9 @@ jobs:
         run: |
           poetry check
           poetry lock --check
+
+  typos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: crate-ci/typos@master

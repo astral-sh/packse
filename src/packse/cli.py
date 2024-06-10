@@ -401,7 +401,7 @@ def _add_serve_parser(subparsers):
     parser.add_argument(
         "--offline",
         action="store_true",
-        help="Run the index servers without fallback acccess to the real PyPI.",
+        help="Run the index servers without fallback access to the real PyPI.",
     )
     _add_shared_arguments(parser)
 
@@ -444,7 +444,7 @@ def _add_index_parser(subparsers):
     up.add_argument(
         "--offline",
         action="store_true",
-        help="Run the index server without acccess to the real PyPI.",
+        help="Run the index server without access to the real PyPI.",
     )
     up.set_defaults(call=_call_index_up)
 
