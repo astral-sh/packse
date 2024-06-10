@@ -539,7 +539,7 @@
             "packages": {
                 "a": "0.1.0a1"
             },
-            "explanation": "Since there are only prerelease versions of `a` available, a prerelease is allowed. Since the user did not explictly request a pre-release, pre-releases at the boundary should not be selected."
+            "explanation": "Since there are only prerelease versions of `a` available, a prerelease is allowed. Since the user did not explicitly request a pre-release, pre-releases at the boundary should not be selected."
         }
     },
     {
