@@ -13,6 +13,9 @@ universal = true
 [expected]
 satisfiable = false
 
+[environment]
+python = "3.12"
+
 [root]
 requires_python = ">=3.10"
 requires = [
