@@ -4,15 +4,13 @@ Python packaging scenarios.
 
 ## Installation
 
-Only a local installation is supported at this time:
+Install from PyPI:
 
 ```bash
-poetry install
+uv pip install packse
 ```
-Once installed, the `packse` command-line interface will be available.
 
-Depending on your Poetry configuration, you may need to use `poetry run packse` instead or activate Poetry's
-virtual environment.
+Once installed, the `packse` command-line interface will be available.
 
 ## Usage
 
@@ -161,9 +159,10 @@ packse publish dist/example-cd797223 --index-url http://localhost:3141 --anonymo
 Packages can also be published to the index by placing their distributions in the configured `--dist-dir`. This defaults
 to `./dist` which is also the default location used in `packse build`.
 
-By default, the  index will fallback to PyPI for missing packages. To test in isolation, use the `--offline` flag.
+By default, the index will fallback to PyPI for missing packages. To test in isolation, use the `--offline` flag.
 
 To stop an index running in the background use `packse index down`:
+
 ```
 packse index down
 ```

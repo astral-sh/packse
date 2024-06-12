@@ -1,7 +1,6 @@
 name: Release
 
 env:
-  POETRY_VERSION: "1.8.3"
 
 permissions:
   contents: write # Needed for GH pages updates
@@ -29,18 +28,20 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Set up Poetry
+      - name: Set up uv
         run: |
-          pip install poetry==${{ env.POETRY_VERSION }}
+          curl -LsSf https://astral.sh/uv/install.sh | sh
 
       # Note: If build and publish steps are ever separated, the version must
       #       be set before building
       - name: Publish package
         env:
-          POETRY_PYPI_TOKEN_PYPI: ${{ secrets.PYPI_API_TOKEN }}
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
         run: |
-          poetry version "${GITHUB_REF#refs/*/}"
-          poetry publish --build
+          sed -i -e "s/0.0.0/${GITHUB_REF#refs/*/}/" pyproject.toml
+          uv tool run -- hatchling build
+          uv tool run -- twine upload -r testpypi dist/*
 
   release-scenarios:
     name: Publish scenarios
@@ -53,17 +54,17 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Set up Poetry
+      - name: Set up uv
         run: |
-          pip install poetry==${{ env.POETRY_VERSION }}
+          curl -LsSf https://astral.sh/uv/install.sh | sh
 
       - name: Install packages
         run: |
-          poetry install --all-extras
+          uv sync --all-extras
 
       - name: Publish scenarios to GitHub Pages
         run: |
-          poetry run packse index build --no-hash scenarios/
+          uv run -- packse index build --no-hash scenarios/
 
           git fetch origin gh-pages
           git branch gh-pages FETCH_HEAD

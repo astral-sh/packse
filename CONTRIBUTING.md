@@ -2,12 +2,28 @@
 
 This document outlines a few tips for contributing to packse.
 
+## Getting started
+
+packse uses `uv`'s preview interface:
+
+Install the project:
+
+```
+uv sync
+```
+
+Check that packse is available
+
+```
+uv run -- packse --help
+```
+
 ## Running tests
 
 packse uses `pytest`:
 
 ```
-poetry run pytest
+uv run -- pytest
 ```
 
 ## Updating snapshots
@@ -17,7 +33,7 @@ you should examine whether the changes are correct. If so, you can re-run the
 tests with the `--snapshot-update` flag:
 
 ```
-poetry run pytest --snapshot-update
+uv run -- pytest --snapshot-update
 ```
 
 And then commit the results. In at least some cases, this may commit a snapshot

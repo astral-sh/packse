@@ -176,9 +176,11 @@ def start_index_server(
 
     try:
         # Wait for server to be ready
-        with server_log_path.open("rb") if server_log_path else nullcontext(
-            server_process.stdout
-        ) as server_output:
+        with (
+            server_log_path.open("rb")
+            if server_log_path
+            else nullcontext(server_process.stdout) as server_output
+        ):
             line = ""
             lines = []
 

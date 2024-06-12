@@ -1,8 +1,8 @@
-[tool.poetry]
+[project]
 name = "packse"
 version = "0.0.0"
 description = ""
-authors = ["Zanie <contact@zanie.dev>"]
+authors = [{ name = "Astral Software Inc.", email = "hey@astral.sh" }]
 readme = "README.md"
 keywords = [
   "uv", "packse", "requirements", "packaging", "testing"
@@ -21,35 +21,33 @@ classifiers = [
   "Topic :: Software Development :: Testing",
   "Topic :: Software Development :: Libraries",
 ]
-
-
-[tool.poetry.scripts]
-packse = "packse.cli:entrypoint"
-
-[tool.poetry.dependencies]
-python = "^3.12"
-msgspec = "^0.18.4"
-twine = "^4.0.2"
-hatchling = "^1.20.0"
-chevron-blue = "^0.2.1"
-setuptools = "^69.1.1"
-pypiserver = { version ="^2.0.1", optional = true}
-watchfiles = { version = "^0.21.0",  optional = true}
-pyyaml = "^6.0.1"
-
-[tool.poetry.extras]
-index = ["pypiserver"]
-serve = ["pypiserver", "watchfiles"]
-
-[tool.poetry.group.dev.dependencies]
-syrupy = "^4.6.0"
-pytest = "^7.4.3"
-ruff = "^0.1.12"
-psutil = "^5.9.7"
+requires-python = ">=3.12"
+dependencies = [
+  "msgspec>=0.18.4",
+  "twine>=4.0.2",
+  "hatchling>=1.20.0",
+  "chevron-blue>=0.2.1",
+  "setuptools>=69.1.1",
+  "pyyaml>=6.0.1"
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+packse = "packse.cli:entrypoint"
+
+[project.optional-dependencies]
+index = ["pypiserver>=2.0.1"]
+serve = ["packse[index]", "watchfiles>=0.21.0"]
+
+[tool.uv]
+dev-dependencies = [
+  "syrupy>=4.6.0",
+  "pytest>=7.4.3",
+  "psutil>=5.9.7",
+]
 
 [tool.ruff.lint]
 extend-select = ["I", "W292"]

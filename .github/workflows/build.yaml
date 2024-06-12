@@ -1,7 +1,6 @@
 name: Build
 
 env:
-  POETRY_VERSION: "1.8.3"
   PYTHON_VERSION: "3.12"
 
 on:
@@ -37,20 +36,21 @@ jobs:
         with:
           python-version: "${{ env.PYTHON_VERSION }}"
 
-      - name: Set up Poetry
+      - name: Set up uv
         run: |
-          pip install poetry==${{ env.POETRY_VERSION }}
+          curl -LsSf https://astral.sh/uv/install.sh | sh
 
       - name: Publish to Test PyPI
         id: build
         env:
-          POETRY_PYPI_TOKEN_TEST_PYPI: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
         run: |
           version=$(./scripts/version dev)
           echo "version=$version" >> $GITHUB_OUTPUT
-          poetry version $version
-          poetry config repositories.test-pypi https://test.pypi.org/legacy/
-          poetry publish --build -r test-pypi
+          sed -i -e "s/0.0.0/$version/" pyproject.toml
+          uv tool run -- hatchling build
+          uv tool run -- twine upload -r testpypi dist/*
 
   test-install:
     # We test the install on a clean machine to avoid poetry behavior attempting to
@@ -66,11 +66,9 @@ jobs:
         with:
           python-version: "${{ env.PYTHON_VERSION }}"
 
-      - name: Set up Poetry
+      - name: Set up uv
         run: |
-          pip install poetry==${{ env.POETRY_VERSION }}
-          poetry init --name 'test-project' --no-interaction
-          poetry source add test-pypi https://test.pypi.org/simple/ --priority=explicit
+          curl -LsSf https://astral.sh/uv/install.sh | sh
 
       - name: Wait for package to be available
         run: >
@@ -80,23 +78,25 @@ jobs:
           do sleep 10;
           done
           &&
-          sleep 120
-          # We sleep for an additional 120 seconds as it seems to take a bit longer for
+          sleep 180
+          # We sleep for an additional 180 seconds as it seems to take a bit longer for
           # the package to be consistently available
 
           # Note: The above will not sleep forever due to the job level timeout
 
       - name: Install release from Test PyPI
-        run: >
-          poetry add
-          --source test-pypi
-          packse==${{ needs.build-and-publish.outputs.build-version }}
+        run: |
+          uv pip install \
+            --system \
+            --extra-index-url https://test.pypi.org/simple/ \
+            --index-strategy unsafe-best-match \
+            packse==${{ needs.build-and-publish.outputs.build-version }}
 
       - name: Check release version
         run: |
-          installed=$(poetry run python -c "import pkg_resources; print(pkg_resources.get_distribution('packse').version)")
+          installed=$(python3 -c "import pkg_resources; print(pkg_resources.get_distribution('packse').version)")
           test $installed = ${{ needs.build-and-publish.outputs.build-version }}
 
       - name: Check CLI help
         run: |
-          poetry run -- packse --help
+          packse --help
