@@ -39,7 +39,7 @@ jobs:
         run: |
           sed -i -e "s/0.0.0/${GITHUB_REF#refs/*/}/" pyproject.toml
           uv tool run -- hatchling build
-          uv tool run -- twine upload -r testpypi dist/*
+          uv tool run -- twine upload dist/*
 
   release-scenarios:
     name: Publish scenarios
