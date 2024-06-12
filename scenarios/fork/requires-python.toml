@@ -8,7 +8,7 @@ exclusion of dependency specifications that cannot possibly satisfy it.
 universal = true
 
 [expected]
-satisfiable = false
+satisfiable = true
 
 [environment]
 python = "3.12"
