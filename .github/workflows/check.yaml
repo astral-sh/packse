@@ -1,7 +1,5 @@
 name: Check
 
-env:
-
 on:
   pull_request:
     types: [opened, reopened, synchronize]
