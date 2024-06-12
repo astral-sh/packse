@@ -11,7 +11,7 @@ a pre-release version.
 universal = true
 
 [expected]
-satisfiable = false
+satisfiable = true
 
 [environment]
 python = "3.12"
