@@ -9,6 +9,12 @@ sdist = { url = "https://files.pythonhosted.org/packages/e6/e3/c4c8d473d6780ef18
 wheels = [{ url = "https://files.pythonhosted.org/packages/7b/a2/10639a79341f6c019dedc95bd48a4928eed9f1d1197f4c04f546fc7ae0ff/anyio-4.4.0-py3-none-any.whl", hash = "sha256:c1b2d8f46a8a812513012e1107cb0e68c17159a7a594208005a57dc776e1bdc7", size = 86780 }]
 
 [[distribution.dependencies]]
+name = "exceptiongroup"
+version = "1.2.1"
+source = "registry+https://pypi.org/simple"
+marker = "python_version < '3.11'"
+
+[[distribution.dependencies]]
 name = "idna"
 version = "3.7"
 source = "registry+https://pypi.org/simple"
@@ -17,6 +23,19 @@ source = "registry+https://pypi.org/simple"
 name = "sniffio"
 version = "1.3.1"
 source = "registry+https://pypi.org/simple"
+
+[[distribution.dependencies]]
+name = "typing-extensions"
+version = "4.12.2"
+source = "registry+https://pypi.org/simple"
+marker = "python_version < '3.11'"
+
+[[distribution]]
+name = "backports-tarfile"
+version = "1.2.0"
+source = "registry+https://pypi.org/simple"
+sdist = { url = "https://files.pythonhosted.org/packages/86/72/cd9b395f25e290e633655a100af28cb253e4393396264a98bd5f5951d50f/backports_tarfile-1.2.0.tar.gz", hash = "sha256:d75e02c268746e1b8144c278978b6e98e85de6ad16f8e4b0844a154557eca991", size = 86406 }
+wheels = [{ url = "https://files.pythonhosted.org/packages/b9/fa/123043af240e49752f1c4bd24da5053b6bd00cad78c2be53c0d1e8b975bc/backports.tarfile-1.2.0-py3-none-any.whl", hash = "sha256:77e284d754527b01fb1e6fa8a1afe577858ebe4e9dad8919e34c862cb399bc34", size = 30181 }]
 
 [[distribution]]
 name = "certifi"
@@ -253,6 +272,13 @@ sdist = { url = "https://files.pythonhosted.org/packages/ae/ed/aefcc8cd0ba62a056
 wheels = [{ url = "https://files.pythonhosted.org/packages/8f/d7/9322c609343d929e75e7e5e6255e614fcc67572cfd083959cdef3b7aad79/docutils-0.21.2-py3-none-any.whl", hash = "sha256:dafca5b9e384f0e419294eb4d2ff9fa826435bf15f15b7bd45723e8ad76811b2", size = 587408 }]
 
 [[distribution]]
+name = "exceptiongroup"
+version = "1.2.1"
+source = "registry+https://pypi.org/simple"
+sdist = { url = "https://files.pythonhosted.org/packages/a0/65/d66b7fbaef021b3c954b3bbb196d21d8a4b97918ea524f82cfae474215af/exceptiongroup-1.2.1.tar.gz", hash = "sha256:a4785e48b045528f5bfe627b6ad554ff32def154f42372786903b7abcfe1aa16", size = 28717 }
+wheels = [{ url = "https://files.pythonhosted.org/packages/01/90/79fe92dd413a9cab314ef5c591b5aa9b9ba787ae4cadab75055b0ae00b33/exceptiongroup-1.2.1-py3-none-any.whl", hash = "sha256:5258b9ed329c5bbdd31a309f53cbfb0b155341807f6ff7606a1e801a891b29ad", size = 16458 }]
+
+[[distribution]]
 name = "hatchling"
 version = "1.24.2"
 source = "registry+https://pypi.org/simple"
@@ -275,6 +301,12 @@ version = "1.5.0"
 source = "registry+https://pypi.org/simple"
 
 [[distribution.dependencies]]
+name = "tomli"
+version = "2.0.1"
+source = "registry+https://pypi.org/simple"
+marker = "python_version < '3.11'"
+
+[[distribution.dependencies]]
 name = "trove-classifiers"
 version = "2024.5.22"
 source = "registry+https://pypi.org/simple"
@@ -294,9 +326,28 @@ sdist = { url = "https://files.pythonhosted.org/packages/a0/fc/c4e6078d21fc4fa56
 wheels = [{ url = "https://files.pythonhosted.org/packages/2d/0a/679461c511447ffaf176567d5c496d1de27cbe34a87df6677d7171b2fbd4/importlib_metadata-7.1.0-py3-none-any.whl", hash = "sha256:30962b96c0c223483ed6cc7280e7f0199feb01a0e40cfae4d4450fc6fab1f570", size = 24409 }]
 
 [[distribution.dependencies]]
+name = "typing-extensions"
+version = "4.12.2"
+source = "registry+https://pypi.org/simple"
+marker = "python_version < '3.8'"
+
+[[distribution.dependencies]]
 name = "zipp"
 version = "3.19.2"
 source = "registry+https://pypi.org/simple"
+
+[[distribution]]
+name = "importlib-resources"
+version = "6.4.0"
+source = "registry+https://pypi.org/simple"
+sdist = { url = "https://files.pythonhosted.org/packages/c8/9d/6ee73859d6be81c6ea7ebac89655e92740296419bd37e5c8abdb5b62fd55/importlib_resources-6.4.0.tar.gz", hash = "sha256:cdb2b453b8046ca4e3798eb1d84f3cce1446a0e8e7b5ef4efb600f19fc398145", size = 42040 }
+wheels = [{ url = "https://files.pythonhosted.org/packages/75/06/4df55e1b7b112d183f65db9503bff189e97179b256e1ea450a3c365241e0/importlib_resources-6.4.0-py3-none-any.whl", hash = "sha256:50d10f043df931902d4194ea07ec57960f66a80449ff867bfe782b4c486ba78c", size = 38168 }]
+
+[[distribution.dependencies]]
+name = "zipp"
+version = "3.19.2"
+source = "registry+https://pypi.org/simple"
+marker = "python_version < '3.10'"
 
 [[distribution]]
 name = "iniconfig"
@@ -324,6 +375,12 @@ source = "registry+https://pypi.org/simple"
 sdist = { url = "https://files.pythonhosted.org/packages/c9/60/e83781b07f9a66d1d102a0459e5028f3a7816fdd0894cba90bee2bbbda14/jaraco.context-5.3.0.tar.gz", hash = "sha256:c2f67165ce1f9be20f32f650f25d8edfc1646a8aeee48ae06fb35f90763576d2", size = 13345 }
 wheels = [{ url = "https://files.pythonhosted.org/packages/d2/40/11b7bc1898cf1dcb87ccbe09b39f5088634ac78bb25f3383ff541c2b40aa/jaraco.context-5.3.0-py3-none-any.whl", hash = "sha256:3e16388f7da43d384a1a7cd3452e72e14732ac9fe459678773a3608a812bf266", size = 6527 }]
 
+[[distribution.dependencies]]
+name = "backports-tarfile"
+version = "1.2.0"
+source = "registry+https://pypi.org/simple"
+marker = "python_version < '3.12'"
+
 [[distribution]]
 name = "jaraco-functools"
 version = "4.0.1"
@@ -349,6 +406,18 @@ version = "25.2.1"
 source = "registry+https://pypi.org/simple"
 sdist = { url = "https://files.pythonhosted.org/packages/3e/e9/54f232e659f635a000d94cfbca40b9d5d617707593c3d552ec14d3ba27f1/keyring-25.2.1.tar.gz", hash = "sha256:daaffd42dbda25ddafb1ad5fec4024e5bbcfe424597ca1ca452b299861e49f1b", size = 60797 }
 wheels = [{ url = "https://files.pythonhosted.org/packages/92/91/901f5cfeaaea04cf15f5ddf41ee053a5c9e389166477a3427fcfd055e1d9/keyring-25.2.1-py3-none-any.whl", hash = "sha256:2458681cdefc0dbc0b7eb6cf75d0b98e59f9ad9b2d4edd319d18f68bdca95e50", size = 38315 }]
+
+[[distribution.dependencies]]
+name = "importlib-metadata"
+version = "7.1.0"
+source = "registry+https://pypi.org/simple"
+marker = "python_version < '3.12'"
+
+[[distribution.dependencies]]
+name = "importlib-resources"
+version = "6.4.0"
+source = "registry+https://pypi.org/simple"
+marker = "python_version < '3.9'"
 
 [[distribution.dependencies]]
 name = "jaraco-classes"
@@ -625,6 +694,12 @@ sdist = { url = "https://files.pythonhosted.org/packages/bb/31/007c532dea348eae4
 wheels = [{ url = "https://files.pythonhosted.org/packages/97/1f/846aa2ea6e264efc2de4f293a2f548b8ac932041e1e0ab91eb81426983a7/pypiserver-2.1.1-py2.py3-none-any.whl", hash = "sha256:8c7ed96b2f76f2843e4a27002846bd7ebb7217e143cf60456ee6fa2a415c2d73", size = 92886 }]
 
 [[distribution.dependencies]]
+name = "importlib-resources"
+version = "6.4.0"
+source = "registry+https://pypi.org/simple"
+marker = "python_version < '3.12' and python_version > '3.8'"
+
+[[distribution.dependencies]]
 name = "packaging"
 version = "24.1"
 source = "registry+https://pypi.org/simple"
@@ -648,6 +723,12 @@ source = "registry+https://pypi.org/simple"
 marker = "sys_platform == 'win32'"
 
 [[distribution.dependencies]]
+name = "exceptiongroup"
+version = "1.2.1"
+source = "registry+https://pypi.org/simple"
+marker = "python_version < '3.11'"
+
+[[distribution.dependencies]]
 name = "iniconfig"
 version = "2.0.0"
 source = "registry+https://pypi.org/simple"
@@ -661,6 +742,12 @@ source = "registry+https://pypi.org/simple"
 name = "pluggy"
 version = "1.5.0"
 source = "registry+https://pypi.org/simple"
+
+[[distribution.dependencies]]
+name = "tomli"
+version = "2.0.1"
+source = "registry+https://pypi.org/simple"
+marker = "python_version < '3.11'"
 
 [[distribution]]
 name = "pywin32-ctypes"
@@ -812,6 +899,12 @@ name = "pygments"
 version = "2.18.0"
 source = "registry+https://pypi.org/simple"
 
+[[distribution.dependencies]]
+name = "typing-extensions"
+version = "4.12.2"
+source = "registry+https://pypi.org/simple"
+marker = "python_version < '3.9'"
+
 [[distribution]]
 name = "secretstorage"
 version = "3.3.3"
@@ -854,6 +947,13 @@ wheels = [{ url = "https://files.pythonhosted.org/packages/10/37/c1a22c32b6736c7
 name = "pytest"
 version = "8.2.2"
 source = "registry+https://pypi.org/simple"
+
+[[distribution]]
+name = "tomli"
+version = "2.0.1"
+source = "registry+https://pypi.org/simple"
+sdist = { url = "https://files.pythonhosted.org/packages/c0/3f/d7af728f075fb08564c5949a9c95e44352e23dee646869fa104a3b2060a3/tomli-2.0.1.tar.gz", hash = "sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f", size = 15164 }
+wheels = [{ url = "https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc", size = 12757 }]
 
 [[distribution]]
 name = "trove-classifiers"
@@ -913,6 +1013,13 @@ source = "registry+https://pypi.org/simple"
 name = "urllib3"
 version = "2.2.1"
 source = "registry+https://pypi.org/simple"
+
+[[distribution]]
+name = "typing-extensions"
+version = "4.12.2"
+source = "registry+https://pypi.org/simple"
+sdist = { url = "https://files.pythonhosted.org/packages/df/db/f35a00659bc03fec321ba8bce9420de607a1d37f8342eee1863174c69557/typing_extensions-4.12.2.tar.gz", hash = "sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8", size = 85321 }
+wheels = [{ url = "https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d", size = 37438 }]
 
 [[distribution]]
 name = "urllib3"
