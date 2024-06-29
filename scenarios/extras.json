@@ -288,5 +288,41 @@
                 "a": "3.0.0"
             }
         }
+    },
+    {
+        "name": "none-extra",
+        "description": "Package has an invalid extra named .none.",
+        "root": {
+            "requires": [
+                "a[.none,extra_b]"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "extras": {
+                            ".none": [],
+                            "extra_b": [
+                                "b"
+                            ]
+                        }
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true,
+            "explanation": "Invalid extras are ignored during resolution.",
+            "packages": {
+                "a": "1.0.0",
+                "b": "1.0.0"
+            }
+        }
     }
 ]
