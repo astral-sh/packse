@@ -2,7 +2,9 @@ name = "fork-incomplete-markers"
 description = '''
 The root cause the resolver to fork over `a`, but the markers on the variant
 of `a` don't cover the entire marker space, they are missing Python 3.10.
-Later, we have a dependency this very hole, which we still need to select.
+Later, we have a dependency this very hole, which we still need to select,
+instead of having two forks around but without Python 3.10 and omitting
+`c` from the solution.
 '''
 
 [resolver_options]
