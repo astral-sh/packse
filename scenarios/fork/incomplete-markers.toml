@@ -1,0 +1,31 @@
+name = "fork-incomplete-markers"
+description = '''
+The root cause the resolver to fork over `a`, but the markers on the variant
+of `a` don't cover the entire marker space, they are missing Python 3.10.
+Later, we have a dependency this very hole, which we still need to select,
+instead of having two forks around but without Python 3.10 and omitting
+`c` from the solution.
+'''
+
+[resolver_options]
+universal = true
+
+[expected]
+satisfiable = true
+
+[root]
+requires = [
+  "a==1; python_version < '3.10'",
+  "a==2; python_version >= '3.11'",
+  "b",
+]
+
+[packages.a.versions."1.0.0"]
+[packages.a.versions."2.0.0"]
+
+[packages.b.versions."1.0.0"]
+requires = [
+  "c; python_version == '3.10'",
+]
+
+[packages.c.versions."1.0.0"]
