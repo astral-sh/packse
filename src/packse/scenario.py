@@ -273,6 +273,11 @@ class Scenario(msgspec.Struct, forbid_unknown_fields=True):
     The description of the scenario.
     """
 
+    _textwrap: bool = False
+    """
+    Whether to wrap long lines in the scenario description (`.json` scenarios) or not (`.toml` or `.yaml` scenarios).
+    """
+
     def hash(self) -> str:
         """
         Return a hash of the scenario contents
@@ -298,9 +303,17 @@ class Scenario(msgspec.Struct, forbid_unknown_fields=True):
         return json.loads(enc.encode(self))
 
 
-def _load(target: Path, type: Type):
+def _load[T: Scenario | list[Scenario]](target: Path, type: Type[T]) -> T:
     if target.suffix == ".json":
-        return msgspec.json.decode(target.read_text(), type=type, dec_hook=dec_hook)
+        loaded = msgspec.json.decode(target.read_text(), type=type, dec_hook=dec_hook)
+        # json scenarios have unformatted single line descriptions that we need to wrap for rust docstrings, while
+        # toml and yaml descriptions are already formatted and should be converted verbatim (with the default: False).
+        if isinstance(loaded, Scenario):
+            loaded._textwrap = True
+        else:
+            for scenario in loaded:
+                scenario._textwrap = True
+        return loaded
     elif target.suffix == ".toml":
         return msgspec.toml.decode(target.read_text(), type=type, dec_hook=dec_hook)
     elif target.suffix == ".yaml":
