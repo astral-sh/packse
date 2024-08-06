@@ -26,13 +26,13 @@ jobs:
     if: github.ref == 'refs/heads/main' || contains(github.event.pull_request.labels.*.name, 'test-build')
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           persist-credentials: false
           fetch-depth: 0
 
       - name: Set up Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "${{ env.PYTHON_VERSION }}"
 
@@ -62,7 +62,7 @@ jobs:
 
     steps:
       - name: Set up Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "${{ env.PYTHON_VERSION }}"
 
