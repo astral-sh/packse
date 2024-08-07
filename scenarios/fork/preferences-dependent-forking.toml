@@ -42,7 +42,7 @@ requires = [
   "cleaver",
   # The reporter packages.
   "foo",
-  "bar"
+  "bar",
 ]
 
 [packages.cleaver.versions."2.0.0"]
@@ -56,7 +56,7 @@ requires = [
 [packages.reject-cleaver-2.versions."1.0.0"]
 requires = [
   # That's a conflict with `cleaver==2`.
-  "unrelated-dep==3"
+  "unrelated-dep==3",
 ]
 
 [packages.unrelated-dep.versions."1.0.0"]
@@ -67,7 +67,7 @@ requires = [
 requires = [
   # Allow different versions when forking, but force foo 1, bar 1 in universal mode without forking.
   "foo==1; sys_platform == 'linux'",
-  "bar==1; sys_platform != 'linux'"
+  "bar==1; sys_platform != 'linux'",
 ]
 
 [packages.foo.versions."1.0.0"]

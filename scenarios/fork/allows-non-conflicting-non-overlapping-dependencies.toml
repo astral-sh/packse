@@ -18,10 +18,7 @@ universal = true
 satisfiable = true
 
 [root]
-requires = [
-  "a>=1 ; sys_platform == 'linux'",
-  "a<2 ; sys_platform == 'darwin'",
-]
+requires = ["a>=1 ; sys_platform == 'linux'", "a<2 ; sys_platform == 'darwin'"]
 
 [packages.a.versions."1.0.0"]
 [packages.a.versions."2.0.0"]

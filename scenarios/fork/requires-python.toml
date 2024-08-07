@@ -15,8 +15,6 @@ python = "3.12"
 
 [root]
 requires_python = ">=3.10"
-requires = [
-  "a==1.0.0 ; python_version == '3.9'",
-]
+requires = ["a==1.0.0 ; python_version == '3.9'"]
 
 [packages.a.versions."1.0.0"]

@@ -10,9 +10,7 @@ universal = true
 satisfiable = true
 
 [root]
-requires = [
-  "foo",
-]
+requires = ["foo"]
 
 [packages.foo.versions."1.0.0"]
 requires = [
