@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Generator
 
 import packaging.version
+from packaging.requirements import Requirement
 
 from packse.error import (
     BuildError,
@@ -206,6 +207,24 @@ def make_root_package(scenario: Scenario) -> Package:
     )
 
 
+def remove_invalid_extras(dependency: Requirement) -> Requirement:
+    if not dependency.extras:
+        return dependency
+
+    valid_extras = [extra for extra in dependency.extras if not extra.startswith(".")]
+    if valid_extras:
+        extras_str = ",".join(valid_extras)
+        url = dependency.url if dependency.url else ""
+        marker = f";{dependency.marker}" if dependency.marker else ""
+        return Requirement(
+            f"{dependency.name}{dependency.specifier}[{extras_str}]{url}{marker}"
+        )
+    else:
+        url = dependency.url if dependency.url else ""
+        marker = f";{dependency.marker}" if dependency.marker else ""
+        return Requirement(f"{dependency.name}{dependency.specifier}{url}{marker}")
+
+
 def build_scenario_package(
     scenario: Scenario,
     scenario_version: str,
@@ -240,8 +259,10 @@ def build_scenario_package(
                 "module-name": module_name,
                 "version": version,
                 "dependencies": [
-                    requirement.with_unique_name(
-                        scenario, scenario_version, short_names, no_hash
+                    remove_invalid_extras(
+                        requirement.with_unique_name(
+                            scenario, scenario_version, short_names, no_hash
+                        )
                     )
                     for requirement in package_version.requires
                 ],
@@ -249,13 +270,16 @@ def build_scenario_package(
                     {
                         "name": extra,
                         "dependencies": [
-                            requirement.with_unique_name(
-                                scenario, scenario_version, short_names, no_hash
+                            remove_invalid_extras(
+                                requirement.with_unique_name(
+                                    scenario, scenario_version, short_names, no_hash
+                                )
                             )
                             for requirement in depends
                         ],
                     }
                     for extra, depends in package_version.extras.items()
+                    if not extra.startswith(".")
                 ],
                 "requires-python": package_version.requires_python,
                 "description": package_version.description,
