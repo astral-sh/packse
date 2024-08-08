@@ -15,10 +15,7 @@ universal = true
 satisfiable = true
 
 [root]
-requires = [
-  "a>=2 ; sys_platform == 'linux'",
-  "a<2 ; sys_platform == 'darwin'",
-]
+requires = ["a>=2 ; sys_platform == 'linux'", "a<2 ; sys_platform == 'darwin'"]
 
 [packages.a.versions."1.0.0"]
 requires = [
@@ -28,9 +25,7 @@ requires = [
 [packages.a.versions."2.0.0"]
 
 [packages.b.versions."1.0.0"]
-requires = [
-  "c ; sys_platform == 'linux' or implementation_name == 'pypy'",
-]
+requires = ["c ; sys_platform == 'linux' or implementation_name == 'pypy'"]
 [packages.b.versions."2.0.0"]
 
 [packages.c.versions."1.0.0"]

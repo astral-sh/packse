@@ -23,9 +23,7 @@ universal = true
 satisfiable = true
 
 [root]
-requires = [
-  "cleaver",
-]
+requires = ["cleaver"]
 
 [packages.cleaver.versions."2.0.0"]
 requires = [
@@ -41,9 +39,7 @@ requires = [
 [packages.fork-sys-platform.versions."2.0.0"]
 
 [packages.reject-cleaver2-proxy.versions."1.0.0"]
-requires = [
-  "reject-cleaver2==2; os_name != 'posix'"
-]
+requires = ["reject-cleaver2==2; os_name != 'posix'"]
 
 [packages.reject-cleaver2.versions."1.0.0"]
 [packages.reject-cleaver2.versions."2.0.0"]
@@ -55,18 +51,14 @@ requires = [
   "fork-if-not-forked-proxy; sys_platform != 'linux'",
   # Reject cleaver 1 if we didn't fork on sys_platform, without forking on sys_platform.
   "reject-cleaver1==1; sys_platform == 'linux'",
-  "reject-cleaver1-proxy"
+  "reject-cleaver1-proxy",
 ]
 
 [packages.fork-if-not-forked-proxy.versions."1.0.0"]
-requires = [
-  "fork-if-not-forked!=3"
-]
+requires = ["fork-if-not-forked!=3"]
 
 [packages.reject-cleaver1-proxy.versions."1.0.0"]
-requires = [
-  "reject-cleaver1==2; sys_platform != 'linux'",
-]
+requires = ["reject-cleaver1==2; sys_platform != 'linux'"]
 
 [packages.reject-cleaver1.versions."1.0.0"]
 [packages.reject-cleaver1.versions."2.0.0"]
@@ -79,7 +71,7 @@ requires = [
   # Actually provoke the fork for cleaver 1.
   "fork-os-name==1; os_name == 'posix'",
   "fork-os-name==2; os_name != 'posix'",
-  "reject-cleaver1-proxy"
+  "reject-cleaver1-proxy",
 ]
 [packages.fork-if-not-forked.versions."2.0.0"]
 [packages.fork-if-not-forked.versions."3.0.0"]

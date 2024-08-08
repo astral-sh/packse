@@ -24,8 +24,6 @@ requires = [
 [packages.a.versions."2.0.0"]
 
 [packages.b.versions."1.0.0"]
-requires = [
-  "c; python_version == '3.10'",
-]
+requires = ["c; python_version == '3.10'"]
 
 [packages.c.versions."1.0.0"]
