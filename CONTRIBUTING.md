@@ -42,3 +42,12 @@ manually back out the change. See [this comment][index-incorrect-snapshot] for
 an example.
 
 [index-incorrect-snapshot]: https://github.com/astral-sh/packse/pull/175#issuecomment-2056964089
+
+## Formatting Scenarios
+
+This step requires NodeJS installed.
+
+```
+npm install
+npx prettier --write "scenarios/**/*.{toml,json,yaml}"
+```
