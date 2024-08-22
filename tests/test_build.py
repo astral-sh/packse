@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 
 import pytest
+
 from packse import __development_base_path__
 from packse.scenario import load_scenario, scenario_hash
 
