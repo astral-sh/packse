@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- scenario: requires-package-does-not-exist -->
+     <!-- scenario: requires-exact-version-does-not-exist -->
+    <a href="requires-exact-version-does-not-exist-a/">requires-exact-version-does-not-exist-a</a><br />
+         <!-- scenario: requires-greater-version-does-not-exist -->
+    <a href="requires-greater-version-does-not-exist-a/">requires-greater-version-does-not-exist-a</a><br />
+         <!-- scenario: requires-less-version-does-not-exist -->
+    <a href="requires-less-version-does-not-exist-a/">requires-less-version-does-not-exist-a</a><br />
+         <!-- scenario: transitive-requires-package-does-not-exist -->
+    <a href="transitive-requires-package-does-not-exist-a/">transitive-requires-package-does-not-exist-a</a><br />
+         <!-- scenario: example -->
+    <a href="example-a/">example-a</a><br />
+        <a href="example-b/">example-b</a><br />
+         <!-- scenario: example-toml -->
+    <a href="example-toml-a/">example-toml-a</a><br />
+        <a href="example-toml-b/">example-toml-b</a><br />
+         <!-- scenario: example-yaml -->
+    <a href="example-yaml-a/">example-yaml-a</a><br />
+        <a href="example-yaml-b/">example-yaml-b</a><br />
+         <!-- scenario: excluded-only-version -->
+    <a href="excluded-only-version-a/">excluded-only-version-a</a><br />
+         <!-- scenario: excluded-only-compatible-version -->
+    <a href="excluded-only-compatible-version-a/">excluded-only-compatible-version-a</a><br />
+        <a href="excluded-only-compatible-version-b/">excluded-only-compatible-version-b</a><br />
+         <!-- scenario: dependency-excludes-range-of-compatible-versions -->
+    <a href="dependency-excludes-range-of-compatible-versions-a/">dependency-excludes-range-of-compatible-versions-a</a><br />
+        <a href="dependency-excludes-range-of-compatible-versions-b/">dependency-excludes-range-of-compatible-versions-b</a><br />
+        <a href="dependency-excludes-range-of-compatible-versions-c/">dependency-excludes-range-of-compatible-versions-c</a><br />
+         <!-- scenario: dependency-excludes-non-contiguous-range-of-compatible-versions -->
+    <a href="dependency-excludes-non-contiguous-range-of-compatible-versions-a/">dependency-excludes-non-contiguous-range-of-compatible-versions-a</a><br />
+        <a href="dependency-excludes-non-contiguous-range-of-compatible-versions-b/">dependency-excludes-non-contiguous-range-of-compatible-versions-b</a><br />
+        <a href="dependency-excludes-non-contiguous-range-of-compatible-versions-c/">dependency-excludes-non-contiguous-range-of-compatible-versions-c</a><br />
+         <!-- scenario: extra-required -->
+    <a href="extra-required-a/">extra-required-a</a><br />
+        <a href="extra-required-b/">extra-required-b</a><br />
+         <!-- scenario: missing-extra -->
+    <a href="missing-extra-a/">missing-extra-a</a><br />
+         <!-- scenario: multiple-extras-required -->
+    <a href="multiple-extras-required-a/">multiple-extras-required-a</a><br />
+        <a href="multiple-extras-required-b/">multiple-extras-required-b</a><br />
+        <a href="multiple-extras-required-c/">multiple-extras-required-c</a><br />
+         <!-- scenario: all-extras-required -->
+    <a href="all-extras-required-a/">all-extras-required-a</a><br />
+        <a href="all-extras-required-b/">all-extras-required-b</a><br />
+        <a href="all-extras-required-c/">all-extras-required-c</a><br />
+         <!-- scenario: extra-incompatible-with-extra -->
+    <a href="extra-incompatible-with-extra-a/">extra-incompatible-with-extra-a</a><br />
+        <a href="extra-incompatible-with-extra-b/">extra-incompatible-with-extra-b</a><br />
+         <!-- scenario: extra-incompatible-with-extra-not-requested -->
+    <a href="extra-incompatible-with-extra-not-requested-a/">extra-incompatible-with-extra-not-requested-a</a><br />
+        <a href="extra-incompatible-with-extra-not-requested-b/">extra-incompatible-with-extra-not-requested-b</a><br />
+         <!-- scenario: extra-incompatible-with-root -->
+    <a href="extra-incompatible-with-root-a/">extra-incompatible-with-root-a</a><br />
+        <a href="extra-incompatible-with-root-b/">extra-incompatible-with-root-b</a><br />
+         <!-- scenario: extra-does-not-exist-backtrack -->
+    <a href="extra-does-not-exist-backtrack-a/">extra-does-not-exist-backtrack-a</a><br />
+        <a href="extra-does-not-exist-backtrack-b/">extra-does-not-exist-backtrack-b</a><br />
+         <!-- scenario: fork-allows-non-conflicting-non-overlapping-dependencies -->
+    <a href="fork-allows-non-conflicting-non-overlapping-dependencies-a/">fork-allows-non-conflicting-non-overlapping-dependencies-a</a><br />
+         <!-- scenario: fork-allows-non-conflicting-repeated-dependencies -->
+    <a href="fork-allows-non-conflicting-repeated-dependencies-a/">fork-allows-non-conflicting-repeated-dependencies-a</a><br />
+         <!-- scenario: fork-basic -->
+    <a href="fork-basic-a/">fork-basic-a</a><br />
+         <!-- scenario: conflict-in-fork -->
+    <a href="conflict-in-fork-a/">conflict-in-fork-a</a><br />
+        <a href="conflict-in-fork-b/">conflict-in-fork-b</a><br />
+        <a href="conflict-in-fork-c/">conflict-in-fork-c</a><br />
+        <a href="conflict-in-fork-d/">conflict-in-fork-d</a><br />
+         <!-- scenario: fork-conflict-unsatisfiable -->
+    <a href="fork-conflict-unsatisfiable-a/">fork-conflict-unsatisfiable-a</a><br />
+         <!-- scenario: fork-filter-sibling-dependencies -->
+    <a href="fork-filter-sibling-dependencies-a/">fork-filter-sibling-dependencies-a</a><br />
+        <a href="fork-filter-sibling-dependencies-b/">fork-filter-sibling-dependencies-b</a><br />
+        <a href="fork-filter-sibling-dependencies-c/">fork-filter-sibling-dependencies-c</a><br />
+        <a href="fork-filter-sibling-dependencies-d/">fork-filter-sibling-dependencies-d</a><br />
+         <!-- scenario: fork-upgrade -->
+    <a href="fork-upgrade-foo/">fork-upgrade-foo</a><br />
+        <a href="fork-upgrade-bar/">fork-upgrade-bar</a><br />
+         <!-- scenario: fork-incomplete-markers -->
+    <a href="fork-incomplete-markers-a/">fork-incomplete-markers-a</a><br />
+        <a href="fork-incomplete-markers-b/">fork-incomplete-markers-b</a><br />
+        <a href="fork-incomplete-markers-c/">fork-incomplete-markers-c</a><br />
+         <!-- scenario: fork-marker-accrue -->
+    <a href="fork-marker-accrue-a/">fork-marker-accrue-a</a><br />
+        <a href="fork-marker-accrue-b/">fork-marker-accrue-b</a><br />
+        <a href="fork-marker-accrue-c/">fork-marker-accrue-c</a><br />
+         <!-- scenario: fork-marker-disjoint -->
+    <a href="fork-marker-disjoint-a/">fork-marker-disjoint-a</a><br />
+         <!-- scenario: fork-marker-inherit-combined-allowed -->
+    <a href="fork-marker-inherit-combined-allowed-a/">fork-marker-inherit-combined-allowed-a</a><br />
+        <a href="fork-marker-inherit-combined-allowed-b/">fork-marker-inherit-combined-allowed-b</a><br />
+        <a href="fork-marker-inherit-combined-allowed-c/">fork-marker-inherit-combined-allowed-c</a><br />
+         <!-- scenario: fork-marker-inherit-combined-disallowed -->
+    <a href="fork-marker-inherit-combined-disallowed-a/">fork-marker-inherit-combined-disallowed-a</a><br />
+        <a href="fork-marker-inherit-combined-disallowed-b/">fork-marker-inherit-combined-disallowed-b</a><br />
+        <a href="fork-marker-inherit-combined-disallowed-c/">fork-marker-inherit-combined-disallowed-c</a><br />
+         <!-- scenario: fork-marker-inherit-combined -->
+    <a href="fork-marker-inherit-combined-a/">fork-marker-inherit-combined-a</a><br />
+        <a href="fork-marker-inherit-combined-b/">fork-marker-inherit-combined-b</a><br />
+        <a href="fork-marker-inherit-combined-c/">fork-marker-inherit-combined-c</a><br />
+         <!-- scenario: fork-marker-inherit-isolated -->
+    <a href="fork-marker-inherit-isolated-a/">fork-marker-inherit-isolated-a</a><br />
+        <a href="fork-marker-inherit-isolated-b/">fork-marker-inherit-isolated-b</a><br />
+         <!-- scenario: fork-marker-inherit-transitive -->
+    <a href="fork-marker-inherit-transitive-a/">fork-marker-inherit-transitive-a</a><br />
+        <a href="fork-marker-inherit-transitive-b/">fork-marker-inherit-transitive-b</a><br />
+        <a href="fork-marker-inherit-transitive-c/">fork-marker-inherit-transitive-c</a><br />
+        <a href="fork-marker-inherit-transitive-d/">fork-marker-inherit-transitive-d</a><br />
+         <!-- scenario: fork-marker-inherit -->
+    <a href="fork-marker-inherit-a/">fork-marker-inherit-a</a><br />
+        <a href="fork-marker-inherit-b/">fork-marker-inherit-b</a><br />
+         <!-- scenario: fork-marker-limited-inherit -->
+    <a href="fork-marker-limited-inherit-a/">fork-marker-limited-inherit-a</a><br />
+        <a href="fork-marker-limited-inherit-b/">fork-marker-limited-inherit-b</a><br />
+        <a href="fork-marker-limited-inherit-c/">fork-marker-limited-inherit-c</a><br />
+         <!-- scenario: fork-marker-selection -->
+    <a href="fork-marker-selection-a/">fork-marker-selection-a</a><br />
+        <a href="fork-marker-selection-b/">fork-marker-selection-b</a><br />
+         <!-- scenario: fork-marker-track -->
+    <a href="fork-marker-track-a/">fork-marker-track-a</a><br />
+        <a href="fork-marker-track-b/">fork-marker-track-b</a><br />
+        <a href="fork-marker-track-c/">fork-marker-track-c</a><br />
+         <!-- scenario: fork-non-fork-marker-transitive -->
+    <a href="fork-non-fork-marker-transitive-a/">fork-non-fork-marker-transitive-a</a><br />
+        <a href="fork-non-fork-marker-transitive-b/">fork-non-fork-marker-transitive-b</a><br />
+        <a href="fork-non-fork-marker-transitive-c/">fork-non-fork-marker-transitive-c</a><br />
+         <!-- scenario: fork-non-local-fork-marker-direct -->
+    <a href="fork-non-local-fork-marker-direct-a/">fork-non-local-fork-marker-direct-a</a><br />
+        <a href="fork-non-local-fork-marker-direct-b/">fork-non-local-fork-marker-direct-b</a><br />
+        <a href="fork-non-local-fork-marker-direct-c/">fork-non-local-fork-marker-direct-c</a><br />
+         <!-- scenario: fork-non-local-fork-marker-transitive -->
+    <a href="fork-non-local-fork-marker-transitive-a/">fork-non-local-fork-marker-transitive-a</a><br />
+        <a href="fork-non-local-fork-marker-transitive-b/">fork-non-local-fork-marker-transitive-b</a><br />
+        <a href="fork-non-local-fork-marker-transitive-c/">fork-non-local-fork-marker-transitive-c</a><br />
+         <!-- scenario: fork-overlapping-markers-basic -->
+    <a href="fork-overlapping-markers-basic-a/">fork-overlapping-markers-basic-a</a><br />
+         <!-- scenario: preferences-dependent-forking-bistable -->
+    <a href="preferences-dependent-forking-bistable-cleaver/">preferences-dependent-forking-bistable-cleaver</a><br />
+        <a href="preferences-dependent-forking-bistable-fork-sys-platform/">preferences-dependent-forking-bistable-fork-sys-platform</a><br />
+        <a href="preferences-dependent-forking-bistable-reject-cleaver2-proxy/">preferences-dependent-forking-bistable-reject-cleaver2-proxy</a><br />
+        <a href="preferences-dependent-forking-bistable-reject-cleaver2/">preferences-dependent-forking-bistable-reject-cleaver2</a><br />
+        <a href="preferences-dependent-forking-bistable-fork-if-not-forked-proxy/">preferences-dependent-forking-bistable-fork-if-not-forked-proxy</a><br />
+        <a href="preferences-dependent-forking-bistable-reject-cleaver1-proxy/">preferences-dependent-forking-bistable-reject-cleaver1-proxy</a><br />
+        <a href="preferences-dependent-forking-bistable-reject-cleaver1/">preferences-dependent-forking-bistable-reject-cleaver1</a><br />
+        <a href="preferences-dependent-forking-bistable-fork-os-name/">preferences-dependent-forking-bistable-fork-os-name</a><br />
+        <a href="preferences-dependent-forking-bistable-fork-if-not-forked/">preferences-dependent-forking-bistable-fork-if-not-forked</a><br />
+         <!-- scenario: preferences-dependent-forking-conflicting -->
+    <a href="preferences-dependent-forking-conflicting-cleaver/">preferences-dependent-forking-conflicting-cleaver</a><br />
+        <a href="preferences-dependent-forking-conflicting-reject-cleaver-2/">preferences-dependent-forking-conflicting-reject-cleaver-2</a><br />
+        <a href="preferences-dependent-forking-conflicting-unrelated-dep/">preferences-dependent-forking-conflicting-unrelated-dep</a><br />
+        <a href="preferences-dependent-forking-conflicting-foo/">preferences-dependent-forking-conflicting-foo</a><br />
+        <a href="preferences-dependent-forking-conflicting-bar/">preferences-dependent-forking-conflicting-bar</a><br />
+         <!-- scenario: preferences-dependent-forking-tristable -->
+    <a href="preferences-dependent-forking-tristable-cleaver/">preferences-dependent-forking-tristable-cleaver</a><br />
+        <a href="preferences-dependent-forking-tristable-a/">preferences-dependent-forking-tristable-a</a><br />
+        <a href="preferences-dependent-forking-tristable-b/">preferences-dependent-forking-tristable-b</a><br />
+        <a href="preferences-dependent-forking-tristable-reject-cleaver-2/">preferences-dependent-forking-tristable-reject-cleaver-2</a><br />
+        <a href="preferences-dependent-forking-tristable-unrelated-dep/">preferences-dependent-forking-tristable-unrelated-dep</a><br />
+        <a href="preferences-dependent-forking-tristable-unrelated-dep3/">preferences-dependent-forking-tristable-unrelated-dep3</a><br />
+        <a href="preferences-dependent-forking-tristable-foo/">preferences-dependent-forking-tristable-foo</a><br />
+        <a href="preferences-dependent-forking-tristable-bar/">preferences-dependent-forking-tristable-bar</a><br />
+        <a href="preferences-dependent-forking-tristable-reject-cleaver-1/">preferences-dependent-forking-tristable-reject-cleaver-1</a><br />
+        <a href="preferences-dependent-forking-tristable-unrelated-dep2/">preferences-dependent-forking-tristable-unrelated-dep2</a><br />
+        <a href="preferences-dependent-forking-tristable-c/">preferences-dependent-forking-tristable-c</a><br />
+        <a href="preferences-dependent-forking-tristable-d/">preferences-dependent-forking-tristable-d</a><br />
+         <!-- scenario: preferences-dependent-forking -->
+    <a href="preferences-dependent-forking-cleaver/">preferences-dependent-forking-cleaver</a><br />
+        <a href="preferences-dependent-forking-reject-cleaver-2/">preferences-dependent-forking-reject-cleaver-2</a><br />
+        <a href="preferences-dependent-forking-unrelated-dep/">preferences-dependent-forking-unrelated-dep</a><br />
+        <a href="preferences-dependent-forking-foo/">preferences-dependent-forking-foo</a><br />
+        <a href="preferences-dependent-forking-bar/">preferences-dependent-forking-bar</a><br />
+         <!-- scenario: fork-remaining-universe-partitioning -->
+    <a href="fork-remaining-universe-partitioning-z/">fork-remaining-universe-partitioning-z</a><br />
+        <a href="fork-remaining-universe-partitioning-a/">fork-remaining-universe-partitioning-a</a><br />
+        <a href="fork-remaining-universe-partitioning-b/">fork-remaining-universe-partitioning-b</a><br />
+         <!-- scenario: fork-requires-python-full-prerelease -->
+    <a href="fork-requires-python-full-prerelease-a/">fork-requires-python-full-prerelease-a</a><br />
+         <!-- scenario: fork-requires-python-full -->
+    <a href="fork-requires-python-full-a/">fork-requires-python-full-a</a><br />
+         <!-- scenario: fork-requires-python-patch-overlap -->
+    <a href="fork-requires-python-patch-overlap-a/">fork-requires-python-patch-overlap-a</a><br />
+         <!-- scenario: fork-requires-python -->
+    <a href="fork-requires-python-a/">fork-requires-python-a</a><br />
+         <!-- scenario: direct-incompatible-versions -->
+    <a href="direct-incompatible-versions-a/">direct-incompatible-versions-a</a><br />
+         <!-- scenario: transitive-incompatible-with-root-version -->
+    <a href="transitive-incompatible-with-root-version-a/">transitive-incompatible-with-root-version-a</a><br />
+        <a href="transitive-incompatible-with-root-version-b/">transitive-incompatible-with-root-version-b</a><br />
+         <!-- scenario: transitive-incompatible-with-transitive -->
+    <a href="transitive-incompatible-with-transitive-a/">transitive-incompatible-with-transitive-a</a><br />
+        <a href="transitive-incompatible-with-transitive-b/">transitive-incompatible-with-transitive-b</a><br />
+        <a href="transitive-incompatible-with-transitive-c/">transitive-incompatible-with-transitive-c</a><br />
+         <!-- scenario: transitive-incompatible-versions -->
+    <a href="transitive-incompatible-versions-a/">transitive-incompatible-versions-a</a><br />
+         <!-- scenario: local-simple -->
+    <a href="local-simple-a/">local-simple-a</a><br />
+         <!-- scenario: local-not-used-with-sdist -->
+    <a href="local-not-used-with-sdist-a/">local-not-used-with-sdist-a</a><br />
+         <!-- scenario: local-used-without-sdist -->
+    <a href="local-used-without-sdist-a/">local-used-without-sdist-a</a><br />
+         <!-- scenario: local-not-latest -->
+    <a href="local-not-latest-a/">local-not-latest-a</a><br />
+         <!-- scenario: local-transitive -->
+    <a href="local-transitive-a/">local-transitive-a</a><br />
+        <a href="local-transitive-b/">local-transitive-b</a><br />
+         <!-- scenario: local-transitive-greater-than -->
+    <a href="local-transitive-greater-than-a/">local-transitive-greater-than-a</a><br />
+        <a href="local-transitive-greater-than-b/">local-transitive-greater-than-b</a><br />
+         <!-- scenario: local-transitive-greater-than-or-equal -->
+    <a href="local-transitive-greater-than-or-equal-a/">local-transitive-greater-than-or-equal-a</a><br />
+        <a href="local-transitive-greater-than-or-equal-b/">local-transitive-greater-than-or-equal-b</a><br />
+         <!-- scenario: local-transitive-less-than -->
+    <a href="local-transitive-less-than-a/">local-transitive-less-than-a</a><br />
+        <a href="local-transitive-less-than-b/">local-transitive-less-than-b</a><br />
+         <!-- scenario: local-transitive-less-than-or-equal -->
+    <a href="local-transitive-less-than-or-equal-a/">local-transitive-less-than-or-equal-a</a><br />
+        <a href="local-transitive-less-than-or-equal-b/">local-transitive-less-than-or-equal-b</a><br />
+         <!-- scenario: local-transitive-confounding -->
+    <a href="local-transitive-confounding-a/">local-transitive-confounding-a</a><br />
+        <a href="local-transitive-confounding-b/">local-transitive-confounding-b</a><br />
+         <!-- scenario: local-transitive-conflicting -->
+    <a href="local-transitive-conflicting-a/">local-transitive-conflicting-a</a><br />
+        <a href="local-transitive-conflicting-b/">local-transitive-conflicting-b</a><br />
+         <!-- scenario: local-transitive-backtrack -->
+    <a href="local-transitive-backtrack-a/">local-transitive-backtrack-a</a><br />
+        <a href="local-transitive-backtrack-b/">local-transitive-backtrack-b</a><br />
+         <!-- scenario: local-greater-than -->
+    <a href="local-greater-than-a/">local-greater-than-a</a><br />
+         <!-- scenario: local-greater-than-or-equal -->
+    <a href="local-greater-than-or-equal-a/">local-greater-than-or-equal-a</a><br />
+         <!-- scenario: local-less-than -->
+    <a href="local-less-than-a/">local-less-than-a</a><br />
+         <!-- scenario: local-less-than-or-equal -->
+    <a href="local-less-than-or-equal-a/">local-less-than-or-equal-a</a><br />
+         <!-- scenario: post-simple -->
+    <a href="post-simple-a/">post-simple-a</a><br />
+         <!-- scenario: post-greater-than-or-equal -->
+    <a href="post-greater-than-or-equal-a/">post-greater-than-or-equal-a</a><br />
+         <!-- scenario: post-greater-than -->
+    <a href="post-greater-than-a/">post-greater-than-a</a><br />
+         <!-- scenario: post-greater-than-post -->
+    <a href="post-greater-than-post-a/">post-greater-than-post-a</a><br />
+         <!-- scenario: post-greater-than-or-equal-post -->
+    <a href="post-greater-than-or-equal-post-a/">post-greater-than-or-equal-post-a</a><br />
+         <!-- scenario: post-less-than-or-equal -->
+    <a href="post-less-than-or-equal-a/">post-less-than-or-equal-a</a><br />
+         <!-- scenario: post-less-than -->
+    <a href="post-less-than-a/">post-less-than-a</a><br />
+         <!-- scenario: post-local-greater-than -->
+    <a href="post-local-greater-than-a/">post-local-greater-than-a</a><br />
+         <!-- scenario: post-local-greater-than-post -->
+    <a href="post-local-greater-than-post-a/">post-local-greater-than-post-a</a><br />
+         <!-- scenario: post-equal-not-available -->
+    <a href="post-equal-not-available-a/">post-equal-not-available-a</a><br />
+         <!-- scenario: post-equal-available -->
+    <a href="post-equal-available-a/">post-equal-available-a</a><br />
+         <!-- scenario: post-greater-than-post-not-available -->
+    <a href="post-greater-than-post-not-available-a/">post-greater-than-post-not-available-a</a><br />
+         <!-- scenario: package-only-prereleases -->
+    <a href="package-only-prereleases-a/">package-only-prereleases-a</a><br />
+         <!-- scenario: package-only-prereleases-in-range -->
+    <a href="package-only-prereleases-in-range-a/">package-only-prereleases-in-range-a</a><br />
+         <!-- scenario: requires-package-only-prereleases-in-range-global-opt-in -->
+    <a href="requires-package-only-prereleases-in-range-global-opt-in-a/">requires-package-only-prereleases-in-range-global-opt-in-a</a><br />
+         <!-- scenario: requires-package-prerelease-and-final-any -->
+    <a href="requires-package-prerelease-and-final-any-a/">requires-package-prerelease-and-final-any-a</a><br />
+         <!-- scenario: package-prerelease-specified-only-final-available -->
+    <a href="package-prerelease-specified-only-final-available-a/">package-prerelease-specified-only-final-available-a</a><br />
+         <!-- scenario: package-prerelease-specified-only-prerelease-available -->
+    <a href="package-prerelease-specified-only-prerelease-available-a/">package-prerelease-specified-only-prerelease-available-a</a><br />
+         <!-- scenario: package-prerelease-specified-mixed-available -->
+    <a href="package-prerelease-specified-mixed-available-a/">package-prerelease-specified-mixed-available-a</a><br />
+         <!-- scenario: package-multiple-prereleases-kinds -->
+    <a href="package-multiple-prereleases-kinds-a/">package-multiple-prereleases-kinds-a</a><br />
+         <!-- scenario: package-multiple-prereleases-numbers -->
+    <a href="package-multiple-prereleases-numbers-a/">package-multiple-prereleases-numbers-a</a><br />
+         <!-- scenario: transitive-package-only-prereleases -->
+    <a href="transitive-package-only-prereleases-a/">transitive-package-only-prereleases-a</a><br />
+        <a href="transitive-package-only-prereleases-b/">transitive-package-only-prereleases-b</a><br />
+         <!-- scenario: transitive-package-only-prereleases-in-range -->
+    <a href="transitive-package-only-prereleases-in-range-a/">transitive-package-only-prereleases-in-range-a</a><br />
+        <a href="transitive-package-only-prereleases-in-range-b/">transitive-package-only-prereleases-in-range-b</a><br />
+         <!-- scenario: transitive-package-only-prereleases-in-range-opt-in -->
+    <a href="transitive-package-only-prereleases-in-range-opt-in-a/">transitive-package-only-prereleases-in-range-opt-in-a</a><br />
+        <a href="transitive-package-only-prereleases-in-range-opt-in-b/">transitive-package-only-prereleases-in-range-opt-in-b</a><br />
+         <!-- scenario: transitive-prerelease-and-stable-dependency -->
+    <a href="transitive-prerelease-and-stable-dependency-a/">transitive-prerelease-and-stable-dependency-a</a><br />
+        <a href="transitive-prerelease-and-stable-dependency-b/">transitive-prerelease-and-stable-dependency-b</a><br />
+        <a href="transitive-prerelease-and-stable-dependency-c/">transitive-prerelease-and-stable-dependency-c</a><br />
+         <!-- scenario: transitive-prerelease-and-stable-dependency-opt-in -->
+    <a href="transitive-prerelease-and-stable-dependency-opt-in-a/">transitive-prerelease-and-stable-dependency-opt-in-a</a><br />
+        <a href="transitive-prerelease-and-stable-dependency-opt-in-b/">transitive-prerelease-and-stable-dependency-opt-in-b</a><br />
+        <a href="transitive-prerelease-and-stable-dependency-opt-in-c/">transitive-prerelease-and-stable-dependency-opt-in-c</a><br />
+         <!-- scenario: transitive-prerelease-and-stable-dependency-many-versions -->
+    <a href="transitive-prerelease-and-stable-dependency-many-versions-a/">transitive-prerelease-and-stable-dependency-many-versions-a</a><br />
+        <a href="transitive-prerelease-and-stable-dependency-many-versions-b/">transitive-prerelease-and-stable-dependency-many-versions-b</a><br />
+        <a href="transitive-prerelease-and-stable-dependency-many-versions-c/">transitive-prerelease-and-stable-dependency-many-versions-c</a><br />
+         <!-- scenario: transitive-prerelease-and-stable-dependency-many-versions-holes -->
+    <a href="transitive-prerelease-and-stable-dependency-many-versions-holes-a/">transitive-prerelease-and-stable-dependency-many-versions-holes-a</a><br />
+        <a href="transitive-prerelease-and-stable-dependency-many-versions-holes-b/">transitive-prerelease-and-stable-dependency-many-versions-holes-b</a><br />
+        <a href="transitive-prerelease-and-stable-dependency-many-versions-holes-c/">transitive-prerelease-and-stable-dependency-many-versions-holes-c</a><br />
+         <!-- scenario: package-only-prereleases-boundary -->
+    <a href="package-only-prereleases-boundary-a/">package-only-prereleases-boundary-a</a><br />
+         <!-- scenario: package-prereleases-boundary -->
+    <a href="package-prereleases-boundary-a/">package-prereleases-boundary-a</a><br />
+         <!-- scenario: package-prereleases-global-boundary -->
+    <a href="package-prereleases-global-boundary-a/">package-prereleases-global-boundary-a</a><br />
+         <!-- scenario: package-prereleases-specifier-boundary -->
+    <a href="package-prereleases-specifier-boundary-a/">package-prereleases-specifier-boundary-a</a><br />
+         <!-- scenario: python-version-does-not-exist -->
+    <a href="python-version-does-not-exist-a/">python-version-does-not-exist-a</a><br />
+         <!-- scenario: python-less-than-current -->
+    <a href="python-less-than-current-a/">python-less-than-current-a</a><br />
+         <!-- scenario: python-greater-than-current -->
+    <a href="python-greater-than-current-a/">python-greater-than-current-a</a><br />
+         <!-- scenario: python-greater-than-current-patch -->
+    <a href="python-greater-than-current-patch-a/">python-greater-than-current-patch-a</a><br />
+         <!-- scenario: python-greater-than-current-many -->
+    <a href="python-greater-than-current-many-a/">python-greater-than-current-many-a</a><br />
+         <!-- scenario: python-greater-than-current-backtrack -->
+    <a href="python-greater-than-current-backtrack-a/">python-greater-than-current-backtrack-a</a><br />
+         <!-- scenario: python-greater-than-current-excluded -->
+    <a href="python-greater-than-current-excluded-a/">python-greater-than-current-excluded-a</a><br />
+         <!-- scenario: incompatible-python-compatible-override -->
+    <a href="incompatible-python-compatible-override-a/">incompatible-python-compatible-override-a</a><br />
+         <!-- scenario: compatible-python-incompatible-override -->
+    <a href="compatible-python-incompatible-override-a/">compatible-python-incompatible-override-a</a><br />
+         <!-- scenario: incompatible-python-compatible-override-unavailable-no-wheels -->
+    <a href="incompatible-python-compatible-override-unavailable-no-wheels-a/">incompatible-python-compatible-override-unavailable-no-wheels-a</a><br />
+         <!-- scenario: incompatible-python-compatible-override-available-no-wheels -->
+    <a href="incompatible-python-compatible-override-available-no-wheels-a/">incompatible-python-compatible-override-available-no-wheels-a</a><br />
+         <!-- scenario: incompatible-python-compatible-override-no-compatible-wheels -->
+    <a href="incompatible-python-compatible-override-no-compatible-wheels-a/">incompatible-python-compatible-override-no-compatible-wheels-a</a><br />
+         <!-- scenario: incompatible-python-compatible-override-other-wheel -->
+    <a href="incompatible-python-compatible-override-other-wheel-a/">incompatible-python-compatible-override-other-wheel-a</a><br />
+         <!-- scenario: python-patch-override-no-patch -->
+    <a href="python-patch-override-no-patch-a/">python-patch-override-no-patch-a</a><br />
+         <!-- scenario: python-patch-override-patch-compatible -->
+    <a href="python-patch-override-patch-compatible-a/">python-patch-override-patch-compatible-a</a><br />
+         <!-- scenario: specific-tag-and-default -->
+    <a href="specific-tag-and-default-a/">specific-tag-and-default-a</a><br />
+         <!-- scenario: only-wheels -->
+    <a href="only-wheels-a/">only-wheels-a</a><br />
+         <!-- scenario: no-wheels -->
+    <a href="no-wheels-a/">no-wheels-a</a><br />
+         <!-- scenario: no-wheels-with-matching-platform -->
+    <a href="no-wheels-with-matching-platform-a/">no-wheels-with-matching-platform-a</a><br />
+         <!-- scenario: no-sdist-no-wheels-with-matching-platform -->
+    <a href="no-sdist-no-wheels-with-matching-platform-a/">no-sdist-no-wheels-with-matching-platform-a</a><br />
+         <!-- scenario: no-sdist-no-wheels-with-matching-python -->
+    <a href="no-sdist-no-wheels-with-matching-python-a/">no-sdist-no-wheels-with-matching-python-a</a><br />
+         <!-- scenario: no-sdist-no-wheels-with-matching-abi -->
+    <a href="no-sdist-no-wheels-with-matching-abi-a/">no-sdist-no-wheels-with-matching-abi-a</a><br />
+         <!-- scenario: no-wheels-no-build -->
+    <a href="no-wheels-no-build-a/">no-wheels-no-build-a</a><br />
+         <!-- scenario: only-wheels-no-binary -->
+    <a href="only-wheels-no-binary-a/">only-wheels-no-binary-a</a><br />
+         <!-- scenario: no-build -->
+    <a href="no-build-a/">no-build-a</a><br />
+         <!-- scenario: no-binary -->
+    <a href="no-binary-a/">no-binary-a</a><br />
+         <!-- scenario: package-only-yanked -->
+    <a href="package-only-yanked-a/">package-only-yanked-a</a><br />
+         <!-- scenario: package-only-yanked-in-range -->
+    <a href="package-only-yanked-in-range-a/">package-only-yanked-in-range-a</a><br />
+         <!-- scenario: requires-package-yanked-and-unyanked-any -->
+    <a href="requires-package-yanked-and-unyanked-any-a/">requires-package-yanked-and-unyanked-any-a</a><br />
+         <!-- scenario: package-yanked-specified-mixed-available -->
+    <a href="package-yanked-specified-mixed-available-a/">package-yanked-specified-mixed-available-a</a><br />
+         <!-- scenario: transitive-package-only-yanked -->
+    <a href="transitive-package-only-yanked-a/">transitive-package-only-yanked-a</a><br />
+        <a href="transitive-package-only-yanked-b/">transitive-package-only-yanked-b</a><br />
+         <!-- scenario: transitive-package-only-yanked-in-range -->
+    <a href="transitive-package-only-yanked-in-range-a/">transitive-package-only-yanked-in-range-a</a><br />
+        <a href="transitive-package-only-yanked-in-range-b/">transitive-package-only-yanked-in-range-b</a><br />
+         <!-- scenario: transitive-package-only-yanked-in-range-opt-in -->
+    <a href="transitive-package-only-yanked-in-range-opt-in-a/">transitive-package-only-yanked-in-range-opt-in-a</a><br />
+        <a href="transitive-package-only-yanked-in-range-opt-in-b/">transitive-package-only-yanked-in-range-opt-in-b</a><br />
+         <!-- scenario: transitive-yanked-and-unyanked-dependency -->
+    <a href="transitive-yanked-and-unyanked-dependency-a/">transitive-yanked-and-unyanked-dependency-a</a><br />
+        <a href="transitive-yanked-and-unyanked-dependency-b/">transitive-yanked-and-unyanked-dependency-b</a><br />
+        <a href="transitive-yanked-and-unyanked-dependency-c/">transitive-yanked-and-unyanked-dependency-c</a><br />
+         <!-- scenario: transitive-yanked-and-unyanked-dependency-opt-in -->
+    <a href="transitive-yanked-and-unyanked-dependency-opt-in-a/">transitive-yanked-and-unyanked-dependency-opt-in-a</a><br />
+        <a href="transitive-yanked-and-unyanked-dependency-opt-in-b/">transitive-yanked-and-unyanked-dependency-opt-in-b</a><br />
+        <a href="transitive-yanked-and-unyanked-dependency-opt-in-c/">transitive-yanked-and-unyanked-dependency-opt-in-c</a><br />
+     
+  </body>
+</html>
