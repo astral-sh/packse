@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Generator
 
 import pytest
+
 from packse import __development_base_path__
 
 from .common import snapshot_command

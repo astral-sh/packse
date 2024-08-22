@@ -14,6 +14,7 @@ from itertools import islice
 from pathlib import Path
 
 import pytest
+
 from packse import __development_base_path__
 
 MAX_FILE_LENGTH = 500
