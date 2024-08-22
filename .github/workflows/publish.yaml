@@ -18,7 +18,7 @@ on:
 
 jobs:
   publish-packages:
-    name: python-${{ matrix.python-version }}, ${{ matrix.os }}
+    name: Publish python-${{ matrix.python-version }}, ${{ matrix.os }}
 
     strategy:
       matrix:
