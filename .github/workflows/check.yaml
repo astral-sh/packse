@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   run-checks:
-    name: python-${{ matrix.python-version }}, ${{ matrix.os }}
+    name: Check python-${{ matrix.python-version }}, ${{ matrix.os }}
     timeout-minutes: 5
 
     strategy:
@@ -45,6 +45,7 @@ jobs:
 
   typos:
     runs-on: ubuntu-latest
+    name: Check typos
     steps:
       - uses: actions/checkout@v4
       - uses: crate-ci/typos@master
