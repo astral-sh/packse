@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   python-tests:
-    name: python-${{ matrix.python-version }}, ${{ matrix.os }}
+    name: Test python-${{ matrix.python-version }}, ${{ matrix.os }}
 
     strategy:
       matrix:
