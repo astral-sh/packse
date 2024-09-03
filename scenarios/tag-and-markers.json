@@ -1,0 +1,115 @@
+[
+    {
+        "name": "unreachable-package",
+        "description": "`c` is not reachable due to the markers, it should be excluded from the lockfile",
+        "root": {
+            "requires": [
+                "a==1.0.0; sys_platform == 'win32'"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "requires": ["b==1.0.0; sys_platform == 'linux'"]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {}
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true
+        },
+        "resolver_options": {
+            "universal": true
+        }
+    },
+    {
+        "name": "unreachable-wheels",
+        "description": "Check that we only include wheels that match the platform markers",
+        "root": {
+            "requires": [
+                "a==1.0.0; sys_platform == 'win32'",
+                "b==1.0.0; sys_platform == 'linux'",
+                "c==1.0.0; sys_platform == 'darwin'"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "wheel_tags": [
+                            "cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64",
+                            "cp312-cp312-musllinux_1_1_armv7l",
+                            "cp312-cp312-win_amd64",
+                            "cp312-cp312-macosx_14_0_x86_64"
+                        ]
+                    }
+                }
+            },
+            "b": {
+                "versions": {
+                    "1.0.0": {
+                        "wheel_tags": [
+                            "cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64",
+                            "cp312-cp312-musllinux_1_1_armv7l",
+                            "cp312-cp312-win_amd64",
+                            "cp312-cp312-macosx_14_0_x86_64"
+                        ]
+                    }
+                }
+            },
+            "c": {
+                "versions": {
+                    "1.0.0": {
+                        "wheel_tags": [
+                            "cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64",
+                            "cp312-cp312-musllinux_1_1_armv7l",
+                            "cp312-cp312-win_amd64",
+                            "cp312-cp312-macosx_14_0_x86_64"
+                        ]
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true
+        },
+        "resolver_options": {
+            "universal": true
+        }
+    },
+    {
+        "name": "requires-python-wheels",
+        "description": "Check that we only include wheels that match the required Python version",
+        "root": {
+            "requires_python": ">=3.10",
+            "requires": [
+                "a==1.0.0"
+            ]
+        },
+        "packages": {
+            "a": {
+                "versions": {
+                    "1.0.0": {
+                        "wheel_tags": [
+                            "cp311-cp311-any",
+                            "cp310-cp310-any",
+                            "cp39-cp39-any"
+                        ]
+                    }
+                }
+            }
+        },
+        "expected": {
+            "satisfiable": true
+        },
+        "resolver_options": {
+            "universal": true
+        }
+    }
+]
