@@ -41,7 +41,8 @@
             }
         },
         "expected": {
-            "satisfiable": false
+            "satisfiable": true,
+            "explanation": "We ignore the upper bound on Python requirements"
         }
     },
     {
