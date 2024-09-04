@@ -92,6 +92,9 @@
                 "a==1.0.0"
             ]
         },
+        "environment": {
+            "python": "3.12"
+        },
         "packages": {
             "a": {
                 "versions": {
