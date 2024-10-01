@@ -66,15 +66,15 @@ class MockBinary:
 
 
 @pytest.fixture
-def mock_twine(monkeypatch: pytest.MonkeyPatch) -> Generator[MockBinary, None, None]:
+def mock_uv(monkeypatch: pytest.MonkeyPatch) -> Generator[MockBinary, None, None]:
     # Create a temp directory to register as a bin
     with tempfile.TemporaryDirectory() as tmpdir:
-        mock = MockBinary(Path(tmpdir) / "twine")
-        mock.set_success("<mock twine logs>")
+        mock = MockBinary(Path(tmpdir) / "uv")
+        mock.set_success("<mock uv logs>")
 
         # Add to the path
         monkeypatch.setenv("PATH", tmpdir, prepend=":")
-        assert shutil.which("twine").startswith(tmpdir)
+        assert shutil.which("uv").startswith(tmpdir)
 
         yield mock
 
@@ -91,10 +91,10 @@ def test_publish_example_dry_run(snapshot, scenario_dist: Path):
 
 
 @pytest.mark.usefixtures("credentials")
-def test_publish_example_twine_succeeds(
-    snapshot, scenario_dist: Path, mock_twine: MockBinary
+def test_publish_example_uv_succeeds(
+    snapshot, scenario_dist: Path, mock_uv: MockBinary
 ):
-    mock_twine.set_success("<twine happy message>")
+    mock_uv.set_success("<uv happy message>")
 
     assert (
         snapshot_command(
@@ -106,10 +106,10 @@ def test_publish_example_twine_succeeds(
 
 
 @pytest.mark.usefixtures("credentials")
-def test_publish_example_twine_succeeds_parallel(
-    snapshot, scenario_dist: Path, mock_twine: MockBinary
+def test_publish_example_uv_succeeds_parallel(
+    snapshot, scenario_dist: Path, mock_uv: MockBinary
 ):
-    mock_twine.set_success("<twine happy message>")
+    mock_uv.set_success("<uv happy message>")
 
     assert (
         snapshot_command(
@@ -123,10 +123,10 @@ def test_publish_example_twine_succeeds_parallel(
 
 
 @pytest.mark.usefixtures("credentials")
-def test_publish_example_twine_fails_with_unknown_error(
-    snapshot, scenario_dist: Path, mock_twine: MockBinary
+def test_publish_example_uv_fails_with_unknown_error(
+    snapshot, scenario_dist: Path, mock_uv: MockBinary
 ):
-    mock_twine.set_error("<twine error message>")
+    mock_uv.set_error("<uv error message>")
 
     assert (
         snapshot_command(
@@ -138,10 +138,10 @@ def test_publish_example_twine_fails_with_unknown_error(
 
 
 @pytest.mark.usefixtures("credentials")
-def test_publish_example_twine_fails_with_rate_limit(
-    snapshot, scenario_dist: Path, mock_twine: MockBinary
+def test_publish_example_uv_fails_with_rate_limit(
+    snapshot, scenario_dist: Path, mock_uv: MockBinary
 ):
-    mock_twine.set_error(
+    mock_uv.set_error(
         """
 Uploading distributions to https://test.pypi.org/legacy/
 Uploading
@@ -169,10 +169,10 @@ ERROR    HTTPError: 429 Too Many Requests from https://test.pypi.org/legacy/
 
 
 @pytest.mark.usefixtures("credentials")
-def test_publish_example_twine_fails_with_already_exists(
-    snapshot, scenario_dist: Path, mock_twine: MockBinary
+def test_publish_example_uv_fails_with_already_exists(
+    snapshot, scenario_dist: Path, mock_uv: MockBinary
 ):
-    mock_twine.set_error(
+    mock_uv.set_error(
         """
 Uploading distributions to https://test.pypi.org/legacy/
 Uploading example_9e723676_a-1.0.0.tar.gz
@@ -196,15 +196,15 @@ ERROR    HTTPError: 400 Bad Request from https://test.pypi.org/legacy/
 def test_publish_example_no_credentials(
     snapshot,
     scenario_dist: Path,
-    mock_twine: MockBinary,
+    mock_uv: MockBinary,
 ):
     # Ensure these do not exist
     if "PACKSE_PUBLISH_PASSWORD" in os.environ:
         os.environ.pop("PACKSE_PUBLISH_PASSWORD")
-    if "TWINE_PASSWORD" in os.environ:
-        os.environ.pop("TWINE_PASSWORD")
+    if "UV_PASSWORD" in os.environ:
+        os.environ.pop("UV_PASSWORD")
 
-    mock_twine.set_error(
+    mock_uv.set_error(
         """
         Should not be reached!
         """
@@ -223,13 +223,13 @@ def test_publish_example_no_credentials(
 def test_publish_example_no_username_defaults_to_token(
     snapshot,
     scenario_dist: Path,
-    mock_twine: MockBinary,
+    mock_uv: MockBinary,
 ):
     # Ensure these do not exist
     if "PACKSE_PUBLISH_USERNAME" in os.environ:
         os.environ.pop("PACKSE_PUBLISH_USERNAME")
-    if "TWINE_USERNAME" in os.environ:
-        os.environ.pop("TWINE_USERNAME")
+    if "UV_USERNAME" in os.environ:
+        os.environ.pop("UV_USERNAME")
 
     assert (
         snapshot_command(

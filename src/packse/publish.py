@@ -44,7 +44,7 @@ def publish(
     start_time = time.time()
 
     if not anonymous and not (
-        "TWINE_PASSWORD" in os.environ or "PACKSE_PUBLISH_PASSWORD" in os.environ
+        "UV_PUBLISH_PASSWORD" in os.environ or "PACKSE_PUBLISH_PASSWORD" in os.environ
     ):
         raise PublishNoCredentials()
 
@@ -188,7 +188,7 @@ def publish_package_distribution(
     """
     Publish a package distribution file.
     """
-    command = ["twine", "upload", "--repository-url", index_url, str(target.resolve())]
+    command = ["uv", "publish", "--publish-url", index_url, str(target.resolve())]
     if dry_run:
         print("Would execute: " + " ".join(command))
         return
@@ -196,24 +196,22 @@ def publish_package_distribution(
     start_time = time.time()
     try:
         env = os.environ.copy()
-        # Ensure twine does not prompt for credentials
-        env["TWINE_NON_INTERACTIVE"] = "1"
 
         # Pass the publish username through to twine
         if publish_username := os.environ.get("PACKSE_PUBLISH_USERNAME"):
-            env["TWINE_USERNAME"] = publish_username
+            env["UV_PUBLISH_USERNAME"] = publish_username
 
         # Configure the username for tokens by default
-        env.setdefault("TWINE_USERNAME", "__token__")
+        env.setdefault("UV_PUBLISH_USERNAME", "__token__")
 
         # Pass the publish token through to twine
         if publish_token := os.environ.get("PACKSE_PUBLISH_PASSWORD"):
-            env["TWINE_PASSWORD"] = publish_token
+            env["UV_PUBLISH_PASSWORD"] = publish_token
 
-        # Twine requires a username and password even if we don't want to use them
+        # Provide a username and password even if we don't want to use them
         if anonymous:
-            env["TWINE_USERNAME"] = "ANON"
-            env["TWINE_PASSWORD"] = "ANON"
+            env["UV_PUBLISH_USERNAME"] = "ANON"
+            env["UV_PUBLISH_PASSWORD"] = "ANON"
 
         output = subprocess.check_output(
             command, stderr=subprocess.STDOUT, env=env, timeout=60
@@ -229,7 +227,7 @@ def publish_package_distribution(
         if "ConnectionError" in output:
             raise PublishConnectionError(target.name)
         raise PublishToolError(
-            f"Publishing {target.name} with twine failed",
+            f"Publishing {target.name} with uv failed",
             output,
         )
     else:

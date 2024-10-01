@@ -18,15 +18,15 @@
   
     ''',
     'stdout': '''
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_961b4c22-0.0.0.tar.gz
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_a_961b4c22-1.0.0-py3-none-any.whl
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_a_961b4c22-1.0.0.tar.gz
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_961b4c22-1.0.0-py3-none-any.whl
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_961b4c22-1.0.0.tar.gz
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_961b4c22-2.0.0-py3-none-any.whl
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_961b4c22-2.0.0.tar.gz
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_961b4c22-3.0.0-py3-none-any.whl
-      Would execute: twine upload --repository-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_961b4c22-3.0.0.tar.gz
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_961b4c22-0.0.0.tar.gz
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_a_961b4c22-1.0.0-py3-none-any.whl
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_a_961b4c22-1.0.0.tar.gz
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_961b4c22-1.0.0-py3-none-any.whl
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_961b4c22-1.0.0.tar.gz
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_961b4c22-2.0.0-py3-none-any.whl
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_961b4c22-2.0.0.tar.gz
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_961b4c22-3.0.0-py3-none-any.whl
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_961b4c22-3.0.0.tar.gz
       example-961b4c22
   
     ''',
@@ -51,47 +51,47 @@
       Publishing 'example-961b4c22'...
       Published example_961b4c22-0.0.0.tar.gz in [TIME]:
       
-          <mock twine logs>
+          <mock uv logs>
       
       Published 'example_961b4c22-0.0.0.tar.gz'
       Published example_a_961b4c22-1.0.0-py3-none-any.whl in [TIME]:
       
-          <mock twine logs>
+          <mock uv logs>
       
       Published 'example_a_961b4c22-1.0.0-py3-none-any.whl'
       Published example_a_961b4c22-1.0.0.tar.gz in [TIME]:
       
-          <mock twine logs>
+          <mock uv logs>
       
       Published 'example_a_961b4c22-1.0.0.tar.gz'
       Published example_b_961b4c22-1.0.0-py3-none-any.whl in [TIME]:
       
-          <mock twine logs>
+          <mock uv logs>
       
       Published 'example_b_961b4c22-1.0.0-py3-none-any.whl'
       Published example_b_961b4c22-1.0.0.tar.gz in [TIME]:
       
-          <mock twine logs>
+          <mock uv logs>
       
       Published 'example_b_961b4c22-1.0.0.tar.gz'
       Published example_b_961b4c22-2.0.0-py3-none-any.whl in [TIME]:
       
-          <mock twine logs>
+          <mock uv logs>
       
       Published 'example_b_961b4c22-2.0.0-py3-none-any.whl'
       Published example_b_961b4c22-2.0.0.tar.gz in [TIME]:
       
-          <mock twine logs>
+          <mock uv logs>
       
       Published 'example_b_961b4c22-2.0.0.tar.gz'
       Published example_b_961b4c22-3.0.0-py3-none-any.whl in [TIME]:
       
-          <mock twine logs>
+          <mock uv logs>
       
       Published 'example_b_961b4c22-3.0.0-py3-none-any.whl'
       Published example_b_961b4c22-3.0.0.tar.gz in [TIME]:
       
-          <mock twine logs>
+          <mock uv logs>
       
       Published 'example_b_961b4c22-3.0.0.tar.gz'
       Published 1 targets (9 new files) in [TIME]
@@ -103,7 +103,7 @@
     ''',
   })
 # ---
-# name: test_publish_example_twine_fails_with_already_exists
+# name: test_publish_example_uv_fails_with_already_exists
   dict({
     'exit_code': 1,
     'stderr': '''
@@ -116,7 +116,7 @@
     'stdout': '',
   })
 # ---
-# name: test_publish_example_twine_fails_with_rate_limit
+# name: test_publish_example_uv_fails_with_rate_limit
   dict({
     'exit_code': 1,
     'stderr': '''
@@ -129,14 +129,14 @@
     'stdout': '',
   })
 # ---
-# name: test_publish_example_twine_fails_with_unknown_error
+# name: test_publish_example_uv_fails_with_unknown_error
   dict({
     'exit_code': 1,
     'stderr': '''
       Publishing 1 target to https://test.pypi.org/legacy/...
       Publishing 'example-961b4c22'...
-      Publishing example_961b4c22-0.0.0.tar.gz with twine failed:
-          <twine error message>
+      Publishing example_961b4c22-0.0.0.tar.gz with uv failed:
+          <uv error message>
       .
       Failed to publish 1/1 targets.
   
@@ -144,7 +144,7 @@
     'stdout': '',
   })
 # ---
-# name: test_publish_example_twine_succeeds
+# name: test_publish_example_uv_succeeds
   dict({
     'exit_code': 0,
     'stderr': '''
@@ -152,47 +152,47 @@
       Publishing 'example-961b4c22'...
       Published example_961b4c22-0.0.0.tar.gz in [TIME]:
       
-          <twine happy message>
+          <uv happy message>
       
       Published 'example_961b4c22-0.0.0.tar.gz'
       Published example_a_961b4c22-1.0.0-py3-none-any.whl in [TIME]:
       
-          <twine happy message>
+          <uv happy message>
       
       Published 'example_a_961b4c22-1.0.0-py3-none-any.whl'
       Published example_a_961b4c22-1.0.0.tar.gz in [TIME]:
       
-          <twine happy message>
+          <uv happy message>
       
       Published 'example_a_961b4c22-1.0.0.tar.gz'
       Published example_b_961b4c22-1.0.0-py3-none-any.whl in [TIME]:
       
-          <twine happy message>
+          <uv happy message>
       
       Published 'example_b_961b4c22-1.0.0-py3-none-any.whl'
       Published example_b_961b4c22-1.0.0.tar.gz in [TIME]:
       
-          <twine happy message>
+          <uv happy message>
       
       Published 'example_b_961b4c22-1.0.0.tar.gz'
       Published example_b_961b4c22-2.0.0-py3-none-any.whl in [TIME]:
       
-          <twine happy message>
+          <uv happy message>
       
       Published 'example_b_961b4c22-2.0.0-py3-none-any.whl'
       Published example_b_961b4c22-2.0.0.tar.gz in [TIME]:
       
-          <twine happy message>
+          <uv happy message>
       
       Published 'example_b_961b4c22-2.0.0.tar.gz'
       Published example_b_961b4c22-3.0.0-py3-none-any.whl in [TIME]:
       
-          <twine happy message>
+          <uv happy message>
       
       Published 'example_b_961b4c22-3.0.0-py3-none-any.whl'
       Published example_b_961b4c22-3.0.0.tar.gz in [TIME]:
       
-          <twine happy message>
+          <uv happy message>
       
       Published 'example_b_961b4c22-3.0.0.tar.gz'
       Published 1 targets (9 new files) in [TIME]
@@ -204,7 +204,7 @@
     ''',
   })
 # ---
-# name: test_publish_example_twine_succeeds_parallel
+# name: test_publish_example_uv_succeeds_parallel
   dict({
     'exit_code': 0,
     'stderr': '<not included>',

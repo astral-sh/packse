@@ -305,7 +305,7 @@ def _add_publish_parser(subparsers):
     parser.add_argument(
         "--dry-run",
         action="store_true",
-        help="Do not actually publish, just show twine commands that would be used.",
+        help="Do not actually publish, just show uv commands that would be used.",
     )
     parser.add_argument(
         "--skip-existing",
