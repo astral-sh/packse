@@ -1,11 +1,10 @@
+import importlib.metadata
 import logging
 import shutil
 import subprocess
 import tempfile
 import time
 from pathlib import Path
-
-import pkg_resources
 
 from packse.error import DestinationAlreadyExists
 
@@ -26,7 +25,7 @@ def fetch(
         raise DestinationAlreadyExists(dest)
 
     if not ref:
-        ref = pkg_resources.get_distribution("packse").version
+        ref = importlib.metadata.version("packse")
         if ref == "0.0.0":
             ref = "HEAD"
 
@@ -71,7 +70,7 @@ def fetch(
         file_count = 0
         for file in sorted(src.iterdir()):
             file_count += 1
-            logger.info("Found %s", file.name)
+            logger.debug("Found %s", file.name)
 
         logger.info("Copying files into '%s'", dest)
         shutil.copytree(src, dest, dirs_exist_ok=True)
