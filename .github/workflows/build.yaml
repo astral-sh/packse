@@ -31,26 +31,18 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
-      - name: Set up Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: "${{ env.PYTHON_VERSION }}"
-
-      - name: Set up uv
-        run: |
-          curl -LsSf https://astral.sh/uv/install.sh | sh
+      - uses: astral-sh/setup-uv@v3
 
       - name: Publish to Test PyPI
         id: build
         env:
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.TEST_PYPI_API_TOKEN }}
+          UV_PUBLISH_TOKEN: ${{ secrets.TEST_PYPI_API_TOKEN }}
         run: |
           version=$(./scripts/version dev)
           echo "version=$version" >> $GITHUB_OUTPUT
           sed -i -e "s/0.0.0/$version/" pyproject.toml
-          uv tool run -- hatchling build
-          uv tool run -- twine upload -r testpypi dist/*
+          uv build
+          uv publish --publish-url https://test.pypi.org/legacy/
 
   test-install:
     # We test the install on a clean machine to avoid poetry behavior attempting to
@@ -66,9 +58,7 @@ jobs:
         with:
           python-version: "${{ env.PYTHON_VERSION }}"
 
-      - name: Set up uv
-        run: |
-          curl -LsSf https://astral.sh/uv/install.sh | sh
+      - uses: astral-sh/setup-uv@v3
 
       - name: Wait for package to be available
         run: >

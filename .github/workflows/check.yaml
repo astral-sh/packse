@@ -25,23 +25,13 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-
-      - name: Set up uv
-        run: |
-          curl -LsSf https://astral.sh/uv/install.sh | sh
-
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v5
-        with:
-          python-version: "${{ matrix.python-version }}"
+      - uses: astral-sh/setup-uv@v3
 
       - name: Check Python lint
-        run: |
-          uv tool run -- ruff check . --config pyproject.toml
+        run: uvx ruff check . --config pyproject.toml
 
       - name: Check Python formatting
-        run: |
-          uv tool run -- ruff format --check .  --config pyproject.toml
+        run: uvx ruff format --check .  --config pyproject.toml
 
   typos:
     runs-on: ubuntu-latest

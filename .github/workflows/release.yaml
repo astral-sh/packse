@@ -21,25 +21,19 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
-      - name: Set up Python 3.12
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+      - uses: astral-sh/setup-uv@v3
 
       - name: Set up uv
         run: |
           curl -LsSf https://astral.sh/uv/install.sh | sh
 
-      # Note: If build and publish steps are ever separated, the version must
-      #       be set before building
       - name: Publish package
         env:
-          TWINE_USERNAME: __token__
-          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+          UV_PUBLISH_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           sed -i -e "s/0.0.0/${GITHUB_REF#refs/*/}/" pyproject.toml
-          uv tool run -- hatchling build
-          uv tool run -- twine upload dist/*
+          uv build
+          uv publish --publish-url https://test.pypi.org/legacy/
 
   release-scenarios:
     name: Publish scenarios
@@ -52,10 +46,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Set up uv
-        run: |
-          curl -LsSf https://astral.sh/uv/install.sh | sh
-
+      - uses: astral-sh/setup-uv@v3
+      
       - name: Install packages
         run: |
           uv sync --all-extras
