@@ -33,7 +33,7 @@ jobs:
         run: |
           sed -i -e "s/0.0.0/${GITHUB_REF#refs/*/}/" pyproject.toml
           uv build
-          uv publish --publish-url https://test.pypi.org/legacy/
+          uv publish
 
   release-scenarios:
     name: Publish scenarios
