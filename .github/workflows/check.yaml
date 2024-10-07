@@ -33,6 +33,11 @@ jobs:
       - name: Check Python formatting
         run: uvx ruff format --check .  --config pyproject.toml
 
+      - name: Check Scenarios formatting
+        run: |
+          npm ci
+          npx prettier --check "scenarios/**/*.{toml,json,yaml}"
+
   typos:
     runs-on: ubuntu-latest
     name: Check typos
