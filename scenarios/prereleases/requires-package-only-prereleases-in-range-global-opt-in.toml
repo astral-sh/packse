@@ -13,3 +13,6 @@ a = "1.0.0a1"
 [packages.a.versions."0.1.0"]
 
 [packages.a.versions."1.0.0a1"]
+
+[resolver_options]
+prereleases = true

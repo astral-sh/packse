@@ -14,3 +14,9 @@ wheel = false
 
 [packages.a.versions."2.0.0"]
 requires_python = ">=3.12"
+
+[resolver_options]
+python = "3.11"
+
+[environment]
+python = "3.9"

@@ -9,3 +9,9 @@ satisfiable = false
 
 [packages.a.versions."1.0.0"]
 requires_python = ">=3.10"
+
+[resolver_options]
+python = "3.9"
+
+[environment]
+python = "3.11"

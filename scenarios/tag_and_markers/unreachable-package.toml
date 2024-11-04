@@ -11,3 +11,6 @@ satisfiable = true
 requires = ["b==1.0.0; sys_platform == 'linux'"]
 
 [packages.b.versions."1.0.0"]
+
+[resolver_options]
+universal = true

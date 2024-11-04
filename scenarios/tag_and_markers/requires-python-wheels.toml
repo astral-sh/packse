@@ -10,3 +10,9 @@ satisfiable = true
 
 [packages.a.versions."1.0.0"]
 wheel_tags = ["cp311-cp311-any", "cp310-cp310-any", "cp39-cp39-any"]
+
+[resolver_options]
+universal = true
+
+[environment]
+python = "3.12"

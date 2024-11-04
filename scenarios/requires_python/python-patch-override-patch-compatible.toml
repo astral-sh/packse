@@ -12,3 +12,9 @@ a = "1.0.0"
 
 [packages.a.versions."1.0.0"]
 requires_python = ">=3.8.0"
+
+[resolver_options]
+python = "3.8.0"
+
+[environment]
+python = "3.8.18"
