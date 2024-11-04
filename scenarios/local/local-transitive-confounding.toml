@@ -19,4 +19,6 @@ requires = ["b==2.0.0"]
 wheel_tags = ["py3-any-macosx_10_0_ppc64"]
 sdist = false
 
+[packages.b.versions."2.0.0+bar"]
+
 [packages.b.versions."2.0.0+foo"]

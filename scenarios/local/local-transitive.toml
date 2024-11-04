@@ -16,3 +16,5 @@ b = "2.0.0+foo"
 requires = ["b==2.0.0"]
 
 [packages.b.versions."2.0.0+foo"]
+
+[packages.b.versions."2.0.0+bar"]

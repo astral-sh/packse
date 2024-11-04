@@ -9,7 +9,7 @@ satisfiable = true
 explanation = "The version '1.2.3' with an sdist satisfies the constraint '==1.2.3'."
 
 [expected.packages]
-a = "1.2.3"
+a = "1.2.3+foo"
 
 [packages.a.versions."1.2.3"]
 wheel_tags = ["py3-any-macosx_10_0_ppc64"]

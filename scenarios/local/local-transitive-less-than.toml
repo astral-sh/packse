@@ -10,4 +10,6 @@ satisfiable = false
 [packages.a.versions."1.0.0"]
 requires = ["b<2.0.0"]
 
+[packages.b.versions."2.0.0+bar"]
+
 [packages.b.versions."2.0.0+foo"]
