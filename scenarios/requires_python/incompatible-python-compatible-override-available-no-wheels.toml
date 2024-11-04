@@ -14,3 +14,10 @@ a = "1.0.0"
 [packages.a.versions."1.0.0"]
 requires_python = ">=3.10"
 wheel = false
+
+[resolver_options]
+python = "3.11"
+
+[environment]
+python = "3.9"
+additional_python = ["3.11"]

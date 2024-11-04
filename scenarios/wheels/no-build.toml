@@ -9,3 +9,6 @@ satisfiable = true
 explanation = "The wheel should be used for install"
 
 [packages.a.versions."1.0.0"]
+
+[resolver_options]
+no_build = ["a"]

@@ -9,3 +9,6 @@ satisfiable = false
 
 [packages.a.versions."1.0.0"]
 sdist = false
+
+[resolver_options]
+no_binary = ["a"]

@@ -10,3 +10,6 @@ explanation = "We ignore the upper bound on Python requirements"
 
 [packages.a.versions."1.0.0"]
 requires_python = "<=3.8"
+
+[environment]
+python = "3.9"

@@ -42,3 +42,6 @@ requires_python = ">=3.11"
 
 [packages.a.versions."3.5.0"]
 requires_python = ">=3.11"
+
+[environment]
+python = "3.9"

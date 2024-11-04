@@ -9,3 +9,6 @@ satisfiable = false
 
 [packages.a.versions."1.0.0"]
 wheel = false
+
+[resolver_options]
+no_build = ["a"]

@@ -34,3 +34,6 @@ wheel_tags = [
   "cp312-cp312-win_amd64",
   "cp312-cp312-macosx_14_0_x86_64",
 ]
+
+[resolver_options]
+universal = true

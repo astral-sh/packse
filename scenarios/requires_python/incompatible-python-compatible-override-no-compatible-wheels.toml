@@ -11,3 +11,9 @@ explanation = "Since there are no compatible wheels for the package and it is no
 [packages.a.versions."1.0.0"]
 requires_python = ">=3.10"
 wheel_tags = ["foo-none-any"]
+
+[resolver_options]
+python = "3.11"
+
+[environment]
+python = "3.9"
