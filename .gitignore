@@ -4,3 +4,4 @@ __pycache__
 .envrc
 build/**/*
 dist/**/*
+node_modules

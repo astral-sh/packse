@@ -84,7 +84,7 @@ jobs:
 
       - name: Check release version
         run: |
-          installed=$(python3 -c "import pkg_resources; print(pkg_resources.get_distribution('packse').version)")
+          installed=$(python3 -c "from importlib.metadata import version; print(version('packse'))")
           test $installed = ${{ needs.build-and-publish.outputs.build-version }}
 
       - name: Check CLI help
