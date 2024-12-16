@@ -327,7 +327,7 @@ def build_package_distributions(
                 default_tag_wheel = dist
                 break
         if not default_tag_wheel:
-            raise BuildError("No wheel found with tag `py3-none-any`.")
+            raise BuildError("No wheel found with tag `py3-none-any`", "")
 
         # Since we always build a universal wheel, we just create copies of it for other platforms
         # which means we're lying about the compatibility of the wheel but it will always be installable
