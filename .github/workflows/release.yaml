@@ -1,7 +1,8 @@
 name: Release
 
 permissions:
-  contents: write # Needed for GH pages updates
+  contents: write # for GitHub Pages updates
+  id-token: write # for PyPI trusted publishing
 
 on:
   push:
