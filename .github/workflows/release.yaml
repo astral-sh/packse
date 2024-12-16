@@ -14,6 +14,7 @@ jobs:
   release-package:
     name: Release to PyPI
     runs-on: ubuntu-latest
+    environment: release
 
     steps:
       - uses: actions/checkout@v4
@@ -28,8 +29,6 @@ jobs:
           curl -LsSf https://astral.sh/uv/install.sh | sh
 
       - name: Publish package
-        env:
-          UV_PUBLISH_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
         run: |
           sed -i -e "s/0.0.0/${GITHUB_REF#refs/*/}/" pyproject.toml
           uv build
