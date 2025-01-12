@@ -10,3 +10,6 @@ satisfiable = false
 [packages.a.versions."1.0.0"]
 wheel_tags = ["jy27-none-any"]
 sdist = false
+
+[resolver_options]
+python_platform = "x86_64-manylinux2014"
