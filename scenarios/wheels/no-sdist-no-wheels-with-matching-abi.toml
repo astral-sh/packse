@@ -8,7 +8,7 @@ requires = ["a"]
 satisfiable = false
 
 [packages.a.versions."1.0.0"]
-wheel_tags = ["py3-MMMMMM-any"]
+wheel_tags = ["py3-graalpy310_graalpy240_310_native-any"]
 sdist = false
 
 [resolver_options]

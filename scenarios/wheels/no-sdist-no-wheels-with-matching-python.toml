@@ -8,7 +8,7 @@ requires = ["a"]
 satisfiable = false
 
 [packages.a.versions."1.0.0"]
-wheel_tags = ["jy27-none-any"]
+wheel_tags = ["graalpy310-none-any"]
 sdist = false
 
 [resolver_options]
