@@ -139,6 +139,11 @@ class ResolverOptions(msgspec.Struct, forbid_unknown_fields=True):
     non-overlapping marker expressions.
     """
 
+    python_platform: str | None = None
+    """
+    The Python platform to use for resolution.
+    """
+
     def hash(self) -> str:
         """
         Return a hash of the contents
@@ -152,6 +157,10 @@ class ResolverOptions(msgspec.Struct, forbid_unknown_fields=True):
             hasher.update(no_binary.encode())
         for no_build in self.no_build:
             hasher.update(no_build.encode())
+        if self.universal is not None:
+            hasher.update(self.universal.to_bytes())
+        if self.python_platform is not None:
+            hasher.update(self.python_platform.encode())
 
         return hasher.hexdigest()
 
