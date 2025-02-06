@@ -20,6 +20,6 @@ description = '''{{ description }}'''
 [project.optional-dependencies]
 {{# optional-dependencies }}
 {{ name }} = [{{# dependencies }}
-    "{{ . }}",
+    '''{{ . }}''',
 {{/ dependencies }}]
 {{/ optional-dependencies }}
