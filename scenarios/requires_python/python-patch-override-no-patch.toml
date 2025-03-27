@@ -15,4 +15,4 @@ requires_python = ">=3.8.4"
 python = "3.8"
 
 [environment]
-python = "3.8.18"
+python = "3.8.20"
