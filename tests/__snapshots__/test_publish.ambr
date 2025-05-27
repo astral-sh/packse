@@ -4,30 +4,30 @@
     'exit_code': 0,
     'stderr': '''
       Publishing 1 target to https://test.pypi.org/legacy/...
-      Publishing 'example-3006292c'...
-      Published 'example_3006292c-0.0.0.tar.gz'
-      Published 'example_a_3006292c-1.0.0-py3-none-any.whl'
-      Published 'example_a_3006292c-1.0.0.tar.gz'
-      Published 'example_b_3006292c-1.0.0-py3-none-any.whl'
-      Published 'example_b_3006292c-1.0.0.tar.gz'
-      Published 'example_b_3006292c-2.0.0-py3-none-any.whl'
-      Published 'example_b_3006292c-2.0.0.tar.gz'
-      Published 'example_b_3006292c-3.0.0-py3-none-any.whl'
-      Published 'example_b_3006292c-3.0.0.tar.gz'
+      Publishing 'example-e656679f'...
+      Published 'example_a_e656679f-1.0.0-py3-none-any.whl'
+      Published 'example_a_e656679f-1.0.0.tar.gz'
+      Published 'example_b_e656679f-1.0.0-py3-none-any.whl'
+      Published 'example_b_e656679f-1.0.0.tar.gz'
+      Published 'example_b_e656679f-2.0.0-py3-none-any.whl'
+      Published 'example_b_e656679f-2.0.0.tar.gz'
+      Published 'example_b_e656679f-3.0.0-py3-none-any.whl'
+      Published 'example_b_e656679f-3.0.0.tar.gz'
+      Published 'example_e656679f-0.0.0.tar.gz'
       Published 1 targets (9 new files) in [TIME]
   
     ''',
     'stdout': '''
-      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_3006292c-0.0.0.tar.gz
-      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_a_3006292c-1.0.0-py3-none-any.whl
-      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_a_3006292c-1.0.0.tar.gz
-      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_3006292c-1.0.0-py3-none-any.whl
-      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_3006292c-1.0.0.tar.gz
-      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_3006292c-2.0.0-py3-none-any.whl
-      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_3006292c-2.0.0.tar.gz
-      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_3006292c-3.0.0-py3-none-any.whl
-      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_3006292c-3.0.0.tar.gz
-      example-3006292c
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_a_e656679f-1.0.0-py3-none-any.whl
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_a_e656679f-1.0.0.tar.gz
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_e656679f-1.0.0-py3-none-any.whl
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_e656679f-1.0.0.tar.gz
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_e656679f-2.0.0-py3-none-any.whl
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_e656679f-2.0.0.tar.gz
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_e656679f-3.0.0-py3-none-any.whl
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_b_e656679f-3.0.0.tar.gz
+      Would execute: uv publish --publish-url https://test.pypi.org/legacy/ [DISTDIR]/example_e656679f-0.0.0.tar.gz
+      example-e656679f
   
     ''',
   })
@@ -48,57 +48,57 @@
     'exit_code': 0,
     'stderr': '''
       Publishing 1 target to https://test.pypi.org/legacy/...
-      Publishing 'example-3006292c'...
-      Published example_3006292c-0.0.0.tar.gz in [TIME]:
+      Publishing 'example-e656679f'...
+      Published example_a_e656679f-1.0.0-py3-none-any.whl in [TIME]:
       
           <mock uv logs>
       
-      Published 'example_3006292c-0.0.0.tar.gz'
-      Published example_a_3006292c-1.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_a_e656679f-1.0.0-py3-none-any.whl'
+      Published example_a_e656679f-1.0.0.tar.gz in [TIME]:
       
           <mock uv logs>
       
-      Published 'example_a_3006292c-1.0.0-py3-none-any.whl'
-      Published example_a_3006292c-1.0.0.tar.gz in [TIME]:
+      Published 'example_a_e656679f-1.0.0.tar.gz'
+      Published example_b_e656679f-1.0.0-py3-none-any.whl in [TIME]:
       
           <mock uv logs>
       
-      Published 'example_a_3006292c-1.0.0.tar.gz'
-      Published example_b_3006292c-1.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_b_e656679f-1.0.0-py3-none-any.whl'
+      Published example_b_e656679f-1.0.0.tar.gz in [TIME]:
       
           <mock uv logs>
       
-      Published 'example_b_3006292c-1.0.0-py3-none-any.whl'
-      Published example_b_3006292c-1.0.0.tar.gz in [TIME]:
+      Published 'example_b_e656679f-1.0.0.tar.gz'
+      Published example_b_e656679f-2.0.0-py3-none-any.whl in [TIME]:
       
           <mock uv logs>
       
-      Published 'example_b_3006292c-1.0.0.tar.gz'
-      Published example_b_3006292c-2.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_b_e656679f-2.0.0-py3-none-any.whl'
+      Published example_b_e656679f-2.0.0.tar.gz in [TIME]:
       
           <mock uv logs>
       
-      Published 'example_b_3006292c-2.0.0-py3-none-any.whl'
-      Published example_b_3006292c-2.0.0.tar.gz in [TIME]:
+      Published 'example_b_e656679f-2.0.0.tar.gz'
+      Published example_b_e656679f-3.0.0-py3-none-any.whl in [TIME]:
       
           <mock uv logs>
       
-      Published 'example_b_3006292c-2.0.0.tar.gz'
-      Published example_b_3006292c-3.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_b_e656679f-3.0.0-py3-none-any.whl'
+      Published example_b_e656679f-3.0.0.tar.gz in [TIME]:
       
           <mock uv logs>
       
-      Published 'example_b_3006292c-3.0.0-py3-none-any.whl'
-      Published example_b_3006292c-3.0.0.tar.gz in [TIME]:
+      Published 'example_b_e656679f-3.0.0.tar.gz'
+      Published example_e656679f-0.0.0.tar.gz in [TIME]:
       
           <mock uv logs>
       
-      Published 'example_b_3006292c-3.0.0.tar.gz'
+      Published 'example_e656679f-0.0.0.tar.gz'
       Published 1 targets (9 new files) in [TIME]
   
     ''',
     'stdout': '''
-      example-3006292c
+      example-e656679f
   
     ''',
   })
@@ -108,8 +108,8 @@
     'exit_code': 1,
     'stderr': '''
       Publishing 1 target to https://test.pypi.org/legacy/...
-      Publishing 'example-3006292c'...
-      Publish for 'example_3006292c-0.0.0.tar.gz' already exists.
+      Publishing 'example-e656679f'...
+      Publish for 'example_a_e656679f-1.0.0-py3-none-any.whl' already exists.
       Failed to publish 1/1 targets.
   
     ''',
@@ -121,8 +121,8 @@
     'exit_code': 1,
     'stderr': '''
       Publishing 1 target to https://test.pypi.org/legacy/...
-      Publishing 'example-3006292c'...
-      Publish of 'example_3006292c-0.0.0.tar.gz' failed due to rate limits.
+      Publishing 'example-e656679f'...
+      Publish of 'example_a_e656679f-1.0.0-py3-none-any.whl' failed due to rate limits.
       Failed to publish 1/1 targets.
   
     ''',
@@ -134,8 +134,8 @@
     'exit_code': 1,
     'stderr': '''
       Publishing 1 target to https://test.pypi.org/legacy/...
-      Publishing 'example-3006292c'...
-      Publishing example_3006292c-0.0.0.tar.gz with uv failed:
+      Publishing 'example-e656679f'...
+      Publishing example_a_e656679f-1.0.0-py3-none-any.whl with uv failed:
           <uv error message>
       .
       Failed to publish 1/1 targets.
@@ -149,57 +149,57 @@
     'exit_code': 0,
     'stderr': '''
       Publishing 1 target to https://test.pypi.org/legacy/...
-      Publishing 'example-3006292c'...
-      Published example_3006292c-0.0.0.tar.gz in [TIME]:
+      Publishing 'example-e656679f'...
+      Published example_a_e656679f-1.0.0-py3-none-any.whl in [TIME]:
       
           <uv happy message>
       
-      Published 'example_3006292c-0.0.0.tar.gz'
-      Published example_a_3006292c-1.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_a_e656679f-1.0.0-py3-none-any.whl'
+      Published example_a_e656679f-1.0.0.tar.gz in [TIME]:
       
           <uv happy message>
       
-      Published 'example_a_3006292c-1.0.0-py3-none-any.whl'
-      Published example_a_3006292c-1.0.0.tar.gz in [TIME]:
+      Published 'example_a_e656679f-1.0.0.tar.gz'
+      Published example_b_e656679f-1.0.0-py3-none-any.whl in [TIME]:
       
           <uv happy message>
       
-      Published 'example_a_3006292c-1.0.0.tar.gz'
-      Published example_b_3006292c-1.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_b_e656679f-1.0.0-py3-none-any.whl'
+      Published example_b_e656679f-1.0.0.tar.gz in [TIME]:
       
           <uv happy message>
       
-      Published 'example_b_3006292c-1.0.0-py3-none-any.whl'
-      Published example_b_3006292c-1.0.0.tar.gz in [TIME]:
+      Published 'example_b_e656679f-1.0.0.tar.gz'
+      Published example_b_e656679f-2.0.0-py3-none-any.whl in [TIME]:
       
           <uv happy message>
       
-      Published 'example_b_3006292c-1.0.0.tar.gz'
-      Published example_b_3006292c-2.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_b_e656679f-2.0.0-py3-none-any.whl'
+      Published example_b_e656679f-2.0.0.tar.gz in [TIME]:
       
           <uv happy message>
       
-      Published 'example_b_3006292c-2.0.0-py3-none-any.whl'
-      Published example_b_3006292c-2.0.0.tar.gz in [TIME]:
+      Published 'example_b_e656679f-2.0.0.tar.gz'
+      Published example_b_e656679f-3.0.0-py3-none-any.whl in [TIME]:
       
           <uv happy message>
       
-      Published 'example_b_3006292c-2.0.0.tar.gz'
-      Published example_b_3006292c-3.0.0-py3-none-any.whl in [TIME]:
+      Published 'example_b_e656679f-3.0.0-py3-none-any.whl'
+      Published example_b_e656679f-3.0.0.tar.gz in [TIME]:
       
           <uv happy message>
       
-      Published 'example_b_3006292c-3.0.0-py3-none-any.whl'
-      Published example_b_3006292c-3.0.0.tar.gz in [TIME]:
+      Published 'example_b_e656679f-3.0.0.tar.gz'
+      Published example_e656679f-0.0.0.tar.gz in [TIME]:
       
           <uv happy message>
       
-      Published 'example_b_3006292c-3.0.0.tar.gz'
+      Published 'example_e656679f-0.0.0.tar.gz'
       Published 1 targets (9 new files) in [TIME]
   
     ''',
     'stdout': '''
-      example-3006292c
+      example-e656679f
   
     ''',
   })
@@ -209,7 +209,7 @@
     'exit_code': 0,
     'stderr': '<not included>',
     'stdout': '''
-      example-3006292c
+      example-e656679f
   
     ''',
   })
