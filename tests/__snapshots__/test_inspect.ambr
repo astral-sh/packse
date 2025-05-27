@@ -21,12 +21,12 @@
             "name": "example",
             "packages": [
               {
-                "name": "example-a-3006292c",
+                "name": "example-a-e656679f",
                 "versions": [
                   {
-                    "requires_python": ">=3.8",
+                    "requires_python": ">=3.12",
                     "requires": [
-                      "example-b-3006292c>1.0.0"
+                      "example-b-e656679f>1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -39,10 +39,10 @@
                 ]
               },
               {
-                "name": "example-b-3006292c",
+                "name": "example-b-e656679f",
                 "versions": [
                   {
-                    "requires_python": ">=3.8",
+                    "requires_python": ">=3.12",
                     "requires": [],
                     "extras": [],
                     "sdist": true,
@@ -53,7 +53,7 @@
                     "version": "1.0.0"
                   },
                   {
-                    "requires_python": ">=3.8",
+                    "requires_python": ">=3.12",
                     "requires": [],
                     "extras": [],
                     "sdist": true,
@@ -64,9 +64,9 @@
                     "version": "2.0.0"
                   },
                   {
-                    "requires_python": ">=3.8",
+                    "requires_python": ">=3.12",
                     "requires": [
-                      "example-c-3006292c"
+                      "example-c-e656679f"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -80,12 +80,12 @@
               }
             ],
             "root": {
-              "requires_python": ">=3.8",
+              "requires_python": ">=3.12",
               "requires": [
                 {
-                  "requirement": "example-a-3006292c",
-                  "name": "example-a-3006292c",
-                  "module_name": "example_a_3006292c"
+                  "requirement": "example-a-e656679f",
+                  "name": "example-a-e656679f",
+                  "module_name": "example_a_e656679f"
                 }
               ]
             },
@@ -93,14 +93,14 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "example-a-3006292c",
+                  "name": "example-a-e656679f",
                   "version": "1.0.0",
-                  "module_name": "example_a_3006292c"
+                  "module_name": "example_a_e656679f"
                 },
                 {
-                  "name": "example-b-3006292c",
+                  "name": "example-b-e656679f",
                   "version": "2.0.0",
-                  "module_name": "example_b_3006292c"
+                  "module_name": "example_b_e656679f"
                 }
               ],
               "explanation": "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
@@ -121,7 +121,7 @@
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
             "_textwrap": true,
             "source": "[PROJECT_ROOT]/scenarios/examples/example.json",
-            "version": "3006292c",
+            "version": "e656679f",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.12",
@@ -130,19 +130,15 @@
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires b>1.0.0",
-              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by b-2.0.0",
-              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by b-3.0.0",
-              "\u2502       \u2514\u2500\u2500 requires python>=3.8",
+              "\u2502       \u2514\u2500\u2500 requires b>1.0.0",
+              "\u2502           \u251c\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by b-3.0.0",
               "\u2514\u2500\u2500 b",
               "    \u251c\u2500\u2500 b-1.0.0",
-              "    \u2502   \u2514\u2500\u2500 requires python>=3.8",
               "    \u251c\u2500\u2500 b-2.0.0",
-              "    \u2502   \u2514\u2500\u2500 requires python>=3.8",
               "    \u2514\u2500\u2500 b-3.0.0",
-              "        \u251c\u2500\u2500 requires c",
-              "            \u2514\u2500\u2500 unsatisfied: no versions for package",
-              "        \u2514\u2500\u2500 requires python>=3.8"
+              "        \u2514\u2500\u2500 requires c",
+              "            \u2514\u2500\u2500 unsatisfied: no versions for package"
             ],
             "module_name": "example"
           }
@@ -163,12 +159,12 @@
             "name": "example",
             "packages": [
               {
-                "name": "example-a-3006292c",
+                "name": "example-a-e656679f",
                 "versions": [
                   {
-                    "requires_python": ">=3.8",
+                    "requires_python": ">=3.12",
                     "requires": [
-                      "example-b-3006292c>1.0.0"
+                      "example-b-e656679f>1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -181,10 +177,10 @@
                 ]
               },
               {
-                "name": "example-b-3006292c",
+                "name": "example-b-e656679f",
                 "versions": [
                   {
-                    "requires_python": ">=3.8",
+                    "requires_python": ">=3.12",
                     "requires": [],
                     "extras": [],
                     "sdist": true,
@@ -195,7 +191,7 @@
                     "version": "1.0.0"
                   },
                   {
-                    "requires_python": ">=3.8",
+                    "requires_python": ">=3.12",
                     "requires": [],
                     "extras": [],
                     "sdist": true,
@@ -206,9 +202,9 @@
                     "version": "2.0.0"
                   },
                   {
-                    "requires_python": ">=3.8",
+                    "requires_python": ">=3.12",
                     "requires": [
-                      "example-c-3006292c"
+                      "example-c-e656679f"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -222,12 +218,12 @@
               }
             ],
             "root": {
-              "requires_python": ">=3.8",
+              "requires_python": ">=3.12",
               "requires": [
                 {
-                  "requirement": "example-a-3006292c",
-                  "name": "example-a-3006292c",
-                  "module_name": "example_a_3006292c"
+                  "requirement": "example-a-e656679f",
+                  "name": "example-a-e656679f",
+                  "module_name": "example_a_e656679f"
                 }
               ]
             },
@@ -235,14 +231,14 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "example-a-3006292c",
+                  "name": "example-a-e656679f",
                   "version": "1.0.0",
-                  "module_name": "example_a_3006292c"
+                  "module_name": "example_a_e656679f"
                 },
                 {
-                  "name": "example-b-3006292c",
+                  "name": "example-b-e656679f",
                   "version": "2.0.0",
-                  "module_name": "example_b_3006292c"
+                  "module_name": "example_b_e656679f"
                 }
               ],
               "explanation": "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
@@ -263,7 +259,7 @@
             "description": "This is an example scenario, in which the user depends on a single package `a` which requires `b`.",
             "_textwrap": true,
             "source": "[PWD]/scenarios/examples/example.json",
-            "version": "3006292c",
+            "version": "e656679f",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.12",
@@ -272,19 +268,15 @@
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires b>1.0.0",
-              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by b-2.0.0",
-              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by b-3.0.0",
-              "\u2502       \u2514\u2500\u2500 requires python>=3.8",
+              "\u2502       \u2514\u2500\u2500 requires b>1.0.0",
+              "\u2502           \u251c\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by b-3.0.0",
               "\u2514\u2500\u2500 b",
               "    \u251c\u2500\u2500 b-1.0.0",
-              "    \u2502   \u2514\u2500\u2500 requires python>=3.8",
               "    \u251c\u2500\u2500 b-2.0.0",
-              "    \u2502   \u2514\u2500\u2500 requires python>=3.8",
               "    \u2514\u2500\u2500 b-3.0.0",
-              "        \u251c\u2500\u2500 requires c",
-              "            \u2514\u2500\u2500 unsatisfied: no versions for package",
-              "        \u2514\u2500\u2500 requires python>=3.8"
+              "        \u2514\u2500\u2500 requires c",
+              "            \u2514\u2500\u2500 unsatisfied: no versions for package"
             ],
             "module_name": "example"
           }
@@ -332,12 +324,12 @@
             "name": "example-toml",
             "packages": [
               {
-                "name": "example-toml-a-64e6f3c2",
+                "name": "example-toml-a-1b8d92d0",
                 "versions": [
                   {
-                    "requires_python": ">=3.8",
+                    "requires_python": ">=3.12",
                     "requires": [
-                      "example-toml-b-64e6f3c2>1.0.0"
+                      "example-toml-b-1b8d92d0>1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -350,10 +342,10 @@
                 ]
               },
               {
-                "name": "example-toml-b-64e6f3c2",
+                "name": "example-toml-b-1b8d92d0",
                 "versions": [
                   {
-                    "requires_python": ">=3.8",
+                    "requires_python": ">=3.12",
                     "requires": [],
                     "extras": [],
                     "sdist": true,
@@ -364,7 +356,7 @@
                     "version": "1.0.0"
                   },
                   {
-                    "requires_python": ">=3.8",
+                    "requires_python": ">=3.12",
                     "requires": [],
                     "extras": [],
                     "sdist": true,
@@ -375,9 +367,9 @@
                     "version": "2.0.0"
                   },
                   {
-                    "requires_python": ">=3.8",
+                    "requires_python": ">=3.12",
                     "requires": [
-                      "example-toml-c-64e6f3c2"
+                      "example-toml-c-1b8d92d0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -391,12 +383,12 @@
               }
             ],
             "root": {
-              "requires_python": ">=3.8",
+              "requires_python": ">=3.12",
               "requires": [
                 {
-                  "requirement": "example-toml-a-64e6f3c2",
-                  "name": "example-toml-a-64e6f3c2",
-                  "module_name": "example_toml_a_64e6f3c2"
+                  "requirement": "example-toml-a-1b8d92d0",
+                  "name": "example-toml-a-1b8d92d0",
+                  "module_name": "example_toml_a_1b8d92d0"
                 }
               ]
             },
@@ -404,14 +396,14 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "example-toml-a-64e6f3c2",
+                  "name": "example-toml-a-1b8d92d0",
                   "version": "1.0.0",
-                  "module_name": "example_toml_a_64e6f3c2"
+                  "module_name": "example_toml_a_1b8d92d0"
                 },
                 {
-                  "name": "example-toml-b-64e6f3c2",
+                  "name": "example-toml-b-1b8d92d0",
                   "version": "2.0.0",
-                  "module_name": "example_toml_b_64e6f3c2"
+                  "module_name": "example_toml_b_1b8d92d0"
                 }
               ],
               "explanation": "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
@@ -432,7 +424,7 @@
             "description": "This is an example scenario written in TOML, in which the user depends on a single package `a` which requires `b`.",
             "_textwrap": false,
             "source": "[PWD]/scenarios/examples/example.toml",
-            "version": "64e6f3c2",
+            "version": "1b8d92d0",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.12",
@@ -441,19 +433,15 @@
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires b>1.0.0",
-              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by b-2.0.0",
-              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by b-3.0.0",
-              "\u2502       \u2514\u2500\u2500 requires python>=3.8",
+              "\u2502       \u2514\u2500\u2500 requires b>1.0.0",
+              "\u2502           \u251c\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by b-3.0.0",
               "\u2514\u2500\u2500 b",
               "    \u251c\u2500\u2500 b-1.0.0",
-              "    \u2502   \u2514\u2500\u2500 requires python>=3.8",
               "    \u251c\u2500\u2500 b-2.0.0",
-              "    \u2502   \u2514\u2500\u2500 requires python>=3.8",
               "    \u2514\u2500\u2500 b-3.0.0",
-              "        \u251c\u2500\u2500 requires c",
-              "            \u2514\u2500\u2500 unsatisfied: no versions for package",
-              "        \u2514\u2500\u2500 requires python>=3.8"
+              "        \u2514\u2500\u2500 requires c",
+              "            \u2514\u2500\u2500 unsatisfied: no versions for package"
             ],
             "module_name": "example_toml"
           }
@@ -474,12 +462,12 @@
             "name": "example-yaml",
             "packages": [
               {
-                "name": "example-yaml-a-db3b5da9",
+                "name": "example-yaml-a-41a12a49",
                 "versions": [
                   {
-                    "requires_python": ">=3.8",
+                    "requires_python": ">=3.12",
                     "requires": [
-                      "example-yaml-b-db3b5da9>1.0.0"
+                      "example-yaml-b-41a12a49>1.0.0"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -492,10 +480,10 @@
                 ]
               },
               {
-                "name": "example-yaml-b-db3b5da9",
+                "name": "example-yaml-b-41a12a49",
                 "versions": [
                   {
-                    "requires_python": ">=3.8",
+                    "requires_python": ">=3.12",
                     "requires": [],
                     "extras": [],
                     "sdist": true,
@@ -506,7 +494,7 @@
                     "version": "1.0.0"
                   },
                   {
-                    "requires_python": ">=3.8",
+                    "requires_python": ">=3.12",
                     "requires": [],
                     "extras": [],
                     "sdist": true,
@@ -517,9 +505,9 @@
                     "version": "2.0.0"
                   },
                   {
-                    "requires_python": ">=3.8",
+                    "requires_python": ">=3.12",
                     "requires": [
-                      "example-yaml-c-db3b5da9"
+                      "example-yaml-c-41a12a49"
                     ],
                     "extras": [],
                     "sdist": true,
@@ -533,12 +521,12 @@
               }
             ],
             "root": {
-              "requires_python": ">=3.8",
+              "requires_python": ">=3.12",
               "requires": [
                 {
-                  "requirement": "example-yaml-a-db3b5da9",
-                  "name": "example-yaml-a-db3b5da9",
-                  "module_name": "example_yaml_a_db3b5da9"
+                  "requirement": "example-yaml-a-41a12a49",
+                  "name": "example-yaml-a-41a12a49",
+                  "module_name": "example_yaml_a_41a12a49"
                 }
               ]
             },
@@ -546,14 +534,14 @@
               "satisfiable": true,
               "packages": [
                 {
-                  "name": "example-yaml-a-db3b5da9",
+                  "name": "example-yaml-a-41a12a49",
                   "version": "1.0.0",
-                  "module_name": "example_yaml_a_db3b5da9"
+                  "module_name": "example_yaml_a_41a12a49"
                 },
                 {
-                  "name": "example-yaml-b-db3b5da9",
+                  "name": "example-yaml-b-41a12a49",
                   "version": "2.0.0",
-                  "module_name": "example_yaml_b_db3b5da9"
+                  "module_name": "example_yaml_b_41a12a49"
                 }
               ],
               "explanation": "The latest valid version of `b` should be installed. `b==3.0.0` is not valid because it requires `c` which does not exist."
@@ -574,7 +562,7 @@
             "description": "This is an example scenario written in YAML, in which the user depends on a single package `a` which requires `b`.",
             "_textwrap": false,
             "source": "[PWD]/scenarios/examples/example.yaml",
-            "version": "db3b5da9",
+            "version": "41a12a49",
             "tree": [
               "\u251c\u2500\u2500 environment",
               "\u2502   \u2514\u2500\u2500 python3.12",
@@ -583,19 +571,15 @@
               "\u2502       \u2514\u2500\u2500 satisfied by a-1.0.0",
               "\u251c\u2500\u2500 a",
               "\u2502   \u2514\u2500\u2500 a-1.0.0",
-              "\u2502       \u251c\u2500\u2500 requires b>1.0.0",
-              "\u2502       \u2502   \u251c\u2500\u2500 satisfied by b-2.0.0",
-              "\u2502       \u2502   \u2514\u2500\u2500 satisfied by b-3.0.0",
-              "\u2502       \u2514\u2500\u2500 requires python>=3.8",
+              "\u2502       \u2514\u2500\u2500 requires b>1.0.0",
+              "\u2502           \u251c\u2500\u2500 satisfied by b-2.0.0",
+              "\u2502           \u2514\u2500\u2500 satisfied by b-3.0.0",
               "\u2514\u2500\u2500 b",
               "    \u251c\u2500\u2500 b-1.0.0",
-              "    \u2502   \u2514\u2500\u2500 requires python>=3.8",
               "    \u251c\u2500\u2500 b-2.0.0",
-              "    \u2502   \u2514\u2500\u2500 requires python>=3.8",
               "    \u2514\u2500\u2500 b-3.0.0",
-              "        \u251c\u2500\u2500 requires c",
-              "            \u2514\u2500\u2500 unsatisfied: no versions for package",
-              "        \u2514\u2500\u2500 requires python>=3.8"
+              "        \u2514\u2500\u2500 requires c",
+              "            \u2514\u2500\u2500 unsatisfied: no versions for package"
             ],
             "module_name": "example_yaml"
           }

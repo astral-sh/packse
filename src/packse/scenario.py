@@ -54,7 +54,7 @@ class PackageMetadata(msgspec.Struct, forbid_unknown_fields=True):
     Metadata for a single version of a package.
     """
 
-    requires_python: str | None = ">=3.8"
+    requires_python: str | None = ">=3.12"
     requires: list[Requirement] = []
     extras: dict[str, list[Requirement]] = {}
     sdist: bool = True
@@ -91,7 +91,7 @@ class PackageMetadata(msgspec.Struct, forbid_unknown_fields=True):
 
 
 class RootPackageMetadata(msgspec.Struct, forbid_unknown_fields=True):
-    requires_python: str | None = ">=3.8"
+    requires_python: str | None = ">=3.12"
     requires: list[Requirement] = []
 
     def hash(self) -> str:
