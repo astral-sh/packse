@@ -4,23 +4,27 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      example-961b4c22
+      example-3006292c
       ├── environment
-      │   └── python3.8
+      │   └── python3.12
       ├── root
       │   └── requires a
       │       └── satisfied by a-1.0.0
       ├── a
       │   └── a-1.0.0
-      │       └── requires b>1.0.0
-      │           ├── satisfied by b-2.0.0
-      │           └── satisfied by b-3.0.0
+      │       ├── requires b>1.0.0
+      │       │   ├── satisfied by b-2.0.0
+      │       │   └── satisfied by b-3.0.0
+      │       └── requires python>=3.8
       └── b
           ├── b-1.0.0
+          │   └── requires python>=3.8
           ├── b-2.0.0
+          │   └── requires python>=3.8
           └── b-3.0.0
-              └── requires c
+              ├── requires c
                   └── unsatisfied: no versions for package
+              └── requires python>=3.8
       
   
     ''',
@@ -35,23 +39,27 @@
       
       This is an example scenario, in which the user depends on a single package `a` which requires `b`.
       
-      example-961b4c22
+      example-3006292c
       ├── environment
-      │   └── python3.8
+      │   └── python3.12
       ├── root
       │   └── requires a
       │       └── satisfied by a-1.0.0
       ├── a
       │   └── a-1.0.0
-      │       └── requires b>1.0.0
-      │           ├── satisfied by b-2.0.0
-      │           └── satisfied by b-3.0.0
+      │       ├── requires b>1.0.0
+      │       │   ├── satisfied by b-2.0.0
+      │       │   └── satisfied by b-3.0.0
+      │       └── requires python>=3.8
       └── b
           ├── b-1.0.0
+          │   └── requires python>=3.8
           ├── b-2.0.0
+          │   └── requires python>=3.8
           └── b-3.0.0
-              └── requires c
+              ├── requires c
                   └── unsatisfied: no versions for package
+              └── requires python>=3.8
       
   
     ''',
@@ -62,23 +70,27 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      961b4c22
+      3006292c
       ├── environment
-      │   └── python3.8
+      │   └── python3.12
       ├── root
       │   └── requires a
       │       └── satisfied by a-1.0.0
       ├── a
       │   └── a-1.0.0
-      │       └── requires b>1.0.0
-      │           ├── satisfied by b-2.0.0
-      │           └── satisfied by b-3.0.0
+      │       ├── requires b>1.0.0
+      │       │   ├── satisfied by b-2.0.0
+      │       │   └── satisfied by b-3.0.0
+      │       └── requires python>=3.8
       └── b
           ├── b-1.0.0
+          │   └── requires python>=3.8
           ├── b-2.0.0
+          │   └── requires python>=3.8
           └── b-3.0.0
-              └── requires c
+              ├── requires c
                   └── unsatisfied: no versions for package
+              └── requires python>=3.8
       
   
     ''',
