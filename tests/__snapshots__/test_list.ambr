@@ -15,7 +15,7 @@
     'stderr': '',
     'stdout': '''
       [PROJECT_ROOT]/scenarios/examples/example.json
-          example-961b4c22
+          example-3006292c
   
     ''',
   })
@@ -36,7 +36,7 @@
     'exit_code': 0,
     'stderr': '',
     'stdout': '''
-      example-961b4c22
+      example-3006292c
   
     ''',
   })
@@ -64,7 +64,7 @@
     'stderr': '',
     'stdout': '''
       scenarios/examples/example.json
-          961b4c22
+          3006292c
   
     ''',
   })

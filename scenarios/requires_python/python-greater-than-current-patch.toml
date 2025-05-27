@@ -8,7 +8,7 @@ requires = ["a==1.0.0"]
 satisfiable = false
 
 [packages.a.versions."1.0.0"]
-requires_python = ">=3.8.14"
+requires_python = ">=3.9.14"
 
 [environment]
-python = "3.8.12"
+python = "3.9.12"

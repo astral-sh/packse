@@ -166,7 +166,7 @@ class ResolverOptions(msgspec.Struct, forbid_unknown_fields=True):
 
 
 class EnvironmentMetadata(msgspec.Struct, forbid_unknown_fields=True):
-    python: str = "3.8"
+    python: str = "3.12"
     """
     The active Python version.
     """
