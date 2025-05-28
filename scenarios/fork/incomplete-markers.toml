@@ -14,6 +14,7 @@ universal = true
 satisfiable = true
 
 [root]
+requires_python = ">=3.9"
 requires = [
   "a==1; python_version < '3.10'",
   "a==2; python_version >= '3.11'",
