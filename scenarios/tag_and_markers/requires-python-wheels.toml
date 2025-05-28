@@ -9,6 +9,7 @@ requires = ["a==1.0.0"]
 satisfiable = true
 
 [packages.a.versions."1.0.0"]
+requires_python = ">=3.10"
 wheel_tags = ["cp311-cp311-any", "cp310-cp310-any", "cp39-cp39-any"]
 
 [resolver_options]
