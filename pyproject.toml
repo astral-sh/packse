@@ -26,7 +26,6 @@ dependencies = [
   "msgspec>=0.18.4",
   "hatchling>=1.20.0",
   "chevron-blue>=0.2.1",
-  "setuptools>=69.1.1",
   "pyyaml>=6.0.1",
   "uv>=0.4.17",
 ]
