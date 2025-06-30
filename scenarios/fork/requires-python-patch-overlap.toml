@@ -25,3 +25,4 @@ requires_python = ">=3.10.1"
 requires = ["a==1.0.0 ; python_version == '3.10'"]
 
 [packages.a.versions."1.0.0"]
+requires_python = ">=3.10"
