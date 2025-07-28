@@ -17,11 +17,11 @@ wheels = [
 
 [[package]]
 name = "chevron-blue"
-version = "0.2.1"
+version = "0.3.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/9a/44/52293d3b0238318222a9bbf9092c53ad34afd1fc4dad7e30f4ce85cdfddd/chevron_blue-0.2.1.tar.gz", hash = "sha256:fec5d54f2a71883c74a6e8266936aeaf2b2427c91dd32dc77e5cc64cdbf1c7d2", size = 8702, upload-time = "2024-01-03T23:26:02.396Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/18/05/2110389caf5789648f83c4374d9aa83215a50bb028bfb5139ccb51a8e3e3/chevron_blue-0.3.0.tar.gz", hash = "sha256:7099e1b8fa8d8e81beea31fcc448091f845de3533da1a36eea0c19327ab8521d", size = 7730, upload-time = "2025-07-16T16:56:23.064Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d9/f1/b959f5888a68017736384b90b8bb4a5ba78b32b3df7b5e31a2446ec17cba/chevron_blue-0.2.1-py3-none-any.whl", hash = "sha256:ab9accbb5c5f42ba224821904a4f14642cbc6d117706a8b105723bc80e733dea", size = 10306, upload-time = "2024-01-03T23:26:01.042Z" },
+    { url = "https://files.pythonhosted.org/packages/36/94/1ffcf1651c4ca3b7ecf8d20cc4e2ce13298f264ea31fa77bc53c0b5ddf56/chevron_blue-0.3.0-py3-none-any.whl", hash = "sha256:7ebea4ae16a410cc0416e98a158b0fad615173f67764cfea55bd24776bb0cf29", size = 9829, upload-time = "2025-07-16T16:56:21.904Z" },
 ]
 
 [[package]]
