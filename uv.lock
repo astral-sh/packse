@@ -189,15 +189,15 @@ wheels = [
 
 [[package]]
 name = "pypiserver"
-version = "2.3.2"
+version = "2.4.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "packaging" },
     { name = "pip" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/78/a8/b96f8c6d1e788e0b5821c7cc7ccd699b710bbb2d075563bdba78164dd6a3/pypiserver-2.3.2.tar.gz", hash = "sha256:d2b16b12a667a9f356f1b022e039d5ad2c33a76986bb2fdb3f18633dbb1afca3", size = 196324, upload-time = "2024-11-24T21:37:58.039Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/90/09/2b6400c798d2f3f3ba4e9c906af4e6c4f3301a8d9db284d7bb74da12108f/pypiserver-2.4.0.tar.gz", hash = "sha256:0dc0e8300c12c855253b36b34beebfc28305c2c9e39151540a2886b641d4b456", size = 189921, upload-time = "2025-08-18T12:36:54.091Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/85/df/7b9b4a4b8fa8dc1550a8f430ac10eb2c45ea9e493939d644f485a717de25/pypiserver-2.3.2-py2.py3-none-any.whl", hash = "sha256:67c30d2a1a2cea1c4cf6785ddfbce958dc8ee7978e56a54b5f4ebc0c5cb89079", size = 100699, upload-time = "2024-11-24T21:37:54.934Z" },
+    { url = "https://files.pythonhosted.org/packages/c3/e2/971349a38e835c9fe5954c6da6b4e5f506eb01c5affdc3dcc14cfdc45459/pypiserver-2.4.0-py2.py3-none-any.whl", hash = "sha256:43700f711ce092e148e2bb6e7be22a684af090344bf5c166f8ec14eb7bba24bc", size = 94603, upload-time = "2025-08-18T12:36:53.007Z" },
 ]
 
 [[package]]
