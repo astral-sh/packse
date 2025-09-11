@@ -5,13 +5,9 @@ env:
   # https://github.com/actions/runner/issues/241
   PY_COLORS: 1
 
-permissions:
-  id-token: write # Needed for AWS CodeArtifact OIDC
-  contents: write # Needed for GH pages updates
-
 on:
   pull_request:
-    types: [opened, reopened, synchronize]
+    types: [ opened, reopened, synchronize ]
   push:
     branches:
       - main
@@ -19,6 +15,9 @@ on:
 jobs:
   publish-packages:
     name: Publish python-${{ matrix.python-version }}, ${{ matrix.os }}
+
+    permissions:
+      contents: write # Needed for GH pages updates
 
     strategy:
       matrix:
