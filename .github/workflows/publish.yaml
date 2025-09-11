@@ -4,6 +4,7 @@ env:
   # Enable colored output
   # https://github.com/actions/runner/issues/241
   PY_COLORS: 1
+  PYTHON_VERSION: "3.12"
 
 on:
   pull_request:
@@ -14,22 +15,12 @@ on:
 
 jobs:
   publish-packages:
-    name: Publish python-${{ matrix.python-version }}, ${{ matrix.os }}
+    name: Publish python packages
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     permissions:
       contents: write # Needed for GH pages updates
-
-    strategy:
-      matrix:
-        os:
-          - ubuntu-latest
-        python-version:
-          - "3.12"
-
-      fail-fast: false
-
-    runs-on: ${{ matrix.os }}
-    timeout-minutes: 10
 
     steps:
       - uses: actions/checkout@v4
@@ -38,10 +29,10 @@ jobs:
         run: |
           curl -LsSf https://astral.sh/uv/install.sh | sh
 
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python ${{ env.PYTHON_VERSION }}
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: "${{ env.PYTHON_VERSION }}"
 
       - name: Install zsh
         run: |
