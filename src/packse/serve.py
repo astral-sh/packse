@@ -1,11 +1,13 @@
 import importlib
 import logging
+import shutil
 import threading
+import time
 from pathlib import Path
 
 from packse.build import build
-from packse.error import RequiresExtra, ServeThreadError
-from packse.index import add_vendored_build_deps, start_index_server
+from packse.error import PackseError, RequiresExtra
+from packse.index import add_vendored_build_deps, render_index, start_index_server
 
 try:
     import watchfiles
@@ -21,6 +23,7 @@ def serve(
     targets: list[Path],
     build_dir: Path,
     dist_dir: Path,
+    index_dir: Path,
     host: str = "localhost",
     port: int = 3141,
     short_names: bool = False,
@@ -34,13 +37,25 @@ def serve(
     if watchfiles is None:
         raise RequiresExtra("serve command", "serve")
 
-    dist_dir = Path(dist_dir)
-    build_dir = Path(build_dir)
+    build_scenarios(
+        targets,
+        short_names,
+        no_hash,
+        dist_dir,
+        build_dir,
+        index_dir,
+    )
 
-    build_ready = threading.Event()
     rebuild = threading.Thread(
-        target=build_scenarios,
-        args=(targets, short_names, no_hash, dist_dir, build_dir, build_ready),
+        target=watch_scenarios,
+        args=(
+            targets,
+            short_names,
+            no_hash,
+            dist_dir,
+            build_dir,
+            index_dir,
+        ),
         name="serve-build-scenarios",
         daemon=True,
     )
@@ -50,13 +65,6 @@ def serve(
         name="serve-package-index",
     )
     rebuild.start()
-
-    # Wait up to 60 seconds for the build to complete
-    for _ in range(60):
-        if build_ready.wait(1):
-            break
-        if not rebuild.is_alive():
-            raise ServeThreadError("Build thread failed.")
 
     try:
         serve.start()
@@ -70,37 +78,79 @@ def build_scenarios(
     no_hash: bool,
     dist_dir: Path,
     build_dir: Path,
-    ready: threading.Event,
+    index_dir: Path,
 ) -> None:
     if not targets:
         print("Warning: No targets provided, automatic rebuilds not enabled.")
-    else:
-        print("Performing initial build...")
-        build(
-            targets,
-            rm_destination=True,
-            skip_root=False,
-            short_names=short_names,
-            no_hash=no_hash,
-            dist_dir=dist_dir,
-            build_dir=build_dir,
-        )
+        return
 
-    ready.set()
+    print("Performing initial build...")
+    start = time.time()
+    build(
+        targets,
+        rm_destination=True,
+        skip_root=False,
+        short_names=short_names,
+        no_hash=no_hash,
+        dist_dir=dist_dir,
+        build_dir=build_dir,
+    )
+    if index_dir.exists():
+        shutil.rmtree(index_dir)
+    render_index(
+        targets,
+        no_hash=no_hash,
+        short_names=short_names,
+        dist_dir=dist_dir,
+        exist_ok=False,
+        index_dir=index_dir,
+    )
 
+    logger.info(
+        f"Built scenarios and populated templates in {time.time() - start:.2f}s."
+    )
+
+
+def watch_scenarios(
+    targets: list[Path],
+    short_names: bool,
+    no_hash: bool,
+    dist_dir: Path,
+    build_dir: Path,
+    index_dir: Path,
+) -> None:
     for changes in watchfiles.watch(*targets):
-        targets = [path for kind, path in changes if kind != watchfiles.Change.deleted]
-        targets = [Path(target) for target in targets if Path(target).is_file()]
-        print("Detected changes! Rebuilding...")
-        build(
-            targets,
-            rm_destination=True,
-            skip_root=False,
-            short_names=short_names,
-            no_hash=no_hash,
-            dist_dir=dist_dir,
-            build_dir=build_dir,
-        )
+        # When trying to render a (temporarily) invalid file, print errors and retry on the next change.
+        try:
+            targets = [
+                path for kind, path in changes if kind != watchfiles.Change.deleted
+            ]
+            targets = [Path(target) for target in targets if Path(target).is_file()]
+            logger.info("Detected changes! Rebuilding...")
+            start = time.time()
+            build(
+                targets,
+                rm_destination=True,
+                skip_root=False,
+                short_names=short_names,
+                no_hash=no_hash,
+                dist_dir=dist_dir,
+                build_dir=build_dir,
+            )
+            render_index(
+                targets,
+                no_hash=no_hash,
+                short_names=short_names,
+                dist_dir=dist_dir,
+                exist_ok=True,
+                index_dir=index_dir,
+            )
+
+            logger.info(
+                f"Rebuilt scenarios and populated templates in {time.time() - start:.2f}s."
+            )
+        except PackseError:
+            logger.exception("Failed to rebuild")
 
 
 def serve_packages(host: str, port: int, dist_dir: Path, offline: bool):
@@ -118,7 +168,6 @@ def serve_packages(host: str, port: int, dist_dir: Path, offline: bool):
         add_vendored_build_deps(dist_dir, offline)
 
         logger.info("Ready! [Stop with Ctrl-C]")
-        line = ""
         while True:
             line = process.stdout.readline().decode()
             if debug:

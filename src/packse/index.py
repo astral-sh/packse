@@ -310,11 +310,11 @@ def build_index(
     no_hash: bool,
     short_names: bool,
     dist_dir: Path | None,
+    index_dir: Path | None,
     exist_ok: bool = False,
 ):
-    out_path = Path("./index")
-    if not exist_ok and out_path.exists():
-        shutil.rmtree(out_path)
+    if not exist_ok and index_dir.exists():
+        shutil.rmtree(index_dir)
 
     with tempfile.TemporaryDirectory() as tmpdir:
         tmpdir = Path(tmpdir)
@@ -331,9 +331,9 @@ def build_index(
             )
             dist_dir = tmpdir / "dist"
 
-        render_index(targets, no_hash, short_names, dist_dir, out_path, exist_ok)
+        render_index(targets, no_hash, short_names, dist_dir, index_dir, exist_ok)
 
-    logger.info("Built static index at ./%s", out_path)
+    logger.info("Built static index at ./%s", index_dir)
 
 
 def render_index(
@@ -341,11 +341,11 @@ def render_index(
     no_hash: bool,
     short_names: bool,
     dist_dir: Path,
-    out_path: Path,
+    index_dir: Path,
     exist_ok: bool,
 ):
     """Render the index HTML (`index/simple-html`) and copy built distributions to it (`index/files`)."""
-    (out_path / "files").mkdir(parents=True, exist_ok=exist_ok)
+    (index_dir / "files").mkdir(parents=True, exist_ok=exist_ok)
 
     variables = variables_for_html_template(
         targets, short_names=short_names, no_hash=no_hash
@@ -377,11 +377,12 @@ def render_index(
                         "Found distribution %s",
                         file.name,
                     )
-                    shutil.copy(file, out_path / "files" / file.name)
+                    shutil.copy(file, index_dir / "files" / file.name)
 
     logger.info("Populating template...")
     create_from_template(
-        out_path,
+        index_dir,
         "index",
         variables=dict(variables),
+        exist_ok=exist_ok,
     )

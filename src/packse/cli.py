@@ -106,6 +106,7 @@ def _call_serve(args):
         port=args.port,
         dist_dir=args.dist_dir,
         build_dir=args.build_dir,
+        index_dir=args.index_dir,
         short_names=args.short_names,
         no_hash=args.no_hash,
         offline=args.offline,
@@ -135,6 +136,7 @@ def _call_index_build(args):
         short_names=args.short_names,
         no_hash=args.no_hash,
         dist_dir=args.dist_dir,
+        index_dir=args.index_dir,
     )
 
 
@@ -380,13 +382,19 @@ def _add_serve_parser(subparsers):
         "--dist-dir",
         type=Path,
         default="./dist",
-        help="The directory to store and serve builds from.",
+        help="The directory to store builds in.",
     )
     parser.add_argument(
         "--build-dir",
         type=Path,
         default="./build",
         help="The directory to store intermediate build artifacts in.",
+    )
+    parser.add_argument(
+        "--index-dir",
+        type=Path,
+        default="./index",
+        help="The directory to store the distributions and the rendered HTML in.",
     )
     parser.add_argument(
         "--short-names",
@@ -472,6 +480,12 @@ def _add_index_parser(subparsers):
         "--dist-dir",
         type=Path,
         default=None,
+        help="An existing distribution directory to use. If provided, the scenarios will not be rebuilt.",
+    )
+    build.add_argument(
+        "--index-dir",
+        type=Path,
+        default="./index",
         help="An existing distribution directory to use. If provided, the scenarios will not be rebuilt.",
     )
     build.set_defaults(call=_call_index_build)
