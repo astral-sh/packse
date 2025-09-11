@@ -102,7 +102,7 @@ Notice, when a specific scenario is specified, there is more information display
 A scenario can be used to generate packages and build distributions:
 
 ```bash
-packse build scenario/example.json
+packse build scenario/example.toml
 ```
 
 The `build/` directory will contain sources for all of the packages in the scenario.
@@ -116,71 +116,49 @@ publishing multiple times to a registry that does not allow overwrites.
 The `PACKSE_VERSION_SEED` environment variable can be used to override the seed used to generate the unique
 identifier, allowing versions to differ based on information outside of packse.
 
-### Publishing scenarios
-
-Built scenarios can be published to a Python Package Index with the `publish` command:
-
-```bash
-packse publish dist/example-cd797223
-```
-
-By default, packages are published to the Test PyPI server.
-
-Credentials must be provided via the `PACKSE_PYPI_PASSWORD` environment variable. `PACKSE_PYPI_USERNAME` can be
-used to set a username if not using an API token. If using a server which does not require authentication, the
-`--anonymous` flag can be passed.
-
 ### Running a package index
 
-_Requires installation with the `index` extra_
+_Requires installation with the `serve` extra_
 
-A local package index can be controlled with the `index` command. For example, to start a local package index:
+To start a local package index:
 
 ```bash
-packse index up
+packse serve
 ```
-
-The `--bg` flag can be passed to run the index in the background.
-When running an index in the background, state will be stored in the `~/.packse` directory. The `PACKSE_STATE_PATH`
-environment variable can be used to change the state path.
 
 Packages can be installed by passing the `--index-url` flag to the installer e.g. with `pip`:
 
 ```bash
-pip install --index-url http://127.0.0.1:3141 example-0611cb74
+pip install --index-url http://127.0.0.1:3141/simple-html example-0611cb74
 ```
 
-Packages can be published to the index by providing the `--index-url` and `--anonymous` flags to the `publish` command:
+To also include build dependencies, use the `/vendor` subdirectory:
 
 ```bash
-packse publish dist/example-cd797223 --index-url http://localhost:3141 --anonymous
-```
-
-Packages can also be published to the index by placing their distributions in the configured `--dist-dir`. This defaults
-to `./dist` which is also the default location used in `packse build`.
-
-By default, the index will fallback to PyPI for missing packages. To test in isolation, use the `--offline` flag.
-
-To stop an index running in the background use `packse index down`:
-
-```
-packse index down
-```
-
-### Serving scenarios
-
-_Requires installation with the `serve` extra_
-
-The `serve` command can be used to host, build, and publish scenarios in one step.
-
-```bash
-packse serve scenarios
+pip install --index-url http://127.0.0.1:3141/simple-html --find-links http://127.0.0.1:3141/vendor example-0611cb74
 ```
 
 Packse will watch for changes to the `scenarios` directory, and publish new versions on each change.
 
 Note when developing, it is often useful to use the `--no-hash` flag to avoid having to determine the latest
 hash for the scenario.
+
+### Building a package index
+
+_Requires installation with the `index` extra_
+
+Packse can build a file tree that can be served statically, for example, through GitHub Pages, that serve both
+the scenarios and the vendored build dependencies, using the `index` command:
+
+```bash
+packse index build
+```
+
+This creates three directories in `./index`:
+
+ * `./index/files`: The distributions.
+ * `./index/simple-html`: The simple HTML index (PEP 503).
+ * `./index/vendor`: A flat index of build dependencies.
 
 ### Testing scenarios
 
@@ -189,7 +167,7 @@ Published scenarios can then be tested with your choice of package manager.
 For example, with `pip`:
 
 ```bash
-pip install -i https://test.pypi.org/simple/ example-cd797223
+pip install -i https://astral-sh.github.io/packse/548262f/simple-html/ example-cd797223
 ```
 
 ### Exporting scenarios

@@ -4,7 +4,7 @@ Get details for all scenarios.
 
 import logging
 from pathlib import Path
-from typing import cast
+from typing import Any, TypedDict, cast
 
 from packse.error import FileNotFound, InvalidScenario
 from packse.scenario import (
@@ -19,12 +19,17 @@ from packse.view import dependency_tree
 logger = logging.getLogger(__name__)
 
 
-def inspect(
+class TemplateVariables(TypedDict):
+    scenarios: list[dict[str, Any]]
+
+
+def variables_for_templates(
     targets: list[Path],
     skip_invalid: bool = False,
     short_names: bool = False,
     no_hash: bool = False,
-):
+) -> TemplateVariables:
+    """Read the scenario files and convert them to HTML templating variables."""
     scenarios_by_path: dict[Path, list[Scenario]] = {}
 
     # Validate and collect all targets first
@@ -55,7 +60,7 @@ def inspect(
                     raise invalid
 
     # Collect a JSON-compatible representation for each scenario
-    result = {"scenarios": []}
+    result = TemplateVariables(scenarios=[])
     for source, scenarios in scenarios_by_path.items():
         for scenario in scenarios:
             scenario = cast(Scenario, scenario)

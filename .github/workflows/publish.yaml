@@ -8,14 +8,14 @@ env:
 
 on:
   pull_request:
-    types: [ opened, reopened, synchronize ]
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   publish-packages:
-    name: Publish python packages
+    name: Publish package index
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -23,66 +23,35 @@ jobs:
       contents: write # Needed for GH pages updates
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set up uv
-        run: |
-          curl -LsSf https://astral.sh/uv/install.sh | sh
+        uses: astral-sh/setup-uv@v6
 
       - name: Set up Python ${{ env.PYTHON_VERSION }}
         uses: actions/setup-python@v5
         with:
           python-version: "${{ env.PYTHON_VERSION }}"
 
-      - name: Install zsh
-        run: |
-          sudo apt-get update
-          sudo apt-get install zsh
-
       - name: Install packages
         run: |
           uv sync --extra index
 
-      - name: Collect scenarios
-        run: |
-          scenarios=(scenarios/**/*.(json|yaml|toml))
-
-          # Display for debug
-          for scenario in $scenarios
-          do
-            echo "$scenario"
-          done
-          echo "SCENARIOS=$scenarios" >> "$GITHUB_ENV"
-
-          # Assigning a glob to a variable in `bash` is such a pain I don't want to talk about it
-          # instead we just use zsh
-        shell: zsh {0}
-
       - name: View scenarios
         run: |
-          uv run -- packse view $SCENARIOS
+          uv run -- packse view scenarios/**/*.{toml,yaml,json}
 
-      - name: Build scenarios
+      - name: Build scenarios and index
         run: |
-          uv run -- packse build --skip-root --no-hash $SCENARIOS
+          uv run -- packse index build --no-hash scenarios
 
-      - name: Publish scenarios [local]
-        if: github.ref != 'refs/heads/main'
-        run: |
-          # Start the local index server, do not allow packages from PyPI
-          index_url=$(uv run -- packse index up --bg --offline --dist-dir "./published")
+      - name: Publish scenarios
+        run: echo ${{ github.ref }}
 
-          # Publish the packages
-          uv run -- packse publish --anonymous --index-url "$index_url" dist/*
-
-          # Shutdown the index server
-          uv run -- packse index down
-
-      - name: Publish scenarios [gh pages]
-        if: github.ref == 'refs/heads/main'
+      - name: Publish scenarios
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/pull/1/merge'
         run: |
           commit=$(./scripts/version parts | jq -r ".short_hash")
-          uv run -- packse index build --no-hash --dist-dir ./dist $SCENARIOS
 
           git fetch origin gh-pages
           git branch gh-pages FETCH_HEAD
