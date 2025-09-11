@@ -15,8 +15,8 @@ from packse.error import (
     UserError,
 )
 from packse.fetch import fetch
-from packse.index import build_index, index_down, index_up
-from packse.inspect import variables_for_html_template
+from packse.index import build_index
+from packse.inspect import variables_for_templates
 from packse.list import list
 from packse.publish import publish
 from packse.scenario import find_scenario_files
@@ -109,25 +109,7 @@ def _call_serve(args):
         index_dir=args.index_dir,
         short_names=args.short_names,
         no_hash=args.no_hash,
-        offline=args.offline,
     )
-
-
-def _call_index_up(args):
-    index_up(
-        host=args.host,
-        port=args.port,
-        reset=args.reset,
-        dist_dir=args.dist_dir,
-        background=args.bg,
-        offline=args.offline,
-    )
-
-
-def _call_index_down(args):
-    success = index_down()
-    if not success:
-        exit(1)
 
 
 def _call_index_build(args):
@@ -198,7 +180,7 @@ def _call_inspect(args):
 
     print(
         json.dumps(
-            variables_for_html_template(
+            variables_for_templates(
                 targets,
                 skip_invalid,
                 short_names=args.short_names,
@@ -224,6 +206,7 @@ def _add_build_parser(subparsers):
         "targets",
         type=Path,
         nargs="+",
+        default=[Path("./scenarios")],
         help="The scenario to build",
     )
     parser.add_argument(
@@ -302,6 +285,7 @@ def _add_publish_parser(subparsers):
         "targets",
         type=Path,
         nargs="+",
+        default=[Path("./scenarios")],
         help="The scenario distribution directory to publish",
     )
     parser.add_argument(
@@ -364,6 +348,7 @@ def _add_serve_parser(subparsers):
         "targets",
         type=Path,
         nargs="*",
+        default=[Path("./scenarios")],
         help="The scenarios to serve",
     )
     parser.add_argument(
@@ -406,11 +391,6 @@ def _add_serve_parser(subparsers):
         action="store_true",
         help="Exclude scenario version hashes from generated packages.",
     )
-    parser.add_argument(
-        "--offline",
-        action="store_true",
-        help="Run the index servers without fallback access to the real PyPI.",
-    )
     _add_shared_arguments(parser)
 
 
@@ -418,52 +398,12 @@ def _add_index_parser(subparsers):
     parser = subparsers.add_parser("index", help="Run a local package index")
 
     subparsers = parser.add_subparsers(title="commands")
-    up = subparsers.add_parser(
-        "up", help="Start a package index server in the background."
-    )
-    up.add_argument(
-        "--host",
-        type=str,
-        default="localhost",
-        help="The host to bind the package index to.",
-    )
-    up.add_argument(
-        "--port",
-        type=int,
-        default=3141,
-        help="The port to bind the package index to.",
-    )
-    up.add_argument(
-        "--reset",
-        action="store_true",
-        help="Reset the server's state on start.",
-    )
-    up.add_argument(
-        "--dist-dir",
-        type=Path,
-        default="./dist",
-        help="The directory to serve builds from.",
-    )
-    up.add_argument(
-        "--bg",
-        action="store_true",
-        help="Run the index server in the background, exiting after it is ready.",
-    )
-    up.add_argument(
-        "--offline",
-        action="store_true",
-        help="Run the index server without access to the real PyPI.",
-    )
-    up.set_defaults(call=_call_index_up)
-
-    down = subparsers.add_parser("down", help="Stop a running package index server.")
-    down.set_defaults(call=_call_index_down)
-
     build = subparsers.add_parser("build", help="Build a static package index server.")
     build.add_argument(
         "targets",
         type=Path,
         nargs="*",
+        default=[Path("./scenarios")],
         help="The scenario files to load",
     )
     build.add_argument(
@@ -491,8 +431,6 @@ def _add_index_parser(subparsers):
     build.set_defaults(call=_call_index_build)
 
     _add_shared_arguments(parser)
-    _add_shared_arguments(up)
-    _add_shared_arguments(down)
     _add_shared_arguments(build)
 
 
@@ -503,6 +441,7 @@ def _add_list_parser(subparsers):
         "targets",
         type=Path,
         nargs="*",
+        default=[Path("./scenarios")],
         help="The scenario files to load",
     )
     parser.add_argument(
@@ -537,6 +476,7 @@ def _add_inspect_parser(subparsers):
         "targets",
         type=Path,
         nargs="*",
+        default=[Path("./scenarios")],
         help="The scenario files to load",
     )
     parser.add_argument(

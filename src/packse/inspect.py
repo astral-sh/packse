@@ -23,7 +23,7 @@ class TemplateVariables(TypedDict):
     scenarios: list[dict[str, Any]]
 
 
-def variables_for_html_template(
+def variables_for_templates(
     targets: list[Path],
     skip_invalid: bool = False,
     short_names: bool = False,

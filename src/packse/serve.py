@@ -1,13 +1,13 @@
-import importlib
 import logging
 import shutil
 import threading
 import time
 from pathlib import Path
 
+from packse import __development_base_path__
 from packse.build import build
 from packse.error import PackseError, RequiresExtra
-from packse.index import add_vendored_build_deps, render_index, start_index_server
+from packse.index import render_index, run_index_server
 
 try:
     import watchfiles
@@ -28,12 +28,7 @@ def serve(
     port: int = 3141,
     short_names: bool = False,
     no_hash: bool = False,
-    offline: bool = False,
 ):
-    try:
-        importlib.import_module("pypiserver")
-    except ImportError:
-        raise RequiresExtra("index commands", "index")
     if watchfiles is None:
         raise RequiresExtra("serve command", "serve")
 
@@ -60,8 +55,8 @@ def serve(
         daemon=True,
     )
     serve = threading.Thread(
-        target=serve_packages,
-        args=(host, port, dist_dir, offline),
+        target=run_index_server,
+        args=(index_dir, host, port),
         name="serve-package-index",
     )
     rebuild.start()
@@ -80,10 +75,6 @@ def build_scenarios(
     build_dir: Path,
     index_dir: Path,
 ) -> None:
-    if not targets:
-        print("Warning: No targets provided, automatic rebuilds not enabled.")
-        return
-
     print("Performing initial build...")
     start = time.time()
     build(
@@ -105,6 +96,11 @@ def build_scenarios(
         exist_ok=False,
         index_dir=index_dir,
     )
+
+    # Copy the vendored build dependencies
+    if (index_dir / "vendor").exists():
+        shutil.rmtree(index_dir / "vendor")
+    shutil.copytree(__development_base_path__ / "vendor", index_dir / "vendor")
 
     logger.info(
         f"Built scenarios and populated templates in {time.time() - start:.2f}s."
@@ -151,24 +147,3 @@ def watch_scenarios(
             )
         except PackseError:
             logger.exception("Failed to rebuild")
-
-
-def serve_packages(host: str, port: int, dist_dir: Path, offline: bool):
-    index_url = f"http://{host}:{port}"
-    index_note = "offline index" if offline else "local index with PyPI fallback"
-
-    logger.info("Starting %s at %s", index_note, index_url)
-    with start_index_server(
-        dist_dir=dist_dir, host=host, port=port, offline=offline, server_log_path=None
-    ) as process:
-        debug = logger.getEffectiveLevel() <= logging.DEBUG
-        if not debug:
-            logger.info("Hiding server output, use `-v` to stream server logs")
-
-        add_vendored_build_deps(dist_dir, offline)
-
-        logger.info("Ready! [Stop with Ctrl-C]")
-        while True:
-            line = process.stdout.readline().decode()
-            if debug:
-                print(line, end="")
