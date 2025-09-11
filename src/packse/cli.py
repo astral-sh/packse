@@ -16,7 +16,7 @@ from packse.error import (
 )
 from packse.fetch import fetch
 from packse.index import build_index, index_down, index_up
-from packse.inspect import inspect
+from packse.inspect import variables_for_html_template
 from packse.list import list
 from packse.publish import publish
 from packse.scenario import find_scenario_files
@@ -196,7 +196,7 @@ def _call_inspect(args):
 
     print(
         json.dumps(
-            inspect(
+            variables_for_html_template(
                 targets,
                 skip_invalid,
                 short_names=args.short_names,
