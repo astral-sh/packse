@@ -1,10 +1,10 @@
+from __future__ import annotations
+
 import asyncio
 import logging
 import shutil
 import time
 from pathlib import Path
-
-from watchfiles import Change
 
 from packse import __development_base_path__
 from packse.build import build
@@ -13,6 +13,7 @@ from packse.index import index_server, render_index
 
 try:
     import watchfiles
+    from watchfiles import Change
 except ImportError:
     watchfiles = None
     pass
