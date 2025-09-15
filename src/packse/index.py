@@ -1,4 +1,3 @@
-import asyncio
 import hashlib
 import logging
 import shutil
@@ -35,10 +34,6 @@ async def index_server(index_dir: Path, host: str, port: int):
     config = uvicorn.Config(app, host=host, port=port)
     server = uvicorn.Server(config)
     await server.serve()
-
-
-def run_index_server(index_dir: Path, host: str, port: int) -> None:
-    asyncio.run(index_server(index_dir, host, port))
 
 
 def sha256_file(path: Path):
@@ -130,6 +125,7 @@ def render_index(
                     shutil.copy(file, index_dir / "files" / file.name)
 
     logger.info("Populating template...")
+    # TODO(konsti): Render the index page with all distributions
     create_from_template(
         index_dir,
         "index",

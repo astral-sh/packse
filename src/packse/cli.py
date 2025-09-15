@@ -1,4 +1,5 @@
 import argparse
+import asyncio
 import json
 import logging
 import sys
@@ -100,15 +101,17 @@ def _call_view(args):
 
 
 def _call_serve(args):
-    serve(
-        args.targets,
-        host=args.host,
-        port=args.port,
-        dist_dir=args.dist_dir,
-        build_dir=args.build_dir,
-        index_dir=args.index_dir,
-        short_names=args.short_names,
-        no_hash=args.no_hash,
+    asyncio.run(
+        serve(
+            args.targets,
+            host=args.host,
+            port=args.port,
+            dist_dir=args.dist_dir,
+            build_dir=args.build_dir,
+            index_dir=args.index_dir,
+            short_names=args.short_names,
+            no_hash=args.no_hash,
+        )
     )
 
 

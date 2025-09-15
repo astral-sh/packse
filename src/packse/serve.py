@@ -1,13 +1,15 @@
+import asyncio
 import logging
 import shutil
-import threading
 import time
 from pathlib import Path
+
+from watchfiles import Change
 
 from packse import __development_base_path__
 from packse.build import build
 from packse.error import PackseError, RequiresExtra
-from packse.index import render_index, run_index_server
+from packse.index import index_server, render_index
 
 try:
     import watchfiles
@@ -19,7 +21,7 @@ except ImportError:
 logger = logging.getLogger(__name__)
 
 
-def serve(
+async def serve(
     targets: list[Path],
     build_dir: Path,
     dist_dir: Path,
@@ -41,30 +43,18 @@ def serve(
         index_dir,
     )
 
-    rebuild = threading.Thread(
-        target=watch_scenarios,
-        args=(
+    rebuild = asyncio.create_task(
+        watch_scenarios(
             targets,
             short_names,
             no_hash,
             dist_dir,
             build_dir,
             index_dir,
-        ),
-        name="serve-build-scenarios",
-        daemon=True,
+        )
     )
-    serve = threading.Thread(
-        target=run_index_server,
-        args=(index_dir, host, port),
-        name="serve-package-index",
-    )
-    rebuild.start()
-
-    try:
-        serve.start()
-    finally:
-        serve.join()
+    server = asyncio.create_task(index_server(index_dir, host, port))
+    await asyncio.gather(rebuild, server)
 
 
 def build_scenarios(
@@ -107,7 +97,7 @@ def build_scenarios(
     )
 
 
-def watch_scenarios(
+async def watch_scenarios(
     targets: list[Path],
     short_names: bool,
     no_hash: bool,
@@ -115,35 +105,53 @@ def watch_scenarios(
     build_dir: Path,
     index_dir: Path,
 ) -> None:
-    for changes in watchfiles.watch(*targets):
+    async for changes in watchfiles.awatch(*targets):
         # When trying to render a (temporarily) invalid file, print errors and retry on the next change.
         try:
-            targets = [
-                path for kind, path in changes if kind != watchfiles.Change.deleted
-            ]
-            targets = [Path(target) for target in targets if Path(target).is_file()]
-            logger.info("Detected changes! Rebuilding...")
-            start = time.time()
-            build(
-                targets,
-                rm_destination=True,
-                skip_root=False,
-                short_names=short_names,
-                no_hash=no_hash,
-                dist_dir=dist_dir,
-                build_dir=build_dir,
-            )
-            render_index(
-                targets,
-                no_hash=no_hash,
-                short_names=short_names,
-                dist_dir=dist_dir,
-                exist_ok=True,
-                index_dir=index_dir,
-            )
-
-            logger.info(
-                f"Rebuilt scenarios and populated templates in {time.time() - start:.2f}s."
+            asyncio.get_running_loop().run_in_executor(
+                None,
+                incremental_rebuild,
+                build_dir,
+                changes,
+                dist_dir,
+                index_dir,
+                no_hash,
+                short_names,
             )
         except PackseError:
             logger.exception("Failed to rebuild")
+
+
+def incremental_rebuild(
+    build_dir: Path,
+    changes: set[tuple[Change, str]],
+    dist_dir: Path,
+    index_dir: Path,
+    no_hash: bool,
+    short_names: bool,
+):
+    targets = [path for kind, path in changes if kind != watchfiles.Change.deleted]
+    targets = [Path(target) for target in targets if Path(target).is_file()]
+    logger.info("Detected changes! Rebuilding...")
+    start = time.time()
+    build(
+        targets,
+        rm_destination=True,
+        skip_root=False,
+        short_names=short_names,
+        no_hash=no_hash,
+        dist_dir=dist_dir,
+        build_dir=build_dir,
+    )
+    render_index(
+        targets,
+        no_hash=no_hash,
+        short_names=short_names,
+        dist_dir=dist_dir,
+        exist_ok=True,
+        index_dir=index_dir,
+    )
+
+    logger.info(
+        f"Rebuilt scenarios and populated templates in {time.time() - start:.2f}s."
+    )
