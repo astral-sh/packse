@@ -49,7 +49,7 @@ jobs:
         run: echo ${{ github.ref }}
 
       - name: Publish scenarios
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/pull/1/merge'
+        if: github.ref == 'refs/heads/main'
         run: |
           commit=$(./scripts/version parts | jq -r ".short_hash")
 
