@@ -24,8 +24,8 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v3
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
+      - uses: astral-sh/setup-uv@caf0cab7a618c569241d31dcd442f54681755d39 # v3
 
       - name: Check Python lint
         run: uvx ruff check . --config pyproject.toml
@@ -42,5 +42,5 @@ jobs:
     runs-on: ubuntu-latest
     name: Check typos
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
       - uses: crate-ci/typos@master

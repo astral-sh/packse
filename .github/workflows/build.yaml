@@ -26,12 +26,12 @@ jobs:
     if: github.ref == 'refs/heads/main' || contains(github.event.pull_request.labels.*.name, 'test-build')
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
         with:
           persist-credentials: false
           fetch-depth: 0
 
-      - uses: astral-sh/setup-uv@v3
+      - uses: astral-sh/setup-uv@caf0cab7a618c569241d31dcd442f54681755d39 # v3
 
       - name: Publish to Test PyPI
         id: build
@@ -54,11 +54,11 @@ jobs:
 
     steps:
       - name: Set up Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: "${{ env.PYTHON_VERSION }}"
 
-      - uses: astral-sh/setup-uv@v3
+      - uses: astral-sh/setup-uv@caf0cab7a618c569241d31dcd442f54681755d39 # v3
 
       - name: Wait for package to be available
         run: >
