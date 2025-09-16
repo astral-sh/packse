@@ -129,13 +129,13 @@ packse serve
 Packages can be installed by passing the `--index-url` flag to the installer e.g. with `pip`:
 
 ```bash
-pip install --index-url http://127.0.0.1:3141/simple-html example-0611cb74
+pip install --index-url http://127.0.0.1:3141/simple-html example-a-e656679f
 ```
 
 To also include build dependencies, use the `/vendor` subdirectory:
 
 ```bash
-pip install --index-url http://127.0.0.1:3141/simple-html --find-links http://127.0.0.1:3141/vendor example-0611cb74
+pip install --index-url http://127.0.0.1:3141/simple-html --find-links http://127.0.0.1:3141/vendor example-a-e656679f
 ```
 
 Packse will watch for changes to the `scenarios` directory, and publish new versions on each change.

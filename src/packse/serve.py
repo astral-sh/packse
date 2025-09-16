@@ -35,6 +35,7 @@ async def serve(
     if watchfiles is None:
         raise RequiresExtra("serve command", "serve")
 
+    # Start with a full (re)build
     build_scenarios(
         targets,
         short_names,
@@ -43,7 +44,6 @@ async def serve(
         build_dir,
         index_dir,
     )
-
     rebuild = asyncio.create_task(
         watch_scenarios(
             targets,
@@ -93,9 +93,7 @@ def build_scenarios(
         shutil.rmtree(index_dir / "vendor")
     shutil.copytree(__development_base_path__ / "vendor", index_dir / "vendor")
 
-    logger.info(
-        f"Built scenarios and populated templates in {time.time() - start:.2f}s."
-    )
+    logger.info("Built scenarios and populated templates in %.2fs", time.time() - start)
 
 
 async def watch_scenarios(
@@ -106,6 +104,7 @@ async def watch_scenarios(
     build_dir: Path,
     index_dir: Path,
 ) -> None:
+    """Watch for changed scenarios and rebuild when changed."""
     async for changes in watchfiles.awatch(*targets):
         # When trying to render a (temporarily) invalid file, print errors and retry on the next change.
         try:

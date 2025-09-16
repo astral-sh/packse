@@ -76,9 +76,7 @@ def build_index(
         shutil.rmtree(index_dir / "vendor")
     shutil.copytree(__development_base_path__ / "vendor", index_dir / "vendor")
 
-    logger.info(
-        f"Built scenarios and populated templates in {time.time() - start:.2f}s."
-    )
+    logger.info("Built scenarios and populated templates in %.2fs", time.time() - start)
 
 
 def render_index(
@@ -125,7 +123,7 @@ def render_index(
                     shutil.copy(file, index_dir / "files" / file.name)
 
     logger.info("Populating template...")
-    # TODO(konsti): Render the index page with all distributions
+    # TODO(konsti): Render the index page with all distributions, not only the incremental ones
     create_from_template(
         index_dir,
         "index",
