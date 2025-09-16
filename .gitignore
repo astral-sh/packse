@@ -1,7 +1,8 @@
-__pycache__
-.cache
 *.pyc
+.cache
 .envrc
+__pycache__
 build/**/*
 dist/**/*
+index/**/*
 node_modules

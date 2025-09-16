@@ -30,7 +30,10 @@ def load_template_config(template_name: str) -> TemplateConfig:
 
 
 def create_from_template(
-    destination: Path, template_name: str, variables: dict[str, Any]
+    destination: Path,
+    template_name: str,
+    variables: dict[str, Any],
+    exist_ok: bool = False,
 ) -> Path:
     template_path = __templates_path__ / template_name
     first_root = None
@@ -53,7 +56,7 @@ def create_from_template(
 
             # Create the new directory
             logger.debug("Creating %s", new_root.relative_to(destination))
-            new_root.mkdir()
+            new_root.mkdir(exist_ok=exist_ok)
 
             for file in files:
                 file_path = root / file
@@ -73,8 +76,6 @@ def create_from_template(
 
 def parse_loop(path: Path, variables: dict[str, Any]):
     # This implementation is pretty dubious and certain to fail on edge-cases
-    scope = variables
-    scopes = []
     matches = re.findall(r"\[\[(.*?)\]\]", str(path))
     if not matches:
         return [(path, variables)]
