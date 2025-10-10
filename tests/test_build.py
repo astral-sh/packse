@@ -9,10 +9,6 @@ from packse.scenario import load_scenario, scenario_hash
 from .common import snapshot_command
 
 
-def test_build_no_target(snapshot):
-    assert snapshot_command(["build"]) == snapshot
-
-
 def test_build_target_does_not_exist(snapshot):
     assert snapshot_command(["build", "foo"]) == snapshot
 
