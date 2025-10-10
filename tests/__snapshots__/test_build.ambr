@@ -671,19 +671,6 @@
     'stdout': '',
   })
 # ---
-# name: test_build_no_target
-  dict({
-    'exit_code': 2,
-    'stderr': '''
-      usage: packse build [-h] [--force] [--short-names] [--no-hash] [--skip-root]
-                          [-v] [-q]
-                          targets [targets ...]
-      packse build: error: the following arguments are required: targets
-  
-    ''',
-    'stdout': '',
-  })
-# ---
 # name: test_build_target_does_not_exist
   dict({
     'exit_code': 1,
