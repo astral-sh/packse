@@ -111,6 +111,7 @@ async def watch_scenarios(
             asyncio.get_running_loop().run_in_executor(
                 None,
                 incremental_rebuild,
+                targets,
                 build_dir,
                 changes,
                 dist_dir,
@@ -123,6 +124,7 @@ async def watch_scenarios(
 
 
 def incremental_rebuild(
+    full_targets: list[Path],
     build_dir: Path,
     changes: set[tuple[Change, str]],
     dist_dir: Path,
@@ -144,7 +146,7 @@ def incremental_rebuild(
         build_dir=build_dir,
     )
     render_index(
-        targets,
+        full_targets,
         no_hash=no_hash,
         short_names=short_names,
         dist_dir=dist_dir,
