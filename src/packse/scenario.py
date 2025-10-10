@@ -4,7 +4,7 @@ import json
 import os
 from collections.abc import Iterator
 from pathlib import Path
-from typing import Any, Self
+from typing import Any, Literal, Self
 
 import msgspec
 import packaging.requirements
@@ -49,6 +49,27 @@ class Requirement(packaging.requirements.Requirement):
         return new
 
 
+class VariantsDefaultPriorities(msgspec.Struct, forbid_unknown_fields=True):
+    namespace: list[str]
+    feature: dict[str, list[str]] = {}
+    property: dict[str, dict[str, list[str]]] = {}
+
+
+class VariantsProvider(msgspec.Struct, forbid_unknown_fields=True):
+    requires: list[str]
+    enable_if: str | None = None
+    plugin_use: Literal["none", "build", "all"] | None = None
+    optional: bool | None = None
+
+
+class Variants(msgspec.Struct, forbid_unknown_fields=True):
+    properties: dict[str, list[str]]
+    default_priorities: VariantsDefaultPriorities
+    providers: dict[str, VariantsProvider]
+    non_variant_wheel: bool = True
+    """Whether to build a non-variant wheel."""
+
+
 class PackageMetadata(msgspec.Struct, forbid_unknown_fields=True):
     """
     Metadata for a single version of a package.
@@ -62,6 +83,7 @@ class PackageMetadata(msgspec.Struct, forbid_unknown_fields=True):
     yanked: bool = False
     wheel_tags: list[str] = []
     description: str = ""
+    variants: Variants | None = None
 
     def hash(self) -> str:
         """
@@ -137,6 +159,11 @@ class ResolverOptions(msgspec.Struct, forbid_unknown_fields=True):
     In universal mode, a resolution can contain multiple versions of
     the same packages, but where different versions must be guarded by
     non-overlapping marker expressions.
+    """
+
+    variants: bool = False
+    """
+    The test snapshot should capture which variants are installed.
     """
 
     python_platform: str | None = None

@@ -1,5 +1,8 @@
 [build-system]
-requires = ["hatchling"]
+requires = [
+  "hatchling @ git+https://github.com/wheelnext/hatch@wheel-variant-support#subdirectory=backend",
+  "packaging @ git+https://github.com/wheelnext/packaging@wheel-variants"
+]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
@@ -23,3 +26,43 @@ description = '''{{ description }}'''
     '''{{ . }}''',
 {{/ dependencies }}]
 {{/ optional-dependencies }}
+
+{{# variants  }}
+
+{{# default_priorities }}
+[variant.default-priorities]
+{{# namespace }}
+namespace = {{ . }}
+{{/ namespace }}
+{{# feature }}
+feature = {{ . }}
+{{/ feature }}
+{{# property }}
+property = {{ . }}
+{{/ property }}
+{{/ default_priorities }}
+
+{{# providers }}
+
+[variant.providers.{{ label }}]
+requires = {{ provider.requires }}
+
+{{# provider.enable_if }}
+enable-if = "{{ . }}"
+{{/ provider.enable_if }}
+
+{{# provider.optional }}
+optional = {{ . }}
+{{/ provider.optional }}
+
+{{# provider.plugin_api }}
+plugin-api = "{{ . }}"
+{{/ provider.plugin_api }}
+
+{{# provider.plugin_use }}
+plugin-use = "{{ . }}"
+{{/ provider.plugin_use }}
+
+{{/ providers }}
+
+{{/ variants }}
