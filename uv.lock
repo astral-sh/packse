@@ -149,6 +149,7 @@ dependencies = [
     { name = "chevron-blue" },
     { name = "hatchling" },
     { name = "msgspec" },
+    { name = "packaging" },
     { name = "pyyaml" },
     { name = "uv" },
 ]
@@ -179,6 +180,7 @@ requires-dist = [
     { name = "fastapi", marker = "extra == 'index'", specifier = ">=0.116.1" },
     { name = "hatchling", specifier = ">=1.20.0" },
     { name = "msgspec", specifier = ">=0.18.4" },
+    { name = "packaging", specifier = ">=24.2" },
     { name = "packse", extras = ["index"], marker = "extra == 'serve'" },
     { name = "pyyaml", specifier = ">=6.0.1" },
     { name = "starlette", marker = "extra == 'index'", specifier = ">=0.47.3" },
