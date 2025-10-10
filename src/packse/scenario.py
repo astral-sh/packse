@@ -7,7 +7,6 @@ from typing import Any, Iterator, Self, Type
 
 import msgspec
 import packaging.requirements
-import packaging.specifiers
 
 from packse.template import load_template_config
 
