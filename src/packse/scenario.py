@@ -143,6 +143,11 @@ class ResolverOptions(msgspec.Struct, forbid_unknown_fields=True):
     The Python platform to use for resolution.
     """
 
+    required_environments: list[str] | None = None
+    """
+    A list of required platforms, for packages that lack source distributions.
+    """
+
     def hash(self) -> str:
         """
         Return a hash of the contents
@@ -160,6 +165,9 @@ class ResolverOptions(msgspec.Struct, forbid_unknown_fields=True):
             hasher.update(self.universal.to_bytes())
         if self.python_platform is not None:
             hasher.update(self.python_platform.encode())
+        if self.required_environments is not None:
+            for required_environment in self.required_environments:
+                hasher.update(required_environment.encode())
 
         return hasher.hexdigest()
 
