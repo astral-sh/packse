@@ -48,6 +48,6 @@ an example.
 This step requires NodeJS installed.
 
 ```
-npm install
+npm ci --ignore-scripts
 npx prettier --write "scenarios/**/*.{toml,json,yaml}"
 ```
