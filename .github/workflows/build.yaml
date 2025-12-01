@@ -16,6 +16,8 @@ on:
     branches:
       - main
 
+permissions: {}
+
 jobs:
   build-and-publish:
     name: Publish test release
@@ -26,7 +28,7 @@ jobs:
     if: github.ref == 'refs/heads/main' || contains(github.event.pull_request.labels.*.name, 'test-build')
 
     steps:
-      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5
+      - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
         with:
           persist-credentials: false
           fetch-depth: 0
@@ -37,7 +39,7 @@ jobs:
         id: build
         env:
           UV_PUBLISH_TOKEN: ${{ secrets.TEST_PYPI_API_TOKEN }}
-        run: |
+        run: | # zizmor: ignore[use-trusted-publishing]
           version=$(./scripts/version dev)
           echo "version=$version" >> $GITHUB_OUTPUT
           sed -i -e "s/0.0.0/$version/" pyproject.toml
@@ -54,7 +56,7 @@ jobs:
 
     steps:
       - name: Set up Python ${{ env.PYTHON_VERSION }}
-        uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548 # v6
+        uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548 # v6.1.0
         with:
           python-version: "${{ env.PYTHON_VERSION }}"
 
@@ -64,11 +66,13 @@ jobs:
         run: >
           until
           curl --silent "https://test.pypi.org/simple/packse/"
-          | grep --quiet "${{ needs.build-and-publish.outputs.build-version }}";
+          | grep --quiet "${BUILD_VERSION}";
           do sleep 10;
           done
           &&
           sleep 180
+        env:
+          BUILD_VERSION: ${{ needs.build-and-publish.outputs.build-version }}
           # We sleep for an additional 180 seconds as it seems to take a bit longer for
           # the package to be consistently available
 
@@ -80,12 +84,16 @@ jobs:
             --system \
             --extra-index-url https://test.pypi.org/simple/ \
             --index-strategy unsafe-best-match \
-            packse==${{ needs.build-and-publish.outputs.build-version }}
+            packse==${BUILD_VERSION}
+        env:
+          BUILD_VERSION: ${{ needs.build-and-publish.outputs.build-version }}
 
       - name: Check release version
         run: |
           installed=$(python3 -c "from importlib.metadata import version; print(version('packse'))")
-          test $installed = ${{ needs.build-and-publish.outputs.build-version }}
+          test $installed = ${BUILD_VERSION}
+        env:
+          BUILD_VERSION: ${{ needs.build-and-publish.outputs.build-version }}
 
       - name: Check CLI help
         run: |
