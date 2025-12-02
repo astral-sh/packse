@@ -6,10 +6,9 @@ import shutil
 import time
 from pathlib import Path
 
-from packse import __development_base_path__
 from packse.build import build
 from packse.error import PackseError, RequiresExtra
-from packse.index import index_server, render_index
+from packse.index import index_server, render_index, build_dependencies_index
 
 try:
     import watchfiles
@@ -88,10 +87,7 @@ def build_scenarios(
         index_dir=index_dir,
     )
 
-    # Copy the vendored build dependencies
-    if (index_dir / "vendor").exists():
-        shutil.rmtree(index_dir / "vendor")
-    shutil.copytree(__development_base_path__ / "vendor", index_dir / "vendor")
+    build_dependencies_index(index_dir)
 
     logger.info("Built scenarios and populated templates in %.2fs", time.time() - start)
 
@@ -111,6 +107,7 @@ async def watch_scenarios(
             asyncio.get_running_loop().run_in_executor(
                 None,
                 incremental_rebuild,
+                targets,
                 build_dir,
                 changes,
                 dist_dir,
@@ -123,6 +120,7 @@ async def watch_scenarios(
 
 
 def incremental_rebuild(
+    full_targets: list[Path],
     build_dir: Path,
     changes: set[tuple[Change, str]],
     dist_dir: Path,
@@ -144,7 +142,7 @@ def incremental_rebuild(
         build_dir=build_dir,
     )
     render_index(
-        targets,
+        full_targets,
         no_hash=no_hash,
         short_names=short_names,
         dist_dir=dist_dir,
