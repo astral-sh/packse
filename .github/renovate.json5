@@ -1,10 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended",
     "helpers:pinGitHubActionDigests",
     ":configMigration",
-    ":semanticCommitsDisabled"
+    ":semanticCommitsDisabled",
+    "github>astral-sh/renovate-config"
   ],
   "schedule": [
     "before 4am on the first day of the month"
