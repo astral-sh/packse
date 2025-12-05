@@ -208,7 +208,7 @@ def _add_build_parser(subparsers):
     parser.add_argument(
         "targets",
         type=Path,
-        nargs="+",
+        nargs="*",
         default=[Path("./scenarios")],
         help="The scenario to build",
     )
@@ -287,7 +287,7 @@ def _add_publish_parser(subparsers):
     parser.add_argument(
         "targets",
         type=Path,
-        nargs="+",
+        nargs="*",
         default=[Path("./scenarios")],
         help="The scenario distribution directory to publish",
     )
