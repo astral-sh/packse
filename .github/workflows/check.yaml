@@ -47,4 +47,4 @@ jobs:
       - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
         with:
           persist-credentials: false
-      - uses: crate-ci/typos@2d0ce569feab1f8752f1dde43cc2f2aa53236e06 # v1.40.0
+      - uses: crate-ci/typos@93cbdb2d23269548cf0db0f74d0bc6a09a3f0d5c # v1.43.0
