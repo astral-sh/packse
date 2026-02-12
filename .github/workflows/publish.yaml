@@ -55,6 +55,8 @@ jobs:
         run: |
           commit=$(./scripts/version parts | jq -r ".short_hash")
 
+          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
+
           git fetch origin gh-pages
           git branch gh-pages FETCH_HEAD
           git checkout gh-pages
