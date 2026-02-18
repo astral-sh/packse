@@ -67,6 +67,8 @@ jobs:
         run: |
           uv run -- packse index build --no-hash scenarios/
 
+          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
+
           git fetch origin gh-pages
           git branch gh-pages FETCH_HEAD
           git checkout gh-pages
@@ -74,8 +76,8 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-          mkdir "${GITHUB_REF#refs/*/}"
-          cp -r index/* "${GITHUB_REF#refs/*/}"
-          git add "${GITHUB_REF#refs/*/}"
-          git commit -m "Publish scenarios for $commit"
+          mkdir "${GITHUB_REF_NAME}"
+          cp -r index/* "${GITHUB_REF_NAME}"
+          git add "${GITHUB_REF_NAME}"
+          git commit -m "Publish scenarios for ${GITHUB_REF_NAME}"
           git push --set-upstream origin gh-pages
