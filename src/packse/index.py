@@ -4,6 +4,9 @@ import shutil
 import tempfile
 import time
 from pathlib import Path
+from subprocess import check_call
+
+import chevron_blue
 
 from packse import __development_base_path__
 from packse.build import build
@@ -46,7 +49,7 @@ def build_index(
     no_hash: bool,
     short_names: bool,
     dist_dir: Path | None,
-    index_dir: Path | None,
+    index_dir: Path,
     exist_ok: bool = False,
 ):
     start = time.time()
@@ -71,12 +74,38 @@ def build_index(
 
         render_index(targets, no_hash, short_names, dist_dir, index_dir, exist_ok)
 
-    # Copy the vendored build dependencies
-    if (index_dir / "vendor").exists():
-        shutil.rmtree(index_dir / "vendor")
-    shutil.copytree(__development_base_path__ / "vendor", index_dir / "vendor")
+    build_dependencies_index(index_dir)
 
     logger.info("Built scenarios and populated templates in %.2fs", time.time() - start)
+
+
+def build_dependencies_index(index_dir: Path):
+    """Create the "vendor" build dependency directory on the index."""
+    start = time.time()
+    if (index_dir / "vendor").exists():
+        shutil.rmtree(index_dir / "vendor")
+
+    # Copy all vendor build tools
+    shutil.copytree(
+        __development_base_path__ / "vendor" / "build", index_dir / "vendor"
+    )
+
+    # Add all provider plugins to the index
+    for provider in (__development_base_path__ / "provider-plugins").iterdir():
+        check_call(["uv", "build", provider, "-o", index_dir / "vendor"])
+
+    # Build find links index
+    index_template = (__templates_path__ / "vendor" / "index.html").read_text()
+    files = []
+    for file in sorted((index_dir / "vendor").iterdir()):
+        # Skip the gitignore file
+        if not file.name.endswith(".whl") and not file.name.endswith(".tar.gz"):
+            continue
+        files.append({"file": file.name, "sha256": sha256_file(file)})
+    index_html = chevron_blue.render(index_template, {"files": files})
+    (index_dir / "vendor" / "index.html").write_text(index_html)
+
+    logger.info("Built vendor directory in %.2fs", time.time() - start)
 
 
 def render_index(

@@ -2,6 +2,7 @@
 Build packages for the given scenarios.
 """
 
+import json
 import logging
 import shutil
 import subprocess
@@ -13,6 +14,7 @@ from pathlib import Path
 from typing import Generator
 
 import packaging.version
+from variantlib.commands.generate_index_json import generate_index_json
 
 from packse.error import (
     BuildError,
@@ -230,6 +232,27 @@ def build_scenario_package(
     for version, package_version in package.versions.items():
         start_time = time.time()
 
+        if variants := package_version.variants:
+            # chevron templates and Python dicts don't like each other, toml doesn't like JSON dicts, and tomlw_i
+            # doesn't write partial toml, so we hack it.
+            variants = {
+                "default_priorities": {
+                    "namespace": json.dumps(variants.default_priorities.namespace),
+                    "feature": json.dumps(variants.default_priorities.feature).replace(
+                        ":", " ="
+                    ),
+                    "property": json.dumps(
+                        variants.default_priorities.property
+                    ).replace(":", " ="),
+                },
+                "providers": [
+                    {"label": label, "provider": provider}
+                    for label, provider in variants.providers.items()
+                ],
+            }
+        else:
+            variants = None
+
         logger.debug("Generating project for '%s-%s'", package_name, version)
         package_destination = create_from_template(
             build_destination,
@@ -259,6 +282,7 @@ def build_scenario_package(
                 ],
                 "requires-python": package_version.requires_python,
                 "description": package_version.description,
+                "variants": variants,
             },
         )
 
@@ -296,55 +320,91 @@ def build_package_distributions(
     if package_version.wheel:
         command.extend(template_config.build_wheel)
 
-    start_time = time.time()
+    if package_version.variants:
+        for (
+            variant_label,
+            variant_properties,
+        ) in package_version.variants.properties.items():
+            variant_command = command.copy()
+            variant_command.extend(["--variant-label", variant_label])
+            for variant_property in variant_properties:
+                variant_command.extend(["--variant-property", variant_property])
+            start_time = time.time()
 
-    try:
-        output = subprocess.check_output(command, cwd=target, stderr=subprocess.STDOUT)
+            try:
+                output = subprocess.check_output(
+                    variant_command, cwd=target, stderr=subprocess.STDOUT
+                )
 
-    except subprocess.CalledProcessError as exc:
-        raise BuildError(
-            f"Building {target.name} with hatch failed",
-            exc.output.decode(),
-        )
-    else:
-        logs = (
-            (":\n\n" + textwrap.indent(output.decode(), " " * 4))
-            if logger.getEffectiveLevel() <= logging.DEBUG
-            else ""
-        )
-        logger.info(
-            "Built package '%s' in %.2fs%s",
-            target.name,
-            time.time() - start_time,
-            logs,
-        )
+            except subprocess.CalledProcessError as exc:
+                raise BuildError(
+                    f"Building {target.name} with hatch failed",
+                    exc.output.decode(),
+                )
+            else:
+                logs = (
+                    (":\n\n" + textwrap.indent(output.decode(), " " * 4))
+                    if logger.getEffectiveLevel() <= logging.DEBUG
+                    else ""
+                )
+                logger.info(
+                    "Built package '%s' (%s) in %.2fs%s",
+                    target.name,
+                    variant_label,
+                    time.time() - start_time,
+                    logs,
+                )
+
+        generate_index_json(["-d", str(target.joinpath("dist"))])
+
+    if not package_version.variants or package_version.variants.non_variant_wheel:
+        start_time = time.time()
+
+        try:
+            output = subprocess.check_output(
+                command, cwd=target, stderr=subprocess.STDOUT
+            )
+
+        except subprocess.CalledProcessError as exc:
+            raise BuildError(
+                f"Building {target.name} with hatch failed",
+                exc.output.decode(),
+            )
+        else:
+            logs = (
+                (":\n\n" + textwrap.indent(output.decode(), " " * 4))
+                if logger.getEffectiveLevel() <= logging.DEBUG
+                else ""
+            )
+            logger.info(
+                "Built package '%s' in %.2fs%s",
+                target.name,
+                time.time() - start_time,
+                logs,
+            )
 
     # Create wheels with other tags if requested
     if package_version.wheel and package_version.wheel_tags:
-        default_tag_wheel = None
         for dist in (target / "dist").iterdir():
-            if dist.name.endswith("py3-none-any.whl"):
-                default_tag_wheel = dist
-                break
-        if not default_tag_wheel:
-            raise BuildError("No wheel found with tag `py3-none-any`", "")
-
-        # Since we always build a universal wheel, we just create copies of it for other platforms
-        # which means we're lying about the compatibility of the wheel but it will always be installable
-        # on the given platform.
-        for tag in package_version.wheel_tags:
-            if tag == "py3-none-any":
+            if "py3-none-any" not in dist.name:
                 continue
+            if not dist:
+                raise BuildError("No wheel found with tag `py3-none-any`", "")
 
-            new_tag_wheel = (
-                target / "dist" / default_tag_wheel.name.replace("py3-none-any", tag)
-            )
-            new_tag_wheel.hardlink_to(default_tag_wheel)
-            logger.debug("Created wheel %s", new_tag_wheel.name)
+            # Since we always build a universal wheel, we just create copies of it for other platforms
+            # which means we're lying about the compatibility of the wheel but it will always be installable
+            # on the given platform.
+            for tag in package_version.wheel_tags:
+                if tag == "py3-none-any":
+                    continue
 
-        # Delete the default wheel if not requested
-        if "py3-none-any" not in package_version.wheel_tags:
-            default_tag_wheel.unlink()
+                new_tag_wheel = target / "dist" / dist.name.replace("py3-none-any", tag)
+                new_tag_wheel.hardlink_to(dist)
+                logger.debug("Created wheel %s", new_tag_wheel.name)
+
+            # Delete the default wheel if not requested
+            if "py3-none-any" not in package_version.wheel_tags:
+                dist.unlink()
 
     yield from sorted((target / "dist").iterdir())
     shutil.rmtree(target / "dist")

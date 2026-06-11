@@ -1,0 +1,52 @@
+name = "variants-fallback"
+description = "Non-matching variant wheels require a to the null variant or non-variant wheels"
+
+[resolver_options]
+variants = true
+
+[root]
+requires = ["only-fallback", "null-variant"]
+
+[expected]
+satisfiable = true
+
+[expected.packages]
+only-fallback = "1.0.0"
+null-variant = "1.0.0"
+
+[packages.only-fallback.versions."2.0.0".variants]
+non_variant_wheel = false
+
+[packages.only-fallback.versions."2.0.0".variants.default_priorities]
+namespace = ["cpu"]
+
+[packages.only-fallback.versions."2.0.0".variants.properties]
+toohigh = ["cpu :: level :: v5"]
+
+[packages.only-fallback.versions."2.0.0".variants.providers.cpu]
+requires = ["cpu_provider >= 0.1, <0.2"]
+
+[packages.only-fallback.versions."1.0.0".variants]
+non_variant_wheel = true
+
+[packages.only-fallback.versions."1.0.0".variants.default_priorities]
+namespace = ["cpu"]
+
+[packages.only-fallback.versions."1.0.0".variants.properties]
+toohigh = ["cpu :: level :: v5"]
+
+[packages.only-fallback.versions."1.0.0".variants.providers.cpu]
+requires = ["cpu_provider >= 0.1, <0.2"]
+
+[packages.null-variant.versions."1.0.0".variants]
+non_variant_wheel = false
+
+[packages.null-variant.versions."1.0.0".variants.default_priorities]
+namespace = ["cpu"]
+
+[packages.null-variant.versions."1.0.0".variants.properties]
+toohigh = ["cpu :: level :: v5"]
+null = []
+
+[packages.null-variant.versions."1.0.0".variants.providers.cpu]
+requires = ["cpu_provider >= 0.1, <0.2"]

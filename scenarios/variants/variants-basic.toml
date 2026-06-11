@@ -1,0 +1,48 @@
+name = "variants-basic"
+description = "A basic example using one build time and one runtime plugin"
+
+[resolver_options]
+variants = true
+
+[root]
+requires = ["cpu-first", "blas-first"]
+
+[expected]
+satisfiable = true
+
+[expected.packages]
+cpu-first = "1.0.0"
+blas-first = "1.0.0"
+
+[packages.cpu-first.versions."1.0.0".variants.default_priorities]
+namespace = ["cpu", "library"]
+feature = { "library" = ["blas"] }
+property = { "library" = { "blas" = ["open", "closed"] } }
+
+[packages.cpu-first.versions."1.0.0".variants.properties]
+openblas_v2 = ["library :: blas :: open", "cpu :: level :: v2"]
+closedblas_v3 = ["library :: blas :: closed", "cpu :: level :: v3"]
+
+[packages.cpu-first.versions."1.0.0".variants.providers.cpu]
+requires = ["cpu_provider >= 0.1, <0.2"]
+
+[packages.cpu-first.versions."1.0.0".variants.providers.library]
+requires = ["library >=1, <2"]
+plugin_use = "build"
+
+# Only namespace is flipped
+[packages.blas-first.versions."1.0.0".variants.default_priorities]
+namespace = ["library", "cpu"]
+feature = { "library" = ["blas"] }
+property = { "library" = { "blas" = ["open", "closed"] } }
+
+[packages.blas-first.versions."1.0.0".variants.properties]
+openblas_v2 = ["library :: blas :: open", "cpu :: level :: v2"]
+closedblas_v3 = ["library :: blas :: closed", "cpu :: level :: v3"]
+
+[packages.blas-first.versions."1.0.0".variants.providers.cpu]
+requires = ["cpu_provider >= 0.1, <0.2"]
+
+[packages.blas-first.versions."1.0.0".variants.providers.library]
+requires = ["library >=1, <2"]
+plugin_use = "build"

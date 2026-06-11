@@ -29,6 +29,7 @@ dependencies = [
   "packaging>=24.2",
   "pyyaml>=6.0.1",
   "uv>=0.8",
+  "variantlib>=0.0.2",
 ]
 
 [build-system]
@@ -52,6 +53,12 @@ dev-dependencies = [
   "pytest>=7.4.3",
   "psutil>=5.9.7",
 ]
+
+[tool.uv.sources]
+hatch = { git = "https://github.com/wheelnext/hatch", branch = "wheel-variant-support" }
+hatchling = { git = "https://github.com/wheelnext/hatch", branch = "wheel-variant-support", subdirectory = "backend" }
+variantlib = { git = "https://github.com/wheelnext/variantlib" }
+packaging = { git = "https://github.com/wheelnext/packaging", branch = "wheel-variants" }
 
 [tool.ruff.lint]
 extend-select = ["I", "W292"]
