@@ -40,7 +40,7 @@ def view(targets: list[Path], name: str | None = None, short_names: bool = False
             and f"{scenario.name}-{scenario_hash(scenario)}" != name
             and scenario_hash(scenario) != name
         ):
-            logging.debug("Skipping %s", scenario.name)
+            logger.debug("Skipping %s", scenario.name)
             continue
 
         # When viewing a single scenario, show the name and description
@@ -50,7 +50,7 @@ def view(targets: list[Path], name: str | None = None, short_names: bool = False
             print(scenario.description)
             print()
         else:
-            logging.debug("Viewing %s", scenario.name)
+            logger.debug("Viewing %s", scenario.name)
 
         view_scenario(scenario, short_names)
 
