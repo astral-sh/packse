@@ -28,8 +28,8 @@ def snapshot_command(
     snapshot_stderr: bool = True,
     snapshot_stdout: bool = True,
     extra_filters: list[tuple[str, str]] | None = None,
-    interrupt_after: float = None,
-    env: dict[str, str] = None,
+    interrupt_after: float | None = None,
+    env: dict[str, str] | None = None,
 ) -> dict:
     env = env or {}
     # By default, filter out absolute references to the working directory

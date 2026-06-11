@@ -38,12 +38,12 @@ def variables_for_templates(
             raise FileNotFound(target)
 
         if target.is_dir():
-            for target in find_scenario_files(target):
+            for scenario_file in find_scenario_files(target):
                 try:
-                    logger.debug("Loading %s", target)
-                    scenarios_by_path[target] = load_scenarios(target)
-                except Exception as exc:
-                    invalid = InvalidScenario(target, reason=str(exc))
+                    logger.debug("Loading %s", scenario_file)
+                    scenarios_by_path[scenario_file] = load_scenarios(scenario_file)
+                except Exception as exc:  # noqa: BLE001
+                    invalid = InvalidScenario(scenario_file, reason=str(exc))
                     if skip_invalid:
                         print(f"Skipping file: {invalid}")
                     else:
@@ -52,7 +52,7 @@ def variables_for_templates(
             try:
                 logger.debug("Loading %s", target)
                 scenarios_by_path[target] = load_scenarios(target)
-            except Exception as exc:
+            except Exception as exc:  # noqa: BLE001
                 invalid = InvalidScenario(target, reason=str(exc))
                 if skip_invalid:
                     print(f"Skipping file: {invalid}")

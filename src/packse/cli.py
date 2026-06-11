@@ -30,7 +30,7 @@ def entrypoint():
     args = parser.parse_args()
     if not hasattr(args, "call"):
         parser.print_help()
-        return None
+        return
 
     if args.quiet:
         log_level = logging.CRITICAL
@@ -46,32 +46,32 @@ def entrypoint():
         args.call(args)
     except DestinationAlreadyExists as exc:
         print(f"{exc}. Pass `--force` to allow removal.", file=sys.stderr)
-        exit(1)
+        sys.exit(1)
     except UserError as exc:
         print(f"{exc}.", file=sys.stderr)
-        exit(1)
+        sys.exit(1)
     except BuildError as exc:
         print(f"{exc}.", file=sys.stderr)
-        exit(1)
+        sys.exit(1)
     except PublishError as exc:
         print(f"{exc}.", file=sys.stderr)
-        exit(1)
+        sys.exit(1)
     except ServeCommandError as exc:
         print(f"{exc}", file=sys.stderr)
-        exit(1)
+        sys.exit(1)
     except ServeError as exc:
         print(f"{exc}.", file=sys.stderr)
-        exit(1)
+        sys.exit(1)
     except CalledProcessError as exc:
         print(
             f"Error running command: {', '.join(exc.cmd)!r} (exit code {exc.returncode})",
             file=sys.stderr,
         )
         print(exc.output.decode(), file=sys.stderr)
-        exit(2)
+        sys.exit(2)
     except KeyboardInterrupt:
         print("Interrupted!", file=sys.stderr)
-        exit(1)
+        sys.exit(1)
 
 
 def _call_build(args):

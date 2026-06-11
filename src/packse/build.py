@@ -7,12 +7,13 @@ import shutil
 import subprocess
 import textwrap
 import time
+from collections.abc import Generator
 from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import wait as wait_for_futures
 from pathlib import Path
-from typing import Generator
 
 import packaging.version
+from packaging.version import InvalidVersion
 
 from packse.error import (
     BuildError,
@@ -55,12 +56,12 @@ def build(
             raise FileNotFound(target)
 
         if target.is_dir():
-            for target in find_scenario_files(target):
+            for scenario_file in find_scenario_files(target):
                 try:
-                    logger.debug("Loading %s", target)
-                    scenarios.extend(load_scenarios(target))
-                except Exception as exc:
-                    invalid = InvalidScenario(target, reason=str(exc))
+                    logger.debug("Loading %s", scenario_file)
+                    scenarios.extend(load_scenarios(scenario_file))
+                except Exception as exc:  # noqa: BLE001
+                    invalid = InvalidScenario(scenario_file, reason=str(exc))
                     print(f"Skipping file: {invalid}")
         else:
             try:
@@ -365,7 +366,7 @@ def build_package(
 
     try:
         packaging.version.Version(version)
-    except Exception:
+    except InvalidVersion:
         raise InvalidPackageVersion(version) from None
 
     work_dir = Path.cwd()

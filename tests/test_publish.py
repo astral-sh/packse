@@ -4,8 +4,8 @@ import shutil
 import stat
 import subprocess
 import tempfile
+from collections.abc import Generator
 from pathlib import Path
-from typing import Generator
 
 import pytest
 
@@ -46,7 +46,7 @@ class MockBinary:
         self.callback = None
         self._update_bin("")
 
-    def _prepare_text(self, text: str = None):
+    def _prepare_text(self, text: str | None = None):
         if not text:
             return ""
         # Escape single quotes

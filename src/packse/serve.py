@@ -16,7 +16,6 @@ try:
     from watchfiles import Change
 except ImportError:
     watchfiles = None
-    pass
 
 
 logger = logging.getLogger(__name__)

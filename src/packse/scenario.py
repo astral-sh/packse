@@ -2,8 +2,9 @@ import hashlib
 import itertools
 import json
 import os
+from collections.abc import Iterator
 from pathlib import Path
-from typing import Any, Iterator, Self, Type
+from typing import Any, Self
 
 import msgspec
 import packaging.requirements
@@ -319,7 +320,7 @@ class Scenario(msgspec.Struct, forbid_unknown_fields=True):
         return json.loads(enc.encode(self))
 
 
-def _load[T: Scenario | list[Scenario]](target: Path, type: Type[T]) -> T:
+def _load[T: Scenario | list[Scenario]](target: Path, type: type[T]) -> T:
     if target.suffix == ".json":
         loaded = msgspec.json.decode(target.read_text(), type=type, dec_hook=dec_hook)
         # json scenarios have unformatted single line descriptions that we need to wrap for rust docstrings, while
@@ -389,7 +390,7 @@ def scenario_hash(scenario: Scenario) -> str:
     return hasher.hexdigest()[:8]
 
 
-def dec_hook(type: Type, obj: Any) -> Any:
+def dec_hook(type: type, obj: Any) -> Any:
     """
     Custom decoding hook for `Requirement` types.
     """
