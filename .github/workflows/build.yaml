@@ -81,10 +81,12 @@ jobs:
       - name: Install release from Test PyPI
         run: |
           uv pip install \
+            --no-config \
+            --only-binary=:all: \
             --system \
             --extra-index-url https://test.pypi.org/simple/ \
             --index-strategy unsafe-best-match \
-            packse==${BUILD_VERSION}
+            "packse==${BUILD_VERSION}"
         env:
           BUILD_VERSION: ${{ needs.build-and-publish.outputs.build-version }}
 
