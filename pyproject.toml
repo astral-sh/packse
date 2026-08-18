@@ -47,6 +47,7 @@ index = [
 serve = ["packse[index]", "watchfiles>=0.21.0"]
 
 [tool.uv]
+no-build = true
 dev-dependencies = [
   "syrupy>=4.6.0",
   "pytest>=7.4.3",
