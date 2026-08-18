@@ -37,8 +37,8 @@ jobs:
 
       - name: Check Scenarios formatting
         run: |
-          npm ci
-          npx prettier --check "scenarios/**/*.{toml,json,yaml}"
+          npm ci --ignore-scripts
+          ./node_modules/.bin/prettier --check "scenarios/**/*.{toml,json,yaml}"
 
   typos:
     runs-on: ubuntu-latest
