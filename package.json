@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "npm": ">=11.10.0"
+  },
   "devDependencies": {
     "prettier": "^3.3.3",
     "prettier-plugin-toml": "^2.0.1"
