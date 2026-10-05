@@ -42,6 +42,10 @@ jobs:
         with:
           persist-credentials: false
       - uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39 # v8.2.0
+        with:
+          # renovate: datasource=github-release-attachments depName=astral-sh/uv
+          version: "0.12.23"
+          checksum: "9167d72b3319674b6303c4cbe071854bba13ebdf3d76b1a7cbdc175471fb66d6"
 
       - name: Run tests
         run: uv run --all-extras --python ${{ matrix.python-version }} -- pytest tests
