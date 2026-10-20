@@ -1,5 +1,5 @@
 version = 1
-revision = 5
+revision = 3
 requires-python = ">=3.12"
 
 [[package]]
@@ -184,7 +184,7 @@ requires-dist = [
     { name = "packse", extras = ["index"], marker = "extra == 'serve'" },
     { name = "pyyaml", specifier = ">=6.0.1" },
     { name = "starlette", marker = "extra == 'index'", specifier = ">=0.47.3" },
-    { name = "uv", specifier = ">=0.13.4" },
+    { name = "uv", specifier = ">=0.8" },
     { name = "uvicorn", marker = "extra == 'index'", specifier = ">=0.35.0" },
     { name = "watchfiles", marker = "extra == 'serve'", specifier = ">=0.21.0" },
 ]
