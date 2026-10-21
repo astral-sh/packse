@@ -125,18 +125,19 @@ def dependency_tree(scenario: Scenario) -> str:
                 )
 
     def render_requirements(requirements: list[Requirement], prefix: str = ""):
-        for index, requirement in enumerate(requirements):
-            # Skip display of Python requirements that are satisfied and not complex
-            # We do this before the following iteration so the pointers are correct
-            if (
+        # Skip display of Python requirements that are satisfied and not complex
+        # We do this before the following iteration so the pointers are correct
+        requirements = [
+            requirement
+            for requirement in requirements
+            if not (
                 requirement.name == "python"
                 and requirement.specifier.contains(scenario.environment.python)
                 and len(requirement.specifier) == 1
                 and next(iter(requirement.specifier)).version
                 == scenario.environment.python
-            ):
-                requirements = requirements.copy()
-                requirements.pop(index)
+            )
+        ]
 
         pointers = [tee] * (len(requirements) - 1) + [last]
         for pointer, requirement in zip(pointers, sorted(requirements)):
