@@ -32,6 +32,10 @@ jobs:
           node-version: "24.19.0"
           package-manager-cache: false
       - uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39 # v8.2.0
+        with:
+          # renovate: datasource=github-release-attachments depName=astral-sh/uv
+          version: "0.13.4"
+          checksum: "2b428396f12572d4429cf210ca234dd599a33b3af0958a4d5ed569d63e3f344f"
 
       - name: Check Python lint
         run: uvx ruff check . --config pyproject.toml
